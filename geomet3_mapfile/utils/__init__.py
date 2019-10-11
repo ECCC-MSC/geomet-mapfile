@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 import click
 from geomet3_mapfile.utils.utils import convert_style_to_json
