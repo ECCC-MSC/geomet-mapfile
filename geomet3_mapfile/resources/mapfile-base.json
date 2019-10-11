@@ -1,0 +1,59 @@
+{
+    "__type__": "map",
+    "name": "geomet-weather",
+    "imagetype": "PNG",
+    "status": "ON",
+    "transparent": "ON",
+    "debug": "OFF",
+    "maxsize": 4096,
+    "size": [500, 300],
+    "extent": [-180, -90, 180, 90],
+    "imagecolor": [255, 255, 255],
+    "config": {
+        "proj_lib": "."
+    },
+    "projection": ["init=epsg:4326"],
+    "outputformats": [{
+        "__type__": "outputformat",
+        "name": "GEOTIFF_32",
+        "driver": "GDAL/GTiff",
+        "mimetype": "image/tiff",
+        "imagemode": "FLOAT32",
+        "extension": "tif"
+    }, {
+        "__type__": "outputformat",
+        "name": "NETCDF",
+        "driver": "GDAL/netCDF",
+        "mimetype": "image/netcdf",
+        "imagemode": "FLOAT32",
+        "extension": "nc"
+    }, {
+        "__type__": "outputformat",
+        "name": "GeoJSON",
+        "driver": "TEMPLATE",
+        "mimetype": "application/json"
+    }],
+    "querymap": {
+        "__type__": "querymap",
+        "status": "OFF",
+        "size": [500, 300],
+        "style": "HILITE",
+        "color": [255, 255, 0]
+    },
+    "legend": {
+        "__type__": "legend",
+        "label": {
+            "__type__": "label",
+            "size": 10,
+            "color": [0, 0, 0]
+        }
+    },
+    "web": {
+        "__type__": "web",
+        "metadata": {
+            "__type__": "metadata",
+            "ows_srs": "EPSG:4326 EPSG:2294 EPSG:2295 EPSG:2950 EPSG:3408 EPSG:3410 EPSG:3571 EPSG:3572 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576 EPSG:3857 EPSG:3978 EPSG:4267 EPSG:4269 EPSG:26707 EPSG:26708 EPSG:26709 EPSG:26710 EPSG:26711 EPSG:26712 EPSG:26713 EPSG:26714 EPSG:26715 EPSG:26716 EPSG:26717 EPSG:26718 EPSG:26719 EPSG:26720 EPSG:26721 EPSG:26722 EPSG:26907 EPSG:26908 EPSG:26909 EPSG:26910 EPSG:26911 EPSG:26912 EPSG:26913 EPSG:26914 EPSG:26915 EPSG:26916 EPSG:26917 EPSG:26918 EPSG:26919 EPSG:26920 EPSG:26921 EPSG:26922 EPSG:32187 EPSG:32188 EPSG:32198 EPSG:32661 EPSG:42101 EPSG:42102 EPSG:42304 EPSG:102100 EPSG:102185 EPSG:900913"
+        }
+    },
+    "layers": []
+}

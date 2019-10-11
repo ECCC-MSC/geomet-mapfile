@@ -1,0 +1,16 @@
+__version__ = '0.0.dev0'
+
+import click
+
+# from mapfile import mapfile
+from utils import convert
+
+
+@click.group()
+@click.version_option(version=__version__)
+def cli():
+    pass
+
+
+# cli.add_command(mapfile)
+cli.add_command(convert)
