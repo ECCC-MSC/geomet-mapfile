@@ -10,9 +10,8 @@ import mappyfile
 def convert_style_to_json(file):
     with open(file, 'r') as f:
         file = f.readlines()
-        start_postition = None
         for index, line in enumerate(file):
             if "CLASS\n" in line:
-                start_postition = index
+                start_position = index
                 break
-        return json.dumps(mappyfile.loads("".join(file[start_postition:])), indent=4)
+        return json.dumps(mappyfile.loads("".join(file[start_position:])), indent=4)
