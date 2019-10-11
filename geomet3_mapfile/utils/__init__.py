@@ -3,9 +3,8 @@ from geomet3_mapfile.utils.utils import convert_style_to_json
 
 @click.group()
 def utils():
-    """"Use geomet3 utility functions"""
+    """Use geomet3 utility functions"""
     pass
-
 
 @click.command()
 @click.pass_context
