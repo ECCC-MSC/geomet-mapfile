@@ -1,26 +1,11 @@
-import json
-import os
-from pathlib import Path
-from lark.exceptions import UnexpectedToken
-
 import click
-import mappyfile
-
-
-def convert_style_to_json(file):
-    with open(file, 'r') as f:
-        file = f.readlines()
-        start_postition = None
-        for index, line in enumerate(file):
-            if "CLASS\n" in line:
-                start_postition = index
-                break
-        return json.dumps(mappyfile.loads("".join(file[start_postition:])), indent=4)
-
+from geomet3_mapfile.utils.utils import convert_style_to_json
 
 @click.group()
 def utils():
+    """"Use geomet3 utility functions"""
     pass
+
 
 @click.command()
 @click.pass_context
@@ -65,7 +50,3 @@ def convert(ctx, file_, directory, output_directory):
         output_file_name = f'{Path(file).name.split(".")[0]}.json'
         with open(os.path.join(output_directory, output_file_name), 'w') as f:
             f.write(converted_file)
-
-
-if __name__ == '__main__':
-    convert()
