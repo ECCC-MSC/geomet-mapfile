@@ -3,7 +3,7 @@ __version__ = '0.0.dev0'
 import click
 
 # from mapfile import mapfile
-from utils import utils
+from geomet3_mapfile.utils import utils2
 
 
 @click.group()
@@ -13,4 +13,4 @@ def cli():
 
 
 # cli.add_command(mapfile)
-cli.add_command(utils)
+cli.add_command(utils2)
