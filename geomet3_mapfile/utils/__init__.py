@@ -49,3 +49,5 @@ def convert(ctx, file_, directory, output_directory):
         output_file_name = f'{Path(file).name.split(".")[0]}.json'
         with open(os.path.join(output_directory, output_file_name), 'w') as f:
             f.write(converted_file)
+
+utils.add_command(convert)
