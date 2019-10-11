@@ -16,6 +16,8 @@ def convert_style_to_json(file):
                 start_postition = index
                 break
         return json.dumps(mappyfile.loads("".join(file[start_postition:])), indent=4)
+
+
 @click.group()
 def utils():
     pass
