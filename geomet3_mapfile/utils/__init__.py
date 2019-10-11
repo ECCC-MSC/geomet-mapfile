@@ -22,8 +22,8 @@ def utils():
 def convert(ctx, file_, directory, output_directory):
     """convert mapfile to mappyfile dictionnary object"""
 
-    if all([file_ is None, directory is None]):
-        raise click.ClickException('Missing --file/-f or --dir/-d option')
+    if all([file_ is None, directory is None, output_directory is None]):
+        raise click.ClickException('Missing --file/-f, --directory/-d option, --output_dir/-o options')
 
     files_to_process = []
 
