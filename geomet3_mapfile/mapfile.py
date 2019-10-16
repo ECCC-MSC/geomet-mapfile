@@ -1,10 +1,10 @@
+import ast
 from collections import OrderedDict
+from configparser import SafeConfigParser
 from datetime import datetime
-import io
 import json
 import logging
 import os
-from pprint import pprint as pp
 
 import click
 import mappyfile
@@ -114,6 +114,112 @@ def gen_web_metadata(m, c, lang, service, url):
 
     return d
 
+def gen_layer(layer_name, layer_info, lang):
+    """
+    mapfile layer object generator
+    :param layer_name: name of layer
+    :param layer_info: layer information
+    :param lang: language (en or fr)
+    :returns: list of mappyfile layer objects of layer
+    """
+
+    layers = []
+
+    LOGGER.debug('Setting up layer configuration')
+
+    layer_tileindex = {
+        '__type__': 'layer'
+    }
+
+    layer = {
+        '__type__': 'layer',
+        'classes': []
+    }
+
+    # for time-enabled layers
+    if layer_info['time_enabled'] in ['yes', 'future']:
+        # build tileindex LAYER object
+        layer_tileindex_name = '{}_idx'.format(layer_name)
+
+        layer_tileindex['type'] = 'POLYGON'
+        layer_tileindex['name'] = layer_tileindex_name
+        layer_tileindex['status'] = 'OFF'
+        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+
+        layer_tileindex['CONNECTION'] = 'http://geomet-dev-03.cmc.ec.gc.ca/elasticsearch/'
+        layer_tileindex['metadata'] = {
+            '__type__': 'metadata',
+            'ows_enable_request': '!*'
+        }
+
+        layers.append(layer_tileindex)
+
+        # build LAYER object
+        layer['name'] = layer_name
+        layer['debug'] = 5
+        layer['type'] = 'RASTER'
+        layer['template'] = "ttt.html"
+        layer['tolerance'] = 15
+
+        layer['metadata'] = {
+            '__type__': 'metadata',
+            'gml_include_items': 'all',
+            'ows_include_items': 'all'
+        }
+
+        layer['status'] = 'ON'
+        layer['tileindex'] = layer_tileindex_name
+        layer['tileitem'] = 'properties.filepath'
+
+    # set layer projection
+    with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
+        layer['projection'] = " ".join([line.replace("\n", "").strip('"') for line in f.readlines()])
+
+    # set layer processing directives
+    if 'processing' in layer_info['forecast_model']:
+        layer['processing'] = layer_info['forecast_model']['processing']
+
+    # set layer classes
+    layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".inc")
+    layer['classes'] = []
+    for style in layer_info['styles']:
+        with open(os.path.join(THISDIR, 'resources', style.replace('.inc', '.json'))) as f:
+            list_ = ast.literal_eval(f.read())
+            for item in list_:
+                layer['classes'].append(item)
+
+    # set layer metadata
+    # source = yaml config
+    yaml_metadata = {
+        'ows_extent': layer_info['forecast_model']['extent'],
+        'ows_size': f'{layer_info["forecast_model"]["dimensions"][0]} {layer_info["forecast_model"]["dimensions"][1]}',
+        'ows_title_en': layer_info['label_en'],
+        'ows_title_fr': layer_info['label_fr'],
+        'wms_layer_group_en': f'/{layer_info["forecast_model"]["label_fr"]}',
+        'wms_layer_group_fr': f'/{layer_info["forecast_model"]["label_en"]}',
+        'wcs_label_en': layer_info['label_en'],
+        'wcs_label_fr': layer_info['label_fr'],
+    }
+    # source = mcf
+    if layer_info['forecast_model']['mcf'].endswith('.mcf'):
+        mcf = SafeConfigParser()
+    # generic metadata
+    generic_metadata = {
+        'ows_authority': 'msc',
+        'ows_authorityurl_href': 'https://dd.weather.gc.ca',
+        'ows_identifier_value': 'msc',
+        'ows_geomtype': 'Geometry',
+        'wcs_rangeset_name': 'Default Range',
+        'wcs_rangeset_label': 'Default Range',
+    }
+
+
+
+
+    layers.append(layer)
+
+    return layers
+
 # @click.group()
 # def mapfile():
 #     pass
@@ -126,13 +232,18 @@ def gen_web_metadata(m, c, lang, service, url):
 # @click.option('--service', '-s', type=click.Choice(['WMS', 'WCS']),
 #               help='service')
 # @click.option('--layer', '-lyr', help='layer')
-#
-# with io.open(MAPFILE_BASE) as fh:
-#     mapfile = json.load(fh, object_pairs_hook=OrderedDict)
-#     symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
-#     with io.open(symbols_file) as fh2:
-#         mapfile['symbols'] = json.load(fh2)
-#
-# with io.open('/local/drive1/cmdd/afssepe/repos/geomet3-mapfile/geomet.yml') as fh:
-#     cfg = yaml.load(fh, Loader=Loader)
 
+
+with open(MAPFILE_BASE) as fh:
+    mapfile = json.load(fh, object_pairs_hook=OrderedDict)
+    symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
+    with open(symbols_file) as fh2:
+        mapfile['symbols'] = json.load(fh2)
+
+with open('/local/drive1/cmdd/afssepe/repos/geomet3-mapfile/geomet.yml') as fh:
+    cfg = yaml.load(fh, Loader=Loader)
+
+
+a = gen_layer('GDPS.ETA_TT', cfg['layers']['GDPS.ETA_TT'], 'en')
+
+print(mappyfile.dumps(a, indent=4))

@@ -1,0 +1,25 @@
+%YAML 1.1
+---
+### Base Metadata Control File for the MSC Datamart
+#
+# THIS IS NOT a complete MCF file, it is used through nesting by other MCF files
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+###
+
+type: WWW:LINK
+name_en: MSC Datamart
+name_fr: Datamart du SMC
+# MSC Datamart description source: http://dd.weather.gc.ca/about_dd_apropos.txt
+description_en: The Meteorological Service of Canada (MSC) HTTP data server is a source of several raw meteorological data types and forecast data. This service is aimed at specialized users with good meteorological and IT knowledge, and is mainly meant to be accessed in an automatic manner via the internet (e.g. with scripts). The server's URL is http://dd.weather.gc.ca/
+description_fr: Le Service météorologique du Canada (SMC) met à la disposition des usagers spécialisés une multitude de données météorologiques et prévisionnelles sur son serveur de données HTTP, à l'adresse http://dd.meteo.gc.ca/ Les usagers qui désirent accéder à ces données doivent avoir une bonne connaissance de la météorologie et de l'informatique afin d'en faire bon usage. Le mode d'accès privilégié est via des routines d'accès automatiques (scripts).
+function: download
+# Valid values: Web Service,Service Web,Dataset,Données,API,Application,Supporting Document,Document de soutien
+# Testing here: Description is required, must be validated later
+hnap_contenttype_en: Dataset
+hnap_contenttype_fr: Données
