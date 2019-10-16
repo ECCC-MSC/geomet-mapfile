@@ -1,0 +1,164 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+msc-open-data:
+    contacts:
+        - Ahmed Mahidjiba:
+            role:
+                # data steward, documentation, production, development
+                - data steward
+                - production
+            # for org, we need a stable nomenclature
+            organization:
+                branch: MSC # MSC, S&T, CFSB
+                division: CCMEP-Ops
+                section: CMOI-R
+            email: ahmed.mahidjiba@canada.ca
+            notes:
+
+# Inheriting contact information from main-contact.yml
+base_mcf: ../shared/contact-main.yml
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: https://weather.gc.ca/radar/
+    identifier: bd1500e5-7000-53e2-963e-718801fc16e0
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::radar
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: point
+    crs: 4326
+    # Radar coverage is for all Canadian and american radars. Radar coverage derived from the radar coverage layer
+    bbox: -170.11, 11.38, 146.94, 67.11
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: North American Radar Mosaic
+    title_fr: Mosaïque radar Nord-Américaine
+    # No informations (LP)
+    abstract_en: Composite of American and Canadian weather radars updated every 10 minutes
+    abstract_fr: Mosaïque des radars météorologiques Canadiens et Américains mise-à-jour aux 10 minutes
+
+    #
+    dates:
+        # Date when the model became publicly accessible
+        # Source: provided by Norm Paulsen by email
+        creation: 1871-01-01
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Atmospheric conditions
+                - Meteorology
+                - Weather
+            keywords_fr:
+                - Conditions atmosphériques
+                - Métérologie
+                - Temps
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Radar
+                - Remote sensing
+                - Weather
+            keywords_fr:
+                - Radar
+                - Télédétection
+                - Temps (Météorologie)
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        # PUT above in HNAP github doc !
+
+        hnap_category_information:
+            keywords_en:
+                - Weather and Climate
+            keywords_fr:
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - National (CA)
+            keywords_fr:
+                - Nationale (CA)
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en:
+    url_fr:
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # Source: provided by Norm Paulsen by email
+    temporal_begin: 1871-01-01
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url:
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en:
+        format_fr:
+        format_version:
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: RADAR_RRAI
+        name_fr: RADAR_RRAI
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url:
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en:
+        format_fr:
+        format_version:
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

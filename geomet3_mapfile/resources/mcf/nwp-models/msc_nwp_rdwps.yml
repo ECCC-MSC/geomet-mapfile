@@ -1,0 +1,160 @@
+%YAML 1.1
+---
+
+# msc-metadata:
+#   contacts:
+#       - role: Data steward
+#         name: Benoit Pouliot
+#         organization:
+#         email: benoit.pouliot@canada.ca
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_wave/
+    identifier: 322da0ab-9752-5ead-a27f-233de1f4b9a5
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.rdwps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -160, 20, 0, 85
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: Regional Deterministic Wave Prediction System
+    title_fr: Système Régional de Prévision Déterministe de Vague
+    # Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions#RDWPS_.2F_SRPDV
+    abstract_en: The Regional Deterministic Wave Prediction System (RDWPS) carries out physics calculations to arrive at deterministic predictions of wave conditions in oceans and large bodies of water from the current day out to 48 hours into the future. Forecast elements include significant wave height, swell, peak period and others. This product contains raw numerical results of these calculations. Geographical coverage is specific to marine areas over the Pacific, Atlantic and Arctic oceans as well as over the Great Lakes. Data is only available for the surface level. Data is available at varying horizontal resolutions from 5 to 50 km. Predictions are performed four times a day.
+    abstract_fr: Le Système régional de prévision déterministe de vague (SRPDV) procède à des calculs physiques afin de produire des prévisions déterministes de la condition des vagues sur les océans et les grandes étendues d'eau du jour présent jusqu'à 48 heures dans le futur. Les éléments prévus incluent notamment la hauteur des vagues significatives, la houle et la période de pointe. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est spécifique aux régions maritimes des océans Pacifique, Atlantique et Arctique, ainsi que les Grands Lacs. Les données sont disponibles au niveau de la surface. Les données sont offertes à des résolutions horizontales variant de 5 à 50 km. Les prévisions sont émises quatre fois par jour.
+
+    dates:
+        # Date when the model became publicly accessible
+        creation: 2012-05-07
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Waves
+                - Swell
+                - Prediction
+                - Regional
+                - Deterministic
+            keywords_fr:
+                - Vagues
+                - Houle
+                - Prévision
+                - Régional
+                - Déterministe
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Forecasting
+                - Water
+                - Oceans
+                - Ocean energy
+                - Seas
+            keywords_fr:
+                - Prévision
+                - Eau
+                - Océan
+                - Énergie marine
+                - Mer
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+
+        hnap_category_information:
+            keywords_en:
+                - Water
+                - Weather and Climate
+            keywords_fr:
+                - Eau
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Ocean
+            keywords_fr:
+                - Océan
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - Oceans
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    # This documentation will be moved to a better location, I informed Jamie and Serge accordingly
+    url_en: http://collaboration.cmc.ec.gc.ca/cmc/CMOI/product_guide/product-pages/difax_wam_prog_atlantic-pacific-waves_mar_e.html
+    url_fr: http://collaboration.cmc.ec.gc.ca/cmc/CMOI/product_guide/product-pages/difax_wam_prog_atlantic-pacific-waves_mar_f.html
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # temporal_begin provided by Jamie McLean
+    temporal_begin: 2012-05-07
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/model_wave/
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet-beta/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: RDWPS.ERIE.WZ
+        name_fr: RDWPS.ERIE.WZ
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet-beta/?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url: amqps://dd.weather.gc.ca/model_wave.#
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

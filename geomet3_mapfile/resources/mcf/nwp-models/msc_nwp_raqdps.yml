@@ -1,0 +1,148 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/air_quality/raqdps -- Careful, this URL doesn't exists in practice since this data is not currently available on MSC Datamart
+    identifier: f54c6154-52e3-5303-ac76-555a7fcb49b2
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.raqdps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -170, 20, -40, 75.1
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: Regional Air Quality Deterministic Prediction System
+    title_fr: Système Régional de Prévision Déterministe de la Qualité de l'Air
+    # Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions
+    abstract_en: The Regional Air Quality Deterministic Prediction System (RAQDPS) carries out physics and chemistry calculations to arrive at deterministic predictions of chemical species concentration of interest to air quality. Chemical constituents include 03, SO2, NO, and NO2 gases as well as fine particulate matter PM2.5 (2.5 micrometers in diameter or less) and coarse particulate matter PM10 (10 micrometers in diameter or less). Predictions are available from the current day out to 48 hours into the future. Geographical coverage is Canada and the United States. Data is available at a horizontal resolution of 10 km. While the system encompasses 80 vertical levels, data is available only for the surface level. Predictions are performed twice a day.
+    abstract_fr: Le Système régional de prévision déterministe de la qualité de l'air (SRPDQA) procède à des calculs physiques et chimiques afin de produire des prévisions déterministes de la concentration d'espèces chimiques d'intérêt pour la qualité de l'air. Ces constituants chimiques incluent les gaz O3, SO2, NO, et NO2, s'ajoutant aux particules fines PM2.5 (diamètre de 2,5 micromètres ou moins) et aux particules grossières (diamètre de 10 micromètres ou moins). Les prévisions sont disponibles pour le présent jusqu'à 48 heures dans le futur. La couverture géographique est le Canada et les États-Unis. Les données sont disponibles à une résolution spatiale horizontale de 10 km. Le système comporte 80 niveaux verticaux et les données sont disponibles seulement au niveau de la surface. Les prévisions sont exécutées deux fois par jour.
+
+    # date from MCF, no details
+    dates:
+        # Date when the model became publicly accessible
+        creation: 2009-11-18
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Prediction
+                - Regional
+                - Particulate matter
+            keywords_fr:
+                - Prévision
+                - Régional
+                - Particules fines
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Forecasting
+                - Air quality
+                - Atmospheric emissions
+                - Ozone
+                - Chemicals
+            keywords_fr:
+                - Prévision
+                - Qualité de l'air
+                - Émissions atmosphériques
+                - Ozone
+                - Produit chimique
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        # PUT above in HNAP github doc !
+
+        hnap_category_information:
+            keywords_en:
+                - Air - Quality
+            keywords_fr:
+                - Air - Qualité
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source, the following URL confirmed by Sylvain Ménard
+    url_en: http://weather.gc.ca/aqfm/index_e.html
+    url_fr: http://weather.gc.ca/aqfm/index_f.html
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    #
+    temporal_begin: 2009-11-18
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+#distribution:
+#    waf_eng-CAN: &id_waf_eng-CAN
+#        base_mcf: ../shared/distribution-datamart.yml
+#        url:
+#        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+#        format_en:
+#        format_fr:
+#        format_version:
+#    waf_fra-CAN:
+#        <<: *id_waf_eng-CAN
+#    wms_eng-CAN: &id_wms_eng-CAN
+#        base_mcf: ../shared/distribution-geomet.yml
+#        url:
+#        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+#        name_en:
+#        name_fr:
+#    wms_fra-CAN:
+#        <<: *id_wms_eng-CAN
+#        url:
+#    amqps_eng-CAN: &id_amqps_eng-CAN
+#        base_mcf: ../shared/distribution-datamart-amqps.yml
+#        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+#        url:
+#        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+#        format_en:
+#        format_fr:
+#        format_version:
+#    amqps_fra-CAN:
+#        <<: *id_amqps_eng-CAN

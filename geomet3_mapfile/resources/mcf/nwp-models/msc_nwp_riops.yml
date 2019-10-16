@@ -1,0 +1,164 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+base_mcf: ../shared/contact-main.yml
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.alpha.meteo.gc.ca/yopp/model_riops/
+    identifier: 8cfa9a68-ba69-59ca-a428-667ec64d1839
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.riops
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset 
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -138.7, 30.5, 20.9, 41.4
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: http://dd.alpha.meteo.gc.ca/yopp/model_riops/doc/README_RIOPS.txt
+    title_en: Regional Ice-Ocean Prediction System [experimental]
+    title_fr: Système régional de prévision océan-glace [expérimental]
+    # http://dd.alpha.meteo.gc.ca/yopp/model_riops/doc/README_RIOPS.txt
+    abstract_en: The Regional Ice-Ocean Prediction System (RIOPS) is based on the NEMO-CICE ice-ocean model and produces regional sea ice and ocean analyses and 2 day forecasts daily based at [00, 12] UTC on a subset of the 1/12° resolution global tri-polar grid (ORCA12). RIOPS includes a 3DVar ice concentration analysis (assimilating sattelite remote sensing and Canadian Ice Service ice charts) while the large scales of the ocean analysis are constrained by spectrally nudging the temperature and salinity fields to those of the CCMEP Global Ice Ocean Prediction System (which itself includes a full multivariate assimilation system that combines satellite observations with in situ observations). Surface air-sea fluxes for 2 day forecasts are calculated by merging surface fields of the CCMEP atmospheric Global and Regional Deterministic Prediction Systems.
+    abstract_fr: Le système régional de prévision océan-glace (SRPOG) utilise le modèle océan-glace NEMO-CICE et fournit des analyses et prévisions globales de 2 jours de l'océan et de la glace marine, quotidiennement à partir de [00, 12] UTC. Le SRPOG comprend une analyse 3DVar de la concentration de la glace (assimilant des observations satellitaires et des cartes de glace du service canadien des glaces) alors que les larges échelles de l'analyse océanique sont constraintes en rappelant spectralement les champs de température et de salinité vers ceux du système global de prévision océan-glace du CCMEP (qui lui inclut un système d'assimilation multivarié qui ingère des observations satellitaires ainsi que des observations in-situ). Les flux atmosphériques servant aux champs d'essai et aux prévisions de 2 jours sont calculés à partir d'une fusion des champs de surface des prévisions atmosphériques issues du système global et régional de prévision déterministe du CPMEC.
+
+    # 
+    dates:
+        # Date when the model became publicly accessible: http://dd.alpha.meteo.gc.ca/yopp/model_riops/netcdf/forecast/polar_stereographic/2d/2018/01/
+        # No specific date in the dd-info announcement: https://lists.ec.gc.ca/pipermail/dd_info/2018-January/000258.html
+        # But All data are kept on dd.alpha so we can see that the first date it became publicly available is 2018 January 29
+        creation: 2018-01-29
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Sea ice-ocean forecast
+                - Prediction
+                - Regional
+            keywords_fr:
+                - Prévision océan-glace de mer
+                - Prévision
+                - Régional
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Forecasting
+                - Ice
+                - Water
+                - Arctic
+                - Coastal waters
+                - Oceans
+                - Polar regions
+            keywords_fr:
+                - Prévisions
+                - Glace
+                - Eau
+                - Arctique
+                - Eaux côtières
+                - Océan
+                - Région polaire
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        # PUT above in HNAP github doc !
+
+        hnap_category_information:
+            keywords_en:
+                - Water
+                - Weather and Climate
+            keywords_fr:
+                - Eau
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Ocean
+                - Sea ice
+            keywords_fr:
+                - Océan
+                - Glace de mer
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - Oceans
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en: 
+    url_fr: 
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # http://collaboration.cmc.ec.gc.ca/cmc/CMOI/product_guide/docs/changes_e.html
+    temporal_begin: 2016-06-21
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.alpha.weather.gc.ca/yopp/model_riops/netcdf/forecast/polar_stereographic/
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: NetCDF
+        format_fr: NetCDF
+        format_version: 4
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet-beta/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: OCEAN.RIOPS.2D_TM2
+        name_fr: OCEAN.RIOPS.2D_TM2
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet-beta/?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url: amqps://dd.alpha.weather.gc.ca/yopp.model_riops.netcdf.forecast.polar_stereographic.#
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: NetCDF
+        format_fr: NetCDF
+        format_version: 4
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN
+
+extra:
+    publish-locations:
+        - yopp

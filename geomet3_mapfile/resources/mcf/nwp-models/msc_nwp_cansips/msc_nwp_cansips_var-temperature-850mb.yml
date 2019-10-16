@@ -1,0 +1,53 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+# Inheriting information from msc_radar.yml
+base_mcf: ../msc_nwp_cansips.yml
+
+metadata:
+    base_mcf: ../msc_nwp_cansips.yml
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED:http://dd.weather.gc.ca/ensemble/cansips/grib2/CANSIPS.MEM.PRES_TT.850.01
+    identifier: 9594496c-3728-5604-82b4-fc2bad18c1d4
+
+identification:
+    base_mcf: ../msc_nwp_cansips.yml
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en:
+    title_fr:
+    # No informations (LP)
+    abstract_en:
+    abstract_fr:
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../../shared/distribution-datamart.yml
+        url: https://dd.meteo.gc.ca/ensemble/cansips/grib2/
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: CANSIPS.MEM.PRES_TT.850.01
+        name_fr: CANSIPS.MEM.PRES_TT.850.01
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url: amqps://dd.weather.gc.ca/ensemble.cansips.grib2.#
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

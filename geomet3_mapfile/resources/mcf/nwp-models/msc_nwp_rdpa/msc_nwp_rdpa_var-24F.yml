@@ -1,0 +1,69 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+# Inheriting information from msc_radar.yml
+base_mcf: ../msc_nwp_rdpa.yml
+
+metadata:
+    base_mcf: ../msc_nwp_rdpa.yml
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/analysis/precip/rdpa/RDPA.24F_PR
+    identifier: 1af71ec8-3efe-552b-96ba-41c70bcd4e9c
+
+spatial:
+    base_mcf: ../msc_nwp_rdpa.yml
+
+identification:
+    base_mcf: ../msc_nwp_rdpa.yml
+    # Title source is Guy Roy (06-08-2018)
+    title_en: Regional Deterministic Precipitation Analysis of 24 hour amounts
+    title_fr: Analyse régionale déterministe de précipitation sur des accumulations de 24 heures
+    # source is Guy Roy (06-08-2018)
+    abstract_en: The Regional Deterministic Precipitation Analysis (RDPA) produces a best estimate of precipitation amounts that occurred over a period of 24 hours. The estimate integrates data from in situ precipitation gauge measurements, weather radar and numerical weather prediction models. Geographic coverage is North America (Canada, United States and Mexico). Data is available at a horizontal resolution of 10 km. The 24 hour analysis is produced once a day and is valid at 12 UTC. A preliminary analysis is available approximately 1 hour after the end of the accumulation period and a final one is generated 6 hours later in order to assimilate more gauge data.
+    abstract_fr: L'Analyse régionale déterministe de précipitation (ARPD) produit une estimation optimale de la quantité de précipitation survenue au cours d’une période de 24 heures. Cet estimé intègre des relevés provenant de capteurs de précipitation, de radar météo et de modèles de prévision numérique du temps. La couverture géographique est l'Amérique du Nord (Canada, États-Unis et le Mexique). Les données sont disponibles à une résolution spatiale horizontale de 10 km. L’analyse 24 heures est produite une fois par jour et est valide à 12 UTC. Une analyse préliminaire est disponible environ 1 heure après la fin de la période d’accumulation et une analyse finale est générée 6 heures plus tard dans le but d’assimiler plus de relevés pluviométriques.
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/analysis/precip/rdpa/
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    waf-archive_eng-CAN: &id_waf-archive_eng-CAN
+        type: WWW:LINK
+        name_en: Collaboration
+        name_fr: Collaboration
+        description_en: The Meteorological Service of Canada makes certain weather and forecast data of a less time-sensitive nature available to specialized users on its Collaboration server (http://collaboration.cmc.ec.gc.ca/). Users wishing to access this data should have a good knowledge of meteorology in order to make the best use of it. The preferred access mode is via automatic access routines (scripts).
+        description_fr: Le Service météorologique du Canada met à la disposition des usagers spécialisés certaines données météorologiques et prévisonnelles pour lesquelles le facteur temps est moins critique sur son serveur Collaboration (http://collaboration.cmc.ec.gc.ca/). Les usagers qui désirent accéder à ces données devraient avoir une bonne connaissance de la météorologie afin d'en faire bon usage. Le mode d'accès privilégié est via des routines d'accès automatiques (scripts).
+        function: download
+        hnap_contenttype_en: Dataset
+        hnap_contenttype_fr: Données
+        url: https://collaboration.cmc.ec.gc.ca/science/outgoing/capa.grib/
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf-archive_fra-CAN:
+        <<: *id_waf-archive_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../../shared/distribution-geomet.yml
+        # Pointing to the global WMS GetCapabilities response
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr point to the 'default layer' associated to the dataset, using final 6h precipitation accumulation (PR) as default
+        name_en: RDPA.24F_PR
+        name_fr: RDPA.24F_PR
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../../shared/distribution-datamart-amqps.yml
+        url: amqps://dd.weather.gc.ca/analysis.precip.rdpa.grib2.#
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

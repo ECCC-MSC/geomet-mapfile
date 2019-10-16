@@ -1,0 +1,46 @@
+%YAML 1.1
+---
+### Metadata Control File for publicly available MSC data
+### Contact sections
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/Datamart/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+## IMPORTANT NOTE ##
+# This is not a complete MCF file. It is a base_mcf used by other MCF files. See documentation.
+#
+###
+
+contact:
+    main: &contact_main
+        organization_en: Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada
+        organization_fr: Gouvernement du Canada; Environnement et Changement climatique Canada; Service météorologique du Canada
+        url: http://www.ec.gc.ca/
+        # individualname is not required by HNAP and is not localized
+        individualname: National Inquiry Response Team / Équipe nationale de réponse des demandes du public
+        # positionname is not required by HNAP
+        positionname_en: National Inquiry Response Team
+        positionname_fr: Équipe nationale de réponse des demandes du public
+        phone: +01-819-997-2800
+        fax: +01-506-451-6010
+        address_en: 77 Westmorland Street, suite 260
+        address_fr: 77 rue Westmorland, suite 260
+        city_en: Fredericton
+        city_fr: Frédéricton
+        # administrativearea is not required by HNAP, however, the address will be incomplete without it
+        administrativearea_en: NB
+        administrativearea_fr: NB
+        postalcode: E3B 6Z4
+        country_en: Canada
+        # country_fr is required by ECDC and the value is 'Canada (le)' as per ISO3166
+        country_fr: Canada (le)
+        email: ec.ecweather-meteo.ec@canada.ca
+        # hoursofservice and contactinstructions are not required by HNAP
+        hoursofservice_en: 0700h - 1500h EST
+        hoursofservice_fr: 0700h - 1500h HNE
+        contactinstructions_en: email
+        contactinstructions_fr: courriel
+    distribution: *contact_main

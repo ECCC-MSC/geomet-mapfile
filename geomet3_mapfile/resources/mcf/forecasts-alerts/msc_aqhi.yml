@@ -1,0 +1,151 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+metadata:
+    charset: utf8
+    hierarchylevel: Dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , found on http://donnees-data.intranet.ec.gc.ca/geonetwork/metadata/eng/a563e47d-6eb9-4f7f-933c-222ae49fe57f
+    identifier: a563e47d-6eb9-4f7f-933c-222ae49fe57f
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::aqhi
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: Vector
+    geomtype: solid
+    crs: 4326
+    bbox: -141, 41.68, -52.62, 83.11
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: Air Quality Health Index Forecast
+    title_fr: Prévision de la Cote Air Santé
+    # from http://donnees-data.intranet.ec.gc.ca/geonetwork/metadata/eng/a563e47d-6eb9-4f7f-933c-222ae49fe57f
+    abstract_en: The Air Quality Health Index (AQHI) is a scale designed to help quantify the quality of the air in a certain region on a scale from 1 to 10. When the amount of air pollution is very high, the number is reported as 10+. It also includes a category that describes the health risk associated with the index reading (e.g. Low, Moderate, High, or Very High Health Risk). The AQHI is calculated based on the relative risks of a combination of common air pollutants that are known to harm human health, including ground-level ozone, particulate matter, and nitrogen dioxide. The AQHI formulation captures only the short term or acute health risk (exposure of hour or days at a maximum). The formulation of the AQHI may change over time to reflect new understanding associated with air pollution health effects. The AQHI is calculated from data observed in real time, without being verified (quality control).
+    abstract_fr: La cote air santé (CAS) est une échelle conçue pour quantifier la qualité de l'air dans une région donnée, sur une échelle de 1 à 10. La cote 10+ indique que la pollution de l’air est très élevée. La cote air santé comprend également une catégorie décrivant le risque pour la santé correspondant au nombre indiqué (risque faible, modéré, élevé ou très élevé). La cote air santé est calculée en fonction des risques relatifs que représente une combinaison de polluants atmosphériques courants connus pour leurs effets néfastes sur la santé humaine, tels que l'ozone troposphérique, les matières particulaires et le dioxyde d’azote. La formulation de la cote air santé rend uniquement compte du risque pour la santé aigu ou à court terme (contact en heures ou en jours au maximum). Cette formulation pourrait changer avec le temps, pour rendre compte d'une nouvelle compréhension des effets de la pollution atmosphérique sur la santé. La cote air santé est calculée à partir de données observées en temps réel, sans vérification (contrôle de la qualité).
+
+    #
+    dates:
+        # Date when the model became publicly accessible
+        # Unavailable on ECDC
+        creation:
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Air quality forecast
+                - Health index
+                - Health risk
+            keywords_fr:
+                - Prévision de la qualité de l'air
+                - Cote air santé
+                - Risque pour la santé
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Air
+                - Air quality
+                - Health hazards
+                - Forecasting
+                - Air pollution
+            keywords_fr:
+                - Air
+                - Qualité de l'air
+                - Risque pour la santé
+                - Prévision
+                - Pollution atmosphérique
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        # PUT above in HNAP github doc !
+
+        hnap_category_information:
+            keywords_en:
+                - Air
+                - Air - Quality
+            keywords_fr:
+                - Air
+                - Air - Qualité
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - National (CA)
+            keywords_fr:
+                - Nationale (CA)
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en: http://dd.weather.gc.ca/air_quality/doc/
+    url_fr: http://dd.weather.gc.ca/air_quality/doc/
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # from http://donnees-data.intranet.ec.gc.ca/geonetwork/metadata/eng/a563e47d-6eb9-4f7f-933c-222ae49fe57f
+    temporal_begin: 2013-01-01
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/air_quality/aqhi
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: CSV,XML
+        format_fr: CSV,XML
+        format_version:
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+#    wms_eng-CAN: &id_wms_eng-CAN
+#        base_mcf: ../shared/distribution-geomet.yml
+#        url:
+#        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+#        name_en:
+#        name_fr:
+#    wms_fra-CAN:
+#        <<: *id_wms_eng-CAN
+#        url:
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url: amqps://dd.weather.gc.ca/air_quality.aqhi#
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: CSV,XML
+        format_fr: CSV,XML
+        format_version:
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

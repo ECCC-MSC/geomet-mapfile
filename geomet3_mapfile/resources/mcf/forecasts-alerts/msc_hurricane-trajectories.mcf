@@ -1,0 +1,127 @@
+### Metadata Control File for the following dataset:
+### Hurricane trakectories
+### available on the MSC Datamart and MSC GeoMet
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+# NOTES: 
+# * Responsibility of the Hurricane trajectories metadata is unclear at this point
+# * Until another metadata record shows up for this dataset, this one will be used to feed MSC GeoMet
+#
+# Alex's command:
+# pygeometa generate-metadata --mcf=$HOME/dps/metadata/msc_hurricane-trajectories.mcf --schema=iso19139-hnap --output msc_hurricane-trajectories.xml
+#
+###
+
+[metadata]
+# INHERITING CONTACT INFORMATION FROM msc_main-contact.mcf
+base_mcf=msc_main-contact.mcf
+# Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/trajectoires/hurricane/
+identifier=6c995b31-3a8e-52a5-a1d0-46cd62f0b416
+# Primary language of the record, metadata still supports multiple languages
+language=eng; CAN
+charset=utf8
+# parentidentifier is conditional to an existing higher level
+# parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+hierarchylevel=dataset
+## THE DATESTAMP NEEDS TO BE UPDATED MANUALLY EVERY TIME THE METADATA RECORD IS UPDATED, see related feature request: https://github.com/geopython/pygeometa/issues/52
+datestamp=2016-11-17
+# dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+#### Next line will be updated according once we to the MSC Data Taxonomy...
+dataseturi=urn:x-msc-smc:md:weather-meteo::hurricane.trajectories
+
+[spatial]
+datatype=grid
+geomtype=solid
+crs=4326
+# Hurricane trajectories occur essentially in the Atlantic Ocean, a more concise bounding box could be identified by the data steward
+bbox=-180, -90, 180, 90
+
+
+[identification]
+# Primary language, metadata records are both in English and French when appropriate
+language=eng; CAN
+charset=utf8
+# Official title should be confirmed by data steward
+title_en=Hurricane trajectories
+title_fr=Trajectoires d'ouragans
+
+# Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions#Hurricane_trajectories
+abstract_en=The Canadian Hurricane Centre provides shapefile format files as part of regular forecast production during the hurricane season. The files will allow users to plot the forecast storm track on a mapping system of their choice. There are four shapefiles (*.shp) that are produced with each 6-hourly forecast bulletin when storms of tropical origin threaten or could threaten Canadian territory.
+abstract_fr=Le Centre canadien des ouragans fournit des fichiers en format shapefile dans le cadre des prévisions régulières lors de la saison des ouragans. Les fichiers permettront aux utilisateurs de tracer l'itinéraire des tempêtes prévues dans un système de cartes géographiques de leur choix. Il y a quatre formats shapefiles (*.shp) qui sont produits et comportent chacun un bulletin de prévisions sur 6 heures lorsque des tempêtes d'origine tropicale menace ou risque de menacer le territoire canadien.
+
+# A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+# keywords_type is contrained by a list
+keywords_type=theme
+# topiccategory value is contrained by a list, fixed to climatologyMeteorologyAtmosphere
+topiccategory=climatologyMeteorologyAtmosphere
+# For keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+keywords_gc_cst_en=Weather warnings, Precipitation, Wind, Storms, Floods
+keywords_gc_cst_fr=Alerte météorologique, Précipitation, Vent, Tempête, Inondation
+# No non-CST keywords specified for this dataset
+keywords_en=
+keywords_fr=
+
+# Next is the reference date for the cited resource
+# Source: Chris Fogarty
+date=2011-06-01
+# datetype must be 'revision', 'publication' or 'creation'
+# Set to publication: metadata is published and has not been revised yet, there was some metadata when it became available
+datetype=publication
+fees=None
+accessconstraints=otherRestrictions
+# THE DATESTAMP NEEDS TO BE UPDATED MANUALLY EVERY TIME THE METADATA RECORD IS UPDATED, see related feature request: https://github.com/geopython/pygeometa/issues/52
+rights_en=Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+rights_fr=Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+# The next URL points to the html documentation, if any, otherwise, to the data source
+url=https://www.ec.gc.ca/ouragans-hurricanes/
+### temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+# Source: Chris Fogarty
+temporal_begin=2011-06-01
+temporal_end=now
+status=onGoing
+# Best fit amongst the possible options, see MCF_Reference.md
+maintenancefrequency=continual
+
+# Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+# PUT above in HNAP github doc !
+hnap_category_information_en=Weather and Climate
+hnap_category_information_fr=Temps et climat
+# Amongst the possible values from ECDC: International  => French counterparts: Internationale
+hnap_category_geography_en=International
+hnap_category_geography_fr=Internationale
+# Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+hnap_category_content_en=Atmosphere 
+hnap_category_content_fr=Atmosphère
+
+
+[distribution:waf_fra-CAN]
+base_mcf=basemcf_msc-datamart.mcf
+url=http://dd.weather.gc.ca/trajectoires/hurricane/shapefile/
+format_en=SHP
+format_fr=SHP
+format_version=0
+
+[distribution:waf_eng-CAN]
+base_mcf=basemcf_msc-datamart.mcf
+url=http://dd.weather.gc.ca/trajectoires/hurricane/shapefile/
+format_en=SHP
+format_fr=SHP
+format_version=0
+
+# UPDATE REQUIRED with the Hurricane layer name, plus note that it is available as WMS on GeoMet-Beta at the moment
+#[distribution:wms_eng-CAN]
+#base_mcf=basemcf_msc-geomet.mcf
+#url=http://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities&layers=HURRICANES-ACTIVE
+#name_en=HURRICANES-ACTIVE
+#name_fr=HURRICANES-ACTIVE
+
+#[distribution:wms_fra-CAN]
+#base_mcf=basemcf_msc-geomet.mcf
+#url=http://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities&layers=HURRICANES-ACTIVE
+#name_en=HURRICANES-ACTIVE
+#name_fr=HURRICANES-ACTIVE

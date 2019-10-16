@@ -1,0 +1,170 @@
+%YAML 1.1
+---
+### Metadata Control File for the following dataset:
+### Global Deterministic Prevision System (GDPS)
+### available on the MSC Datamart and MSC GeoMet
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+## Important notes about this dataset:
+# This is the MCF file for the GDPS dataset on the MSC Datamart and MSC GeoMet
+# Other MCF files might exist specifically for the 25km and 66km GDPS datasets
+#
+# Alex's command:
+# pygeometa generate-metadata --mcf=/local/home/data/afssalx/content/discovery-metadata/mcf/nwp-models/msc_nwp_gdps.yml --schema=iso19139-hnap --output msc_nwp_gdps_20170530.xml
+###
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+# Inheriting contact information from main-contact.yml
+base_mcf: ../shared/contact-main.yml
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_gem_global/
+    identifier: c041e79a-914a-5a4e-a485-9cbc506195df
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -180, -90, 180, 90
+
+identification:
+    charset: utf8
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: Global Deterministic Prediction System
+    title_fr: Système global de prévision déterministe
+    # Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions#GDPS_.2F_SGPD
+    abstract_en: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolutions of 25 km and 66 km. Data is available for 28 vertical levels. Predictions are performed twice a day.
+    abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est de 25 et 66 km. Les données sont offertes pour 28 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+
+    dates:
+        # Date when the GDPS became publicly accessible
+        creation: 1991-03-12
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Prediction
+                - Global
+                - Deterministic
+            keywords_fr:
+                - Prévision
+                - Global
+                - Déterministe
+        # A minimum of one gc_cst keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Weather forecasts
+                - Precipitation
+                - Air temperature
+                - Humidity
+                - Snow
+                - Wind
+                - Meteorological data
+            keywords_fr:
+                - Prévisions météorologiques
+                - Précipitation
+                - Température de l'air
+                - Humidité
+                - Neige
+                - Vent
+                - Données météorologiques
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        hnap_category_information:
+            keywords_en:
+                - Weather and Climate
+            keywords_fr:
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en: http://weather.gc.ca/grib/grib2_glb_25km_e.html
+    url_fr: http://weather.gc.ca/grib/grib2_glb_25km_f.html
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # source for temporal_begin came from Yves Pelletier, http://cmosarchives.ca/History/BendixNWPComputer1963.html
+    temporal_begin: 1963-10-01
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/model_gem_global/25km/grib2/lat_lon/
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        # Pointing to the global WMS GetCapabilities response
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr point to the 'default layer' associated to the dataset, using temperature variable (TT) as default
+        name_en: GDPS.ETA_TT
+        name_fr: GDPS.ETA_TT
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

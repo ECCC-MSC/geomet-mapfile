@@ -1,0 +1,191 @@
+%YAML 1.1
+---
+### Metadata Control File for the following dataset:
+### High Resolution Deterministic Prevision System (HRDPS)
+### available on the MSC Datamart and MSC GeoMet
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+## Important notes about this dataset:
+# This is the MCF file for the HRDPS dataset on the MSC Datamart and MSC GeoMet
+# Other MCF files might exist specifically for the HRDPS-windows datasets
+#
+# Alex's command:
+# pygeometa generate-metadata --mcf=$HOME/dps/metadata/msc_nwp_hrdps.mcf --schema=iso19139-hnap --output msc_nwp_hrdps.xml
+#
+###
+
+
+msc-open-data:
+    contacts:
+        - Manon Faucher:
+            role:
+                # data stewards, documentation, production, development
+                - data steward
+            # for org, we need a stable nomenclature
+            organization:
+                branch: # MSC, S&T, CFSB
+                division:
+                section:
+            email: manon.faucher@canada.ca
+            notes: main data steward, https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_syst%C3%A8mes
+
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+# Inheriting contact information from main-contact.yml
+base_mcf: ../shared/contact-main.yml
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_hrdps/
+    identifier: 5b401fa0-6c29-57f0-b3d5-749f301d829d
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.hrdps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.hrdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    # bounding box manually estimated from model display, no authoritative value available
+    bbox: -153, 27.5, -43.8, 70
+
+identification:
+    charset: utf8
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: High Resolution Deterministic Prediction System
+    title_fr: Système à haute résolution de prévision déterministe
+    # Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions#HRDPS_.2F_SHRPD
+    abstract_en: The High Resolution Deterministic Prediction System (HRDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 48 hours into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage of the system is most of Canada. Data is available over specific areas in the MSC Datamart and the whole coverage is available in the MSC GeoMet web services. Data is available at a horizontal resolution of 2.5 km. Data is available for 28 vertical levels. Predictions are performed up to four times a day.
+    abstract_fr: Le Système à haute résolution de prévision déterministe (SHRPD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 48 heures dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique inclut la majeure partie du Canada. La résolution spatiale horizontale des données est de 2,5 km. Les données sont offertes pour 28 niveaux verticaux. Les prévisions sont exécutées quatre fois par jour.
+
+    dates:
+        # Next is the reference date for the cited resource
+        # Source: http://iweb.cmc.ec.gc.ca/cmc/CMOI/product_guide/docs/changes_f.html#20141118_hrdps_4.0.0
+#### VALIDATE THIS DATE WITH DATA STEWARD
+        creation: 2014-11-18
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Prediction
+                - High Resolution
+                - Deterministic
+            keywords_fr:
+                - Prévision
+                - Haute résolution
+                - Déterministe
+
+        # A minimum of one gc_cst keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Weather forecasts
+                - Precipitation
+                - Air temperature
+                - Humidity
+                - Snow
+                - Wind
+                - Meteorological data
+            keywords_fr:
+                - Prévisions météorologiques
+                - Précipitation
+                - Température de l'air
+                - Humidité
+                - Neige
+                - Vent
+                - Données météorologiques
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        hnap_category_information:
+            keywords_en:
+                - Weather and Climate
+            keywords_fr:
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en: http://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+    url_fr: http://meteo.gc.ca/grib/grib2_HRDPS_HR_f.html
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    temporal_begin: 2014-11-18 
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        # MSC Datamart description source: http://dd.weather.gc.ca/about_dd_apropos.txt
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/model_hrdps/continental/grib2/
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        # Pointing to the global WMS GetCapabilities response
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr point to the 'default layer' associated to the dataset, using temperature variable (TT) as default
+        name_en: HRDPS.CONTINENTAL_TT
+        name_fr: HRDPS.CONTINENTAL_TT
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        url: amqps://dd.weather.gc.ca/model_hrdps.continental.grib2.#
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN

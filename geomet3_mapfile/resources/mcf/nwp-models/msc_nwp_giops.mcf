@@ -1,0 +1,125 @@
+### Metadata Control File for the following dataset:
+### Global Ice Ocean Prediction System (GIOPS)
+### available on the MSC Datamart and MSC GeoMet
+#
+## Documentation about how this file is used:
+# https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata
+#
+## Documentation about MCF syntax:
+# https://github.com/geopython/pygeometa/blob/master/doc/MCF_Reference.md
+#
+# Alex's command:
+# pygeometa generate-metadata --mcf=/local/disk1/afssalx/dps/metadata/mcf/msc_nwp_giops.mcf --schema=iso19139-hnap --output msc_nwp_giops.xml
+# pygeometa generate-metadata --mcf=$HOME/dps/metadata/msc_nwp_giops.mcf --schema=iso19139-hnap --output msc_nwp_giops.xml
+#
+###
+
+
+[metadata]
+# INHERITING CONTACT INFORMATION FROM basemcf_msc_main-contact.mcf
+base_mcf=basemcf_msc-main-contact.mcf
+# Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_giops/netcdf/lat_lon/
+# Here were using the lat_lon directory and later we'll have another record for the polar_stereographic directory, see https://gccode.ssc-spc.gc.ca/ec-msc/dps/issues/2
+identifier=928ae47d-c16c-5b56-8d4f-6fdb999cc37f
+# Primary language of the record, metadata still supports multiple languages
+language=eng; CAN
+charset=utf8
+# parentidentifier is conditional to an existing higher level
+# parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+hierarchylevel=dataset
+## THE DATESTAMP NEEDS TO BE UPDATED MANUALLY EVERY TIME THE METADATA RECORD IS UPDATED, see related feature request: https://github.com/geopython/pygeometa/issues/52
+datestamp=2016-11-07
+# dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+#### Next line will be updated according once we to the MSC Data Taxonomy...
+dataseturi=urn:x-msc-smc:md:weather-meteo::nwp.giops.latlon
+
+# This metadata record applies to the latlong version of the GIOPS data, see ticket https://gccode.ssc-spc.gc.ca/ec-msc/dps/issues/2 for the need of the Polar Stereographic version as well
+[spatial]
+datatype=grid
+geomtype=solid
+crs=4326
+bbox=-180, -90, 180, 90
+
+
+[identification]
+# Primary language, metadata records are both in English and French when appropriate
+language=eng; CAN
+charset=utf8
+# Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+title_en=Global Ice Ocean Prediction System
+title_fr=Système Global de Prévision Océan-Glace
+# Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions
+abstract_en=The Global Ice-Ocean Prediction System (GIOPS) produces global sea ice and ocean analyses and 10 day forecasts daily. This product contains time-mean sea ice and ocean forecast fields interpolated to two grids. One of the grids is a 0.2° resolution regular latitude-longitude grid covering the global ocean (north of 80° S). The other grid is in north-polar stereographic projection with a 5-km spacing at the standard parallel 60° N and covers the Arctic Ocean and the neighbouring sub-polar seas. Data is available for 50 depths. The data files are in netCDF format and comply with the Climate and Forecast Conventions. 
+abstract_fr=Le Système Global de Prévision Océan-Glace (SGPOG) produit quotidiennement des analyses et des prévisions quotidiennes des 10 prochains jours de la glace de mer et océanique à l'échelle globale. Ce produit contient une moyenne temporelle des prévisions de la glace de mer et océanique interpolées sur deux grilles. La première grille possède une résolution de 0.2° en longitude et latitude couvrant les océans à l'échelle globale (au nord de 80° S). La seconde grille possède une projection cartographique polaire stéréographique avec un espacement de 5 km au parallèle 60° N et couvre l'océan Arctique et les mers sub-polaires avoisinantes. Ces données sont disponibles pour 50 niveaux de profondeur. Les fichiers correspondant sont fournis au format netCDF et respectent les conventions CF (Climate and Forecast). 
+
+
+# A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+# keywords_type is contrained by a list
+keywords_type=theme
+# topiccategory value is contrained by a list, fixed to climatologyMeteorologyAtmosphere
+topiccategory=climatologyMeteorologyAtmosphere
+# For keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+keywords_gc_cst_en=Weather forecasts, Meteorological data, Ice, Water, Arctic, Coastal waters, Oceans, Polar regions
+keywords_gc_cst_fr=Prévisions météorologiques, Données météorologiques, Glace, Eau, Arctique, Eaux côtières, Océan, Région polaire
+# No non-CST keywords specified for this dataset, these were provided by the DAta Steward
+keywords_en=Sea ice-ocean forecast
+keywords_fr=Prévision océan-glace
+
+# Next is the reference date for the cited resource
+# Dates provided by Mateusz Reszka
+creation_date=2015-08-20
+publication_date=2016-03-10
+fees=None
+accessconstraints=otherRestrictions
+# THE DATESTAMP NEEDS TO BE UPDATED MANUALLY EVERY TIME THE METADATA RECORD IS UPDATED, see related feature request: https://github.com/geopython/pygeometa/issues/52
+rights_en=Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+rights_fr=Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+# The next URL points to the html documentation, if any, otherwise, to the data source
+url_en=http://dd.weather.gc.ca/model_giops/doc/README_GIOPS.txt
+url_fr=http://dd.weather.gc.ca/model_giops/doc/README_GIOPS.txt
+# temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+# Date provided by Mateusz Reszka
+temporal_begin=2016-03-10
+temporal_end=now
+status=onGoing
+# Best fit amongst the possible options, see MCF_Reference.md
+maintenancefrequency=continual
+
+# Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+# PUT above in HNAP github doc !
+hnap_category_information_en=Weather and Climate
+hnap_category_information_fr=Temps et climat
+# Amongst the possible values from ECDC: International  => French counterparts: Internationale
+hnap_category_geography_en=International
+hnap_category_geography_fr=Internationale
+# Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+## UPDATE NEXT FOR OCEAN???
+hnap_category_content_en=Atmosphere 
+hnap_category_content_fr=Atmosphère
+
+
+[distribution:waf_fra-CAN]
+base_mcf=basemcf_msc-datamart.mcf
+url=http://dd.weather.gc.ca/model_giops/netcdf/lat_lon/
+format_en=NetCDF
+format_fr=NetCDF
+format_version=4
+
+[distribution:waf_eng-CAN]
+base_mcf=basemcf_msc-datamart.mcf
+url=http://dd.weather.gc.ca/model_giops/netcdf/lat_lon/
+format_en=NetCDF
+format_fr=NetCDF
+format_version=4
+
+[distribution:wms_eng-CAN]
+base_mcf=basemcf_msc-geomet.mcf
+url=http://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities&layers=OCEAN-ICE.GIOPS_GL
+name_en=OCEAN-ICE.GIOPS_GL
+name_fr=OCEAN-ICE.GIOPS_GL
+
+[distribution:wms_fra-CAN]
+base_mcf=basemcf_msc-geomet.mcf
+url=http://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities&layers=OCEAN-ICE.GIOPS_GL
+name_en=OCEAN-ICE.GIOPS_GL
+name_fr=OCEAN-ICE.GIOPS_GL

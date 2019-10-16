@@ -1,0 +1,280 @@
+# scope would be "MSC open data inventory": discovery metadata (ECDC+GoC+WMO), MSC Datamart, MSC GeoMet
+
+msc-open-data:
+    dataset_name: &dataset_names
+        title_en: Global Deterministic Prediction System
+        title_fr: Système global de prévision déterministe
+
+    template_type: nwp_model # nwp_model, other
+
+    contacts:
+# Look at ISO19115 structure for contacts ????
+# ISO19115 spec is hidden behind a paywall
+# According to https://github.com/geopython/pygeometa/blob/master/tests/contact.yml the proposed content for contact is:
+#      contact:
+#        main: &contact_main
+#          organization: Environment Canada
+#          individualname: Tom Kralidis
+#          positionname: Senior Systems Scientist
+#          phone: +01-123-456-7890
+#          email: foo@bar.tld
+#
+# I'd claim this doesn't meet our requirements? Insufficient granularity for 'organisation', 'role' missing? (likely not) but that we want to have 'role' as a list?
+
+        - Nicolas Gasset:
+           role:
+               - data steward
+               - development
+           organization:
+                branch: MSC
+                division: CCMEP-Ops
+                section: CMOI
+           email:
+           notes: main GDPS data steward according to https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_syst%C3%A8mes
+        - Benoit Archambault:
+            role:
+                # data stewards, documentation, production, development
+                - production
+            # for org, we need a stable nomenclature
+            organization:
+                branch: MSC # MSC, S&T, CFSB
+                division: CCMEP-Ops
+                section: CMOI
+            email:
+            notes:
+        - Reine Parent:
+           role:
+               - development
+           organization:
+                branch: MSC
+                division: CCMEP-Ops
+                section: CMOI
+           email:
+           notes: GRIB2 encoding
+
+discovery_metadata:
+    catalog:
+       # as published in ECDC, Open Data, WMO WIS, etc.
+        - ECDC:
+            url:
+            last_publication_date:
+        - Open-data:
+            url: https://open.canada.ca/data/en/dataset/c041e79a-914a-5a4e-a485-9cbc506195df
+            last_publication_date:
+        - WMO-WIS:
+            url:
+            last_publication_date:
+
+# this 'mcf' section is used by pygeometa, the name can be confusing though, pygeometa_mcf better? That would require a change at the pygeometa level. Leaving as is?
+mcf:
+    version: 1.0
+
+# Inheriting contact information from main-contact.yml
+base_mcf: ../shared/contact-main.yml
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_gem_global/
+    identifier: c041e79a-914a-5a4e-a485-9cbc506195df
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    resolution: 25 km # ?? unclear how this would be used
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -180, -90, 180, 90
+    dimensions: [1500, 751] # needed by GeoMet, not used for discovery metadata
+    # actual GRIB2 / GeoTIFF / netCDF projection, used by GeoMet:
+    input_data:  # ? ambiguous key
+        projection: +proj=longlat +a=6371229 +b=6371229 +no_defs +pm=-359.88
+        bbox: # do we really need the two bboxes?
+
+identification:
+    charset: utf8
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    <<: *dataset_names
+    # Abstracts found on https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Descriptions#GDPS_.2F_SGPD
+    abstract_en: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolutions of 25 km and 66 km. Data is available for 28 vertical levels. Predictions are performed twice a day.
+    abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est de 25 et 66 km. Les données sont offertes pour 28 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+
+    dates:
+        # Date when the GDPS became publicly accessible
+        creation: 1991-03-12
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Prediction
+                - Global
+                - Deterministic
+            keywords_fr:
+                - Prévision
+                - Global
+                - Déterministe
+        # A minimum of one gc_cst keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Weather forecasts
+                - Precipitation
+                - Air temperature
+                - Humidity
+                - Snow
+                - Wind
+                - Meteorological data
+            keywords_fr:
+                - Prévisions météorologiques
+                - Précipitation
+                - Température de l'air
+                - Humidité
+                - Neige
+                - Vent
+                - Données météorologiques
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+        hnap_category_information:
+            keywords_en:
+                - Weather and Climate
+            keywords_fr:
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Atmosphere
+            keywords_fr:
+                - Atmosphère
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - climatologyMeteorologyAtmosphere
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (http://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    url_en: http://weather.gc.ca/grib/grib2_glb_25km_e.html
+    url_fr: http://weather.gc.ca/grib/grib2_glb_25km_f.html
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # source for temporal_begin came from Yves Pelletier, http://cmosarchives.ca/History/BendixNWPComputer1963.html
+    temporal_begin: 1963-10-01
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+distribution:
+    msc-datamart:
+        directory_path: /model_gem_global/25km/grib2/lat_lon/{model_run_path}/{forecast_hour_path}/
+        filename_pattern: CMC_glb_{wx_variable}_latlon.24x.24_{YYYYMMDD}{model_run}_P{forecast_hour}.grib2
+
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/model_gem_global/25km/grib2/lat_lon/
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        # Pointing to the global WMS GetCapabilities response
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr point to the 'default layer' associated to the dataset, using temperature variable (TT) as default
+        name_en: GDPS.ETA_TT
+        name_fr: GDPS.ETA_TT
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        format_en: GRIB2
+        format_fr: GRIB2
+        format_version: 2
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN
+
+nwp_model:
+    template_version: 0.1
+
+    model_runs: &model_forecast_hours # list of model runs
+# how to handle model that don't run every day....  e.g. CanSIPS
+        - 00Z:
+            forecast_hours: &model_run_forecast_hours
+                # use ISO8601
+                begin: PT0H
+                end: PT240H
+                duration: PT3H
+        - 12Z:
+          # given FH don't change for this MR, we simply reference it
+            <<: *model_run_forecast_hours
+
+    wx_variable:
+# we're missing a way to fully reconstruct the full GeoMet layer hierarchy... this should probably a key in itself
+# see also the type of info we provide: https://weather.gc.ca/grib/GLB_HR/GLB_latlonp24xp24_P000_deterministic_e.html ... but unsure if we should include all of this, we're getting dangerously closer to the operational dict o.dict ... but it does highlight the valid question, should units be a key of its own? And so could be the generic 'variable' name (despite being somewhat present in the geomet label)?
+
+#        - air_temperature: # REMOVE THIS LEVEL
+        - GDPS (25 km): #????
+            - TMP_TGL_2: # datamart filename pattern for the wx variable
+                file_size: # in bytes, kilobytes?
+                GeoMet-layers:
+                    - GDPS.ETA_TT:
+                        label_en: GDPS.ETA - Air temperature [°C]
+                        label_fr: GDPS.ETA - Température de l'air [°C]
+                        <<: *model_forecast_hours
+        - GDPS at pressure levels (25 km):
+            - TMP_ISBL_500:
+                file_size: # in bytes
+                GeoMet-layers:
+                    - GDPS.PRES_TT.500:
+                        # note the // inferring GeoMet hierarchy
+                        label_en: 500//GDPS.PRES - Air temperature at 500.0 mb [°C]
+                        label_fr: 500//GDPS.PRES - Température de l'air à 500.0 mb [°C]
+                        <<: *model_forecast_hours
+            - TMP_ISBL_400:
+                file_size:
+                GeoMet-layers:
+                    - GDPS.PRES_TT.400.3h:
+                        label_en: 400//GDPS.PRES - Air temperature at 400.0 mb (3 hourly forecast) [°C]
+                        label_fr: 400//GDPS.PRES - Température de l'air à 400.0 mb (prévision aux 3 heures) [°C]
+                        <<: *model_forecast_hours
+                        forecast_hours:
+                            end: 180 #validate, dummy value
+                    - GDPS.PRES_TT.400.6h:
+                        label_en: 400//GDPS.PRES - Air temperature at 400.0 mb (6 hourly forecast) [°C]
+                        label_fr: 400//GDPS.PRES - Température de l'air à 400.0 mb (prévision aux 6 heures) [°C]
+                        <<: *model_forecast_hours
+                        forecast_hours:
+                            duration: PT6H
+#        - cloud_cover:
+# ... adding more GDPS Wx variables would help

@@ -1,0 +1,40 @@
+%YAML 1.1
+---
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+# Inheriting information from msc_radar.yml
+base_mcf: msc_radar.yml
+
+
+metadata:
+    base_mcf: msc_radar.yml
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: https://weather.gc.ca/radar/
+    identifier: bd1500e5-7000-53e2-963e-718801fc16e0
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+
+spatial:
+    base_mcf: msc_radar.yml
+
+identification:
+    base_mcf: msc_radar.yml
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: North American Radar Mosaic (1 km)
+    title_fr: Mosaïque radar Nord-Américaine (1 km)
+    # No informations (LP)
+    abstract_en: Composite of American and Canadian weather radars at 1km resolution updated every 10 minutes
+    abstract_fr: Mosaïque des radars météorologiques Canadiens et Américains à une résolution de 1km mise-à-jour aux 10 minutes
+
+distribution:
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: RADAR_1KM_RRAI
+        name_fr: RADAR_1KM_RRAI
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet?lang=F&service=WMS&request=GetCapabilities
