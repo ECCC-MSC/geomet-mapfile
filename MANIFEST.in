@@ -1,0 +1,3 @@
+include README.md LICENSE requirements.txt
+recursive-include geomet3_mapfile *.inc *.json *.yml *.mcf epsg
+

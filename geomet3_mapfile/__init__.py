@@ -4,6 +4,7 @@ import click
 
 # from mapfile import mapfile
 from geomet3_mapfile.utils import utils
+from geomet3_mapfile.mapfile import mapfile
 
 
 @click.group()
@@ -14,3 +15,4 @@ def cli():
 
 # cli.add_command(mapfile)
 cli.add_command(utils)
+cli.add_command(mapfile)
