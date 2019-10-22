@@ -2,16 +2,18 @@ import os
 from pathlib import Path
 
 import click
-from geomet3_mapfile.utils.utils import convert_style_to_json
 from lark.exceptions import UnexpectedToken
+import mappyfile
+
+from geomet3_mapfile.utils.utils import convert_style
 
 @click.group()
 def utils():
     """Use geomet3 utility functions"""
     pass
 
+
 @click.command()
-@click.pass_context
 @click.option('--file', '-f', 'file_',
               type=click.Path(exists=True, resolve_path=True),
               help='Path to file')
@@ -22,12 +24,15 @@ def utils():
 @click.option('--output_dir', '-o', 'output_directory',
               type=click.Path(exists=False, resolve_path=True,
                               dir_okay=True, file_okay=False),
-              help='Path to output directory', required=True)
-def convert(ctx, file_, directory, output_directory):
+              help='Path to output directory')
+@click.option('--output_format', '-of', 'output_format',
+              type=click.Choice(['json', 'mapfile'], case_sensitive=False),
+              help='Output format')
+def convert(file_, directory, output_directory, output_format):
     """convert mapfile to mappyfile dictionnary object"""
 
     if all([file_ is None, directory is None]):
-        raise click.ClickException('Missing --file/-f, --directory/-d option')
+        raise click.ClickException('Missing --file/-f, --directory/-d option, -output_dir/-o option')
 
     files_to_process = []
 
@@ -41,7 +46,7 @@ def convert(ctx, file_, directory, output_directory):
     converted_files = []
     for file_to_process in files_to_process:
         try:
-            converted_files.append((file_to_process, convert_style_to_json(file_to_process)))
+            converted_files.append((file_to_process, convert_style(file_to_process, output=output_format)))
         except UnexpectedToken:
             click.echo(f'Could not convert {file_to_process}!')
             pass
@@ -49,8 +54,13 @@ def convert(ctx, file_, directory, output_directory):
     if not os.path.exists(output_directory):
         os.mkdir(output_directory)
 
+    if output_format == 'json':
+        output_extension = '.json'
+    elif output_format == 'mapfile':
+        output_extension = '.inc'
+
     for file, converted_file in converted_files:
-        output_file_name = f'{Path(file).name.split(".")[0]}.json'
+        output_file_name = f'{Path(file).name.split(".")[0]}{output_extension}'
         with open(os.path.join(output_directory, output_file_name), 'w') as f:
             f.write(converted_file)
 
