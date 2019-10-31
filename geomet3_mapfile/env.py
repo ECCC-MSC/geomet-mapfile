@@ -29,14 +29,16 @@ BASEDIR = os.environ.get('GEOMET3_BASEDIR', None)
 DATADIR = os.environ.get('GEOMET3_DATADIR', None)
 CONFIG = os.environ.get('GEOMET3_CONFIG', None)
 URL = os.environ.get('GEOMET3_URL', None)
-TILEINDEX_URL = os.environ.get('TILEINDEX_URL', None)
-# URL = os.environ.get('GEOMET3_CLIMATE_URL', None)
+STORE_TYPE = os.environ.get('GEOMET3_MAPFILE_STORE_TYPE', None)
+STORE_URL = os.environ.get('GEOMET3_MAPFILE_STORE_URL', None)
+TILEINDEX_URL = os.environ.get('GDR_TILEINDEX_URL', None)
 
 LOGGER.debug(BASEDIR)
 LOGGER.debug(DATADIR)
 LOGGER.debug(CONFIG)
+LOGGER.debug(STORE_TYPE)
+LOGGER.debug(STORE_URL)
 LOGGER.debug(TILEINDEX_URL)
-# LOGGER.debug(URL)
 
 if None in [BASEDIR, DATADIR, CONFIG]:
     msg = 'Environment variables not set!'
