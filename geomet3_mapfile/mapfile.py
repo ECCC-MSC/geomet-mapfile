@@ -12,7 +12,8 @@ import yaml
 from yaml import load, Loader
 
 from geomet3_mapfile import __version__
-from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, TILEINDEX_URL, URL
+from geomet3_mapfile.plugin import load_plugin
+from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, TILEINDEX_URL, URL, STORE_TYPE, STORE_URL
 
 MAPFILE_BASE = f'{os.path.dirname(os.path.realpath(__file__))}{os.sep}resources{os.sep}mapfile-base.json'
 
@@ -21,12 +22,11 @@ LOGGER = logging.getLogger(__name__)
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def gen_web_metadata(m, c, service, url):
+def gen_web_metadata(m, c, url):
     """
     update mapfile MAP.WEB.METADATA section
     :param m: base mapfile JSON object
     :param c: configuration YAML metadata object
-    :param service: service (WMS or WCS)
     :param url: URL of service
     :returns: dict of web metadata
     """
@@ -36,8 +36,6 @@ def gen_web_metadata(m, c, service, url):
     d = {
         '__type__': 'metadata'
     }
-
-    LOGGER.debug('Service: {}'.format(service))
 
     LOGGER.debug('Setting service identification metadata')
 
@@ -127,7 +125,6 @@ def gen_layer(layer_name, layer_info):
     mapfile layer object generator
     :param layer_name: name of layer
     :param layer_info: layer information
-    :param lang: language (en or fr)
     :returns: list of mappyfile layer objects of layer
     """
 
@@ -141,55 +138,75 @@ def gen_layer(layer_name, layer_info):
 
     layer = {
         '__type__': 'layer',
+        'tolerance': 15,
+        'template': 'ttt.html'
     }
 
-    # for time-enabled layers
-    if layer_info['time_enabled'] in ['yes', 'future']:
-        # build tileindex LAYER object
-        layer_tileindex_name = '{}_idx'.format(layer_name)
+    # build tileindex LAYER object
+    layer_tileindex_name = '{}_idx'.format(layer_name)
 
-        layer_tileindex['type'] = 'POLYGON'
-        layer_tileindex['name'] = layer_tileindex_name
-        layer_tileindex['status'] = 'OFF'
-        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+    layer_tileindex['type'] = 'POLYGON'
+    layer_tileindex['name'] = layer_tileindex_name
+    layer_tileindex['status'] = 'OFF'
+    layer_tileindex['CONNECTIONTYPE'] = 'OGR'
 
-        layer_tileindex['CONNECTION'] = TILEINDEX_URL
-        layer_tileindex['metadata'] = {
-            '__type__': 'metadata',
-            'ows_enable_request': '!*',
-        }
-        layer_tileindex['filter'] = ''
+    layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
+    layer_tileindex['metadata'] = {
+        '__type__': 'metadata',
+        'ows_enable_request': '!*',
+    }
+    layer_tileindex['filter'] = ''
 
-        layers.append(layer_tileindex)
+    layers.append(layer_tileindex)
 
-        # build LAYER object
-        layer['name'] = layer_name
-        layer['debug'] = 5
-        layer['type'] = 'RASTER'
-        layer['template'] = "ttt.html"
-        layer['tolerance'] = 15
+    # build LAYER object
+    layer['name'] = layer_name
+    layer['debug'] = 5
+    layer['type'] = 'RASTER'
+    layer['template'] = "ttt.html"
+    layer['tolerance'] = 15
 
-        layer['metadata'] = {
-            '__type__': 'metadata',
-            'gml_include_items': 'all',
-            'ows_include_items': 'all'
-        }
+    layer['metadata'] = {
+        '__type__': 'metadata',
+        'gml_include_items': 'all',
+        'ows_include_items': 'all'
+    }
 
-        layer['status'] = 'ON'
-        layer['tileindex'] = layer_tileindex_name
-        layer['tileitem'] = 'properties.filepath'
+    layer['status'] = 'ON'
+    layer['tileindex'] = layer_tileindex_name
+    layer['tileitem'] = 'properties.filepath'
 
     # set layer projection
     with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
-        layer['projection'] = " ".join([line.replace("\n", "").strip('"') for line in f.readlines()])
+        lines = [line.replace("\n", "").replace('"', "") for line in f.readlines()]
+        layer['projection'] = lines
 
     # set layer processing directives
+    layer['processing'] = []
+    if 'processing' in layer_info:
+        for item in layer_info['processing']:
+            layer['processing'].append(item)
     if 'processing' in layer_info['forecast_model']:
-        layer['processing'] = layer_info['forecast_model']['processing']
+        for item in layer_info['forecast_model']['processing']:
+            layer['processing'].append(item)
+
+    # set type
+    if 'type' in layer_info:
+        layer['type'] = layer_info['type']
+
+    # set connectiontype
+    if 'conntype' in layer_info:
+        layer['CONNECTIONTYPE'] = layer_info['conntype']
+
+    # set additional layer params
+    if 'layer_params' in layer_info:
+        for params in layer_info['layer_params']:
+            param, value = params.split()
+            layer[param] = value
 
     # set layer classes
     layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".inc")
-    layer['include'] = [os.path.join(THISDIR, 'resources', style) for style in layer_info['styles']]
+    layer['include'] = [os.path.join(DATADIR, style) for style in layer_info['styles']]
 
     # set layer metadata
     layer['metadata'] = {}
@@ -236,7 +253,7 @@ def gen_layer(layer_name, layer_info):
         layer['metadata']['geomet_ows_http_max_age'] = ''
 
     # source = mcf
-    #TODO: For Geomet3 we should get rid of all .mcf files and replace them with .yml files?
+    # TODO: For Geomet3 we should get rid of all .mcf files and replace them with .yml files?
     if layer_info['forecast_model']['mcf'].endswith('.mcf'):
         mcf = ConfigParser()
         with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
@@ -250,8 +267,14 @@ def gen_layer(layer_name, layer_info):
         if mcf.has_option('identification', 'keywords_gc_cst_fr'):
             layer['metadata']['ows_keywordlist_fr'] += f', {", ".join([mcf.get("identification", "keywords_gc_cst_fr")])}'  # noqa
         layer['metadata']['ows_identifier_value'] = mcf.get('metadata', 'dataseturi')
-        layer['metadata']['ows_metadataurl_href'] = f'http://open.canada.ca/data/en/dataset/{mcf.get("metadata", "identifier")}'  # noqa
-        layer['metadata']['ows_metadataurl_href_fr'] = f'http://open.canada.ca/data/fr/dataset/{mcf.get("metadata", "identifier")}'  # noqa
+        layer['metadata']['ows_metadataurl_href'] = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
+                                                     'service=CSW&'
+                                                     'version=2.0.2&'
+                                                     'request=GetRecordById&'
+                                                     'outputschema=csw:IsoRecord&'
+                                                     'elementsetname=full&'
+                                                     f'id={mcf.get("metadata", "identifier")}')
+
     elif layer_info['forecast_model']['mcf'].endswith('.yml'):
         with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
             mcf = load(f, Loader=Loader)
@@ -265,9 +288,13 @@ def gen_layer(layer_name, layer_info):
                 layer['metadata']['ows_keywordlist'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_en"])}'   # noqa
                 layer['metadata']['ows_keywordlist_fr'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_fr"])}'   # noqa
             layer['metadata']['ows_identifier_value'] = mcf['metadata']['dataseturi']
-            layer['metadata']['ows_metadataurl_href'] = f'http://open.canada.ca/data/en/dataset/{mcf["metadata"]["identifier"]}'  # noqa
-            layer['metadata']['ows_metadataurl_href_fr'] = f'http://open.canada.ca/data/fr/dataset/{mcf["metadata"]["identifier"]}'  # noqa
-
+            layer['metadata']['ows_metadataurl_href'] = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
+                                                         'service=CSW&'
+                                                         'version=2.0.2&'
+                                                         'request=GetRecordById&'
+                                                         'outputschema=csw:IsoRecord&'
+                                                         'elementsetname=full&'
+                                                         f'id={mcf["metadata"]["identifier"]}')
     # generic metadata
     layer['metadata']['gml_include_items'] = 'all'
     layer['metadata']['ows_authorityurl_name'] = 'msc'
@@ -286,6 +313,7 @@ def gen_layer(layer_name, layer_info):
 
     return layers
 
+
 @click.group()
 def mapfile():
     pass
@@ -293,10 +321,9 @@ def mapfile():
 
 @click.command()
 @click.pass_context
-@click.option('--service', '-s', type=click.Choice(['WMS', 'WCS']),
-              help='service')
 @click.option('--layer', '-lyr', help='layer')
-def generate(ctx, service, layer):
+@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']))
+def generate(ctx,  layer, output):
     """generate mapfile"""
 
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
@@ -322,8 +349,7 @@ def generate(ctx, service, layer):
     else:
         mapfiles = cfg['layers']
 
-    mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'],
-                                                  service, URL)
+    mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'], URL)
 
     for key, value in mapfiles.items():
         mapfile['layers'] = []
@@ -337,20 +363,58 @@ def generate(ctx, service, layer):
         filename = 'geomet-weather-{}.map'.format(key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
-        with open(filepath, 'w', encoding='utf-8') as fh:
-            mappyfile.dump(mapfile, fh)
+        if output == 'mapfile':
+            with open(filepath, 'w', encoding='utf-8') as fh:
+                mappyfile.dump(mapfile, fh)
+
+        elif output == 'store':
+
+            provider_def = {
+                'type': STORE_TYPE,
+                'url': STORE_URL,
+            }
+
+            st = load_plugin('store', provider_def)
+            st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile))
 
     if layer is None:  # generate entire mapfile
-        filename = 'geomet-weather-{}.map'.format(key)
-        filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
         mapfile['layers'] = all_layers
 
-        with open(filepath, 'w', encoding='utf-8') as fh:
-            mappyfile.dump(mapfile, fh)
+        if output == 'mapfile':
+
+            filename = 'geomet-weather.map'
+            filepath = '{}{}{}'.format(output_dir, os.sep, filename)
+
+            with open(filepath, 'w', encoding='utf-8') as fh:
+                mappyfile.dump(mapfile, fh)
+
+        if output == 'store':
+
+            provider_def = {
+                'type': STORE_TYPE,
+                'url': STORE_URL,
+            }
+
+            st = load_plugin('store', provider_def)
+            st.set_key(f'geomet-weather_mapfile', mappyfile.dumps(mapfile))
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
     shutil.copy2(epsg_file, os.path.join(BASEDIR, 'mapfile'))
 
 
 mapfile.add_command(generate)
+
+# if __name__ == "__main__":
+#
+#     with open(MAPFILE_BASE) as fh:
+#         mapfile = json.load(fh, object_pairs_hook=OrderedDict)
+#         symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
+#         with open(symbols_file) as fh2:
+#             mapfile['symbols'] = json.load(fh2)
+#
+#     with open(CONFIG) as fh:
+#
+#         cfg = yaml.load(fh, Loader=Loader)
+#
+#     gen_layer('GDPS.ETA_GZ-CONTOUR', cfg['layers']['GDPS.ETA_GZ-CONTOUR'])

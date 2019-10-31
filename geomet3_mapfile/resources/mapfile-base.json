@@ -15,24 +15,65 @@
     "projection": ["init=epsg:4326"],
     "outputformats": [{
         "__type__": "outputformat",
-        "name": "GEOTIFF_32",
+        "name": "GeoJSON",
+        "driver": "OGR/GeoJSON",
+        "mimetype": "application/json; subtype=geojson",
+        "formatoption": [
+            "STORAGE=memory",
+            "FORM=simple",
+            "FILENAME=result.json"
+        ]
+    },
+    {
+        "__type__": "outputformat",
+        "name": "CSV",
+        "driver": "OGR/CSV",
+        "mimetype": "text/csv",
+        "formatoption": [
+            "LCO:GEOMETRY=AS_YX",
+            "STORAGE=filesystem",
+            "FORM=simple",
+            "FILENAME=result.csv"
+        ]
+    },
+    {
+        "__type__": "outputformat",
+        "name": "SHAPE-ZIP",
+        "driver": "OGR/ESRI Shapefile",
+        "mimetype": "application/shapefile",
+        "formatoption": [
+            "STORAGE=filesystem",
+            "FORM=zip",
+            "FILENAME=result.zip"
+        ]
+    },
+    {
+        "__type__": "outputformat",
+        "name": "GEOTIFF_16",
         "driver": "GDAL/GTiff",
         "mimetype": "image/tiff",
         "imagemode": "FLOAT32",
         "extension": "tif"
-    }, {
+    },
+    {
         "__type__": "outputformat",
-        "name": "NETCDF",
-        "driver": "GDAL/netCDF",
-        "mimetype": "image/netcdf",
-        "imagemode": "FLOAT32",
-        "extension": "nc"
-    }, {
-        "__type__": "outputformat",
-        "name": "GeoJSON",
-        "driver": "TEMPLATE",
-        "mimetype": "application/json"
-    }],
+        "name": "AAIGRID",
+        "driver": "GDAL/AAIGRID",
+        "mimetype": "image/x-aaigrid",
+        "imagemode": "INT16",
+        "extension": "grd",
+        "formatoption": [
+            "FILENAME=result.grd"
+        ]
+    },
+        {
+            "__type__": "outputformat",
+            "name": "NETCDF",
+            "driver": "GDAL/netCDF",
+            "mimetype": "image/netcdf",
+            "imagemode": "FLOAT32",
+            "extension": "nc"
+        }],
     "querymap": {
         "__type__": "querymap",
         "status": "OFF",

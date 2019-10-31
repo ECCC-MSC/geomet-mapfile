@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 
@@ -46,7 +47,7 @@ def convert(file_, directory, output_directory, output_format):
     converted_files = []
     for file_to_process in files_to_process:
         try:
-            converted_files.append((file_to_process, convert_style(file_to_process, output=output_format)))
+            converted_files.append((file_to_process, convert_style(file_to_process, output_format=output_format)))
         except UnexpectedToken:
             click.echo(f'Could not convert {file_to_process}!')
             pass
@@ -56,6 +57,7 @@ def convert(file_, directory, output_directory, output_format):
 
     if output_format == 'json':
         output_extension = '.json'
+
     elif output_format == 'mapfile':
         output_extension = '.inc'
 
@@ -63,5 +65,6 @@ def convert(file_, directory, output_directory, output_format):
         output_file_name = f'{Path(file).name.split(".")[0]}{output_extension}'
         with open(os.path.join(output_directory, output_file_name), 'w') as f:
             f.write(converted_file)
+
 
 utils.add_command(convert)

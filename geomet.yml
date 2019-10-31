@@ -1473,6 +1473,10 @@ layer_templates:
             - BANDS=1
             - CONTOUR_INTERVAL=10
             - CONTOUR_ITEM=pixel
+        layer_params:
+            - UNITS METERS
+            - LABELITEM "pixel"
+            - GEOMTRANSFORM (smoothsia([shape],1,1))
         styles:
             - mapserv/class/GEOPOTENTIALHEIGHT_LINE.inc
     GZ_PRES_CONTOUR: &template_gz_pres_contour
