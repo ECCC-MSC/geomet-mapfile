@@ -1,16 +1,14 @@
-import json
 import os
 from pathlib import Path
 
 import click
 from lark.exceptions import UnexpectedToken
-import mappyfile
-
 from geomet3_mapfile.utils.utils import convert_style
+
 
 @click.group()
 def utils():
-    """Use geomet3 utility functions"""
+    """geomet3-mapfile utility functions"""
     pass
 
 
