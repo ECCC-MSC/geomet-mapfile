@@ -1,5 +1,6 @@
 from collections import OrderedDict
 from configparser import ConfigParser
+from copy import deepcopy
 from datetime import datetime
 import json
 import logging
@@ -316,6 +317,7 @@ def gen_layer(layer_name, layer_info):
 
 @click.group()
 def mapfile():
+    """Generate mapfile(s)"""
     pass
 
 
@@ -352,20 +354,32 @@ def generate(ctx,  layer, output):
     mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'], URL)
 
     for key, value in mapfiles.items():
-        mapfile['layers'] = []
+        mapfile_copy = deepcopy(mapfile)
+        mapfile_copy['layers'] = []
 
         layers = gen_layer(key, value)
 
         for lyr in layers:
-            mapfile['layers'].append(lyr)
+            mapfile_copy['layers'].append(lyr)
             all_layers.append(lyr)
+
+        if 'outputformats' in value['forecast_model']:
+            mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats'] if format_['name'] in
+                                         value['forecast_model']['outputformats']]
+
+        if 'symbols' in value:
+            mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
+                                   value['symbols'] or any(symbol_ in symbol['name']
+                                                           for symbol_ in value['symbols'])]
+        else:
+            mapfile_copy['symbols'] = []
 
         filename = 'geomet-weather-{}.map'.format(key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
         if output == 'mapfile':
             with open(filepath, 'w', encoding='utf-8') as fh:
-                mappyfile.dump(mapfile, fh)
+                mappyfile.dump(mapfile_copy, fh)
 
         elif output == 'store':
 
@@ -375,7 +389,7 @@ def generate(ctx,  layer, output):
             }
 
             st = load_plugin('store', provider_def)
-            st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile))
+            st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
 
     if layer is None:  # generate entire mapfile
 
@@ -404,17 +418,3 @@ def generate(ctx,  layer, output):
 
 
 mapfile.add_command(generate)
-
-# if __name__ == "__main__":
-#
-#     with open(MAPFILE_BASE) as fh:
-#         mapfile = json.load(fh, object_pairs_hook=OrderedDict)
-#         symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
-#         with open(symbols_file) as fh2:
-#             mapfile['symbols'] = json.load(fh2)
-#
-#     with open(CONFIG) as fh:
-#
-#         cfg = yaml.load(fh, Loader=Loader)
-#
-#     gen_layer('GDPS.ETA_GZ-CONTOUR', cfg['layers']['GDPS.ETA_GZ-CONTOUR'])
