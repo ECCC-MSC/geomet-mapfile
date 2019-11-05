@@ -12,7 +12,7 @@ LOGGER = logging.getLogger(__name__)
 
 @click.group()
 def store():
-    """Manage the geomet-data-registry store"""
+    """Manage the geomet3-mapfile store"""
     pass
 
 
