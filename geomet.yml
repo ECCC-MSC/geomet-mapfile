@@ -120,6 +120,10 @@ forecast_models:
         processing: [SCALE_BUCKETS=1000]
         metadata:
             - 'wcs_enable_request=*'
+        outputformats:
+            - GEOTIFF_16
+            - AAIGRID
+            - NETCDF
     gdps_uu: &id_gdps_uu
       <<: *id_gdps
       extent: 180 -90.24 540 90
@@ -1179,6 +1183,9 @@ layer_templates:
         styles:
             - mapserv/class/WINDARROWKNOTS.inc
             - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
     UU-NS: &template_uu_ns
         type: point
         conntype: uvraster
@@ -1196,6 +1203,9 @@ layer_templates:
         styles:
             - mapserv/class/WINDARROWKNOTS-NS.inc
             - mapserv/class/WINDARROW-NS.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
     WDIR: &template_wd
         type: raster
         time_enabled: 'yes'
@@ -1864,6 +1874,9 @@ layer_templates:
         styles:
             - mapserv/class/WINDARROWKNOTS.inc
             - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
     DS: &template_ds
         type: raster
         time_enabled: 'yes'
@@ -1983,6 +1996,8 @@ layer_templates:
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+        symbols:
+            - arrow_wind
     RIOPS_3D: &template_riops_3d
         type: raster
         time_enabled: 'future'
@@ -2002,6 +2017,8 @@ layer_templates:
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+        symbols:
+            - arrow_wind
     RIOPS.3D.SALW: &template_riops_3d_salw
         <<: *template_riops_3d
         forecast_model: *id_riops_3D_depth
@@ -2042,6 +2059,8 @@ layer_templates:
             - vomecrty
         styles:
             - mapserv/class/SEA_CURARROW_100MTO2000M.inc
+        symbols:
+            - arrow_wind
     RIOPS.3D.UU2W.2000M.5728M: &template_riops_3d_uu2w_2000m_5728m
         <<: *template_riops_uu_3d
         forecast_model: *id_riops_3D_depth_uu
@@ -2050,6 +2069,8 @@ layer_templates:
             - vomecrty
         styles:
             - mapserv/class/SEA_CURARROW_2000MTO5728M.inc
+        symbols:
+            - arrow_wind
     GIOPS: &template_giops
         type: raster
         time_enabled: 'future'
@@ -2069,6 +2090,8 @@ layer_templates:
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+        symbols:
+            - arrow_wind
     GIOPS.3D.SALW: &template_giops_3d_salw
         <<: *template_giops
         forecast_model: *id_giops_3D_depth
@@ -2103,6 +2126,8 @@ layer_templates:
             - vomecrty
         styles:
             - mapserv/class/SEA_CURARROW_100MTO2000M.inc
+        symbols:
+            - arrow_wind
     GIOPS.3D.UU2W.2000M.5728M: &template_giops_3d_uu2w_2000m_5728m
         <<: *template_giops_uu
         forecast_model: *id_giops_3D_depth_uu
@@ -2111,6 +2136,8 @@ layer_templates:
             - vomecrty
         styles:
             - mapserv/class/SEA_CURARROW_2000MTO5728M.inc
+        symbols:
+            - arrow_wind
     HURRICANE: &template_hurricane
         time_enabled: 'no'
         is_local: true
@@ -10883,6 +10910,9 @@ layers:
         styles:
             - mapserv/class/WINDARROWKNOTS.inc
             - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
     CGSL.ETA_ICEC:
         <<: *template_cgsl
         forecast_model: *id_cgsl_ocean
@@ -10921,6 +10951,8 @@ layers:
         uv_bands: 3,4
         styles:
             - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
     CGSL.ETA_UOGRD:
         <<: *template_cgsl_uv
         forecast_model: *id_cgsl_ocean_arrow
@@ -10937,6 +10969,8 @@ layers:
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
             - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
     CGSL.ETA_WTMP:
         <<: *template_cgsl
         forecast_model: *id_cgsl_ocean
@@ -20459,6 +20493,8 @@ layers:
             - wfs_featureid=FID
         styles:
             - mapserv/class/FIREWORK-HOTSPOTS.inc
+        symbols:
+            - dreieck-leer
     OCEAN.RIOPS.2D_UUI:
         <<: *template_riops_uu
         forecast_model: *id_riops_2D_sfc_uu
@@ -23135,6 +23171,8 @@ layers:
             - wfs_featureid=name
         styles:
             - mapserv/class/WEATHER.inc
+        symbols:
+            - weathericons
     ALERTS:
         phase: beta # Not currently updated in real-time, see https://gccode.ssc-spc.gc.ca/ec-msc/geomet/issues/550
         type: polygon
@@ -23171,6 +23209,13 @@ layers:
         data: local/ALL_HURRICANES/ALL_HURRICANES_pts.shp
         styles:
             - mapserv/class/HURRICANE_CENTRE.inc
+        symbols:
+            - category0
+            - category1
+            - category2
+            - category3
+            - category4
+            - category5
     HURRICANE_LINE:
         type: line
         <<: *template_hurricane
