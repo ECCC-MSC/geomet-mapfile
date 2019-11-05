@@ -2,3 +2,4 @@ click
 gdal
 mappyfile
 pyyaml
+redis
