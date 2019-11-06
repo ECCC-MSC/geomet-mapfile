@@ -327,8 +327,9 @@ def mapfile():
 @click.command()
 @click.pass_context
 @click.option('--layer', '-lyr', help='layer')
-@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']))
-def generate(ctx,  layer, output):
+@click.option('--map/--no-map', default=True, help="output with or without mapfile MAP object")
+@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']), required=True)
+def generate(ctx,  layer, map, output):
     """generate mapfile"""
 
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
@@ -377,12 +378,15 @@ def generate(ctx,  layer, output):
         else:
             mapfile_copy['symbols'] = []
 
-        filename = 'geomet-weather-{}.map'.format(key)
+        filename = 'geomet-weather-{}.map'.format(key) if map else 'geomet-weather-{}_layer.map'.format(key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
         if output == 'mapfile':
             with open(filepath, 'w', encoding='utf-8') as fh:
-                mappyfile.dump(mapfile_copy, fh)
+                if map:
+                    mappyfile.dump(mapfile_copy, fh)
+                else:
+                    mappyfile.dump(mapfile_copy['layers'], fh)
 
         elif output == 'store':
 
@@ -390,9 +394,12 @@ def generate(ctx,  layer, output):
                 'type': STORE_TYPE,
                 'url': STORE_URL,
             }
-
             st = load_plugin('store', provider_def)
-            st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+
+            if map:
+                st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+            else:
+                st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
 
     if layer is None:  # generate entire mapfile
 
