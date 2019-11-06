@@ -10,7 +10,7 @@ import shutil
 import click
 import mappyfile
 import yaml
-from yaml import load, Loader
+from yaml import load, CLoader as Loader
 
 from geomet3_mapfile import __version__
 from geomet3_mapfile.plugin import load_plugin
