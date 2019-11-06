@@ -198,6 +198,9 @@ def gen_layer(layer_name, layer_info):
     # set connectiontype
     if 'conntype' in layer_info:
         layer['CONNECTIONTYPE'] = layer_info['conntype']
+        # if uvraster also set the layer extent
+        if layer_info['conntype'] == 'uvraster' and 'extent' in layer_info['forecast_model']:
+            layer['extent'] = layer_info['forecast_model']['extent']
 
     # set additional layer params
     if 'layer_params' in layer_info:
