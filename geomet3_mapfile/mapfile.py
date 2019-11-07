@@ -9,8 +9,7 @@ import shutil
 
 import click
 import mappyfile
-import yaml
-from yaml import load, CLoader as Loader
+from yaml import load, CLoader
 
 from geomet3_mapfile import __version__
 from geomet3_mapfile.plugin import load_plugin
@@ -134,7 +133,8 @@ def gen_layer(layer_name, layer_info):
     LOGGER.debug('Setting up layer configuration')
 
     layer_tileindex = {
-        '__type__': 'layer'
+        '__type__': 'layer',
+        'name': f'{layer_name}_idx'
     }
 
     layer = {
@@ -143,22 +143,21 @@ def gen_layer(layer_name, layer_info):
         'template': 'ttt.html'
     }
 
-    # build tileindex LAYER object
-    layer_tileindex_name = '{}_idx'.format(layer_name)
+    # build tileindex LAYER object (only for raster, uv and wind layers)
+    if layer_info['type'] == 'raster' or ('conntype' in layer_info and
+                                          layer_info['conntype'].lower() in ['uvraster', 'contour']):
+        layer_tileindex['type'] = 'POLYGON'
+        layer_tileindex['status'] = 'OFF'
+        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
 
-    layer_tileindex['type'] = 'POLYGON'
-    layer_tileindex['name'] = layer_tileindex_name
-    layer_tileindex['status'] = 'OFF'
-    layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
+        layer_tileindex['metadata'] = {
+            '__type__': 'metadata',
+            'ows_enable_request': '!*',
+        }
+        layer_tileindex['filter'] = ''
 
-    layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
-    layer_tileindex['metadata'] = {
-        '__type__': 'metadata',
-        'ows_enable_request': '!*',
-    }
-    layer_tileindex['filter'] = ''
-
-    layers.append(layer_tileindex)
+        layers.append(layer_tileindex)
 
     # build LAYER object
     layer['name'] = layer_name
@@ -173,9 +172,10 @@ def gen_layer(layer_name, layer_info):
         'ows_include_items': 'all'
     }
 
-    layer['status'] = 'ON'
-    layer['tileindex'] = layer_tileindex_name
-    layer['tileitem'] = 'properties.filepath'
+    # add reference to tileindex if tileindex is being used
+    if layer_tileindex in layers:
+        layer['tileindex'] = layer_tileindex['name']
+        layer['tileitem'] = 'properties.filepath'
 
     # set layer projection
     with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
@@ -281,7 +281,7 @@ def gen_layer(layer_name, layer_info):
 
     elif layer_info['forecast_model']['mcf'].endswith('.yml'):
         with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
-            mcf = load(f, Loader=Loader)
+            mcf = load(f, Loader=CLoader)
             layer['metadata']['ows_abstract'] = mcf['identification']['abstract_en']
             layer['metadata']['ows_abstract_fr'] = mcf['identification']['abstract_fr']
             layer['metadata']['ows_keywordlist'] = ', '.join(mcf['identification']
@@ -326,10 +326,11 @@ def mapfile():
 
 @click.command()
 @click.pass_context
-@click.option('--layer', '-lyr', help='layer')
-@click.option('--map/--no-map', default=True, help="output with or without mapfile MAP object")
-@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']), required=True)
-def generate(ctx,  layer, map, output):
+@click.option('--layer', '-lyr', help='GeoMet-Weather layer ID')
+@click.option('--map/--no-map', 'map_', default=True, help="Output with or without mapfile MAP object")
+@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']),
+              help="Write to configured store or to disk", required=True)
+def generate(ctx, layer, map_, output):
     """generate mapfile"""
 
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
@@ -346,7 +347,7 @@ def generate(ctx,  layer, map, output):
             mapfile['symbols'] = json.load(fh2)
 
     with open(CONFIG) as fh:
-        cfg = yaml.load(fh, Loader=Loader)
+        cfg = load(fh, Loader=CLoader)
 
     if layer is not None:
         mapfiles = {
@@ -369,21 +370,21 @@ def generate(ctx,  layer, map, output):
 
         if 'outputformats' in value['forecast_model']:
             mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats'] if format_['name'] in
-                                         value['forecast_model']['outputformats']]
+                                             value['forecast_model']['outputformats']]
 
         if 'symbols' in value:
             mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
-                                   value['symbols'] or any(symbol_ in symbol['name']
-                                                           for symbol_ in value['symbols'])]
+                                       value['symbols'] or any(symbol_ in symbol['name']
+                                                               for symbol_ in value['symbols'])]
         else:
             mapfile_copy['symbols'] = []
 
-        filename = 'geomet-weather-{}.map'.format(key) if map else 'geomet-weather-{}_layer.map'.format(key)
+        filename = 'geomet-weather-{}.map'.format(key) if map_ else 'geomet-weather-{}_layer.map'.format(key)
         filepath = '{}{}{}'.format(output_dir, os.sep, filename)
 
         if output == 'mapfile':
             with open(filepath, 'w', encoding='utf-8') as fh:
-                if map:
+                if map_:
                     mappyfile.dump(mapfile_copy, fh)
                 else:
                     mappyfile.dump(mapfile_copy['layers'], fh)
@@ -396,7 +397,7 @@ def generate(ctx,  layer, map, output):
             }
             st = load_plugin('store', provider_def)
 
-            if map:
+            if map_:
                 st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
             else:
                 st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
