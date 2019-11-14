@@ -1,0 +1,460 @@
+[
+    {
+        "__type__": "symbol",
+        "name": "circle",
+        "type": "ELLIPSE",
+        "filled": true,
+        "points": [
+            [
+                1,
+                1
+            ]
+        ]
+    },
+    {
+        "__type__": "symbol",
+        "name": "circle_wind",
+        "type": "ELLIPSE",
+        "filled": false,
+        "points": [
+            [
+                1,
+                1
+            ]
+        ]
+    },
+    {
+        "__type__": "symbol",
+        "name": "arrow",
+        "type": "vector",
+        "filled": true,
+        "points": [
+            [
+                1.2,
+                0
+            ],
+            [
+                1.2,
+                6
+            ],
+            [
+                3,
+                6
+            ],
+            [
+                0,
+                10
+            ],
+            [
+                -3,
+                6
+            ],
+            [
+                -1.2,
+                6
+            ],
+            [
+                -1.2,
+                0
+            ],
+            [
+                1.2,
+                0
+            ]
+        ]
+    },
+    {
+        "__type__": "symbol",
+        "name": "arrow_wind",
+        "type": "vector",
+        "filled": true,
+        "points": [
+            [
+                0,
+                1.2
+            ],
+            [
+                6,
+                1.2
+            ],
+            [
+                6,
+                3
+            ],
+            [
+                10,
+                0
+            ],
+            [
+                6,
+                -3
+            ],
+            [
+                6,
+                -1.2
+            ],
+            [
+                0,
+                -1.2
+            ],
+            [
+                0,
+                1.2
+            ]
+        ]
+    },
+    {
+        "__type__": "symbol",
+        "name": "dreieck-leer",
+        "type": "vector",
+        "points": [
+            [
+                0,
+                4
+            ],
+            [
+                2,
+                0
+            ],
+            [
+                4,
+                4
+            ],
+            [
+                0,
+                4
+            ]
+        ],
+        "filled": true
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/00.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/00.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/01.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/01.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/02.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/02.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/03.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/03.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/04.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/04.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/05.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/05.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/06.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/06.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/07.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/07.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/08.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/08.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/09.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/09.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/10.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/10.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/11.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/11.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/12.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/12.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/13.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/13.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/14.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/14.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/15.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/15.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/16.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/16.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/17.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/17.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/18.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/18.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/19.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/19.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/20.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/20.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/21.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/21.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/22.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/22.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/23.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/23.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/24.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/24.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/25.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/25.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/26.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/26.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/27.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/27.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/28.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/28.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/29.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/29.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/30.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/30.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/31.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/31.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/32.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/32.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/33.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/33.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/34.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/34.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/35.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/35.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/36.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/36.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/37.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/37.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/38.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/38.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/39.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/39.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/40.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/40.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/41.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/41.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/42.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/42.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/43.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/43.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/44.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/44.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/45.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/45.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/46.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/46.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/47.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/47.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "https://weather.gc.ca/weathericons/48.gif",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/weathericons/48.gif"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category0",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE0.png"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category1",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE1.png"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category2",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE2.png"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category3",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE3.png"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category4",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE4.png"
+    },
+    {
+        "__type__": "symbol",
+        "name": "category5",
+        "type": "PIXMAP",
+        "image": "../etc/mapserv/symbols/HURRICANE5.png"
+    }
+]

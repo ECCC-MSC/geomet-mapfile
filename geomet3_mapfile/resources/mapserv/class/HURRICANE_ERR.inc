@@ -1,0 +1,9 @@
+CLASS
+ NAME "Single symbol"
+ EXPRESSION ([active] = 1)
+ STYLE
+  COLOR 196 178 116
+  OUTLINECOLOR 0 0 0
+  WIDTH 0.26
+ END
+END

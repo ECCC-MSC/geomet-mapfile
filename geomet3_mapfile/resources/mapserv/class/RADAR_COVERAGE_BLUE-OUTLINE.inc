@@ -1,0 +1,8 @@
+CLASS
+ NAME "Radar coverage/Couverture radar"
+ GROUP "RADAR_COVERAGE_BLUE-OUTLINE"
+ STYLE
+  OUTLINECOLOR 0 0 139
+  WIDTH 1
+ END
+END
