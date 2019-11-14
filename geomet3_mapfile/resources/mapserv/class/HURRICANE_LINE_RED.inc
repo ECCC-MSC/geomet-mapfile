@@ -1,0 +1,8 @@
+CLASS
+ NAME "Zone extent/Limite de la zone"
+ GROUP "HURRICANE_LINE_RED"
+ STYLE
+  COLOR 120 0 0
+  WIDTH 3
+ END
+END

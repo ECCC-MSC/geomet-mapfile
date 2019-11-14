@@ -1,0 +1,6 @@
+"proj=longlat"
+"a=6371229"
+"b=6371229"
+## "pm=-180"
+"lon_wrap=180"
+"no_defs"

@@ -1,0 +1,46 @@
+CLASS
+ NAME "2 5"
+ GROUP "REPS_STD_3-6h"
+ EXPRESSION ([pixel] >= 2 AND [pixel] < 5)
+ STYLE
+  COLOR 0 255 0
+ END
+END
+
+CLASS
+ NAME "5 10"
+ GROUP "REPS_STD_3-6h"
+ EXPRESSION ([pixel] >= 5 AND [pixel] < 10)
+ STYLE
+  COLOR 255 255 0
+ END
+END
+
+CLASS
+ NAME "10 15"
+ GROUP "REPS_STD_3-6h"
+ EXPRESSION ([pixel] >= 10 AND [pixel] < 15)
+ STYLE
+  COLOR 255 165 0
+ END
+END
+
+CLASS
+ NAME "15 20"
+ GROUP "REPS_STD_3-6h"
+ EXPRESSION ([pixel] >= 15 AND [pixel] < 20)
+ STYLE
+  COLOR 255 105 180
+ END
+END
+
+CLASS
+ NAME " > 20"
+ GROUP "REPS_STD_3-6h"
+ EXPRESSION ([pixel] >= 20)
+ STYLE
+  COLOR 255 0 0
+ END
+END
+
+

@@ -1,0 +1,40 @@
+CLASS
+ NAME "alertes"
+ GROUP "ALERTES"
+ EXPRESSION ('[alert_type]'='warning')
+ STYLE
+  COLOR 255 0 0
+  OUTLINECOLOR 0 0 0
+  WIDTH 0.26
+ END
+END
+CLASS
+ NAME "sous surveillance"
+ GROUP "ALERTES"
+ EXPRESSION ('[alert_type]'='watch')
+ STYLE
+  COLOR 255 255 0
+  OUTLINECOLOR 0 0 0
+  WIDTH 0.26
+ END
+ END
+CLASS
+ NAME "veille"
+ GROUP "ALERTES"
+ EXPRESSION ('[alert_type]'='statement')
+ STYLE
+  COLOR 127 127 127
+  OUTLINECOLOR 0 0 0
+  WIDTH 0.26
+ END
+ END
+CLASS
+ NAME "bulletin"
+ GROUP "ALERTES"
+ EXPRESSION ('[alert_type]'='advisory')
+ STYLE
+  COLOR 127 127 127
+  OUTLINECOLOR 0 0 0
+  WIDTH 0.26
+ END
+END 

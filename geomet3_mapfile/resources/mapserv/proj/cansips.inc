@@ -1,0 +1,5 @@
+"proj=longlat"
+"a=6371229"
+"b=6371229"
+"no_defs"
+"lon_wrap=180"

@@ -1,0 +1,39 @@
+CLASS
+ NAME "0 15 - Convection not likely"
+ GROUP "KINDEX-LINEAR"
+ EXPRESSION ([pixel] >= 0 AND [pixel] <15)
+ STYLE
+  COLORRANGE 247 247 247 5 113 176
+  DATARANGE 0.0 15.0
+ END
+END
+
+CLASS
+ NAME "15 25 - Small convective potential"
+ GROUP "KINDEX-LINEAR"
+ EXPRESSION ([pixel] >= 15 AND [pixel] < 25)
+ STYLE
+  COLORRANGE 5 113 176 146 197 222
+  DATARANGE 15.0 25.0
+ END
+END
+
+CLASS
+ NAME "25 40 - Moderate convective potential"
+ GROUP "KINDEX-LINEAR"
+ EXPRESSION ([pixel] >= 25 AND [pixel] < 40)
+ STYLE
+  COLORRANGE 146 197 222 244 165 130
+  DATARANGE 25.0 40.0
+ END
+END
+
+CLASS
+ NAME "> 40 - High convective potential"
+ GROUP "KINDEX-LINEAR"
+ EXPRESSION ([pixel] >= 40)
+ STYLE
+  COLORRANGE 244 165 130 202 0 32
+  DATARANGE 40.0 100.0
+ END
+END

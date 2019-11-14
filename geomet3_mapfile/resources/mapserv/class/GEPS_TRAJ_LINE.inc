@@ -1,0 +1,8 @@
+CLASS
+ NAME "Trajectory Line"
+ GROUP "GEPS_TRAJ_LINE"
+ STYLE
+  COLOR 0 0 255
+  WIDTH 0.2
+ END
+END

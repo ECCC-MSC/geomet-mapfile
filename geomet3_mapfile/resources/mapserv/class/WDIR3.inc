@@ -1,0 +1,96 @@
+CLASS
+ NAME "0 - 30 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (0 <= [pixel] AND [pixel] < 30)
+ STYLE
+  COLOR 255 048 048
+ END
+END
+CLASS
+ NAME "30 - 60 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (30 <= [pixel] AND [pixel] < 60)
+ STYLE
+  COLOR 228 112 048
+ END
+END
+CLASS
+ NAME "60 - 90 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (60 <= [pixel] AND [pixel] < 90)
+ STYLE
+  COLOR 188 160 048
+ END
+END
+CLASS
+ NAME "90 - 120 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (90 <= [pixel] AND [pixel] < 120)
+ STYLE
+  COLOR 160 220 048
+ END
+END
+CLASS
+ NAME "120 - 150 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (120 <= [pixel] AND [pixel] < 150)
+ STYLE
+  COLOR 096 248 064
+ END
+END
+CLASS
+ NAME "150 - 180 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (150 <= [pixel] AND [pixel] < 180)
+ STYLE
+  COLOR 080 220 096
+ END
+END
+CLASS
+ NAME "180 - 210 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (180 <= [pixel] AND [pixel] < 210)
+ STYLE
+  COLOR 064 192 152
+ END
+END
+CLASS
+ NAME "210 - 240 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (210 <= [pixel] AND [pixel] < 240)
+ STYLE
+  COLOR 048 144 220
+ END
+END
+CLASS
+ NAME "240 - 270 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (240 <= [pixel] AND [pixel] < 270)
+ STYLE
+  COLOR 064 080 255
+ END
+END
+CLASS
+ NAME "270 - 300 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (270 <= [pixel] AND [pixel] < 300)
+ STYLE
+  COLOR 128 048 220
+ END
+END
+CLASS
+ NAME "300 - 330 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (300 <= [pixel] AND [pixel] < 330)
+ STYLE
+  COLOR 160 048 160
+ END
+END
+CLASS
+ NAME "330 - 360 (degree)"
+ GROUP "WDIR3"
+ EXPRESSION (330 <= [pixel] AND [pixel] <= 360)
+ STYLE
+  COLOR 220 048 096
+ END
+END

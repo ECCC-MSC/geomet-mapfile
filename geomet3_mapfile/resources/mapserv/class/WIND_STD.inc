@@ -1,0 +1,44 @@
+CLASS
+ NAME "1 2"
+ GROUP "WIND_STD"
+ EXPRESSION ([pixel] >= 1 AND [pixel] < 2)
+ STYLE
+  COLOR 224 224 224
+ END
+END
+
+CLASS
+ NAME "2 4"
+ GROUP "WIND_STD"
+ EXPRESSION ([pixel] >= 2 AND [pixel] < 4)
+ STYLE
+  COLOR 229 204 255
+ END
+END
+
+CLASS
+ NAME "4 6"
+ GROUP "WIND_STD"
+ EXPRESSION ([pixel] >= 4 AND [pixel] < 6)
+ STYLE
+  COLOR 153 153 255
+ END
+END
+
+CLASS
+ NAME "6 10"
+ GROUP "WIND_STD"
+ EXPRESSION ([pixel] >= 6 AND [pixel] < 10)
+ STYLE
+  COLOR 255 255 0
+ END
+END
+
+CLASS
+ NAME " 10 20"
+ GROUP "WIND_STD"
+ EXPRESSION ([pixel] >= 10 AND [pixel] < 20)
+ STYLE
+  COLOR 255 0 0
+ END
+END  

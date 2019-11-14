@@ -1,0 +1,107 @@
+CLASS
+ NAME ".. -85"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] < -85)
+ STYLE
+  COLOR 0 0 127
+ END
+END
+
+CLASS
+ NAME "-85 -80"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -85 AND [pixel] < -80)
+ STYLE
+  COLOR 0 0 239
+ END
+END
+
+CLASS
+ NAME "-80 -75 "
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -80 AND [pixel] < -75)
+ STYLE
+  COLOR 0 147 254
+ END
+END
+
+CLASS
+ NAME "-75 -70"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -75 AND [pixel] < -70)
+ STYLE
+  COLOR 0 231 254
+ END
+END
+
+CLASS
+ NAME "-70 -65"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -70 AND [pixel] < -65)
+ STYLE
+  COLOR 51 253 203
+ END
+END
+
+CLASS
+ NAME "-65 -60"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -65 AND [pixel] < -60)
+ STYLE
+  COLOR 119 253 135
+ END
+END
+
+CLASS
+ NAME "-60 -55"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -60 AND [pixel] < -55)
+ STYLE
+  COLOR 187 254 67
+ END
+END
+
+CLASS
+ NAME "-55 -50"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -55 AND [pixel] < -50)
+ STYLE
+  COLOR 255 255 0
+ END
+END
+
+CLASS
+ NAME "-50 -45"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -50 AND [pixel] < -45)
+ STYLE
+  COLOR 254 187 0
+ END
+END
+
+CLASS
+ NAME "-45 -40"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -45 AND [pixel] < -40)
+ STYLE
+  COLOR 254 119 0
+ END
+END
+
+CLASS
+ NAME "-40 -35"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -40 AND [pixel] < -35)
+ STYLE
+  COLOR 239 0 0
+ END
+END
+
+CLASS
+ NAME ">= -35"
+ GROUP "TEMP_250"
+ EXPRESSION ([pixel] >= -35)
+ STYLE
+  COLOR 127 0 0
+ END
+END

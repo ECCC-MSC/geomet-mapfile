@@ -4,4 +4,3 @@ dist/
 *.egg-info/
 __pycache__
 *.py[cod]
-geomet3_mapfile/resources/mapserv

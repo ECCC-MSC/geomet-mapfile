@@ -1,0 +1,176 @@
+CLASS
+ NAME "0.00 0.10 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.00 AND [uv_length] < 0.10)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 153 232 253
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.10 0.20 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.10 AND [uv_length] < 0.20)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 153 148 255
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.20 0.30 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.20 AND [uv_length] < 0.30)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 154 64 249
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.30 0.40 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.30 AND [uv_length] < 0.40)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 204 135 254
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.40 0.50 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.40 AND [uv_length] < 0.50)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 128 255 100
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.50 0.60 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.50 AND [uv_length] < 0.60)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 209 254 45
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.60 0.70 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.60 AND [uv_length] < 0.70)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 255 217 0
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.70 0.80 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.70 AND [uv_length] < 0.80)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 255 128 0
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.80 0.90 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.80 AND [uv_length] < 0.90)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 255 51 0
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "0.90 1.00 m/s"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 0.90 AND [uv_length] < 1.00)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 222 0 0
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
+CLASS
+ NAME "1.00 m/s +"
+ GROUP "SEA_CURARROW_0MTO100M_SURFACE"
+ EXPRESSION ([uv_length] >= 1.00 AND [uv_length] < 5.00)
+ STYLE
+  SYMBOL "arrow_wind"
+  COLOR 128 0 0
+   ANGLE [uv_angle]
+  SIZE 10
+ END
+  TEXT " "
+   LABEL
+  SIZE 4
+   ANGLE 45
+ END
+END
