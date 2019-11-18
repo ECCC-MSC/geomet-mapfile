@@ -6,6 +6,7 @@ GeoMet3-Mapfile is a CLI tool used to create mapfile templates from GeoMet-Weath
 2. Clone the repository and `cd geomet3-mapfile`.
 3. Activate the virtual environment and install the necessary dependencies with `pip install -r requirements.txt`.
 4. Edit the environment variables in `geomet3-mapfile_dev.env` and source the variables with `. geomet3-mapfile_dev.env`.
+5. Run `python setup.py. install` and enter `geomet3-mapfile`, you should now have access to the CLI tool.
 
 ## Usage
 GeoMet3-Mapfile has several CLI commands (accessible via geomet3-mapfile) that can assist you with in the creation of mapfile documents.
