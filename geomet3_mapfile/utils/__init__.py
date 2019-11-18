@@ -70,4 +70,4 @@ def clean_styles(file_, directory, output_directory, output_format):
             f.write(converted_file)
 
 
-utils.add_command(convert)
+utils.add_command(clean_styles)
