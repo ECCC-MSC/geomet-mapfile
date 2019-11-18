@@ -66,7 +66,8 @@ def teardown(ctx, group=None):
 @click.option('--mapfile', '-m', 'mapfile',
               type=click.Path(exists=True, resolve_path=True),
               help='Path to mapfile')
-def set_key(ctx, key, mapfile):
+@click.option('--map/--no-map', 'map_', default=True, help="Output with or without mapfile MAP object")
+def set_key(ctx, key, mapfile, map_):
     """populate store"""
 
     if all([key is None, mapfile is None]):
@@ -79,9 +80,13 @@ def set_key(ctx, key, mapfile):
 
     st = load_plugin('store', provider_def)
 
+    mapfile_ = mappyfile.open(mapfile, expand_includes=False)
     try:
-        click.echo('Setting {} key in store ({}).'.format(key, st.url))
-        st.set_key(key, mapfile)
+        click.echo(f'Setting {key} in store ({st.url})')
+        if map_:
+            st.set_key(key, mappyfile.dumps(mapfile_))
+        else:
+            st.set_key(key, mappyfile.dumps(mapfile_['layers']))
     except StoreError as err:
         raise click.ClickException(err)
     click.echo('Done')
@@ -105,9 +110,9 @@ def get_key(ctx, key):
 
     try:
         click.echo('Getting {} key from store ({}).'.format(key, st.url))
-        retrived_key = st.get_key(key)
-        if retrived_key:
-            click.echo('{}'.format(retrived_key.decode('utf-8')))
+        retrieved_key = st.get_key(key)
+        if retrieved_key:
+            click.echo(f'{retrieved_key.decode("utf-8")}')
 
     except StoreError as err:
         raise click.ClickException(err)
