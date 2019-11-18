@@ -4,7 +4,7 @@ import click
 import mappyfile
 
 
-def convert_style(file, output_format='json'):
+def clean_style(file, output_format='json'):
     with open(file, 'r') as f:
         file_ = f.readlines()
         start_postition = None
