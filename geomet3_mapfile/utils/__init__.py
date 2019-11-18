@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 from lark.exceptions import UnexpectedToken
-from geomet3_mapfile.utils.utils import convert_style
+from geomet3_mapfile.utils.utils import clean_style
 
 
 @click.group()
@@ -27,8 +27,11 @@ def utils():
 @click.option('--output_format', '-of', 'output_format',
               type=click.Choice(['json', 'mapfile'], case_sensitive=False),
               help='Output format')
-def convert(file_, directory, output_directory, output_format):
-    """convert mapfile to mappyfile dictionnary object"""
+def clean_styles(file_, directory, output_directory, output_format):
+    """
+    Cleans existing GeoMet-Weather styles and writes
+    back out to mapfile or to mappyfile dictionnary object
+    """
 
     if all([file_ is None, directory is None]):
         raise click.ClickException('Missing --file/-f, --directory/-d option, -output_dir/-o option')
@@ -45,7 +48,9 @@ def convert(file_, directory, output_directory, output_format):
     converted_files = []
     for file_to_process in files_to_process:
         try:
-            converted_files.append((file_to_process, convert_style(file_to_process, output_format=output_format)))
+            converted_files.append(
+            (file_to_process,
+            clean_style(file_to_process, output_format=output_format)))
         except UnexpectedToken:
             click.echo(f'Could not convert {file_to_process}!')
             pass
