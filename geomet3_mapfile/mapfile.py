@@ -1,10 +1,12 @@
 from collections import OrderedDict
 from configparser import ConfigParser
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 import json
 import logging
 import os
+import re
 import shutil
 
 import click
@@ -14,6 +16,7 @@ from yaml import load, CLoader
 from geomet3_mapfile import __version__
 from geomet3_mapfile.plugin import load_plugin
 from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, TILEINDEX_URL, URL, STORE_TYPE, STORE_URL
+from geomet3_mapfile.utils.utils import DATEFORMAT
 
 MAPFILE_BASE = f'{os.path.dirname(os.path.realpath(__file__))}{os.sep}resources{os.sep}mapfile-base.json'
 
@@ -21,7 +24,71 @@ LOGGER = logging.getLogger(__name__)
 
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
+NOW = datetime.utcnow()
 
+provider_def = {
+    'type': STORE_TYPE,
+    'url': STORE_URL,
+}
+
+st = load_plugin('store', provider_def)
+
+time_extent_key = {}
+
+def layer_time_config(layer_name): 
+    model = layer_name.split('.')[0]
+    time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8')
+    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8')
+    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8')
+    
+    start, end, interval = time_extent.split('/')
+
+    if default_model_run == start:
+        key = f'{model}_{interval}'
+    else:
+        key = f'{model}_{interval}_future'
+   
+    if not key in time_extent_key:
+    
+        start = datetime.strptime(start, DATEFORMAT)
+        end = datetime.strptime(end, DATEFORMAT)
+        regex_result = re.search('^P(T?)(\d+)(.)', interval)
+        time_ = regex_result.group(1)
+        duration = regex_result.group(2)
+        unit = regex_result.group(3)
+     
+        if time_ is None:
+            # this means the duration is a date
+            if unit == 'M':
+                relative_delta = relativedelta(months=int(duration))
+        else:
+            # this means the duration is a time
+            if unit == 'H':
+                relative_delta = timedelta(hours=int(duration))
+            elif unit == 'M':
+                relative_delta = timedelta(minutes=int(duration))
+        
+        intervals = []
+        while start <= end:
+            intervals.append(start)
+            start += relative_delta
+
+        nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)
+        
+        time_extent_key[key] = nearest_interval
+    
+    else:
+        nearest_interval = time_extent_key[key]
+
+    time_config_dict = {
+        'default_time': nearest_interval,
+        'time_extent': time_extent,
+        'model_run_extent': model_run_extent,
+        'default_model_run': default_model_run
+    }
+
+    return time_config_dict
+ 
 def gen_web_metadata(m, c, url):
     """
     update mapfile MAP.WEB.METADATA section
@@ -239,13 +306,16 @@ def gen_layer(layer_name, layer_info):
             f'{layer_info["forecast_model"]["dimensions"][1]}'
 
     if layer_info['time_enabled'] in ['yes', 'future']:
+        
+        time_dict = layer_time_config(layer_name)
+        
         layer['metadata']['wms_dimensionlist'] = 'reference_time'
         layer['metadata']['wms_reference_time_item'] = 'properties.reference_datetime'
         layer['metadata']['wms_reference_time_units'] = 'ISO8601'
-        layer['metadata']['wms_timeextent'] = ''
-        layer['metadata']['wms_timedefault'] = ''
-        layer['metadata']['wms_reference_time_extent'] = ''
-        layer['metadata']['wms_reference_time_default'] = ''
+        layer['metadata']['wms_timeextent'] = time_dict['time_extent']
+        layer['metadata']['wms_timedefault'] = time_dict['default_time']
+        layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']
+        layer['metadata']['wms_reference_time_default'] = time_dict['default_model_run']
 
     if 'forecast_hour_interval' in layer_info['forecast_model']:
         seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60
@@ -336,7 +406,18 @@ def generate(ctx, layer, map_, output):
     output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
     
     all_layers = []
+    
+    NOW = datetime(2019, 8, 1, 1)
 
+    provider_def = {
+        'type': STORE_TYPE,
+        'url': STORE_URL,
+    }
+
+    st = load_plugin('store', provider_def)
+
+    time_extent_key = {}
+    
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -391,12 +472,6 @@ def generate(ctx, layer, map_, output):
 
         elif output == 'store':
 
-            provider_def = {
-                'type': STORE_TYPE,
-                'url': STORE_URL,
-            }
-            st = load_plugin('store', provider_def)
-
             if map_:
                 st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
             else:
@@ -415,11 +490,6 @@ def generate(ctx, layer, map_, output):
                 mappyfile.dump(mapfile, fh)
 
         if output == 'store':
-
-            provider_def = {
-                'type': STORE_TYPE,
-                'url': STORE_URL,
-            }
 
             st = load_plugin('store', provider_def)
             st.set_key(f'geomet-weather_mapfile', mappyfile.dumps(mapfile))

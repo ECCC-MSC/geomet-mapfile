@@ -1,5 +1,6 @@
 click
-gdal
 mappyfile
+python-dateutil
 pyyaml
 redis
+

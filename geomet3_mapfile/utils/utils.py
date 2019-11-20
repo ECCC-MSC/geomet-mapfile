@@ -4,6 +4,8 @@ import click
 import mappyfile
 
 
+DATEFORMAT = '%Y-%m-%dT%H:%M:%SZ'
+
 def clean_style(file, output_format='json'):
     with open(file, 'r') as f:
         file_ = f.readlines()
