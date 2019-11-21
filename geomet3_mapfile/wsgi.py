@@ -83,7 +83,7 @@ def insert_data(layer, fh, mr):
     model_run = re.sub("[^0-9]", "", mr)
     forecast = re.sub("[^0-9]", "", fh)
 
-    if model_run is not None:    
+    if model_run not in [None, '']:    
         id_ = '{}-{}-{}'.format(layer, model_run, forecast)
     else:
         id_ = '{}-{}'.format(layer, forecast)
