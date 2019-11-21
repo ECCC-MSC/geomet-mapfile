@@ -17,9 +17,11 @@
 #
 ###############################################################################
 
+import logging
 import re
 import sys
 
+import click
 from elasticsearch import Elasticsearch
 
 sys.path.append('/data/geomet/dev/src/mapserver/mapserver/build/mapscript/python')
