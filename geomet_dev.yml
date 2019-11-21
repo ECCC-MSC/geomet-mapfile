@@ -22733,22 +22733,22 @@ layers:
 #            - mapserv/class/RADARURPPRECIPR.inc
 #            - mapserv/class/RADARURPPRECIPR-LINEAR.inc
 #            - mapserv/class/RADARURPPRECIPR14.inc
-#    RADAR_1KM_RSNO:
-#        type: raster
-#        time_enabled: 'yes'
-#        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-#        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/hr]
-#        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/hr]
-#        variable_type: CMHR
-#        metadata:
-#            - 'wcs_enable_request=!*'
-#        styles:
-#            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
-#            - mapserv/class/RADARURPPRECIPS8.inc
-#            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
-#            - mapserv/class/RADARURPPRECIPS.inc
-#            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
-#            - mapserv/class/RADARURPPRECIPS14.inc
+    RADAR_1KM_RSNO:
+        type: raster
+        time_enabled: 'yes'
+        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
+        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/hr]
+        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/hr]
+        variable_type: CMHR
+        metadata:
+            - 'wcs_enable_request=!*'
+        styles:
+            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
+            - mapserv/class/RADARURPPRECIPS8.inc
+            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
+            - mapserv/class/RADARURPPRECIPS.inc
+            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
+            - mapserv/class/RADARURPPRECIPS14.inc
 #    RADAR_1KM_RDBR:
 #        type: raster
 #        time_enabled: 'yes'
