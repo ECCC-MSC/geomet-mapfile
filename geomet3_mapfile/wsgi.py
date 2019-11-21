@@ -17,7 +17,9 @@
 #
 ###############################################################################
 
+import io
 import logging
+import os
 import re
 import sys
 
@@ -66,7 +68,7 @@ def metadata_lang(m, l):
 
     #TODO
 
-def insert_data(layer, mr, fh):
+def insert_data(layer, fh, mr):
     """
     fucntion to find the datapath
     based on either the layer metadata
@@ -85,7 +87,7 @@ def insert_data(layer, mr, fh):
     
     es = Elasticsearch()
     
-    res = es.get(index="TILEINDEX_URL".split('/')[-2], id=id_)
+    res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
     
     return res['_source']['properties']['filepath']
 
@@ -130,12 +132,17 @@ def application(env, start_response):
     if layer is not None and len(layer) == 0:
         layer = None
 
+    time_error = None
+
     LOGGER.debug('service: {}'.format(service_))
     LOGGER.debug('language: {}'.format(lang))
 
     if layer is not None and ',' not in layer:
         mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
             BASEDIR, layer)
+    if mapfile_ is None or not os.path.exists(mapfile_):
+       mapfile_ = '{}/mapfile/geomet-weather.map'.format(
+            BASEDIR)
     if not os.path.exists(mapfile_):
         start_response('400 Bad Request',
                        [('Content-Type', 'application/xml')])
