@@ -18,6 +18,7 @@
 ###############################################################################
 
 import logging
+import os
 import re
 import sys
 
@@ -66,7 +67,7 @@ def metadata_lang(m, l):
 
     #TODO
 
-def insert_data(layer, mr, fh):
+def insert_data(layer, fh, mr):
     """
     fucntion to find the datapath
     based on either the layer metadata
@@ -85,7 +86,7 @@ def insert_data(layer, mr, fh):
     
     es = Elasticsearch()
     
-    res = es.get(index="TILEINDEX_URL".split('/')[-2], id=id_)
+    res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
     
     return res['_source']['properties']['filepath']
 
@@ -129,6 +130,8 @@ def application(env, start_response):
 
     if layer is not None and len(layer) == 0:
         layer = None
+
+    time_error = None
 
     LOGGER.debug('service: {}'.format(service_))
     LOGGER.debug('language: {}'.format(lang))
