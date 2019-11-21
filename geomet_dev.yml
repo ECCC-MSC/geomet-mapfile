@@ -116,7 +116,7 @@ forecast_models:
         outputformats:
             - GEOTIFF_16
             - AAIGRID
-            - NETCDF
+            #- NETCDF
     gpds_6h: &id_gdps_6h
         <<: *id_gdps
         forecast_hour_interval: 6
