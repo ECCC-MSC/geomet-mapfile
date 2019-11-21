@@ -17,6 +17,7 @@
 #
 ###############################################################################
 
+import io
 import logging
 import os
 import re
@@ -139,6 +140,9 @@ def application(env, start_response):
     if layer is not None and ',' not in layer:
         mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
             BASEDIR, layer)
+    if mapfile_ is None or not os.path.exists(mapfile_):
+       mapfile_ = '{}/mapfile/geomet-weather.map'.format(
+            BASEDIR)
     if not os.path.exists(mapfile_):
         start_response('400 Bad Request',
                        [('Content-Type', 'application/xml')])
