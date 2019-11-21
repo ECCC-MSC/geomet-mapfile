@@ -6,7 +6,7 @@ import click
 from geomet3_mapfile.utils import utils
 from geomet3_mapfile.mapfile import mapfile
 from geomet3_mapfile.store import store
-
+from geomet3_mapfile.wsgi import serve
 
 @click.group()
 @click.version_option(version=__version__)
@@ -18,3 +18,4 @@ def cli():
 cli.add_command(utils)
 cli.add_command(mapfile)
 cli.add_command(store)
+cli.add_command(serve)
