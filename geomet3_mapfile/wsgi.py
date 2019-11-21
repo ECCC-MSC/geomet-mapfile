@@ -25,7 +25,7 @@ from elasticsearch import Elasticsearch
 sys.path.append('/data/geomet/dev/src/mapserver/mapserver/build/mapscript/python')
 import mapscript
 
-from geomet3.mapfile.env import BASEDIR, TILEINDEX_URL
+from geomet3_mapfile.env import BASEDIR, TILEINDEX_URL
 
 LOGGER = logging.getLogger(__name__)
 
