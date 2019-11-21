@@ -9,9 +9,6 @@
     "size": [500, 300],
     "extent": [-180, -90, 180, 90],
     "imagecolor": [255, 255, 255],
-    "config": {
-        "proj_lib": "."
-    },
     "projection": ["init=epsg:4326"],
     "outputformats": [{
         "__type__": "outputformat",
@@ -65,15 +62,7 @@
         "formatoption": [
             "FILENAME=result.grd"
         ]
-    },
-        {
-            "__type__": "outputformat",
-            "name": "NETCDF",
-            "driver": "GDAL/netCDF",
-            "mimetype": "image/netcdf",
-            "imagemode": "FLOAT32",
-            "extension": "nc"
-        }],
+    }],
     "querymap": {
         "__type__": "querymap",
         "status": "OFF",
