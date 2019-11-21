@@ -82,9 +82,12 @@ def insert_data(layer, fh, mr):
 
     model_run = re.sub("[^0-9]", "", mr)
     forecast = re.sub("[^0-9]", "", fh)
-    
-    id_ = '{}-{}-{}'.format(layer, model_run, forecast)
-    
+
+    if model_run is not None:    
+        id_ = '{}-{}-{}'.format(layer, model_run, forecast)
+    else:
+        id_ = '{}-{}'.format(layer, forecast)
+
     es = Elasticsearch()
     
     res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
@@ -172,7 +175,7 @@ def application(env, start_response):
            time = layerobj.getMetaData('wms_timedefault') 
         if ref_time is None:
             ref_time = layerobj.getMetaData('wms_reference_time_default')
-
+                
         try:
             filepath = insert_data(layer, time, ref_time)
             layerobj.data = filepath
