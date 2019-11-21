@@ -38,11 +38,10 @@ time_extent_key = {}
 def layer_time_config(layer_name): 
     model = layer_name.split('.')[0]
     time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8')
-    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8')
-    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8')
+    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8') if st.get_key(f'{layer_name}_model_run_extent') is not None else None
+    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8') if  st.get_key(f'{layer_name}_default_model_run') is not None else None
     
     start, end, interval = time_extent.split('/')
-
     if default_model_run == start:
         key = f'{model}_{interval}'
     else:
