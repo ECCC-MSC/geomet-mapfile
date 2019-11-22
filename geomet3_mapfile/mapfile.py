@@ -38,11 +38,10 @@ time_extent_key = {}
 def layer_time_config(layer_name): 
     model = layer_name.split('.')[0]
     time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8')
-    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8')
-    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8')
+    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8') if st.get_key(f'{layer_name}_model_run_extent') is not None else None
+    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8') if  st.get_key(f'{layer_name}_default_model_run') is not None else None
     
     start, end, interval = time_extent.split('/')
-
     if default_model_run == start:
         key = f'{model}_{interval}'
     else:
@@ -210,25 +209,26 @@ def gen_layer(layer_name, layer_info):
         'template': 'ttt.html'
     }
 
-    # build tileindex LAYER object (only for raster, uv and wind layers)
-    if layer_info['type'] == 'raster' or ('conntype' in layer_info and
-                                          layer_info['conntype'].lower() in ['uvraster', 'contour']):
-        layer_tileindex['type'] = 'POLYGON'
-        layer_tileindex['status'] = 'OFF'
-        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
-
-        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
-        layer_tileindex['metadata'] = {
-            '__type__': 'metadata',
-            'ows_enable_request': '!*',
-        }
-        layer_tileindex['filter'] = ''
-
-        layers.append(layer_tileindex)
+#    # build tileindex LAYER object (only for raster, uv and wind layers)
+#    if layer_info['type'] == 'raster' or ('conntype' in layer_info and
+#                                          layer_info['conntype'].lower() in ['uvraster', 'contour']):
+#        layer_tileindex['type'] = 'POLYGON'
+#        layer_tileindex['status'] = 'OFF'
+#        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+#
+#        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
+#        layer_tileindex['metadata'] = {
+#            '__type__': 'metadata',
+#            'ows_enable_request': '!*',
+#        }
+#        layer_tileindex['filter'] = ''
+#
+#        layers.append(layer_tileindex)
 
     # build LAYER object
     layer['name'] = layer_name
     layer['debug'] = 5
+    layer['data'] = ['']
     layer['type'] = 'RASTER'
     layer['template'] = "ttt.html"
     layer['tolerance'] = 15
@@ -239,10 +239,10 @@ def gen_layer(layer_name, layer_info):
         'ows_include_items': 'all'
     }
 
-    # add reference to tileindex if tileindex is being used
-    if layer_tileindex in layers:
-        layer['tileindex'] = layer_tileindex['name']
-        layer['tileitem'] = 'properties.filepath'
+#    # add reference to tileindex if tileindex is being used
+#    if layer_tileindex in layers:
+#        layer['tileindex'] = layer_tileindex['name']
+#        layer['tileitem'] = 'properties.filepath'
 
     # set layer projection
     with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
