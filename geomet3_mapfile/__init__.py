@@ -8,6 +8,7 @@ from geomet3_mapfile.mapfile import mapfile
 from geomet3_mapfile.store import store
 from geomet3_mapfile.wsgi import serve
 
+
 @click.group()
 @click.version_option(version=__version__)
 def cli():
