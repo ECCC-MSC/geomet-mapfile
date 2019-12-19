@@ -9,6 +9,9 @@
     "size": [500, 300],
     "extent": [-180, -90, 180, 90],
     "imagecolor": [255, 255, 255],
+    "config": {
+        "proj_lib": "."
+    },
     "projection": ["init=epsg:4326"],
     "outputformats": [{
         "__type__": "outputformat",
