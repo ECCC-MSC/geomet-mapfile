@@ -2036,6 +2036,12 @@ layers:
         label_en: 1015//GDPS.PRES - Dew point depression at 1015.0 mb (3 hourly forecast) [°C]
         label_fr: 1015//GDPS.PRES - Écart du point de rosée à 1015.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_1015
+    GDPS.PRES_ES.1015.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 1015//GDPS.PRES - Dew point depression at 1015.0 mb (6 hourly forecast) [°C]
+        label_fr: 1015//GDPS.PRES - Écart du point de rosée à 1015.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_1015
     GDPS.PRES_ES.1000:
         <<: *template_es
         forecast_model: *id_gdps_pres
@@ -2048,11 +2054,23 @@ layers:
         label_en: 985//GDPS.PRES - Dew point depression at 985.0 mb (3 hourly forecast) [°C]
         label_fr: 985//GDPS.PRES - Écart du point de rosée à 985.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_985
+    GDPS.PRES_ES.985.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 985//GDPS.PRES - Dew point depression at 985.0 mb (6 hourly forecast) [°C]
+        label_fr: 985//GDPS.PRES - Écart du point de rosée à 985.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_985
     GDPS.PRES_ES.970.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
         label_en: 970//GDPS.PRES - Dew point depression at 970.0 mb (3 hourly forecast) [°C]
         label_fr: 970//GDPS.PRES - Écart du point de rosée à 970.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_970
+    GDPS.PRES_ES.970.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 970//GDPS.PRES - Dew point depression at 970.0 mb (6 hourly forecast) [°C]
+        label_fr: 970//GDPS.PRES - Écart du point de rosée à 970.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_970
     GDPS.PRES_ES.950.3h:
         <<: *template_es
@@ -2060,6 +2078,12 @@ layers:
         label_en: 950//GDPS.PRES - Dew point depression at 950.0 mb (3 hourly forecast) [°C]
         label_fr: 950//GDPS.PRES - Écart du point de rosée à 950.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_950
+    GDPS.PRES_ES.950.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 950//GDPS.PRES - Dew point depression at 950.0 mb (6 hourly forecast) [°C]
+        label_fr: 950//GDPS.PRES - Écart du point de rosée à 950.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_95
     GDPS.PRES_ES.925:
         <<: *template_es
         forecast_model: *id_gdps_pres
@@ -2072,11 +2096,23 @@ layers:
         label_en: 900//GDPS.PRES - Dew point depression at 900.0 mb (3 hourly forecast) [°C]
         label_fr: 900//GDPS.PRES - Écart du point de rosée à 900.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_900
+    GDPS.PRES_ES.900.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 900//GDPS.PRES - Dew point depression at 900.0 mb (6 hourly forecast) [°C]
+        label_fr: 900//GDPS.PRES - Écart du point de rosée à 900.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_900
     GDPS.PRES_ES.875.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
         label_en: 875//GDPS.PRES - Dew point depression at 875.0 mb (3 hourly forecast) [°C]
         label_fr: 875//GDPS.PRES - Écart du point de rosée à 875.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_875
+    GDPS.PRES_ES.875.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 875//GDPS.PRES - Dew point depression at 875.0 mb (6 hourly forecast) [°C]
+        label_fr: 875//GDPS.PRES - Écart du point de rosée à 875.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_875
     GDPS.PRES_ES.850:
         <<: *template_es
@@ -2090,11 +2126,23 @@ layers:
         label_en: 800//GDPS.PRES - Dew point depression at 800.0 mb (3 hourly forecast) [°C]
         label_fr: 800//GDPS.PRES - Écart du point de rosée à 800.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_800
+    GDPS.PRES_ES.800.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 800//GDPS.PRES - Dew point depression at 800.0 mb (6 hourly forecast) [°C]
+        label_fr: 800//GDPS.PRES - Écart du point de rosée à 800.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_800
     GDPS.PRES_ES.750.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
         label_en: 750//GDPS.PRES - Dew point depression at 750.0 mb (3 hourly forecast) [°C]
         label_fr: 750//GDPS.PRES - Écart du point de rosée à 750.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_750
+    GDPS.PRES_ES.750.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 750//GDPS.PRES - Dew point depression at 750.0 mb (6 hourly forecast) [°C]
+        label_fr: 750//GDPS.PRES - Écart du point de rosée à 750.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_750
     GDPS.PRES_ES.700:
         <<: *template_es
@@ -2108,17 +2156,35 @@ layers:
         label_en: 650//GDPS.PRES - Dew point depression at 650.0 mb (3 hourly forecast) [°C]
         label_fr: 650//GDPS.PRES - Écart du point de rosée à 650.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_650
+    GDPS.PRES_ES.650.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 650//GDPS.PRES - Dew point depression at 650.0 mb (6 hourly forecast) [°C]
+        label_fr: 650//GDPS.PRES - Écart du point de rosée à 650.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_650
     GDPS.PRES_ES.600.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
         label_en: 600//GDPS.PRES - Dew point depression at 600.0 mb (3 hourly forecast) [°C]
         label_fr: 600//GDPS.PRES - Écart du point de rosée à 600.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_600
+    GDPS.PRES_ES.600.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 600//GDPS.PRES - Dew point depression at 600.0 mb (6 hourly forecast) [°C]
+        label_fr: 600//GDPS.PRES - Écart du point de rosée à 600.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_600
     GDPS.PRES_ES.550.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
         label_en: 550//GDPS.PRES - Dew point depression at 550.0 mb (3 hourly forecast) [°C]
         label_fr: 550//GDPS.PRES - Écart du point de rosée à 550.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_550
+    GDPS.PRES_ES.550.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 550//GDPS.PRES - Dew point depression at 550.0 mb (6 hourly forecast) [°C]
+        label_fr: 550//GDPS.PRES - Écart du point de rosée à 550.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_550
     GDPS.PRES_ES.500:
         <<: *template_es
@@ -2131,6 +2197,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 450//GDPS.PRES - Dew point depression at 450.0 mb (3 hourly forecast) [°C]
         label_fr: 450//GDPS.PRES - Écart du point de rosée à 450.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_450
+    GDPS.PRES_ES.450.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 450//GDPS.PRES - Dew point depression at 450.0 mb (6 hourly forecast) [°C]
+        label_fr: 450//GDPS.PRES - Écart du point de rosée à 450.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_450
     GDPS.PRES_ES.400.3h:
         <<: *template_es
@@ -2150,6 +2222,12 @@ layers:
         label_en: 350//GDPS.PRES - Dew point depression at 350.0 mb (3 hourly forecast) [°C]
         label_fr: 350//GDPS.PRES - Écart du point de rosée à 350.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_350
+    GDPS.PRES_ES.350.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 350//GDPS.PRES - Dew point depression at 350.0 mb (6 hourly forecast) [°C]
+        label_fr: 350//GDPS.PRES - Écart du point de rosée à 350.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_350
     GDPS.PRES_ES.300.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
@@ -2167,6 +2245,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 275//GDPS.PRES - Dew point depression at 275.0 mb (3 hourly forecast) [°C]
         label_fr: 275//GDPS.PRES - Écart du point de rosée à 275.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_275
+    GDPS.PRES_ES.275.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 275//GDPS.PRES - Dew point depression at 275.0 mb (6 hourly forecast) [°C]
+        label_fr: 275//GDPS.PRES - Écart du point de rosée à 275.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_275
     GDPS.PRES_ES.250.6h:
         <<: *template_es
@@ -2186,6 +2270,12 @@ layers:
         label_en: 225//GDPS.PRES - Dew point depression at 225.0 mb (3 hourly forecast) [°C]
         label_fr: 225//GDPS.PRES - Écart du point de rosée à 225.0 mb (prévision aux 3 heures) [°C]
         name: DEPR_ISBL_225
+    GDPS.PRES_ES.225.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 225//GDPS.PRES - Dew point depression at 225.0 mb (6 hourly forecast) [°C]
+        label_fr: 225//GDPS.PRES - Écart du point de rosée à 225.0 mb (prévision aux 6 heures) [°C]
+        name: DEPR_ISBL_225
     GDPS.PRES_ES.200.3h:
         <<: *template_es
         forecast_model: *id_gdps_pres
@@ -2203,6 +2293,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 175//GDPS.PRES - Dew point depression at 175.0 mb (3 hourly forecast) [°C]
         label_fr: 175//GDPS.PRES - Écart du point de rosée à 175.0 mb (prévision aux 3 heures) [°C]
+        name: DEPR_ISBL_175
+    GDPS.PRES_ES.175.6h:
+        <<: *template_es
+        forecast_model: *id_gdps_pres_6h
+        label_en: 175//GDPS.PRES - Dew point depression at 175.0 mb (6 hourly forecast) [°C]
+        label_fr: 175//GDPS.PRES - Écart du point de rosée à 175.0 mb (prévision aux 6 heures) [°C]
         name: DEPR_ISBL_175
     GDPS.PRES_ES.150.3h:
         <<: *template_es
@@ -2246,6 +2342,12 @@ layers:
         label_en: 1015//GDPS.PRES - Specific humidity at 1015.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 1015//GDPS.PRES - Humidité spécifique à 1015.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_1015
+    GDPS.PRES_HU.1015.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 1015//GDPS.PRES - Specific humidity at 1015.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 1015//GDPS.PRES - Humidité spécifique à 1015.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_1015
     GDPS.PRES_HU.1000:
         <<: *template_hu
         forecast_model: *id_gdps_pres
@@ -2258,17 +2360,35 @@ layers:
         label_en: 985//GDPS.PRES - Specific humidity at 985.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 985//GDPS.PRES - Humidité spécifique à 985.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_985
+    GDPS.PRES_HU.985.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 985//GDPS.PRES - Specific humidity at 985.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 985//GDPS.PRES - Humidité spécifique à 985.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_985
     GDPS.PRES_HU.970.3h:
         <<: *template_hu
         forecast_model: *id_gdps_pres
         label_en: 970//GDPS.PRES - Specific humidity at 970.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 970//GDPS.PRES - Humidité spécifique à 970.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_970
+    GDPS.PRES_HU.970.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 970//GDPS.PRES - Specific humidity at 970.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 970//GDPS.PRES - Humidité spécifique à 970.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_970
     GDPS.PRES_HU.950.3h:
         <<: *template_hu
         forecast_model: *id_gdps_pres
         label_en: 950//GDPS.PRES - Specific humidity at 950.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 950//GDPS.PRES - Humidité spécifique à 950.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_950
+    GDPS.PRES_HU.950.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 950//GDPS.PRES - Specific humidity at 950.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 950//GDPS.PRES - Humidité spécifique à 950.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_950
     GDPS.PRES_HU.925:
         <<: *template_hu
@@ -2282,11 +2402,23 @@ layers:
         label_en: 900//GDPS.PRES - Specific humidity at 900.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 900//GDPS.PRES - Humidité spécifique à 900.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_900
+    GDPS.PRES_HU.900.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 900//GDPS.PRES - Specific humidity at 900.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 900//GDPS.PRES - Humidité spécifique à 900.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_900
     GDPS.PRES_HU.875.3h:
         <<: *template_hu
         forecast_model: *id_gdps_pres
         label_en: 875//GDPS.PRES - Specific humidity at 875.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 875//GDPS.PRES - Humidité spécifique à 875.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_875
+    GDPS.PRES_HU.875.6h:
+        <<: *template_hu
+        forecast_model: *id_gdps_pres_6h
+        label_en: 875//GDPS.PRES - Specific humidity at 875.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 875//GDPS.PRES - Humidité spécifique à 875.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_875
     GDPS.PRES_HU.850:
         <<: *template_hu
@@ -2300,11 +2432,23 @@ layers:
         label_en: 800//GDPS.PRES - Specific humidity at 800.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 800//GDPS.PRES - Humidité spécifique à 800.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_800
+    GDPS.PRES_HU.800.6h:
+        <<: *template_hu_pres_500_800
+        forecast_model: *id_gdps_pres_6h
+        label_en: 800//GDPS.PRES - Specific humidity at 800.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 800//GDPS.PRES - Humidité spécifique à 800.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_800
     GDPS.PRES_HU.750.3h:
         <<: *template_hu_pres_500_800
         forecast_model: *id_gdps_pres
         label_en: 750//GDPS.PRES - Specific humidity at 750.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 750//GDPS.PRES - Humidité spécifique à 750.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_750
+    GDPS.PRES_HU.750.6h:
+        <<: *template_hu_pres_500_800
+        forecast_model: *id_gdps_pres_6h
+        label_en: 750//GDPS.PRES - Specific humidity at 750.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 750//GDPS.PRES - Humidité spécifique à 750.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_750
     GDPS.PRES_HU.700:
         <<: *template_hu_pres_500_800
@@ -2318,17 +2462,35 @@ layers:
         label_en: 650//GDPS.PRES - Specific humidity at 650.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 650//GDPS.PRES - Humidité spécifique à 650.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_650
+    GDPS.PRES_HU.650.6h:
+        <<: *template_hu_pres_500_800
+        forecast_model: *id_gdps_pres_6h
+        label_en: 650//GDPS.PRES - Specific humidity at 650.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 650//GDPS.PRES - Humidité spécifique à 650.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_650
     GDPS.PRES_HU.600.3h:
         <<: *template_hu_pres_500_800
         forecast_model: *id_gdps_pres
         label_en: 600//GDPS.PRES - Specific humidity at 600.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 600//GDPS.PRES - Humidité spécifique à 600.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_600
+    GDPS.PRES_HU.600.6h:
+        <<: *template_hu_pres_500_800
+        forecast_model: *id_gdps_pres_6h
+        label_en: 600//GDPS.PRES - Specific humidity at 600.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 600//GDPS.PRES - Humidité spécifique à 600.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_600
     GDPS.PRES_HU.550.3h:
         <<: *template_hu_pres_500_800
         forecast_model: *id_gdps_pres
         label_en: 550//GDPS.PRES - Specific humidity at 550.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 550//GDPS.PRES - Humidité spécifique à 550.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_550
+    GDPS.PRES_HU.550.6h:
+        <<: *template_hu_pres_500_800
+        forecast_model: *id_gdps_pres_6h
+        label_en: 550//GDPS.PRES - Specific humidity at 550.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 550//GDPS.PRES - Humidité spécifique à 550.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_550
     GDPS.PRES_HU.500:
         <<: *template_hu_pres_500_800
@@ -2341,6 +2503,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 450//GDPS.PRES - Specific humidity at 450.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 450//GDPS.PRES - Humidité spécifique à 450.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_450
+    GDPS.PRES_HU.450.6h:
+        <<: *template_hu_pres_200_500
+        forecast_model: *id_gdps_pres_6h
+        label_en: 450//GDPS.PRES - Specific humidity at 450.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 450//GDPS.PRES - Humidité spécifique à 450.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_450
     GDPS.PRES_HU.400.3h:
         <<: *template_hu_pres_200_500
@@ -2360,6 +2528,12 @@ layers:
         label_en: 350//GDPS.PRES - Specific humidity at 350.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 350//GDPS.PRES - Humidité spécifique à 350.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_350
+    GDPS.PRES_HU.350.6h:
+        <<: *template_hu_pres_200_500
+        forecast_model: *id_gdps_pres_6h
+        label_en: 350//GDPS.PRES - Specific humidity at 350.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 350//GDPS.PRES - Humidité spécifique à 350.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_350
     GDPS.PRES_HU.300.3h:
         <<: *template_hu_pres_200_500
         forecast_model: *id_gdps_pres
@@ -2377,6 +2551,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 275//GDPS.PRES - Specific humidity at 275.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 275//GDPS.PRES - Humidité spécifique à 275.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_275
+    GDPS.PRES_HU.275.6h:
+        <<: *template_hu_pres_200_500
+        forecast_model: *id_gdps_pres_6h
+        label_en: 275//GDPS.PRES - Specific humidity at 275.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 275//GDPS.PRES - Humidité spécifique à 275.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_275
     GDPS.PRES_HU.250.6h:
         <<: *template_hu_pres_200_500
@@ -2396,6 +2576,12 @@ layers:
         label_en: 225//GDPS.PRES - Specific humidity at 225.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 225//GDPS.PRES - Humidité spécifique à 225.0 mb (prévision aux 3 heures) [kg/kg]
         name: SPFH_ISBL_225
+    GDPS.PRES_HU.225.6h:
+        <<: *template_hu_pres_200_500
+        forecast_model: *id_gdps_pres_6h
+        label_en: 225//GDPS.PRES - Specific humidity at 225.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 225//GDPS.PRES - Humidité spécifique à 225.0 mb (prévision aux 6 heures) [kg/kg]
+        name: SPFH_ISBL_225
     GDPS.PRES_HU.200.3h:
         <<: *template_hu_pres_200_500
         forecast_model: *id_gdps_pres
@@ -2413,6 +2599,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 175//GDPS.PRES - Specific humidity at 175.0 mb (3 hourly forecast) [kg/kg]
         label_fr: 175//GDPS.PRES - Humidité spécifique à 175.0 mb (prévision aux 3 heures) [kg/kg]
+        name: SPFH_ISBL_175
+    GDPS.PRES_HU.175.6h:
+        <<: *template_hu_pres_50_200
+        forecast_model: *id_gdps_pres_6h
+        label_en: 175//GDPS.PRES - Specific humidity at 175.0 mb (6 hourly forecast) [kg/kg]
+        label_fr: 175//GDPS.PRES - Humidité spécifique à 175.0 mb (prévision aux 6 heures) [kg/kg]
         name: SPFH_ISBL_175
     GDPS.PRES_HU.150.3h:
         <<: *template_hu_pres_50_200
@@ -2456,6 +2648,12 @@ layers:
         label_en: 1015//GDPS.PRES - Air temperature at 1015.0 mb (3 hourly forecast) [°C]
         label_fr: 1015//GDPS.PRES - Température de l'air à 1015.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_1015
+    GDPS.PRES_TT.1015.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 1015//GDPS.PRES - Air temperature at 1015.0 mb (6 hourly forecast) [°C]
+        label_fr: 1015//GDPS.PRES - Température de l'air à 1015.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_1015
     GDPS.PRES_TT.1000:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
@@ -2468,17 +2666,35 @@ layers:
         label_en: 985//GDPS.PRES - Air temperature at 985.0 mb (3 hourly forecast) [°C]
         label_fr: 985//GDPS.PRES - Température de l'air à 985.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_985
+    GDPS.PRES_TT.985.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 985//GDPS.PRES - Air temperature at 985.0 mb (6 hourly forecast) [°C]
+        label_fr: 985//GDPS.PRES - Température de l'air à 985.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_985
     GDPS.PRES_TT.970.3h:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
         label_en: 970//GDPS.PRES - Air temperature at 970.0 mb (3 hourly forecast) [°C]
         label_fr: 970//GDPS.PRES - Température de l'air à 970.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_970
+    GDPS.PRES_TT.970.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 970//GDPS.PRES - Air temperature at 970.0 mb (6 hourly forecast) [°C]
+        label_fr: 970//GDPS.PRES - Température de l'air à 970.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_970
     GDPS.PRES_TT.950.3h:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
         label_en: 950//GDPS.PRES - Air temperature at 950.0 mb (3 hourly forecast) [°C]
         label_fr: 950//GDPS.PRES - Température de l'air à 950.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_950
+    GDPS.PRES_TT.950.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 950//GDPS.PRES - Air temperature at 950.0 mb (6 hourly forecast) [°C]
+        label_fr: 950//GDPS.PRES - Température de l'air à 950.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_950
     GDPS.PRES_TT.925:
         <<: *template_tt_1015_600
@@ -2492,11 +2708,23 @@ layers:
         label_en: 900//GDPS.PRES - Air temperature at 900.0 mb (3 hourly forecast) [°C]
         label_fr: 900//GDPS.PRES - Température de l'air à 900.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_900
+    GDPS.PRES_TT.900.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 900//GDPS.PRES - Air temperature at 900.0 mb (6 hourly forecast) [°C]
+        label_fr: 900//GDPS.PRES - Température de l'air à 900.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_900
     GDPS.PRES_TT.875.3h:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
         label_en: 875//GDPS.PRES - Air temperature at 875.0 mb (3 hourly forecast) [°C]
         label_fr: 875//GDPS.PRES - Température de l'air à 875.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_875
+    GDPS.PRES_TT.875.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 875//GDPS.PRES - Air temperature at 875.0 mb (6 hourly forecast) [°C]
+        label_fr: 875//GDPS.PRES - Température de l'air à 875.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_875
     GDPS.PRES_TT.850:
         <<: *template_tt_1015_600
@@ -2510,11 +2738,23 @@ layers:
         label_en: 800//GDPS.PRES - Air temperature at 800.0 mb (3 hourly forecast) [°C]
         label_fr: 800//GDPS.PRES - Température de l'air à 800.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_800
+    GDPS.PRES_TT.800.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 800//GDPS.PRES - Air temperature at 800.0 mb (6 hourly forecast) [°C]
+        label_fr: 800//GDPS.PRES - Température de l'air à 800.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_800
     GDPS.PRES_TT.750.3h:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
         label_en: 750//GDPS.PRES - Air temperature at 750.0 mb (3 hourly forecast) [°C]
         label_fr: 750//GDPS.PRES - Température de l'air à 750.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_750
+    GDPS.PRES_TT.750.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 750//GDPS.PRES - Air temperature at 750.0 mb (6 hourly forecast) [°C]
+        label_fr: 750//GDPS.PRES - Température de l'air à 750.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_750
     GDPS.PRES_TT.700:
         <<: *template_tt_1015_600
@@ -2528,17 +2768,35 @@ layers:
         label_en: 650//GDPS.PRES - Air temperature at 650.0 mb (3 hourly forecast) [°C]
         label_fr: 650//GDPS.PRES - Température de l'air à 650.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_650
+    GDPS.PRES_TT.650.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 650//GDPS.PRES - Air temperature at 650.0 mb (6 hourly forecast) [°C]
+        label_fr: 650//GDPS.PRES - Température de l'air à 650.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_650
     GDPS.PRES_TT.600.3h:
         <<: *template_tt_1015_600
         forecast_model: *id_gdps_pres
         label_en: 600//GDPS.PRES - Air temperature at 600.0 mb (3 hourly forecast) [°C]
         label_fr: 600//GDPS.PRES - Température de l'air à 600.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_600
+    GDPS.PRES_TT.600.6h:
+        <<: *template_tt_1015_600
+        forecast_model: *id_gdps_pres_6h
+        label_en: 600//GDPS.PRES - Air temperature at 600.0 mb (6 hourly forecast) [°C]
+        label_fr: 600//GDPS.PRES - Température de l'air à 600.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_600
     GDPS.PRES_TT.550.3h:
         <<: *template_tt_550_275
         forecast_model: *id_gdps_pres
         label_en: 550//GDPS.PRES - Air temperature at 550.0 mb (3 hourly forecast) [°C]
         label_fr: 550//GDPS.PRES - Température de l'air à 550.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_550
+    GDPS.PRES_TT.550.6h:
+        <<: *template_tt_550_275
+        forecast_model: *id_gdps_pres_6h
+        label_en: 550//GDPS.PRES - Air temperature at 550.0 mb (6 hourly forecast) [°C]
+        label_fr: 550//GDPS.PRES - Température de l'air à 550.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_550
     GDPS.PRES_TT.500:
         <<: *template_tt_550_275
@@ -2551,6 +2809,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 450//GDPS.PRES - Air temperature at 450.0 mb (3 hourly forecast) [°C]
         label_fr: 450//GDPS.PRES - Température de l'air à 450.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_450
+    GDPS.PRES_TT.450.6h:
+        <<: *template_tt_550_275
+        forecast_model: *id_gdps_pres_6h
+        label_en: 450//GDPS.PRES - Air temperature at 450.0 mb (6 hourly forecast) [°C]
+        label_fr: 450//GDPS.PRES - Température de l'air à 450.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_450
     GDPS.PRES_TT.400.3h:
         <<: *template_tt_550_275
@@ -2570,6 +2834,12 @@ layers:
         label_en: 350//GDPS.PRES - Air temperature at 350.0 mb (3 hourly forecast) [°C]
         label_fr: 350//GDPS.PRES - Température de l'air à 350.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_350
+    GDPS.PRES_TT.350.6h:
+        <<: *template_tt_550_275
+        forecast_model: *id_gdps_pres_6h
+        label_en: 350//GDPS.PRES - Air temperature at 350.0 mb (6 hourly forecast) [°C]
+        label_fr: 350//GDPS.PRES - Température de l'air à 350.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_350
     GDPS.PRES_TT.300.3h:
         <<: *template_tt_550_275
         forecast_model: *id_gdps_pres
@@ -2587,6 +2857,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 275//GDPS.PRES - Air temperature at 275.0 mb (3 hourly forecast) [°C]
         label_fr: 275//GDPS.PRES - Température de l'air à 275.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_275
+    GDPS.PRES_TT.275.6h:
+        <<: *template_tt_550_275
+        forecast_model: *id_gdps_pres_6h
+        label_en: 275//GDPS.PRES - Air temperature at 275.0 mb (6 hourly forecast) [°C]
+        label_fr: 275//GDPS.PRES - Température de l'air à 275.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_275
     GDPS.PRES_TT.250.6h:
         <<: *template_tt_250
@@ -2606,6 +2882,12 @@ layers:
         label_en: 225//GDPS.PRES - Air temperature at 225.0 mb (3 hourly forecast) [°C]
         label_fr: 225//GDPS.PRES - Température de l'air à 225.0 mb (prévision aux 3 heures) [°C]
         name: TMP_ISBL_225
+    GDPS.PRES_TT.225.6h:
+        <<: *template_tt_250
+        forecast_model: *id_gdps_pres_6h
+        label_en: 225//GDPS.PRES - Air temperature at 225.0 mb (6 hourly forecast) [°C]
+        label_fr: 225//GDPS.PRES - Température de l'air à 225.0 mb (prévision aux 6 heures) [°C]
+        name: TMP_ISBL_225
     GDPS.PRES_TT.200.3h:
         <<: *template_tt_250
         forecast_model: *id_gdps_pres
@@ -2623,6 +2905,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 175//GDPS.PRES - Air temperature at 175.0 mb (3 hourly forecast) [°C]
         label_fr: 175//GDPS.PRES - Température de l'air à 175.0 mb (prévision aux 3 heures) [°C]
+        name: TMP_ISBL_175
+    GDPS.PRES_TT.175.6h:
+        <<: *template_tt_250
+        forecast_model: *id_gdps_pres_6h
+        label_en: 175//GDPS.PRES - Air temperature at 175.0 mb (6 hourly forecast) [°C]
+        label_fr: 175//GDPS.PRES - Température de l'air à 175.0 mb (prévision aux 6 heures) [°C]
         name: TMP_ISBL_175
     GDPS.PRES_TT.150.3h:
         <<: *template_tt_250
@@ -2946,6 +3234,12 @@ layers:
         label_en: 1015//GDPS.PRES - Wind direction at 1015.0 mb (3 hourly forecast) [°]
         label_fr: 1015//GDPS.PRES - Direction du vent à 1015.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_1015
+    GDPS.PRES_WD.1015.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 1015//GDPS.PRES - Wind direction at 1015.0 mb (6 hourly forecast) [°]
+        label_fr: 1015//GDPS.PRES - Direction du vent à 1015.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_1015
     GDPS.PRES_WD.1000:
         <<: *template_wd
         forecast_model: *id_gdps_pres
@@ -2958,17 +3252,35 @@ layers:
         label_en: 985//GDPS.PRES - Wind direction at 985.0 mb (3 hourly forecast) [°]
         label_fr: 985//GDPS.PRES - Direction du vent à 985.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_985
+    GDPS.PRES_WD.985.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 985//GDPS.PRES - Wind direction at 985.0 mb (6 hourly forecast) [°]
+        label_fr: 985//GDPS.PRES - Direction du vent à 985.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_985
     GDPS.PRES_WD.970.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 970//GDPS.PRES - Wind direction at 970.0 mb (3 hourly forecast) [°]
         label_fr: 970//GDPS.PRES - Direction du vent à 970.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_970
+    GDPS.PRES_WD.970.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 970//GDPS.PRES - Wind direction at 970.0 mb (6 hourly forecast) [°]
+        label_fr: 970//GDPS.PRES - Direction du vent à 970.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_970
     GDPS.PRES_WD.950.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 950//GDPS.PRES - Wind direction at 950.0 mb (3 hourly forecast) [°]
         label_fr: 950//GDPS.PRES - Direction du vent à 950.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_950
+    GDPS.PRES_WD.950.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 950//GDPS.PRES - Wind direction at 950.0 mb (6 hourly forecast) [°]
+        label_fr: 950//GDPS.PRES - Direction du vent à 950.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_950
     GDPS.PRES_WD.925:
         <<: *template_wd
@@ -2982,11 +3294,23 @@ layers:
         label_en: 900//GDPS.PRES - Wind direction at 900.0 mb (3 hourly forecast) [°]
         label_fr: 900//GDPS.PRES - Direction du vent à 900.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_900
+    GDPS.PRES_WD.900.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 900//GDPS.PRES - Wind direction at 900.0 mb (6 hourly forecast) [°]
+        label_fr: 900//GDPS.PRES - Direction du vent à 900.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_900
     GDPS.PRES_WD.875.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 875//GDPS.PRES - Wind direction at 875.0 mb (3 hourly forecast) [°]
         label_fr: 875//GDPS.PRES - Direction du vent à 875.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_875
+    GDPS.PRES_WD.875.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 875//GDPS.PRES - Wind direction at 875.0 mb (6 hourly forecast) [°]
+        label_fr: 875//GDPS.PRES - Direction du vent à 875.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_875
     GDPS.PRES_WD.850:
         <<: *template_wd
@@ -3000,11 +3324,23 @@ layers:
         label_en: 800//GDPS.PRES - Wind direction at 800.0 mb (3 hourly forecast) [°]
         label_fr: 800//GDPS.PRES - Direction du vent à 800.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_800
+    GDPS.PRES_WD.800.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 800//GDPS.PRES - Wind direction at 800.0 mb (6 hourly forecast) [°]
+        label_fr: 800//GDPS.PRES - Direction du vent à 800.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_800
     GDPS.PRES_WD.750.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 750//GDPS.PRES - Wind direction at 750.0 mb (3 hourly forecast) [°]
         label_fr: 750//GDPS.PRES - Direction du vent à 750.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_750
+    GDPS.PRES_WD.750.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 750//GDPS.PRES - Wind direction at 750.0 mb (6 hourly forecast) [°]
+        label_fr: 750//GDPS.PRES - Direction du vent à 750.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_750
     GDPS.PRES_WD.700:
         <<: *template_wd
@@ -3018,17 +3354,35 @@ layers:
         label_en: 650//GDPS.PRES - Wind direction at 650.0 mb (3 hourly forecast) [°]
         label_fr: 650//GDPS.PRES - Direction du vent à 650.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_650
+    GDPS.PRES_WD.650.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 650//GDPS.PRES - Wind direction at 650.0 mb (6 hourly forecast) [°]
+        label_fr: 650//GDPS.PRES - Direction du vent à 650.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_650
     GDPS.PRES_WD.600.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 600//GDPS.PRES - Wind direction at 600.0 mb (3 hourly forecast) [°]
         label_fr: 600//GDPS.PRES - Direction du vent à 600.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_600
+    GDPS.PRES_WD.600.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 600//GDPS.PRES - Wind direction at 600.0 mb (6 hourly forecast) [°]
+        label_fr: 600//GDPS.PRES - Direction du vent à 600.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_600
     GDPS.PRES_WD.550.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
         label_en: 550//GDPS.PRES - Wind direction at 550.0 mb (3 hourly forecast) [°]
         label_fr: 550//GDPS.PRES - Direction du vent à 550.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_550
+    GDPS.PRES_WD.550.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 550//GDPS.PRES - Wind direction at 550.0 mb (6 hourly forecast) [°]
+        label_fr: 550//GDPS.PRES - Direction du vent à 550.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_550
     GDPS.PRES_WD.500:
         <<: *template_wd
@@ -3041,6 +3395,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 450//GDPS.PRES - Wind direction at 450.0 mb (3 hourly forecast) [°]
         label_fr: 450//GDPS.PRES - Direction du vent à 450.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_450
+    GDPS.PRES_WD.450.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 450//GDPS.PRES - Wind direction at 450.0 mb (6 hourly forecast) [°]
+        label_fr: 450//GDPS.PRES - Direction du vent à 450.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_450
     GDPS.PRES_WD.400.3h:
         <<: *template_wd
@@ -3060,6 +3420,12 @@ layers:
         label_en: 350//GDPS.PRES - Wind direction at 350.0 mb (3 hourly forecast) [°]
         label_fr: 350//GDPS.PRES - Direction du vent à 350.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_350
+    GDPS.PRES_WD.350.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 350//GDPS.PRES - Wind direction at 350.0 mb (6 hourly forecast) [°]
+        label_fr: 350//GDPS.PRES - Direction du vent à 350.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_350
     GDPS.PRES_WD.300.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
@@ -3077,6 +3443,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 275//GDPS.PRES - Wind direction at 275.0 mb (3 hourly forecast) [°]
         label_fr: 275//GDPS.PRES - Direction du vent à 275.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_275
+    GDPS.PRES_WD.275.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 275//GDPS.PRES - Wind direction at 275.0 mb (6 hourly forecast) [°]
+        label_fr: 275//GDPS.PRES - Direction du vent à 275.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_275
     GDPS.PRES_WD.250.6h:
         <<: *template_wd
@@ -3096,6 +3468,12 @@ layers:
         label_en: 225//GDPS.PRES - Wind direction at 225.0 mb (3 hourly forecast) [°]
         label_fr: 225//GDPS.PRES - Direction du vent à 225.0 mb (prévision aux 3 heures) [°]
         name: WDIR_ISBL_225
+    GDPS.PRES_WD.225.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 225//GDPS.PRES - Wind direction at 225.0 mb (6 hourly forecast) [°]
+        label_fr: 225//GDPS.PRES - Direction du vent à 225.0 mb (prévision aux 6 heures) [°]
+        name: WDIR_ISBL_225
     GDPS.PRES_WD.200.3h:
         <<: *template_wd
         forecast_model: *id_gdps_pres
@@ -3113,6 +3491,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 175//GDPS.PRES - Wind direction at 175.0 mb (3 hourly forecast) [°]
         label_fr: 175//GDPS.PRES - Direction du vent à 175.0 mb (prévision aux 3 heures) [°]
+        name: WDIR_ISBL_175
+    GDPS.PRES_WD.175.6h:
+        <<: *template_wd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 175//GDPS.PRES - Wind direction at 175.0 mb (6 hourly forecast) [°]
+        label_fr: 175//GDPS.PRES - Direction du vent à 175.0 mb (prévision aux 6 heures) [°]
         name: WDIR_ISBL_175
     GDPS.PRES_WD.150.3h:
         <<: *template_wd
@@ -3156,6 +3540,12 @@ layers:
         label_en: 1015//GDPS.PRES - Wind speed at 1015.0 mb (3 hourly forecast) [m/s]
         label_fr: 1015//GDPS.PRES - Vitesse du vent à 1015.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_1015
+    GDPS.PRES_WSPD.1015.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 1015//GDPS.PRES - Wind speed at 1015.0 mb (6 hourly forecast) [m/s]
+        label_fr: 1015//GDPS.PRES - Vitesse du vent à 1015.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_1015
     GDPS.PRES_WSPD.1000:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
@@ -3168,17 +3558,35 @@ layers:
         label_en: 985//GDPS.PRES - Wind speed at 985.0 mb (3 hourly forecast) [m/s]
         label_fr: 985//GDPS.PRES - Vitesse du vent à 985.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_985
+    GDPS.PRES_WSPD.985.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 985//GDPS.PRES - Wind speed at 985.0 mb (6 hourly forecast) [m/s]
+        label_fr: 985//GDPS.PRES - Vitesse du vent à 985.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_985
     GDPS.PRES_WSPD.970.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 970//GDPS.PRES - Wind speed at 970.0 mb (3 hourly forecast) [m/s]
         label_fr: 970//GDPS.PRES - Vitesse du vent à 970.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_970
+    GDPS.PRES_WSPD.970.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 970//GDPS.PRES - Wind speed at 970.0 mb (6 hourly forecast) [m/s]
+        label_fr: 970//GDPS.PRES - Vitesse du vent à 970.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_970
     GDPS.PRES_WSPD.950.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 950//GDPS.PRES - Wind speed at 950.0 mb (3 hourly forecast) [m/s]
         label_fr: 950//GDPS.PRES - Vitesse du vent à 950.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_950
+    GDPS.PRES_WSPD.950.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 950//GDPS.PRES - Wind speed at 950.0 mb (6 hourly forecast) [m/s]
+        label_fr: 950//GDPS.PRES - Vitesse du vent à 950.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_950
     GDPS.PRES_WSPD.925:
         <<: *template_wspd
@@ -3192,11 +3600,23 @@ layers:
         label_en: 900//GDPS.PRES - Wind speed at 900.0 mb (3 hourly forecast) [m/s]
         label_fr: 900//GDPS.PRES - Vitesse du vent à 900.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_900
+    GDPS.PRES_WSPD.900.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 900//GDPS.PRES - Wind speed at 900.0 mb (6 hourly forecast) [m/s]
+        label_fr: 900//GDPS.PRES - Vitesse du vent à 900.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_900
     GDPS.PRES_WSPD.875.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 875//GDPS.PRES - Wind speed at 875.0 mb (3 hourly forecast) [m/s]
         label_fr: 875//GDPS.PRES - Vitesse du vent à 875.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_875
+    GDPS.PRES_WSPD.875.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 875//GDPS.PRES - Wind speed at 875.0 mb (6 hourly forecast) [m/s]
+        label_fr: 875//GDPS.PRES - Vitesse du vent à 875.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_875
     GDPS.PRES_WSPD.850:
         <<: *template_wspd
@@ -3210,11 +3630,23 @@ layers:
         label_en: 800//GDPS.PRES - Wind speed at 800.0 mb (3 hourly forecast) [m/s]
         label_fr: 800//GDPS.PRES - Vitesse du vent à 800.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_800
+    GDPS.PRES_WSPD.800.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 800//GDPS.PRES - Wind speed at 800.0 mb (6 hourly forecast) [m/s]
+        label_fr: 800//GDPS.PRES - Vitesse du vent à 800.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_800
     GDPS.PRES_WSPD.750.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 750//GDPS.PRES - Wind speed at 750.0 mb (3 hourly forecast) [m/s]
         label_fr: 750//GDPS.PRES - Vitesse du vent à 750.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_750
+    GDPS.PRES_WSPD.750.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 750//GDPS.PRES - Wind speed at 750.0 mb (6 hourly forecast) [m/s]
+        label_fr: 750//GDPS.PRES - Vitesse du vent à 750.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_750
     GDPS.PRES_WSPD.700:
         <<: *template_wspd
@@ -3228,17 +3660,35 @@ layers:
         label_en: 650//GDPS.PRES - Wind speed at 650.0 mb (3 hourly forecast) [m/s]
         label_fr: 650//GDPS.PRES - Vitesse du vent à 650.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_650
+    GDPS.PRES_WSPD.650.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 650//GDPS.PRES - Wind speed at 650.0 mb (6 hourly forecast) [m/s]
+        label_fr: 650//GDPS.PRES - Vitesse du vent à 650.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_650
     GDPS.PRES_WSPD.600.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 600//GDPS.PRES - Wind speed at 600.0 mb (3 hourly forecast) [m/s]
         label_fr: 600//GDPS.PRES - Vitesse du vent à 600.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_600
+    GDPS.PRES_WSPD.600.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 600//GDPS.PRES - Wind speed at 600.0 mb (6 hourly forecast) [m/s]
+        label_fr: 600//GDPS.PRES - Vitesse du vent à 600.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_600
     GDPS.PRES_WSPD.550.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
         label_en: 550//GDPS.PRES - Wind speed at 550.0 mb (3 hourly forecast) [m/s]
         label_fr: 550//GDPS.PRES - Vitesse du vent à 550.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_550
+    GDPS.PRES_WSPD.550.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 550//GDPS.PRES - Wind speed at 550.0 mb (6 hourly forecast) [m/s]
+        label_fr: 550//GDPS.PRES - Vitesse du vent à 550.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_550
     GDPS.PRES_WSPD.500:
         <<: *template_wspd
@@ -3251,6 +3701,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 450//GDPS.PRES - Wind speed at 450.0 mb (3 hourly forecast) [m/s]
         label_fr: 450//GDPS.PRES - Vitesse du vent à 450.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_450
+    GDPS.PRES_WSPD.450.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 450//GDPS.PRES - Wind speed at 450.0 mb (6 hourly forecast) [m/s]
+        label_fr: 450//GDPS.PRES - Vitesse du vent à 450.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_450
     GDPS.PRES_WSPD.400.3h:
         <<: *template_wspd
@@ -3270,6 +3726,12 @@ layers:
         label_en: 350//GDPS.PRES - Wind speed at 350.0 mb (3 hourly forecast) [m/s]
         label_fr: 350//GDPS.PRES - Vitesse du vent à 350.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_350
+    GDPS.PRES_WSPD.350.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 350//GDPS.PRES - Wind speed at 350.0 mb (6 hourly forecast) [m/s]
+        label_fr: 350//GDPS.PRES - Vitesse du vent à 350.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_350
     GDPS.PRES_WSPD.300.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
@@ -3287,6 +3749,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 275//GDPS.PRES - Wind speed at 275.0 mb (3 hourly forecast) [m/s]
         label_fr: 275//GDPS.PRES - Vitesse du vent à 275.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_275
+    GDPS.PRES_WSPD.275.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 275//GDPS.PRES - Wind speed at 275.0 mb (6 hourly forecast) [m/s]
+        label_fr: 275//GDPS.PRES - Vitesse du vent à 275.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_275
     GDPS.PRES_WSPD.250.6h:
         <<: *template_wspd
@@ -3306,6 +3774,12 @@ layers:
         label_en: 225//GDPS.PRES - Wind speed at 225.0 mb (3 hourly forecast) [m/s]
         label_fr: 225//GDPS.PRES - Vitesse du vent à 225.0 mb (prévision aux 3 heures) [m/s]
         name: WIND_ISBL_225
+    GDPS.PRES_WSPD.225.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 225//GDPS.PRES - Wind speed at 225.0 mb (6 hourly forecast) [m/s]
+        label_fr: 225//GDPS.PRES - Vitesse du vent à 225.0 mb (prévision aux 6 heures) [m/s]
+        name: WIND_ISBL_225
     GDPS.PRES_WSPD.200.3h:
         <<: *template_wspd
         forecast_model: *id_gdps_pres
@@ -3323,6 +3797,12 @@ layers:
         forecast_model: *id_gdps_pres
         label_en: 175//GDPS.PRES - Wind speed at 175.0 mb (3 hourly forecast) [m/s]
         label_fr: 175//GDPS.PRES - Vitesse du vent à 175.0 mb (prévision aux 3 heures) [m/s]
+        name: WIND_ISBL_175
+    GDPS.PRES_WSPD.175.6h:
+        <<: *template_wspd
+        forecast_model: *id_gdps_pres_6h
+        label_en: 175//GDPS.PRES - Wind speed at 175.0 mb (6 hourly forecast) [m/s]
+        label_fr: 175//GDPS.PRES - Vitesse du vent à 175.0 mb (prévision aux 6 heures) [m/s]
         name: WIND_ISBL_175
     GDPS.PRES_WSPD.150.3h:
         <<: *template_wspd
