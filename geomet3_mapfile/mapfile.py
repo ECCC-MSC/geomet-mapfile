@@ -35,27 +35,34 @@ st = load_plugin('store', provider_def)
 
 time_extent_key = {}
 
+
 def layer_time_config(layer_name): 
     model = layer_name.split('.')[0]
-    time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8')
-    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8') if st.get_key(f'{layer_name}_model_run_extent') is not None else None
-    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8') if  st.get_key(f'{layer_name}_default_model_run') is not None else None
-    
+
+    time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8') if st.get_key(f'{layer_name}_time_extent') is not None else None  # noqa
+    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8') if st.get_key(f'{layer_name}_model_run_extent') is not None else None  # noqa
+    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8') if st.get_key(f'{layer_name}_default_model_run') is not None else None  # noqa
+
+    if not time_extent:
+        LOGGER.error(f'Could not retrieve {layer_name} time extent from store.'
+                     f' Skipping mapfile generation for this layer.')
+        return False
+
     start, end, interval = time_extent.split('/')
     if default_model_run == start:
         key = f'{model}_{interval}'
     else:
         key = f'{model}_{interval}_future'
    
-    if not key in time_extent_key:
+    if key not in time_extent_key:
     
         start = datetime.strptime(start, DATEFORMAT)
         end = datetime.strptime(end, DATEFORMAT)
-        regex_result = re.search('^P(T?)(\d+)(.)', interval)
+        regex_result = re.search('^P(T?)(\\d+)(.)', interval)
         time_ = regex_result.group(1)
         duration = regex_result.group(2)
         unit = regex_result.group(3)
-     
+
         if time_ is None:
             # this means the duration is a date
             if unit == 'M':
@@ -66,16 +73,19 @@ def layer_time_config(layer_name):
                 relative_delta = timedelta(hours=int(duration))
             elif unit == 'M':
                 relative_delta = timedelta(minutes=int(duration))
-        
-        intervals = []
-        while start <= end:
-            intervals.append(start)
-            start += relative_delta
 
-        nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)
-        
+        intervals = []
+
+        if start != end and relative_delta != timedelta(minutes=0):
+            while start <= end:
+                intervals.append(start)
+                start += relative_delta
+            nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)
+        else:
+            nearest_interval = end.strftime(DATEFORMAT)
+
         time_extent_key[key] = nearest_interval
-    
+
     else:
         nearest_interval = time_extent_key[key]
 
@@ -87,7 +97,8 @@ def layer_time_config(layer_name):
     }
 
     return time_config_dict
- 
+
+
 def gen_web_metadata(m, c, url):
     """
     update mapfile MAP.WEB.METADATA section
@@ -141,46 +152,45 @@ def gen_web_metadata(m, c, url):
     for lang in ['en', 'fr']:
         if lang == 'fr':
             _lang = '_fr'
-            d['ows_onlineresource_fr'] = '{}?lang=fr'.format(url)
+            d['ows_onlineresource_fr'] = f'{url}?lang=fr'
         else:
             _lang = ''
             d['ows_onlineresource'] = url
 
-        d['ows_address{}'.format(_lang)] = \
+        d[f'ows_address{_lang}'] = \
             c['provider']['contact']['address']['delivery_point'][lang]
-        d['ows_keywordlist_http://purl.org/dc/terms/_items{}'.format(_lang)] =\
+        d[f'ows_keywordlist_http://purl.org/dc/terms/_items{_lang}'] =\
             ','.join(c['identification']['keywords'][lang])
-        d['ows_contactinstructions{}'.format(_lang)] = \
+        d[f'ows_contactinstructions{_lang}'] = \
             c['provider']['contact']['instructions'][lang]
-        d['ows_contactperson{}'.format(_lang)] = \
+        d[f'ows_contactperson{_lang}'] = \
             c['provider']['contact']['name'][lang]
-        d['ows_contactposition{}'.format(_lang)] = \
+        d[f'ows_contactposition{_lang}'] = \
             c['provider']['contact']['position'][lang]
-        d['ows_contactorganization{}'.format(_lang)] = \
+        d[f'ows_contactorganization{_lang}'] = \
             c['provider']['name'][lang]
-        d['ows_abstract{}'.format(_lang)] = \
+        d[f'ows_abstract{_lang}'] = \
             c['identification']['abstract'][lang]
-        d['ows_service_onlineresource{}'.format(_lang)] = \
+        d[f'ows_service_onlineresource{_lang}'] = \
             c['identification']['url'][lang]
-        service_title = u'{} {}'.format(
-            c['identification']['title'][lang], __version__)
-        d['ows_title{}'.format(_lang)] = service_title
-        d['wcs_label{}'.format(_lang)] = service_title
-        d['ows_hoursofservice{}'.format(_lang)] = \
+        service_title = f'{c["identification"]["title"][lang]} {__version__}'
+        d[f'ows_title{_lang}'] = service_title
+        d[f'wcs_label{_lang}'] = service_title
+        d[f'ows_hoursofservice{_lang}'] = \
             c['provider']['contact']['hours'][lang]
-        d['ows_stateorprovince{}'.format(_lang)] = \
+        d[f'ows_stateorprovince{_lang}'] = \
             c['provider']['contact']['address']['stateorprovince'][lang]
-        d['ows_city{}'.format(_lang)] = \
+        d[f'ows_city{_lang}'] = \
             c['provider']['contact']['address']['city'][lang]
-        d['ows_country{}'.format(_lang)] = \
+        d[f'ows_country{_lang}'] = \
             c['provider']['contact']['address']['country'][lang]
-        d['wms_attribution_title{}'.format(_lang)] = \
+        d[f'wms_attribution_title{_lang}'] = \
             c['attribution']['title'][lang]
-        d['wms_attribution_onlineresource{}'.format(_lang)] = \
+        d[f'wms_attribution_onlineresource{_lang}'] = \
             c['attribution']['url'][lang]
-        d['wcs_description{}'.format(_lang)] = \
+        d[f'wcs_description{_lang}'] = \
             c['identification']['abstract'][lang]
-        d['ows_keywordlist{}'.format(_lang)] = \
+        d[f'ows_keywordlist{_lang}'] = \
             ','.join(c['identification']['keywords'][lang])
 
     return d
@@ -198,192 +208,194 @@ def gen_layer(layer_name, layer_info):
 
     LOGGER.debug('Setting up layer configuration')
 
-    layer_tileindex = {
-        '__type__': 'layer',
-        'name': f'{layer_name}_idx'
-    }
+    layer = {}
 
-    layer = {
-        '__type__': 'layer',
-        'tolerance': 15,
-        'template': 'ttt.html'
-    }
+    # get layer time information
+    time_dict = layer_time_config(layer_name)
 
-#    # build tileindex LAYER object (only for raster, uv and wind layers)
-#    if layer_info['type'] == 'raster' or ('conntype' in layer_info and
-#                                          layer_info['conntype'].lower() in ['uvraster', 'contour']):
-#        layer_tileindex['type'] = 'POLYGON'
-#        layer_tileindex['status'] = 'OFF'
-#        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
-#
-#        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
-#        layer_tileindex['metadata'] = {
-#            '__type__': 'metadata',
-#            'ows_enable_request': '!*',
-#        }
-#        layer_tileindex['filter'] = ''
-#
-#        layers.append(layer_tileindex)
+    if time_dict:
 
-    # build LAYER object
-    layer['name'] = layer_name
-    layer['debug'] = 5
-    layer['data'] = ['']
-    layer['type'] = 'RASTER'
-    layer['template'] = "ttt.html"
-    layer['tolerance'] = 15
+        # layer_tileindex = {
+        #     '__type__': 'layer',
+        #     'name': f'{layer_name}_idx'
+        # }
 
-    layer['metadata'] = {
-        '__type__': 'metadata',
-        'gml_include_items': 'all',
-        'ows_include_items': 'all'
-    }
+        layer['__type__'] = 'layer'
+        layer['tolerance'] = 15
+        layer['template']: 'ttt.html'
 
-#    # add reference to tileindex if tileindex is being used
-#    if layer_tileindex in layers:
-#        layer['tileindex'] = layer_tileindex['name']
-#        layer['tileitem'] = 'properties.filepath'
+    #    # build tileindex LAYER object (only for raster, uv and wind layers)
+    #    if layer_info['type'] == 'raster' or ('conntype' in layer_info and
+    #                                          layer_info['conntype'].lower() in ['uvraster', 'contour']):
+    #        layer_tileindex['type'] = 'POLYGON'
+    #        layer_tileindex['status'] = 'OFF'
+    #        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
+    #
+    #        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
+    #        layer_tileindex['metadata'] = {
+    #            '__type__': 'metadata',
+    #            'ows_enable_request': '!*',
+    #        }
+    #        layer_tileindex['filter'] = ''
+    #
+    #        layers.append(layer_tileindex)
 
-    # set layer projection
-    with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
-        lines = [line.replace("\n", "").replace('"', "") for line in f.readlines()]
-        layer['projection'] = lines
+        # build LAYER object
+        layer['name'] = layer_name
+        layer['debug'] = 5
+        layer['data'] = ['']
+        layer['type'] = 'RASTER'
+        layer['template'] = "ttt.html"
+        layer['tolerance'] = 15
 
-    # set layer processing directives
-    layer['processing'] = []
-    if 'processing' in layer_info:
-        for item in layer_info['processing']:
-            layer['processing'].append(item)
-    if 'processing' in layer_info['forecast_model']:
-        for item in layer_info['forecast_model']['processing']:
-            layer['processing'].append(item)
+        layer['metadata'] = {
+            '__type__': 'metadata',
+            'gml_include_items': 'all',
+            'ows_include_items': 'all'
+        }
 
-    # set type
-    if 'type' in layer_info:
-        layer['type'] = layer_info['type']
+    #    # add reference to tileindex if tileindex is being used
+    #    if layer_tileindex in layers:
+    #        layer['tileindex'] = layer_tileindex['name']
+    #        layer['tileitem'] = 'properties.filepath'
 
-    # set connectiontype
-    if 'conntype' in layer_info:
-        layer['CONNECTIONTYPE'] = layer_info['conntype']
-        # if uvraster also set the layer extent
-        if layer_info['conntype'] == 'uvraster' and 'extent' in layer_info['forecast_model']:
-            layer['extent'] = layer_info['forecast_model']['extent']
+        # set layer projection
+        with open(os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])) as f:
+            lines = [line.replace("\n", "").replace('"', "") for line in f.readlines()]
+            layer['projection'] = lines
 
-    # set additional layer params
-    if 'layer_params' in layer_info:
-        for params in layer_info['layer_params']:
-            param, value = params.split()
-            layer[param] = value
+        # set layer processing directives
+        layer['processing'] = []
+        if 'processing' in layer_info:
+            for item in layer_info['processing']:
+                layer['processing'].append(item)
+        if 'processing' in layer_info['forecast_model']:
+            for item in layer_info['forecast_model']['processing']:
+                layer['processing'].append(item)
 
-    # set layer classes
-    layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".inc")
-    layer['include'] = [os.path.join(DATADIR, style) for style in layer_info['styles']]
+        # set type
+        if 'type' in layer_info:
+            layer['type'] = layer_info['type']
 
-    # set layer metadata
-    layer['metadata'] = {}
+        # set connectiontype
+        if 'conntype' in layer_info:
+            layer['CONNECTIONTYPE'] = layer_info['conntype']
+            # if uvraster also set the layer extent
+            if layer_info['conntype'] == 'uvraster' and 'extent' in layer_info['forecast_model']:
+                layer['extent'] = layer_info['forecast_model']['extent']
 
-    # source = yaml config
-    layer['metadata']['ows_extent'] = layer_info['forecast_model']['extent']
-    layer['metadata']['ows_title'] = layer_info['label_en']
-    layer['metadata']['ows_title_fr'] = layer_info['label_fr']
-    layer['metadata']['wms_layer_group'] = f'/{layer_info["forecast_model"]["label_en"]}'
-    layer['metadata']['wms_layer_group_fr'] = f'/{layer_info["forecast_model"]["label_fr"]}'
-    layer['metadata']['wcs_label'] = layer_info['label_en']
-    layer['metadata']['wcs_label_fr'] = layer_info['label_fr']
+        # set additional layer params
+        if 'layer_params' in layer_info:
+            for params in layer_info['layer_params']:
+                param, value = params.split()
+                layer[param] = value
 
-    if 'metadata' in layer_info:
-        for md in layer_info['metadata']:
-            md_key, md_value = md.split('=')
-            layer['metadata'][md_key] = md_value
+        # set layer classes
+        layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".inc")
+        layer['include'] = [os.path.join(DATADIR, style) for style in layer_info['styles']]
 
-    if 'metadata' in layer_info['forecast_model']:
-        for md in layer_info['forecast_model']['metadata']:
-            md_key, md_value = md.split('=')
-            layer['metadata'][md_key] = md_value
+        # set layer metadata
+        layer['metadata'] = {}
 
-    if 'dimensions' in layer_info["forecast_model"]:
-        layer['metadata']['ows_size'] = f'{layer_info["forecast_model"]["dimensions"][0]} ' \
-            f'{layer_info["forecast_model"]["dimensions"][1]}'
+        # source = yaml config
+        layer['metadata']['ows_extent'] = layer_info['forecast_model']['extent']
+        layer['metadata']['ows_title'] = layer_info['label_en']
+        layer['metadata']['ows_title_fr'] = layer_info['label_fr']
+        layer['metadata']['wms_layer_group'] = f'/{layer_info["forecast_model"]["label_en"]}'
+        layer['metadata']['wms_layer_group_fr'] = f'/{layer_info["forecast_model"]["label_fr"]}'
+        layer['metadata']['wcs_label'] = layer_info['label_en']
+        layer['metadata']['wcs_label_fr'] = layer_info['label_fr']
 
-    if layer_info['time_enabled'] in ['yes', 'future']:
-        
-        time_dict = layer_time_config(layer_name)
-        
-        layer['metadata']['wms_dimensionlist'] = 'reference_time'
-        layer['metadata']['wms_reference_time_item'] = 'properties.reference_datetime'
-        layer['metadata']['wms_reference_time_units'] = 'ISO8601'
-        layer['metadata']['wms_timeextent'] = time_dict['time_extent']
-        layer['metadata']['wms_timedefault'] = time_dict['default_time']
-        layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']
-        layer['metadata']['wms_reference_time_default'] = time_dict['default_model_run']
+        if 'metadata' in layer_info:
+            for md in layer_info['metadata']:
+                md_key, md_value = md.split('=')
+                layer['metadata'][md_key] = md_value
 
-    if 'forecast_hour_interval' in layer_info['forecast_model']:
-        seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60
-        layer['metadata']['geomet_ows_http_max_age'] = f'{seconds}'
-    elif 'observations_interval_min' in layer_info['forecast_model']:
-        seconds = layer_info['forecast_model']['observations_interval_min'] * 60
-        layer['metadata']['geomet_ows_http_max_age'] = f'{seconds}'
-    else:
-        layer['metadata']['geomet_ows_http_max_age'] = ''
+        if 'metadata' in layer_info['forecast_model']:
+            for md in layer_info['forecast_model']['metadata']:
+                md_key, md_value = md.split('=')
+                layer['metadata'][md_key] = md_value
 
-    # source = mcf
-    # TODO: For Geomet3 we should get rid of all .mcf files and replace them with .yml files?
-    if layer_info['forecast_model']['mcf'].endswith('.mcf'):
-        mcf = ConfigParser()
-        with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
-            mcf.read_file(f)
-        layer['metadata']['ows_abstract'] = mcf.get('identification', 'abstract_en')
-        layer['metadata']['ows_abstract_fr'] = mcf.get('identification', 'abstract_fr')
-        layer['metadata']['ows_keywordlist'] = ', '.join([mcf.get('identification', 'keywords_en')])
-        layer['metadata']['ows_keywordlist_fr'] = ', '.join([mcf.get('identification', 'keywords_fr')])
-        if mcf.has_option('identification', 'keywords_gc_cst_en'):
-            layer['metadata']['ows_keywordlist'] += f', {", ".join([mcf.get("identification", "keywords_gc_cst_en")])}'  # noqa
-        if mcf.has_option('identification', 'keywords_gc_cst_fr'):
-            layer['metadata']['ows_keywordlist_fr'] += f', {", ".join([mcf.get("identification", "keywords_gc_cst_fr")])}'  # noqa
-        layer['metadata']['ows_identifier_value'] = mcf.get('metadata', 'dataseturi')
-        layer['metadata']['ows_metadataurl_href'] = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
-                                                     'service=CSW&'
-                                                     'version=2.0.2&'
-                                                     'request=GetRecordById&'
-                                                     'outputschema=csw:IsoRecord&'
-                                                     'elementsetname=full&'
-                                                     f'id={mcf.get("metadata", "identifier")}')
+        if 'dimensions' in layer_info["forecast_model"]:
+            layer['metadata']['ows_size'] = f'{layer_info["forecast_model"]["dimensions"][0]} ' \
+                f'{layer_info["forecast_model"]["dimensions"][1]}'
 
-    elif layer_info['forecast_model']['mcf'].endswith('.yml'):
-        with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
-            mcf = load(f, Loader=CLoader)
-            layer['metadata']['ows_abstract'] = mcf['identification']['abstract_en']
-            layer['metadata']['ows_abstract_fr'] = mcf['identification']['abstract_fr']
-            layer['metadata']['ows_keywordlist'] = ', '.join(mcf['identification']
-                                                             ['keywords']['default']['keywords_en'])
-            layer['metadata']['ows_keywordlist_fr'] = ', '.join(mcf['identification']
-                                                                ['keywords']['default']['keywords_fr'])
-            if 'gc_cst' in mcf['identification']['keywords'].keys():
-                layer['metadata']['ows_keywordlist'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_en"])}'   # noqa
-                layer['metadata']['ows_keywordlist_fr'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_fr"])}'   # noqa
-            layer['metadata']['ows_identifier_value'] = mcf['metadata']['dataseturi']
+        if time_dict:
+            layer['metadata']['wms_dimensionlist'] = 'reference_time'
+            layer['metadata']['wms_reference_time_item'] = 'properties.reference_datetime'
+            layer['metadata']['wms_reference_time_units'] = 'ISO8601'
+            layer['metadata']['wms_timeextent'] = time_dict['time_extent']
+            layer['metadata']['wms_timedefault'] = time_dict['default_time']
+            layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']
+            layer['metadata']['wms_reference_time_default'] = time_dict['default_model_run']
+
+        if 'forecast_hour_interval' in layer_info['forecast_model']:
+            seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60
+            layer['metadata']['geomet_ows_http_max_age'] = f'{seconds}'
+        elif 'observations_interval_min' in layer_info['forecast_model']:
+            seconds = layer_info['forecast_model']['observations_interval_min'] * 60
+            layer['metadata']['geomet_ows_http_max_age'] = f'{seconds}'
+        else:
+            layer['metadata']['geomet_ows_http_max_age'] = ''
+
+        # source = mcf
+        # TODO: For Geomet3 we should get rid of all .mcf files and replace them with .yml files?
+        if layer_info['forecast_model']['mcf'].endswith('.mcf'):
+            mcf = ConfigParser()
+            with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
+                mcf.read_file(f)
+            layer['metadata']['ows_abstract'] = mcf.get('identification', 'abstract_en')
+            layer['metadata']['ows_abstract_fr'] = mcf.get('identification', 'abstract_fr')
+            layer['metadata']['ows_keywordlist'] = ', '.join([mcf.get('identification', 'keywords_en')])
+            layer['metadata']['ows_keywordlist_fr'] = ', '.join([mcf.get('identification', 'keywords_fr')])
+            if mcf.has_option('identification', 'keywords_gc_cst_en'):
+                layer['metadata']['ows_keywordlist'] += f', {", ".join([mcf.get("identification", "keywords_gc_cst_en")])}'  # noqa
+            if mcf.has_option('identification', 'keywords_gc_cst_fr'):
+                layer['metadata']['ows_keywordlist_fr'] += f', {", ".join([mcf.get("identification", "keywords_gc_cst_fr")])}'  # noqa
+            layer['metadata']['ows_identifier_value'] = mcf.get('metadata', 'dataseturi')
             layer['metadata']['ows_metadataurl_href'] = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
                                                          'service=CSW&'
                                                          'version=2.0.2&'
                                                          'request=GetRecordById&'
                                                          'outputschema=csw:IsoRecord&'
                                                          'elementsetname=full&'
-                                                         f'id={mcf["metadata"]["identifier"]}')
-    # generic metadata
-    layer['metadata']['gml_include_items'] = 'all'
-    layer['metadata']['ows_authorityurl_name'] = 'msc'
-    layer['metadata']['ows_authorityurl_href'] = 'https://dd.weather.gc.ca'
-    layer['metadata']['ows_identifier_authority'] = 'msc'
-    layer['metadata']['ows_include_items'] = 'all'
-    layer['metadata']['ows_keywordlist_vocabulary'] = 'http://purl.org/dc/terms/'
-    layer['metadata']['ows_geomtype'] = 'Geometry'
-    layer['metadata']['ows_metadataurl_format'] = 'text/xml'
-    layer['metadata']['ows_metadataurl_type'] = 'TC211'
-    layer['metadata']['wcs_rangeset_name'] = 'Default Range'
-    layer['metadata']['wcs_rangeset_label'] = 'Default Range'
-    layer['metadata']['wfs_metadataurl_format'] = 'XML'
+                                                         f'id={mcf.get("metadata", "identifier")}')
 
-    layers.append(layer)
+        elif layer_info['forecast_model']['mcf'].endswith('.yml'):
+            with open(os.path.join(THISDIR, 'resources/mcf', layer_info['forecast_model']['mcf'])) as f:
+                mcf = load(f, Loader=CLoader)
+                layer['metadata']['ows_abstract'] = mcf['identification']['abstract_en']
+                layer['metadata']['ows_abstract_fr'] = mcf['identification']['abstract_fr']
+                layer['metadata']['ows_keywordlist'] = ', '.join(mcf['identification']
+                                                                 ['keywords']['default']['keywords_en'])
+                layer['metadata']['ows_keywordlist_fr'] = ', '.join(mcf['identification']
+                                                                    ['keywords']['default']['keywords_fr'])
+                if 'gc_cst' in mcf['identification']['keywords'].keys():
+                    layer['metadata']['ows_keywordlist'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_en"])}'   # noqa
+                    layer['metadata']['ows_keywordlist_fr'] += f', {", ".join(mcf["identification"]["keywords"]["gc_cst"]["keywords_fr"])}'   # noqa
+                layer['metadata']['ows_identifier_value'] = mcf['metadata']['dataseturi']
+                layer['metadata']['ows_metadataurl_href'] = ('https://csw.open.canada.ca/geonetwork/srv/csw?'
+                                                             'service=CSW&'
+                                                             'version=2.0.2&'
+                                                             'request=GetRecordById&'
+                                                             'outputschema=csw:IsoRecord&'
+                                                             'elementsetname=full&'
+                                                             f'id={mcf["metadata"]["identifier"]}')
+        # generic metadata
+        layer['metadata']['gml_include_items'] = 'all'
+        layer['metadata']['ows_authorityurl_name'] = 'msc'
+        layer['metadata']['ows_authorityurl_href'] = 'https://dd.weather.gc.ca'
+        layer['metadata']['ows_identifier_authority'] = 'msc'
+        layer['metadata']['ows_include_items'] = 'all'
+        layer['metadata']['ows_keywordlist_vocabulary'] = 'http://purl.org/dc/terms/'
+        layer['metadata']['ows_geomtype'] = 'Geometry'
+        layer['metadata']['ows_metadataurl_format'] = 'text/xml'
+        layer['metadata']['ows_metadataurl_type'] = 'TC211'
+        layer['metadata']['wcs_rangeset_name'] = 'Default Range'
+        layer['metadata']['wcs_rangeset_label'] = 'Default Range'
+        layer['metadata']['wfs_metadataurl_format'] = 'XML'
+
+        layers.append(layer)
 
     return layers
 
@@ -403,21 +415,10 @@ def mapfile():
 def generate(ctx, layer, map_, output):
     """generate mapfile"""
 
-    output_dir = '{}{}mapfile'.format(BASEDIR, os.sep)
+    output_dir = f'{BASEDIR}{os.sep}mapfile'
     
     all_layers = []
-    
-    NOW = datetime(2019, 8, 1, 1)
 
-    provider_def = {
-        'type': STORE_TYPE,
-        'url': STORE_URL,
-    }
-
-    st = load_plugin('store', provider_def)
-
-    time_extent_key = {}
-    
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -450,8 +451,8 @@ def generate(ctx, layer, map_, output):
             all_layers.append(lyr)
 
         if 'outputformats' in value['forecast_model']:
-            mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats'] if format_['name'] in
-                                             value['forecast_model']['outputformats']]
+            mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']
+                                             if format_['name'] in value['forecast_model']['outputformats']]
 
         if 'symbols' in value:
             mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
@@ -460,8 +461,8 @@ def generate(ctx, layer, map_, output):
         else:
             mapfile_copy['symbols'] = []
 
-        filename = 'geomet-weather-{}.map'.format(key) if map_ else 'geomet-weather-{}_layer.map'.format(key)
-        filepath = '{}{}{}'.format(output_dir, os.sep, filename)
+        filename = f'geomet-weather-{key}.map' if map_ else f'geomet-weather-{key}_layer.map'
+        filepath = f'{output_dir}{os.sep}{filename}'
 
         if output == 'mapfile':
             with open(filepath, 'w', encoding='utf-8') as fh:
@@ -482,16 +483,13 @@ def generate(ctx, layer, map_, output):
         mapfile['layers'] = all_layers
 
         if output == 'mapfile':
-
             filename = 'geomet-weather.map'
-            filepath = '{}{}{}'.format(output_dir, os.sep, filename)
+            filepath = f'{output_dir}{os.sep}{filename}'
 
             with open(filepath, 'w', encoding='utf-8') as fh:
                 mappyfile.dump(mapfile, fh)
 
         if output == 'store':
-
-            st = load_plugin('store', provider_def)
             st.set_key(f'geomet-weather_mapfile', mappyfile.dumps(mapfile))
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'EPSG')
