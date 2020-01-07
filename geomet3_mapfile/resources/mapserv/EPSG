@@ -62,3 +62,4 @@
 <102991> +proj=stere +lat_0=90 +lat_ts=60 +lon_0=249 +k=90 +x_0=0 +y_0=0 +a=6371229 +b=6371229 +units=m +no_defs <> 
 <102990> +proj=stere +lat_0=90 +lat_ts=60 +lon_0=250 +x_0=0 +y_0=0 +R=6371229 +units=m +no_defs <> # REPS
 <102989> +proj=stere +lat_0=90 +lat_ts=59.99993768695209 +lon_0=-100 +k=0.93301243 +x_0=4245000 +y_0=5295000 +a=6371229 +b=6371229 +units=m +no_defs <>
+<102988> +proj=longlat +R=6371229 +no_defs <> # GEPS

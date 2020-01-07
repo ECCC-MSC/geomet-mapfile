@@ -264,7 +264,7 @@ forecast_models:
     cgsl_atmosphere_ocean: &id_cgsl_atmosphere_ocean
         mcf: nwp-models/msc_nwp_rdps.yml
         projection: mapserv/proj/cgsl.inc
-        extent: -72.985 45.490 -57.985 51.990
+        extent: -71.015 45.490 -56.015 51.990
         label_en: Coupled Gulf of Saint Lawrence (CGSL)
         label_fr: Golfe du Saint-Laurent Couplé (GSLC)
         dimensions: [500, 325]
@@ -273,9 +273,6 @@ forecast_models:
         processing: [SCALE_BUCKETS=1000]
         metadata:
             - 'wcs_enable_request=!*'
-    cgsl_atmosphere_ocean_arrow: &id_cgsl_atmosphere_ocean_arrow
-        <<: *id_cgsl_atmosphere_ocean
-        extent: 288.985 45.490 303.985 51.990
     hrdps_continental: &id_hrdps_continental
         mcf: nwp-models/msc_nwp_hrdps.yml
         projection: mapserv/proj/hrdps-continental.inc
@@ -359,6 +356,47 @@ forecast_models:
         label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 72 hours intervals
         label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 72 heures
         forecast_hour_interval: 72
+    geps_diag: &id_geps_diag_3h
+        mcf: nwp-models/msc_nwp_geps.yml
+        projection: mapserv/proj/geps.inc
+        extent: -180.25 -90.25 180.25 89.75
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 3 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 3 heures
+        dimensions: [721, 360]
+        forecast_hour_interval: 3
+        processing: [SCALE_BUCKETS=1000]
+        metadata:
+            - 'wcs_formats=GEOTIFF_16 AAIGRID'
+    geps_diag_12h: &id_geps_diag_12h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 12 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 12 heures
+        forecast_hour_interval: 12
+    geps_diag_24h: &id_geps_diag_24h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 24 hours intervals#
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 24 heures
+        forecast_hour_interval: 12
+    geps_diag_48h: &id_geps_diag_48h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 48 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 48 heures
+        forecast_hour_interval: 24
+    geps_diag_72h: &id_geps_diag_72h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 72 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 72 heures
+        forecast_hour_interval: 24
+    geps_diag_96h: &id_geps_diag_96h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 96 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 96 heures
+        forecast_hour_interval: 24
+    geps_diag_120h: &id_geps_diag_120h
+        <<: *id_geps_diag_3h
+        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 120 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 120 heures
+        forecast_hour_interval: 24
     rdwps: &id_rdwps
         mcf: nwp-models/msc_nwp_rdwps.yml
         projection: mapserv/proj/rdwps.inc
@@ -1283,6 +1321,246 @@ layer_templates:
         <<: *template_reps_erc
         forecast_model: *id_reps_diag_72h
         name: TPRATE-Accum-72h_SFC_0
+    GEPS: &template_geps
+        type: raster
+        time_enabled: future
+    GEPS.ERGE: &template_geps_erge
+        <<: *template_geps
+        styles:
+            - mapserv/class/REPS_PROB-LINEAR.inc
+            - mapserv/class/REPS_PROB.inc
+    GEPS.ERC: &template_geps_erc
+        <<: *template_geps
+        styles:
+            - mapserv/class/REPS_PRMM-LINEAR.inc
+            - mapserv/class/REPS_PRMM.inc
+    GEPS.3_HMXX.ERC: &template_3_geps_hmxx_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_3h
+        name: HEATX_TGL_2m
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.3_NT.ERC: &template_3_geps_nt_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_3h
+        name: TCDC_SFC_0
+        styles:
+            - mapserv/class/CLOUD.inc
+    GEPS.3_TT.ERC: &template_3_geps_tt_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_3h
+        name: TEMP_TGL_2
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.3_WCF.ERC: &template_3_geps_wcf_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_3h
+        name: WCF_TGL_2m
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.3_WSPD.ERC: &template_3_geps_wspd_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_3h
+        name: WIND_TGL_10m
+        styles:
+            - mapserv/class/WINDSPEEDKNOTS-LINEAR.inc
+            - mapserv/class/WINDSPEED.inc
+            - mapserv/class/WINDSPEED-LINEAR.inc
+            - mapserv/class/WINDSPEEDKNOTS.inc
+    GEPS.12_FRMM.ERGE: &template_12_geps_frmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: FPRATE-Accum-12h_SFC_0
+    GEPS.12_FRMM.ERC: &template_12_geps_frmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_12h
+        name: FPRATE-Accum-12h_SFC_0
+    GEPS.12_PEMM.ERGE: &template_12_geps_pemm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: IPRATE-Accum-12h_SFC_0
+    GEPS.12_PEMM.ERC: &template_12_geps_pemm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_12h
+        name: IPRATE-Accum-12h_SFC_0
+    GEPS.12_RNMM.ERGE: &template_12_geps_rnmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: RPRATE-Accum-12h_SFC_0
+    GEPS.12_RNMM.ERC: &template_12_geps_rnmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_12h
+        name: RPRATE-Accum-12h_SFC_0
+    GEPS.12_SNMM.ERGE: &template_12_geps_snmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: SPRATE-Accum-12h_SFC_0
+    GEPS.12_SNMM.ERC: &template_12_geps_snmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_12h
+        name: SPRATE-Accum-12h_SFC_0
+    GEPS.12_PRMM.ERGE: &template_12_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: TPRATE-Accum-12h_SFC_0
+    GEPS.12_PRMM.ERC: &template_12_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_12h
+        name: TPRATE-Accum-12h_SFC_0
+    GEPS.12_UVMX.ERGE: &template_12_geps_uvmx_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: WIND-Max-12h_TGL_10m
+    GEPS.12_UVMX.ERC: &template_12_geps_uvmx_erc
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_12h
+        name: WIND-Max-12h_TGL_10m
+        styles:
+            - mapserv/class/REPS_WS-LINEAR.inc
+            - mapserv/class/REPS_WS.inc
+    GEPS.12_GZ.ERC: &template_12_geps_gz_erc
+        <<: *template_geps
+        forecast_model: *id_geps_diag_12h
+        name: HGT_ISBL_0500
+        styles:
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb-LINEAR.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb.inc
+    GEPS.12_PN-SLP.ERC: &template_12_geps_pn-slp
+        <<: *template_geps
+        forecast_model: *id_geps_diag_12h
+        name: PRMSL_MSL_0
+        styles:
+            - mapserv/class/PRESSURE4-LINEAR.inc
+            - mapserv/class/PRESSURE4.inc
+            - mapserv/class/PRESSURESEAHIGH.inc
+            - mapserv/class/PRESSURESEALOW.inc
+    GEPS.12_PN.ERC: &template_12_geps_pn
+        <<: *template_geps
+        forecast_model: *id_geps_diag_12h
+        type: line
+        conntype: CONTOUR
+        time_enabled: 'yes'
+        metadata:
+            - 'wfs_enable_request=!*'
+        name: PRMSL_MSL_0
+        styles:
+            - mapserv/class/PRESSURE4_LINE.inc
+    GEPS.24_FRMM.ERGE: &template_24_geps_frmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: FPRATE-Accum-24h_SFC_0
+    GEPS.24_FRMM.ERC: &template_24_geps_frmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: FPRATE-Accum-24h_SFC_0
+    GEPS.24_PEMM.ERGE: &template_24_geps_pemm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: IPRATE-Accum-24h_SFC_0
+    GEPS.24_PEMM.ERC: &template_24_geps_pemm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: IPRATE-Accum-24h_SFC_0
+    GEPS.24_RNMM.ERGE: &template_24_geps_rnmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: RPRATE-Accum-24h_SFC_0
+    GEPS.24_RNMM.ERC: &template_24_geps_rnmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: RPRATE-Accum-24h_SFC_0
+    GEPS.24_SNMM.ERGE: &template_24_geps_snmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: SPRATE-Accum-24h_SFC_0
+    GEPS.24_SNMM.ERC: &template_24_geps_snmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: SPRATE-Accum-24h_SFC_0
+    GEPS.24_PRMM.ERGE: &template_24_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: TPRATE-Accum-24h_SFC_0
+    GEPS.24_PRMM.ERC: &template_24_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: TPRATE-Accum-24h_SFC_0
+    GEPS.24_HMXX.ERGE: &template_24_geps_hmxx_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: HEATX-Max-24h_TGL_2m
+    GEPS.24_HMXX.ERC: &template_24_geps_hmxx_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: HEATX-Max-24h_TGL_2m
+    GEPS.24_T8.ERGE: &template_24_geps_t8_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: TEMP-Max-24h_TGL_2m
+    GEPS.24_T8.ERC: &template_24_geps_t8_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: TEMP-Max-24h_TGL_2m
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.24_T7.ERGE: &template_24_geps_t7_erle
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: TEMP-Min-24h_TGL_2m
+    GEPS.24_T7.ERC: &template_24_geps_t7_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: TEMP-Min-24h_TGL_2m
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.24_WCF.ERGE: &template_24_geps_wcf_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_24h
+        name: WCF-Min-24h_TGL_2m
+    GEPS.24_WCF.ERC: &template_24_geps_wcf_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_24h
+        name: WCF-Min-24h_TGL_2m
+        styles:
+            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.inc
+    GEPS.48_PRMM.ERGE: &template_48_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_48h
+        name: TPRATE-Accum-48h_SFC_0
+    GEPS.48_PRMM.ERC: &template_48_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_48h
+        name: TPRATE-Accum-48h_SFC_0
+    GEPS.72_PRMM.ERGE: &template_72_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_72h
+        name: TPRATE-Accum-72h_SFC_0
+    GEPS.72_PRMM.ERC: &template_72_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_72h
+        name: TPRATE-Accum-72h_SFC_0
+    GEPS.96_PRMM.ERGE: &template_96_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_96h
+        name: TPRATE-Accum-96h_SFC_0
+    GEPS.96_PRMM.ERC: &template_96_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_96h
+        name: TPRATE-Accum-96h_SFC_0
+    GEPS.120_PRMM.ERGE: &template_120_geps_prmm_erge
+        <<: *template_geps_erge
+        forecast_model: *id_geps_diag_120h
+        name: TPRATE-Accum-120h_SFC_0
+    GEPS.120_PRMM.ERC: &template_120_geps_prmm_erc
+        <<: *template_geps_erc
+        forecast_model: *id_geps_diag_120h
+        name: TPRATE-Accum-120h_SFC_0
     CANSIPS.ETA: &template_cansips
         type: raster
         time_enabled: 'yes'
@@ -10792,134 +11070,134 @@ layers:
 #        label_en: RDPS.CONV - Dew point temperature of the most unstable parcel [°C]
 #        label_fr: RDPS.CONV - Température du point de rosée de la parcelle la plus instable [°C]
 #        name: MU-PRC-DPT_SFC_0
-#    CGSL.ETA_UGRD:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UU - Wind at surface level [m/s]
-#        label_fr: CGSL.ETA.UU - Vent à la surface [m/s]
-#        names:
-#            - atmosphere
-#            - atmosphere
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 1,2
-#        styles:
-#            - mapserv/class/WINDARROWKNOTS.inc
-#            - mapserv/class/WINDARROW.inc
-#        symbols:
-#            - circle_wind
-#            - arrow_wind
-#    CGSL.ETA_ICEC:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICEC - Ice cover fraction
-#        label_fr: CGSL.ETA.ICEC - Fraction de glace
-#        name: ocean
-#        processing:
-#            - BANDS=1
-#        styles:
-#            - mapserv/class/SEA_ICECONC-LINEAR.inc
-#            - mapserv/class/SEA_ICECONC.inc
-#    CGSL.ETA_ICETK:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICETK - Ice thickness [m]
-#        label_fr: CGSL.ETA.ICETK - Épaisseur de la glace [m]
-#        name: ocean
-#        processing:
-#            - BANDS=2
-#        styles:
-#            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-#            - mapserv/class/SEA_ICETHICK.inc
-#            - mapserv/class/SEA_ICETHICK-CIS.inc
-#    CGSL.ETA_UICE:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UICE - Ice speed vector [m/s]
-#        label_fr: CGSL.ETA.UICE - Vecteur vitesse de glace [m/s]
-#        names:
-#            - ocean
-#            - ocean
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 3,4
-#        styles:
-#            - mapserv/class/SEA_CURARROW.inc
-#        symbols:
-#            - arrow_wind
-#    CGSL.ETA_UOGRD:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UOGRD - Surface ocean current [m/s]
-#        label_fr: CGSL.ETA.UOGRD - Courant océanique de surface [m/s]
-#        names:
-#            - ocean
-#            - ocean
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 5,6
-#        styles:
-#            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
-#            - mapserv/class/SEA_CURARROW.inc
-#        symbols:
-#            - arrow_wind
-#    CGSL.ETA_WTMP:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.WTMP - Water temperature [K]
-#        label_fr: CGSL.ETA.WTMP - Température de l'eau [K]
-#        name: ocean
-#        processing:
-#            - BANDS=7
-#        styles:
-#            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-#            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-#            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-#            - mapserv/class/SEA_TEMPSURF-COLD.inc
-#            - mapserv/class/SEA_TEMPSURF-MID.inc
-#            - mapserv/class/SEA_TEMPSURF-WARM.inc
-#    CGSL.ETA_ICET:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICET - Ice surface temperature [K]
-#        label_fr: CGSL.ETA.ICET - Température de surface de glace [K]
-#        name: ocean
-#        processing:
-#            - BANDS=8
-#        styles:
-#            - mapserv/class/SEA_ICETEMP-LINEAR.inc
-#            - mapserv/class/SEA_ICETEMP.inc
-#            - mapserv/class/SEA_ICETEMP-CIS.inc
-#    CGSL.ETA_ICEPRS:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICEPRS - Vertically integrated ice internal pressure (or stress) [N/m]
-#        label_fr: CGSL.ETA.ICEPRS - Intégrale verticale de la pression interne [N/m]
-#        name: ocean
-#        processing:
-#            - BANDS=9
-#        styles:
-#            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-#            - mapserv/class/SEA_ICEPRESS.inc
-#            - mapserv/class/SEA_ICEPRESS-CIS.inc
-#    CGSL.ETA_ICESTG:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICESTG - Vertically integrated compressive ice strength [N/m]
-#        label_fr: CGSL.ETA.ICESTG - Intégrale verticale de la force de pression de glace [N/m]
-#        name: ocean
-#        processing:
-#            - BANDS=10
-#        styles:
-#            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-#            - mapserv/class/SEA_ICESTRENGTH.inc
-#            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+    CGSL.ETA_UGRD:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UU - Wind at surface level [m/s]
+        label_fr: CGSL.ETA.UU - Vent à la surface [m/s]
+        names:
+            - atmosphere
+            - atmosphere
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 1,2
+        styles:
+            - mapserv/class/WINDARROWKNOTS.inc
+            - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
+    CGSL.ETA_ICEC:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICEC - Ice cover fraction
+        label_fr: CGSL.ETA.ICEC - Fraction de glace
+        name: ocean
+        processing:
+            - BANDS=1
+        styles:
+            - mapserv/class/SEA_ICECONC-LINEAR.inc
+            - mapserv/class/SEA_ICECONC.inc
+    CGSL.ETA_ICETK:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICETK - Ice thickness [m]
+        label_fr: CGSL.ETA.ICETK - Épaisseur de la glace [m]
+        name: ocean
+        processing:
+            - BANDS=2
+        styles:
+            - mapserv/class/SEA_ICETHICK-LINEAR.inc
+            - mapserv/class/SEA_ICETHICK.inc
+            - mapserv/class/SEA_ICETHICK-CIS.inc
+    CGSL.ETA_UICE:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UICE - Ice speed vector [m/s]
+        label_fr: CGSL.ETA.UICE - Vecteur vitesse de glace [m/s]
+        names:
+            - ocean
+            - ocean
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 3,4
+        styles:
+            - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
+    CGSL.ETA_UOGRD:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UOGRD - Surface ocean current [m/s]
+        label_fr: CGSL.ETA.UOGRD - Courant océanique de surface [m/s]
+        names:
+            - ocean
+            - ocean
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 5,6
+        styles:
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
+    CGSL.ETA_WTMP:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.WTMP - Water temperature [K]
+        label_fr: CGSL.ETA.WTMP - Température de l'eau [K]
+        name: ocean
+        processing:
+            - BANDS=7
+        styles:
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
+            - mapserv/class/SEA_TEMPSURF-MIZ.inc
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
+            - mapserv/class/SEA_TEMPSURF-COLD.inc
+            - mapserv/class/SEA_TEMPSURF-MID.inc
+            - mapserv/class/SEA_TEMPSURF-WARM.inc
+    CGSL.ETA_ICET:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICET - Ice surface temperature [K]
+        label_fr: CGSL.ETA.ICET - Température de surface de glace [K]
+        name: ocean
+        processing:
+            - BANDS=8
+        styles:
+            - mapserv/class/SEA_ICETEMP-LINEAR.inc
+            - mapserv/class/SEA_ICETEMP.inc
+            - mapserv/class/SEA_ICETEMP-CIS.inc
+    CGSL.ETA_ICEPRS:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICEPRS - Vertically integrated ice internal pressure (or stress) [N/m]
+        label_fr: CGSL.ETA.ICEPRS - Intégrale verticale de la pression interne [N/m]
+        name: ocean
+        processing:
+            - BANDS=9
+        styles:
+            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
+            - mapserv/class/SEA_ICEPRESS.inc
+            - mapserv/class/SEA_ICEPRESS-CIS.inc
+    CGSL.ETA_ICESTG:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICESTG - Vertically integrated compressive ice strength [N/m]
+        label_fr: CGSL.ETA.ICESTG - Intégrale verticale de la force de pression de glace [N/m]
+        name: ocean
+        processing:
+            - BANDS=10
+        styles:
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
+            - mapserv/class/SEA_ICESTRENGTH.inc
+            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
     REPS.MEM.ETA_PN.01:
         <<: *template_pn
         forecast_model: *id_reps_members
@@ -20377,6 +20655,2744 @@ layers:
         <<: *template_72_reps_prmm_erc
         label_en: REPS.DIAG.72_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
         label_fr: REPS.DIAG.72_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.3_HMX.ERC0:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC0 - Humidex at 2 m above ground (0th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC0 - Humidex à 2 m au-dessus du sol (0e centile)
+        processing:
+            - BANDS=8
+    GEPS.DIAG.3_HMX.ERC10:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC10 - Humidex at 2 m above ground (10th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC10 - Humidex à 2 m au-dessus du sol (10e centile)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.3_HMX.ERC25:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC25 - Humidex at 2 m above ground (25th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC25 - Humidex à 2 m au-dessus du sol (25e centile)
+        processing:
+            - BANDS=2
+    GEPS.DIAG.3_HMX.ERC50:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC50 - Humidex at 2 m above ground (50th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC50 - Humidex à 2 m au-dessus du sol (50e centile)
+        processing:
+            - BANDS=3
+    GEPS.DIAG.3_HMX.ERC75:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC75 - Humidex at 2 m above ground (75th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC75 - Humidex à 2 m au-dessus du sol (75e centile)
+        processing:
+            - BANDS=4
+    GEPS.DIAG.3_HMX.ERC90:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC90 - Humidex at 2 m above ground (90th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC90 - Humidex à 2 m au-dessus du sol (90e centile)
+        processing:
+            - BANDS=5
+    GEPS.DIAG.3_HMX.ERC100:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERC100 - Humidex at 2 m above ground (100th percentile)
+        label_fr: GEPS.DIAG.3_HMX.ERC100 - Humidex à 2 m au-dessus du sol (100e centile)
+        processing:
+            - BANDS=9
+    GEPS.DIAG.3_HMX.ERSSTD:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERSSTD - Humidex at 2 m above ground (standard deviation)
+        label_fr: GEPS.DIAG.3_HMX.ERSSTD - Humidex à 2 m au-dessus du sol (écart-type)
+        processing:
+            - BANDS=6
+        styles:
+            - mapserv/class/TEMPERATURE_STD.inc
+    GEPS.DIAG.3_HMX.ERMEAN:
+        <<: *template_3_geps_hmxx_erc
+        label_en: GEPS.DIAG.3_HMX.ERMEAN - Humidex at 2 m above ground (mean)
+        label_fr: GEPS.DIAG.3_HMX.ERMEAN - Humidex à 2 m au-dessus du sol (moyenne)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.3_NT.ERC0:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC0 - Total cloud cover [%] (0th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC0 - Couverture nuageuse totale [%] (0e percentile)
+        processing:
+            - BANDS=6
+    GEPS.DIAG.3_NT.ERC10:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC10 - Total cloud cover [%] (10th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC10 - Couverture nuageuse totale [%] (10e percentile)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.3_NT.ERC25:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC25 - Total cloud cover [%] (25th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC25 - Couverture nuageuse totale [%] (25e percentile)
+        processing:
+            - BANDS=2
+    GEPS.DIAG.3_NT.ERC50:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC50 - Total cloud cover [%] (50th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC50 - Couverture nuageuse totale [%] (50e percentile)
+        processing:
+            - BANDS=3
+    GEPS.DIAG.3_NT.ERC75:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC75 - Total cloud cover [%] (75th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC75 - Couverture nuageuse totale [%] (75e percentile)
+        processing:
+            - BANDS=4
+    GEPS.DIAG.3_NT.ERC90:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC90 - Total cloud cover [%] (90th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC90 - Couverture nuageuse totale [%] (90e percentile)
+        processing:
+            - BANDS=5
+    GEPS.DIAG.3_NT.ERC100:
+        <<: *template_3_geps_nt_erc
+        label_en: GEPS.DIAG.3_NT.ERC100 - Total cloud cover [%] (100th percentile)
+        label_fr: GEPS.DIAG.3_NT.ERC100 - Couverture nuageuse totale [%] (100e percentile)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.3_TT.ERC0:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC0 - Air temperature at 2 m above ground [°C] (0th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC0 - Température de l'air à 2 m au-dessus du sol [°C] (0e percentile)
+        processing:
+            - BANDS=8
+    GEPS.DIAG.3_TT.ERC10:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC10 - Air temperature at 2 m above ground [°C] (10th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC10 - Température de l'air à 2 m au-dessus du sol [°C] (10e percentile)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.3_TT.ERC25:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC25 - Air temperature at 2 m above ground [°C] (25th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC25 - Température de l'air à 2 m au-dessus du sol [°C] (25e percentile)
+        processing:
+            - BANDS=2
+    GEPS.DIAG.3_TT.ERC50:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC50 - Air temperature at 2 m above ground [°C] (50th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC50 - Température de l'air à 2 m au-dessus du sol [°C] (50e percentile)
+        processing:
+            - BANDS=3
+    GEPS.DIAG.3_TT.ERC75:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC75 - Air temperature at 2 m above ground [°C] (75th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC75 - Température de l'air à 2 m au-dessus du sol [°C] (75e percentile)
+        processing:
+            - BANDS=4
+    GEPS.DIAG.3_TT.ERC90:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC90 - Air temperature at 2 m above ground [°C] (90th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC90 - Température de l'air à 2 m au-dessus du sol [°C] (90e percentile)
+        processing:
+            - BANDS=5
+    GEPS.DIAG.3_TT.ERC100:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERC100 - Air temperature at 2 m above ground [°C] (100th percentile)
+        label_fr: GEPS.DIAG.3_TT.ERC100 - Température de l'air à 2 m au-dessus du sol [°C] (100e percentile)
+        processing:
+            - BANDS=9
+    GEPS.DIAG.3_TT.ERSSTD:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERSSTD - Air temperature at 2 m above ground [°C] (standard deviation)
+        label_fr: GEPS.DIAG.3_TT.ERSSTD - Température de l'air à 2 m au-dessus du sol [°C] (écart-type)
+        processing:
+            - BANDS=6
+    GEPS.DIAG.3_TT.ERMEAN:
+        <<: *template_3_geps_tt_erc
+        label_en: GEPS.DIAG.3_TT.ERMEAN - Air temperature at 2 m above ground [°C] (mean)
+        label_fr: GEPS.DIAG.3_TT.ERMEAN - Température de l'air à 2 m au-dessus du sol [°C] (moyenne)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.3_WCF.ERC0:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC0 - Wind chill factor at 2 m above ground [°C] (0th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC0 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (0e percentile)
+        processing:
+            - BANDS=8
+    GEPS.DIAG.3_WCF.ERC10:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC10 - Wind chill factor at 2 m above ground [°C] (10th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC10 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (10e percentile)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.3_WCF.ERC25:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC25 - Wind chill factor at 2 m above ground [°C] (25th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC25 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (25e percentile)
+        processing:
+            - BANDS=2
+    GEPS.DIAG.3_WCF.ERC50:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC50 - Wind chill factor at 2 m above ground [°C] (50th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC50 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (50e percentile)
+        processing:
+            - BANDS=3
+    GEPS.DIAG.3_WCF.ERC75:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC75 - Wind chill factor at 2 m above ground [°C] (75th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC75 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (75e percentile)
+        processing:
+            - BANDS=4
+    GEPS.DIAG.3_WCF.ERC90:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC90 - Wind chill factor at 2 m above ground [°C] (90th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC90 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (90e percentile)
+        processing:
+            - BANDS=5
+    GEPS.DIAG.3_WCF.ERC100:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERC100 - Wind chill factor at 2 m above ground [°C] (100th percentile)
+        label_fr: GEPS.DIAG.3_WCF.ERC100 - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (100e percentile)
+        processing:
+            - BANDS=9
+    GEPS.DIAG.3_WCF.ERSSTD:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERSSTD - Wind chill factor at 2 m above ground [°C] (standard deviation)
+        label_fr: GEPS.DIAG.3_WCF.ERSSTD - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (écart-type)
+        processing:
+            - BANDS=6
+        styles:
+            - mapserv/class/WIND_STD.inc
+    GEPS.DIAG.3_WCF.ERMEAN:
+        <<: *template_3_geps_wcf_erc
+        label_en: GEPS.DIAG.3_WCF.ERMEAN - Wind chill factor at 2 m above ground [°C] (mean)
+        label_fr: GEPS.DIAG.3_WCF.ERMEAN - Indice de refroidissement éolien à 2 m au-dessus du sol [°C] (moyenne)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.3_WSPD.ERC0:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC0 - Wind speed at 10 m above ground [m/s] (0th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC0 - Vitesse du vent à 10 m au-dessus du sol [m/s] (0e percentile)
+        processing:
+            - BANDS=8
+    GEPS.DIAG.3_WSPD.ERC10:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC10 - Wind speed at 10 m above ground [m/s] (10th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC10 - Vitesse du vent à 10 m au-dessus du sol [m/s] (10e percentile)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.3_WSPD.ERC25:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC25 - Wind speed at 10 m above ground [m/s] (25th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC25 - Vitesse du vent à 10 m au-dessus du sol [m/s] (25e percentile)
+        processing:
+            - BANDS=2
+    GEPS.DIAG.3_WSPD.ERC50:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC50 - Wind speed at 10 m above ground [m/s] (50th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC50 - Vitesse du vent à 10 m au-dessus du sol [m/s] (50e percentile)
+        processing:
+            - BANDS=3
+    GEPS.DIAG.3_WSPD.ERC75:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC75 - Wind speed at 10 m above ground [m/s] (75th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC75 - Vitesse du vent à 10 m au-dessus du sol [m/s] (75e percentile)
+        processing:
+            - BANDS=4
+    GEPS.DIAG.3_WSPD.ERC90:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC90 - Wind speed at 10 m above ground [m/s] (90th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC90 - Vitesse du vent à 10 m au-dessus du sol [m/s] (90e percentile)
+        processing:
+            - BANDS=5
+    GEPS.DIAG.3_WSPD.ERC100:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERC100 - Wind speed at 10 m above ground [m/s] (100th percentile)
+        label_fr: GEPS.DIAG.3_WSPD.ERC100 - Vitesse du vent à 10 m au-dessus du sol [m/s] (100e percentile)
+        processing:
+            - BANDS=9
+    GEPS.DIAG.3_WSPD.ERSSTD:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERSSTD - Wind speed at 10 m above ground [m/s] (standard deviation)
+        label_fr: GEPS.DIAG.3_WSPD.ERSSTD - Vitesse du vent à 10 m au-dessus du sol [m/s] (écart-type)
+        processing:
+            - BANDS=6
+        styles:
+            - mapserv/class/WIND_STD.inc
+    GEPS.DIAG.3_WSPD.ERMEAN:
+        <<: *template_3_geps_wspd_erc
+        label_en: GEPS.DIAG.3_WSPD.ERMEAN - Wind speed at 10 m above ground [m/s] (mean)
+        label_fr: GEPS.DIAG.3_WSPD.ERMEAN - Vitesse du vent à 10 m au-dessus du sol [m/s] (moyenne)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_FRMM.ERGE1:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE1 - Freezing rain >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE1 - Pluie verglaçante >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_FRMM.ERGE2.5:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE2.5 - Freezing rain >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE2.5 - Pluie verglaçante >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_FRMM.ERGE5:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE5 - Freezing rain >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE5 - Pluie verglaçante >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_FRMM.ERGE10:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE10 - Freezing rain >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE10 - Pluie verglaçante >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_FRMM.ERGE15:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE15 - Freezing rain >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE15 - Pluie verglaçante >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_FRMM.ERGE20:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE20 - Freezing rain >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE20 - Pluie verglaçante >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_FRMM.ERGE25:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE25 - Freezing rain >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE25 - Pluie verglaçante >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_FRMM.ERGE30:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE30 - Freezing rain >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE30 - Pluie verglaçante >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_FRMM.ERGE40:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE40 - Freezing rain >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE40 - Pluie verglaçante >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.12_FRMM.ERGE50:
+        <<: *template_12_geps_frmm_erge
+        label_en: GEPS.DIAG.12_FRMM.ERGE50 - Freezing rain >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.12_FRMM.ERGE50 - Pluie verglaçante >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_FRMM.ERC0:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC0 - Freezing rain (0th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC0 - Pluie verglaçante (0e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.12_FRMM.ERC10:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC10 - Freezing rain (10th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC10 - Pluie verglaçante (10e centile)
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_FRMM.ERC25:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC25 - Freezing rain (25th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC25 - Pluie verglaçante (25e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_FRMM.ERC50:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC50 - Freezing rain (50th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC50 - Pluie verglaçante (50e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_FRMM.ERC75:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC75 - Freezing rain (75th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC75 - Pluie verglaçante (75e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_FRMM.ERC90:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC90 - Freezing rain (90th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC90 - Pluie verglaçante (90e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_FRMM.ERC100:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERC100 - Freezing rain (100th percentile)
+        label_fr: GEPS.DIAG.12_FRMM.ERC100 - Pluie verglaçante (100e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.12_FRMM.ERMEAN:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERMEAN - Freezing rain (mean)
+        label_fr: GEPS.DIAG.12_FRMM.ERMEAN - Pluie verglaçante (moyenne)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.12_FRMM.ERSSTD:
+        <<: *template_12_geps_frmm_erc
+        label_en: GEPS.DIAG.12_FRMM.ERSSTD - Freezing rain (standard deviation)
+        label_fr: GEPS.DIAG.12_FRMM.ERSSTD - Pluie verglaçante (écart-type)
+        processing:
+            - BANDS=16
+        styles:
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+    GEPS.DIAG.12_PEMM.ERGE1:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE1 - Ice pellets >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE1 - Granules de glace >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_PEMM.ERGE2.5:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE2.5 - Ice pellets >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE2.5 - Granules de glace >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_PEMM.ERGE5:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE5 - Ice pellets >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE5 - Granules de glace >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_PEMM.ERGE10:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE10 - Ice pellets >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE10 - Granules de glace >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_PEMM.ERGE15:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE15 - Ice pellets >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE15 - Granules de glace >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_PEMM.ERGE20:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE20 - Ice pellets >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE20 - Granules de glace >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_PEMM.ERGE25:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE25 - Ice pellets >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE25 - Granules de glace >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_PEMM.ERGE30:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE30 - Ice pellets >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE30 - Granules de glace >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_PEMM.ERGE40:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE40 - Ice pellets >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE40 - Granules de glace >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.12_PEMM.ERGE50:
+        <<: *template_12_geps_pemm_erge
+        label_en: GEPS.DIAG.12_PEMM.ERGE50 - Ice pellets >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.12_PEMM.ERGE50 - Granules de glace >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_PEMM.ERC0:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC0 - Ice pellets (0th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC0 - Granules de glace (0e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.12_PEMM.ERC10:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC10 - Ice pellets (10th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC10 - Granules de glace (10e centile)
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_PEMM.ERC25:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC25 - Ice pellets (25th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC25 - Granules de glace (25e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_PEMM.ERC50:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC50 - Ice pellets (50th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC50 - Granules de glace (50e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_PEMM.ERC75:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC75 - Ice pellets (75th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC75 - Granules de glace (75e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_PEMM.ERC90:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC90 - Ice pellets (90th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC90 - Granules de glace (90e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_PEMM.ERC100:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERC100 - Ice pellets (100th percentile)
+        label_fr: GEPS.DIAG.12_PEMM.ERC100 - Granules de glace (100e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.12_PEMM.ERMEAN:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERMEAN - Ice pellets (mean)
+        label_fr: GEPS.DIAG.12_PEMM.ERMEAN - Granules de glace (moyenne)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.12_PEMM.ERSSTD:
+        <<: *template_12_geps_pemm_erc
+        label_en: GEPS.DIAG.12_PEMM.ERSSTD - Ice pellets (standard deviation)
+        label_fr: GEPS.DIAG.12_PEMM.ERSSTD - Granules de glace (écart-type)
+        processing:
+            - BANDS=16
+        styles:
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+    GEPS.DIAG.12_RNMM.ERGE1:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE1 - Rain >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE1 - Pluie >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_RNMM.ERGE2.5:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE2.5 - Rain >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE2.5 - Pluie >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_RNMM.ERGE5:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE5 - Rain >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE5 - Pluie >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_RNMM.ERGE10:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE10 - Rain >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE10 - Pluie >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_RNMM.ERGE15:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE15 - Rain >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE15 - Pluie >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_RNMM.ERGE20:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE20 - Rain >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE20 - Pluie >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_RNMM.ERGE25:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE25 - Rain >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE25 - Pluie >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_RNMM.ERGE30:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE30 - Rain >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE30 - Pluie >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_RNMM.ERGE40:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE40 - Rain >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE40 - Pluie >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.12_RNMM.ERGE50:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE50 - Rain >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE50 - Pluie >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_RNMM.ERGE75:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE75 - Rain >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE75 - Pluie >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_RNMM.ERGE100:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE100 - Rain >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE100 - Pluie >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_RNMM.ERGE150:
+        <<: *template_12_geps_rnmm_erge
+        label_en: GEPS.DIAG.12_RNMM.ERGE150 - Rain >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.12_RNMM.ERGE150 - Pluie >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_RNMM.ERC0:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC0 - Rain (0th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC0 - Pluie (0e centile)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.12_RNMM.ERC10:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC10 - Rain (10th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC10 - Pluie (10e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_RNMM.ERC25:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC25 - Rain (25th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC25 - Pluie (25e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_RNMM.ERC50:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC50 - Rain (50th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC50 - Pluie (50e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.12_RNMM.ERC75:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC75 - Rain (75th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC75 - Pluie (75e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.12_RNMM.ERC90:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC90 - Rain (90th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC90 - Pluie (90e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.12_RNMM.ERC100:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERC100 - Rain (100th percentile)
+        label_fr: GEPS.DIAG.12_RNMM.ERC100 - Pluie (100e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.12_RNMM.ERMEAN:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERMEAN - Rain (mean)
+        label_fr: GEPS.DIAG.12_RNMM.ERMEAN - Pluie (moyenne)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.12_RNMM.ERSSTD:
+        <<: *template_12_geps_rnmm_erc
+        label_en: GEPS.DIAG.12_RNMM.ERSSTD - Rain (standard deviation)
+        label_fr: GEPS.DIAG.12_RNMM.ERSSTD - Pluie (écart-type)
+        processing:
+            - BANDS=19
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.12_SNMM.ERGE1:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE1 - Snow >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE1 - Neige >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_SNMM.ERGE2.5:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE2.5 - Snow >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE2.5 - Neige >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_SNMM.ERGE5:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE5 - Snow >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE5 - Neige >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_SNMM.ERGE10:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE10 - Snow >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE10 - Neige >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_SNMM.ERGE15:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE15 - Snow >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE15 - Neige >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_SNMM.ERGE20:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE20 - Snow >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE20 - Neige >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_SNMM.ERGE25:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE25 - Snow >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE25 - Neige >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_SNMM.ERGE30:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE30 - Snow >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE30 - Neige >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_SNMM.ERGE40:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE40 - Snow >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE40 - Neige >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.12_SNMM.ERGE50:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE50 - Snow >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE50 - Neige >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_SNMM.ERGE75:
+        <<: *template_12_geps_snmm_erge
+        label_en: GEPS.DIAG.12_SNMM.ERGE75 - Snow >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.12_SNMM.ERGE75 - Neige >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_SNMM.ERC0:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC0 - Snow (0th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC0 - Neige (0e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.12_SNMM.ERC10:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC10 - Snow (10th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC10 - Neige (10e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_SNMM.ERC25:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC25 - Snow (25th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC25 - Neige (25e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_SNMM.ERC50:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC50 - Snow (50th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC50 - Neige (50e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_SNMM.ERC75:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC75 - Snow (75th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC75 - Neige (75e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_SNMM.ERC90:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC90 - Snow (90th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC90 - Neige (90e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.12_SNMM.ERC100:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERC100 - Snow (100th percentile)
+        label_fr: GEPS.DIAG.12_SNMM.ERC100 - Neige (100e centile)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.12_SNMM.ERMEAN:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERMEAN - Snow (mean)
+        label_fr: GEPS.DIAG.12_SNMM.ERMEAN - Neige (moyenne)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.12_SNMM.ERSSTD:
+        <<: *template_12_geps_snmm_erc
+        label_en: GEPS.DIAG.12_SNMM.ERSSTD - Snow (standard deviation)
+        label_fr: GEPS.DIAG.12_SNMM.ERSSTD - Neige (écart-type)
+        processing:
+            - BANDS=17
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.12_PRMM.ERGE1:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_PRMM.ERGE2.5:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_PRMM.ERGE5:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_PRMM.ERGE10:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_PRMM.ERGE15:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_PRMM.ERGE20:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_PRMM.ERGE25:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_PRMM.ERGE30:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_PRMM.ERGE40:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.12_PRMM.ERGE50:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_PRMM.ERGE75:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_PRMM.ERGE100:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_PRMM.ERGE150:
+        <<: *template_12_geps_prmm_erge
+        label_en: GEPS.DIAG.12_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.12_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_PRMM.ERC0:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.12_PRMM.ERC10:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_PRMM.ERC25:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_PRMM.ERC50:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.12_PRMM.ERC75:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.12_PRMM.ERC90:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.12_PRMM.ERC100:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.12_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.12_PRMM.ERMEAN:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.12_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.12_PRMM.ERSSTD:
+        <<: *template_12_geps_prmm_erc
+        label_en: GEPS.DIAG.12_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.12_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=19
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.12_UVMX.ERGE20:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE20 - Maximum wind modulus over a period >= 20 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE20 - Module du vent maximum sur une période >= 20 km/h [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_UVMX.ERGE30:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE30 - Maximum wind modulus over a period >= 30 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE30 - Module du vent maximum sur une période >= 30 km/h [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.12_UVMX.ERGE37:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE37 - Maximum wind modulus over a period >= 37 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE37 - Module du vent maximum sur une période >= 37 km/h [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.12_UVMX.ERGE40:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE40 - Maximum wind modulus over a period >= 40 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE40 - Module du vent maximum sur une période >= 40 km/h [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.12_UVMX.ERGE50:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE50 - Maximum wind modulus over a period >= 50 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE50 - Module du vent maximum sur une période >= 50 km/h [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.12_UVMX.ERGE62:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE62 - Maximum wind modulus over a period >= 62 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE62 - Module du vent maximum sur une période >= 62 km/h [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.12_UVMX.ERGE65:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE65 - Maximum wind modulus over a period >= 65 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE65 - Module du vent maximum sur une période >= 65 km/h [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.12_UVMX.ERGE75:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE75 - Maximum wind modulus over a period >= 75 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE75 - Module du vent maximum sur une période >= 75 km/h [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.12_UVMX.ERGE90:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE90 - Maximum wind modulus over a period >= 90 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE90 - Module du vent maximum sur une période >= 90 km/h [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.12_UVMX.ERGE100:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE100 - Maximum wind modulus over a period >= 100 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE100 - Module du vent maximum sur une période >= 100 km/h [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.12_UVMX.ERGE118:
+        <<: *template_12_geps_uvmx_erge
+        label_en: GEPS.DIAG.12_UVMX.ERGE118 - Maximum wind modulus over a period >= 118 km/h [probability %]
+        label_fr: GEPS.DIAG.12_UVMX.ERGE118 - Module du vent maximum sur une période >= 118 km/h [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.12_UVMX.ERC0:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC0 - Maximum wind modulus over a period (0th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC0 - Module du vent maximum sur une période (0e centile)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.12_UVMX.ERC10:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC10 - Maximum wind modulus over a period (10th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC10 - Module du vent maximum sur une période (10e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.12_UVMX.ERC25:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC25 - Maximum wind modulus over a period (25th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC25 - Module du vent maximum sur une période (25e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.12_UVMX.ERC50:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC50 - Maximum wind modulus over a period (50th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC50 - Module du vent maximum sur une période (50e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.12_UVMX.ERC75:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC75 - Maximum wind modulus over a period (75th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC75 - Module du vent maximum sur une période (75e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.12_UVMX.ERC90:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC90 - Maximum wind modulus over a period (90th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC90 - Module du vent maximum sur une période (90e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.12_UVMX.ERC100:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERC100 - Maximum wind modulus over a period (100th percentile)
+        label_fr: GEPS.DIAG.12_UVMX.ERC100 - Module du vent maximum sur une période (100e centile)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.12_UVMX.ERMEAN:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERMEAN - Maximum wind modulus over a period (mean)
+        label_fr: GEPS.DIAG.12_UVMX.ERMEAN - Module du vent maximum sur une période (moyenne)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.12_UVMX.ERSSTD:
+        <<: *template_12_geps_uvmx_erc
+        label_en: GEPS.DIAG.12_UVMX.ERSSTD - Maximum wind modulus over a period (standard deviation)
+        label_fr: GEPS.DIAG.12_UVMX.ERSSTD - Module du vent maximum sur une période (écart-type)
+        processing:
+            - BANDS=18
+        styles:
+            - mapserv/class/WIND_STD.inc
+    GEPS.DIAG.12_GZ.500.ERMEAN:
+        <<: *template_12_geps_gz_erc
+        label_en: GEPS.DIAG.12_GZ.500.ERMEAN - Geopotential height at 500.0 mb (mean)
+        label_fr: GEPS.DIAG.12_GZ.500.ERMEAN - Hauteur géopotentielle à 500.0 mb (moyenne)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_GZ.500.ERSSTD:
+        <<: *template_12_geps_gz_erc
+        label_en: GEPS.DIAG.12_GZ.500.ERSSTD - Geopotential height at 500.0 mb (standard deviation)
+        label_fr: GEPS.DIAG.12_GZ.500.ERSSTD - Hauteur géopotentielle à 500.0 mb (écart-type)
+        processing:
+            - BANDS=2
+        styles:
+            - mapserv/class/GZ_STD.inc
+    GEPS.DIAG.12_PN.ERMEAN:
+        <<: *template_12_geps_pn
+        label_en: GEPS.DIAG.12_PN.ERMEAN - Geopotential height at 500.0 mb (contour) (mean)
+        label_fr: GEPS.DIAG.12_PN.ERMEAN - Hauteur géopotentielle à 500.0 mb (contour) (moyenne)
+        processing:
+            - BANDS=1
+            - CONTOUR_INTERVAL=10
+            - CONTOUR_ITEM=pixel
+    GEPS.DIAG.12_PN.ERSSTD:
+        <<: *template_12_geps_pn
+        label_en: GEPS.DIAG.12_PN.ERSSTD - Geopotential height at 500.0 mb (contour) (standard deviation)
+        label_fr: GEPS.DIAG.12_PN.ERSSTD - Hauteur géopotentielle à 500.0 mb (contour) (écart-type)
+        processing:
+            - BANDS=2
+            - CONTOUR_INTERVAL=10
+            - CONTOUR_ITEM=pixel
+    GEPS.DIAG.12_PN-SLP.ERMEAN:
+        <<: *template_12_geps_pn-slp
+        label_en: GEPS.DIAG.12_PN-SLP - Geopotential height at 500.0 mb (mean)
+        label_fr: GEPS.DIAG.12_PN-SLP - Hauteur géopotentielle à 500.0 mb (moyenne)
+        processing:
+            - BANDS=1
+    GEPS.DIAG.12_PN-SLP.ERSSTD:
+        <<: *template_12_geps_pn-slp
+        label_en: GEPS.DIAG.12_PN-SLP - Geopotential height at 500.0 mb (standard deviation)
+        label_fr: GEPS.DIAG.12_PN-SLP - Hauteur géopotentielle à 500.0 mb (écart-type)
+        processing:
+            - BANDS=2
+        styles:
+            - mapserv/class/PN_STD.inc
+    GEPS.DIAG.24_FRMM.ERGE1:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE1 - Freezing rain >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE1 - Pluie verglaçante >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_FRMM.ERGE2.5:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE2.5 - Freezing rain >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE2.5 - Pluie verglaçante >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_FRMM.ERGE5:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE5 - Freezing rain >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE5 - Pluie verglaçante >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_FRMM.ERGE10:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE10 - Freezing rain >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE10 - Pluie verglaçante >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_FRMM.ERGE15:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE15 - Freezing rain >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE15 - Pluie verglaçante >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_FRMM.ERGE20:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE20 - Freezing rain >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE20 - Pluie verglaçante >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_FRMM.ERGE25:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE25 - Freezing rain >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE25 - Pluie verglaçante >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_FRMM.ERGE30:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE30 - Freezing rain >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE30 - Pluie verglaçante >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_FRMM.ERGE40:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE40 - Freezing rain >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE40 - Pluie verglaçante >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_FRMM.ERGE50:
+        <<: *template_24_geps_frmm_erge
+        label_en: GEPS.DIAG.24_FRMM.ERGE50 - Freezing rain >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.24_FRMM.ERGE50 - Pluie verglaçante >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_FRMM.ERC0:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC0 - Freezing rain (0th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC0 - Pluie verglaçante (0e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_FRMM.ERC10:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC10 - Freezing rain (10th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC10 - Pluie verglaçante (10e centile)
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_FRMM.ERC25:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC25 - Freezing rain (25th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC25 - Pluie verglaçante (25e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_FRMM.ERC50:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC50 - Freezing rain (50th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC50 - Pluie verglaçante (50e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_FRMM.ERC75:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC75 - Freezing rain (75th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC75 - Pluie verglaçante (75e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_FRMM.ERC90:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC90 - Freezing rain (90th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC90 - Pluie verglaçante (90e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_FRMM.ERC100:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERC100 - Freezing rain (100th percentile)
+        label_fr: GEPS.DIAG.24_FRMM.ERC100 - Pluie verglaçante (100e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_FRMM.ERMEAN:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERMEAN - Freezing rain (mean)
+        label_fr: GEPS.DIAG.24_FRMM.ERMEAN - Pluie verglaçante (moyenne)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_FRMM.ERSSTD:
+        <<: *template_24_geps_frmm_erc
+        label_en: GEPS.DIAG.24_FRMM.ERSSTD - Freezing rain (standard deviation)
+        label_fr: GEPS.DIAG.24_FRMM.ERSSTD - Pluie verglaçante (écart-type)
+        processing:
+            - BANDS=16
+        styles:
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+    GEPS.DIAG.24_PEMM.ERGE1:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE1 - Ice pellets >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE1 - Granules de glace >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_PEMM.ERGE2.5:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE2.5 - Ice pellets >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE2.5 - Granules de glace >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_PEMM.ERGE5:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE5 - Ice pellets >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE5 - Granules de glace >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_PEMM.ERGE10:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE10 - Ice pellets >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE10 - Granules de glace >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_PEMM.ERGE15:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE15 - Ice pellets >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE15 - Granules de glace >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_PEMM.ERGE20:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE20 - Ice pellets >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE20 - Granules de glace >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_PEMM.ERGE25:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE25 - Ice pellets >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE25 - Granules de glace >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_PEMM.ERGE30:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE30 - Ice pellets >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE30 - Granules de glace >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_PEMM.ERGE40:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE40 - Ice pellets >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE40 - Granules de glace >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_PEMM.ERGE50:
+        <<: *template_24_geps_pemm_erge
+        label_en: GEPS.DIAG.24_PEMM.ERGE50 - Ice pellets >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.24_PEMM.ERGE50 - Granules de glace >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_PEMM.ERC0:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC0 - Ice pellets (0th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC0 - Granules de glace (0e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_PEMM.ERC10:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC10 - Ice pellets (10th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC10 - Granules de glace (10e centile)
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_PEMM.ERC25:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC25 - Ice pellets (25th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC25 - Granules de glace (25e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_PEMM.ERC50:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC50 - Ice pellets (50th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC50 - Granules de glace (50e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_PEMM.ERC75:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC75 - Ice pellets (75th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC75 - Granules de glace (75e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_PEMM.ERC90:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC90 - Ice pellets (90th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC90 - Granules de glace (90e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_PEMM.ERC100:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERC100 - Ice pellets (100th percentile)
+        label_fr: GEPS.DIAG.24_PEMM.ERC100 - Granules de glace (100e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_PEMM.ERMEAN:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERMEAN - Ice pellets (mean)
+        label_fr: GEPS.DIAG.24_PEMM.ERMEAN - Granules de glace (moyenne)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_PEMM.ERSSTD:
+        <<: *template_24_geps_pemm_erc
+        label_en: GEPS.DIAG.24_PEMM.ERSSTD - Ice pellets (standard deviation)
+        label_fr: GEPS.DIAG.24_PEMM.ERSSTD - Granules de glace (écart-type)
+        processing:
+            - BANDS=16
+        styles:
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+    GEPS.DIAG.24_RNMM.ERGE1:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE1 - Rain >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE1 - Pluie >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_RNMM.ERGE2.5:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE2.5 - Rain >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE2.5 - Pluie >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_RNMM.ERGE5:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE5 - Rain >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE5 - Pluie >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_RNMM.ERGE10:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE10 - Rain >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE10 - Pluie >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_RNMM.ERGE15:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE15 - Rain >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE15 - Pluie >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_RNMM.ERGE20:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE20 - Rain >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE20 - Pluie >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_RNMM.ERGE25:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE25 - Rain >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE25 - Pluie >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_RNMM.ERGE30:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE30 - Rain >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE30 - Pluie >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_RNMM.ERGE40:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE40 - Rain >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE40 - Pluie >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_RNMM.ERGE50:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE50 - Rain >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE50 - Pluie >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_RNMM.ERGE75:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE75 - Rain >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE75 - Pluie >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_RNMM.ERGE100:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE100 - Rain >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE100 - Pluie >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_RNMM.ERGE150:
+        <<: *template_24_geps_rnmm_erge
+        label_en: GEPS.DIAG.24_RNMM.ERGE150 - Rain >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.24_RNMM.ERGE150 - Pluie >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_RNMM.ERC0:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC0 - Rain (0th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC0 - Pluie (0e centile)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.24_RNMM.ERC10:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC10 - Rain (10th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC10 - Pluie (10e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_RNMM.ERC25:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC25 - Rain (25th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC25 - Pluie (25e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_RNMM.ERC50:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC50 - Rain (50th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC50 - Pluie (50e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_RNMM.ERC75:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC75 - Rain (75th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC75 - Pluie (75e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_RNMM.ERC90:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC90 - Rain (90th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC90 - Pluie (90e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_RNMM.ERC100:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERC100 - Rain (100th percentile)
+        label_fr: GEPS.DIAG.24_RNMM.ERC100 - Pluie (100e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.24_RNMM.ERMEAN:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERMEAN - Rain (mean)
+        label_fr: GEPS.DIAG.24_RNMM.ERMEAN - Pluie (moyenne)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.24_RNMM.ERSSTD:
+        <<: *template_24_geps_rnmm_erc
+        label_en: GEPS.DIAG.24_RNMM.ERSSTD - Rain (standard deviation)
+        label_fr: GEPS.DIAG.24_RNMM.ERSSTD - Pluie (écart-type)
+        processing:
+            - BANDS=19
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.24_SNMM.ERGE1:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE1 - Snow >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE1 - Neige >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_SNMM.ERGE2.5:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE2.5 - Snow >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE2.5 - Neige >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_SNMM.ERGE5:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE5 - Snow >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE5 - Neige >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_SNMM.ERGE10:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE10 - Snow >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE10 - Neige >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_SNMM.ERGE15:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE15 - Snow >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE15 - Neige >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_SNMM.ERGE20:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE20 - Snow >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE20 - Neige >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_SNMM.ERGE25:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE25 - Snow >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE25 - Neige >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_SNMM.ERGE30:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE30 - Snow >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE30 - Neige >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_SNMM.ERGE40:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE40 - Snow >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE40 - Neige >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_SNMM.ERGE50:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE50 - Snow >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE50 - Neige >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_SNMM.ERGE75:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE75 - Snow >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE75 - Neige >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_SNMM.ERGE100:
+        <<: *template_24_geps_snmm_erge
+        label_en: GEPS.DIAG.24_SNMM.ERGE100 - Snow >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.24_SNMM.ERGE100 - Neige >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_SNMM.ERC0:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC0 - Snow (0th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC0 - Neige (0e centile)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.24_SNMM.ERC10:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC10 - Snow (10th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC10 - Neige (10e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_SNMM.ERC25:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC25 - Snow (25th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC25 - Neige (25e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_SNMM.ERC50:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC50 - Snow (50th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC50 - Neige (50e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_SNMM.ERC75:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC75 - Snow (75th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC75 - Neige (75e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_SNMM.ERC90:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC90 - Snow (90th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC90 - Neige (90e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_SNMM.ERC100:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERC100 - Snow (100th percentile)
+        label_fr: GEPS.DIAG.24_SNMM.ERC100 - Neige (100e centile)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.24_SNMM.ERMEAN:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERMEAN - Snow (mean)
+        label_fr: GEPS.DIAG.24_SNMM.ERMEAN - Neige (moyenne)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_SNMM.ERSSTD:
+        <<: *template_24_geps_snmm_erc
+        label_en: GEPS.DIAG.24_SNMM.ERSSTD - Snow (standard deviation)
+        label_fr: GEPS.DIAG.24_SNMM.ERSSTD - Neige (écart-type)
+        processing:
+            - BANDS=18
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.24_PRMM.ERGE1:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_PRMM.ERGE2.5:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_PRMM.ERGE5:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_PRMM.ERGE10:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_PRMM.ERGE15:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_PRMM.ERGE20:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_PRMM.ERGE25:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_PRMM.ERGE30:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_PRMM.ERGE40:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_PRMM.ERGE50:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_PRMM.ERGE75:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_PRMM.ERGE100:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_PRMM.ERGE150:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_PRMM.ERGE200:
+        <<: *template_24_geps_prmm_erge
+        label_en: GEPS.DIAG.24_PRMM.ERGE200 - Quantity of precipitation >= 200 mm [probability %]
+        label_fr: GEPS.DIAG.24_PRMM.ERGE200 - Quantité de précipitations >= 200 mm [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_PRMM.ERC0:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.24_PRMM.ERC10:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_PRMM.ERC25:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_PRMM.ERC50:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_PRMM.ERC75:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_PRMM.ERC90:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_PRMM.ERC100:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.24_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.24_PRMM.ERMEAN:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.24_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.24_PRMM.ERSSTD:
+        <<: *template_24_geps_prmm_erc
+        label_en: GEPS.DIAG.24_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.24_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=20
+        styles:
+            - mapserv/class/REPS_STD_12-24h.inc
+    GEPS.DIAG.24_HMXX.ERGE25:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE25 - Maximum humidex over a period >= 25 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE25 - Facteur humidex maximal sur une période >= 25 nil [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_HMXX.ERGE30:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE30 - Maximum humidex over a period >= 30 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE30 - Facteur humidex maximal sur une période >= 30 nil [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_HMXX.ERGE35:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE35 - Maximum humidex over a period >= 35 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE35 - Facteur humidex maximal sur une période >= 35 nil [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_HMXX.ERGE38:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE38 - Maximum humidex over a period >= 38 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE38 - Facteur humidex maximal sur une période >= 38 nil [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_HMXX.ERGE40:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE40 - Maximum humidex over a period >= 40 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE40 - Facteur humidex maximal sur une période >= 40 nil [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_HMXX.ERGE42:
+        <<: *template_24_geps_hmxx_erge
+        label_en: GEPS.DIAG.24_HMXX.ERGE42 - Maximum humidex over a period >= 42 nil [probability %]
+        label_fr: GEPS.DIAG.24_HMXX.ERGE42 - Facteur humidex maximal sur une période >= 42 nil [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_HMXX.ERC0:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC0 - Maximum humidex over a period (0th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC0 - Facteur humidex maximal sur une période (0e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_HMXX.ERC10:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC10 - Maximum humidex over a period (10th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC10 - Facteur humidex maximal sur une période (10e centile)
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_HMXX.ERC25:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC25 - Maximum humidex over a period (25th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC25 - Facteur humidex maximal sur une période (25e centile)
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_HMXX.ERC50:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC50 - Maximum humidex over a period (50th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC50 - Facteur humidex maximal sur une période (50e centile)
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_HMXX.ERC75:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC75 - Maximum humidex over a period (75th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC75 - Facteur humidex maximal sur une période (75e centile)
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_HMXX.ERC90:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC90 - Maximum humidex over a period (90th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC90 - Facteur humidex maximal sur une période (90e centile)
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_HMXX.ERC100:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERC100 - Maximum humidex over a period (100th percentile)
+        label_fr: GEPS.DIAG.24_HMXX.ERC100 - Facteur humidex maximal sur une période (100e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_HMXX.ERMEAN:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERMEAN - Maximum humidex over a period (mean)
+        label_fr: GEPS.DIAG.24_HMXX.ERMEAN - Facteur humidex maximal sur une période (moyenne)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_HMXX.ERSSTD:
+        <<: *template_24_geps_hmxx_erc
+        label_en: GEPS.DIAG.24_HMXX.ERSSTD - Maximum humidex over a period (standard deviation)
+        label_fr: GEPS.DIAG.24_HMXX.ERSSTD - Facteur humidex maximal sur une période (écart-type)
+        processing:
+            - BANDS=12
+        styles:
+            - mapserv/class/TEMPERATURE_STD.inc
+    GEPS.DIAG.24_T7.ERLE-40:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-40 - Minimum temperature <= -40 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-40 - Température minimale <= -40 [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_T7.ERLE-35:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-35 - Minimum temperature <= -35 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-35 - Température minimale <= -35 [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_T7.ERLE-30:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-30 - Minimum temperature <= -30 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-30 - Température minimale <= -30 [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_T7.ERLE-25:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-25 - Minimum temperature <= -25 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-25 - Température minimale <= -25 [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_T7.ERLE-20:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-20 - Minimum temperature <= -20 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-20 - Température minimale <= -20 [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_T7.ERLE-15:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-15 - Minimum temperature <= -15 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-15 - Température minimale <= -15 [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_T7.ERLE-10:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-10 - Minimum temperature <= -10 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-10 - Température minimale <= -10 [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_T7.ERLE-5:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE-5 - Minimum temperature <= -5 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE-5 - Température minimale <= -5 [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_T7.ERLE0:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE0 - Minimum temperature <= 0 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE0 - Température minimale <= 0 [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_T7.ERLE5:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE5 - Minimum temperature <= 5 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE5 - Température minimale <= 5 [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_T7.ERLE10:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE10 - Minimum temperature <= 10 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE10 - Température minimale <= 10 [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_T7.ERLE15:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE15 - Minimum temperature <= 15 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE15 - Température minimale <= 15 [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_T7.ERLE20:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE20 - Minimum temperature <= 20 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE20 - Température minimale <= 20 [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_T7.ERLE25:
+        <<: *template_24_geps_t7_erle
+        label_en: GEPS.DIAG.24_T7.ERLE25 - Minimum temperature <= 25 [probability %]
+        label_fr: GEPS.DIAG.24_T7.ERLE25 - Température minimale <= 25 [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_T7.ERC0:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC0 - Minimum temperature (0th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC0 - Température minimale (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.24_T7.ERC10:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC10 - Minimum temperature (10th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC10 - Température minimale (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_T7.ERC25:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC25 - Minimum temperature (25th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC25 - Température minimale (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_T7.ERC50:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC50 - Minimum temperature (50th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC50 - Température minimale (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_T7.ERC75:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC75 - Minimum temperature (75th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC75 - Température minimale (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_T7.ERC90:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC90 - Minimum temperature (90th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC90 - Température minimale (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_T7.ERC100:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERC100 - Minimum temperature (100th percentile)
+        label_fr: GEPS.DIAG.24_T7.ERC100 - Température minimale (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.24_T7.ERMEAN:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERMEAN - Minimum temperature (mean)
+        label_fr: GEPS.DIAG.24_T7.ERMEAN - Température minimale (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.24_T7.ERSSTD:
+        <<: *template_24_geps_t7_erc
+        label_en: GEPS.DIAG.24_T7.ERSSTD  - Minimum temperature (standard deviation)
+        label_fr: GEPS.DIAG.24_T7.ERSSTD  - Température minimale (écart-type)
+        processing:
+            - BANDS=20
+        styles:
+            - mapserv/class/TEMPERATURE_STD.inc
+    GEPS.DIAG.24_T8.ERGE-30:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-30 - Maximum temperature >= -30 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-30 - Température maximale >= -30 [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_T8.ERGE-25:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-25 - Maximum temperature >= -25 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-25 - Température maximale >= -25 [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_T8.ERGE-20:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-20 - Maximum temperature >= -20 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-20 - Température maximale >= -20 [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_T8.ERGE-15:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-15 - Maximum temperature >= -15 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-15 - Température maximale >= -15 [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_T8.ERGE-10:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-10 - Maximum temperature >= -10 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-10 - Température maximale >= -10 [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_T8.ERGE-5:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE-5 - Maximum temperature >= -5 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE-5 - Température maximale >= -5 [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_T8.ERGE0:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE0 - Maximum temperature >= 0 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE0 - Température maximale >= 0 [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_T8.ERGE5:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE5 - Maximum temperature >= 5 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE5 - Température maximale >= 5 [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_T8.ERGE10:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE10 - Maximum temperature >= 10 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE10 - Température maximale >= 10 [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_T8.ERGE15:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE15 - Maximum temperature >= 15 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE15 - Température maximale >= 15 [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_T8.ERGE20:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE20 - Maximum temperature >= 20 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE20 - Température maximale >= 20 [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_T8.ERGE25:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE25 - Maximum temperature >= 25 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE25 - Température maximale >= 25 [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_T8.ERGE30:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE30 - Maximum temperature >= 30 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE30 - Température maximale >= 30 [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_T8.ERGE35:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE35 - Maximum temperature >= 35 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE35 - Température maximale >= 35 [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_T8.ERGE40:
+        <<: *template_24_geps_t8_erge
+        label_en: GEPS.DIAG.24_T8.ERGE40 - Maximum temperature >= 40 [probability %]
+        label_fr: GEPS.DIAG.24_T8.ERGE40 - Température maximale >= 40 [probabilité %]
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_T8.ERC0:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC0 - Maximum temperature (0th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC0 - Température maximale (0e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.24_T8.ERC10:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC10 - Maximum temperature (10th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC10 - Température maximale (10e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_T8.ERC25:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC25 - Maximum temperature (25th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC25 - Température maximale (25e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.24_T8.ERC50:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC50 - Maximum temperature (50th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC50 - Température maximale (50e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.24_T8.ERC75:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC75 - Maximum temperature (75th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC75 - Température maximale (75e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_T8.ERC90:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC90 - Maximum temperature (90th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC90 - Température maximale (90e centile)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.24_T8.ERC100:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERC100 - Maximum temperature (100th percentile)
+        label_fr: GEPS.DIAG.24_T8.ERC100 - Température maximale (100e centile)
+        processing:
+            - BANDS=24
+    GEPS.DIAG.24_T8.ERMEAN:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERMEAN - Maximum temperature (mean)
+        label_fr: GEPS.DIAG.24_T8.ERMEAN - Température maximale (moyenne)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.24_T8.ERSSTD:
+        <<: *template_24_geps_t8_erc
+        label_en: GEPS.DIAG.24_T8.ERSSTD  - Maximum temperature (standard deviation)
+        label_fr: GEPS.DIAG.24_T8.ERSSTD  - Température maximale (écart-type)
+        processing:
+            - BANDS=21
+        styles:
+            - mapserv/class/TEMPERATURE_STD.inc
+    GEPS.DIAG.24_WCFMIN.ERGE50:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE50 - Minimum wind chill factor <= -50°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE50 - Indice de refroidissement éolien minimum <= -50°C [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.24_WCFMIN.ERGE45:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE45 - Minimum wind chill factor <= -45°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE45 - Indice de refroidissement éolien minimum <= -45°C [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.24_WCFMIN.ERGE40:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE40 - Minimum wind chill factor <= -40°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE40 - Indice de refroidissement éolien minimum <= -40°C [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.24_WCFMIN.ERGE35:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE35 - Minimum wind chill factor <= -35°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE35 - Indice de refroidissement éolien minimum <= -35°C [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.24_WCFMIN.ERGE30:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE30 - Minimum wind chill factor <= -30°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE30 - Indice de refroidissement éolien minimum <= -30°C [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.24_WCFMIN.ERGE25:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE25 - Minimum wind chill factor <= -25°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE25 - Indice de refroidissement éolien minimum <= -25°C [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.24_WCFMIN.ERGE20:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE20 - Minimum wind chill factor <= -20°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE20 - Indice de refroidissement éolien minimum <= -20°C [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.24_WCFMIN.ERGE15:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE15 - Minimum wind chill factor <= -15°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE15 - Indice de refroidissement éolien minimum <= -15°C [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.24_WCFMIN.ERGE10:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE10 - Wind chill factor <= -10°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE10 - Indice de refroidissement éolien minimum <= -10°C [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.24_WCFMIN.ERGE5:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE5 - Minimum wind chill factor <= -5°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE5 - Indice de refroidissement éolien minimum <= -5°C [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.24_WCFMIN.ERGE0:
+        <<: *template_24_geps_wcf_erge
+        label_en: GEPS.DIAG.24_WCFMIN.ERGE0 - Minimum wind chill factor <= 0°C [probability %]
+        label_fr: GEPS.DIAG.24_WCFMIN.ERGE0 - Indice de refroidissement éolien <= 0°C [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.24_WCFMIN.ERC0:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC0 - Minimum wind chill factor (0th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC0 - Indice de refroidissement éolien minimum (0e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.24_WCFMIN.ERC10:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC10 - Minimum wind chill factor (10th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC10 - Indice de refroidissement éolien minimum (10e centile)
+        processing:
+            - BANDS=12
+    GEPS.DIAG.24_WCFMIN.ERC25:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC25 - Minimum wind chill factor (25th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC25 - Indice de refroidissement éolien minimum (25e centile)
+        processing:
+            - BANDS=13
+    GEPS.DIAG.24_WCFMIN.ERC50:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC50 - Minimum wind chill factor (50th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC50 - Indice de refroidissement éolien minimum (50e centile)
+        processing:
+            - BANDS=14
+    GEPS.DIAG.24_WCFMIN.ERC75:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC75 - Minimum wind chill factor (75th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC75 - Indice de refroidissement éolien minimum (75e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.24_WCFMIN.ERC90:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC90 - Minimum wind chill factor (90th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC90 - Indice de refroidissement éolien minimum (90e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.24_WCFMIN.ERC100:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERC100 - Minimum wind chill factor (100th percentile)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERC100 - Indice de refroidissement éolien minimum (100e centile)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.24_WCFMIN.ERSSTD:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERSSTD  - Minimum wind chill factor (standard deviation)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERSSTD  - Indice de refroidissement éolien minimum (écart-type)
+        processing:
+            - BANDS=17
+        styles:
+            - mapserv/class/WIND_STD.inc
+    GEPS.DIAG.24_WCFMIN.ERMEAN:
+        <<: *template_24_geps_wcf_erc
+        label_en: GEPS.DIAG.24_WCFMIN.ERMEAN - Minimum wind chill factor (mean)
+        label_fr: GEPS.DIAG.24_WCFMIN.ERMEAN - Indice de refroidissement éolien minimum (moyenne)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.48_PRMM.ERGE1:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.48_PRMM.ERGE2.5:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.48_PRMM.ERGE5:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.48_PRMM.ERGE10:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.48_PRMM.ERGE15:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.48_PRMM.ERGE20:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.48_PRMM.ERGE25:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.48_PRMM.ERGE30:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.48_PRMM.ERGE40:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.48_PRMM.ERGE50:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.48_PRMM.ERGE75:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.48_PRMM.ERGE100:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.48_PRMM.ERGE150:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.48_PRMM.ERGE200:
+        <<: *template_48_geps_prmm_erge
+        label_en: GEPS.DIAG.48_PRMM.ERGE200 - Quantity of precipitation >= 200 mm [probability %]
+        label_fr: GEPS.DIAG.48_PRMM.ERGE200 - Quantité de précipitations >= 200 mm [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.48_PRMM.ERC0:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.48_PRMM.ERC10:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.48_PRMM.ERC25:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.48_PRMM.ERC50:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.48_PRMM.ERC75:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.48_PRMM.ERC90:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.48_PRMM.ERC100:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.48_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.48_PRMM.ERMEAN:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.48_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.48_PRMM.ERSSTD:
+        <<: *template_48_geps_prmm_erc
+        label_en: GEPS.DIAG.48_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.48_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.72_PRMM.ERGE1:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.72_PRMM.ERGE2.5:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.72_PRMM.ERGE5:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.72_PRMM.ERGE10:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.72_PRMM.ERGE15:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.72_PRMM.ERGE20:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.72_PRMM.ERGE25:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.72_PRMM.ERGE30:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.72_PRMM.ERGE40:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.72_PRMM.ERGE50:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.72_PRMM.ERGE75:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.72_PRMM.ERGE100:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.72_PRMM.ERGE150:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.72_PRMM.ERGE200:
+        <<: *template_72_geps_prmm_erge
+        label_en: GEPS.DIAG.72_PRMM.ERGE200 - Quantity of precipitation >= 200 mm [probability %]
+        label_fr: GEPS.DIAG.72_PRMM.ERGE200 - Quantité de précipitations >= 200 mm [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.72_PRMM.ERC0:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.72_PRMM.ERC10:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.72_PRMM.ERC25:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.72_PRMM.ERC50:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.72_PRMM.ERC75:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.72_PRMM.ERC90:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.72_PRMM.ERC100:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.72_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.72_PRMM.ERMEAN:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.72_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.72_PRMM.ERSSTD:
+        <<: *template_72_geps_prmm_erc
+        label_en: GEPS.DIAG.72_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.72_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.96_PRMM.ERGE1:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.96_PRMM.ERGE2.5:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.96_PRMM.ERGE5:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.96_PRMM.ERGE10:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.96_PRMM.ERGE15:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.96_PRMM.ERGE20:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.96_PRMM.ERGE25:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.96_PRMM.ERGE30:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.96_PRMM.ERGE40:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.96_PRMM.ERGE50:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.96_PRMM.ERGE75:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.96_PRMM.ERGE100:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.96_PRMM.ERGE150:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.96_PRMM.ERGE200:
+        <<: *template_96_geps_prmm_erge
+        label_en: GEPS.DIAG.96_PRMM.ERGE200 - Quantity of precipitation >= 200 mm [probability %]
+        label_fr: GEPS.DIAG.96_PRMM.ERGE200 - Quantité de précipitations >= 200 mm [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.96_PRMM.ERC0:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.96_PRMM.ERC10:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.96_PRMM.ERC25:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.96_PRMM.ERC50:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.96_PRMM.ERC75:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.96_PRMM.ERC90:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.96_PRMM.ERC100:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.96_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.96_PRMM.ERMEAN:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.96_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.96_PRMM.ERSSTD:
+        <<: *template_96_geps_prmm_erc
+        label_en: GEPS.DIAG.96_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.96_PRMM.ERSSTD - Quantité de précipitations (écart-type)
+        processing:
+            - BANDS=20
+    GEPS.DIAG.120_PRMM.ERGE1:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE1 - Quantité de précipitations >= 1 mm [probabilité %]
+        processing:
+            - BANDS=1
+    GEPS.DIAG.120_PRMM.ERGE2.5:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE2.5 - Quantity of precipitation >= 2.5 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE2.5 - Quantité de précipitations >= 2.5 mm [probabilité %]
+        processing:
+            - BANDS=2
+    GEPS.DIAG.120_PRMM.ERGE5:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE5 - Quantity of precipitation >= 5 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE5 - Quantité de précipitations >= 5 mm [probabilité %]
+        processing:
+            - BANDS=3
+    GEPS.DIAG.120_PRMM.ERGE10:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE10 - Quantity of precipitation >= 10 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE10 - Quantité de précipitations >= 10 mm [probabilité %]
+        processing:
+            - BANDS=4
+    GEPS.DIAG.120_PRMM.ERGE15:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE15 - Quantity of precipitation >= 15 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE15 - Quantité de précipitations >= 15 mm [probabilité %]
+        processing:
+            - BANDS=5
+    GEPS.DIAG.120_PRMM.ERGE20:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE20 - Quantity of precipitation >= 20 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE20 - Quantité de précipitations >= 20 mm [probabilité %]
+        processing:
+            - BANDS=6
+    GEPS.DIAG.120_PRMM.ERGE25:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE25 - Quantity of precipitation >= 25 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE25 - Quantité de précipitations >= 25 mm [probabilité %]
+        processing:
+            - BANDS=7
+    GEPS.DIAG.120_PRMM.ERGE30:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE30 - Quantity of precipitation >= 30 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE30 - Quantité de précipitations >= 30 mm [probabilité %]
+        processing:
+            - BANDS=8
+    GEPS.DIAG.120_PRMM.ERGE40:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE40 - Quantity of precipitation >= 40 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE40 - Quantité de précipitations >= 40 mm [probabilité %]
+        processing:
+            - BANDS=9
+    GEPS.DIAG.120_PRMM.ERGE50:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE50 - Quantity of precipitation >= 50 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE50 - Quantité de précipitations >= 50 mm [probabilité %]
+        processing:
+            - BANDS=10
+    GEPS.DIAG.120_PRMM.ERGE75:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE75 - Quantity of precipitation >= 75 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE75 - Quantité de précipitations >= 75 mm [probabilité %]
+        processing:
+            - BANDS=11
+    GEPS.DIAG.120_PRMM.ERGE100:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE100 - Quantity of precipitation >= 100 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE100 - Quantité de précipitations >= 100 mm [probabilité %]
+        processing:
+            - BANDS=12
+    GEPS.DIAG.120_PRMM.ERGE150:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE150 - Quantity of precipitation >= 150 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE150 - Quantité de précipitations >= 150 mm [probabilité %]
+        processing:
+            - BANDS=13
+    GEPS.DIAG.120_PRMM.ERGE200:
+        <<: *template_120_geps_prmm_erge
+        label_en: GEPS.DIAG.120_PRMM.ERGE200 - Quantity of precipitation >= 200 mm [probability %]
+        label_fr: GEPS.DIAG.120_PRMM.ERGE200 - Quantité de précipitations >= 200 mm [probabilité %]
+        processing:
+            - BANDS=14
+    GEPS.DIAG.120_PRMM.ERC0:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC0 - Quantity of precipitation (0th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC0 - Quantité de précipitations (0e centile)
+        processing:
+            - BANDS=22
+    GEPS.DIAG.120_PRMM.ERC10:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC10 - Quantity of precipitation (10th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC10 - Quantité de précipitations (10e centile)
+        processing:
+            - BANDS=15
+    GEPS.DIAG.120_PRMM.ERC25:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC25 - Quantity of precipitation (25th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC25 - Quantité de précipitations (25e centile)
+        processing:
+            - BANDS=16
+    GEPS.DIAG.120_PRMM.ERC50:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC50 - Quantity of precipitation (50th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC50 - Quantité de précipitations (50e centile)
+        processing:
+            - BANDS=17
+    GEPS.DIAG.120_PRMM.ERC75:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC75 - Quantity of precipitation (75th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC75 - Quantité de précipitations (75e centile)
+        processing:
+            - BANDS=18
+    GEPS.DIAG.120_PRMM.ERC90:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC90 - Quantity of precipitation (90th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC90 - Quantité de précipitations (90e centile)
+        processing:
+            - BANDS=19
+    GEPS.DIAG.120_PRMM.ERC100:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERC100 - Quantity of precipitation (100th percentile)
+        label_fr: GEPS.DIAG.120_PRMM.ERC100 - Quantité de précipitations (100e centile)
+        processing:
+            - BANDS=23
+    GEPS.DIAG.120_PRMM.ERMEAN:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERMEAN - Quantity of precipitation (mean)
+        label_fr: GEPS.DIAG.120_PRMM.ERMEAN - Quantité de précipitations (moyenne)
+        processing:
+            - BANDS=21
+    GEPS.DIAG.120_PRMM.ERSSTD:
+        <<: *template_120_geps_prmm_erc
+        label_en: GEPS.DIAG.120_PRMM.ERSSTD - Quantity of precipitation (standard deviation)
+        label_fr: GEPS.DIAG.120_PRMM.ERSSTD - Quantité de précipitations (écart-type)
         processing:
             - BANDS=20
 #    FIREWORK.HOTSPOTS:
