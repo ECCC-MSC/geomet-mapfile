@@ -1,0 +1,44 @@
+CLASS
+ NAME "0 4"
+ GROUP "GZ_STD"
+ EXPRESSION ([pixel] >= 0 AND [pixel] < 4)
+ STYLE
+  COLOR 0 0 127
+ END
+END
+
+CLASS
+ NAME "4 6"
+ GROUP "GZ_STD"
+ EXPRESSION ([pixel] >= 4 AND [pixel] < 6)
+ STYLE
+  COLOR 0 0 254
+ END
+END
+
+CLASS
+ NAME "6 8"
+ GROUP "GZ_STD"
+ EXPRESSION ([pixel] >= 6 AND [pixel] < 8)
+ STYLE
+  COLOR 0 253 255
+ END
+END
+
+CLASS
+ NAME "8 10"
+ GROUP "GZ_STD"
+ EXPRESSION ([pixel] >= 8 AND [pixel] < 10)
+ STYLE
+  COLOR 255 255 0
+ END
+END
+
+CLASS
+ NAME ">= 10"
+ GROUP "GZ_STD"
+ EXPRESSION ([pixel] >= 10)
+ STYLE
+  COLOR 127 0 0
+ END
+END  
