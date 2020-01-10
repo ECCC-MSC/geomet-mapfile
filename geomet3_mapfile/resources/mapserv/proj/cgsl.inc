@@ -1,1 +1,1 @@
-"init=epsg:102992"
+"init=epsg:102988"
