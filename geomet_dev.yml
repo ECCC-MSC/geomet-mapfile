@@ -264,7 +264,7 @@ forecast_models:
     cgsl_atmosphere_ocean: &id_cgsl_atmosphere_ocean
         mcf: nwp-models/msc_nwp_rdps.yml
         projection: mapserv/proj/cgsl.inc
-        extent: -72.985 45.490 -57.985 51.990
+        extent: -71.015 45.490 -56.015 51.990
         label_en: Coupled Gulf of Saint Lawrence (CGSL)
         label_fr: Golfe du Saint-Laurent Couplé (GSLC)
         dimensions: [500, 325]
@@ -273,9 +273,6 @@ forecast_models:
         processing: [SCALE_BUCKETS=1000]
         metadata:
             - 'wcs_enable_request=!*'
-    cgsl_atmosphere_ocean_arrow: &id_cgsl_atmosphere_ocean_arrow
-        <<: *id_cgsl_atmosphere_ocean
-        extent: 288.985 45.490 303.985 51.990
     hrdps_continental: &id_hrdps_continental
         mcf: nwp-models/msc_nwp_hrdps.yml
         projection: mapserv/proj/hrdps-continental.inc
@@ -11073,134 +11070,134 @@ layers:
 #        label_en: RDPS.CONV - Dew point temperature of the most unstable parcel [°C]
 #        label_fr: RDPS.CONV - Température du point de rosée de la parcelle la plus instable [°C]
 #        name: MU-PRC-DPT_SFC_0
-#    CGSL.ETA_UGRD:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UU - Wind at surface level [m/s]
-#        label_fr: CGSL.ETA.UU - Vent à la surface [m/s]
-#        names:
-#            - atmosphere
-#            - atmosphere
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 1,2
-#        styles:
-#            - mapserv/class/WINDARROWKNOTS.inc
-#            - mapserv/class/WINDARROW.inc
-#        symbols:
-#            - circle_wind
-#            - arrow_wind
-#    CGSL.ETA_ICEC:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICEC - Ice cover fraction
-#        label_fr: CGSL.ETA.ICEC - Fraction de glace
-#        name: ocean
-#        processing:
-#            - BANDS=1
-#        styles:
-#            - mapserv/class/SEA_ICECONC-LINEAR.inc
-#            - mapserv/class/SEA_ICECONC.inc
-#    CGSL.ETA_ICETK:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICETK - Ice thickness [m]
-#        label_fr: CGSL.ETA.ICETK - Épaisseur de la glace [m]
-#        name: ocean
-#        processing:
-#            - BANDS=2
-#        styles:
-#            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-#            - mapserv/class/SEA_ICETHICK.inc
-#            - mapserv/class/SEA_ICETHICK-CIS.inc
-#    CGSL.ETA_UICE:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UICE - Ice speed vector [m/s]
-#        label_fr: CGSL.ETA.UICE - Vecteur vitesse de glace [m/s]
-#        names:
-#            - ocean
-#            - ocean
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 3,4
-#        styles:
-#            - mapserv/class/SEA_CURARROW.inc
-#        symbols:
-#            - arrow_wind
-#    CGSL.ETA_UOGRD:
-#        <<: *template_cgsl_uv
-#        forecast_model: *id_cgsl_atmosphere_ocean_arrow
-#        label_en: CGSL.ETA.UOGRD - Surface ocean current [m/s]
-#        label_fr: CGSL.ETA.UOGRD - Courant océanique de surface [m/s]
-#        names:
-#            - ocean
-#            - ocean
-#        processing:
-#            - BANDS=1,2
-#            - UV_SPACING=20
-#            - UV_SIZE_SCALE=1
-#        uv_bands: 5,6
-#        styles:
-#            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
-#            - mapserv/class/SEA_CURARROW.inc
-#        symbols:
-#            - arrow_wind
-#    CGSL.ETA_WTMP:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.WTMP - Water temperature [K]
-#        label_fr: CGSL.ETA.WTMP - Température de l'eau [K]
-#        name: ocean
-#        processing:
-#            - BANDS=7
-#        styles:
-#            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-#            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-#            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-#            - mapserv/class/SEA_TEMPSURF-COLD.inc
-#            - mapserv/class/SEA_TEMPSURF-MID.inc
-#            - mapserv/class/SEA_TEMPSURF-WARM.inc
-#    CGSL.ETA_ICET:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICET - Ice surface temperature [K]
-#        label_fr: CGSL.ETA.ICET - Température de surface de glace [K]
-#        name: ocean
-#        processing:
-#            - BANDS=8
-#        styles:
-#            - mapserv/class/SEA_ICETEMP-LINEAR.inc
-#            - mapserv/class/SEA_ICETEMP.inc
-#            - mapserv/class/SEA_ICETEMP-CIS.inc
-#    CGSL.ETA_ICEPRS:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICEPRS - Vertically integrated ice internal pressure (or stress) [N/m]
-#        label_fr: CGSL.ETA.ICEPRS - Intégrale verticale de la pression interne [N/m]
-#        name: ocean
-#        processing:
-#            - BANDS=9
-#        styles:
-#            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-#            - mapserv/class/SEA_ICEPRESS.inc
-#            - mapserv/class/SEA_ICEPRESS-CIS.inc
-#    CGSL.ETA_ICESTG:
-#        <<: *template_cgsl
-#        forecast_model: *id_cgsl_atmosphere_ocean
-#        label_en: CGSL.ETA.ICESTG - Vertically integrated compressive ice strength [N/m]
-#        label_fr: CGSL.ETA.ICESTG - Intégrale verticale de la force de pression de glace [N/m]
-#        name: ocean
-#        processing:
-#            - BANDS=10
-#        styles:
-#            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-#            - mapserv/class/SEA_ICESTRENGTH.inc
-#            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+    CGSL.ETA_UGRD:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UU - Wind at surface level [m/s]
+        label_fr: CGSL.ETA.UU - Vent à la surface [m/s]
+        names:
+            - atmosphere
+            - atmosphere
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 1,2
+        styles:
+            - mapserv/class/WINDARROWKNOTS.inc
+            - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
+    CGSL.ETA_ICEC:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICEC - Ice cover fraction
+        label_fr: CGSL.ETA.ICEC - Fraction de glace
+        name: ocean
+        processing:
+            - BANDS=1
+        styles:
+            - mapserv/class/SEA_ICECONC-LINEAR.inc
+            - mapserv/class/SEA_ICECONC.inc
+    CGSL.ETA_ICETK:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICETK - Ice thickness [m]
+        label_fr: CGSL.ETA.ICETK - Épaisseur de la glace [m]
+        name: ocean
+        processing:
+            - BANDS=2
+        styles:
+            - mapserv/class/SEA_ICETHICK-LINEAR.inc
+            - mapserv/class/SEA_ICETHICK.inc
+            - mapserv/class/SEA_ICETHICK-CIS.inc
+    CGSL.ETA_UICE:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UICE - Ice speed vector [m/s]
+        label_fr: CGSL.ETA.UICE - Vecteur vitesse de glace [m/s]
+        names:
+            - ocean
+            - ocean
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 3,4
+        styles:
+            - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
+    CGSL.ETA_UOGRD:
+        <<: *template_cgsl_uv
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.UOGRD - Surface ocean current [m/s]
+        label_fr: CGSL.ETA.UOGRD - Courant océanique de surface [m/s]
+        names:
+            - ocean
+            - ocean
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        uv_bands: 5,6
+        styles:
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW.inc
+        symbols:
+            - arrow_wind
+    CGSL.ETA_WTMP:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.WTMP - Water temperature [K]
+        label_fr: CGSL.ETA.WTMP - Température de l'eau [K]
+        name: ocean
+        processing:
+            - BANDS=7
+        styles:
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
+            - mapserv/class/SEA_TEMPSURF-MIZ.inc
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
+            - mapserv/class/SEA_TEMPSURF-COLD.inc
+            - mapserv/class/SEA_TEMPSURF-MID.inc
+            - mapserv/class/SEA_TEMPSURF-WARM.inc
+    CGSL.ETA_ICET:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICET - Ice surface temperature [K]
+        label_fr: CGSL.ETA.ICET - Température de surface de glace [K]
+        name: ocean
+        processing:
+            - BANDS=8
+        styles:
+            - mapserv/class/SEA_ICETEMP-LINEAR.inc
+            - mapserv/class/SEA_ICETEMP.inc
+            - mapserv/class/SEA_ICETEMP-CIS.inc
+    CGSL.ETA_ICEPRS:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICEPRS - Vertically integrated ice internal pressure (or stress) [N/m]
+        label_fr: CGSL.ETA.ICEPRS - Intégrale verticale de la pression interne [N/m]
+        name: ocean
+        processing:
+            - BANDS=9
+        styles:
+            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
+            - mapserv/class/SEA_ICEPRESS.inc
+            - mapserv/class/SEA_ICEPRESS-CIS.inc
+    CGSL.ETA_ICESTG:
+        <<: *template_cgsl
+        forecast_model: *id_cgsl_atmosphere_ocean
+        label_en: CGSL.ETA.ICESTG - Vertically integrated compressive ice strength [N/m]
+        label_fr: CGSL.ETA.ICESTG - Intégrale verticale de la force de pression de glace [N/m]
+        name: ocean
+        processing:
+            - BANDS=10
+        styles:
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
+            - mapserv/class/SEA_ICESTRENGTH.inc
+            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
     REPS.MEM.ETA_PN.01:
         <<: *template_pn
         forecast_model: *id_reps_members
