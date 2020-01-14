@@ -15,7 +15,7 @@ from yaml import load, CLoader
 
 from geomet3_mapfile import __version__
 from geomet3_mapfile.plugin import load_plugin
-from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, TILEINDEX_URL, URL, STORE_TYPE, STORE_URL
+from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, URL, STORE_TYPE, STORE_URL
 from geomet3_mapfile.utils.utils import DATEFORMAT
 
 MAPFILE_BASE = f'{os.path.dirname(os.path.realpath(__file__))}{os.sep}resources{os.sep}mapfile-base.json'
@@ -26,25 +26,28 @@ THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 NOW = datetime.utcnow()
 
-provider_def = {
+CALCULATED_TIME_EXTENTS = {}
+
+PROVIDER_DEF = {
     'type': STORE_TYPE,
     'url': STORE_URL,
 }
 
-st = load_plugin('store', provider_def)
+def layer_time_config(layer_name):
+    """
+    :param layer_name: name of layer
+    :returns: `dict` of time values for layer (default time, time extent, default model run, model run extent)
+    """
 
-time_extent_key = {}
-
-
-def layer_time_config(layer_name): 
     model = layer_name.split('.')[0]
+    st = load_plugin('store', PROVIDER_DEF)
 
-    time_extent = st.get_key(f'{layer_name}_time_extent').decode('utf-8') if st.get_key(f'{layer_name}_time_extent') is not None else None  # noqa
-    model_run_extent = st.get_key(f'{layer_name}_model_run_extent').decode('utf-8') if st.get_key(f'{layer_name}_model_run_extent') is not None else None  # noqa
-    default_model_run = st.get_key(f'{layer_name}_default_model_run').decode('utf-8') if st.get_key(f'{layer_name}_default_model_run') is not None else None  # noqa
+    time_extent = st.get_key(f'{layer_name}_time_extent') if st.get_key(f'{layer_name}_time_extent') is not None else None  # noqa
+    model_run_extent = st.get_key(f'{layer_name}_model_run_extent') if st.get_key(f'{layer_name}_model_run_extent') is not None else None  # noqa
+    default_model_run = st.get_key(f'{layer_name}_default_model_run') if st.get_key(f'{layer_name}_default_model_run') is not None else None  # noqa
 
     if not time_extent:
-        LOGGER.error(f'Could not retrieve {layer_name} time extent from store.'
+        LOGGER.error(f'Could not retrieve {layer_name} time extent information from store.'
                      f' Skipping mapfile generation for this layer.')
         return False
 
@@ -54,7 +57,7 @@ def layer_time_config(layer_name):
     else:
         key = f'{model}_{interval}_future'
    
-    if key not in time_extent_key:
+    if key not in CALCULATED_TIME_EXTENTS:
     
         start = datetime.strptime(start, DATEFORMAT)
         end = datetime.strptime(end, DATEFORMAT)
@@ -84,10 +87,10 @@ def layer_time_config(layer_name):
         else:
             nearest_interval = end.strftime(DATEFORMAT)
 
-        time_extent_key[key] = nearest_interval
+        CALCULATED_TIME_EXTENTS[key] = nearest_interval
 
     else:
-        nearest_interval = time_extent_key[key]
+        nearest_interval = CALCULATED_TIME_EXTENTS[key]
 
     time_config_dict = {
         'default_time': nearest_interval,
@@ -405,7 +408,6 @@ def mapfile():
     """Generate mapfile(s)"""
     pass
 
-
 @click.command()
 @click.pass_context
 @click.option('--layer', '-lyr', help='GeoMet-Weather layer ID')
@@ -414,6 +416,8 @@ def mapfile():
               help="Write to configured store or to disk", required=True)
 def generate(ctx, layer, map_, output):
     """generate mapfile"""
+
+    st = load_plugin('store', PROVIDER_DEF)
 
     output_dir = f'{BASEDIR}{os.sep}mapfile'
     

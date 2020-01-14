@@ -27,7 +27,7 @@ import click
 from elasticsearch import Elasticsearch
 
 sys.path.append('/data/geomet/dev/src/mapserver/mapserver/build/mapscript/python')
-import mapscript
+# import mapscript
 
 from geomet3_mapfile.env import BASEDIR, TILEINDEX_URL
 

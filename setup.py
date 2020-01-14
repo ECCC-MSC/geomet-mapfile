@@ -42,7 +42,7 @@ class PyTest(Command):
     def run(self):
         import subprocess
         errno = subprocess.call([sys.executable,
-                                 'geomet3_mapfile/tests/run_tests.py'])
+                                 'tests/run_tests.py'])
         raise SystemExit(errno)
 
 
