@@ -4,7 +4,7 @@ import click
 
 # from mapfile import mapfile
 from geomet3_mapfile.utils import utils
-from geomet3_mapfile.mapfile import mapfile
+from geomet3_mapfile.mapfile_ import mapfile
 from geomet3_mapfile.store import store
 from geomet3_mapfile.wsgi import serve
 
