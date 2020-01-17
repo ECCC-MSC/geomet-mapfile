@@ -105,10 +105,10 @@ forecast_models:
     gdps: &id_gdps
         mcf: nwp-models/msc_nwp_gdps.yml
         projection: mapserv/proj/gdps.inc
-        extent: -180 -90.24 180 90
+        extent: -180 -90.075 179.925 90.075
         label_en: Global Deterministic Prediction System (GDPS)/GDPS (15 km)
         label_fr: Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
-        dimensions: [1500, 751]
+        dimensions: [2400, 1201]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
         metadata:
@@ -122,7 +122,7 @@ forecast_models:
         forecast_hour_interval: 6
     gdps_uu: &id_gdps_uu
         <<: *id_gdps
-        extent: 180 -90.24 540 90
+        extent: -180 -90.075 179.925 90.075
         metadata:
             - 'wcs_enable_request=!*'
     gdps_conv_3h: &id_gdps_conv_3h
@@ -2102,14 +2102,14 @@ layers:
         label_en: GDPS.ETA - Air temperature [°C]
         label_fr: GDPS.ETA - Température de l'air [°C]
         name: TMP_TGL_2
-#    GDPS.ETA_UU:
-#        <<: *template_uu
-#        forecast_model: *id_gdps_uu
-#        label_en: GDPS.ETA - Winds [m/s]
-#        label_fr: GDPS.ETA - Vents [m/s]
-#        names:
-#            - UGRD_TGL_10
-#            - VGRD_TGL_10
+    GDPS.ETA_UU:
+        <<: *template_uu
+        forecast_model: *id_gdps_uu
+        label_en: GDPS.ETA - Winds [m/s]
+        label_fr: GDPS.ETA - Vents [m/s]
+        names:
+            - UGRD_TGL_10
+            - VGRD_TGL_10
     GDPS.ETA_WD:
         <<: *template_wd
         forecast_model: *id_gdps
