@@ -403,8 +403,8 @@ def gen_layer(layer_name, layer_info):
     return layers
 
 
-@click.group()
-def mapfile():
+@click.group(name='mapfile')
+def generate_mapfile():
     """Generate mapfile(s)"""
     pass
 
@@ -450,37 +450,38 @@ def generate(ctx, layer, map_, output):
 
         layers = gen_layer(key, value)
 
-        for lyr in layers:
-            mapfile_copy['layers'].append(lyr)
-            all_layers.append(lyr)
+        if layers:
+            for lyr in layers:
+                mapfile_copy['layers'].append(lyr)
+                all_layers.append(lyr)
 
-        if 'outputformats' in value['forecast_model']:
-            mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']
-                                             if format_['name'] in value['forecast_model']['outputformats']]
+            if 'outputformats' in value['forecast_model']:
+                mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']
+                                                 if format_['name'] in value['forecast_model']['outputformats']]
 
-        if 'symbols' in value:
-            mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
-                                       value['symbols'] or any(symbol_ in symbol['name']
-                                                               for symbol_ in value['symbols'])]
-        else:
-            mapfile_copy['symbols'] = []
-
-        filename = f'geomet-weather-{key}.map' if map_ else f'geomet-weather-{key}_layer.map'
-        filepath = f'{output_dir}{os.sep}{filename}'
-
-        if output == 'mapfile':
-            with open(filepath, 'w', encoding='utf-8') as fh:
-                if map_:
-                    mappyfile.dump(mapfile_copy, fh)
-                else:
-                    mappyfile.dump(mapfile_copy['layers'], fh)
-
-        elif output == 'store':
-
-            if map_:
-                st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+            if 'symbols' in value:
+                mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
+                                           value['symbols'] or any(symbol_ in symbol['name']
+                                                                   for symbol_ in value['symbols'])]
             else:
-                st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
+                mapfile_copy['symbols'] = []
+
+            filename = f'geomet-weather-{key}.map' if map_ else f'geomet-weather-{key}_layer.map'
+            filepath = f'{output_dir}{os.sep}{filename}'
+
+            if output == 'mapfile':
+                with open(filepath, 'w', encoding='utf-8') as fh:
+                    if map_:
+                        mappyfile.dump(mapfile_copy, fh)
+                    else:
+                        mappyfile.dump(mapfile_copy['layers'], fh)
+
+            elif output == 'store':
+
+                if map_:
+                    st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+                else:
+                    st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
 
     if layer is None:  # generate entire mapfile
 
@@ -500,4 +501,4 @@ def generate(ctx, layer, map_, output):
     shutil.copy2(epsg_file, os.path.join(BASEDIR, output_dir))
 
 
-mapfile.add_command(generate)
+generate_mapfile.add_command(generate)

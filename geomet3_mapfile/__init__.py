@@ -4,7 +4,7 @@ import click
 
 # from mapfile import mapfile
 from geomet3_mapfile.utils import utils
-from geomet3_mapfile.mapfile_ import mapfile
+from geomet3_mapfile.mapfile import generate_mapfile
 from geomet3_mapfile.store import store
 from geomet3_mapfile.wsgi import serve
 
@@ -17,6 +17,6 @@ def cli():
 
 # cli.add_command(mapfile)
 cli.add_command(utils)
-cli.add_command(mapfile)
+cli.add_command(generate_mapfile)
 cli.add_command(store)
 cli.add_command(serve)
