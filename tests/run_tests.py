@@ -25,7 +25,7 @@ import unittest
 
 from yaml import load, CLoader
 
-from geomet3_mapfile.mapfile_ import gen_web_metadata, gen_layer
+from geomet3_mapfile.mapfile import gen_web_metadata, gen_layer
 from geomet3_mapfile.plugin import load_plugin
 from geomet3_mapfile.store.redis_ import RedisStore
 
