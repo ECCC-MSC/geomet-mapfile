@@ -93,7 +93,7 @@ class GeoMet3MapfileTest(unittest.TestCase):
         self.assertTrue(result['ows_contactinstructions'] == 'During hours of service')
         self.assertTrue(result['ows_contactinstructions_fr'] == 'Durant les heures de service')
 
-    @patch('geomet3_mapfile.mapfile_.load_plugin', return_value=Store())
+    @patch('geomet3_mapfile.mapfile.load_plugin', return_value=Store())
     def test_gen_layer(self, mock_load_plugin):
         """returns a list of mappfile layer objects of given layer"""
 
@@ -107,7 +107,7 @@ class GeoMet3MapfileTest(unittest.TestCase):
         result = gen_layer(layer_name, layer_info)
 
         self.assertTrue(result[0]['projection'] ==
-                        ['proj=longlat', 'a=6371229', 'b=6371229', 'no_defs', 'pm=-359.88'])
+                        ['proj=longlat', 'R=6371229', 'no_defs'])
         self.assertTrue(result[0]['name'] == layer_name)
         self.assertTrue(result[0]['data'] == [''])
         self.assertTrue(result[0]['metadata']['ows_title'] == ows_title)
