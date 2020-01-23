@@ -148,7 +148,7 @@ forecast_models:
         forecast_hour_interval: 6
     gdps_pres_uu_qq_wp: &id_gdps_pres_uu_qq_wp
         <<: *id_gdps_pres
-        extent: 180 -90.24 540 90
+        extent: -180 -90.075 179.925 90.075
         metadata:
             - 'wcs_enable_request=!*'
     gdps_pres_uu_qq_wp_6h: &id_gdps_pres_uu_qq_wp_6h
