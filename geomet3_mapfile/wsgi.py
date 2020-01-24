@@ -89,9 +89,10 @@ def insert_data(layer, fh, mr):
         id_ = '{}-{}'.format(layer, forecast)
 
     es = Elasticsearch()
-    
-    res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
-    
+    try:
+        res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
+    except:
+        return None
     return res['_source']['properties']['filepath']
 
 def application(env, start_response):
@@ -171,10 +172,10 @@ def application(env, start_response):
         time = request.getValueByName('TIME')
         ref_time = request.getValueByName('DIM_REFERENCE_TIME')
 
-        if time or ref_time == '':
-            time_error = "Valeur manquante pour la date et l'heure / Missing value for date or time"
+        if any(time_param == '' for time_param in [time, ref_time]):
+            time_error = "Valeur manquante pour la date ou l'heure / Missing value for date or time"
             start_response('200 OK', [('Content-type', 'text/xml')])
-            return [SERVICE_EXCEPTION.format(time_error)]
+            return [SERVICE_EXCEPTION.format(time_error).encode()]
 
         if time is None:
            time = layerobj.getMetaData('wms_timedefault') 
@@ -183,6 +184,8 @@ def application(env, start_response):
                 
         try:
             filepath = insert_data(layer, time, ref_time)
+            if filepath is None:
+                time_error = True
             layerobj.data = filepath
 
         except ValueError as err:
@@ -191,7 +194,7 @@ def application(env, start_response):
         if time_error is not None:
             time_error = 'Date et heure invalides / Invalid date and time'
             start_response('200 OK', [('Content-type', 'text/xml')])
-            return [SERVICE_EXCEPTION.format(time_error)]
+            return [SERVICE_EXCEPTION.format(time_error).encode()]
 
 
         #if request_ == 'GetCapabilities' and lang == 'fr':
