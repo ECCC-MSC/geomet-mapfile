@@ -171,6 +171,11 @@ def application(env, start_response):
         time = request.getValueByName('TIME')
         ref_time = request.getValueByName('DIM_REFERENCE_TIME')
 
+        if time or ref_time == '':
+            time_error = "Valeur manquante pour la date et l'heure / Missing value for date or time"
+            start_response('200 OK', [('Content-type', 'text/xml')])
+            return [SERVICE_EXCEPTION.format(time_error)]
+
         if time is None:
            time = layerobj.getMetaData('wms_timedefault') 
         if ref_time is None:
@@ -185,9 +190,8 @@ def application(env, start_response):
 
         if time_error is not None:
             time_error = 'Date et heure invalides / Invalid date and time'
-            response = get_custom_service_exception('NoMatch', 'time', time_error)
             start_response('200 OK', [('Content-type', 'text/xml')])
-            return [response]
+            return [SERVICE_EXCEPTION.format(time_error)]
 
 
         #if request_ == 'GetCapabilities' and lang == 'fr':
@@ -199,7 +203,15 @@ def application(env, start_response):
         #                         layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
 
     mapscript.msIO_installStdoutToBuffer()
-    request.loadParamsFromURL(env['QUERY_STRING'])
+
+    # giving we don't use properly use tileindex due to performance issues
+    # we need to remove the time parameter from the request for uvraster layer
+    if 'time' in env['QUERY_STRING'].lower():
+        query_string = env['QUERY_STRING'].split('&')
+        query_string = [x for x in query_string if not 'time' in x.lower()]
+        request.loadParamsFromURL('&'.join(query_string))
+    else:
+        request.loadParamsFromURL(env['QUERY_STRING'])
 
     try:
         LOGGER.debug('Dispatching OWS request')
