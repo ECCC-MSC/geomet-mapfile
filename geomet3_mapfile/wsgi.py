@@ -141,6 +141,15 @@ def application(env, start_response):
     LOGGER.debug('service: {}'.format(service_))
     LOGGER.debug('language: {}'.format(lang))
 
+    if layer == 'GODS':
+        with open(os.path.join(BASEDIR,
+                               'geomet3_mapfile/resources/',
+                               'other/banner.txt')) as fh:
+            start_response('200 OK',
+                           [('Content-Type', 'text/plain')])
+            msg = fh.read() 
+            return ['{}'.format(msg).encode()]
+
     if layer is not None and ',' not in layer:
         mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
             BASEDIR, layer)
@@ -151,7 +160,7 @@ def application(env, start_response):
         start_response('400 Bad Request',
                        [('Content-Type', 'application/xml')])
         msg = 'Unsupported service'
-        return [SERVICE_EXCEPTION.format(msg)]
+        return [SERVICE_EXCEPTION.format(msg).encode()]
 
     # if requesting GetCapabilities for entire service, return cache
     if request_ == 'GetCapabilities' and layer is None:
