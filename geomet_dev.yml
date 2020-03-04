@@ -11198,7 +11198,7 @@ layers:
 #        label_en: RDPS.CONV - Dew point temperature of the most unstable parcel [°C]
 #        label_fr: RDPS.CONV - Température du point de rosée de la parcelle la plus instable [°C]
 #        name: MU-PRC-DPT_SFC_0
-    CGSL.ETA_UGRD:
+    CGSL.ETA_UU:
         <<: *template_cgsl_uv
         forecast_model: *id_cgsl_atmosphere_ocean
         label_en: CGSL.ETA.UU - Wind at surface level [m/s]
