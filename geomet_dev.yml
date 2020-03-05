@@ -520,6 +520,16 @@ forecast_models:
     giops_3D_uu: &id_giops_3D_uu
         <<: *id_giops_3D
         extent: 0 -80.1 360 89.9
+    wcps: &id_wcps
+        mcf: nwp-models/msc_nwp_wcps.yml
+        projection: mapserv/proj/wcps.inc
+        extent: -94.5041667 38.9958333 -67.9958333 53.0041667
+        label_en: Water Cycle Prediction System (WCPS)
+        label_fr: Système de prévision du cycle de l'eau (SPCE)
+        dimensions: [3181, 1681]
+        processing: [SCALE_BUCKETS=1000]
+        metadata:
+            - 'wcs_formats=GEOTIFF_16 AAIGRID'
     cansips_members: &id_cansips_members
         mcf: nwp-models/msc_nwp_reps.yml
         projection: mapserv/proj/cansips.inc
@@ -1848,7 +1858,140 @@ layer_templates:
     PR_RDPA: &template_pr_rdpa
         <<: *template_pr_fr_rn
         time_enabled: 'yes'
-
+    WCPS: &template_wcps_2d
+        type: raster
+        time_enabled: 'future'
+        forecast_model: *id_wcps
+        processing:
+            - GDAL_NETCDF_BOTTOMUP=YES
+    WCPS.TM2: &template_wcps_2d_tm2
+        <<: *template_wcps_2d
+        name: votemper_depth_0.5
+        processing:
+            - SCALE=270,297
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
+            - mapserv/class/SEA_TEMPSURF-MIZ.inc
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
+            - mapserv/class/SEA_TEMPSURF-COLD.inc
+            - mapserv/class/SEA_TEMPSURF-MID.inc
+            - mapserv/class/SEA_TEMPSURF-WARM.inc
+    WCPS.GE: &template_wcps_2d_GE
+        <<: *template_wcps_2d
+        name: iicevol_sfc_0
+        styles:
+            - mapserv/class/SEA_ICETHICK-LINEAR.inc
+            - mapserv/class/SEA_ICETHICK.inc
+            - mapserv/class/SEA_ICETHICK-CIS.inc
+    WCPS.SALW: &template_wcps_2d_salw
+        <<: *template_wcps_2d
+        name: vosaline_sfc_0
+        styles:
+            - mapserv/class/SEA_SALT-DEFAULT.inc
+            - mapserv/class/SEA_SALT-COASTAL.inc
+            - mapserv/class/SEA_SALT-FRESH.inc
+            - mapserv/class/SEA_SALT-FULL.inc
+    WCPS.UU: &template_wcps_2d_uu
+        type: point
+        conntype: uvraster
+        time_enabled: 'future'
+        metadata:
+            - 'wfs_enable_request=!*'
+            - 'wcs_enable_request=!*'
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+            - GDAL_NETCDF_BOTTOMUP=YES
+        names:
+            - uwindsurf_tgl_40
+            - vwindsurf_tgl_40
+        styles:
+            - mapserv/class/WINDARROWKNOTS.inc
+            - mapserv/class/WINDARROW.inc
+        symbols:
+            - circle_wind
+            - arrow_wind
+    WCPS.SIII: &template_wcps_2d_siii
+        <<: *template_wcps_2d
+        name: iicepressure_sfc_0
+        processing:
+            - SCALE=-4429.5,79427
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
+            - mapserv/class/SEA_ICEPRESS.inc
+            - mapserv/class/SEA_ICEPRESS-CIS.inc
+    WCPS.STGI: &template_wcps_2d_stgi
+        <<: *template_wcps_2d
+        name: iicestrength_sfc_0
+        processing:
+            - SCALE=-367.5,199788.5
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
+            - mapserv/class/SEA_ICESTRENGTH.inc
+            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+    WCPS.GL: &template_wcps_2d_gl
+        <<: *template_wcps_2d
+        name: iiceconc_sfc_0
+        styles:
+            - mapserv/class/SEA_ICECONC-LINEAR.inc
+            - mapserv/class/SEA_ICECONC.inc
+            - mapserv/class/SEA_ICECONC-CIS.inc
+    WCPS.UU2W: &template_wcps_2d_uu2w
+        type: point
+        conntype: uvraster
+        time_enabled: 'future'
+        metadata:
+            - 'wfs_enable_request=!*'
+            - 'wcs_enable_request=!*'
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+            - GDAL_NETCDF_BOTTOMUP=YES
+        names:
+            - vozocrtx_depth_0.5
+            - vomecrty_depth_0.5
+        styles:
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+        symbols:
+            - arrow_wind
+    WCPS.SSH: &template_wcps_2d_ssh
+        <<: *template_wcps_2d
+        name: sossheig_sfc_0
+        processing:
+            - SCALE=-4.19,2.64
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.inc
+            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.inc
+            - mapserv/class/SEA_SURFACE_HEIGHT-MID.inc
+    WCPS.UUI: &template_wcps_2d_uui
+        <<: *template_wcps_2d_uu
+        names:
+            - itzocrtx_sfc_0
+            - itmecrty_sfc_0
+    WCPS.TT: &template_wcps_2d_tt
+        <<: *template_wcps_2d
+        name: tairsurf_tgl_40
+        styles:
+            - mapserv/class/TEMPERATURE-KELVIN.inc
+            - mapserv/class/TEMPSUMMER-KELVIN.inc
+            - mapserv/class/TEMPWINTER-KELVIN.inc
+    WCPS.MLW: &template_wcps_2d_mlw
+        <<: *template_wcps_2d
+        name: sokaraml_sfc_0
+        processing:
+            - SCALE=0.7,3365.6
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_DEPTH-DEFAULT.inc
+            - mapserv/class/SEA_DEPTH-SHALLOW.inc
+            - mapserv/class/SEA_DEPTH-MID.inc
+            - mapserv/class/SEA_DEPTH-DEEP.inc
 layers:
     GDPS.ETA_ES:
         <<: *template_es
@@ -26200,6 +26343,66 @@ layers:
 #        label_en: GDWPS - Ice fraction (3 hourly forecast)
 #        label_fr: GDWPS - Fraction de glace marine (prévision aux 3 heures)
 #        name: ICEC_SFC_0
+    WCPS.2D_TM2:
+        <<: *template_wcps_2d_tm2
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Sea temperature [K]
+        label_fr: WCPS.2D - Température de la mer [K]
+    WCPS.2D_GE:
+        <<: *template_wcps_2d_GE
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Volume of sea ice per unit grid cell [m]
+        label_fr: WCPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
+    WCPS.2D_SALW:
+        <<: *template_wcps_2d_salw
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Sea Water Salinity [psu]
+        label_fr: WCPS.2D - Salinité de l'eau de la mer [psu]
+    WCPS.2D_UU:
+        <<: *template_wcps_2d_uu
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Winds [m/s]
+        label_fr: WCPS.2D - Vents [m/s]
+    WCPS.2D_SIII:
+        <<: *template_wcps_2d_siii
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Vertically integrated ice internal pressure [N/m]
+        label_fr: WCPS.2D - Pression interne de la glace, intégrée verticalement [N/m]
+    WCPS.2D_STGI:
+        <<: *template_wcps_2d_stgi
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Vertically integrated compressive ice strength [N/m]
+        label_fr: WCPS.2D - Résistance de la compression de la glace, intégrée verticalement [N/m]
+    WCPS.2D_GL:
+        <<: *template_wcps_2d_gl
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Sea ice fraction
+        label_fr: WCPS.2D - Fraction de glace marine
+    WCPS.2D_UU2W:
+        <<: *template_wcps_2d_uu2w
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Ocean current [m/s]
+        label_fr: WCPS.2D - Courant océanique [m/s]
+    WCPS.2D_SSH:
+        <<: *template_wcps_2d_ssh
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Sea surface height with respect to the geoid [m]
+        label_fr: WCPS.2D - Hauteur de la surface de la mer par rapport au géoïde [m]
+    WCPS.2D_UUI:
+        <<: *template_wcps_2d_uui
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Ice velocity [m/s]
+        label_fr: WCPS.2D - Vélocité de la glace [m/s]
+    WCPS.2D_TT:
+        <<: *template_wcps_2d_tt
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Air temperature [K]
+        label_fr: WCPS.2D - Température de l'air [K]
+    WCPS.2D_MLW:
+        <<: *template_wcps_2d_mlw
+        forecast_model: *id_wcps
+        label_en: WCPS.2D - Mixed layer depth based on a density criterion [m]
+        label_fr: WCPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
 #    CURRENT_CONDITIONS:
 #        type: point
 #        encoding: LATIN1
