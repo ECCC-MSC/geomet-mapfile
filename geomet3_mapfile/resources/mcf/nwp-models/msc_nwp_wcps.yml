@@ -1,0 +1,156 @@
+%YAML 1.1
+---
+
+# msc-metadata:
+#   contacts:
+#       - role: Data steward
+#         name: Benoit Pouliot
+#         organization:
+#         email: benoit.pouliot@canada.ca
+
+#pygeometa mcf info
+mcf:
+    version: 1.0
+
+metadata:
+    charset: utf8
+    hierarchylevel: dataset
+    # Identifier, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/UUID , URL USED: http://dd.weather.gc.ca/model_wcps/
+    identifier: de95ea53-469c-54ec-8d03-4502a6fd10c1
+    # Primary language of the record, metadata still supports multiple languages
+    language: en
+    language_alternate: fr
+    # The following $date$ value is updated when pygeometa is ran
+    datestamp: $date$
+    # dataseturi is optional according to the HNAP Guidelines, but is mandatory for pygeometa
+    #### Next line will be updated according once we to the MSC Data Taxonomy...
+    dataseturi: urn:x-msc-smc:md:weather-meteo::nwp.wcps
+    # parentidentifier is conditional to an existing higher level
+    # parentidentifier=someparentid -> NO PARENT ID for the generic nwp.gdps dataset
+
+spatial:
+    datatype: grid
+    geomtype: solid
+    crs: 4326
+    bbox: -94.5041667 38.9958333 -67.9958333 53.0041667
+
+identification:
+    # Primary language, metadata records are both in English and French when appropriate
+    language: eng; CAN
+    charset: utf8
+    # Title source is: https://wiki.cmc.ec.gc.ca/wiki/CPOP/Liste_des_systemes
+    title_en: Water Cycle Prediction System
+    title_fr: Système de prévision du cycle de l'eau
+    # Abstracts found on https://eccc-msc.github.io/open-data/msc-data/nwp_wcps/readme_wcps_en/
+    abstract_en: The Water Cycle Prediction System (WCPS) simulates the complete water cycle, following water as it moves from the atmosphere to the surface, through the river network and into lakes, and back to the atmosphere. WCPS was implemented over the Laurentian Great Lakes and St. Lawrence River watershed in support of Canada's obligations under the Boundary Waters Treaty (International Joint Commission 2016). WCPS is a chain of interconnected models. The models represent processes in the atmosphere, at the land surface and in the soil (at 10-km resolution), in large bodies of water and marine ice (at 2-km resolution), and in rivers (at 1-km resolution). WCPS produces two forecasts per day for the next three and a half days (84 hours).
+    abstract_fr: Le Système de prévision du cycle de l'eau (SPCE) simule le cycle complet de l’eau, suivant l’eau qui se déplace de l’atmosphère à la surface, par les réseaux fluviaux et vers les lacs, puis qui retourne dans l’atmosphère. Le SPCE a été mis en place pour le bassin versant des Grands Lacs Laurentiens et du fleuve Saint-Laurent à l’appui des obligations du Canada en vertu du Traité relatif aux eaux limitrophes (Commission Mixte Internationale, 2016). Le SPCE consiste en une chaîne de modèles interreliés. Les modèles représentent les processus dans l’atmosphère, à la surface du sol et dans le sol (à une résolution de 10 km), dans les vastes plans d’eau et la glace marine (à une résolution de 2 km) et dans les rivières (à une résolution de 1 km). Le SPCE-GLS produit deux prévisions par jour pour les trois jours et demi suivants (84 heures).
+
+    dates:
+        # Date when the model became publicly accessible
+        creation: 2020-01-29
+        # The following $date$ value is updated when pygeometa is ran
+        publication: $date$
+
+    keywords:
+        default:
+            # No non-CST keywords specified for this dataset
+            keywords_en:
+                - Prediction
+                - Regional
+                - Deterministic
+            keywords_fr:
+                - Prévision
+                - Régional
+                - Déterministe
+        # A minimum of one keyword from http://www.thesaurus.gc.ca/default.asp?lang=En&n=EAEAD1E6-1 is required
+        gc_cst:
+            # keywords_type is constrained by a list
+            keywords_type: theme
+            # For gc_cst keywords, see https://wiki.cmc.ec.gc.ca/wiki/DPS/Metadata/Keywords
+            keywords_en:
+                - Forecasting
+                - Water
+                - Oceans
+                - Ocean energy
+                - Seas
+            keywords_fr:
+                - Prévision
+                - Eau
+                - Océan
+                - Énergie marine
+                - Mer
+
+        # Amongst the possible values from ECDC: Air, Air - Quality, Other, Pollution and Waste, Water, Weather and Climate   => French counterparts: Temps et climat
+
+        hnap_category_information:
+            keywords_en:
+                - Water
+                - Weather and Climate
+            keywords_fr:
+                - Eau
+                - Temps et climat
+        # Amongst the possible values from ECDC: International  => French counterparts: Internationale
+        hnap_category_geography:
+            keywords_en:
+                - International
+            keywords_fr:
+                - Internationale
+        # Amongst the possible values from ECDC: Atmosphere => French counterparts: Atmosphère
+        hnap_category_content:
+            keywords_en:
+                - Ocean
+            keywords_fr:
+                - Océan
+
+    # topiccategory value is constrained by a list, fixed to climatologyMeteorologyAtmosphere
+    topiccategory:
+        - Oceans
+
+    fees: None
+    accessconstraints: otherRestrictions
+    rights_en: Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)
+    rights_fr: Licence du gouvernement ouvert - Canada (https://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada)
+
+    # The next URL points to the html documentation, if any, otherwise, to the data source
+    # This documentation will be moved to a better location, I informed Jamie and Serge accordingly
+    url_en: https://eccc-msc.github.io/open-data/msc-data/nwp_wcps/readme_wcps_en/
+    url_fr: https://eccc-msc.github.io/open-data/msc-data/nwp_wcps/readme_wcps_fr/
+
+    # temporal_begin is mandatory, for ongoing datasets it is set to the day it first became available
+    # temporal_begin provided by Jamie McLean
+    temporal_begin: 2019-03-04
+    temporal_end: now
+    status: onGoing
+    # Best fit amongst the possible options, see MCF_Reference.md
+    maintenancefrequency: continual
+
+
+distribution:
+    waf_eng-CAN: &id_waf_eng-CAN
+        base_mcf: ../shared/distribution-datamart.yml
+        url: https://dd.weather.gc.ca/model_wcps/
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: NetCDF
+        format_fr: NetCDF
+        format_version: 4
+    waf_fra-CAN:
+        <<: *id_waf_eng-CAN
+    wms_eng-CAN: &id_wms_eng-CAN
+        base_mcf: ../shared/distribution-geomet.yml
+        url: https://geo.weather.gc.ca/geomet/?lang=E&service=WMS&request=GetCapabilities
+        # For WMS, name_en and name_fr are the 'default layer' associated to the dataset
+        name_en: WCPS.2D_TT
+        name_fr: WCPS.2D_TT
+    wms_fra-CAN:
+        <<: *id_wms_eng-CAN
+        url: https://geo.weather.gc.ca/geomet/?lang=F&service=WMS&request=GetCapabilities
+    amqps_eng-CAN: &id_amqps_eng-CAN
+        base_mcf: ../shared/distribution-datamart-amqps.yml
+        # Example value for url: amqps://dd.weather.gc.ca/model_gem_global.25km.grib2.#
+        url: amqps://dd.weather.gc.ca/model_wcps.#
+        # Accepted values for format: AI. AMF,Application,ASCII Grid,BMP,CDED ASCII,CDR,CSV,DOC,dxf,E00,ECW,EDI,EMF,EPS,ESRI REST,EXE,FGDB / GDB,Flat raster binary,GeoPDF,GeoRSS,GeoTIF,GIF,GML,HDF,HTML,IATI,JPEG 2000,JPG,JSON,JSON Lines,KML / KMZ,NetCDF,ODP,ODS,ODT,PDF,PNG,PPT,RDF,RDFa,RSS,SAR / CCT,SAV,SEGY,SHP,SQL,SVG,TIFF,TXT,XLS,XLSM,XML,WFS,WMS,WMTS,Zip,Other
+        format_en: NetCDF
+        format_fr: NetCDF
+        format_version: 4
+    amqps_fra-CAN:
+        <<: *id_amqps_eng-CAN
