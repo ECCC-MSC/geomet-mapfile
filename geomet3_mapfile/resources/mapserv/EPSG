@@ -56,7 +56,6 @@
 <102997> +proj=stere  +lat_0=90  +lat_ts=60  +lon_0=249  +k=90  +x_0=0  +y_0=0  +a=6371229  +b=6371229  +units=m  +no_defs  <>
 <102996>  +proj=stere  +lat_0=90  +lat_ts=60  +lon_0=252  +k=90  +x_0=0  +y_0=0  +a=6371229  +b=6371229  +units=m  +no_defs  <>
 <102995>  +proj=stere  +lat_0=90  +lat_ts=60  +lon_0=244  +k=90  +x_0=0  +y_0=0  +a=6371229  +b=6371229  +units=m  +no_defs  <>
-<102994>  +proj=stere +lat_0=90 +lat_ts=60 +lon_0=245 +k=90 +x_0=0 +y_0=0 +a=6371229 +b=6371229 +units=m +no_defs <>
 <102993> +proj=stere +lat_0=90 +lat_ts=60 +lon_0=264 +k=90 +x_0=0 +y_0=0 +a=6371229 +b=6371229 +units=m +no_defs <>
 <102992> +proj=longlat +a=6371229 +b=6371229 +pm=-360 +no_defs <>
 <102991> +proj=stere +lat_0=90 +lat_ts=60 +lon_0=249 +k=90 +x_0=0 +y_0=0 +a=6371229 +b=6371229 +units=m +no_defs <> 
