@@ -43,6 +43,7 @@ def layer_time_config(layer_name):
     st = load_plugin('store', PROVIDER_DEF)
 
     time_extent = st.get_key(f'{layer_name}_time_extent') if st.get_key(f'{layer_name}_time_extent') is not None else None  # noqa
+    default_time = st.get_key(f'{layer_name}_default_time') if st.get_key(f'{layer_name}_default_time') is not None else None  # noqa
     model_run_extent = st.get_key(f'{layer_name}_model_run_extent') if st.get_key(f'{layer_name}_model_run_extent') is not None else None  # noqa
     default_model_run = st.get_key(f'{layer_name}_default_model_run') if st.get_key(f'{layer_name}_default_model_run') is not None else None  # noqa
 
@@ -51,46 +52,50 @@ def layer_time_config(layer_name):
                      f' Skipping mapfile generation for this layer.')
         return False
 
-    start, end, interval = time_extent.split('/')
-    if default_model_run == start:
-        key = f'{model}_{interval}'
+    if (time_extent and default_time) and not \
+            (model_run_extent and default_model_run):
+        nearest_interval = default_time
     else:
-        key = f'{model}_{interval}_future'
-   
-    if key not in CALCULATED_TIME_EXTENTS:
-    
-        start = datetime.strptime(start, DATEFORMAT)
-        end = datetime.strptime(end, DATEFORMAT)
-        regex_result = re.search('^P(T?)(\\d+)(.)', interval)
-        time_ = regex_result.group(1)
-        duration = regex_result.group(2)
-        unit = regex_result.group(3)
-
-        if time_ is None:
-            # this means the duration is a date
-            if unit == 'M':
-                relative_delta = relativedelta(months=int(duration))
+        start, end, interval = time_extent.split('/')
+        if default_model_run == start:
+            key = f'{model}_{interval}'
         else:
-            # this means the duration is a time
-            if unit == 'H':
-                relative_delta = timedelta(hours=int(duration))
-            elif unit == 'M':
-                relative_delta = timedelta(minutes=int(duration))
+            key = f'{model}_{interval}_future'
 
-        intervals = []
+        if key not in CALCULATED_TIME_EXTENTS:
 
-        if start != end and relative_delta != timedelta(minutes=0):
-            while start <= end:
-                intervals.append(start)
-                start += relative_delta
-            nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)
+            start = datetime.strptime(start, DATEFORMAT)
+            end = datetime.strptime(end, DATEFORMAT)
+            regex_result = re.search('^P(T?)(\\d+)(.)', interval)
+            time_ = regex_result.group(1)
+            duration = regex_result.group(2)
+            unit = regex_result.group(3)
+
+            if time_ is None:
+                # this means the duration is a date
+                if unit == 'M':
+                    relative_delta = relativedelta(months=int(duration))
+            else:
+                # this means the duration is a time
+                if unit == 'H':
+                    relative_delta = timedelta(hours=int(duration))
+                elif unit == 'M':
+                    relative_delta = timedelta(minutes=int(duration))
+
+            intervals = []
+
+            if start != end and relative_delta != timedelta(minutes=0):
+                while start <= end:
+                    intervals.append(start)
+                    start += relative_delta
+                nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)
+            else:
+                nearest_interval = end.strftime(DATEFORMAT)
+
+            CALCULATED_TIME_EXTENTS[key] = nearest_interval
+
         else:
-            nearest_interval = end.strftime(DATEFORMAT)
-
-        CALCULATED_TIME_EXTENTS[key] = nearest_interval
-
-    else:
-        nearest_interval = CALCULATED_TIME_EXTENTS[key]
+            nearest_interval = CALCULATED_TIME_EXTENTS[key]
 
     time_config_dict = {
         'default_time': nearest_interval,
@@ -328,9 +333,10 @@ def gen_layer(layer_name, layer_info):
             layer['metadata']['wms_reference_time_item'] = 'properties.reference_datetime'
             layer['metadata']['wms_reference_time_units'] = 'ISO8601'
             layer['metadata']['wms_timeextent'] = time_dict['time_extent']
-            layer['metadata']['wms_timedefault'] = time_dict['default_time']
-            layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']
             layer['metadata']['wms_reference_time_default'] = time_dict['default_model_run']
+            layer['metadata']['wms_timedefault'] = time_dict['default_time']
+            if time_dict['default_model_run']:
+                layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']
 
         if 'forecast_hour_interval' in layer_info['forecast_model']:
             seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60

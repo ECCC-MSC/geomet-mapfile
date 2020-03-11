@@ -26343,66 +26343,66 @@ layers:
 #        label_en: GDWPS - Ice fraction (3 hourly forecast)
 #        label_fr: GDWPS - Fraction de glace marine (prévision aux 3 heures)
 #        name: ICEC_SFC_0
-    WCPS.2D_TM2:
-        <<: *template_wcps_2d_tm2
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Sea temperature [K]
-        label_fr: WCPS.2D - Température de la mer [K]
-    WCPS.2D_GE:
-        <<: *template_wcps_2d_GE
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Volume of sea ice per unit grid cell [m]
-        label_fr: WCPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
-    WCPS.2D_SALW:
-        <<: *template_wcps_2d_salw
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Sea Water Salinity [psu]
-        label_fr: WCPS.2D - Salinité de l'eau de la mer [psu]
-    WCPS.2D_UU:
-        <<: *template_wcps_2d_uu
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Winds [m/s]
-        label_fr: WCPS.2D - Vents [m/s]
-    WCPS.2D_SIII:
-        <<: *template_wcps_2d_siii
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Vertically integrated ice internal pressure [N/m]
-        label_fr: WCPS.2D - Pression interne de la glace, intégrée verticalement [N/m]
-    WCPS.2D_STGI:
-        <<: *template_wcps_2d_stgi
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Vertically integrated compressive ice strength [N/m]
-        label_fr: WCPS.2D - Résistance de la compression de la glace, intégrée verticalement [N/m]
-    WCPS.2D_GL:
-        <<: *template_wcps_2d_gl
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Sea ice fraction
-        label_fr: WCPS.2D - Fraction de glace marine
-    WCPS.2D_UU2W:
-        <<: *template_wcps_2d_uu2w
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Ocean current [m/s]
-        label_fr: WCPS.2D - Courant océanique [m/s]
-    WCPS.2D_SSH:
-        <<: *template_wcps_2d_ssh
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Sea surface height with respect to the geoid [m]
-        label_fr: WCPS.2D - Hauteur de la surface de la mer par rapport au géoïde [m]
-    WCPS.2D_UUI:
-        <<: *template_wcps_2d_uui
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Ice velocity [m/s]
-        label_fr: WCPS.2D - Vélocité de la glace [m/s]
-    WCPS.2D_TT:
-        <<: *template_wcps_2d_tt
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Air temperature [K]
-        label_fr: WCPS.2D - Température de l'air [K]
-    WCPS.2D_MLW:
-        <<: *template_wcps_2d_mlw
-        forecast_model: *id_wcps
-        label_en: WCPS.2D - Mixed layer depth based on a density criterion [m]
-        label_fr: WCPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
+#    WCPS.2D_TM2:
+#        <<: *template_wcps_2d_tm2
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Sea temperature [K]
+#        label_fr: WCPS.2D - Température de la mer [K]
+#    WCPS.2D_GE:
+#        <<: *template_wcps_2d_GE
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Volume of sea ice per unit grid cell [m]
+#        label_fr: WCPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
+#    WCPS.2D_SALW:
+#        <<: *template_wcps_2d_salw
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Sea Water Salinity [psu]
+#        label_fr: WCPS.2D - Salinité de l'eau de la mer [psu]
+#    WCPS.2D_UU:
+#        <<: *template_wcps_2d_uu
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Winds [m/s]
+#        label_fr: WCPS.2D - Vents [m/s]
+#    WCPS.2D_SIII:
+#        <<: *template_wcps_2d_siii
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Vertically integrated ice internal pressure [N/m]
+#        label_fr: WCPS.2D - Pression interne de la glace, intégrée verticalement [N/m]
+#    WCPS.2D_STGI:
+#        <<: *template_wcps_2d_stgi
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Vertically integrated compressive ice strength [N/m]
+#        label_fr: WCPS.2D - Résistance de la compression de la glace, intégrée verticalement [N/m]
+#    WCPS.2D_GL:
+#        <<: *template_wcps_2d_gl
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Sea ice fraction
+#        label_fr: WCPS.2D - Fraction de glace marine
+#    WCPS.2D_UU2W:
+#        <<: *template_wcps_2d_uu2w
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Ocean current [m/s]
+#        label_fr: WCPS.2D - Courant océanique [m/s]
+#    WCPS.2D_SSH:
+#        <<: *template_wcps_2d_ssh
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Sea surface height with respect to the geoid [m]
+#        label_fr: WCPS.2D - Hauteur de la surface de la mer par rapport au géoïde [m]
+#    WCPS.2D_UUI:
+#        <<: *template_wcps_2d_uui
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Ice velocity [m/s]
+#        label_fr: WCPS.2D - Vélocité de la glace [m/s]
+#    WCPS.2D_TT:
+#        <<: *template_wcps_2d_tt
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Air temperature [K]
+#        label_fr: WCPS.2D - Température de l'air [K]
+#    WCPS.2D_MLW:
+#        <<: *template_wcps_2d_mlw
+#        forecast_model: *id_wcps
+#        label_en: WCPS.2D - Mixed layer depth based on a density criterion [m]
+#        label_fr: WCPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
 #    CURRENT_CONDITIONS:
 #        type: point
 #        encoding: LATIN1
@@ -26560,22 +26560,22 @@ layers:
 #            - mapserv/class/RADARURPPRECIPR.inc
 #            - mapserv/class/RADARURPPRECIPR-LINEAR.inc
 #            - mapserv/class/RADARURPPRECIPR14.inc
-    RADAR_1KM_RSNO:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/hr]
-        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/hr]
-        variable_type: CMHR
-        metadata:
-            - 'wcs_enable_request=!*'
-        styles:
-            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS8.inc
-            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS.inc
-            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS14.inc
+#    RADAR_1KM_RSNO:
+#        type: raster
+#        time_enabled: 'yes'
+#        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
+#        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/hr]
+#        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/hr]
+#        variable_type: CMHR
+#        metadata:
+#            - 'wcs_enable_request=!*'
+#        styles:
+#            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
+#            - mapserv/class/RADARURPPRECIPS8.inc
+#            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
+#            - mapserv/class/RADARURPPRECIPS.inc
+#            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
+#            - mapserv/class/RADARURPPRECIPS14.inc
 #    RADAR_1KM_RDBR:
 #        type: raster
 #        time_enabled: 'yes'
