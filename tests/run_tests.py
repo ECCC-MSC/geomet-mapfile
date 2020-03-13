@@ -38,8 +38,12 @@ def msg(test_id, test_description):
 
 
 class Store:
-    """To avoid using a redis store for the unit tests
-       This way we mimic the store function and simply use the yamls"""
+    """
+    To avoid using a redis store for the unit tests
+    This way we mimic the store function and simply use the yamls.
+    The `get_key` try/except is there to replicate redis-py's get command
+    which returns None if a key does not exist.
+    """
 
     def __init__(self):
         self.data = {
@@ -49,7 +53,10 @@ class Store:
         }
 
     def get_key(self, key):
-        return self.data[key]
+        try:
+            return self.data[key]
+        except KeyError:
+            return None
 
 
 class GeoMet3MapfileTest(unittest.TestCase):
