@@ -13,10 +13,10 @@ import click
 import mappyfile
 from yaml import load, CLoader
 
-from geomet3_mapfile import __version__
-from geomet3_mapfile.plugin import load_plugin
-from geomet3_mapfile.env import BASEDIR, DATADIR, CONFIG, URL, STORE_TYPE, STORE_URL
-from geomet3_mapfile.utils.utils import DATEFORMAT
+from geomet_mapfile import __version__
+from geomet_mapfile.plugin import load_plugin
+from geomet_mapfile.env import BASEDIR, DATADIR, CONFIG, URL, STORE_TYPE, STORE_URL
+from geomet_mapfile.utils.utils import DATEFORMAT
 
 MAPFILE_BASE = f'{os.path.dirname(os.path.realpath(__file__))}{os.sep}resources{os.sep}mapfile-base.json'
 
