@@ -3,10 +3,10 @@ __version__ = '0.0.dev0'
 import click
 
 # from mapfile import mapfile
-from geomet3_mapfile.utils import utils
-from geomet3_mapfile.mapfile import generate_mapfile
-from geomet3_mapfile.store import store
-from geomet3_mapfile.wsgi import serve
+from geomet_mapfile.utils import utils
+from geomet_mapfile.mapfile import generate_mapfile
+from geomet_mapfile.store import store
+from geomet_mapfile.wsgi import serve
 
 
 @click.group()

@@ -24,7 +24,7 @@ LOGGER = logging.getLogger(__name__)
 
 PLUGINS = {
     'store': {
-        'Redis': 'geomet3_mapfile.store.redis_.RedisStore'
+        'Redis': 'geomet_mapfile.store.redis_.RedisStore'
     },
 }
 

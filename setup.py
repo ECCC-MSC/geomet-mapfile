@@ -60,7 +60,7 @@ class PyCoverage(Command):
 
         errno = subprocess.call(['coverage', 'run', '--source=mscGeoUsage',
                                  '-m', 'unittest',
-                                 'geomet3_mapfile.tests.run_tests'])
+                                 'geomet_mapfile.tests.run_tests'])
         errno = subprocess.call(['coverage', 'report', '-m'])
         raise SystemExit(errno)
 
@@ -75,7 +75,7 @@ def read(filename, encoding='utf-8'):
 
 def get_package_version():
     """get version from top-level package init"""
-    version_file = read('geomet3_mapfile/__init__.py')
+    version_file = read('geomet_mapfile/__init__.py')
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
                               version_file, re.M)
     if version_match:
@@ -98,7 +98,7 @@ if os.path.exists('MANIFEST'):
     os.unlink('MANIFEST')
 
 setup(
-    name='geomet3-mapfile',
+    name='geomet-mapfile',
     version=get_package_version(),
     description=DESCRIPTION.strip(),
     long_description=LONG_DESCRIPTION,
@@ -112,13 +112,13 @@ setup(
     author_email='etienne.pelletier@canada.ca',
     maintainer='Meteorological Service of Canada',
     maintainer_email='etienne.pelletier@canada.ca',
-    url='https://gccode.ssc-spc.gc.ca/etiennepelletier/geomet3-mapfile/',
+    url='https://gccode.ssc-spc.gc.ca/ec-msc/geomet3-mapfile',
     install_requires=read('requirements.txt').splitlines(),
-    packages=find_packages(exclude=['geomet3_mapfile.tests']),
+    packages=find_packages(exclude=['geomet_mapfile.tests']),
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'geomet3-mapfile=geomet3_mapfile:cli'
+            'geomet-mapfile=geomet_mapfile:cli'
         ]
     },
     classifiers=[

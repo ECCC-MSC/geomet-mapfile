@@ -3,12 +3,12 @@ from pathlib import Path
 
 import click
 from lark.exceptions import UnexpectedToken
-from geomet3_mapfile.utils.utils import clean_style
+from geomet_mapfile.utils.utils import clean_style
 
 
 @click.group()
 def utils():
-    """geomet3-mapfile utility functions"""
+    """geomet-mapfile utility functions"""
     pass
 
 
