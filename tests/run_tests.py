@@ -25,9 +25,9 @@ import unittest
 
 from yaml import load, CLoader
 
-from geomet3_mapfile.mapfile import gen_web_metadata, gen_layer
-from geomet3_mapfile.plugin import load_plugin
-from geomet3_mapfile.store.redis_ import RedisStore
+from geomet_mapfile.mapfile import gen_web_metadata, gen_layer
+from geomet_mapfile.plugin import load_plugin
+from geomet_mapfile.store.redis_ import RedisStore
 
 THISDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -59,8 +59,8 @@ class Store:
             return None
 
 
-class GeoMet3MapfileTest(unittest.TestCase):
-    """Test suite for geomet3-mapfile package"""
+class GeoMetMapfileTest(unittest.TestCase):
+    """Test suite for geomet-mapfile package"""
 
     yml_file = os.path.join(THISDIR, 'geomet-weather-test.yml')
 
@@ -85,7 +85,7 @@ class GeoMet3MapfileTest(unittest.TestCase):
     def test_gen_web_metadata(self):
         """test mapfile MAP.WEB.METADATA section creation"""
         url = "https://fake.url/geomet-weather"
-        mapfile = os.path.join(THISDIR, '../geomet3_mapfile/resources/mapfile-base.json')
+        mapfile = os.path.join(THISDIR, '../geomet_mapfile/resources/mapfile-base.json')
         with open(mapfile) as f:
             m = json.load(f, object_pairs_hook=OrderedDict)
         c = self.cfg['metadata']
@@ -100,7 +100,7 @@ class GeoMet3MapfileTest(unittest.TestCase):
         self.assertTrue(result['ows_contactinstructions'] == 'During hours of service')
         self.assertTrue(result['ows_contactinstructions_fr'] == 'Durant les heures de service')
 
-    @patch('geomet3_mapfile.mapfile.load_plugin', return_value=Store())
+    @patch('geomet_mapfile.mapfile.load_plugin', return_value=Store())
     def test_gen_layer(self, mock_load_plugin):
         """returns a list of mappfile layer objects of given layer"""
 

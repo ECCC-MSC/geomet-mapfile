@@ -2,8 +2,8 @@ import logging
 
 import redis
 
-from geomet3_mapfile import __version__
-from geomet3_mapfile.store.base import BaseStore, StoreError
+from geomet_mapfile import __version__
+from geomet_mapfile.store.base import BaseStore, StoreError
 
 LOGGER = logging.getLogger(__name__)
 
@@ -33,7 +33,7 @@ class RedisStore(BaseStore):
         :returns: `bool` of process status
         """
 
-        return self.redis.set('geomet3-mapfile-version', __version__)
+        return self.redis.set('geomet-mapfile-version', __version__)
 
     def teardown(self):
         """
@@ -41,7 +41,7 @@ class RedisStore(BaseStore):
         :returns: `bool` of process status
         """
 
-        return self.redis.delete('geomet3-mapfile-version')
+        return self.redis.delete('geomet-mapfile-version')
 
     def get_key(self, key):
         """

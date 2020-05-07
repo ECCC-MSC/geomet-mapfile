@@ -3,16 +3,16 @@ import logging
 import click
 import mappyfile
 
-from geomet3_mapfile.env import STORE_TYPE, STORE_URL
-from geomet3_mapfile.plugin import load_plugin
-from geomet3_mapfile.store.base import StoreError
+from geomet_mapfile.env import STORE_TYPE, STORE_URL
+from geomet_mapfile.plugin import load_plugin
+from geomet_mapfile.store.base import StoreError
 
 LOGGER = logging.getLogger(__name__)
 
 
 @click.group()
 def store():
-    """Manage the geomet3-mapfile store"""
+    """Manage the geomet-mapfile store"""
     pass
 
 

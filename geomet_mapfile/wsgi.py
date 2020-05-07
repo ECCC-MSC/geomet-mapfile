@@ -29,7 +29,7 @@ from elasticsearch import Elasticsearch
 sys.path.append('/data/geomet/dev/src/mapserver/mapserver/build/mapscript/python')
 import mapscript
 
-from geomet3_mapfile.env import BASEDIR, TILEINDEX_URL
+from geomet_mapfile.env import BASEDIR, TILEINDEX_URL
 
 LOGGER = logging.getLogger(__name__)
 
@@ -143,7 +143,7 @@ def application(env, start_response):
 
     if layer == 'GODS':
         with open(os.path.join(BASEDIR,
-                               'geomet3_mapfile/resources/',
+                               'geomet_mapfile/resources/',
                                'other/banner.txt')) as fh:
             start_response('200 OK',
                            [('Content-Type', 'text/plain')])
