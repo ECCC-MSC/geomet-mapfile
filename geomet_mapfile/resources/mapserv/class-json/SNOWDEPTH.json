@@ -1,0 +1,282 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 5 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.01 AND [pixel] < 0.05)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "143"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.05 AND [pixel] < 0.10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "223"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.10 AND [pixel] < 0.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "31",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.15 AND [pixel] < 0.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "63",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.20 AND [pixel] < 0.25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "127",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.25 AND [pixel] < 0.30)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "159",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 35 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.30 AND [pixel] < 0.35)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "223",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35 40 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.35 AND [pixel] < 0.40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 45 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.40 AND [pixel] < 0.45)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "63",
+                "255",
+                "191"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "45 50 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.45 AND [pixel] < 0.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "95",
+                "255",
+                "159"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 55 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.50 AND [pixel] < 0.55)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "159",
+                "255",
+                "95"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "55 60 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.55 AND [pixel] < 0.60)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "191",
+                "255",
+                "63"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 65 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.60 AND [pixel] < 0.65)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "65 70 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.65 AND [pixel] < 0.70)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "223",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70 75 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.70 AND [pixel] < 0.75)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "159",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "75 80 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.75 AND [pixel] < 0.80)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "127",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "80 85 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.80 AND [pixel] < 0.85)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "63",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "85 90 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.85 AND [pixel] < 0.90)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "31",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "90 95 cm",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.90 AND [pixel] < 0.95)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "223",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "95 cm +",
+        "group": "SNOWDEPTH",
+        "expression": "([pixel] >= 0.95)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

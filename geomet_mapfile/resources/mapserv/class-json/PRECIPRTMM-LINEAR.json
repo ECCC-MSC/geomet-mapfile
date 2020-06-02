@@ -1,0 +1,275 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.10 - 0.25",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 0.10 AND [pixel] < 0.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "197"
+            ],
+            "datarange": [
+                "0.10",
+                "0.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.25 - 0.5",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 0.25 AND [pixel] < 0.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "197",
+                "0",
+                "21",
+                "254"
+            ],
+            "datarange": [
+                "0.25",
+                "0.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 0.5 AND [pixel] < 1.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "21",
+                "254",
+                "0",
+                "126",
+                "254"
+            ],
+            "datarange": [
+                "0.25",
+                "1.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 2.5",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 1.0 AND [pixel] < 2.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "126",
+                "254",
+                "0",
+                "231",
+                "254"
+            ],
+            "datarange": [
+                "1.0",
+                "2.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.5 - 5",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 2.5 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "231",
+                "254",
+                "68",
+                "253",
+                "186"
+            ],
+            "datarange": [
+                "2.5",
+                "5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 7.5",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 5 AND [pixel] < 7.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "68",
+                "253",
+                "186",
+                "153",
+                "254",
+                "101"
+            ],
+            "datarange": [
+                "5",
+                "7.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7.5 - 10.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 7.5 AND [pixel] < 10.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "153",
+                "254",
+                "101",
+                "238",
+                "254",
+                "16"
+            ],
+            "datarange": [
+                "7.5",
+                "10.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 - 15.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 10.0 AND [pixel] < 15.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "238",
+                "254",
+                "16",
+                "254",
+                "187",
+                "0"
+            ],
+            "datarange": [
+                "10.0",
+                "15.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15.0 - 20.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 15.0 AND [pixel] < 20.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "187",
+                "0",
+                "254",
+                "101",
+                "0"
+            ],
+            "datarange": [
+                "15.0",
+                "20.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 - 25.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 20.0 AND [pixel] < 25.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "101",
+                "0",
+                "254",
+                "16",
+                "0"
+            ],
+            "datarange": [
+                "20.0",
+                "25.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25.0 - 50.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 25.0 AND [pixel] < 50.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "16",
+                "0",
+                "197",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "25.0",
+                "50.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50.0 - 100.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 50.0 AND [pixel] < 100.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "197",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "50.0",
+                "100.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 100.0",
+        "group": "PRECIPRTMM-LINEAR",
+        "expression": "([pixel] >= 100.0 AND [pixel] < 500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "100.0",
+                "500.0"
+            ]
+        }
+    }
+]

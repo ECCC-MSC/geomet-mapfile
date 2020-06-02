@@ -1,0 +1,339 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 10 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] < 100.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": [
+                "-500.0",
+                "100.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 16 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 100.00 AND [pixel] < 160.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "172"
+            ],
+            "datarange": [
+                "100.0",
+                "160.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "16 22 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 160.00 AND [pixel] < 220.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "172",
+                "0",
+                "0",
+                "217"
+            ],
+            "datarange": [
+                "160.0",
+                "220.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "22 28 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 220.00 AND [pixel] < 280.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "217",
+                "0",
+                "18",
+                "254"
+            ],
+            "datarange": [
+                "220.0",
+                "280.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "28 34 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 280.00 AND [pixel] < 340.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "18",
+                "254",
+                "0",
+                "108",
+                "254"
+            ],
+            "datarange": [
+                "280.0",
+                "340.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "34 40 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 340.00 AND [pixel] < 400.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "108",
+                "254",
+                "0",
+                "198",
+                "254"
+            ],
+            "datarange": [
+                "340.0",
+                "400.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 46 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 400.00 AND [pixel] < 460.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "198",
+                "254",
+                "36",
+                "253",
+                "218"
+            ],
+            "datarange": [
+                "400.0",
+                "460.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "46 52 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 460.00 AND [pixel] < 520.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "36",
+                "253",
+                "218",
+                "127",
+                "254",
+                "127"
+            ],
+            "datarange": [
+                "460.0",
+                "520.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "52 58 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 520.00 AND [pixel] < 580.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "254",
+                "127",
+                "218",
+                "254",
+                "36"
+            ],
+            "datarange": [
+                "520.0",
+                "580.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "58 64 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 580.00 AND [pixel] < 640.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "218",
+                "254",
+                "36",
+                "254",
+                "200",
+                "0"
+            ],
+            "datarange": [
+                "580.0",
+                "640.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "64 70 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 640.00 AND [pixel] < 700.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "200",
+                "0",
+                "254",
+                "109",
+                "0"
+            ],
+            "datarange": [
+                "640.0",
+                "700.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70 76 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 700.00 AND [pixel] < 760.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "109",
+                "0",
+                "254",
+                "18",
+                "0"
+            ],
+            "datarange": [
+                "700.0",
+                "760.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "76 82 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 760.00 AND [pixel] < 820.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "18",
+                "0",
+                "217",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "760.0",
+                "820.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "82 88 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 820.00 AND [pixel] < 880.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "217",
+                "0",
+                "0",
+                "172",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "820.0",
+                "880.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "88 94 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 880.00 AND [pixel] < 940.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "172",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "880.0",
+                "940.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 94 dam",
+        "group": "GEOPOTENTIALHEIGHT-925mb-LINEAR",
+        "expression": "([pixel] >= 940.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "940.0",
+                "1500.0"
+            ]
+        }
+    }
+]

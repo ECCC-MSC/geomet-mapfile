@@ -1,0 +1,160 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.000001 - 0.000002 ",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] < 0.000002)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000002 - 0.000003",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000002 AND [pixel] < 0.000003)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "63",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000003 - 0.000004",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000003 AND [pixel] < 0.000004)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "51",
+                "253",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000004 - 0.000005",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000004 AND [pixel] < 0.000005)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "102",
+                "253",
+                "150"
+            ],
+            "datarange": [
+                "0.000004",
+                "0.000005"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000005 - 0.000006",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000005 AND [pixel] < 0.000006)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "254",
+                "101"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000006 - 0.000007",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000006 AND [pixel] < 0.000007)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "204",
+                "254",
+                "50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000007 - 0.000008",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000007 AND [pixel] < 0.000008)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000008 - 0.000009",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000008 AND [pixel] < 0.000009)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "140",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.000009 - 0.00001",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.000009 AND [pixel] < 0.00001)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "95",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.00001 - 0.00002",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.00001 AND [pixel] < 0.00002)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "190",
+                "50",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.00002 - 0.0001",
+        "group": "HUMIDITYSPEC_50_200",
+        "expression": "([pixel] >= 0.00002)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

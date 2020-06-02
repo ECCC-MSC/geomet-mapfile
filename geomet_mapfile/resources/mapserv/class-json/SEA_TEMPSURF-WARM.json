@@ -1,0 +1,149 @@
+[
+    {
+        "__type__": "class",
+        "name": "200.00 - 293.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(200.00 <= [pixel] AND [pixel] < 293.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": [
+                "200.00",
+                "293.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "293.15 - 295.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(293.15 <= [pixel] AND [pixel] < 295.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": [
+                "293.15",
+                "295.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "295.15 - 297.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(295.15 <= [pixel] AND [pixel] < 297.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "51",
+                "253",
+                "203"
+            ],
+            "datarange": [
+                "295.15",
+                "297.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "297.15 - 299.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(297.15 <= [pixel] AND [pixel] < 299.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "253",
+                "203",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "297.15",
+                "299.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "299.15 - 301.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(299.15 <= [pixel] AND [pixel] < 301.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "50",
+                "0"
+            ],
+            "datarange": [
+                "299.15",
+                "301.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "301.15 - 303.15",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(301.15 <= [pixel] AND [pixel] < 303.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "50",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "301.15",
+                "303.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "303.15 - 400.00",
+        "group": "SEA_TEMPSURF-WARM",
+        "expression": "(303.15 <= [pixel] AND [pixel] <= 400.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "303.15",
+                "400.00"
+            ]
+        }
+    }
+]

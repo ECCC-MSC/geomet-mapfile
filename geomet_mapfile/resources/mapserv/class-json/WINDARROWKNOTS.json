@@ -1,0 +1,223 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] = 270)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ],
+            "symbol": "circle_wind",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 5 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] > 0.00 AND [uv_length] < 2.57)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 2.57 AND [uv_length] < 5.14)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "203"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 5.14 AND [uv_length] < 7.72)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "",
+                "0",
+                "40",
+                "254"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 7.72 AND [uv_length] < 10.29)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "155",
+                "254"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 10.29 AND [uv_length] < 12.86)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "13",
+                "253",
+                "241"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 12.86 AND [uv_length] < 15.43)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "106",
+                "253",
+                "148"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 35 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 15.43 AND [uv_length] < 18.01)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "199",
+                "254",
+                "55"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35 40 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 18.01 AND [uv_length] < 20.58)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "217",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 45 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 20.58 AND [uv_length] < 23.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "125",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "45 50 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 23.15 AND [uv_length] < 25.72)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "32",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 55 kts",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 25.72 AND [uv_length] < 28.29)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "203",
+                "0",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "55 kts +",
+        "group": "WINDARROWKNOTS",
+        "expression": "([uv_length] >= 28.29)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    }
+]

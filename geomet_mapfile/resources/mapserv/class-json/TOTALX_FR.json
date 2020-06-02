@@ -1,0 +1,72 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 44 - Convection peu probable",
+        "group": "TOTALX_FR",
+        "expression": "([pixel] < 44)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "43",
+                "131",
+                "186"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "44 50 - Orages probables",
+        "group": "TOTALX_FR",
+        "expression": "([pixel] >= 44 AND [pixel] < 51)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "86",
+                "104",
+                "146"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "51 52 - Tempêtes violentes isolées",
+        "group": "TOTALX_FR",
+        "expression": "([pixel] >= 51 AND [pixel] < 53)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "129",
+                "78",
+                "107"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "53 56 - Tempêtes violentes largement dispersées",
+        "group": "TOTALX_FR",
+        "expression": "([pixel] >= 53 AND [pixel] < 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "172",
+                "51",
+                "67"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "> 56 - Tempêtes violentes dispersées",
+        "group": "TOTALX_FR",
+        "expression": "([pixel] >= 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "215",
+                "25",
+                "28"
+            ]
+        }
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "__type__": "class",
+        "name": "0",
+        "group": "CAPA24",
+        "expression": "([pixel] < 0.1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "0"
+            ],
+            "opacity": "0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 - 2.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 0.1 AND [pixel] < 2.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "196",
+                "218",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 - 5.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 2.0 AND [pixel] < 5.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "175",
+                "210",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 - 10.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 5.0 AND [pixel] < 10.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "147",
+                "188",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 - 20.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 10.0 AND [pixel] < 20.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "88",
+                "152",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 - 30.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 20.0 AND [pixel] < 30.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "26",
+                "172",
+                "228"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30.0 - 40.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 30.0 AND [pixel] < 40.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "45",
+                "227",
+                "208"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40.0 - 50.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 40.0 AND [pixel] < 50.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "67",
+                "255",
+                "187"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50.0 - 60.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 50.0 AND [pixel] < 60.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "134",
+                "255",
+                "120"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60.0 - 70.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 60.0 AND [pixel] < 70.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70.0 - 80.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 70.0 AND [pixel] < 80.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "215",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "80.0 - 90.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 80.0 AND [pixel] < 90.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "63",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "90.0 - 100.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 90.0 AND [pixel] < 100.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100.0 - 120.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 100.0 AND [pixel] < 120.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "197",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "120.0 - 150.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 120.0 AND [pixel] < 150.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 150.0",
+        "group": "CAPA24",
+        "expression": "([pixel] >= 150.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

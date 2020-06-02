@@ -1,0 +1,142 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 1",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] > 0.25 AND [pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "230",
+                "230",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1 5",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 1 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "204",
+                "204",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "153",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 10 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "102",
+                "102",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 50",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 20 AND [pixel] < 50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "51",
+                "51",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 100",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 50 AND [pixel] < 100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 200",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 100 AND [pixel] < 200)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "204"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "200 500",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 200 AND [pixel] < 500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "500 1000",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 500 AND [pixel] < 1000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "102"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1000 ..",
+        "group": "RUNOFFACCUMULATION",
+        "expression": "([pixel] >= 1000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "26"
+            ]
+        }
+    }
+]

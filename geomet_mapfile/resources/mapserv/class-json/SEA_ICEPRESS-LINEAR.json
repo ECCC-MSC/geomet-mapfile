@@ -1,0 +1,504 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0 - 2500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(0.0 <= [pixel]  AND [pixel] < 2500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "124",
+                "0",
+                "0",
+                "167"
+            ],
+            "datarange": [
+                "",
+                "0.0",
+                "2500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2500.0 - 5000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(2500.0 <= [pixel]  AND [pixel] < 5000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "167",
+                "0",
+                "0",
+                "210"
+            ],
+            "datarange": [
+                "",
+                "2500.0",
+                "5000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000.0 - 7500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(5000.0 <= [pixel]  AND [pixel] < 7500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "210",
+                "0",
+                "0",
+                "255"
+            ],
+            "datarange": [
+                "",
+                "5000.0",
+                "7500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7500.0 - 10000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(7500.0 <= [pixel]  AND [pixel] < 10000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "255",
+                "",
+                "0",
+                "64",
+                "255"
+            ],
+            "datarange": [
+                "",
+                "7500.0",
+                "10000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10000.0 - 12500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(10000.0 <= [pixel]  AND [pixel] < 12500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "64",
+                "255",
+                "0",
+                "128",
+                "255"
+            ],
+            "datarange": [
+                "",
+                "10000.0",
+                "12500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "12500.0 - 15000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(12500.0 <= [pixel]  AND [pixel] < 15000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "128",
+                "255",
+                "0",
+                "188",
+                "255"
+            ],
+            "datarange": [
+                "",
+                "12500.0",
+                "15000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15000.0 - 17500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(15000.0 <= [pixel]  AND [pixel] < 17500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "188",
+                "255",
+                "0",
+                "253",
+                "255"
+            ],
+            "datarange": [
+                "",
+                "15000.0",
+                "17500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "17500.0 - 20000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(17500.0 <= [pixel]  AND [pixel] < 20000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "253",
+                "255",
+                "51",
+                "",
+                "253",
+                "203"
+            ],
+            "datarange": [
+                "",
+                "17500.0",
+                "20000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20000.0 - 22500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(20000.0 <= [pixel]  AND [pixel] < 22500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "51",
+                "",
+                "253",
+                "203",
+                "103",
+                "253",
+                "151"
+            ],
+            "datarange": [
+                "",
+                "20000.0",
+                "22500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "22500.0 - 25000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(22500.0 <= [pixel]  AND [pixel] < 25000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "103",
+                "253",
+                "151",
+                "155",
+                "254",
+                "99"
+            ],
+            "datarange": [
+                "",
+                "22500.0",
+                "25000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25000.0 - 27500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(25000.0 <= [pixel]  AND [pixel] < 27500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "155",
+                "254",
+                "99",
+                "",
+                "203",
+                "254",
+                "51"
+            ],
+            "datarange": [
+                "",
+                "25000.0",
+                "27500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "27500.0 - 30000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(27500.0 <= [pixel]  AND [pixel] < 30000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "203",
+                "254",
+                "51",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "27500.0",
+                "30000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30000.0 - 32500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(30000.0 <= [pixel]  AND [pixel] < 32500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "255",
+                "255",
+                "0",
+                "254",
+                "203",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30000.0",
+                "32500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "32500.0 - 35000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(32500.0 <= [pixel]  AND [pixel] < 35000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "203",
+                "0",
+                "254",
+                "151",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "32500.0",
+                "35000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35000.0 - 37500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(35000.0 <= [pixel]  AND [pixel] < 37500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "151",
+                "0",
+                "",
+                "254",
+                "99",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "35000.0",
+                "37500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "37500.0 - 40000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(37500.0 <= [pixel]  AND [pixel] < 40000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "99",
+                "0",
+                "254",
+                "51",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "37500.0",
+                "40000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40000.0 - 42500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(40000.0 <= [pixel]  AND [pixel] < 42500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "51",
+                "0",
+                "254",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "40000.0",
+                "42500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "42500.0 - 45000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(42500.0 <= [pixel]  AND [pixel] < 45000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "0",
+                "0",
+                "",
+                "210",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "42500.0",
+                "45000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "45000.0 - 47500.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(45000.0 <= [pixel]  AND [pixel] < 47500.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "210",
+                "0",
+                "0",
+                "167",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "45000.0",
+                "47500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "47500.0 - 50000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(47500.0 <= [pixel]  AND [pixel] < 50000.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "167",
+                "0",
+                "0",
+                "124",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "47500.0",
+                "50000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50000.0",
+        "group": "SEA_ICEPRESS-LINEAR",
+        "expression": "(50000.0 <= [pixel])",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "",
+                "",
+                "124",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

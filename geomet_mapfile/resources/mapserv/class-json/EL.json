@@ -1,0 +1,254 @@
+[
+    {
+        "__type__": "class",
+        "name": "3000 4000",
+        "group": "EL",
+        "expression": "([pixel] >=3000 AND [pixel] < 4000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "220",
+                "220",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4000 5000",
+        "group": "EL",
+        "expression": "([pixel] >= 4000 AND [pixel] < 5000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "200",
+                "200",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000 6000",
+        "group": "EL",
+        "expression": "([pixel] >= 5000 AND [pixel] < 6000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "153",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6000 7000",
+        "group": "EL",
+        "expression": "([pixel] >= 6000 AND [pixel] < 7000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "128",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7000 8000",
+        "group": "EL",
+        "expression": "([pixel] >= 7000 AND [pixel] < 8000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "8000 9000",
+        "group": "EL",
+        "expression": "([pixel] >= 8000 AND [pixel] < 9000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "9000 10000",
+        "group": "EL",
+        "expression": "([pixel] >= 9000 AND [pixel] < 10000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "220",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10000 11000",
+        "group": "EL",
+        "expression": "([pixel] >= 10000 AND [pixel] < 11000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "190",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "11000 12000",
+        "group": "EL",
+        "expression": "([pixel] >= 11000 AND [pixel] < 12000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "160",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "12000 13000",
+        "group": "EL",
+        "expression": "([pixel] >= 12000 AND [pixel] < 13000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "128",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "13000 14000",
+        "group": "EL",
+        "expression": "([pixel] >= 13000 AND [pixel] < 14000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "200",
+                "100",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "14000 15000",
+        "group": "EL",
+        "expression": "([pixel] >= 14000 AND [pixel] < 15000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15000 16000",
+        "group": "EL",
+        "expression": "([pixel] >= 15000 AND [pixel] < 16000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "180",
+                "000",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "16000 17000",
+        "group": "EL",
+        "expression": "([pixel] >= 16000 AND [pixel] < 17000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "17000 18000",
+        "group": "EL",
+        "expression": "([pixel] >= 17000 AND [pixel] < 18000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "130",
+                "225"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "18000 19000",
+        "group": "EL",
+        "expression": "([pixel] >= 18000 AND [pixel] < 19000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "19000 20000",
+        "group": "EL",
+        "expression": "([pixel] >= 19000 AND [pixel] < 20000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20000 +",
+        "group": "EL",
+        "expression": "([pixel] >= 20000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "225"
+            ]
+        }
+    }
+]

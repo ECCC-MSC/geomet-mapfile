@@ -1,0 +1,492 @@
+[
+    {
+        "__type__": "class",
+        "name": "940 944 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 94000.00 AND [pixel] < 94400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "944 948 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 94400.00 AND [pixel] < 94800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "145"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "948 952 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 94800.00 AND [pixel] < 95200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "164"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "952 956 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 95200.00 AND [pixel] < 95600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "183"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "956 960 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 95600.00 AND [pixel] < 96000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "201"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "960 964 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 96000.00 AND [pixel] < 96400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "220"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "964 968 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 96400.00 AND [pixel] < 96800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "239"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "968 972 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 96800.00 AND [pixel] < 97200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "7",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "972 976 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 97200.00 AND [pixel] < 97600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "44",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "976 980 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 97600.00 AND [pixel] < 98000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "81",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "980 984 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 98000.00 AND [pixel] < 98400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "119",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "984 988 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 98400.00 AND [pixel] < 98800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "156",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "988 992 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 98800.00 AND [pixel] < 99200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "193",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "992 996 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 99200.00 AND [pixel] < 99600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "230",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "996 1000 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 99600.00 AND [pixel] < 100000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "14",
+                "253",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1000 1004 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 100000.00 AND [pixel] < 100400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "52",
+                "253",
+                "202"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1004 1008 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 100400.00 AND [pixel] < 100800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "89",
+                "253",
+                "165"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1008 1012 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 100800.00 AND [pixel] < 101200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "254",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1012 1016 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 101200.00 AND [pixel] < 101600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "165",
+                "254",
+                "90"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1016 1020 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 101600.00 AND [pixel] < 102000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "202",
+                "254",
+                "52"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1020 1024 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 102000.00 AND [pixel] < 102400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "254",
+                "14"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1024 1028 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 102400.00 AND [pixel] < 102800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "232",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1028 1032 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 102800.00 AND [pixel] < 103200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "194",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1032 1036 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 103200.00 AND [pixel] < 103600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "157",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1036 1040 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 103600.00 AND [pixel] < 104000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "119",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1040 1044 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 104000.00 AND [pixel] < 104400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "82",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1044 1048 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 104400.00 AND [pixel] < 104800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "45",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1048 1052 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 104800.00 AND [pixel] < 105200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "7",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1052 1056 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 105200.00 AND [pixel] < 105600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "239",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1056 1060 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 105600.00 AND [pixel] < 106000.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "220",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1060 1064 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 106000.00 AND [pixel] < 106400.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "201",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1064 1068 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 106400.00 AND [pixel] < 106800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "183",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1068 1072 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 106800.00 AND [pixel] < 107200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "164",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1072 1076 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 107200.00 AND [pixel] < 107600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "145",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1076 1080 mb",
+        "group": "PRESSURE4",
+        "expression": "([pixel] >= 107600.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

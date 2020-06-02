@@ -1,0 +1,192 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 10 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 0.00 AND [pixel] < 5.14)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "130",
+                "0",
+                "0",
+                "228"
+            ],
+            "datarange": [
+                "0.0",
+                "5.14"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 5.14 AND [pixel] < 10.29)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "228",
+                "0",
+                "98",
+                "254"
+            ],
+            "datarange": [
+                "5.14",
+                "10.29"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 30 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 10.29 AND [pixel] < 15.43)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "0",
+                "98",
+                "254",
+                "0",
+                "239",
+                "254"
+            ],
+            "datarange": [
+                "10.29",
+                "15.43"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 40 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 15.43 AND [pixel] < 20.58)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "239",
+                "254",
+                "90",
+                "253",
+                "164"
+            ],
+            "datarange": [
+                "15.43",
+                "20.58"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 50 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 20.58 AND [pixel] < 25.72)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "90",
+                "253",
+                "164",
+                "212",
+                "254",
+                "42"
+            ],
+            "datarange": [
+                "20.58",
+                "25.72"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 60 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 25.72 AND [pixel] < 30.87)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "212",
+                "254",
+                "42",
+                "254",
+                "192",
+                "0"
+            ],
+            "datarange": [
+                "25.72",
+                "30.87"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 70 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 30.87 AND [pixel] < 36.01)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "192",
+                "0",
+                "254",
+                "86",
+                "0"
+            ],
+            "datarange": [
+                "30.87",
+                "36.01"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70 80 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 36.01 AND [pixel] < 41.16)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "86",
+                "0",
+                "231",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "36.01",
+                "41.16"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "80 90 kts",
+        "group": "GUST_MS2KTS-LINEAR",
+        "expression": "([pixel] >= 41.16 AND [pixel] < 46.30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "231",
+                "0",
+                "0",
+                "140",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "41.16",
+                "46.30"
+            ]
+        }
+    }
+]

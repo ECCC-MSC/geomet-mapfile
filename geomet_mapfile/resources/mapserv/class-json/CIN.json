@@ -1,0 +1,198 @@
+[
+    {
+        "__type__": "class",
+        "name": "-500 -300",
+        "group": "CIN",
+        "expression": "([pixel] >=-500 AND [pixel] < -300)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-300 -240",
+        "group": "CIN",
+        "expression": "([pixel] >= -300 AND [pixel] < -240)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "076",
+                "194"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-240 -200",
+        "group": "CIN",
+        "expression": "([pixel] >= -240 AND [pixel] < -200)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "128",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-200 -170",
+        "group": "CIN",
+        "expression": "([pixel] >= -200 AND [pixel] < -170)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "176",
+                "115"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-170 -130",
+        "group": "CIN",
+        "expression": "([pixel] >= -170 AND [pixel] < -130)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "217",
+                "082"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-130 -100",
+        "group": "CIN",
+        "expression": "([pixel] >= -130 AND [pixel] < -100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "255",
+                "051"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-100 -75",
+        "group": "CIN",
+        "expression": "([pixel] >= -100 AND [pixel] < -75)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "124",
+                "255",
+                "027"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-74 -50",
+        "group": "CIN",
+        "expression": "([pixel] >= -75 AND [pixel] < -50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -35",
+        "group": "CIN",
+        "expression": "([pixel] >= -50 AND [pixel] < -35)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "117",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -20",
+        "group": "CIN",
+        "expression": "([pixel] >= -35 AND [pixel] < -20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -5",
+        "group": "CIN",
+        "expression": "([pixel] >= -20 AND [pixel] < -5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "204"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 -1.0",
+        "group": "CIN",
+        "expression": "([pixel] >= -5 AND [pixel] < -1.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "204",
+                "245"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-1.0 -0.10",
+        "group": "CIN",
+        "expression": "([pixel] >= -1.0 AND [pixel] < -0.10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-0.10 0",
+        "group": "CIN",
+        "expression": "([pixel] >= -0.10 AND [pixel] < 0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "205",
+                "205",
+                "205"
+            ]
+        }
+    }
+]

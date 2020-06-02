@@ -1,0 +1,428 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0 - 20.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(0.0 <= [pixel] AND [pixel] < 20.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "167",
+                "0",
+                "0",
+                "167"
+            ],
+            "datarange": [
+                "0.0",
+                "20.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 - 20.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(20.0 <= [pixel] AND [pixel] < 20.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "167",
+                "0",
+                "0",
+                "210"
+            ],
+            "datarange": [
+                "20.0",
+                "20.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.7 - 21.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(20.7 <= [pixel] AND [pixel] < 21.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "210",
+                "0",
+                "0",
+                "255"
+            ],
+            "datarange": [
+                "20.7",
+                "21.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "21.3 - 22.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(21.3 <= [pixel] AND [pixel] < 22.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "255",
+                "",
+                "0",
+                "64",
+                "255"
+            ],
+            "datarange": [
+                "21.3",
+                "22.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "22.0 - 22.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(22.0 <= [pixel] AND [pixel] < 22.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "64",
+                "255",
+                "0",
+                "128",
+                "255"
+            ],
+            "datarange": [
+                "22.0",
+                "22.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "22.7 - 23.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(22.7 <= [pixel] AND [pixel] < 23.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "128",
+                "255",
+                "0",
+                "188",
+                "255"
+            ],
+            "datarange": [
+                "22.7",
+                "23.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "23.3 - 24.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(23.3 <= [pixel] AND [pixel] < 24.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "188",
+                "255",
+                "0",
+                "253",
+                "255"
+            ],
+            "datarange": [
+                "23.3",
+                "24.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "24.0 - 24.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(24.0 <= [pixel] AND [pixel] < 24.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "253",
+                "255",
+                "51",
+                "",
+                "253",
+                "203"
+            ],
+            "datarange": [
+                "24.0",
+                "24.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "24.7 - 25.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(24.7 <= [pixel] AND [pixel] < 25.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "",
+                "253",
+                "203",
+                "103",
+                "253",
+                "151"
+            ],
+            "datarange": [
+                "24.7",
+                "25.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25.3 - 26.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(25.3 <= [pixel] AND [pixel] < 26.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "103",
+                "253",
+                "151",
+                "155",
+                "254",
+                "99"
+            ],
+            "datarange": [
+                "25.3",
+                "26.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "26.0 - 26.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(26.0 <= [pixel] AND [pixel] < 26.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "155",
+                "254",
+                "99",
+                "",
+                "203",
+                "254",
+                "51"
+            ],
+            "datarange": [
+                "26.0",
+                "26.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "26.7 - 27.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(26.7 <= [pixel] AND [pixel] < 27.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "203",
+                "254",
+                "51",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "26.7",
+                "27.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "27.3 - 28.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(27.3 <= [pixel] AND [pixel] < 28.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "203",
+                "0"
+            ],
+            "datarange": [
+                "27.3",
+                "28.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "28.0 - 28.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(28.0 <= [pixel] AND [pixel] < 28.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "203",
+                "0",
+                "254",
+                "151",
+                "0"
+            ],
+            "datarange": [
+                "28.0",
+                "28.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "28.7 - 29.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(28.7 <= [pixel] AND [pixel] < 29.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "151",
+                "0",
+                "",
+                "254",
+                "99",
+                "0"
+            ],
+            "datarange": [
+                "28.7",
+                "29.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "29.3 - 30.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(29.3 <= [pixel] AND [pixel] < 30.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "99",
+                "0",
+                "254",
+                "51",
+                "0"
+            ],
+            "datarange": [
+                "29.3",
+                "30.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30.0 - 30.7",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(30.0 <= [pixel] AND [pixel] < 30.7)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "51",
+                "0",
+                "254",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "30.0",
+                "30.7"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30.7 - 31.3",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(30.7 <= [pixel] AND [pixel] < 31.3)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "0",
+                "0",
+                "",
+                "210",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "30.7",
+                "31.3"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "31.3 - 32.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(31.3 <= [pixel] AND [pixel] < 32.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "210",
+                "0",
+                "0",
+                "167",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "31.3",
+                "32.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "32.0 - 40.0",
+        "group": "SEA_SALT-COASTAL",
+        "expression": "(32.0 <= [pixel] AND [pixel] <= 40.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "167",
+                "0",
+                "0",
+                "167",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "32.0",
+                "40.0"
+            ]
+        }
+    }
+]
