@@ -1,0 +1,72 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 44 - Convection not likely",
+        "group": "TOTALX",
+        "expression": "([pixel] < 44)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "43",
+                "131",
+                "186"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "44 50 - Likely thunderstorms",
+        "group": "TOTALX",
+        "expression": "([pixel] >= 44 AND [pixel] < 51)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "86",
+                "104",
+                "146"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "51 52 - Isolated severe storms",
+        "group": "TOTALX",
+        "expression": "([pixel] >= 51 AND [pixel] < 53)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "129",
+                "78",
+                "107"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "53 56 - Widely scattered severe storms",
+        "group": "TOTALX",
+        "expression": "([pixel] >= 53 AND [pixel] < 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "172",
+                "51",
+                "67"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "> 56 - Scattered severe storms",
+        "group": "TOTALX",
+        "expression": "([pixel] >= 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "215",
+                "25",
+                "28"
+            ]
+        }
+    }
+]

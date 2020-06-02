@@ -1,0 +1,296 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.01 0.10",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.01 AND [pixel] < 0.10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "021",
+                "101",
+                "125"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 0.20",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.10 AND [pixel] < 0.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "133",
+                "133",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.20 0.30",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.20 AND [pixel] < 0.30)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "139",
+                "139",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.30 0.40",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.30 AND [pixel] < 0.40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "145",
+                "145",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.40 0.50",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.40 AND [pixel] < 0.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "151",
+                "151",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.50 0.60",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 0.50 AND [pixel] < 0.60)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "157",
+                "157",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.60 0.80",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >=0.60 AND [pixel] < 0.70)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "163",
+                "163",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.80 1",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 00.80AND [pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "169",
+                "169",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1 1.20",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1 AND [pixel] < 1.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "175",
+                "175",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.20 1.40",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1.20  AND [pixel] < 1.40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "181",
+                "181",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.40  1.60",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1.40 AND [pixel] < 1.60)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "187",
+                "187",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.60 1.80",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1.60 AND [pixel] < 1.80)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "193",
+                "193",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.60 1.80",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1.60 AND [pixel] < 1.80)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "199",
+                "199",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2 3",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 1 AND [pixel] < 2)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "205",
+                "205",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3 4",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 2 AND [pixel] < 3)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "211",
+                "211",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4 5",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 4 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "217",
+                "217",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 6",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 5 AND [pixel] < 6)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "223",
+                "223",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6 8",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 6 AND [pixel] < 8)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "229",
+                "229",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "8 10",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 8 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "235",
+                "235",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 10 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "241",
+                "241",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 ..",
+        "group": "SEA_SNOWTHICK",
+        "expression": "([pixel] >= 20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "247",
+                "247",
+                "255"
+            ]
+        }
+    }
+]

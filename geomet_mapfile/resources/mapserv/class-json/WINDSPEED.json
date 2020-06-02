@@ -1,0 +1,171 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 10 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 0.00 AND [pixel] < 2.78)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 2.78 AND [pixel] < 5.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 30 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 5.56 AND [pixel] < 8.33)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "",
+                "0",
+                "40",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 40 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 8.33 AND [pixel] < 11.11)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "155",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 50 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 11.11 AND [pixel] < 13.89)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "13",
+                "253",
+                "241"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 60 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 13.89 AND [pixel] < 16.67)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "106",
+                "253",
+                "148"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 70 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 16.67 AND [pixel] < 19.44)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "199",
+                "254",
+                "55"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70 80 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 19.44 AND [pixel] < 22.22)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "217",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "80 90 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 22.22 AND [pixel] < 25.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "125",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "90 100 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 25.00 AND [pixel] < 27.78)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "32",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 110 km/hr",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 27.78 AND [pixel] < 30.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "203",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "110 km/hr +",
+        "group": "WINDSPEEDKMH",
+        "expression": "([pixel] >= 30.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

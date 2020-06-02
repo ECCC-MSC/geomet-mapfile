@@ -1,0 +1,16 @@
+[
+    {
+        "__type__": "class",
+        "name": "Zone extent/Limite de la zone",
+        "group": "HURRICANE_LINE_RED",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "120",
+                "0",
+                "0"
+            ],
+            "width": "3"
+        }
+    }
+]

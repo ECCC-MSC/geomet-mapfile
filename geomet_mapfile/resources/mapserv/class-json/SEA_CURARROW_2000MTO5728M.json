@@ -1,0 +1,244 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.00 0.02 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.00 AND [uv_length] < 0.02)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "153",
+                "232",
+                "253"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.02 0.04 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.02 AND [uv_length] < 0.04)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "153",
+                "148",
+                "255"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.04 0.06 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.04 AND [uv_length] < 0.06)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "154",
+                "64",
+                "249"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.06 0.08 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.06 AND [uv_length] < 0.08)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "204",
+                "135",
+                "254"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.08 0.10 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.08 AND [uv_length] < 0.10)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "128",
+                "255",
+                "100"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 0.12 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.10 AND [uv_length] < 0.12)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "209",
+                "254",
+                "45"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.12 0.14 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.12 AND [uv_length] < 0.14)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "255",
+                "217",
+                "0"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.14 0.16 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.14 AND [uv_length] < 0.16)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "255",
+                "128",
+                "0"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.16 0.18 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.16 AND [uv_length] < 0.18)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "255",
+                "51",
+                "0"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.18 0.20 m/s",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.18 AND [uv_length] < 0.20)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "222",
+                "0",
+                "0"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.20 m/s +",
+        "group": "SEA_CURARROW_2000MTO5728M",
+        "expression": "([uv_length] >= 0.20 AND [uv_length] < 5.00)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow_wind",
+            "color": [
+                "128",
+                "0",
+                "0"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        },
+        "label": {
+            "__type__": "label",
+            "size": "4",
+            "angle": "45"
+        }
+    }
+]

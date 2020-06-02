@@ -1,0 +1,223 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] = 0.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ],
+            "symbol": "circle_wind",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 10 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] > 0.00 AND [uv_length] < 2.78)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 2.78 AND [uv_length] < 5.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "203"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 30 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 5.56 AND [uv_length] < 8.33)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "",
+                "0",
+                "40",
+                "254"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 40 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 8.33 AND [uv_length] < 11.11)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "155",
+                "254"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 50 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 11.11 AND [uv_length] < 13.89)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "13",
+                "253",
+                "241"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 60 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 13.89 AND [uv_length] < 16.67)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "106",
+                "253",
+                "148"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 70 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 16.67 AND [uv_length] < 19.44)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "199",
+                "254",
+                "55"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "70 80 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 19.44 AND [uv_length] < 22.22)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "217",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "80 90 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 22.22 AND [uv_length] < 25.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "125",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "90 100 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 25.00 AND [uv_length] < 27.78)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "32",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 110 km/hr",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 27.78 AND [uv_length] < 30.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "203",
+                "0",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "110 km/hr +",
+        "group": "WINDARROWKMH",
+        "expression": "([uv_length] >= 30.56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ],
+            "symbol": "arrow_wind",
+            "angle": "[uv_angle]",
+            "size": "12"
+        }
+    }
+]

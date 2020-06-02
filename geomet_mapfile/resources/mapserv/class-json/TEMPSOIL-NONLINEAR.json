@@ -1,0 +1,226 @@
+[
+    {
+        "__type__": "class",
+        "name": "210 217.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] < 217.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "217.5 225",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 217.5 AND [pixel] < 225)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "183"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "225 232.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 225 AND [pixel] < 232.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "239"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "232.5 240",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 232.5 AND [pixel] < 240)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "63",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "240 247.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 240 AND [pixel] < 247.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "147",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "247.5 255",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 247.5 AND [pixel] < 255)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "231",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "255 262.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 255 AND [pixel] < 262.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "51",
+                "253",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "262.5 270",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 262.5 AND [pixel] < 270)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "119",
+                "253",
+                "135"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "270 277.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 270 AND [pixel] < 277.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "187",
+                "254",
+                "67"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "277.5 285",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 277.5 AND [pixel] < 285)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "285 292.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 285 AND [pixel] < 292.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "187",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "292.5 300",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 292.5 AND [pixel] < 300)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "119",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "300 307.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 300 AND [pixel] < 307.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "50",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "307.5 315",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 307.5 AND [pixel] < 315)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "239",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "315 322.5",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 315 AND [pixel] < 322.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "183",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "322.5 300",
+        "group": "TEMPSOIL-NONLINEAR",
+        "expression": "([pixel] >= 322.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

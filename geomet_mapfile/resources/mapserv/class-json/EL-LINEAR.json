@@ -1,0 +1,380 @@
+[
+    {
+        "__type__": "class",
+        "name": "3000 4000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >=3000 AND [pixel] < 4000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "220",
+                "220",
+                "240",
+                "200",
+                "200",
+                "240"
+            ],
+            "datarange": [
+                "3000",
+                "4000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4000 5000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 4000 AND [pixel] < 5000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "200",
+                "200",
+                "240",
+                "153",
+                "153",
+                "153"
+            ],
+            "datarange": [
+                "4000",
+                "5000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000 6000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 5000 AND [pixel] < 6000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "153",
+                "153",
+                "153",
+                "000",
+                "128",
+                "000"
+            ],
+            "datarange": [
+                "5000",
+                "6000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6000 7000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 6000 AND [pixel] < 7000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "128",
+                "000",
+                "000",
+                "255",
+                "000"
+            ],
+            "datarange": [
+                "6000",
+                "7000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7000 8000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 7000 AND [pixel] < 8000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "255",
+                "000",
+                "255",
+                "255",
+                "000"
+            ],
+            "datarange": [
+                "7000",
+                "8000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "8000 9000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 8000 AND [pixel] < 9000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "000",
+                "240",
+                "220",
+                "000"
+            ],
+            "datarange": [
+                "8000",
+                "9000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "9000 10000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 9000 AND [pixel] < 10000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "240",
+                "220",
+                "000",
+                "240",
+                "190",
+                "000"
+            ],
+            "datarange": [
+                "9000",
+                "10000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10000 11000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 10000 AND [pixel] < 11000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "240",
+                "190",
+                "000",
+                "240",
+                "160",
+                "000"
+            ],
+            "datarange": [
+                "10000",
+                "11000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "11000 12000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 11000 AND [pixel] < 12000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "240",
+                "160",
+                "000",
+                "255",
+                "128",
+                "000"
+            ],
+            "datarange": [
+                "11000",
+                "12000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "12000 13000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 12000 AND [pixel] < 13000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "128",
+                "000",
+                "200",
+                "100",
+                "000"
+            ],
+            "datarange": [
+                "12000",
+                "13000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "13000 14000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 13000 AND [pixel] < 14000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "200",
+                "100",
+                "000",
+                "255",
+                "000",
+                "000"
+            ],
+            "datarange": [
+                "13000",
+                "14000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "14000 15000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 14000 AND [pixel] < 15000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "000",
+                "000",
+                "180",
+                "000",
+                "000"
+            ],
+            "datarange": [
+                "14000",
+                "15000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15000 16000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 15000 AND [pixel] < 16000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "180",
+                "000",
+                "000",
+                "255",
+                "000",
+                "200"
+            ],
+            "datarange": [
+                "15000",
+                "16000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "16000 17000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 16000 AND [pixel] < 17000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "000",
+                "200",
+                "255",
+                "130",
+                "225"
+            ],
+            "datarange": [
+                "16000",
+                "17000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "17000 18000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 17000 AND [pixel] < 18000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "130",
+                "225",
+                "255",
+                "255",
+                "255"
+            ],
+            "datarange": [
+                "17000",
+                "18000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "18000 19000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 18000 AND [pixel] < 19000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "255",
+                "000",
+                "255",
+                "255"
+            ],
+            "datarange": [
+                "18000",
+                "19000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "19000 20000",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 19000 AND [pixel] < 20000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "255",
+                "255",
+                "000",
+                "000",
+                "225"
+            ],
+            "datarange": [
+                "19000",
+                "20000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20000 +",
+        "group": "EL-LINEAR",
+        "expression": "([pixel] >= 20000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "000",
+                "225",
+                "000",
+                "000",
+                "225"
+            ],
+            "datarange": [
+                "20000",
+                "50000"
+            ]
+        }
+    }
+]

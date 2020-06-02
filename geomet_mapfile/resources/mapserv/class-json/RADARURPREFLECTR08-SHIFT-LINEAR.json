@@ -1,0 +1,170 @@
+[
+    {
+        "__type__": "class",
+        "name": "7.50 - 23.00 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(7.50 <= [pixel] AND [pixel] < 23.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "204",
+                "255",
+                "204",
+                "102",
+                "255",
+                "102"
+            ],
+            "datarange": [
+                "7.50",
+                "23.00"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "23.00 - 27.75 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(23.00 <= [pixel] AND [pixel] < 27.75)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "102",
+                "255",
+                "102",
+                "000",
+                "210",
+                "000"
+            ],
+            "datarange": [
+                "23.00",
+                "27.75"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "27.75 - 37.50 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(27.75 <= [pixel] AND [pixel] < 37.50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "210",
+                "000",
+                "000",
+                "110",
+                "000"
+            ],
+            "datarange": [
+                "27.75",
+                "37.50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "37.50 - 42.25 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(37.50 <= [pixel] AND [pixel] < 42.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "110",
+                "000",
+                "090",
+                "160",
+                "090"
+            ],
+            "datarange": [
+                "37.50",
+                "42.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "42.25 - 47.00 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(42.25 <= [pixel] AND [pixel] < 47.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "090",
+                "160",
+                "090",
+                "220",
+                "050",
+                "220"
+            ],
+            "datarange": [
+                "42.25",
+                "47.00"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "47.00 - 52.25 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(47.00 <= [pixel] AND [pixel] < 52.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "220",
+                "050",
+                "220",
+                "120",
+                "048",
+                "180"
+            ],
+            "datarange": [
+                "47.00",
+                "52.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "52.25 - 57.50 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(52.25 <= [pixel] AND [pixel] < 57.50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "120",
+                "048",
+                "180",
+                "077",
+                "000",
+                "128"
+            ],
+            "datarange": [
+                "52.25",
+                "57.50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 57.50 (dBZ)",
+        "group": "RADARURPREFLECTR08-SHIFT-LINEAR",
+        "expression": "(57.50 <= [pixel] AND [pixel] <= 66.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "077",
+                "000",
+                "128",
+                "046",
+                "000",
+                "090"
+            ],
+            "datarange": [
+                "57.50",
+                "66.00"
+            ]
+        }
+    }
+]

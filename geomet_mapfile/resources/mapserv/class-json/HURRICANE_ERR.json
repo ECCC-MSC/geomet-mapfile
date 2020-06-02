@@ -1,0 +1,21 @@
+[
+    {
+        "__type__": "class",
+        "name": "Single symbol",
+        "expression": "([active] = 1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "196",
+                "178",
+                "116"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    }
+]

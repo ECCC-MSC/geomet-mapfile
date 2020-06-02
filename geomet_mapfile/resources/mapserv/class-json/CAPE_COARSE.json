@@ -1,0 +1,254 @@
+[
+    {
+        "__type__": "class",
+        "name": "50 100",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >=50 AND [pixel] < 100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "220",
+                "220",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 250",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 100 AND [pixel] < 250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "200",
+                "200",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "250 500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 250 AND [pixel] < 500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "153",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "500 750",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 500 AND [pixel] < 750)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "128",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "750 1000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 750 AND [pixel] < 1000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1000 1250",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 1000 AND [pixel] < 1250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1250 1500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 1250 AND [pixel] < 1500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "220",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1500 1750",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 1500 AND [pixel] < 1750)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "190",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1750 2000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 1750 AND [pixel] < 2000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "240",
+                "160",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2000 2500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 2000 AND [pixel] < 2500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "128",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2500 3000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 2500 AND [pixel] < 3000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "200",
+                "100",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3000 3500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 3000 AND [pixel] < 3500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3500 4000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 3500 AND [pixel] < 4000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "180",
+                "000",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4000 4500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 4000 AND [pixel] < 4500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4500 5000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 4500 AND [pixel] < 5000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "130",
+                "225"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000 5500",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 5000 AND [pixel] < 5500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5500 6000",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 5500 AND [pixel] < 6000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6000 +",
+        "group": "CAPE_COARSE",
+        "expression": "([pixel] >= 6000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "255"
+            ]
+        }
+    }
+]

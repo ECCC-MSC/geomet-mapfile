@@ -1,0 +1,338 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.1 - 0.5 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(0.1 <= [pixel] AND [pixel] < 0.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "180",
+                "255",
+                "180",
+                "126",
+                "255",
+                "126"
+            ],
+            "datarange": [
+                "0.1",
+                "0.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(0.5 <= [pixel] AND [pixel] < 1.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "126",
+                "255",
+                "126",
+                "078",
+                "255",
+                "078"
+            ],
+            "datarange": [
+                "0.5",
+                "1.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 1.5 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(1.0 <= [pixel] AND [pixel] < 1.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "078",
+                "255",
+                "078",
+                "024",
+                "255",
+                "024"
+            ],
+            "datarange": [
+                "1.0",
+                "1.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.5 - 2.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(1.5 <= [pixel] AND [pixel] < 2.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "024",
+                "255",
+                "024",
+                "000",
+                "162",
+                "000"
+            ],
+            "datarange": [
+                "1.5",
+                "2.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 - 5.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(2.0 <= [pixel] AND [pixel] < 5.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "162",
+                "000",
+                "000",
+                "144",
+                "000"
+            ],
+            "datarange": [
+                "2.0",
+                "5.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 - 8.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(5.0 <= [pixel] AND [pixel] < 8.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "144",
+                "000",
+                "000",
+                "111",
+                "000"
+            ],
+            "datarange": [
+                "5.0",
+                "8.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "8.0 - 12.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(8.0 <= [pixel] AND [pixel] < 12.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "111",
+                "000",
+                "000",
+                "093",
+                "000"
+            ],
+            "datarange": [
+                "8.0",
+                "12.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "12.0 - 16.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(12.0 <= [pixel] AND [pixel] < 16.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "093",
+                "000",
+                "255",
+                "111",
+                "204"
+            ],
+            "datarange": [
+                "12.0",
+                "16.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "16.0 - 24.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(16.0 <= [pixel] AND [pixel] < 24.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "111",
+                "204",
+                "255",
+                "093",
+                "204"
+            ],
+            "datarange": [
+                "16.0",
+                "24.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "24.0 - 32.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(24.0 <= [pixel] AND [pixel] < 32.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "093",
+                "204",
+                "160",
+                "070",
+                "204"
+            ],
+            "datarange": [
+                "24.0",
+                "32.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "32.0 - 48.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(32.0 <= [pixel] AND [pixel] < 48.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "160",
+                "070",
+                "204",
+                "146",
+                "032",
+                "204"
+            ],
+            "datarange": [
+                "32.0",
+                "48.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "48.0 - 64.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(48.0 <= [pixel] AND [pixel] < 64.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "146",
+                "032",
+                "204",
+                "109",
+                "000",
+                "153"
+            ],
+            "datarange": [
+                "48.0",
+                "64.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "64.0 - 94.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(64.0 <= [pixel] AND [pixel] < 94.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "109",
+                "000",
+                "153",
+                "095",
+                "000",
+                "153"
+            ],
+            "datarange": [
+                "64.0",
+                "94.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "94.0 - 125.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(94.0 <= [pixel] AND [pixel] < 125.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "095",
+                "000",
+                "153",
+                "056",
+                "000",
+                "120"
+            ],
+            "datarange": [
+                "94.0",
+                "125.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "125.0 - 212.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(125.0 <= [pixel] AND [pixel] < 212.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "056",
+                "000",
+                "120",
+                "046",
+                "000",
+                "084"
+            ],
+            "datarange": [
+                "125.0",
+                "212.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 212.0 (mm/hr)",
+        "group": "RADARURPPRECIPR16-SHIFT-LINEAR",
+        "expression": "(212.0 <= [pixel] AND [pixel] <= 300.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "046",
+                "000",
+                "084",
+                "045",
+                "000",
+                "078"
+            ],
+            "datarange": [
+                "212.0",
+                "300.0"
+            ]
+        }
+    }
+]
