@@ -1,0 +1,226 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0 - 1.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(0.0 <= [pixel] AND [pixel] < 1.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "232"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 2.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(1.0 <= [pixel] AND [pixel] < 2.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "063",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 - 3.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(2.0 <= [pixel] AND [pixel] < 3.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "115",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3.0 - 4.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(3.0 <= [pixel] AND [pixel] < 4.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "168",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4.0 - 5.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(4.0 <= [pixel] AND [pixel] < 5.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "221",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 - 6.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(5.0 <= [pixel] AND [pixel] < 6.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "021",
+                "253",
+                "233"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6.0 - 7.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(6.0 <= [pixel] AND [pixel] < 7.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "074",
+                "253",
+                "180"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7.0 - 8.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(7.0 <= [pixel] AND [pixel] < 8.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "254",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "8.0 - 9.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(8.0 <= [pixel] AND [pixel] < 9.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "180",
+                "254",
+                "074"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "9.0 - 10.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(9.0 <= [pixel] AND [pixel] < 10.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "233",
+                "254",
+                "021"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 - 11.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(10.0 <= [pixel] AND [pixel] < 11.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "223",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "11.0 - 12.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(11.0 <= [pixel] AND [pixel] < 12.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "170",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "12.0 - 13.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(12.0 <= [pixel] AND [pixel] < 13.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "116",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "13.0 - 14.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(13.0 <= [pixel] AND [pixel] < 14.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "063",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "14.0 - 15.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(14.0 <= [pixel] AND [pixel] < 15.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "010",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15.0 - 16.0 (m)",
+        "group": "MODELWAVEHEIGHT_OCEAN",
+        "expression": "(15.0 <= [pixel] AND [pixel] <= 16.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "232",
+                "000",
+                "000"
+            ]
+        }
+    }
+]

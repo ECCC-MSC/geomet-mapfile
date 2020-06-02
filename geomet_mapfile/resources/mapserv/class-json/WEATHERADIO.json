@@ -1,0 +1,30 @@
+[
+    {
+        "__type__": "class",
+        "name": "up to -100dBm -- In building or small radio",
+        "group": "WEATHERADIO",
+        "expression": "([pixel] = 238)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "242",
+                "242",
+                "128"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "between -100 and -120dBm -- Outside or high antenna",
+        "group": "WEATHERADIO",
+        "expression": "([pixel] = 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "60",
+                "242",
+                "132"
+            ]
+        }
+    }
+]

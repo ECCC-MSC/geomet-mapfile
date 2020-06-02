@@ -1,0 +1,86 @@
+[
+    {
+        "__type__": "class",
+        "name": "2 5",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 2 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 10 AND [pixel] < 15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 15 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "165",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 40",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 20 AND [pixel] < 40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "105",
+                "180"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": " > 40",
+        "group": "REPS_STD_12-24h",
+        "expression": "([pixel] >= 40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

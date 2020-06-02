@@ -1,0 +1,324 @@
+[
+    {
+        "__type__": "class",
+        "name": "472 478 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] < 4780.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "478 484 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 4780.00 AND [pixel] < 4840.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "155"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "484 490 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 4840.00 AND [pixel] < 4900.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "184"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "490 496 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 4900.00 AND [pixel] < 4960.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "213"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "496 502 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 4960.00 AND [pixel] < 5020.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "242"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "502 508 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5020.00 AND [pixel] < 5080.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "34",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "508 514 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5080.00 AND [pixel] < 5140.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "91",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "514 520 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5140.00 AND [pixel] < 5200.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "149",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "520 526 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5200.00 AND [pixel] < 5260.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "206",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "526 532 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5260.00 AND [pixel] < 5320.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "11",
+                "253",
+                "243"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "532 538 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5320.00 AND [pixel] < 5380.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "69",
+                "253",
+                "185"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "538 544 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5380.00 AND [pixel] < 5440.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "254",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "544 550 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5440.00 AND [pixel] < 5500.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "185",
+                "254",
+                "69"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "550 556 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5500.00 AND [pixel] < 5560.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "243",
+                "254",
+                "11"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "556 562 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5560.00 AND [pixel] < 5620.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "208",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "562 568 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5620.00 AND [pixel] < 5680.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "150",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "568 574 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5680.00 AND [pixel] < 5740.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "92",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "574 580 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5740.00 AND [pixel] < 5800.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "34",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "580 586 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5800.00 AND [pixel] < 5860.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "242",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "586 592 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5860.00 AND [pixel] < 5920.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "213",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "592 598 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5920.00 AND [pixel] < 5980.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "184",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "598 604 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 5980.00 AND [pixel] < 6040.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "155",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "604 610 dam",
+        "group": "GEOPOTENTIALHEIGHT-500mb",
+        "expression": "([pixel] >= 6040.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

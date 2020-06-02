@@ -1,0 +1,374 @@
+[
+    {
+        "__type__": "class",
+        "name": "0",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] < 0.1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "0"
+            ],
+            "opacity": "0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 0.25",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 0.1 AND [pixel] < 0.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "166"
+            ],
+            "datarange": [
+                "0.1",
+                "0.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.25 0.5",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 0.25 AND [pixel] < 0.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "166",
+                "0",
+                "0",
+                "206"
+            ],
+            "datarange": [
+                "0.25",
+                "0.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 1",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 0.5 AND [pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "206",
+                "0",
+                "0",
+                "246"
+            ],
+            "datarange": [
+                "0.5",
+                "1"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1 2.5",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 1 AND [pixel] < 2.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "246",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": [
+                "1",
+                "2.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.5 5",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 2.5 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "0",
+                "142",
+                "254"
+            ],
+            "datarange": [
+                "2.5",
+                "5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 7.5",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 5 AND [pixel] < 7.5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "142",
+                "254",
+                "0",
+                "221",
+                "254"
+            ],
+            "datarange": [
+                "5",
+                "7.5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7.5 10",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 7.5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "221",
+                "254",
+                "47",
+                "253",
+                "207"
+            ],
+            "datarange": [
+                "7.5",
+                "10"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 10 AND [pixel] < 15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "47",
+                "253",
+                "207",
+                "127",
+                "254",
+                "127"
+            ],
+            "datarange": [
+                "10",
+                "15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 15 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "254",
+                "127",
+                "207",
+                "254",
+                "47"
+            ],
+            "datarange": [
+                "15",
+                "20"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 20 AND [pixel] <= 25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "207",
+                "254",
+                "47",
+                "254",
+                "223",
+                "0"
+            ],
+            "datarange": [
+                "20",
+                "25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 25 AND [pixel] <= 30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "223",
+                "0",
+                "254",
+                "143",
+                "0"
+            ],
+            "datarange": [
+                "25",
+                "30"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 40",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 30 AND [pixel] <= 40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "143",
+                "0",
+                "254",
+                "63",
+                "0"
+            ],
+            "datarange": [
+                "30",
+                "40"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 50",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 40 AND [pixel] <= 50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "63",
+                "0",
+                "246",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "40",
+                "50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 60",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 50 AND [pixel] <= 60)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "246",
+                "0",
+                "0",
+                "206",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "50",
+                "60"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 75",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 60 AND [pixel] <= 75)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "206",
+                "0",
+                "0",
+                "166",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "60",
+                "75"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "75 100",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 75 AND [pixel] <= 100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "166",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "75",
+                "100"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 100",
+        "group": "PRECIPMM-LINEAR",
+        "expression": "([pixel] >= 100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "100",
+                "300"
+            ]
+        }
+    }
+]

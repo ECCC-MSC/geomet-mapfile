@@ -1,0 +1,380 @@
+[
+    {
+        "__type__": "class",
+        "name": ".. -35 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] < -0.000350)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "128",
+                "128",
+                "128",
+                "128",
+                "128",
+                "128"
+            ],
+            "datarange": "-1.000000 -0.000350"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000350 AND [pixel] < -0.000300)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "128",
+                "128",
+                "128",
+                "152",
+                "152",
+                "152"
+            ],
+            "datarange": "-0.000350 -0.000300"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000300 AND [pixel] < -0.000250)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "152",
+                "152",
+                "152",
+                "169",
+                "169",
+                "169"
+            ],
+            "datarange": "-0.0003000 -0.000250"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000250 AND [pixel] < -0.000200)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "169",
+                "169",
+                "169",
+                "184",
+                "184",
+                "184"
+            ],
+            "datarange": "-0.000250 -0.000200"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000200 AND [pixel] < -0.000150)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "184",
+                "184",
+                "184",
+                "200",
+                "200",
+                "200"
+            ],
+            "datarange": "-0.000200 -0.000150"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000150 AND [pixel] < -0.000100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "200",
+                "200",
+                "200",
+                "211",
+                "211",
+                "211"
+            ],
+            "datarange": "-0.000150 -0.000100"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000100 AND [pixel] < -0.000050)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "211",
+                "211",
+                "211",
+                "224",
+                "224",
+                "224"
+            ],
+            "datarange": "-0.000100 -0.000050"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= -0.000050 AND [pixel] < 0.000000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "224",
+                "224",
+                "224",
+                "245",
+                "245",
+                "245"
+            ],
+            "datarange": [
+                "-0.000050",
+                "0.000000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 5 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000000 AND [pixel] < 0.000050)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "245",
+                "245",
+                "245",
+                "204",
+                "255",
+                "204"
+            ],
+            "datarange": [
+                "0.000000",
+                "0.000050"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000050 AND [pixel] < 0.000100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "204",
+                "255",
+                "204",
+                "102",
+                "255",
+                "102"
+            ],
+            "datarange": [
+                "0.000050",
+                "0.000100"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000100 AND [pixel] < 0.000150)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "102",
+                "255",
+                "102",
+                "0",
+                "204",
+                "0"
+            ],
+            "datarange": [
+                "0.000100",
+                "0.000150"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000150 AND [pixel] < 0.000200)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "204",
+                "0",
+                "153",
+                "204",
+                "0"
+            ],
+            "datarange": [
+                "0.000150",
+                "0.000200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000200 AND [pixel] < 0.000250)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "102",
+                "255",
+                "153",
+                "204",
+                "204",
+                "51"
+            ],
+            "datarange": [
+                "0.000200",
+                "0.000250"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000250 AND [pixel] < 0.000300)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "204",
+                "204",
+                "51",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "0.000250",
+                "0.000300"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 35 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000300 AND [pixel] < 0.000350)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "255",
+                "204",
+                "0"
+            ],
+            "datarange": [
+                "0.000300",
+                "0.000350"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35 40 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000350 AND [pixel] < 0.000400)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "204",
+                "0",
+                "255",
+                "153",
+                "51"
+            ],
+            "datarange": [
+                "0.000350",
+                "0.000400"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 45 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000400 AND [pixel] < 0.000450)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "153",
+                "51",
+                "255",
+                "51",
+                "0"
+            ],
+            "datarange": [
+                "0.000400",
+                "0.000450"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "45 50 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000450 AND [pixel] < 0.000500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "51",
+                "0",
+                "204",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "0.000450",
+                "0.000500"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 50 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY-LINEAR",
+        "expression": "([pixel] >= 0.000500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "204",
+                "0",
+                "0",
+                "204",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "0.000500",
+                "1.000000"
+            ]
+        }
+    }
+]

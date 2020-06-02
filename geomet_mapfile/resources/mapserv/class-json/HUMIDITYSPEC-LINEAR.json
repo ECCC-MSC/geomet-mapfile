@@ -1,0 +1,108 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.000001 - 0.003751 ",
+        "group": "HUMIDITYSPEC-LINEAR",
+        "expression": "([pixel] < 0.003751)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": [
+                "0.000001",
+                "0.003751"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.003751 - 0.008751",
+        "group": "HUMIDITYSPEC-LINEAR",
+        "expression": "([pixel] >= 0.003751 AND [pixel] < 0.008751)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "51",
+                "253",
+                "203"
+            ],
+            "datarange": [
+                "0.003751",
+                "0.008751"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.008751 - 0.015",
+        "group": "HUMIDITYSPEC-LINEAR",
+        "expression": "([pixel] >= 0.008751 AND [pixel] < 0.015)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "253",
+                "203",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "0.008751",
+                "0.015"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.015 - 0.02125",
+        "group": "HUMIDITYSPEC-LINEAR",
+        "expression": "([pixel] >= 0.015 AND [pixel] < 0.02125)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "50",
+                "0"
+            ],
+            "datarange": [
+                "0.015",
+                "0.02125"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.02125 - 0.025",
+        "group": "HUMIDITYSPEC-LINEAR",
+        "expression": "([pixel] >= 0.02125)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "50",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "0.02125",
+                "0.025"
+            ]
+        }
+    }
+]

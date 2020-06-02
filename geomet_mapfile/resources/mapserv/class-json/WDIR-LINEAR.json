@@ -1,0 +1,254 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 - 30 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(0 <= [pixel] AND [pixel] < 30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "220",
+                "000",
+                "000",
+                "165",
+                "055",
+                "000"
+            ],
+            "datarange": [
+                "0",
+                "30"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 - 60 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(30 <= [pixel] AND [pixel] < 60)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "165",
+                "055",
+                "000",
+                "110",
+                "110",
+                "000"
+            ],
+            "datarange": [
+                "30",
+                "60"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "60 - 90 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(60 <= [pixel] AND [pixel] < 90)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "110",
+                "110",
+                "000",
+                "055",
+                "165",
+                "000"
+            ],
+            "datarange": [
+                "60",
+                "90"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "90 - 120 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(90 <= [pixel] AND [pixel] < 120)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "055",
+                "165",
+                "000",
+                "000",
+                "220",
+                "000"
+            ],
+            "datarange": [
+                "90",
+                "120"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "120 - 150 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(120 <= [pixel] AND [pixel] < 150)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "220",
+                "000",
+                "000",
+                "165",
+                "055"
+            ],
+            "datarange": [
+                "120",
+                "150"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "150 - 180 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(150 <= [pixel] AND [pixel] < 180)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "165",
+                "055",
+                "000",
+                "110",
+                "110"
+            ],
+            "datarange": [
+                "150",
+                "180"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "180 - 210 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(180 <= [pixel] AND [pixel] < 210)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "110",
+                "110",
+                "000",
+                "055",
+                "165"
+            ],
+            "datarange": [
+                "180",
+                "210"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "210 - 240 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(210 <= [pixel] AND [pixel] < 240)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "055",
+                "165",
+                "000",
+                "000",
+                "220"
+            ],
+            "datarange": [
+                "210",
+                "240"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "240 - 270 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(240 <= [pixel] AND [pixel] < 270)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "000",
+                "220",
+                "055",
+                "000",
+                "165"
+            ],
+            "datarange": [
+                "240",
+                "270"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "270 - 300 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(270 <= [pixel] AND [pixel] < 300)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "055",
+                "000",
+                "165",
+                "110",
+                "000",
+                "110"
+            ],
+            "datarange": [
+                "270",
+                "300"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "300 - 330 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(300 <= [pixel] AND [pixel] < 330)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "110",
+                "000",
+                "110",
+                "165",
+                "000",
+                "055"
+            ],
+            "datarange": [
+                "300",
+                "330"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "330 - 360 (degree)",
+        "group": "WDIR-LINEAR",
+        "expression": "(330 <= [pixel] AND [pixel] <= 360)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "165",
+                "000",
+                "055",
+                "220",
+                "000",
+                "000"
+            ],
+            "datarange": [
+                "330",
+                "360"
+            ]
+        }
+    }
+]

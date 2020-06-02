@@ -1,0 +1,241 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] < 0.1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "0"
+            ],
+            "opacity": "0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 - 0.50",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 0.10 AND [pixel] < 0.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "152",
+                "203",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.50 - 1.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 0.50 AND [pixel] < 1.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "152",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.00 - 2.50",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 1.00 AND [pixel] < 2.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "45",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.50 - 5.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 2.50 AND [pixel] < 5.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "254",
+                "101"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5.00 - 7.50",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 5.00 AND [pixel] < 7.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "203",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7.50 - 10.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 7.50 AND [pixel] < 10.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "152",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.00 - 15.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 10.00 AND [pixel] < 15.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "101",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15.00 - 20.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 15.00 AND [pixel] < 20.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "254",
+                "50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.00 - 25.00",
+        "expression": "([pixel] >= 20.00 AND [pixel] < 25.00)",
+        "group": "RDPA-WXO",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "203",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25.00 - 30.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 25.00 AND [pixel] < 30.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "152",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30.00 - 40.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 30.00 AND [pixel] < 40.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "101",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40.00 - 50.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 40.00 AND [pixel] < 50.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50.00 - 75.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 50.00 AND [pixel] < 75.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "0",
+                "152"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "75.00 - 100.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 75.00 AND [pixel] < 100.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "152",
+                "50",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100.00 - 150.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 100.00 AND [pixel] < 150.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "101",
+                "0",
+                "152"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "150.00 - 250.00",
+        "group": "RDPA-WXO",
+        "expression": "([pixel] >= 150.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "152",
+                "152",
+                "152"
+            ]
+        }
+    }
+]

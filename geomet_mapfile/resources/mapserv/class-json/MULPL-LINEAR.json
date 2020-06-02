@@ -1,0 +1,296 @@
+[
+    {
+        "__type__": "class",
+        "name": "50 100",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >=50 AND [pixel] < 100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "000",
+                "255",
+                "000",
+                "000",
+                "255"
+            ],
+            "datarange": [
+                "50",
+                "100"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 200",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 100 AND [pixel] < 200)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "000",
+                "255",
+                "000",
+                "255",
+                "255"
+            ],
+            "datarange": [
+                "100",
+                "200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "200 300",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 200 AND [pixel] < 300)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "255",
+                "255",
+                "255",
+                "255",
+                "255"
+            ],
+            "datarange": [
+                "200",
+                "300"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "300 400",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 300 AND [pixel] < 400)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "255",
+                "255",
+                "130",
+                "225"
+            ],
+            "datarange": [
+                "300",
+                "400"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "400 500",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 400 AND [pixel] < 500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "130",
+                "225",
+                "255",
+                "000",
+                "200"
+            ],
+            "datarange": [
+                "400",
+                "500"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "500 1000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 500 AND [pixel] < 1000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "000",
+                "200",
+                "180",
+                "000",
+                "000"
+            ],
+            "datarange": [
+                "500",
+                "1000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1000 1500",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 1000 AND [pixel] < 1500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "180",
+                "000",
+                "000",
+                "255",
+                "000",
+                "000"
+            ],
+            "datarange": [
+                "1000",
+                "1500"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1500 2000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 1500 AND [pixel] < 2000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "000",
+                "000",
+                "255",
+                "128",
+                "000"
+            ],
+            "datarange": [
+                "1500",
+                "2000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2000 2500",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 2000 AND [pixel] < 2500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "128",
+                "000",
+                "240",
+                "160",
+                "000"
+            ],
+            "datarange": [
+                "2000",
+                "2500"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2500 3000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 2500 AND [pixel] < 3000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "240",
+                "160",
+                "000",
+                "240",
+                "220",
+                "000"
+            ],
+            "datarange": [
+                "2500",
+                "3000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3000 4000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 3000 AND [pixel] < 4000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "240",
+                "220",
+                "000",
+                "255",
+                "255",
+                "000"
+            ],
+            "datarange": [
+                "3000",
+                "4000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4000 5000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 4000 AND [pixel] < 5000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "000",
+                "000",
+                "255",
+                "000"
+            ],
+            "datarange": [
+                "4000",
+                "5000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000 6000",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 5000 AND [pixel] < 6000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "255",
+                "000",
+                "000",
+                "128",
+                "000"
+            ],
+            "datarange": [
+                "5000",
+                "600"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "6000 +",
+        "group": "MULPL-LINEAR",
+        "expression": "([pixel] >= 6000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "128",
+                "000",
+                "153",
+                "153",
+                "153"
+            ],
+            "datarange": [
+                "6000",
+                "10000"
+            ]
+        }
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 1",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] > 0.25 AND [pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "255",
+                "230",
+                "230",
+                "255"
+            ],
+            "datarange": [
+                "0",
+                "1"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1 5",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 1 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "230",
+                "230",
+                "255",
+                "204",
+                "204",
+                "255"
+            ],
+            "datarange": [
+                "1",
+                "5"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "204",
+                "204",
+                "255",
+                "153",
+                "153",
+                "255"
+            ],
+            "datarange": [
+                "5",
+                "10"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 10 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "153",
+                "153",
+                "255",
+                "102",
+                "102",
+                "255"
+            ],
+            "datarange": [
+                "10",
+                "20"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 50",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 20 AND [pixel] < 50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "102",
+                "102",
+                "255",
+                "51",
+                "51",
+                "255"
+            ],
+            "datarange": [
+                "20",
+                "50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 100",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 50 AND [pixel] < 100)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "51",
+                "255",
+                "0",
+                "0",
+                "255"
+            ],
+            "datarange": [
+                "50",
+                "100"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "100 200",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 100 AND [pixel] < 200)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "255",
+                "0",
+                "0",
+                "204"
+            ],
+            "datarange": [
+                "100",
+                "200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "200 500",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 200 AND [pixel] < 500)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "204",
+                "0",
+                "0",
+                "153"
+            ],
+            "datarange": [
+                "200",
+                "500"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "500 1000",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 500 AND [pixel] < 1000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "153",
+                "0",
+                "0",
+                "102"
+            ],
+            "datarange": [
+                "500",
+                "1000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1000 ..",
+        "group": "RUNOFFACCUMULATION-LINEAR",
+        "expression": "([pixel] >= 1000)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "102",
+                "0",
+                "0",
+                "26"
+            ],
+            "datarange": [
+                "1000",
+                "2000"
+            ]
+        }
+    }
+]

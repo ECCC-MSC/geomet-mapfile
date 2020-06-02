@@ -1,0 +1,82 @@
+[
+    {
+        "__type__": "class",
+        "name": "alertes",
+        "group": "ALERTES",
+        "expression": "('[alert_type]'='warning')",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "0"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "sous surveillance",
+        "group": "ALERTES",
+        "expression": "('[alert_type]'='watch')",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "veille",
+        "group": "ALERTES",
+        "expression": "('[alert_type]'='statement')",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "127",
+                "127"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "bulletin",
+        "group": "ALERTES",
+        "expression": "('[alert_type]'='advisory')",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "127",
+                "127"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    }
+]

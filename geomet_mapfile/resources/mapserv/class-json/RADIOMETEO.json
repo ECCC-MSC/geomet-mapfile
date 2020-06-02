@@ -1,0 +1,30 @@
+[
+    {
+        "__type__": "class",
+        "name": "jusqu'à -100dBm -- Dans les bâtiments ou avec petites radios",
+        "group": "RADIOMETEO",
+        "expression": "([pixel] = 238)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "242",
+                "242",
+                "128"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "entre -100 et -120 dBm -- À l'extérieur ou avec une grande antenne",
+        "group": "RADIOMETEO",
+        "expression": "([pixel] = 56)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "60",
+                "242",
+                "132"
+            ]
+        }
+    }
+]
