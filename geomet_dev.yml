@@ -607,40 +607,40 @@ layer_templates:
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/TEMPERATURE-LINEAR.inc
-            - mapserv/class/TEMPSUMMER.inc
-            - mapserv/class/TEMPSUMMER-LINEAR.inc
-            - mapserv/class/TEMPWINTER.inc
-            - mapserv/class/TEMPWINTER-LINEAR.inc
-            - mapserv/class/TEMPERATURE.inc
+            - mapserv/class/TEMPERATURE-LINEAR.json
+            - mapserv/class/TEMPSUMMER.json
+            - mapserv/class/TEMPSUMMER-LINEAR.json
+            - mapserv/class/TEMPWINTER.json
+            - mapserv/class/TEMPWINTER-LINEAR.json
+            - mapserv/class/TEMPERATURE.json
     TT_1015_600: &template_tt_1015_600
         <<: *template_tt
         styles:
-            - mapserv/class/TEMP_1015_600-LINEAR.inc
-            - mapserv/class/TEMPERATURE.inc
-            - mapserv/class/TEMPERATURE-LINEAR.inc
-            - mapserv/class/TEMP_1015_600.inc
+            - mapserv/class/TEMP_1015_600-LINEAR.json
+            - mapserv/class/TEMPERATURE.json
+            - mapserv/class/TEMPERATURE-LINEAR.json
+            - mapserv/class/TEMP_1015_600.json
     TT_550_275: &template_tt_550_275
         <<: *template_tt
         styles:
-            - mapserv/class/TEMP_550_275-LINEAR.inc
-            - mapserv/class/TEMPERATURE.inc
-            - mapserv/class/TEMPERATURE-LINEAR.inc
-            - mapserv/class/TEMP_550_275.inc
+            - mapserv/class/TEMP_550_275-LINEAR.json
+            - mapserv/class/TEMPERATURE.json
+            - mapserv/class/TEMPERATURE-LINEAR.json
+            - mapserv/class/TEMP_550_275.json
     TT_250: &template_tt_250
         <<: *template_tt
         styles:
-            - mapserv/class/TEMP_250-LINEAR.inc
-            - mapserv/class/TEMPERATURE.inc
-            - mapserv/class/TEMPERATURE-LINEAR.inc
-            - mapserv/class/TEMP_250.inc
+            - mapserv/class/TEMP_250-LINEAR.json
+            - mapserv/class/TEMPERATURE.json
+            - mapserv/class/TEMPERATURE-LINEAR.json
+            - mapserv/class/TEMP_250.json
     TT_500_1000: &template_tt_500_1000
         <<: *template_tt
     TD: &template_td
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/DEWPOINT.inc
+            - mapserv/class/DEWPOINT.json
     UU: &template_uu
         type: point
         conntype: uvraster
@@ -652,8 +652,8 @@ layer_templates:
             - UV_SPACING=20
             - UV_SIZE_SCALE=1
         styles:
-            - mapserv/class/WINDARROWKNOTS.inc
-            - mapserv/class/WINDARROW.inc
+            - mapserv/class/WINDARROWKNOTS.json
+            - mapserv/class/WINDARROW.json
         symbols:
             - circle_wind
             - arrow_wind
@@ -672,8 +672,8 @@ layer_templates:
             - UV_SPACING=20
             - UV_SIZE_SCALE=1
         styles:
-            - mapserv/class/WINDARROWKNOTS-NS.inc
-            - mapserv/class/WINDARROW-NS.inc
+            - mapserv/class/WINDARROWKNOTS-NS.json
+            - mapserv/class/WINDARROW-NS.json
         symbols:
             - circle_wind
             - arrow_wind
@@ -684,10 +684,10 @@ layer_templates:
             - SCALE=0,360
             - SCALE_BUCKETS=720
         styles:
-            - mapserv/class/WDIR6-LINEAR.inc
-            - mapserv/class/WDIR3.inc
-            - mapserv/class/WDIR3-LINEAR.inc
-            - mapserv/class/WDIR6.inc
+            - mapserv/class/WDIR6-LINEAR.json
+            - mapserv/class/WDIR3.json
+            - mapserv/class/WDIR3-LINEAR.json
+            - mapserv/class/WDIR6.json
     WDIR_GULF: &template_wd_gulf
         type: raster
         time_enabled: 'yes'
@@ -695,10 +695,10 @@ layer_templates:
             - SCALE=0.001,360
             - SCALE_BUCKETS=3600
         styles:
-            - mapserv/class/WDIR6-LINEAR_GULF.inc
-            - mapserv/class/WDIR3.inc
-            - mapserv/class/WDIR3-LINEAR.inc
-            - mapserv/class/WDIR6.inc
+            - mapserv/class/WDIR6-LINEAR_GULF.json
+            - mapserv/class/WDIR3.json
+            - mapserv/class/WDIR3-LINEAR.json
+            - mapserv/class/WDIR6.json
     WSPEED: &template_wspd
         type: raster
         time_enabled: 'yes'
@@ -706,51 +706,51 @@ layer_templates:
             - SCALE=0,100
             - SCALE_BUCKETS=10000
         styles:
-            - mapserv/class/WINDSPEEDKNOTS-LINEAR.inc
-            - mapserv/class/WINDSPEED.inc
-            - mapserv/class/WINDSPEED-LINEAR.inc
-            - mapserv/class/WINDSPEEDKNOTS.inc
+            - mapserv/class/WINDSPEEDKNOTS-LINEAR.json
+            - mapserv/class/WINDSPEED.json
+            - mapserv/class/WINDSPEED-LINEAR.json
+            - mapserv/class/WINDSPEEDKNOTS.json
     HU: &template_hu
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYSPEC-LINEAR.inc
-            - mapserv/class/HUMIDITYSPEC.inc
+            - mapserv/class/HUMIDITYSPEC-LINEAR.json
+            - mapserv/class/HUMIDITYSPEC.json
     HU_PRES_50_200: &template_hu_pres_50_200
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYSPEC-50-200mb-LINEAR.inc
-            - mapserv/class/HUMIDITYSPEC-50-200mb.inc
+            - mapserv/class/HUMIDITYSPEC-50-200mb-LINEAR.json
+            - mapserv/class/HUMIDITYSPEC-50-200mb.json
     HU_PRES_200_500: &template_hu_pres_200_500
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYSPEC-200-500mb-LINEAR.inc
-            - mapserv/class/HUMIDITYSPEC-200-500mb.inc
+            - mapserv/class/HUMIDITYSPEC-200-500mb-LINEAR.json
+            - mapserv/class/HUMIDITYSPEC-200-500mb.json
     HU_PRES_500_800: &template_hu_pres_500_800
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYSPEC-500-800mb-LINEAR.inc
-            - mapserv/class/HUMIDITYSPEC-500-800mb.inc
+            - mapserv/class/HUMIDITYSPEC-500-800mb-LINEAR.json
+            - mapserv/class/HUMIDITYSPEC-500-800mb.json
     HR: &template_hr
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYREL-LINEAR.inc
-            - mapserv/class/HUMIDITYREL.inc
+            - mapserv/class/HUMIDITYREL-LINEAR.json
+            - mapserv/class/HUMIDITYREL.json
     HR_ABS: &template_hr_abs
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYREL_ABS-LINEAR.inc
-            - mapserv/class/HUMIDITYREL_ABS.inc
+            - mapserv/class/HUMIDITYREL_ABS-LINEAR.json
+            - mapserv/class/HUMIDITYREL_ABS.json
     ES: &template_es
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/DEWPOINTDEP.inc
+            - mapserv/class/DEWPOINTDEP.json
     NT: &template_nt
         type: raster
         time_enabled: 'yes'
@@ -758,20 +758,20 @@ layer_templates:
             - SCALE=0,100.0
             - SCALE_BUCKETS=1000
         styles:
-            - mapserv/class/CLOUD.inc
+            - mapserv/class/CLOUD.json
     RT: &template_rt
         type: raster
         time_enabled: future
         processing:
             - SCALE_BUCKETS=8000
         styles:
-            - mapserv/class/PRECIPPRTMMH.inc
-            - mapserv/class/PRECIPPRTMMH-LINEAR.inc
+            - mapserv/class/PRECIPPRTMMH.json
+            - mapserv/class/PRECIPPRTMMH-LINEAR.json
     P0: &template_p0
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/PRESSURE.inc
+            - mapserv/class/PRESSURE.json
     PN: &template_pn
         type: line
         conntype: CONTOUR
@@ -783,166 +783,166 @@ layer_templates:
             - CONTOUR_INTERVAL=10
             - CONTOUR_ITEM=pixel
         styles:
-            - mapserv/class/PRESSURE4_LINE.inc
+            - mapserv/class/PRESSURE4_LINE.json
     PN-SLP: &template_pn-slp
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/PRESSURE4-LINEAR.inc
-            - mapserv/class/PRESSURE4.inc
-            - mapserv/class/PRESSURESEAHIGH.inc
-            - mapserv/class/PRESSURESEALOW.inc
+            - mapserv/class/PRESSURE4-LINEAR.json
+            - mapserv/class/PRESSURE4.json
+            - mapserv/class/PRESSURESEAHIGH.json
+            - mapserv/class/PRESSURESEALOW.json
     PR_FR_RN: &template_pr_fr_rn
         type: raster
         time_enabled: future
         processing: [SCALE_BUCKETS=8000]
         styles:
-            - mapserv/class/CAPA24-LINEAR.inc
-            - mapserv/class/PRECIPMM.inc
-            - mapserv/class/PRECIPMM-LINEAR.inc
-            - mapserv/class/CAPA24.inc
-            - mapserv/class/RDPA-WXO.inc
+            - mapserv/class/CAPA24-LINEAR.json
+            - mapserv/class/PRECIPMM.json
+            - mapserv/class/PRECIPMM-LINEAR.json
+            - mapserv/class/CAPA24.json
+            - mapserv/class/RDPA-WXO.json
     IO: &template_i0
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/TEMPSOIL.inc
+            - mapserv/class/TEMPSOIL.json
     I1: &template_i1
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/WATERCONTENTSOIL-LINEAR.inc
-            - mapserv/class/WATERCONTENTSOIL.inc
+            - mapserv/class/WATERCONTENTSOIL-LINEAR.json
+            - mapserv/class/WATERCONTENTSOIL.json
     I2: &template_i2
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/ICECONTENTSOIL-LINEAR.inc
-            - mapserv/class/ICECONTENTSOIL.inc
+            - mapserv/class/ICECONTENTSOIL-LINEAR.json
+            - mapserv/class/ICECONTENTSOIL.json
     I5: &template_i5
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/SNOWMASS-LINEAR.inc
-            - mapserv/class/SNOWMASS.inc
+            - mapserv/class/SNOWMASS-LINEAR.json
+            - mapserv/class/SNOWMASS.json
     AL: &template_al
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/ALBEDO-LINEAR.inc
-            - mapserv/class/ALBEDO.inc
+            - mapserv/class/ALBEDO-LINEAR.json
+            - mapserv/class/ALBEDO.json
     DN: &template_dn
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/SNOWDENSITY-LINEAR.inc
-            - mapserv/class/SNOWDENSITY.inc
+            - mapserv/class/SNOWDENSITY-LINEAR.json
+            - mapserv/class/SNOWDENSITY.json
     SD: &template_sd
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/SNOWDEPTH-LINEAR.inc
-            - mapserv/class/SNOWDEPTH.inc
+            - mapserv/class/SNOWDEPTH-LINEAR.json
+            - mapserv/class/SNOWDEPTH.json
     NO: &template_no
         type: raster
         time_enabled: 'future'
         styles:
-            - mapserv/class/RUNOFFACCUMULATION-LINEAR.inc
-            - mapserv/class/RUNOFFACCUMULATION.inc
+            - mapserv/class/RUNOFFACCUMULATION-LINEAR.json
+            - mapserv/class/RUNOFFACCUMULATION.json
     SN: &template_sn
         type: raster
         time_enabled: future
         styles:
-            - mapserv/class/PRECIPSNOW.inc
-            - mapserv/class/PRECIPSNOW-LINEAR.inc
+            - mapserv/class/PRECIPSNOW.json
+            - mapserv/class/PRECIPSNOW-LINEAR.json
     HPBL: &template_hpbl
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/PLANETARYHEIGHT-LINEAR.inc
-            - mapserv/class/PLANETARYHEIGHT.inc
+            - mapserv/class/PLANETARYHEIGHT-LINEAR.json
+            - mapserv/class/PLANETARYHEIGHT.json
     GZ_PRES_1000: &template_gz_pres_1000
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-1000mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-1000mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-1000mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-1000mb.json
     GZ_PRES_925: &template_gz_pres_925
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-925mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-925mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-925mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-925mb.json
     GZ_PRES_850:  &template_gz_pres_850
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-850mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-850mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-850mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-850mb.json
     GZ_PRES_700:  &template_gz_pres_700
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-700mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-700mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-700mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-700mb.json
     GZ_PRES_500:  &template_gz_pres_500
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-500mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-500mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb.json
     GZ_PRES_250:  &template_gz_pres_250
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-250mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-250mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-250mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-250mb.json
     GZ_PRES_200:  &template_gz_pres_200
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-200mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-200mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-200mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-200mb.json
     GZ_PRES_100:  &template_gz_pres_100
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-100mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-100mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-100mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-100mb.json
     GZ_PRES_50:  &template_gz_pres_50
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-50mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-50mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-50mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-50mb.json
     GZ_PRES_10:  &template_gz_pres_10
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-10mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-10mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-10mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-10mb.json
     WGUST: &template_wgust
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/GUST_INTERV_MS2KTS.inc
-            - mapserv/class/GUST_MS2KMH.inc
-            - mapserv/class/GUST_MS2KMH-LINEAR.inc
-            - mapserv/class/GUST_MS2KMH_WL.inc
-            - mapserv/class/GUST_MS2KTS.inc
-            - mapserv/class/GUST_MS2KTS-LINEAR.inc
+            - mapserv/class/GUST_INTERV_MS2KTS.json
+            - mapserv/class/GUST_MS2KMH.json
+            - mapserv/class/GUST_MS2KMH-LINEAR.json
+            - mapserv/class/GUST_MS2KMH_WL.json
+            - mapserv/class/GUST_MS2KTS.json
+            - mapserv/class/GUST_MS2KTS-LINEAR.json
     DIAG_NW: &template_diag_nw
         type: raster
         time_enabled: future
         is_local: true
         styles:
-            - mapserv/class/SIGPRECIPITATIONTYPE.inc
-            - mapserv/class/CMCPRECIPITATIONTYPE.inc
+            - mapserv/class/SIGPRECIPITATIONTYPE.json
+            - mapserv/class/CMCPRECIPITATIONTYPE.json
     DIAG_PTYPE: &template_diag_ptype
         type: raster
         time_enabled: future
         styles:
-            - mapserv/class/INSTPRECIPITATIONTYPE.inc
+            - mapserv/class/INSTPRECIPITATIONTYPE.json
     GZ_ETA_CONTOUR: &template_gz_eta_contour
         type: line
         conntype: CONTOUR
@@ -959,7 +959,7 @@ layer_templates:
             - LABELITEM "pixel"
             - GEOMTRANSFORM (smoothsia([shape],1,1))
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.json
     GZ_PRES_CONTOUR: &template_gz_pres_contour
         type: line
         conntype: CONTOUR
@@ -971,7 +971,7 @@ layer_templates:
             - CONTOUR_INTERVAL=10
             - CONTOUR_ITEM=pixel
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.json
     GZ_ETA_CONT_CONTOUR: &template_gz_eta_cont_contour
         type: line
         conntype: CONTOUR
@@ -983,46 +983,46 @@ layer_templates:
             - CONTOUR_INTERVAL=10
             - CONTOUR_ITEM=pixel
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.json
     GZ_ETA: &template_gz_eta
         type: raster
         time_enabled: 'no'
         styles:
-            - mapserv/class/GPHEIGHT.inc
+            - mapserv/class/GPHEIGHT.json
     GZ_ETA_CONT: &template_gz_eta_cont
         type: raster
         time_enabled: future
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT.json
     KINDEX: &template_kindex
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/KINDEX.inc
-            - mapserv/class/KINDEX_FR.inc
-            - mapserv/class/KINDEX-LINEAR.inc
-            - mapserv/class/KINDEX_FR-LINEAR.inc
+            - mapserv/class/KINDEX.json
+            - mapserv/class/KINDEX_FR.json
+            - mapserv/class/KINDEX-LINEAR.json
+            - mapserv/class/KINDEX_FR-LINEAR.json
     TOTALX: &template_totalx
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/TOTALX.inc
-            - mapserv/class/TOTALX_FR.inc
-            - mapserv/class/TOTALX-LINEAR.inc
-            - mapserv/class/TOTALX_FR-LINEAR.inc
+            - mapserv/class/TOTALX.json
+            - mapserv/class/TOTALX_FR.json
+            - mapserv/class/TOTALX-LINEAR.json
+            - mapserv/class/TOTALX_FR-LINEAR.json
     QQ: &template_qq
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/ABSOLUTEVORTICITY-LINEAR.inc
-            - mapserv/class/ABSOLUTEVORTICITY.inc
+            - mapserv/class/ABSOLUTEVORTICITY-LINEAR.json
+            - mapserv/class/ABSOLUTEVORTICITY.json
     WP: &template_wp
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/VERTICALVELOCITY-LINEAR.inc
-            - mapserv/class/VERTICALVELOCITY.inc
+            - mapserv/class/VERTICALVELOCITY-LINEAR.json
+            - mapserv/class/VERTICALVELOCITY.json
     CGSL: &template_cgsl
         type: raster
         time_enabled: future
@@ -1037,81 +1037,81 @@ layer_templates:
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/CAPE_COARSE-LINEAR.inc
-            - mapserv/class/CAPE_COARSE.inc
+            - mapserv/class/CAPE_COARSE-LINEAR.json
+            - mapserv/class/CAPE_COARSE.json
     CIN: &template_cin
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/CIN-LINEAR.inc
-            - mapserv/class/CIN.inc
+            - mapserv/class/CIN-LINEAR.json
+            - mapserv/class/CIN.json
     LCL_LFC: &template_lcl_lfc
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/LCL_LFC-LINEAR.inc
-            - mapserv/class/LCL_LFC.inc
+            - mapserv/class/LCL_LFC-LINEAR.json
+            - mapserv/class/LCL_LFC.json
     MULPL: &template_mulpl
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/MULPL-LINEAR.inc
-            - mapserv/class/MULPL.inc
+            - mapserv/class/MULPL-LINEAR.json
+            - mapserv/class/MULPL.json
     AVTD: &template_avtd
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/AVTD-LINEAR.inc
-            - mapserv/class/AVTD.inc
+            - mapserv/class/AVTD-LINEAR.json
+            - mapserv/class/AVTD.json
     LIFTED_INDEX: &template_lifted_index
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/LIFTED_INDEX-LINEAR.inc
-            - mapserv/class/LIFTED_INDEX.inc
+            - mapserv/class/LIFTED_INDEX-LINEAR.json
+            - mapserv/class/LIFTED_INDEX.json
     EL: &template_el
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/EL-LINEAR.inc
-            - mapserv/class/EL.inc
+            - mapserv/class/EL-LINEAR.json
+            - mapserv/class/EL.json
     PRESSUREMB: &template_pressuremb
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/PRESSUREMB.inc
+            - mapserv/class/PRESSUREMB.json
     TT_0_500: &template_tt_0_500
         <<: *template_tt
         styles:
-            - mapserv/class/TEMPLOW-LINEAR.inc
-            - mapserv/class/TEMPLOW.inc
+            - mapserv/class/TEMPLOW-LINEAR.json
+            - mapserv/class/TEMPLOW.json
     HR_200_1000: &template_hr_200_1000
         <<: *template_hr
     HR_50_200: &template_hr_50_200
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYREL-50-200mb-LINEAR.inc
-            - mapserv/class/HUMIDITYREL-50-200mb.inc
+            - mapserv/class/HUMIDITYREL-50-200mb-LINEAR.json
+            - mapserv/class/HUMIDITYREL-50-200mb.json
     HR_0_50: &template_hr_0_50
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/HUMIDITYREL-0-50mb-LINEAR.inc
-            - mapserv/class/HUMIDITYREL-0-50mb.inc
+            - mapserv/class/HUMIDITYREL-0-50mb-LINEAR.json
+            - mapserv/class/HUMIDITYREL-0-50mb.json
     REPS: &template_reps
         type: raster
         time_enabled: future
     REPS.ERGE: &template_reps_erge
         <<: *template_reps
         styles:
-            - mapserv/class/REPS_PROB-LINEAR.inc
-            - mapserv/class/REPS_PROB.inc
+            - mapserv/class/REPS_PROB-LINEAR.json
+            - mapserv/class/REPS_PROB.json
     REPS.ERC: &template_reps_erc
         <<: *template_reps
         styles:
-            - mapserv/class/REPS_PRMM-LINEAR.inc
-            - mapserv/class/REPS_PRMM.inc
+            - mapserv/class/REPS_PRMM-LINEAR.json
+            - mapserv/class/REPS_PRMM.json
     REPS.3_PRMM.ERGE: &template_3_reps_prmm_erge
         <<: *template_reps_erge
         forecast_model: *id_reps_diag_3h
@@ -1213,8 +1213,8 @@ layer_templates:
             forecast_hour_interval: 12
         name: WIND-Max-12h_TGL_10m
         styles:
-            - mapserv/class/REPS_WS-LINEAR.inc
-            - mapserv/class/REPS_WS.inc
+            - mapserv/class/REPS_WS-LINEAR.json
+            - mapserv/class/REPS_WS.json
     REPS.24_PRMM.ERGE: &template_24_reps_prmm_erge
         <<: *template_reps_erge
         forecast_model: *id_reps_diag_24h
@@ -1268,8 +1268,8 @@ layer_templates:
             forecast_hour_interval: 12
         name: TEMP-Min-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT-LINEAR.inc
-            - mapserv/class/REPS_TT.inc
+            - mapserv/class/REPS_TT-LINEAR.json
+            - mapserv/class/REPS_TT.json
     REPS.24_T8.ERGE: &template_24_reps_t8_erge
         <<: *template_reps_erge
         forecast_model:
@@ -1283,8 +1283,8 @@ layer_templates:
             forecast_hour_interval: 12
         name: TEMP-Max-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     REPS.24_HMXX.ERGE: &template_24_reps_hmxx_erge
         <<: *template_reps_erge
         forecast_model:
@@ -1298,8 +1298,8 @@ layer_templates:
             forecast_hour_interval: 12
         name: HEATX-Max-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     REPS.24_WCF.ERGE: &template_24_reps_wcf_erge
         <<: *template_reps_erge
         forecast_model:
@@ -1313,8 +1313,8 @@ layer_templates:
             forecast_hour_interval: 12
         name: WCF-Min-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     REPS.48_PRMM.ERGE: &template_48_reps_prmm_erge
         <<: *template_reps_erge
         forecast_model: *id_reps_diag_48h
@@ -1337,49 +1337,49 @@ layer_templates:
     GEPS.ERGE: &template_geps_erge
         <<: *template_geps
         styles:
-            - mapserv/class/REPS_PROB-LINEAR.inc
-            - mapserv/class/REPS_PROB.inc
+            - mapserv/class/REPS_PROB-LINEAR.json
+            - mapserv/class/REPS_PROB.json
     GEPS.ERC: &template_geps_erc
         <<: *template_geps
         styles:
-            - mapserv/class/REPS_PRMM-LINEAR.inc
-            - mapserv/class/REPS_PRMM.inc
+            - mapserv/class/REPS_PRMM-LINEAR.json
+            - mapserv/class/REPS_PRMM.json
     GEPS.3_HMXX.ERC: &template_3_geps_hmxx_erc
         <<: *template_geps_erc
         forecast_model: *id_geps_diag_3h
         name: HEATX_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.3_NT.ERC: &template_3_geps_nt_erc
         <<: *template_geps_erc
         forecast_model: *id_geps_diag_3h
         name: TCDC_SFC_0
         styles:
-            - mapserv/class/CLOUD.inc
+            - mapserv/class/CLOUD.json
     GEPS.3_TT.ERC: &template_3_geps_tt_erc
         <<: *template_geps_erc
         forecast_model: *id_geps_diag_3h
         name: TEMP_TGL_2
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.3_WCF.ERC: &template_3_geps_wcf_erc
         <<: *template_geps_erc
         forecast_model: *id_geps_diag_3h
         name: WCF_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.3_WSPD.ERC: &template_3_geps_wspd_erc
         <<: *template_geps_erc
         forecast_model: *id_geps_diag_3h
         name: WIND_TGL_10m
         styles:
-            - mapserv/class/WINDSPEEDKNOTS-LINEAR.inc
-            - mapserv/class/WINDSPEED.inc
-            - mapserv/class/WINDSPEED-LINEAR.inc
-            - mapserv/class/WINDSPEEDKNOTS.inc
+            - mapserv/class/WINDSPEEDKNOTS-LINEAR.json
+            - mapserv/class/WINDSPEED.json
+            - mapserv/class/WINDSPEED-LINEAR.json
+            - mapserv/class/WINDSPEEDKNOTS.json
     GEPS.12_FRMM.ERGE: &template_12_geps_frmm_erge
         <<: *template_geps_erge
         forecast_model: *id_geps_diag_12h
@@ -1429,24 +1429,24 @@ layer_templates:
         forecast_model: *id_geps_diag_12h
         name: WIND-Max-12h_TGL_10m
         styles:
-            - mapserv/class/REPS_WS-LINEAR.inc
-            - mapserv/class/REPS_WS.inc
+            - mapserv/class/REPS_WS-LINEAR.json
+            - mapserv/class/REPS_WS.json
     GEPS.12_GZ.ERC: &template_12_geps_gz_erc
         <<: *template_geps
         forecast_model: *id_geps_diag_12h
         name: HGT_ISBL_0500
         styles:
-            - mapserv/class/GEOPOTENTIALHEIGHT-500mb-LINEAR.inc
-            - mapserv/class/GEOPOTENTIALHEIGHT-500mb.inc
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb-LINEAR.json
+            - mapserv/class/GEOPOTENTIALHEIGHT-500mb.json
     GEPS.12_PN-SLP.ERC: &template_12_geps_pn-slp
         <<: *template_geps
         forecast_model: *id_geps_diag_12h
         name: PRMSL_MSL_0
         styles:
-            - mapserv/class/PRESSURE4-LINEAR.inc
-            - mapserv/class/PRESSURE4.inc
-            - mapserv/class/PRESSURESEAHIGH.inc
-            - mapserv/class/PRESSURESEALOW.inc
+            - mapserv/class/PRESSURE4-LINEAR.json
+            - mapserv/class/PRESSURE4.json
+            - mapserv/class/PRESSURESEAHIGH.json
+            - mapserv/class/PRESSURESEALOW.json
     GEPS.12_PN.ERC: &template_12_geps_pn
         <<: *template_geps
         forecast_model: *id_geps_diag_12h
@@ -1457,7 +1457,7 @@ layer_templates:
             - 'wfs_enable_request=!*'
         name: PRMSL_MSL_0
         styles:
-            - mapserv/class/PRESSURE4_LINE.inc
+            - mapserv/class/PRESSURE4_LINE.json
     GEPS.24_FRMM.ERGE: &template_24_geps_frmm_erge
         <<: *template_geps_erge
         forecast_model: *id_geps_diag_24h
@@ -1515,8 +1515,8 @@ layer_templates:
         forecast_model: *id_geps_diag_24h
         name: TEMP-Max-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.24_T7.ERGE: &template_24_geps_t7_erle
         <<: *template_geps_erge
         forecast_model: *id_geps_diag_24h
@@ -1526,8 +1526,8 @@ layer_templates:
         forecast_model: *id_geps_diag_24h
         name: TEMP-Min-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.24_WCF.ERGE: &template_24_geps_wcf_erge
         <<: *template_geps_erge
         forecast_model: *id_geps_diag_24h
@@ -1537,8 +1537,8 @@ layer_templates:
         forecast_model: *id_geps_diag_24h
         name: WCF-Min-24h_TGL_2m
         styles:
-            - mapserv/class/REPS_TT.inc
-            - mapserv/class/REPS_TT-LINEAR.inc
+            - mapserv/class/REPS_TT.json
+            - mapserv/class/REPS_TT-LINEAR.json
     GEPS.48_PRMM.ERGE: &template_48_geps_prmm_erge
         <<: *template_geps_erge
         forecast_model: *id_geps_diag_48h
@@ -1583,8 +1583,8 @@ layer_templates:
         processing:
             - BANDS=1,2
         styles:
-            - mapserv/class/WINDARROWKNOTS.inc
-            - mapserv/class/WINDARROW.inc
+            - mapserv/class/WINDARROWKNOTS.json
+            - mapserv/class/WINDARROW.json
         symbols:
             - circle_wind
             - arrow_wind
@@ -1595,11 +1595,11 @@ layer_templates:
             - SCALE=0,360
             - SCALE_BUCKETS=360
         styles:
-            - mapserv/class/MODELWAVEDIR6-LINEAR.inc
-            - mapserv/class/MODELWAVEDIR.inc
-            - mapserv/class/MODELWAVEDIR3.inc
-            - mapserv/class/MODELWAVEDIR3-LINEAR.inc
-            - mapserv/class/MODELWAVEDIR6.inc
+            - mapserv/class/MODELWAVEDIR6-LINEAR.json
+            - mapserv/class/MODELWAVEDIR.json
+            - mapserv/class/MODELWAVEDIR3.json
+            - mapserv/class/MODELWAVEDIR3-LINEAR.json
+            - mapserv/class/MODELWAVEDIR6.json
     DE: &template_de
         type: raster
         time_enabled: 'yes'
@@ -1607,11 +1607,11 @@ layer_templates:
             - SCALE=0,360
             - SCALE_BUCKETS=360
         styles:
-            - mapserv/class/MODELWAVEDIR6-LINEAR.inc
-            - mapserv/class/MODELWAVEDIR.inc
-            - mapserv/class/MODELWAVEDIR3.inc
-            - mapserv/class/MODELWAVEDIR3-LINEAR.inc
-            - mapserv/class/MODELWAVEDIR6.inc
+            - mapserv/class/MODELWAVEDIR6-LINEAR.json
+            - mapserv/class/MODELWAVEDIR.json
+            - mapserv/class/MODELWAVEDIR3.json
+            - mapserv/class/MODELWAVEDIR3-LINEAR.json
+            - mapserv/class/MODELWAVEDIR6.json
     MWP_OCEAN: &template_mwp_ocean
         type: raster
         time_enabled: 'yes'
@@ -1619,8 +1619,8 @@ layer_templates:
             - SCALE=0,24
             - SCALE_BUCKETS=480
         styles:
-            - mapserv/class/MODELWAVEPERIOD_OCEAN-LINEAR.inc
-            - mapserv/class/MODELWAVEPERIOD_OCEAN.inc
+            - mapserv/class/MODELWAVEPERIOD_OCEAN-LINEAR.json
+            - mapserv/class/MODELWAVEPERIOD_OCEAN.json
     MWP_GLAKE: &template_mwp_glake
         type: raster
         time_enabled: 'yes'
@@ -1628,8 +1628,8 @@ layer_templates:
             - SCALE=0,12
             - SCALE_BUCKETS=240
         styles:
-            - mapserv/class/MODELWAVEPERIOD_GLAKE-LINEAR.inc
-            - mapserv/class/MODELWAVEPERIOD_GLAKE.inc
+            - mapserv/class/MODELWAVEPERIOD_GLAKE-LINEAR.json
+            - mapserv/class/MODELWAVEPERIOD_GLAKE.json
     MWP_GULF: &template_mwp_gulf
         type: raster
         time_enabled: 'yes'
@@ -1637,8 +1637,8 @@ layer_templates:
             - SCALE=0.001,12
             - SCALE_BUCKETS=240
         styles:
-            - mapserv/class/MODELWAVEPERIOD_GULF-LINEAR.inc
-            - mapserv/class/MODELWAVEPERIOD_GULF.inc
+            - mapserv/class/MODELWAVEPERIOD_GULF-LINEAR.json
+            - mapserv/class/MODELWAVEPERIOD_GULF.json
     WZ_OCEAN: &template_wz_ocean
         type: raster
         time_enabled: 'yes'
@@ -1646,10 +1646,10 @@ layer_templates:
             - SCALE=0,16
             - SCALE_BUCKETS=320
         styles:
-            - mapserv/class/MODELWAVEHEIGHT_OCEAN-LINEAR.inc
-            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2.inc
-            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2-LINEAR.inc
-            - mapserv/class/MODELWAVEHEIGHT_OCEAN.inc
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN.json
     WZ_GLAKE: &template_wz_glake
         type: raster
         time_enabled: 'yes'
@@ -1657,10 +1657,10 @@ layer_templates:
             - SCALE=0,8
             - SCALE_BUCKETS=160
         styles:
-            - mapserv/class/MODELWAVEHEIGHT_GLAKE-LINEAR.inc
-            - mapserv/class/MODELWAVEHEIGHT_GLAKE_2.inc
-            - mapserv/class/MODELWAVEHEIGHT_GLAKE_2-LINEAR.inc
-            - mapserv/class/MODELWAVEHEIGHT_GLAKE.inc
+            - mapserv/class/MODELWAVEHEIGHT_GLAKE-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_GLAKE_2.json
+            - mapserv/class/MODELWAVEHEIGHT_GLAKE_2-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_GLAKE.json
     WZ_GULF: &template_wz_gulf
         type: raster
         time_enabled: 'yes'
@@ -1668,8 +1668,8 @@ layer_templates:
             - SCALE=0.001,8
             - SCALE_BUCKETS=160
         styles:
-            - mapserv/class/MODELWAVEHEIGHT_GULF-LINEAR.inc
-            - mapserv/class/MODELWAVEHEIGHT_GULF.inc
+            - mapserv/class/MODELWAVEHEIGHT_GULF-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_GULF.json
     ICEC: &template_icec
         type: raster
         time_enabled: 'yes'
@@ -1677,8 +1677,8 @@ layer_templates:
             - SCALE=0.01,0.9
             - SCALE_BUCKETS=100
         styles:
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
-            - mapserv/class/SEA_ICECONC.inc
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
     ICEC-HRDPS: &template_icec-hrdps
         type: raster
         time_enabled: 'yes'
@@ -1686,8 +1686,8 @@ layer_templates:
             - SCALE=0.01,0.9
             - SCALE_BUCKETS=100
         styles:
-            - mapserv/class/SEA_ICECONC.inc
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
+            - mapserv/class/SEA_ICECONC.json
+            - mapserv/class/SEA_ICECONC-LINEAR.json
     RIOPS: &template_riops
         type: raster
         time_enabled: 'yes'
@@ -1706,7 +1706,7 @@ layer_templates:
             - UV_SIZE_SCALE=1
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
-            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
         symbols:
             - arrow_wind
     RIOPS_3D: &template_riops_3d
@@ -1727,7 +1727,7 @@ layer_templates:
             - UV_SIZE_SCALE=1
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
-            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
         symbols:
             - arrow_wind
     RIOPS.3D.SALW: &template_riops_3d_salw
@@ -1738,10 +1738,10 @@ layer_templates:
             - SCALE=0,43
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_SALT-DEFAULT.inc
-            - mapserv/class/SEA_SALT-COASTAL.inc
-            - mapserv/class/SEA_SALT-FRESH.inc
-            - mapserv/class/SEA_SALT-FULL.inc
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
     RIOPS.3D.TM2: &template_riops_3d_tm2
         <<: *template_riops_3d
         forecast_model: *id_riops_3D
@@ -1750,12 +1750,12 @@ layer_templates:
             - SCALE=270,297
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     RIOPS.3D.UU2W: &template_riops_3d_uu2w
         <<: *template_riops_uu_3d
         forecast_model: *id_riops_3D_uu
@@ -1769,7 +1769,7 @@ layer_templates:
             - vozocrtx
             - vomecrty
         styles:
-            - mapserv/class/SEA_CURARROW_100MTO2000M.inc
+            - mapserv/class/SEA_CURARROW_100MTO2000M.json
         symbols:
             - arrow_wind
     RIOPS.3D.UU2W.2000M.5728M: &template_riops_3d_uu2w_2000m_5728m
@@ -1779,7 +1779,7 @@ layer_templates:
             - vozocrtx
             - vomecrty
         styles:
-            - mapserv/class/SEA_CURARROW_2000MTO5728M.inc
+            - mapserv/class/SEA_CURARROW_2000MTO5728M.json
         symbols:
             - arrow_wind
     GIOPS: &template_giops
@@ -1800,7 +1800,7 @@ layer_templates:
             - UV_SIZE_SCALE=1
             - GDAL_NETCDF_BOTTOMUP=YES
         styles:
-            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
         symbols:
             - arrow_wind
     GIOPS.3D.SALW: &template_giops_3d_salw
@@ -1808,21 +1808,21 @@ layer_templates:
         forecast_model: *id_giops_3D
         name: vosaline
         styles:
-            - mapserv/class/SEA_SALT-DEFAULT.inc
-            - mapserv/class/SEA_SALT-COASTAL.inc
-            - mapserv/class/SEA_SALT-FRESH.inc
-            - mapserv/class/SEA_SALT-FULL.inc
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
     GIOPS.3D.TM2: &template_giops_3d_tm2
         <<: *template_giops
         forecast_model: *id_giops_3D
         name: votemper
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     GIOPS.3D.UU2W: &template_giops_3d_uu2w
         <<: *template_giops_uu
         forecast_model: *id_giops_3D_uu
@@ -1836,7 +1836,7 @@ layer_templates:
             - vozocrtx
             - vomecrty
         styles:
-            - mapserv/class/SEA_CURARROW_100MTO2000M.inc
+            - mapserv/class/SEA_CURARROW_100MTO2000M.json
         symbols:
             - arrow_wind
     GIOPS.3D.UU2W.2000M.5728M: &template_giops_3d_uu2w_2000m_5728m
@@ -1846,7 +1846,7 @@ layer_templates:
             - vozocrtx
             - vomecrty
         styles:
-            - mapserv/class/SEA_CURARROW_2000MTO5728M.inc
+            - mapserv/class/SEA_CURARROW_2000MTO5728M.json
         symbols:
             - arrow_wind
     HURRICANE: &template_hurricane
@@ -1871,27 +1871,27 @@ layer_templates:
             - SCALE=270,297
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     WCPS.GE: &template_wcps_2d_GE
         <<: *template_wcps_2d
         name: iicevol_sfc_0
         styles:
-            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-            - mapserv/class/SEA_ICETHICK.inc
-            - mapserv/class/SEA_ICETHICK-CIS.inc
+            - mapserv/class/SEA_ICETHICK-LINEAR.json
+            - mapserv/class/SEA_ICETHICK.json
+            - mapserv/class/SEA_ICETHICK-CIS.json
     WCPS.SALW: &template_wcps_2d_salw
         <<: *template_wcps_2d
         name: vosaline_sfc_0
         styles:
-            - mapserv/class/SEA_SALT-DEFAULT.inc
-            - mapserv/class/SEA_SALT-COASTAL.inc
-            - mapserv/class/SEA_SALT-FRESH.inc
-            - mapserv/class/SEA_SALT-FULL.inc
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
     WCPS.UU: &template_wcps_2d_uu
         type: point
         conntype: uvraster
@@ -1908,8 +1908,8 @@ layer_templates:
             - uwindsurf_tgl_40
             - vwindsurf_tgl_40
         styles:
-            - mapserv/class/WINDARROWKNOTS.inc
-            - mapserv/class/WINDARROW.inc
+            - mapserv/class/WINDARROWKNOTS.json
+            - mapserv/class/WINDARROW.json
         symbols:
             - circle_wind
             - arrow_wind
@@ -1920,9 +1920,9 @@ layer_templates:
             - SCALE=-4429.5,79427
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-            - mapserv/class/SEA_ICEPRESS.inc
-            - mapserv/class/SEA_ICEPRESS-CIS.inc
+            - mapserv/class/SEA_ICEPRESS-LINEAR.json
+            - mapserv/class/SEA_ICEPRESS.json
+            - mapserv/class/SEA_ICEPRESS-CIS.json
     WCPS.STGI: &template_wcps_2d_stgi
         <<: *template_wcps_2d
         name: iicestrength_sfc_0
@@ -1930,16 +1930,16 @@ layer_templates:
             - SCALE=-367.5,199788.5
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-            - mapserv/class/SEA_ICESTRENGTH.inc
-            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.json
+            - mapserv/class/SEA_ICESTRENGTH.json
+            - mapserv/class/SEA_ICESTRENGTH-CIS.json
     WCPS.GL: &template_wcps_2d_gl
         <<: *template_wcps_2d
         name: iiceconc_sfc_0
         styles:
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
-            - mapserv/class/SEA_ICECONC.inc
-            - mapserv/class/SEA_ICECONC-CIS.inc
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
+            - mapserv/class/SEA_ICECONC-CIS.json
     WCPS.UU2W: &template_wcps_2d_uu2w
         type: point
         conntype: uvraster
@@ -1956,7 +1956,7 @@ layer_templates:
             - vozocrtx_depth_0.5
             - vomecrty_depth_0.5
         styles:
-            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
         symbols:
             - arrow_wind
     WCPS.SSH: &template_wcps_2d_ssh
@@ -1966,9 +1966,9 @@ layer_templates:
             - SCALE=-4.19,2.64
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-MID.inc
+            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-MID.json
     WCPS.UUI: &template_wcps_2d_uui
         <<: *template_wcps_2d_uu
         names:
@@ -1978,9 +1978,9 @@ layer_templates:
         <<: *template_wcps_2d
         name: tairsurf_tgl_40
         styles:
-            - mapserv/class/TEMPERATURE-KELVIN.inc
-            - mapserv/class/TEMPSUMMER-KELVIN.inc
-            - mapserv/class/TEMPWINTER-KELVIN.inc
+            - mapserv/class/TEMPERATURE-KELVIN.json
+            - mapserv/class/TEMPSUMMER-KELVIN.json
+            - mapserv/class/TEMPWINTER-KELVIN.json
     WCPS.MLW: &template_wcps_2d_mlw
         <<: *template_wcps_2d
         name: sokaraml_sfc_0
@@ -1988,10 +1988,10 @@ layer_templates:
             - SCALE=0.7,3365.6
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_DEPTH-DEFAULT.inc
-            - mapserv/class/SEA_DEPTH-SHALLOW.inc
-            - mapserv/class/SEA_DEPTH-MID.inc
-            - mapserv/class/SEA_DEPTH-DEEP.inc
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
 layers:
     GDPS.ETA_ES:
         <<: *template_es
@@ -9140,8 +9140,8 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/PRECIPMM_WATERSHED.inc
-            - mapserv/class/CFIA_WATERSHED.inc
+            - mapserv/class/PRECIPMM_WATERSHED.json
+            - mapserv/class/CFIA_WATERSHED.json
     HRDPA.06F_WATERSHED:
         type: polygon
         time_enabled: 'no'
@@ -9153,8 +9153,8 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/PRECIPMM_WATERSHED.inc
-            - mapserv/class/CFIA_WATERSHED.inc
+            - mapserv/class/PRECIPMM_WATERSHED.json
+            - mapserv/class/CFIA_WATERSHED.json
     HRDPA.24P_WATERSHED:
         type: polygon
         time_enabled: 'no'
@@ -9166,8 +9166,8 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/PRECIPMM_WATERSHED.inc
-            - mapserv/class/CFIA_WATERSHED.inc
+            - mapserv/class/PRECIPMM_WATERSHED.json
+            - mapserv/class/CFIA_WATERSHED.json
     HRDPA.24F_WATERSHED:
         type: polygon
         time_enabled: 'no'
@@ -9179,8 +9179,8 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/PRECIPMM_WATERSHED.inc
-            - mapserv/class/CFIA_WATERSHED.inc
+            - mapserv/class/PRECIPMM_WATERSHED.json
+            - mapserv/class/CFIA_WATERSHED.json
     RDPS.ETA_NT:
         <<: *template_nt
         forecast_model: *id_rdps
@@ -9188,7 +9188,7 @@ layers:
         label_fr: RDPS.ETA - Couverture nuageuse totale [%]
         name: TCDC_SFC_0
         styles:
-            - mapserv/class/CLOUD.inc
+            - mapserv/class/CLOUD.json
     RDPS.ETA_TD:
         <<: *template_td
         forecast_model: *id_rdps
@@ -11355,8 +11355,8 @@ layers:
             - UV_SIZE_SCALE=1
         uv_bands: 1,2
         styles:
-            - mapserv/class/WINDARROWKNOTS.inc
-            - mapserv/class/WINDARROW.inc
+            - mapserv/class/WINDARROWKNOTS.json
+            - mapserv/class/WINDARROW.json
         symbols:
             - circle_wind
             - arrow_wind
@@ -11369,8 +11369,8 @@ layers:
         processing:
             - BANDS=1
         styles:
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
-            - mapserv/class/SEA_ICECONC.inc
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
     CGSL.ETA_ICETK:
         <<: *template_cgsl
         forecast_model: *id_cgsl_atmosphere_ocean
@@ -11380,9 +11380,9 @@ layers:
         processing:
             - BANDS=2
         styles:
-            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-            - mapserv/class/SEA_ICETHICK.inc
-            - mapserv/class/SEA_ICETHICK-CIS.inc
+            - mapserv/class/SEA_ICETHICK-LINEAR.json
+            - mapserv/class/SEA_ICETHICK.json
+            - mapserv/class/SEA_ICETHICK-CIS.json
     CGSL.ETA_UICE:
         <<: *template_cgsl_uv
         forecast_model: *id_cgsl_atmosphere_ocean
@@ -11397,7 +11397,7 @@ layers:
             - UV_SIZE_SCALE=1
         uv_bands: 3,4
         styles:
-            - mapserv/class/SEA_CURARROW.inc
+            - mapserv/class/SEA_CURARROW.json
         symbols:
             - arrow_wind
     CGSL.ETA_UOGRD:
@@ -11414,8 +11414,8 @@ layers:
             - UV_SIZE_SCALE=1
         uv_bands: 5,6
         styles:
-            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.inc
-            - mapserv/class/SEA_CURARROW.inc
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
+            - mapserv/class/SEA_CURARROW.json
         symbols:
             - arrow_wind
     CGSL.ETA_WTMP:
@@ -11427,12 +11427,12 @@ layers:
         processing:
             - BANDS=7
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     CGSL.ETA_ICET:
         <<: *template_cgsl
         forecast_model: *id_cgsl_atmosphere_ocean
@@ -11442,9 +11442,9 @@ layers:
         processing:
             - BANDS=8
         styles:
-            - mapserv/class/SEA_ICETEMP-LINEAR.inc
-            - mapserv/class/SEA_ICETEMP.inc
-            - mapserv/class/SEA_ICETEMP-CIS.inc
+            - mapserv/class/SEA_ICETEMP-LINEAR.json
+            - mapserv/class/SEA_ICETEMP.json
+            - mapserv/class/SEA_ICETEMP-CIS.json
     CGSL.ETA_ICEPRS:
         <<: *template_cgsl
         forecast_model: *id_cgsl_atmosphere_ocean
@@ -11454,9 +11454,9 @@ layers:
         processing:
             - BANDS=9
         styles:
-            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-            - mapserv/class/SEA_ICEPRESS.inc
-            - mapserv/class/SEA_ICEPRESS-CIS.inc
+            - mapserv/class/SEA_ICEPRESS-LINEAR.json
+            - mapserv/class/SEA_ICEPRESS.json
+            - mapserv/class/SEA_ICEPRESS-CIS.json
     CGSL.ETA_ICESTG:
         <<: *template_cgsl
         forecast_model: *id_cgsl_atmosphere_ocean
@@ -11466,9 +11466,9 @@ layers:
         processing:
             - BANDS=10
         styles:
-            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-            - mapserv/class/SEA_ICESTRENGTH.inc
-            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.json
+            - mapserv/class/SEA_ICESTRENGTH.json
+            - mapserv/class/SEA_ICESTRENGTH-CIS.json
     REPS.MEM.ETA_PN.01:
         <<: *template_pn
         forecast_model: *id_reps_members
@@ -18010,7 +18010,7 @@ layers:
         processing:
             - BANDS=16
         styles:
-            - mapserv/class/REPS_STD_3-6h.inc
+            - mapserv/class/REPS_STD_3-6h.json
     REPS.DIAG.6_PRMM.ERGE0.2:
         <<: *template_6_reps_prmm_erge
         label_en: REPS.DIAG.6_PRMM.ERGE0.2 - Quantity of precipitation >= 0.2 mm [probability %]
@@ -18150,7 +18150,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/REPS_STD_3-6h.inc
+            - mapserv/class/REPS_STD_3-6h.json
     REPS.DIAG.6_RNMM.ERGE0.2:
         <<: *template_6_reps_rnmm_erge
         label_en: REPS.DIAG.6_RNMM.ERGE0.2 - Rain >= 0.2 mm [probability %]
@@ -18284,7 +18284,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_3-6h.inc
+            - mapserv/class/REPS_STD_3-6h.json
     REPS.DIAG.6_FRMM.ERGE0.2:
         <<: *template_6_reps_frmm_erge
         label_en: REPS.DIAG.6_FRMM.ERGE0.2 - Freezing rain >= 0.2 mm [probability %]
@@ -18418,7 +18418,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.6_PEMM.ERGE0.2:
         <<: *template_6_reps_pemm_erge
         label_en: REPS.DIAG.6_PEMM.ERGE0.2 - Ice pellets >= 0.2 mm [probability %]
@@ -18552,7 +18552,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.6_SNMM.ERGE0.2:
         <<: *template_6_reps_snmm_erge
         label_en: REPS.DIAG.6_SNMM.ERGE0.2 - Snow >= 0.2 mm [probability %]
@@ -18686,7 +18686,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_3-6h.inc
+            - mapserv/class/REPS_STD_3-6h.json
     REPS.DIAG.12_PRMM.ERGE0.2:
         <<: *template_12_reps_prmm_erge
         label_en: REPS.DIAG.12_PRMM.ERGE0.2 - Quantity of precipitation >= 0.2 mm [probability %]
@@ -18826,7 +18826,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.12_RNMM.ERGE0.2:
         <<: *template_12_reps_rnmm_erge
         label_en: REPS.DIAG.12_RNMM.ERGE0.2 - Rain >= 0.2 mm [probability %]
@@ -18966,7 +18966,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.12_FRMM.ERGE0.2:
         <<: *template_12_reps_frmm_erge
         label_en: REPS.DIAG.12_FRMM.ERGE0.2 - Freezing rain >= 0.2 mm [probability %]
@@ -19088,7 +19088,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.12_PEMM.ERGE0.2:
         <<: *template_12_reps_pemm_erge
         label_en: REPS.DIAG.12_PEMM.ERGE0.2 - Ice pellets >= 0.2 mm [probability %]
@@ -19210,7 +19210,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.12_SNMM.ERGE0.2:
         <<: *template_12_reps_snmm_erge
         label_en: REPS.DIAG.12_SNMM.ERGE0.2 - Snow >= 0.2 mm [probability %]
@@ -19332,7 +19332,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.12_UVMX.ERGE20:
         <<: *template_12_reps_uvmx_erge
         label_en: REPS.DIAG.12_UVMX.ERGE20 - Maximum wind modulus over a period >= 20 km/h [probability %]
@@ -19454,7 +19454,7 @@ layers:
         processing:
             - BANDS=18
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     REPS.DIAG.24_RNMM.ERGE0.2:
         <<: *template_24_reps_rnmm_erge
         label_en: REPS.DIAG.24_RNMM.ERGE0.2 - Rain >= 0.2 mm [probability %]
@@ -19600,7 +19600,7 @@ layers:
         processing:
             - BANDS=21
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.24_FRMM.ERGE0.2:
         <<: *template_24_reps_frmm_erge
         label_en: REPS.DIAG.24_FRMM.ERGE0.2 - Freezing rain >= 0.2 mm [probability %]
@@ -19734,7 +19734,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.24_PEMM.ERGE0.2:
         <<: *template_24_reps_pemm_erge
         label_en: REPS.DIAG.24_PEMM.ERGE0.2 - Ice pellets >= 0.2 mm [probability %]
@@ -19868,7 +19868,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     REPS.DIAG.24_SNMM.ERGE0.2:
         <<: *template_24_reps_snmm_erge
         label_en: REPS.DIAG.24_SNMM.ERGE0.2 - Snow >= 0.2 mm [probability %]
@@ -20002,7 +20002,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.24_T8.ERGE-30:
         <<: *template_24_reps_t8_erge
         label_en: REPS.DIAG.24_T8.ERGE-30 - Maximum temperature >= -30 [probability %]
@@ -20238,7 +20238,7 @@ layers:
         processing:
             - BANDS=21
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     REPS.DIAG.24_HMXX.ERGE25:
         <<: *template_24_reps_hmxx_erge
         label_en: REPS.DIAG.24_HMXX.ERGE25 - Maximum humidex over a period >= 25 nil [probability %]
@@ -20331,7 +20331,7 @@ layers:
         processing:
             - BANDS=12
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     REPS.DIAG.24_T7.ERLE-40:
         <<: *template_24_reps_t7_erle
         label_en: REPS.DIAG.24_T7.ERLE-40 - Minimum temperature <= -40 [probability %]
@@ -20472,7 +20472,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     REPS.DIAG.24_T8.ERC0:
         <<: *template_24_reps_t8_erc
         label_en: REPS.DIAG.24_T8.ERC0 - Maximum temperature (0th percentile)
@@ -20529,7 +20529,7 @@ layers:
         processing:
             - BANDS=21
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     REPS.DIAG.24_WCF.ERGE50:
         <<: *template_24_reps_wcf_erge
         label_en: REPS.DIAG.24_WCF.ERGE50 - Wind chill factor <= -50°C [probability %]
@@ -20645,7 +20645,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     REPS.DIAG.24_WCF.ERMEAN:
         <<: *template_24_reps_wcf_erc
         label_en: REPS.DIAG.24_WCF.ERMEAN - Minimum wind chill factor (mean)
@@ -20977,7 +20977,7 @@ layers:
         processing:
             - BANDS=6
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     GEPS.DIAG.3_HMX.ERMEAN:
         <<: *template_3_geps_hmxx_erc
         label_en: GEPS.DIAG.3_HMX.ERMEAN - Humidex at 2 m above ground (mean)
@@ -21129,7 +21129,7 @@ layers:
         processing:
             - BANDS=6
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     GEPS.DIAG.3_WCF.ERMEAN:
         <<: *template_3_geps_wcf_erc
         label_en: GEPS.DIAG.3_WCF.ERMEAN - Wind chill factor at 2 m above ground [°C] (mean)
@@ -21185,7 +21185,7 @@ layers:
         processing:
             - BANDS=6
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     GEPS.DIAG.3_WSPD.ERMEAN:
         <<: *template_3_geps_wspd_erc
         label_en: GEPS.DIAG.3_WSPD.ERMEAN - Wind speed at 10 m above ground [m/s] (mean)
@@ -21307,7 +21307,7 @@ layers:
         processing:
             - BANDS=16
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     GEPS.DIAG.12_PEMM.ERGE1:
         <<: *template_12_geps_pemm_erge
         label_en: GEPS.DIAG.12_PEMM.ERGE1 - Ice pellets >= 1 mm [probability %]
@@ -21423,7 +21423,7 @@ layers:
         processing:
             - BANDS=16
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     GEPS.DIAG.12_RNMM.ERGE1:
         <<: *template_12_geps_rnmm_erge
         label_en: GEPS.DIAG.12_RNMM.ERGE1 - Rain >= 1 mm [probability %]
@@ -21557,7 +21557,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.12_SNMM.ERGE1:
         <<: *template_12_geps_snmm_erge
         label_en: GEPS.DIAG.12_SNMM.ERGE1 - Snow >= 1 mm [probability %]
@@ -21679,7 +21679,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.12_PRMM.ERGE1:
         <<: *template_12_geps_prmm_erge
         label_en: GEPS.DIAG.12_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
@@ -21813,7 +21813,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.12_UVMX.ERGE20:
         <<: *template_12_geps_uvmx_erge
         label_en: GEPS.DIAG.12_UVMX.ERGE20 - Maximum wind modulus over a period >= 20 km/h [probability %]
@@ -21935,7 +21935,7 @@ layers:
         processing:
             - BANDS=18
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     GEPS.DIAG.12_GZ.500.ERMEAN:
         <<: *template_12_geps_gz_erc
         label_en: GEPS.DIAG.12_GZ.500.ERMEAN - Geopotential height at 500.0 mb (mean)
@@ -21949,7 +21949,7 @@ layers:
         processing:
             - BANDS=2
         styles:
-            - mapserv/class/GZ_STD.inc
+            - mapserv/class/GZ_STD.json
     GEPS.DIAG.12_PN.ERMEAN:
         <<: *template_12_geps_pn
         label_en: GEPS.DIAG.12_PN.ERMEAN - Geopotential height at 500.0 mb (contour) (mean)
@@ -21979,7 +21979,7 @@ layers:
         processing:
             - BANDS=2
         styles:
-            - mapserv/class/PN_STD.inc
+            - mapserv/class/PN_STD.json
     GEPS.DIAG.24_FRMM.ERGE1:
         <<: *template_24_geps_frmm_erge
         label_en: GEPS.DIAG.24_FRMM.ERGE1 - Freezing rain >= 1 mm [probability %]
@@ -22095,7 +22095,7 @@ layers:
         processing:
             - BANDS=16
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     GEPS.DIAG.24_PEMM.ERGE1:
         <<: *template_24_geps_pemm_erge
         label_en: GEPS.DIAG.24_PEMM.ERGE1 - Ice pellets >= 1 mm [probability %]
@@ -22211,7 +22211,7 @@ layers:
         processing:
             - BANDS=16
         styles:
-            - mapserv/class/FREEZINGRAIN_ICEPELLETS.inc
+            - mapserv/class/FREEZINGRAIN_ICEPELLETS.json
     GEPS.DIAG.24_RNMM.ERGE1:
         <<: *template_24_geps_rnmm_erge
         label_en: GEPS.DIAG.24_RNMM.ERGE1 - Rain >= 1 mm [probability %]
@@ -22345,7 +22345,7 @@ layers:
         processing:
             - BANDS=19
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.24_SNMM.ERGE1:
         <<: *template_24_geps_snmm_erge
         label_en: GEPS.DIAG.24_SNMM.ERGE1 - Snow >= 1 mm [probability %]
@@ -22473,7 +22473,7 @@ layers:
         processing:
             - BANDS=18
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.24_PRMM.ERGE1:
         <<: *template_24_geps_prmm_erge
         label_en: GEPS.DIAG.24_PRMM.ERGE1 - Quantity of precipitation >= 1 mm [probability %]
@@ -22613,7 +22613,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/REPS_STD_12-24h.inc
+            - mapserv/class/REPS_STD_12-24h.json
     GEPS.DIAG.24_HMXX.ERGE25:
         <<: *template_24_geps_hmxx_erge
         label_en: GEPS.DIAG.24_HMXX.ERGE25 - Maximum humidex over a period >= 25 nil [probability %]
@@ -22705,7 +22705,7 @@ layers:
         processing:
             - BANDS=12
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     GEPS.DIAG.24_T7.ERLE-40:
         <<: *template_24_geps_t7_erle
         label_en: GEPS.DIAG.24_T7.ERLE-40 - Minimum temperature <= -40 [probability %]
@@ -22845,7 +22845,7 @@ layers:
         processing:
             - BANDS=20
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     GEPS.DIAG.24_T8.ERGE-30:
         <<: *template_24_geps_t8_erge
         label_en: GEPS.DIAG.24_T8.ERGE-30 - Maximum temperature >= -30 [probability %]
@@ -22991,7 +22991,7 @@ layers:
         processing:
             - BANDS=21
         styles:
-            - mapserv/class/TEMPERATURE_STD.inc
+            - mapserv/class/TEMPERATURE_STD.json
     GEPS.DIAG.24_WCFMIN.ERGE50:
         <<: *template_24_geps_wcf_erge
         label_en: GEPS.DIAG.24_WCFMIN.ERGE50 - Minimum wind chill factor <= -50°C [probability %]
@@ -23107,7 +23107,7 @@ layers:
         processing:
             - BANDS=17
         styles:
-            - mapserv/class/WIND_STD.inc
+            - mapserv/class/WIND_STD.json
     GEPS.DIAG.24_WCFMIN.ERMEAN:
         <<: *template_24_geps_wcf_erc
         label_en: GEPS.DIAG.24_WCFMIN.ERMEAN - Minimum wind chill factor (mean)
@@ -23677,7 +23677,7 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS.json
         symbols:
             - dreieck-leer
     OCEAN.RIOPS.2D_UUI:
@@ -23703,9 +23703,9 @@ layers:
         label_fr: OCEAN.RIOPS.2D - Fraction de glace marine
         name: iiceconc
         styles:
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
-            - mapserv/class/SEA_ICECONC.inc
-            - mapserv/class/SEA_ICECONC-CIS.inc
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
+            - mapserv/class/SEA_ICECONC-CIS.json
     OCEAN.RIOPS.2D_GE:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23713,9 +23713,9 @@ layers:
         label_fr: OCEAN.RIOPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
         name: iicevol
         styles:
-            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-            - mapserv/class/SEA_ICETHICK.inc
-            - mapserv/class/SEA_ICETHICK-CIS.inc
+            - mapserv/class/SEA_ICETHICK-LINEAR.json
+            - mapserv/class/SEA_ICETHICK.json
+            - mapserv/class/SEA_ICETHICK-CIS.json
     OCEAN.RIOPS.2D_TM2:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23726,12 +23726,12 @@ layers:
             - SCALE=270,297
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     OCEAN.RIOPS.2D_SALW:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23742,10 +23742,10 @@ layers:
             - SCALE=0,43
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_SALT-DEFAULT.inc
-            - mapserv/class/SEA_SALT-COASTAL.inc
-            - mapserv/class/SEA_SALT-FRESH.inc
-            - mapserv/class/SEA_SALT-FULL.inc
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
     OCEAN.RIOPS.2D_SSH:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23756,9 +23756,9 @@ layers:
             - SCALE=-4.19,2.64
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-MID.inc
+            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-MID.json
     OCEAN.RIOPS.2D_MLTW:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23769,10 +23769,10 @@ layers:
             - SCALE=0.70,2865.45
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_DEPTH-DEFAULT.inc
-            - mapserv/class/SEA_DEPTH-SHALLOW.inc
-            - mapserv/class/SEA_DEPTH-MID.inc
-            - mapserv/class/SEA_DEPTH-DEEP.inc
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.RIOPS.2D_MLW:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23783,10 +23783,10 @@ layers:
             - SCALE=0.7,3365.6
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_DEPTH-DEFAULT.inc
-            - mapserv/class/SEA_DEPTH-SHALLOW.inc
-            - mapserv/class/SEA_DEPTH-MID.inc
-            - mapserv/class/SEA_DEPTH-DEEP.inc
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.RIOPS.2D_SDV:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23794,8 +23794,8 @@ layers:
         label_fr: OCEAN.RIOPS.2D - Volume de neige sur la glace de mer par unité de surface de cellule de grille [cm]
         name: isnowvol
         styles:
-            - mapserv/class/SEA_SNOWTHICK-LINEAR.inc
-            - mapserv/class/SEA_SNOWTHICK.inc
+            - mapserv/class/SEA_SNOWTHICK-LINEAR.json
+            - mapserv/class/SEA_SNOWTHICK.json
     OCEAN.RIOPS.2D_TMI:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23806,9 +23806,9 @@ layers:
             - SCALE=234.4,273.2
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_ICETEMP-LINEAR.inc
-            - mapserv/class/SEA_ICETEMP.inc
-            - mapserv/class/SEA_ICETEMP-CIS.inc
+            - mapserv/class/SEA_ICETEMP-LINEAR.json
+            - mapserv/class/SEA_ICETEMP.json
+            - mapserv/class/SEA_ICETEMP-CIS.json
     OCEAN.RIOPS.2D_SIII:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23819,9 +23819,9 @@ layers:
             - SCALE=-4429.5,79427
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-            - mapserv/class/SEA_ICEPRESS.inc
-            - mapserv/class/SEA_ICEPRESS-CIS.inc
+            - mapserv/class/SEA_ICEPRESS-LINEAR.json
+            - mapserv/class/SEA_ICEPRESS.json
+            - mapserv/class/SEA_ICEPRESS-CIS.json
     OCEAN.RIOPS.2D_STGI:
         <<: *template_riops
         forecast_model: *id_riops_2D
@@ -23832,9 +23832,9 @@ layers:
             - SCALE=-367.5,199788.5
             - SCALE_BUCKETS=500
         styles:
-            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-            - mapserv/class/SEA_ICESTRENGTH.inc
-            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.json
+            - mapserv/class/SEA_ICESTRENGTH.json
+            - mapserv/class/SEA_ICESTRENGTH-CIS.json
     OCEAN.RIOPS.3D_SALW_0000:
         <<: *template_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0000m [psu]
@@ -24808,9 +24808,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Fraction de glace marine
         name: iiceconc
         styles:
-            - mapserv/class/SEA_ICECONC-LINEAR.inc
-            - mapserv/class/SEA_ICECONC.inc
-            - mapserv/class/SEA_ICECONC-CIS.inc
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
+            - mapserv/class/SEA_ICECONC-CIS.json
     OCEAN.GIOPS.2D_GE:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24818,9 +24818,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
         name: iicevol
         styles:
-            - mapserv/class/SEA_ICETHICK-LINEAR.inc
-            - mapserv/class/SEA_ICETHICK.inc
-            - mapserv/class/SEA_ICETHICK-CIS.inc
+            - mapserv/class/SEA_ICETHICK-LINEAR.json
+            - mapserv/class/SEA_ICETHICK.json
+            - mapserv/class/SEA_ICETHICK-CIS.json
     OCEAN.GIOPS.2D_TM2:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24828,12 +24828,12 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Température de la mer [K]
         name: votemper
         styles:
-            - mapserv/class/SEA_TEMPSURF-DEFAULT.inc
-            - mapserv/class/SEA_TEMPSURF-MIZ.inc
-            - mapserv/class/SEA_TEMPSURF-COLD-CIS.inc
-            - mapserv/class/SEA_TEMPSURF-COLD.inc
-            - mapserv/class/SEA_TEMPSURF-MID.inc
-            - mapserv/class/SEA_TEMPSURF-WARM.inc
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
     OCEAN.GIOPS.2D_SALW:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24841,10 +24841,10 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Salinité de l'eau de la mer [psu]
         name: vosaline
         styles:
-            - mapserv/class/SEA_SALT-DEFAULT.inc
-            - mapserv/class/SEA_SALT-COASTAL.inc
-            - mapserv/class/SEA_SALT-FRESH.inc
-            - mapserv/class/SEA_SALT-FULL.inc
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
     OCEAN.GIOPS.2D_SSH:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24852,9 +24852,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Hauteur de la surface de la mer par rapport au géoïde [m]
         name: sossheig
         styles:
-            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.inc
-            - mapserv/class/SEA_SURFACE_HEIGHT-MID.inc
+            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-MID.json
     OCEAN.GIOPS.2D_MLTW:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24862,10 +24862,10 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Profondeur de la turbocline [m]
         name: somixhgt
         styles:
-            - mapserv/class/SEA_DEPTH-DEFAULT.inc
-            - mapserv/class/SEA_DEPTH-SHALLOW.inc
-            - mapserv/class/SEA_DEPTH-MID.inc
-            - mapserv/class/SEA_DEPTH-DEEP.inc
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.GIOPS.2D_MLW:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24873,10 +24873,10 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
         name: sokaraml
         styles:
-            - mapserv/class/SEA_DEPTH-DEFAULT.inc
-            - mapserv/class/SEA_DEPTH-SHALLOW.inc
-            - mapserv/class/SEA_DEPTH-MID.inc
-            - mapserv/class/SEA_DEPTH-DEEP.inc
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.GIOPS.2D_SDV:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24884,8 +24884,8 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Volume de neige sur la glace de mer par unité de surface de cellule de grille [cm]
         name: isnowvol
         styles:
-            - mapserv/class/SEA_SNOWTHICK-LINEAR.inc
-            - mapserv/class/SEA_SNOWTHICK.inc
+            - mapserv/class/SEA_SNOWTHICK-LINEAR.json
+            - mapserv/class/SEA_SNOWTHICK.json
     OCEAN.GIOPS.2D_TMI:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24893,9 +24893,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Température de la surface de la neige/glace de mer [K]
         name: iicesurftemp
         styles:
-            - mapserv/class/SEA_ICETEMP-LINEAR.inc
-            - mapserv/class/SEA_ICETEMP.inc
-            - mapserv/class/SEA_ICETEMP-CIS.inc
+            - mapserv/class/SEA_ICETEMP-LINEAR.json
+            - mapserv/class/SEA_ICETEMP.json
+            - mapserv/class/SEA_ICETEMP-CIS.json
     OCEAN.GIOPS.2D_SIII:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24903,9 +24903,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Pression interne de la glace, intégrée verticalement [N/m]
         name: iicepressure
         styles:
-            - mapserv/class/SEA_ICEPRESS-LINEAR.inc
-            - mapserv/class/SEA_ICEPRESS.inc
-            - mapserv/class/SEA_ICEPRESS-CIS.inc
+            - mapserv/class/SEA_ICEPRESS-LINEAR.json
+            - mapserv/class/SEA_ICEPRESS.json
+            - mapserv/class/SEA_ICEPRESS-CIS.json
     OCEAN.GIOPS.2D_STGI:
         <<: *template_giops
         forecast_model: *id_giops_2D
@@ -24913,9 +24913,9 @@ layers:
         label_fr: OCEAN.GIOPS.2D - Résistance de la compression de la glace, intégrée verticalement [N/m]
         name: iicestrength
         styles:
-            - mapserv/class/SEA_ICESTRENGTH-LINEAR.inc
-            - mapserv/class/SEA_ICESTRENGTH.inc
-            - mapserv/class/SEA_ICESTRENGTH-CIS.inc
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.json
+            - mapserv/class/SEA_ICESTRENGTH.json
+            - mapserv/class/SEA_ICESTRENGTH-CIS.json
     OCEAN.GIOPS.3D_SALW_0000:
         <<: *template_giops_3d_salw
         label_en: Sea water salinity//OCEAN.GIOPS.3D - Sea water salinity - 0000m [psu]
@@ -26415,7 +26415,7 @@ layers:
         metadata:
             - wfs_featureid=name
         styles:
-            - mapserv/class/WEATHER.inc
+            - mapserv/class/WEATHER.json
         symbols:
             - weathericons
     ALERTS:
@@ -26431,8 +26431,8 @@ layers:
         metadata:
             - wfs_featureid=identifier
         styles:
-            - mapserv/class/ALERTS.inc
-            - mapserv/class/ALERTES.inc
+            - mapserv/class/ALERTS.json
+            - mapserv/class/ALERTES.json
     WEATHERADIO:
         type: raster
         time_enabled: 'no'
@@ -26444,8 +26444,8 @@ layers:
         processing:
             - BANDS=1
         styles:
-            - mapserv/class/WEATHERADIO.inc
-            - mapserv/class/RADIOMETEO.inc
+            - mapserv/class/WEATHERADIO.json
+            - mapserv/class/RADIOMETEO.json
     HURRICANE_CENTRE:
         type: point
         <<: *template_hurricane
@@ -26453,7 +26453,7 @@ layers:
         label_fr: Ouragans actifs//Points de prévision
         data: local/ALL_HURRICANES/ALL_HURRICANES_pts.shp
         styles:
-            - mapserv/class/HURRICANE_CENTRE.inc
+            - mapserv/class/HURRICANE_CENTRE.json
         symbols:
             - category0
             - category1
@@ -26468,7 +26468,7 @@ layers:
         label_fr: Ouragans actifs//Segments inter-points
         data: local/ALL_HURRICANES/ALL_HURRICANES_lin.shp
         styles:
-            - mapserv/class/HURRICANE_LINE.inc
+            - mapserv/class/HURRICANE_LINE.json
     HURRICANE_ERR:
         type: polygon
         <<: *template_hurricane
@@ -26476,7 +26476,7 @@ layers:
         label_fr: Ouragans actifs//Erreur de prévision de trajectoire
         data: local/ALL_HURRICANES/ALL_HURRICANES_err.shp
         styles:
-            - mapserv/class/HURRICANE_ERR.inc
+            - mapserv/class/HURRICANE_ERR.json
     HURRICANE_RAD:
         type: polygon
         <<: *template_hurricane
@@ -26484,7 +26484,7 @@ layers:
         label_fr: Ouragans actifs//Rayons de prévisions de vent (quadrants)
         data: local/ALL_HURRICANES/ALL_HURRICANES_rad.shp
         styles:
-            - mapserv/class/HURRICANE_RAD.inc
+            - mapserv/class/HURRICANE_RAD.json
     HURRICANE_RESPONSE_ZONE:
         type: line
         <<: *template_hurricane
@@ -26492,8 +26492,8 @@ layers:
         label_fr: Zone de réaction aux ouragans
         data: local/MSC_Hurricane_AoR/CHC_Hurricane-Response-Zone.shp
         styles:
-            - mapserv/class/HURRICANE_LINE_BLACK_DASHED.inc
-            - mapserv/class/HURRICANE_LINE_RED.inc
+            - mapserv/class/HURRICANE_LINE_BLACK_DASHED.json
+            - mapserv/class/HURRICANE_LINE_RED.json
     RADAR_COVERAGE_RRAI:
         type: POLYGON
         time_enabled: 'yes'
@@ -26505,7 +26505,7 @@ layers:
         metadata:
             - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE.inc
+            - mapserv/class/RADAR_COVERAGE.json
     RADAR_COVERAGE_RRAI.INV:
         type: POLYGON
         time_enabled: 'yes'
@@ -26517,8 +26517,8 @@ layers:
         metadata:
             - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE_INVT50G185.inc
-            - mapserv/class/RADAR_COVERAGE_INVT50G169.inc
+            - mapserv/class/RADAR_COVERAGE_INVT50G185.json
+            - mapserv/class/RADAR_COVERAGE_INVT50G169.json
     RADAR_COVERAGE_RSNO:
         type: POLYGON
         time_enabled: 'yes'
@@ -26530,7 +26530,7 @@ layers:
         metadata:
             - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE.inc
+            - mapserv/class/RADAR_COVERAGE.json
     RADAR_COVERAGE_RSNO.INV:
         type: POLYGON
         time_enabled: 'yes'
@@ -26542,8 +26542,8 @@ layers:
         metadata:
             - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE_INVT50G185.inc
-            - mapserv/class/RADAR_COVERAGE_INVT50G169.inc
+            - mapserv/class/RADAR_COVERAGE_INVT50G185.json
+            - mapserv/class/RADAR_COVERAGE_INVT50G169.json
     RADAR_1KM_RRAI:
         type: raster
         time_enabled: 'yes'
@@ -26554,12 +26554,12 @@ layers:
         metadata:
             - 'wcs_enable_request=!*'
         styles:
-            - mapserv/class/RADARURPPRECIPR14-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR8.inc
-            - mapserv/class/RADARURPPRECIPR8-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR.inc
-            - mapserv/class/RADARURPPRECIPR-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR14.inc
+            - mapserv/class/RADARURPPRECIPR14-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR8.json
+            - mapserv/class/RADARURPPRECIPR8-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR.json
+            - mapserv/class/RADARURPPRECIPR-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR14.json
     RADAR_1KM_RSNO:
         type: raster
         time_enabled: 'yes'
@@ -26570,12 +26570,12 @@ layers:
         metadata:
             - 'wcs_enable_request=!*'
         styles:
-            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS8.inc
-            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS.inc
-            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS14.inc
+            - mapserv/class/RADARURPPRECIPS14-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS8.json
+            - mapserv/class/RADARURPPRECIPS8-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS.json
+            - mapserv/class/RADARURPPRECIPS-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS14.json
     RADAR_1KM_RDBR:
         type: raster
         time_enabled: 'yes'
@@ -26586,12 +26586,12 @@ layers:
         metadata:
             - 'wcs_enable_request=!*'
         styles:
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR8.inc
-            - mapserv/class/RADARURPREFLECTR8-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR.inc
-            - mapserv/class/RADARURPREFLECTR-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR14.inc
+            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR8.json
+            - mapserv/class/RADARURPREFLECTR8-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR.json
+            - mapserv/class/RADARURPREFLECTR-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR14.json
     RADAR_1KM_RDBS:
         phase: beta # WMS GetMap tiles are fine, not the underlying data. CMOI-R will provide a META-format based Snow source data
         type: raster
@@ -26603,12 +26603,12 @@ layers:
         metadata:
             - 'wcs_enable_request=!*'
         styles:
-            - mapserv/class/RADARURPREFLECTS14-1KM-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS8-1KM.inc
-            - mapserv/class/RADARURPREFLECTS8-1KM-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS-1KM.inc
-            - mapserv/class/RADARURPREFLECTS-1KM-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS14-1KM.inc
+            - mapserv/class/RADARURPREFLECTS14-1KM-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS8-1KM.json
+            - mapserv/class/RADARURPREFLECTS8-1KM-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS-1KM.json
+            - mapserv/class/RADARURPREFLECTS-1KM-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS14-1KM.json
     RADAR_RRAI:
         type: raster
         time_enabled: 'yes'
@@ -26620,12 +26620,12 @@ layers:
         processing:
             - BANDS=3
         styles:
-            - mapserv/class/RADARURPPRECIPR14-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR8.inc
-            - mapserv/class/RADARURPPRECIPR8-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR.inc
-            - mapserv/class/RADARURPPRECIPR-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPR14.inc
+            - mapserv/class/RADARURPPRECIPR14-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR8.json
+            - mapserv/class/RADARURPPRECIPR8-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR.json
+            - mapserv/class/RADARURPPRECIPR-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR14.json
     RADAR_RSNO:
         type: raster
         time_enabled: 'yes'
@@ -26637,12 +26637,12 @@ layers:
         processing:
             - BANDS=5
         styles:
-            - mapserv/class/RADARURPPRECIPS14-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS8.inc
-            - mapserv/class/RADARURPPRECIPS8-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS.inc
-            - mapserv/class/RADARURPPRECIPS-LINEAR.inc
-            - mapserv/class/RADARURPPRECIPS14.inc
+            - mapserv/class/RADARURPPRECIPS14-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS8.json
+            - mapserv/class/RADARURPPRECIPS8-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS.json
+            - mapserv/class/RADARURPPRECIPS-LINEAR.json
+            - mapserv/class/RADARURPPRECIPS14.json
     RADAR_RDBR:
         type: raster
         time_enabled: 'yes'
@@ -26654,12 +26654,12 @@ layers:
         processing:
             - BANDS=2
         styles:
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR8.inc
-            - mapserv/class/RADARURPREFLECTR8-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR.inc
-            - mapserv/class/RADARURPREFLECTR-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTR14.inc
+            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR8.json
+            - mapserv/class/RADARURPREFLECTR8-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR.json
+            - mapserv/class/RADARURPREFLECTR-LINEAR.json
+            - mapserv/class/RADARURPREFLECTR14.json
     RADAR_RDBS:
         type: raster
         time_enabled: 'yes'
@@ -26671,10 +26671,10 @@ layers:
         processing:
             - BANDS=4
         styles:
-            - mapserv/class/RADARURPREFLECTS14-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS8.inc
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS8-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS.inc
-            - mapserv/class/RADARURPREFLECTS-LINEAR.inc
-            - mapserv/class/RADARURPREFLECTS14.inc
+            - mapserv/class/RADARURPREFLECTS14-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS8.json
+            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS8-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS.json
+            - mapserv/class/RADARURPREFLECTS-LINEAR.json
+            - mapserv/class/RADARURPREFLECTS14.json
