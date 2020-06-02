@@ -1,0 +1,184 @@
+[
+    {
+        "__type__": "class",
+        "name": "-80.0 -40.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -8.000 AND [pixel] < -4.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "78",
+                "24",
+                "24"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-40.0 -20.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -4.000 AND [pixel] < -2.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "137",
+                "42",
+                "42"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20.0 -10.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -2.000 AND [pixel] < -1.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "195",
+                "60",
+                "60"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10.0 -5.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -1.000 AND [pixel] < -0.500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "213",
+                "118",
+                "118"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5.0 -2.5 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -0.500 AND [pixel] < -0.250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "231",
+                "177",
+                "177"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-2.5 -1.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -0.250 AND [pixel] < -0.100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "249",
+                "236",
+                "236"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-1.0 1.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= -0.100 AND [pixel] < 0.100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 2.5 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 0.100 AND [pixel] < 0.250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "236",
+                "242",
+                "249"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.5 5.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 0.250 AND [pixel] < 0.500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "177",
+                "202",
+                "231"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 10.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 0.500 AND [pixel] < 1.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "118",
+                "163",
+                "213"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 20.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 1.000 AND [pixel] < 2.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "60",
+                "123",
+                "195"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 40.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 2.000 AND [pixel] < 4.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "42",
+                "86",
+                "137"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40.0 80.0 1E-1 Pa s-1",
+        "group": "VERTICALVELOCITY",
+        "expression": "([pixel] >= 4.000 AND [pixel] < 8.000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "24",
+                "49",
+                "78"
+            ]
+        }
+    }
+]

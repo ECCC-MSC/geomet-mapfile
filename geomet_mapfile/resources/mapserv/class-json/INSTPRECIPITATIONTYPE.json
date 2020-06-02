@@ -1,0 +1,72 @@
+[
+    {
+        "__type__": "class",
+        "name": "Rain",
+        "group": "INSTPRECIPITATIONTYPE",
+        "expression": "([pixel] >= 1.0 AND [pixel] < 2.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "221",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "Rain-Snow",
+        "group": "INSTPRECIPITATIONTYPE",
+        "expression": "([pixel] >= 2.0 AND [pixel] < 3.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "238",
+                "170",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "Ice-Pellets",
+        "group": "INSTPRECIPITATIONTYPE",
+        "expression": "([pixel] >= 3.0 AND [pixel] < 4.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "Freezing-Rain",
+        "group": "INSTPRECIPITATIONTYPE",
+        "expression": "([pixel] >= 4.0 AND [pixel] < 5.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "Snow",
+        "group": "INSTPRECIPITATIONTYPE",
+        "expression": "([pixel] >= 5.0 AND [pixel] < 6.0)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "238",
+                "255"
+            ]
+        }
+    }
+]

@@ -1,0 +1,380 @@
+[
+    {
+        "__type__": "class",
+        "name": ".. -233.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] < 233.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": [
+                "173",
+                "233.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "233.15 238.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 233.15 AND [pixel] < 238.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "183"
+            ],
+            "datarange": [
+                "233.15",
+                "238.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "238.15 243.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 238.15 AND [pixel] < 243.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "183",
+                "0",
+                "0",
+                "239"
+            ],
+            "datarange": [
+                "238.15",
+                "243.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "243.15 248.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 243.15 AND [pixel] < 248.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "239",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": [
+                "243.15",
+                "248.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "248.15 253.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 248.15 AND [pixel] < 253.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "0",
+                "147",
+                "254"
+            ],
+            "datarange": [
+                "248.15",
+                "253.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "253.15 258.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 253.15 AND [pixel] < 258.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "147",
+                "254",
+                "0",
+                "231",
+                "254"
+            ],
+            "datarange": [
+                "253.15",
+                "258.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "258.15 263.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 258.15 AND [pixel] < 263.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "231",
+                "254",
+                "51",
+                "253",
+                "135"
+            ],
+            "datarange": [
+                "258.15",
+                "263.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "263.15 268.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 263.15 AND [pixel] < 268.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "253",
+                "203",
+                "119",
+                "253",
+                "135"
+            ],
+            "datarange": [
+                "263.15",
+                "268.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "268.15 273.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 268.15 AND [pixel] < 273.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "119",
+                "253",
+                "135",
+                "187",
+                "254",
+                "67"
+            ],
+            "datarange": [
+                "268.15",
+                "273.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "273.15 278.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 273.15 AND [pixel] < 278.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "187",
+                "254",
+                "67",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "273.15",
+                "278.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "278.15 283.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 278.15 AND [pixel] < 283.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "187",
+                "0"
+            ],
+            "datarange": [
+                "278.15",
+                "283.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "283.15 288.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 283.15 AND [pixel] < 288.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "187",
+                "0",
+                "254",
+                "119",
+                "0"
+            ],
+            "datarange": [
+                "283.15",
+                "288.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "288.15 293.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 288.15 AND [pixel] < 293.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "119",
+                "0",
+                "254",
+                "50",
+                "0"
+            ],
+            "datarange": [
+                "288.15",
+                "293.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "293.15 298.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 293.15 AND [pixel] < 298.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "50",
+                "0",
+                "239",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "293.15",
+                "298.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "298.15 303.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 298.15 AND [pixel] < 303.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "239",
+                "0",
+                "0",
+                "183",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "298.15",
+                "303.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "303.15 308.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 303.15 AND [pixel] < 308.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "183",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "303.15",
+                "308.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "308.15 313.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 308.15 AND [pixel] < 313.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "85",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "308.15",
+                "313.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 313.15",
+        "group": "TEMPERATURE-LINEAR",
+        "expression": "([pixel] >= 313.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "85",
+                "0",
+                "0",
+                "85",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "313.15",
+                "373.00"
+            ]
+        }
+    }
+]

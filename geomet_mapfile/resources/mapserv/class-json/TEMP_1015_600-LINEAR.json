@@ -1,0 +1,392 @@
+[
+    {
+        "__type__": "class",
+        "name": ".. -50",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] < -50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": "-100.0 -50.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -45",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -50 AND [pixel] < -45)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "183"
+            ],
+            "datarange": "-50.0 -45.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-45 -40",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -45 AND [pixel] < -40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "183",
+                "0",
+                "0",
+                "239"
+            ],
+            "datarange": "-45.0 -40.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-40 -35",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -40 AND [pixel] < -35)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "239",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": "-40.0 -35.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -35 AND [pixel] < -30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "0",
+                "147",
+                "254"
+            ],
+            "datarange": "-35.0 -30.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -30 AND [pixel] < -25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "147",
+                "254",
+                "0",
+                "231",
+                "254"
+            ],
+            "datarange": "-30.0 -25.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -25 AND [pixel] < -20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "231",
+                "254",
+                "51",
+                "253",
+                "135"
+            ],
+            "datarange": "-25.0 -20.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -20 AND [pixel] < -15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "253",
+                "203",
+                "119",
+                "253",
+                "135"
+            ],
+            "datarange": "-20.0 -15.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -15 AND [pixel] < -10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "119",
+                "253",
+                "135",
+                "187",
+                "254",
+                "67"
+            ],
+            "datarange": "-15.0 -10.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -10 AND [pixel] < -5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "187",
+                "254",
+                "67",
+                "210",
+                "254",
+                "45"
+            ],
+            "datarange": "-10.0 -5.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= -5 AND [pixel] < 0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "210",
+                "254",
+                "45",
+                "233",
+                "255",
+                "23"
+            ],
+            "datarange": [
+                "-5.0",
+                "0.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 5",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 0 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "233",
+                "255",
+                "23",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "0.0",
+                "5.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "187",
+                "0"
+            ],
+            "datarange": [
+                "5.0",
+                "10.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 10 AND [pixel] < 15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "187",
+                "0",
+                "254",
+                "119",
+                "0"
+            ],
+            "datarange": [
+                "10.0",
+                "15.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 15 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "119",
+                "0",
+                "254",
+                "50",
+                "0"
+            ],
+            "datarange": [
+                "15.0",
+                "20.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 20 AND [pixel] < 25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "50",
+                "0",
+                "239",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "20.0",
+                "25.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 25 AND [pixel] < 30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "239",
+                "0",
+                "0",
+                "183",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "25.0",
+                "30.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 35",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 30 AND [pixel] < 35)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "183",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "30.0",
+                "35.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35 40",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 35 AND [pixel] < 40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "85",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "35.0",
+                "40.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 40",
+        "group": "TEMP_1015_600-LINEAR",
+        "expression": "([pixel] >= 40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "40.0",
+                "100.0"
+            ]
+        }
+    }
+]

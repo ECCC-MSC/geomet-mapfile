@@ -1,0 +1,251 @@
+[
+    {
+        "__type__": "class",
+        "name": "<= -40",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] < -40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": "-100 -40.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-40 -35",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -40 AND [pixel] < -35)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "203"
+            ],
+            "datarange": "-40.0 -35.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -35 AND [pixel] < -30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "203",
+                "0",
+                "40",
+                "254"
+            ],
+            "datarange": "-35.0 -30.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -30 AND [pixel] < -25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "40",
+                "254",
+                "0",
+                "155",
+                "254"
+            ],
+            "datarange": "-30.0 -25.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -25 AND [pixel] < -20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "155",
+                "254",
+                "13",
+                "253",
+                "241"
+            ],
+            "datarange": "-25.0 -20.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -20 AND [pixel] < -15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "13",
+                "253",
+                "241",
+                "106",
+                "253",
+                "148"
+            ],
+            "datarange": "-20.0 -15.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -15 AND [pixel] < -10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "106",
+                "253",
+                "148",
+                "199",
+                "254",
+                "55"
+            ],
+            "datarange": "-15.0 -10.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -10 AND [pixel] < -5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "199",
+                "254",
+                "55",
+                "254",
+                "217",
+                "0"
+            ],
+            "datarange": "-10.0 -5.0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= -5 AND [pixel] < 0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "217",
+                "0",
+                "254",
+                "125",
+                "0"
+            ],
+            "datarange": [
+                "-5.0",
+                "0.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 5",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= 0 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "125",
+                "0",
+                "254",
+                "32",
+                "0"
+            ],
+            "datarange": [
+                "0.0",
+                "5.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= 5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "32",
+                "0",
+                "203",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "5.0",
+                "10.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= 10 AND [pixel] <= 15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "203",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "10.0",
+                "15.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 15",
+        "group": "TEMPWINTER-LINEAR",
+        "expression": "([pixel] >= 15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "15.0",
+                "50.0"
+            ]
+        }
+    }
+]

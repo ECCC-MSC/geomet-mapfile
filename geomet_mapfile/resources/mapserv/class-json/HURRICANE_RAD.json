@@ -1,0 +1,62 @@
+[
+    {
+        "__type__": "class",
+        "name": "34",
+        "group": "HURRICANE_RAD",
+        "expression": "(([WINDFORCE] = 34) AND ([active] = 1))",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "48",
+        "group": "HURRICANE_RAD",
+        "expression": "(([WINDFORCE] = 48) AND ([active] = 1))",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "136",
+                "0"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "64",
+        "group": "HURRICANE_RAD",
+        "expression": "(([WINDFORCE] = 64) AND ([active] = 1))",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "0"
+            ],
+            "outlinecolor": [
+                "0",
+                "0",
+                "0"
+            ],
+            "width": "0.26"
+        }
+    }
+]

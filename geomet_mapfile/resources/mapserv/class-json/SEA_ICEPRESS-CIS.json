@@ -1,0 +1,72 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 1",
+        "group": "SEA_ICEPRESS-CIS",
+        "expression": "([pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "086",
+                "120",
+                "078"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1 - 3000",
+        "group": "SEA_ICEPRESS-CIS",
+        "expression": "(1 <= [pixel] AND [pixel] < 3000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "054",
+                "168",
+                "054"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "3000 - 5000",
+        "group": "SEA_ICEPRESS-CIS",
+        "expression": "(3000 <= [pixel] AND [pixel] < 5000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "154",
+                "204",
+                "079"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5000 - 6000",
+        "group": "SEA_ICEPRESS-CIS",
+        "expression": "(5000 <= [pixel] AND [pixel] < 6000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 6000",
+        "group": "SEA_ICEPRESS-CIS",
+        "expression": "(6000 <= [pixel])",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "000",
+                "000"
+            ]
+        }
+    }
+]

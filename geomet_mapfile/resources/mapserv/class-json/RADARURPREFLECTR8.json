@@ -1,0 +1,114 @@
+[
+    {
+        "__type__": "class",
+        "name": "7.50 - 23.00 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(7.50 <= [pixel] AND [pixel] < 23.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "255",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "23.00 - 27.75 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(23.00 <= [pixel] AND [pixel] < 27.75)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "051",
+                "255",
+                "051"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "27.75 - 37.50 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(27.75 <= [pixel] AND [pixel] < 37.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "153",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "37.50 - 42.25 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(37.50 <= [pixel] AND [pixel] < 42.25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "102",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "42.25 - 47.00 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(42.25 <= [pixel] AND [pixel] < 47.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "102",
+                "204"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "47.00 - 52.25 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(47.00 <= [pixel] AND [pixel] < 52.25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "051",
+                "204"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "52.25 - 56.50 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(52.25 <= [pixel] AND [pixel] < 56.50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "102",
+                "000",
+                "153"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 57.50 (dBZ)",
+        "group": "RADARURPREFLECTR8",
+        "expression": "(57.50 <= [pixel] AND [pixel] <= 66.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "051",
+                "000",
+                "102"
+            ]
+        }
+    }
+]

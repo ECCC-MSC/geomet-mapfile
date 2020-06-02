@@ -1,0 +1,275 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.005 0.05",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.005 AND [pixel] < 0.05)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "203",
+                "0",
+                "254",
+                "222",
+                "0"
+            ],
+            "datarange": [
+                "0.005",
+                "0.05"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.05 0.10",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.05 AND [pixel] < 0.10)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "222",
+                "0",
+                "233",
+                "254",
+                "21"
+            ],
+            "datarange": [
+                "0.05",
+                "0.10"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 0.15",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.10 AND [pixel] < 0.15)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "233",
+                "254",
+                "21",
+                "179",
+                "254",
+                "75"
+            ],
+            "datarange": [
+                "0.10",
+                "0.15"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.15 0.20",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.15 AND [pixel] < 0.20)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "179",
+                "254",
+                "75",
+                "56",
+                "209",
+                "72"
+            ],
+            "datarange": [
+                "0.15",
+                "0.20"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.20 0.25",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.20 AND [pixel] < 0.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "56",
+                "209",
+                "72",
+                "56",
+                "160",
+                "182"
+            ],
+            "datarange": [
+                "0.20",
+                "0.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.25 0.30",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.25 AND [pixel] < 0.30)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "56",
+                "160",
+                "182",
+                "0",
+                "209",
+                "182"
+            ],
+            "datarange": [
+                "0.25",
+                "0.30"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.30 0.35",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.30 AND [pixel] < 0.35)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "209",
+                "182",
+                "0",
+                "209",
+                "254"
+            ],
+            "datarange": [
+                "0.30",
+                "0.35"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.35 0.40",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.35 AND [pixel] < 0.40)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "209",
+                "254",
+                "0",
+                "143",
+                "254"
+            ],
+            "datarange": [
+                "0.35",
+                "0.40"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.40 0.45",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.40 AND [pixel] < 0.45)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "143",
+                "254",
+                "0",
+                "76",
+                "254"
+            ],
+            "datarange": [
+                "0.40",
+                "0.45"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.45 0.50",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.45 AND [pixel] < 0.50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "76",
+                "254",
+                "0",
+                "9",
+                "254"
+            ],
+            "datarange": [
+                "0.45",
+                "0.50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.50 0.55",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.50 AND [pixel] < 0.55)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "9",
+                "254",
+                "0",
+                "0",
+                "216"
+            ],
+            "datarange": [
+                "0.50",
+                "0.55"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.55 0.60",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.55 AND [pixel] < 0.60)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "216",
+                "0",
+                "0",
+                "171"
+            ],
+            "datarange": [
+                "0.55",
+                "0.60"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.60 ..",
+        "group": "WATERCONTENTSOIL-LINEAR",
+        "expression": "([pixel] >= 0.60 AND [pixel] < 0.90)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "171",
+                "0",
+                "0",
+                "121"
+            ],
+            "datarange": [
+                "0.60",
+                "0.90"
+            ]
+        }
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "__type__": "class",
+        "name": "0% cloud coverage",
+        "group": "CLOUD",
+        "expression": "([pixel] < 0.1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "0"
+            ],
+            "opacity": "0"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0% 100% cloud coverage",
+        "group": "CLOUD",
+        "expression": "([pixel] >= 0.1)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "32",
+                "32",
+                "32",
+                "255",
+                "255",
+                "255"
+            ],
+            "datarange": [
+                "0.1",
+                "100.0"
+            ]
+        }
+    }
+]

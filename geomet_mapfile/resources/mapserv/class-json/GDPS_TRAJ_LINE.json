@@ -1,0 +1,16 @@
+[
+    {
+        "__type__": "class",
+        "name": "Trajectory Line",
+        "group": "GDPS_TRAJ_LINE",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "0",
+                "0"
+            ],
+            "width": "1.5"
+        }
+    }
+]

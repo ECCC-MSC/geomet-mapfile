@@ -1,0 +1,149 @@
+[
+    {
+        "__type__": "class",
+        "name": "<= 1005 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel]  < 100500.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "0",
+                "127"
+            ],
+            "datarange": [
+                "90000.0",
+                "100500.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1005 1014 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 100500.00 AND [pixel] < 101400.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "0",
+                "127",
+                "0",
+                "63",
+                "254"
+            ],
+            "datarange": [
+                "100500.0",
+                "101400.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1014 1023 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 101400.00 AND [pixel] < 102300.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "0",
+                "63",
+                "254",
+                "51",
+                "253",
+                "203"
+            ],
+            "datarange": [
+                "101400.0",
+                "102300.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1023 1032 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 102300.00 AND [pixel] < 103200.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "51",
+                "253",
+                "203",
+                "255",
+                "255",
+                "0"
+            ],
+            "datarange": [
+                "102300.0",
+                "103200.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1032 1041 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 103200.00 AND [pixel] < 104100.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "255",
+                "0",
+                "254",
+                "50",
+                "0"
+            ],
+            "datarange": [
+                "103200.0",
+                "104100.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1041 1050 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 104100.00 AND [pixel] < 105000.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "254",
+                "50",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "104100.0",
+                "105000.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 1050 mb",
+        "group": "PRESSURESEAHIGH",
+        "expression": "([pixel] >= 105000.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "127",
+                "50",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "105000.0",
+                "110000.0"
+            ]
+        }
+    }
+]

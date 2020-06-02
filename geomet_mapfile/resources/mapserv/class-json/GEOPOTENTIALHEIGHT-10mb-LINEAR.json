@@ -1,0 +1,485 @@
+[
+    {
+        "__type__": "class",
+        "name": "30500.0 - 30525.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30500.0 <= [pixel]  AND [pixel] < 30525.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "121",
+                "0",
+                "0",
+                "171"
+            ],
+            "datarange": [
+                "",
+                "30500.0",
+                "30525.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30525.0 - 30550.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30525.0 <= [pixel]  AND [pixel] < 30550.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "171",
+                "",
+                "0",
+                "0",
+                "216"
+            ],
+            "datarange": [
+                "",
+                "30525.0",
+                "30550.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30550.0 - 30575.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30550.0 <= [pixel]  AND [pixel] < 30575.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "0",
+                "216",
+                "0",
+                "9",
+                "254"
+            ],
+            "datarange": [
+                "",
+                "30550.0",
+                "30575.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30575.0 - 30600.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30575.0 <= [pixel]  AND [pixel] < 30600.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "9",
+                "254",
+                "0",
+                "76",
+                "254"
+            ],
+            "datarange": [
+                "",
+                "30575.0",
+                "30600.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30600.0 - 30625.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30600.0 <= [pixel]  AND [pixel] < 30625.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "76",
+                "254",
+                "",
+                "0",
+                "143",
+                "254"
+            ],
+            "datarange": [
+                "",
+                "30600.0",
+                "30625.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30625.0 - 30650.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30625.0 <= [pixel]  AND [pixel] < 30650.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "143",
+                "254",
+                "0",
+                "209",
+                "254"
+            ],
+            "datarange": [
+                "",
+                "30625.0",
+                "30650.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30650.0 - 30675.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30650.0 <= [pixel]  AND [pixel] < 30675.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "0",
+                "209",
+                "254",
+                "18",
+                "253",
+                "236"
+            ],
+            "datarange": [
+                "",
+                "30650.0",
+                "30675.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30675.0 - 30700.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30675.0 <= [pixel]  AND [pixel] < 30700.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "18",
+                "253",
+                "236",
+                "72",
+                "253",
+                "182"
+            ],
+            "datarange": [
+                "",
+                "30675.0",
+                "30700.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30700.0 - 30725.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30700.0 <= [pixel]  AND [pixel] < 30725.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "72",
+                "253",
+                "182",
+                "126",
+                "253",
+                "128"
+            ],
+            "datarange": [
+                "",
+                "30700.0",
+                "30725.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30725.0 - 30750.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30725.0 <= [pixel]  AND [pixel] < 30750.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "126",
+                "253",
+                "128",
+                "179",
+                "254",
+                "75"
+            ],
+            "datarange": [
+                "",
+                "30725.0",
+                "30750.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30750.0 - 30775.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30750.0 <= [pixel]  AND [pixel] < 30775.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "179",
+                "254",
+                "75",
+                "233",
+                "254",
+                "21"
+            ],
+            "datarange": [
+                "",
+                "30750.0",
+                "30775.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30775.0 - 30800.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30775.0 <= [pixel]  AND [pixel] < 30800.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "233",
+                "254",
+                "21",
+                "254",
+                "222",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30775.0",
+                "30800.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30800.0 - 30825.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30800.0 <= [pixel]  AND [pixel] < 30825.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "222",
+                "0",
+                "254",
+                "169",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30800.0",
+                "30825.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30825.0 - 30850.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30825.0 <= [pixel]  AND [pixel] < 30850.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "169",
+                "0",
+                "254",
+                "115",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30825.0",
+                "30850.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30850.0 - 30875.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30850.0 <= [pixel]  AND [pixel] < 30875.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "115",
+                "0",
+                "254",
+                "61",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30850.0",
+                "30875.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30875.0 - 30900.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30875.0 <= [pixel]  AND [pixel] < 30900.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "61",
+                "0",
+                "254",
+                "8",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30875.0",
+                "30900.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30900.0 - 30925.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30900.0 <= [pixel]  AND [pixel] < 30925.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "254",
+                "8",
+                "0",
+                "216",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30900.0",
+                "30925.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30925.0 - 30950.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30925.0 <= [pixel]  AND [pixel] < 30950.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "216",
+                "0",
+                "0",
+                "",
+                "171",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30925.0",
+                "30950.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30950.0 - 30975.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30950.0 <= [pixel]  AND [pixel] < 30975.0)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "171",
+                "0",
+                "0",
+                "127",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30950.0",
+                "30975.0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30975.0 - 32000.0",
+        "group": "GEOPOTENTIALHEIGHT-10mb-LINEAR",
+        "expression": "(30975.0 <= [pixel])",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "",
+                "",
+                "127",
+                "0",
+                "0",
+                "61",
+                "0",
+                "0"
+            ],
+            "datarange": [
+                "",
+                "30975.0",
+                "32000.0"
+            ]
+        }
+    }
+]

@@ -1,0 +1,142 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 0.05",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "([pixel] < 0.05)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.05 - 0.10",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(0.05 <= [pixel] AND [pixel] < 0.10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "068",
+                "058",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 - 0.15",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(0.10 <= [pixel] AND [pixel] < 0.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "155",
+                "210",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.15 - 0.30",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(0.15 <= [pixel] AND [pixel] < 0.30)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "200",
+                "020"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.30 - 0.70",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(0.30 <= [pixel] AND [pixel] < 0.70)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "122",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.70 - 1.20",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(0.70 <= [pixel] AND [pixel] < 1.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "192",
+                "255",
+                "165"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.20 - 2.00",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(1.20 <= [pixel] AND [pixel] < 2.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "220",
+                "168"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.00 - 4.20",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(2.00 <= [pixel] AND [pixel] < 4.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "190",
+                "190",
+                "168"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "4.20 - 7.20",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(4.20 <= [pixel] AND [pixel] < 7.20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 7.20",
+        "group": "SEA_ICETHICK-CIS",
+        "expression": "(7.20 <= [pixel])",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "000",
+                "000"
+            ]
+        }
+    }
+]

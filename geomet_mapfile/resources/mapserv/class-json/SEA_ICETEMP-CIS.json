@@ -1,0 +1,72 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 263.15",
+        "group": "SEA_ICETEMP-CIS",
+        "expression": "([pixel] < 263.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "263.15 - 271.35",
+        "group": "SEA_ICETEMP-CIS",
+        "expression": "(263.15 <= [pixel] AND [pixel] < 271.35)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "000",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "271.35 - 275.15",
+        "group": "SEA_ICETEMP-CIS",
+        "expression": "(271.35 <= [pixel] AND [pixel] < 275.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "000",
+                "253",
+                "255"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "275.15 - 277.15",
+        "group": "SEA_ICETEMP-CIS",
+        "expression": "(275.15 <= [pixel] AND [pixel] < 277.15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "000"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 277.15",
+        "group": "SEA_ICETEMP-CIS",
+        "expression": "(277.15 <= [pixel])",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "000",
+                "000"
+            ]
+        }
+    }
+]

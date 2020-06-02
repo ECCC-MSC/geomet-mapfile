@@ -1,0 +1,212 @@
+[
+    {
+        "__type__": "class",
+        "name": "-55 -49 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] < -490.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-49 -43 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -490.00 AND [pixel] < -430.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "172"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-43 -37 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -430.00 AND [pixel] < -370.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "217"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-37 -31 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -370.00 AND [pixel] < -310.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "18",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-31 -25 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -310.00 AND [pixel] < -250.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "108",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -19 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -250.00 AND [pixel] < -190.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "198",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-19 -13 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -190.00 AND [pixel] < -130.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "36",
+                "253",
+                "218"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-13 -7 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -130.00 AND [pixel] < -70.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "254",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-7 -1 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -70.00 AND [pixel] < -10.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "218",
+                "254",
+                "36"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-1 5 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= -10.00 AND [pixel] < 50.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "200",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 11 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= 50.00 AND [pixel] < 110.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "109",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "11 17 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= 110.00 AND [pixel] < 170.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "18",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "17 23 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= 170.00 AND [pixel] < 230.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "217",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "23 29 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= 230.00 AND [pixel] < 290.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "172",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "29 35 dam",
+        "group": "GEOPOTENTIALHEIGHT-1000mb",
+        "expression": "([pixel] >= 290.00)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

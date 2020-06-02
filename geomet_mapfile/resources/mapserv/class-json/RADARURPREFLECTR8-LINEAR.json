@@ -1,0 +1,170 @@
+[
+    {
+        "__type__": "class",
+        "name": "7.50 - 23.00 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(7.50 <= [pixel] AND [pixel] < 23.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "153",
+                "255",
+                "153",
+                "051",
+                "255",
+                "051"
+            ],
+            "datarange": [
+                "7.50",
+                "23.00"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "23.00 - 27.75 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(23.00 <= [pixel] AND [pixel] < 27.75)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "051",
+                "255",
+                "051",
+                "000",
+                "153",
+                "000"
+            ],
+            "datarange": [
+                "23.00",
+                "27.75"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "27.75 - 37.50 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(27.75 <= [pixel] AND [pixel] < 37.50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "153",
+                "000",
+                "000",
+                "102",
+                "000"
+            ],
+            "datarange": [
+                "27.75",
+                "37.50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "37.50 - 42.25 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(37.50 <= [pixel] AND [pixel] < 42.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "000",
+                "102",
+                "000",
+                "255",
+                "102",
+                "204"
+            ],
+            "datarange": [
+                "37.50",
+                "42.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "42.25 - 47.00 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(42.25 <= [pixel] AND [pixel] < 47.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "255",
+                "102",
+                "204",
+                "153",
+                "051",
+                "204"
+            ],
+            "datarange": [
+                "42.25",
+                "47.00"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "47.00 - 52.25 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(47.00 <= [pixel] AND [pixel] < 52.25)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "153",
+                "051",
+                "204",
+                "102",
+                "000",
+                "153"
+            ],
+            "datarange": [
+                "47.00",
+                "52.25"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "52.25 - 56.50 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(52.25 <= [pixel] AND [pixel] < 56.50)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "102",
+                "000",
+                "153",
+                "051",
+                "000",
+                "102"
+            ],
+            "datarange": [
+                "52.25",
+                "56.50"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": ">= 57.50 (dBZ)",
+        "group": "RADARURPREFLECTR8-LINEAR",
+        "expression": "(57.50 <= [pixel] AND [pixel] <= 66.00)",
+        "style": {
+            "__type__": "style",
+            "colorrange": [
+                "051",
+                "000",
+                "102",
+                "040",
+                "000",
+                "077"
+            ],
+            "datarange": [
+                "57.50",
+                "66.00"
+            ]
+        }
+    }
+]

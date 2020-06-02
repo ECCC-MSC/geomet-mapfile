@@ -1,0 +1,268 @@
+[
+    {
+        "__type__": "class",
+        "name": "-40 -35 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000400 AND [pixel] < -0.000350)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "128",
+                "128",
+                "128"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000350 AND [pixel] < -0.000300)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "152",
+                "152",
+                "152"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000300 AND [pixel] < -0.000250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "169",
+                "169",
+                "169"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000250 AND [pixel] < -0.000200)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "184",
+                "184",
+                "184"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000200 AND [pixel] < -0.000150)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "200",
+                "200",
+                "200"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000150 AND [pixel] < -0.000100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "211",
+                "211",
+                "211"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000100 AND [pixel] < -0.000050)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "224",
+                "224",
+                "224"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= -0.000050 AND [pixel] < 0.000000)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "245",
+                "245",
+                "245"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0 5 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000000 AND [pixel] < 0.000050)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "204",
+                "255",
+                "204"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000050 AND [pixel] < 0.000100)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "102",
+                "255",
+                "102"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10 15 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000100 AND [pixel] < 0.000150)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "204",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15 20 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000150 AND [pixel] < 0.000200)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "153",
+                "204",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20 25 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000200 AND [pixel] < 0.000250)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "204",
+                "204",
+                "51"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25 30 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000250 AND [pixel] < 0.000300)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "30 35 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000300 AND [pixel] < 0.000350)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "204",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "35 40 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000350 AND [pixel] < 0.000400)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "153",
+                "51"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "40 45 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000400 AND [pixel] < 0.000450)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "51",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "45 50 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000450 AND [pixel] < 0.000500)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "204",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50 55 1E-5 s-1",
+        "group": "ABSOLUTEVORTICITY",
+        "expression": "([pixel] >= 0.000500 AND [pixel] < 0.000550)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "128",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

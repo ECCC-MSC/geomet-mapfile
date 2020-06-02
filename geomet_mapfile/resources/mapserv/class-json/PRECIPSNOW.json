@@ -1,0 +1,170 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.10 - 0.25",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 0.1 AND [pixel] < 0.25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.25 - 0.5",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 0.25 AND [pixel] < 0.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 0.5 AND [pixel] < 1)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "40",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 2.5",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 1 AND [pixel] < 2.5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "155",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "2.5 - 5",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 2.5 AND [pixel] < 5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "13",
+                "253",
+                "241"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 7.5",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "106",
+                "253",
+                "148"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "7.5 - 10.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 7.5 AND [pixel] < 10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "199",
+                "254",
+                "55"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 - 15.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 10 AND [pixel] < 15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "217",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "15.0 - 20.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 15 AND [pixel] < 20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "125",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 - 25.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 20 AND [pixel] < 25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "32",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "25.0 - 50.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 25 AND [pixel] < 50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "203",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "50.0 - 100.0",
+        "group": "PRECIPSNOW",
+        "expression": "([pixel] >= 50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]

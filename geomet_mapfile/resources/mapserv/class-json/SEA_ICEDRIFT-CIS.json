@@ -1,0 +1,121 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0 - 0.1",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.0 <= [uv_length] AND [uv_length] < 0.1)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "204",
+                "135",
+                "254"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 - 0.2",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.1 <= [uv_length] AND [uv_length] < 0.2)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "154",
+                "064",
+                "249"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.2 - 0.3",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.2 <= [uv_length] AND [uv_length] < 0.3)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "153",
+                "148",
+                "255"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.3 - 0.4",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.3 <= [uv_length] AND [uv_length] < 0.4)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "153",
+                "232",
+                "253"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.4 - 0.5",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.4 <= [uv_length] AND [uv_length] < 0.5)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "032",
+                "154",
+                "230"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1.0",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(0.5 <= [uv_length] AND [uv_length] < 1.0)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "000",
+                "102",
+                "255"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 10.0",
+        "group": "SEA_ICEDRIFT-CIS",
+        "expression": "(1.0 <= [uv_length] AND [uv_length] <= 10.0)",
+        "style": {
+            "__type__": "style",
+            "symbol": "arrow",
+            "color": [
+                "000",
+                "000",
+                "128"
+            ],
+            "angle": "[uv_angle]",
+            "size": "10"
+        }
+    }
+]

@@ -1,0 +1,226 @@
+[
+    {
+        "__type__": "class",
+        "name": "-80 -75",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] < -75)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "127"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-75 -70",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -75 AND [pixel] < -70)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "183"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-70 -65",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -70 AND [pixel] < -65)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "0",
+                "239"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-65 -60",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -65 AND [pixel] < -60)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "63",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-60 -55 ",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -60 AND [pixel] < -55)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "147",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-55 -50",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -55 AND [pixel] < -50)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "0",
+                "231",
+                "254"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -45",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -50 AND [pixel] < -45)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "51",
+                "253",
+                "203"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-45 -40",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -45 AND [pixel] < -40)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "119",
+                "253",
+                "135"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-40 -35",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -40 AND [pixel] < -35)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "187",
+                "254",
+                "67"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -35 AND [pixel] < -30)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "255",
+                "255",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -30 AND [pixel] < -25)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "187",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -25 AND [pixel] < -20)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "119",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -20 AND [pixel] < -15)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "254",
+                "50",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -15 AND [pixel] < -10)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "239",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -10 AND [pixel] < -5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "183",
+                "0",
+                "0"
+            ]
+        }
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0",
+        "group": "TEMPUPPER",
+        "expression": "([pixel] >= -5)",
+        "style": {
+            "__type__": "style",
+            "color": [
+                "127",
+                "0",
+                "0"
+            ]
+        }
+    }
+]
