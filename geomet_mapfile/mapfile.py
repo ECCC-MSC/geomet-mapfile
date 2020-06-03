@@ -299,8 +299,12 @@ def gen_layer(layer_name, layer_info):
                 layer[param] = value
 
         # set layer classes
-        layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".inc")
-        layer['include'] = [os.path.join(DATADIR, style) for style in layer_info['styles']]
+        layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(".json")
+        layer['classes'] = []
+        for style in layer_info['styles']:
+            with open(os.path.join(DATADIR, style)) as json_style:
+                for class_ in json.load(json_style):
+                    layer['classes'].append(class_)
 
         # set layer metadata
         layer['metadata'] = {}
