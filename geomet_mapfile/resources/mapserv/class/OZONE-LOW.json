@@ -1,0 +1,278 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 10",
+        "group": "O3-LOW",
+        "expression": "( [pixel] < 10 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    225,
+                    225,
+                    225,
+                    175,
+                    175,
+                    175
+                ],
+                "datarange": [
+                    0,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 15",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    175,
+                    175,
+                    175,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    10,
+                    15
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 - 20",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    15,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 25",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    1204,
+                    255
+                ],
+                "datarange": [
+                    20,
+                    25
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "25 - 30",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    25,
+                    30
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 - 35",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    30,
+                    35
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "35 - 40",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    35,
+                    40
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 - 45",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    40,
+                    45
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "45 - 50",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 45 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    45,
+                    50
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 - 60",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    50,
+                    60
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 - 75",
+        "group": "O3-LOW",
+        "expression": "( ( [pixel] >= 60 ) AND ( [pixel] < 75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    100,
+                    100
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 75",
+        "group": "O3-LOW",
+        "expression": "( [pixel] >= 75 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    75,
+                    1000
+                ]
+            }
+        ]
+    }
+]

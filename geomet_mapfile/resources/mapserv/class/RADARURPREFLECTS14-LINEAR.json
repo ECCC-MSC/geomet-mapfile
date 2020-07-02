@@ -3,294 +3,322 @@
         "__type__": "class",
         "name": "10.50 - 17.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(10.50 <= [pixel] AND [pixel] < 17.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "204",
-                "255",
-                "000",
-                "153",
-                "255"
-            ],
-            "datarange": [
-                "10.50",
-                "17.00"
-            ]
-        }
+        "expression": "( ( 10.5 <= [pixel] ) AND ( [pixel] < 17.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    204,
+                    255,
+                    0,
+                    153,
+                    255
+                ],
+                "datarange": [
+                    10.5,
+                    17.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "17.00 - 21.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(17.00 <= [pixel] AND [pixel] < 21.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "255",
-                "000",
-                "255",
-                "102"
-            ],
-            "datarange": [
-                "17.00",
-                "21.00"
-            ]
-        }
+        "expression": "( ( 17.0 <= [pixel] ) AND ( [pixel] < 21.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    255,
+                    0,
+                    255,
+                    102
+                ],
+                "datarange": [
+                    17.0,
+                    21.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "21.00 - 25.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(21.00 <= [pixel] AND [pixel] < 25.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "102",
-                "000",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "21.00",
-                "25.75"
-            ]
-        }
+        "expression": "( ( 21.0 <= [pixel] ) AND ( [pixel] < 25.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    102,
+                    0,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    21.0,
+                    25.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25.75 - 29.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(25.75 <= [pixel] AND [pixel] < 29.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "204",
-                "000",
-                "000",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "25.75",
-                "29.75"
-            ]
-        }
+        "expression": "( ( 25.75 <= [pixel] ) AND ( [pixel] < 29.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    0,
+                    0,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    25.75,
+                    29.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "29.75 - 32.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(29.75 <= [pixel] AND [pixel] < 32.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "000",
-                "000",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "29.75",
-                "32.50"
-            ]
-        }
+        "expression": "( ( 29.75 <= [pixel] ) AND ( [pixel] < 32.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    0,
+                    0,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    29.75,
+                    32.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "32.50 - 36.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(32.50 <= [pixel] AND [pixel] < 36.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "102",
-                "000",
-                "255",
-                "255",
-                "051"
-            ],
-            "datarange": [
-                "32.50",
-                "36.50"
-            ]
-        }
+        "expression": "( ( 32.5 <= [pixel] ) AND ( [pixel] < 36.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    102,
+                    0,
+                    255,
+                    255,
+                    51
+                ],
+                "datarange": [
+                    32.5,
+                    36.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "36.50 - 39.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(36.50 <= [pixel] AND [pixel] < 39.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "051",
-                "255",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "36.50",
-                "39.25"
-            ]
-        }
+        "expression": "( ( 36.5 <= [pixel] ) AND ( [pixel] < 39.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    51,
+                    255,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    36.5,
+                    39.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "39.25 - 43.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(39.25 <= [pixel] AND [pixel] < 43.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "204",
-                "000",
-                "255",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "39.25",
-                "43.00"
-            ]
-        }
+        "expression": "( ( 39.25 <= [pixel] ) AND ( [pixel] < 43.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    204,
+                    0,
+                    255,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    39.25,
+                    43.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "43.00 - 45.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(43.00 <= [pixel] AND [pixel] < 45.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "153",
-                "000",
-                "255",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "43.00",
-                "45.75"
-            ]
-        }
+        "expression": "( ( 43.0 <= [pixel] ) AND ( [pixel] < 45.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    153,
+                    0,
+                    255,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    43.0,
+                    45.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45.75 - 48.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(45.75 <= [pixel] AND [pixel] < 48.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "102",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "45.75",
-                "48.00"
-            ]
-        }
+        "expression": "( ( 45.75 <= [pixel] ) AND ( [pixel] < 48.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    102,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    45.75,
+                    48.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "48.00 - 51.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(48.00 <= [pixel] AND [pixel] < 51.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "255",
-                "002",
-                "153"
-            ],
-            "datarange": [
-                "48.00",
-                "51.75"
-            ]
-        }
+        "expression": "( ( 48.0 <= [pixel] ) AND ( [pixel] < 51.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    2,
+                    153
+                ],
+                "datarange": [
+                    48.0,
+                    51.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "51.75 - 54.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(51.75 <= [pixel] AND [pixel] < 54.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "002",
-                "153",
-                "153",
-                "051",
-                "204"
-            ],
-            "datarange": [
-                "51.75",
-                "54.50"
-            ]
-        }
+        "expression": "( ( 51.75 <= [pixel] ) AND ( [pixel] < 54.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    2,
+                    153,
+                    153,
+                    51,
+                    204
+                ],
+                "datarange": [
+                    51.75,
+                    54.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "54.50 - 61.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(54.50 <= [pixel] AND [pixel] < 61.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "051",
-                "204",
-                "102",
-                "000",
-                "153"
-            ],
-            "datarange": [
-                "54.50",
-                "61.25"
-            ]
-        }
+        "expression": "( ( 54.5 <= [pixel] ) AND ( [pixel] < 61.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    51,
+                    204,
+                    102,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    54.5,
+                    61.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 61.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(61.25 <= [pixel] AND [pixel] <= 65.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "102",
-                "000",
-                "153",
-                "051",
-                "000",
-                "077"
-            ],
-            "datarange": [
-                "61.25",
-                "65.25"
-            ]
-        }
+        "expression": "( ( 61.25 <= [pixel] ) AND ( [pixel] <= 65.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    0,
+                    153,
+                    51,
+                    0,
+                    77
+                ],
+                "datarange": [
+                    61.25,
+                    65.25
+                ]
+            }
+        ]
     }
 ]

@@ -3,169 +3,184 @@
         "__type__": "class",
         "name": "0 200 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 0.00 AND [pixel] < 200)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "234"
-            ],
-            "datarange": [
-                "0",
-                "200"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.0 ) AND ( [pixel] < 200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    234
+                ],
+                "datarange": [
+                    0,
+                    200
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "200 400 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 200 AND [pixel] < 400)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "234",
-                "0",
-                "137",
-                "254"
-            ],
-            "datarange": [
-                "200",
-                "400"
-            ]
-        }
+        "expression": "( ( [pixel] >= 200 ) AND ( [pixel] < 400 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    234,
+                    0,
+                    137,
+                    254
+                ],
+                "datarange": [
+                    200,
+                    400
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "400 600 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 400 AND [pixel] < 600)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "",
-                "0",
-                "137",
-                "254",
-                "24",
-                "253",
-                "230"
-            ],
-            "datarange": [
-                "400",
-                "600"
-            ]
-        }
+        "expression": "( ( [pixel] >= 400 ) AND ( [pixel] < 600 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    137,
+                    254,
+                    24,
+                    253,
+                    230
+                ],
+                "datarange": [
+                    400,
+                    600
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "600 1000 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 600 AND [pixel] < 1000)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "24",
-                "253",
-                "230",
-                "157",
-                "254",
-                "97"
-            ],
-            "datarange": [
-                "600",
-                "1000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 600 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    24,
+                    253,
+                    230,
+                    157,
+                    254,
+                    97
+                ],
+                "datarange": [
+                    600,
+                    1000
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000 1400 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 1000 AND [pixel] < 1400)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "157",
-                "254",
-                "97",
-                "254",
-                "228",
-                "0"
-            ],
-            "datarange": [
-                "1000",
-                "1400"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 1400 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    157,
+                    254,
+                    97,
+                    254,
+                    228,
+                    0
+                ],
+                "datarange": [
+                    1000,
+                    1400
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1400 2000 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 1400 AND [pixel] < 2000)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "228",
-                "0",
-                "254",
-                "110",
-                "0"
-            ],
-            "datarange": [
-                "1400",
-                "2000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1400 ) AND ( [pixel] < 2000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    228,
+                    0,
+                    254,
+                    110,
+                    0
+                ],
+                "datarange": [
+                    1400,
+                    2000
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2000 3000 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 2000 AND [pixel] < 3000)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "110",
-                "0",
-                "241",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "2000",
-                "3000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2000 ) AND ( [pixel] < 3000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    110,
+                    0,
+                    241,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2000,
+                    3000
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3000 5000 m",
         "group": "PLANETARYHEIGHT-LINEAR",
-        "expression": "([pixel] >= 3000 AND [pixel] < 5000)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "241",
-                "0",
-                "0",
-                "133",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "3000",
-                "5000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3000 ) AND ( [pixel] < 5000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    241,
+                    0,
+                    0,
+                    133,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    3000,
+                    5000
+                ]
+            }
+        ]
     }
 ]

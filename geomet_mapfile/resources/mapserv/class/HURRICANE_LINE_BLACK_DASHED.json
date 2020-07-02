@@ -1,21 +1,23 @@
-[
-    {
-        "__type__": "class",
-        "name": "Zone extent/Limite de la zone",
-        "group": "HURRICANE_LINE_BLACK_DASHED",
-        "style": {
+{
+    "__type__": "class",
+    "name": "Zone extent/Limite de la zone",
+    "group": "HURRICANE_LINE_BLACK_DASHED",
+    "styles": [
+        {
             "__type__": "style",
             "color": [
-                "0",
-                "0",
-                "0"
+                0,
+                0,
+                0
             ],
-            "width": "1",
-            "initialgap": "2",
+            "width": 1,
+            "initialgap": 2,
             "pattern": [
-                "8.0",
-                "4.0"
+                [
+                    8.0,
+                    4.0
+                ]
             ]
         }
-    }
-]
+    ]
+}

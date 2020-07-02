@@ -3,119 +3,133 @@
         "__type__": "class",
         "name": "0.01 - 0.11",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.01 <= [uv_length] AND [uv_length] < 0.11)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "026",
-                "026",
-                "255"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.01 <= [uv_length] ) AND ( [uv_length] < 0.11 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    26,
+                    26,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.11 - 0.21",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.11 <= [uv_length] AND [uv_length] < 0.21)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "077",
-                "121",
-                "255"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.11 <= [uv_length] ) AND ( [uv_length] < 0.21 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    77,
+                    121,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.21 - 0.32",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.21 <= [uv_length] AND [uv_length] < 0.32)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "000",
-                "255",
-                "255"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.21 <= [uv_length] ) AND ( [uv_length] < 0.32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    0,
+                    255,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.32 - 0.43",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.32 <= [uv_length] AND [uv_length] < 0.43)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "153",
-                "255",
-                "253"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.32 <= [uv_length] ) AND ( [uv_length] < 0.43 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    153,
+                    255,
+                    253
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.43 - 0.54",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.43 <= [uv_length] AND [uv_length] < 0.54)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "255",
-                "237",
-                "000"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.43 <= [uv_length] ) AND ( [uv_length] < 0.54 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    237,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.54 - 0.65",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.54 <= [uv_length] AND [uv_length] < 0.65)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "255",
-                "124",
-                "000"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.54 <= [uv_length] ) AND ( [uv_length] < 0.65 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    124,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.65 - 1.00",
         "group": "SEA_ICESSCUR-CIS",
-        "expression": "(0.65 <= [uv_length] AND [uv_length] <= 1.00)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow",
-            "color": [
-                "255",
-                "000",
-                "000"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        }
+        "expression": "( ( 0.65 <= [uv_length] ) AND ( [uv_length] <= 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ]
     }
 ]

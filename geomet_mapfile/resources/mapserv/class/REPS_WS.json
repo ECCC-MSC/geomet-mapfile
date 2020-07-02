@@ -3,126 +3,144 @@
         "__type__": "class",
         "name": "20 30",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 5.555 AND [pixel] < 8.333)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5.555 ) AND ( [pixel] < 8.333 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 40",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 8.333 AND [pixel] < 11.111)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "206"
-            ]
-        }
+        "expression": "( ( [pixel] >= 8.333 ) AND ( [pixel] < 11.111 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    206
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 50",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 11.111 AND [pixel] < 13.888)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "63",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 11.111 ) AND ( [pixel] < 13.888 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 65",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 13.888 AND [pixel] < 18.055)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "221",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 13.888 ) AND ( [pixel] < 18.055 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    221,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "65 75",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 18.055 AND [pixel] < 20.833)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "254",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 18.055 ) AND ( [pixel] < 20.833 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    254,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75 80",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 20.833 AND [pixel] < 22.222)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "223",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20.833 ) AND ( [pixel] < 22.222 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    223,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80 90",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 22.222 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "63",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 22.222 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    63,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 100",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 25 AND [pixel] < 27.777)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "206",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 27.777 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    206,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100 118",
         "group": "REPS_WS",
-        "expression": "([pixel] >= 27.777)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [pixel] >= 27.777 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

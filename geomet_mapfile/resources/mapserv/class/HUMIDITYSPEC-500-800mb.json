@@ -3,98 +3,112 @@
         "__type__": "class",
         "name": "0.000001 - 0.001 ",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] < 0.001)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( [pixel] < 0.001 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.001 - 0.003",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.001 AND [pixel] < 0.003)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "63",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.001 ) AND ( [pixel] < 0.003 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.003 - 0.005",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.003 AND [pixel] < 0.005)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "51",
-                "253",
-                "203"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.003 ) AND ( [pixel] < 0.005 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    253,
+                    203
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.005 - 0.007",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.005 AND [pixel] < 0.007)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "254",
-                "101"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.005 ) AND ( [pixel] < 0.007 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    254,
+                    101
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.007 - 0.009",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.007 AND [pixel] < 0.009)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.007 ) AND ( [pixel] < 0.009 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.009 - 0.014",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.009 AND [pixel] < 0.014)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "95",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.009 ) AND ( [pixel] < 0.014 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    95,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.014 - 0.025",
         "group": "HUMIDITYSPEC_500_800",
-        "expression": "([pixel] >= 0.014)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [pixel] >= 0.014 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

@@ -3,210 +3,230 @@
         "__type__": "class",
         "name": "0.01 0.1",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.01 AND [pixel] < 0.1)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "21",
-                "101",
-                "125",
-                "80",
-                "120",
-                "190"
-            ],
-            "datarange": [
-                "0.01",
-                "0.1"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.01 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    21,
+                    101,
+                    125,
+                    80,
+                    120,
+                    190
+                ],
+                "datarange": [
+                    0.01,
+                    0.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.1 0.2",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.1 AND [pixel] < 0.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "80",
-                "120",
-                "190",
-                "139",
-                "139",
-                "255"
-            ],
-            "datarange": [
-                "0.1",
-                "0.2"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    80,
+                    120,
+                    190,
+                    139,
+                    139,
+                    255
+                ],
+                "datarange": [
+                    0.1,
+                    0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.2 0.3",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.2 AND [pixel] < 0.3)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "139",
-                "139",
-                "255",
-                "151",
-                "151",
-                "255"
-            ],
-            "datarange": [
-                "0.2",
-                "0.3"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    139,
+                    139,
+                    255,
+                    151,
+                    151,
+                    255
+                ],
+                "datarange": [
+                    0.2,
+                    0.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.3 0.4",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.3 AND [pixel] < 0.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "151",
-                "151",
-                "255",
-                "163",
-                "163",
-                "255"
-            ],
-            "datarange": [
-                "0.3",
-                "0.4"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    151,
+                    151,
+                    255,
+                    163,
+                    163,
+                    255
+                ],
+                "datarange": [
+                    0.3,
+                    0.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.4 0.5",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.4 AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "163",
-                "163",
-                "255",
-                "175",
-                "175",
-                "255"
-            ],
-            "datarange": [
-                "0.4",
-                "0.5"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.4 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    163,
+                    163,
+                    255,
+                    175,
+                    175,
+                    255
+                ],
+                "datarange": [
+                    0.4,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 0.6",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.5 AND [pixel] < 0.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "175",
-                "175",
-                "255",
-                "187",
-                "187",
-                "255"
-            ],
-            "datarange": [
-                "0.5",
-                "0.6"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    175,
+                    175,
+                    255,
+                    187,
+                    187,
+                    255
+                ],
+                "datarange": [
+                    0.5,
+                    0.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.6 0.7",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.6 AND [pixel] < 0.7)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "187",
-                "187",
-                "255",
-                "199",
-                "199",
-                "255"
-            ],
-            "datarange": [
-                "0.6",
-                "0.7"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.6 ) AND ( [pixel] < 0.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    187,
+                    187,
+                    255,
+                    199,
+                    199,
+                    255
+                ],
+                "datarange": [
+                    0.6,
+                    0.7
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.7 0.8",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.7 AND [pixel] < 0.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "199",
-                "199",
-                "255",
-                "211",
-                "211",
-                "255"
-            ],
-            "datarange": [
-                "0.7",
-                "0.8"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.7 ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    199,
+                    199,
+                    255,
+                    211,
+                    211,
+                    255
+                ],
+                "datarange": [
+                    0.7,
+                    0.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.8 0.9",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.8 AND [pixel] < 0.9)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "211",
-                "211",
-                "255",
-                "223",
-                "223",
-                "255"
-            ],
-            "datarange": [
-                "0.8",
-                "0.9"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.8 ) AND ( [pixel] < 0.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    211,
+                    211,
+                    255,
+                    223,
+                    223,
+                    255
+                ],
+                "datarange": [
+                    0.8,
+                    0.9
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 0.9",
         "group": "SEA_ICECONC-LINEAR",
-        "expression": "([pixel] >= 0.9)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "223",
-                "223",
-                "255",
-                "235",
-                "235",
-                "255"
-            ],
-            "datarange": [
-                "0.9",
-                "1"
-            ]
-        }
+        "expression": "( [pixel] >= 0.9 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    223,
+                    223,
+                    255,
+                    235,
+                    235,
+                    255
+                ],
+                "datarange": [
+                    0.9,
+                    1
+                ]
+            }
+        ]
     }
 ]

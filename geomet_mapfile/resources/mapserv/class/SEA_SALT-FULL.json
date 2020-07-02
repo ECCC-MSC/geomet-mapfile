@@ -3,384 +3,414 @@
         "__type__": "class",
         "name": "0.0 - 2.2",
         "group": "SEA_SALT-FULL",
-        "expression": "(0.0 <= [pixel] AND [pixel] < 2.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "167",
-                "0",
-                "0",
-                "210"
-            ],
-            "datarange": [
-                "0.0",
-                "2.2"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 2.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    167,
+                    0,
+                    0,
+                    210
+                ],
+                "datarange": [
+                    0.0,
+                    2.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.2 - 4.4",
         "group": "SEA_SALT-FULL",
-        "expression": "(2.2 <= [pixel] AND [pixel] < 4.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "210",
-                "0",
-                "0",
-                "255"
-            ],
-            "datarange": [
-                "2.2",
-                "4.4"
-            ]
-        }
+        "expression": "( ( 2.2 <= [pixel] ) AND ( [pixel] < 4.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    210,
+                    0,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    2.2,
+                    4.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.4 - 6.7",
         "group": "SEA_SALT-FULL",
-        "expression": "(4.4 <= [pixel] AND [pixel] < 6.7)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "255",
-                "",
-                "0",
-                "64",
-                "255"
-            ],
-            "datarange": [
-                "4.4",
-                "6.7"
-            ]
-        }
+        "expression": "( ( 4.4 <= [pixel] ) AND ( [pixel] < 6.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    64,
+                    255
+                ],
+                "datarange": [
+                    4.4,
+                    6.7
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.7 - 8.9",
         "group": "SEA_SALT-FULL",
-        "expression": "(6.7 <= [pixel] AND [pixel] < 8.9)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "64",
-                "255",
-                "0",
-                "128",
-                "255"
-            ],
-            "datarange": [
-                "6.7",
-                "8.9"
-            ]
-        }
+        "expression": "( ( 6.7 <= [pixel] ) AND ( [pixel] < 8.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    64,
+                    255,
+                    0,
+                    128,
+                    255
+                ],
+                "datarange": [
+                    6.7,
+                    8.9
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8.9 - 11.1",
         "group": "SEA_SALT-FULL",
-        "expression": "(8.9 <= [pixel] AND [pixel] < 11.1)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "128",
-                "255",
-                "0",
-                "188",
-                "255"
-            ],
-            "datarange": [
-                "8.9",
-                "11.1"
-            ]
-        }
+        "expression": "( ( 8.9 <= [pixel] ) AND ( [pixel] < 11.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    255,
+                    0,
+                    188,
+                    255
+                ],
+                "datarange": [
+                    8.9,
+                    11.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "11.1 - 13.3",
         "group": "SEA_SALT-FULL",
-        "expression": "(11.1 <= [pixel] AND [pixel] < 13.3)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "188",
-                "255",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": [
-                "11.1",
-                "13.3"
-            ]
-        }
+        "expression": "( ( 11.1 <= [pixel] ) AND ( [pixel] < 13.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    188,
+                    255,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    11.1,
+                    13.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "13.3 - 15.6",
         "group": "SEA_SALT-FULL",
-        "expression": "(13.3 <= [pixel] AND [pixel] < 15.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "51",
-                "",
-                "253",
-                "203"
-            ],
-            "datarange": [
-                "13.3",
-                "15.6"
-            ]
-        }
+        "expression": "( ( 13.3 <= [pixel] ) AND ( [pixel] < 15.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    13.3,
+                    15.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15.6 - 17.8",
         "group": "SEA_SALT-FULL",
-        "expression": "(15.6 <= [pixel] AND [pixel] < 17.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "",
-                "253",
-                "203",
-                "103",
-                "253",
-                "151"
-            ],
-            "datarange": [
-                "15.6",
-                "17.8"
-            ]
-        }
+        "expression": "( ( 15.6 <= [pixel] ) AND ( [pixel] < 17.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    103,
+                    253,
+                    151
+                ],
+                "datarange": [
+                    15.6,
+                    17.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "17.8 - 20.0",
         "group": "SEA_SALT-FULL",
-        "expression": "(17.8 <= [pixel] AND [pixel] < 20.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "103",
-                "253",
-                "151",
-                "155",
-                "254",
-                "99"
-            ],
-            "datarange": [
-                "17.8",
-                "20.0"
-            ]
-        }
+        "expression": "( ( 17.8 <= [pixel] ) AND ( [pixel] < 20.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    103,
+                    253,
+                    151,
+                    155,
+                    254,
+                    99
+                ],
+                "datarange": [
+                    17.8,
+                    20.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20.0 - 22.2",
         "group": "SEA_SALT-FULL",
-        "expression": "(20.0 <= [pixel] AND [pixel] < 22.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "155",
-                "254",
-                "99",
-                "",
-                "203",
-                "254",
-                "51"
-            ],
-            "datarange": [
-                "20.0",
-                "22.2"
-            ]
-        }
+        "expression": "( ( 20.0 <= [pixel] ) AND ( [pixel] < 22.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    155,
+                    254,
+                    99,
+                    203,
+                    254,
+                    51
+                ],
+                "datarange": [
+                    20.0,
+                    22.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "22.2 - 24.4",
         "group": "SEA_SALT-FULL",
-        "expression": "(22.2 <= [pixel] AND [pixel] < 24.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "203",
-                "254",
-                "51",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "22.2",
-                "24.4"
-            ]
-        }
+        "expression": "( ( 22.2 <= [pixel] ) AND ( [pixel] < 24.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    203,
+                    254,
+                    51,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    22.2,
+                    24.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "24.4 - 26.7",
         "group": "SEA_SALT-FULL",
-        "expression": "(24.4 <= [pixel] AND [pixel] < 26.7)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "203",
-                "0"
-            ],
-            "datarange": [
-                "24.4",
-                "26.7"
-            ]
-        }
+        "expression": "( ( 24.4 <= [pixel] ) AND ( [pixel] < 26.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    203,
+                    0
+                ],
+                "datarange": [
+                    24.4,
+                    26.7
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "26.7 - 28.9",
         "group": "SEA_SALT-FULL",
-        "expression": "(26.7 <= [pixel] AND [pixel] < 28.9)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "203",
-                "0",
-                "254",
-                "151",
-                "0"
-            ],
-            "datarange": [
-                "26.7",
-                "28.9"
-            ]
-        }
+        "expression": "( ( 26.7 <= [pixel] ) AND ( [pixel] < 28.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    203,
+                    0,
+                    254,
+                    151,
+                    0
+                ],
+                "datarange": [
+                    26.7,
+                    28.9
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "28.9 - 31.1",
         "group": "SEA_SALT-FULL",
-        "expression": "(28.9 <= [pixel] AND [pixel] < 31.1)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "151",
-                "0",
-                "",
-                "254",
-                "99",
-                "0"
-            ],
-            "datarange": [
-                "28.9",
-                "31.1"
-            ]
-        }
+        "expression": "( ( 28.9 <= [pixel] ) AND ( [pixel] < 31.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    151,
+                    0,
+                    254,
+                    99,
+                    0
+                ],
+                "datarange": [
+                    28.9,
+                    31.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "31.1 - 33.3",
         "group": "SEA_SALT-FULL",
-        "expression": "(31.1 <= [pixel] AND [pixel] < 33.3)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "99",
-                "0",
-                "254",
-                "51",
-                "0"
-            ],
-            "datarange": [
-                "31.1",
-                "33.3"
-            ]
-        }
+        "expression": "( ( 31.1 <= [pixel] ) AND ( [pixel] < 33.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    99,
+                    0,
+                    254,
+                    51,
+                    0
+                ],
+                "datarange": [
+                    31.1,
+                    33.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "33.3 - 35.6",
         "group": "SEA_SALT-FULL",
-        "expression": "(33.3 <= [pixel] AND [pixel] < 35.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "51",
-                "0",
-                "254",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "33.3",
-                "35.6"
-            ]
-        }
+        "expression": "( ( 33.3 <= [pixel] ) AND ( [pixel] < 35.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    51,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    33.3,
+                    35.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35.6 - 37.8",
         "group": "SEA_SALT-FULL",
-        "expression": "(35.6 <= [pixel] AND [pixel] < 37.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "0",
-                "0",
-                "",
-                "210",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "35.6",
-                "37.8"
-            ]
-        }
+        "expression": "( ( 35.6 <= [pixel] ) AND ( [pixel] < 37.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    210,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    35.6,
+                    37.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "37.8 - 40.0",
         "group": "SEA_SALT-FULL",
-        "expression": "(37.8 <= [pixel] AND [pixel] < 40.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "210",
-                "0",
-                "0",
-                "167",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "37.8",
-                "40.0"
-            ]
-        }
+        "expression": "( ( 37.8 <= [pixel] ) AND ( [pixel] < 40.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    210,
+                    0,
+                    0,
+                    167,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    37.8,
+                    40.0
+                ]
+            }
+        ]
     }
 ]

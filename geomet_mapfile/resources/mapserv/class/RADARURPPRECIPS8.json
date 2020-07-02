@@ -3,112 +3,128 @@
         "__type__": "class",
         "name": "0.1 - 0.2 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(0.1 <= [pixel] AND [pixel] < 0.2)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "255",
-                "153"
-            ]
-        }
+        "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    255,
+                    153
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.2 - 0.3 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(0.2 <= [pixel] AND [pixel] < 0.3)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "051",
-                "255",
-                "051"
-            ]
-        }
+        "expression": "( ( 0.2 <= [pixel] ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    255,
+                    51
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.3 - 0.8 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(0.3 <= [pixel] AND [pixel] < 0.8)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "153",
-                "000"
-            ]
-        }
+        "expression": "( ( 0.3 <= [pixel] ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    153,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.8 - 1.5 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(0.8 <= [pixel] AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "102",
-                "000"
-            ]
-        }
+        "expression": "( ( 0.8 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    102,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 3.0 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(1.5 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "102",
-                "204"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    102,
+                    204
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 5.0 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "051",
-                "204"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    51,
+                    204
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 10.0 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 10.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "102",
-                "000",
-                "153"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 10.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    102,
+                    0,
+                    153
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 10.0 (cm/hr)",
         "group": "RADARURPPRECIPS8",
-        "expression": "(10.0 <= [pixel] AND [pixel] <= 30.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "051",
-                "000",
-                "102"
-            ]
-        }
+        "expression": "( ( 10.0 <= [pixel] ) AND ( [pixel] <= 30.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    0,
+                    102
+                ]
+            }
+        ]
     }
 ]

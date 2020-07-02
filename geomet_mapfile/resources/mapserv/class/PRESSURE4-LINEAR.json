@@ -3,777 +3,851 @@
         "__type__": "class",
         "name": "<= 940 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] < 94000.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": [
-                "50000.0",
-                "94000.0"
-            ]
-        }
+        "expression": "( [pixel] < 94000.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    50000.0,
+                    94000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "940 944 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 94000.00 AND [pixel] < 94400.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "145"
-            ],
-            "datarange": [
-                "94000.0",
-                "94400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 94000.0 ) AND ( [pixel] < 94400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    145
+                ],
+                "datarange": [
+                    94000.0,
+                    94400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "944 948 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 94400.0 AND [pixel] < 94800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "145",
-                "0",
-                "0",
-                "163"
-            ],
-            "datarange": [
-                "94400.0",
-                "94800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 94400.0 ) AND ( [pixel] < 94800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    145,
+                    0,
+                    0,
+                    163
+                ],
+                "datarange": [
+                    94400.0,
+                    94800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "948 952 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 94800.0 AND [pixel] < 95200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "163",
-                "0",
-                "0",
-                "181"
-            ],
-            "datarange": [
-                "94800.0",
-                "95200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 94800.0 ) AND ( [pixel] < 95200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    163,
+                    0,
+                    0,
+                    181
+                ],
+                "datarange": [
+                    94800.0,
+                    95200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "952 956 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 95200.0 AND [pixel] < 95600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "181",
-                "0",
-                "0",
-                "199"
-            ],
-            "datarange": [
-                "95200.0",
-                "95600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 95200.0 ) AND ( [pixel] < 95600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    181,
+                    0,
+                    0,
+                    199
+                ],
+                "datarange": [
+                    95200.0,
+                    95600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "956 960 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 95600.0 AND [pixel] < 96000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "199",
-                "0",
-                "0",
-                "217"
-            ],
-            "datarange": [
-                "95600.0",
-                "96000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 95600.0 ) AND ( [pixel] < 96000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    199,
+                    0,
+                    0,
+                    217
+                ],
+                "datarange": [
+                    95600.0,
+                    96000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "960 964 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 96000.0 AND [pixel] < 96400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "217",
-                "0",
-                "0",
-                "235"
-            ],
-            "datarange": [
-                "96000.0",
-                "96400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 96000.0 ) AND ( [pixel] < 96400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    217,
+                    0,
+                    0,
+                    235
+                ],
+                "datarange": [
+                    96000.0,
+                    96400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "964 968 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 96400.0 AND [pixel] < 96800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "235",
-                "0",
-                "0",
-                "254"
-            ],
-            "datarange": [
-                "96400.0",
-                "96800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 96400.0 ) AND ( [pixel] < 96800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    235,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    96400.0,
+                    96800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "968 972 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 96800.0 AND [pixel] < 97200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "254",
-                "0",
-                "36",
-                "254"
-            ],
-            "datarange": [
-                "96800.0",
-                "97200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 96800.0 ) AND ( [pixel] < 97200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    36,
+                    254
+                ],
+                "datarange": [
+                    96800.0,
+                    97200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "972 976 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 97200.0 AND [pixel] < 97600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "36",
-                "254",
-                "0",
-                "72",
-                "254"
-            ],
-            "datarange": [
-                "97200.0",
-                "97600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 97200.0 ) AND ( [pixel] < 97600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    36,
+                    254,
+                    0,
+                    72,
+                    254
+                ],
+                "datarange": [
+                    97200.0,
+                    97600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "976 980 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 97600.0 AND [pixel] < 98000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "72",
-                "254",
-                "0",
-                "108",
-                "254"
-            ],
-            "datarange": [
-                "97600.0",
-                "98000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 97600.0 ) AND ( [pixel] < 98000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    72,
+                    254,
+                    0,
+                    108,
+                    254
+                ],
+                "datarange": [
+                    97600.0,
+                    98000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "980 984 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 98000.0 AND [pixel] < 98400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "108",
-                "254",
-                "0",
-                "144",
-                "254"
-            ],
-            "datarange": [
-                "98000.0",
-                "98400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 98000.0 ) AND ( [pixel] < 98400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    108,
+                    254,
+                    0,
+                    144,
+                    254
+                ],
+                "datarange": [
+                    98000.0,
+                    98400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "984 988 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 98400.0 AND [pixel] < 98800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "144",
-                "254",
-                "0",
-                "180",
-                "254"
-            ],
-            "datarange": [
-                "98400.0",
-                "98800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 98400.0 ) AND ( [pixel] < 98800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    144,
+                    254,
+                    0,
+                    180,
+                    254
+                ],
+                "datarange": [
+                    98400.0,
+                    98800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "988 992 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 98800.0 AND [pixel] < 99200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "180",
-                "254",
-                "0",
-                "216",
-                "254"
-            ],
-            "datarange": [
-                "98800.0",
-                "99200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 98800.0 ) AND ( [pixel] < 99200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    180,
+                    254,
+                    0,
+                    216,
+                    254
+                ],
+                "datarange": [
+                    98800.0,
+                    99200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "992 996 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 99200.0 AND [pixel] < 99600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "216",
-                "254",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": [
-                "99200.0",
-                "99600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 99200.0 ) AND ( [pixel] < 99600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    216,
+                    254,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    99200.0,
+                    99600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "996 1000 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 99600.0 AND [pixel] < 100000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "36",
-                "253",
-                "218"
-            ],
-            "datarange": [
-                "99600.0",
-                "100000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 99600.0 ) AND ( [pixel] < 100000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    36,
+                    253,
+                    218
+                ],
+                "datarange": [
+                    99600.0,
+                    100000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000 1004 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 100000.0 AND [pixel] < 100400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "36",
-                "253",
-                "218",
-                "72",
-                "253",
-                "182"
-            ],
-            "datarange": [
-                "100000.0",
-                "100400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100000.0 ) AND ( [pixel] < 100400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    36,
+                    253,
+                    218,
+                    72,
+                    253,
+                    182
+                ],
+                "datarange": [
+                    100000.0,
+                    100400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1004 1008 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 100400.0 AND [pixel] < 100800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "72",
-                "253",
-                "182",
-                "109",
-                "253",
-                "145"
-            ],
-            "datarange": [
-                "100400.0",
-                "100800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100400.0 ) AND ( [pixel] < 100800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    72,
+                    253,
+                    182,
+                    109,
+                    253,
+                    145
+                ],
+                "datarange": [
+                    100400.0,
+                    100800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1008 1012 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 100800.0 AND [pixel] < 101200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "109",
-                "253",
-                "145",
-                "145",
-                "254",
-                "109"
-            ],
-            "datarange": [
-                "100800.0",
-                "101200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100800.0 ) AND ( [pixel] < 101200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    109,
+                    253,
+                    145,
+                    145,
+                    254,
+                    109
+                ],
+                "datarange": [
+                    100800.0,
+                    101200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1012 1016 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 101200.0 AND [pixel] < 101600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "145",
-                "254",
-                "109",
-                "182",
-                "254",
-                "72"
-            ],
-            "datarange": [
-                "101200.0",
-                "101600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 101200.0 ) AND ( [pixel] < 101600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    145,
+                    254,
+                    109,
+                    182,
+                    254,
+                    72
+                ],
+                "datarange": [
+                    101200.0,
+                    101600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1016 1020 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 101600.0 AND [pixel] < 102000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "182",
-                "254",
-                "72",
-                "218",
-                "254",
-                "36"
-            ],
-            "datarange": [
-                "101600.0",
-                "102000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 101600.0 ) AND ( [pixel] < 102000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    182,
+                    254,
+                    72,
+                    218,
+                    254,
+                    36
+                ],
+                "datarange": [
+                    101600.0,
+                    102000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1020 1024 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 102000.0 AND [pixel] < 102400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "218",
-                "254",
-                "36",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "102000.0",
-                "102400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 102000.0 ) AND ( [pixel] < 102400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    218,
+                    254,
+                    36,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    102000.0,
+                    102400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1024 1028 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 102400.0 AND [pixel] < 102800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "218",
-                "0"
-            ],
-            "datarange": [
-                "102400.0",
-                "102800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 102400.0 ) AND ( [pixel] < 102800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    218,
+                    0
+                ],
+                "datarange": [
+                    102400.0,
+                    102800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1028 1032 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 102800.0 AND [pixel] < 103200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "218",
-                "0",
-                "254",
-                "182",
-                "0"
-            ],
-            "datarange": [
-                "102800.0",
-                "103200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 102800.0 ) AND ( [pixel] < 103200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    218,
+                    0,
+                    254,
+                    182,
+                    0
+                ],
+                "datarange": [
+                    102800.0,
+                    103200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1032 1036 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 103200.0 AND [pixel] < 103600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "182",
-                "0",
-                "254",
-                "145",
-                "0"
-            ],
-            "datarange": [
-                "103200.0",
-                "103600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 103200.0 ) AND ( [pixel] < 103600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    182,
+                    0,
+                    254,
+                    145,
+                    0
+                ],
+                "datarange": [
+                    103200.0,
+                    103600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1036 1040 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 103600.0 AND [pixel] < 104000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "145",
-                "0",
-                "254",
-                "109",
-                "0"
-            ],
-            "datarange": [
-                "103600.0",
-                "104000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 103600.0 ) AND ( [pixel] < 104000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    145,
+                    0,
+                    254,
+                    109,
+                    0
+                ],
+                "datarange": [
+                    103600.0,
+                    104000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1040 1044 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 104000.0 AND [pixel] < 104400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "109",
-                "0",
-                "254",
-                "72",
-                "0"
-            ],
-            "datarange": [
-                "104000.0",
-                "104400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 104000.0 ) AND ( [pixel] < 104400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    109,
+                    0,
+                    254,
+                    72,
+                    0
+                ],
+                "datarange": [
+                    104000.0,
+                    104400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1044 1048 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 104400.0 AND [pixel] < 104800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "72",
-                "0",
-                "254",
-                "36",
-                "0"
-            ],
-            "datarange": [
-                "104400.0",
-                "104800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 104400.0 ) AND ( [pixel] < 104800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    72,
+                    0,
+                    254,
+                    36,
+                    0
+                ],
+                "datarange": [
+                    104400.0,
+                    104800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1048 1052 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 104800.0 AND [pixel] < 105200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "36",
-                "0",
-                "254",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "104800.0",
-                "105200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 104800.0 ) AND ( [pixel] < 105200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    36,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    104800.0,
+                    105200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1052 1056 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 105200.0 AND [pixel] < 105600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "0",
-                "0",
-                "235",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "105200.0",
-                "105600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 105200.0 ) AND ( [pixel] < 105600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    235,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    105200.0,
+                    105600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1056 1060 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 105600.0 AND [pixel] < 106000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "235",
-                "0",
-                "0",
-                "217",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "105600.0",
-                "106000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 105600.0 ) AND ( [pixel] < 106000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    235,
+                    0,
+                    0,
+                    217,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    105600.0,
+                    106000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1060 1064 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 106000.0 AND [pixel] < 106400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "217",
-                "0",
-                "0",
-                "199",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "106000.0",
-                "106400.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 106000.0 ) AND ( [pixel] < 106400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    217,
+                    0,
+                    0,
+                    199,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    106000.0,
+                    106400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1064 1068 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 106400.0 AND [pixel] < 106800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "199",
-                "0",
-                "0",
-                "181",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "106400.0",
-                "106800.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 106400.0 ) AND ( [pixel] < 106800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    199,
+                    0,
+                    0,
+                    181,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    106400.0,
+                    106800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1068 1072 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 106800.0 AND [pixel] < 107200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "181",
-                "0",
-                "0",
-                "163",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "106800.0",
-                "107200.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 106800.0 ) AND ( [pixel] < 107200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    181,
+                    0,
+                    0,
+                    163,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    106800.0,
+                    107200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1072 1076 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 107200.0 AND [pixel] < 107600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "163",
-                "0",
-                "0",
-                "145",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "107200.0",
-                "107600.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 107200.0 ) AND ( [pixel] < 107600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    163,
+                    0,
+                    0,
+                    145,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    107200.0,
+                    107600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1076 1080 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 107600.0 AND [pixel] < 108000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "145",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "107600.0",
-                "108000.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 107600.0 ) AND ( [pixel] < 108000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    145,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    107600.0,
+                    108000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 1080 mb",
         "group": "PRESSURE4-LINEAR",
-        "expression": "([pixel] >= 108000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "108000.0",
-                "110000.0"
-            ]
-        }
+        "expression": "( [pixel] >= 108000.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    108000.0,
+                    110000.0
+                ]
+            }
+        ]
     }
 ]

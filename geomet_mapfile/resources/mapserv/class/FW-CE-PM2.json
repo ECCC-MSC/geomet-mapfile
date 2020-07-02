@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 - 5",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    204,
+                    204,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    1,
+                    5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 10",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    5,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 15",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    204,
+                    255
+                ],
+                "datarange": [
+                    10,
+                    15
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 - 20",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    15,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 30",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    20,
+                    30
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 - 40",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    30,
+                    40
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 50",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    40,
+                    50
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 - 75",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    50,
+                    75
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "75 - 100",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 75 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    75,
+                    100
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 - 200",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    100,
+                    200
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 200",
+        "group": "RAQDPS-FW-CE-PM2.5",
+        "expression": "( [pixel] >= 200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    200,
+                    1000
+                ]
+            }
+        ]
+    }
+]

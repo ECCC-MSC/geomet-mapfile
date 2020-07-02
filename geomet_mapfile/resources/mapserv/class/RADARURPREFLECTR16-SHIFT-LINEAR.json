@@ -3,336 +3,368 @@
         "__type__": "class",
         "name": "7.50 - 15.00 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(7.50 <= [pixel] AND [pixel] < 15.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "180",
-                "255",
-                "180",
-                "126",
-                "255",
-                "126"
-            ],
-            "datarange": [
-                "7.50",
-                "15.00"
-            ]
-        }
+        "expression": "( ( 7.5 <= [pixel] ) AND ( [pixel] < 15.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    180,
+                    255,
+                    180,
+                    126,
+                    255,
+                    126
+                ],
+                "datarange": [
+                    7.5,
+                    15.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15.00 - 23.00 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(15.00 <= [pixel] AND [pixel] < 23.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "126",
-                "255",
-                "126",
-                "078",
-                "255",
-                "078"
-            ],
-            "datarange": [
-                "15.00",
-                "23.00"
-            ]
-        }
+        "expression": "( ( 15.0 <= [pixel] ) AND ( [pixel] < 23.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    126,
+                    255,
+                    126,
+                    78,
+                    255,
+                    78
+                ],
+                "datarange": [
+                    15.0,
+                    23.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "23.00 - 25.12 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(23.00 <= [pixel] AND [pixel] < 25.12)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "078",
-                "255",
-                "078",
-                "024",
-                "255",
-                "024"
-            ],
-            "datarange": [
-                "23.00",
-                "25.12"
-            ]
-        }
+        "expression": "( ( 23.0 <= [pixel] ) AND ( [pixel] < 25.12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    78,
+                    255,
+                    78,
+                    24,
+                    255,
+                    24
+                ],
+                "datarange": [
+                    23.0,
+                    25.12
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25.12 - 27.75 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(25.12 <= [pixel] AND [pixel] < 27.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "024",
-                "255",
-                "024",
-                "000",
-                "162",
-                "000"
-            ],
-            "datarange": [
-                "25.12",
-                "27.75"
-            ]
-        }
+        "expression": "( ( 25.12 <= [pixel] ) AND ( [pixel] < 27.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    24,
+                    255,
+                    24,
+                    0,
+                    162,
+                    0
+                ],
+                "datarange": [
+                    25.12,
+                    27.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "27.75 - 32.25 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(27.75 <= [pixel] AND [pixel] < 32.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "162",
-                "000",
-                "000",
-                "144",
-                "000"
-            ],
-            "datarange": [
-                "27.75",
-                "32.25"
-            ]
-        }
+        "expression": "( ( 27.75 <= [pixel] ) AND ( [pixel] < 32.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    162,
+                    0,
+                    0,
+                    144,
+                    0
+                ],
+                "datarange": [
+                    27.75,
+                    32.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "32.25 - 37.50 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(32.25 <= [pixel] AND [pixel] < 37.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "144",
-                "000",
-                "000",
-                "111",
-                "000"
-            ],
-            "datarange": [
-                "32.25",
-                "37.50"
-            ]
-        }
+        "expression": "( ( 32.25 <= [pixel] ) AND ( [pixel] < 37.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    144,
+                    0,
+                    0,
+                    111,
+                    0
+                ],
+                "datarange": [
+                    32.25,
+                    37.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "37.50 - 39.75 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(37.50 <= [pixel] AND [pixel] < 39.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "111",
-                "000",
-                "000",
-                "093",
-                "000"
-            ],
-            "datarange": [
-                "37.50",
-                "39.75"
-            ]
-        }
+        "expression": "( ( 37.5 <= [pixel] ) AND ( [pixel] < 39.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    111,
+                    0,
+                    0,
+                    93,
+                    0
+                ],
+                "datarange": [
+                    37.5,
+                    39.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "39.75 - 42.25 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(39.75 <= [pixel] AND [pixel] < 42.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "093",
-                "000",
-                "255",
-                "111",
-                "204"
-            ],
-            "datarange": [
-                "39.75",
-                "42.25"
-            ]
-        }
+        "expression": "( ( 39.75 <= [pixel] ) AND ( [pixel] < 42.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    93,
+                    0,
+                    255,
+                    111,
+                    204
+                ],
+                "datarange": [
+                    39.75,
+                    42.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "42.25 - 44.88 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(42.25 <= [pixel] AND [pixel] < 44.88)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "111",
-                "204",
-                "255",
-                "093",
-                "204"
-            ],
-            "datarange": [
-                "42.25",
-                "44.88"
-            ]
-        }
+        "expression": "( ( 42.25 <= [pixel] ) AND ( [pixel] < 44.88 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    111,
+                    204,
+                    255,
+                    93,
+                    204
+                ],
+                "datarange": [
+                    42.25,
+                    44.88
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "44.88 - 47.00 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(44.88 <= [pixel] AND [pixel] < 47.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "093",
-                "204",
-                "160",
-                "070",
-                "204"
-            ],
-            "datarange": [
-                "44.88",
-                "47.00"
-            ]
-        }
+        "expression": "( ( 44.88 <= [pixel] ) AND ( [pixel] < 47.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    93,
+                    204,
+                    160,
+                    70,
+                    204
+                ],
+                "datarange": [
+                    44.88,
+                    47.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "47.00 - 49.68 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(47.00 <= [pixel] AND [pixel] < 49.68)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "160",
-                "070",
-                "204",
-                "146",
-                "032",
-                "204"
-            ],
-            "datarange": [
-                "47.00",
-                "49.68"
-            ]
-        }
+        "expression": "( ( 47.0 <= [pixel] ) AND ( [pixel] < 49.68 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    160,
+                    70,
+                    204,
+                    146,
+                    32,
+                    204
+                ],
+                "datarange": [
+                    47.0,
+                    49.68
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "49.68 - 52.25 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(49.68 <= [pixel] AND [pixel] < 52.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "146",
-                "032",
-                "204",
-                "109",
-                "000",
-                "153"
-            ],
-            "datarange": [
-                "49.68",
-                "52.25"
-            ]
-        }
+        "expression": "( ( 49.68 <= [pixel] ) AND ( [pixel] < 52.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    146,
+                    32,
+                    204,
+                    109,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    49.68,
+                    52.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "52.25 - 54.88 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(52.25 <= [pixel] AND [pixel] < 54.88)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "109",
-                "000",
-                "153",
-                "095",
-                "000",
-                "153"
-            ],
-            "datarange": [
-                "52.25",
-                "54.88"
-            ]
-        }
+        "expression": "( ( 52.25 <= [pixel] ) AND ( [pixel] < 54.88 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    109,
+                    0,
+                    153,
+                    95,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    52.25,
+                    54.88
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "54.88 - 57.50 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(54.88 <= [pixel] AND [pixel] < 57.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "095",
-                "000",
-                "153",
-                "056",
-                "000",
-                "120"
-            ],
-            "datarange": [
-                "54.88",
-                "57.50"
-            ]
-        }
+        "expression": "( ( 54.88 <= [pixel] ) AND ( [pixel] < 57.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    95,
+                    0,
+                    153,
+                    56,
+                    0,
+                    120
+                ],
+                "datarange": [
+                    54.88,
+                    57.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "57.50 - 62.75 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(57.50 <= [pixel] AND [pixel] < 62.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "056",
-                "000",
-                "120",
-                "046",
-                "000",
-                "084"
-            ],
-            "datarange": [
-                "57.50",
-                "62.75"
-            ]
-        }
+        "expression": "( ( 57.5 <= [pixel] ) AND ( [pixel] < 62.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    56,
+                    0,
+                    120,
+                    46,
+                    0,
+                    84
+                ],
+                "datarange": [
+                    57.5,
+                    62.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 52.75 (dBZ)",
         "group": "RADARURPREFLECTR16-SHIFT-LINEAR",
-        "expression": "(52.75 <= [pixel] AND [pixel] <= 66.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "046",
-                "000",
-                "084",
-                "045",
-                "000",
-                "078"
-            ],
-            "datarange": [
-                "52.75",
-                "66.00"
-            ]
-        }
+        "expression": "( ( 52.75 <= [pixel] ) AND ( [pixel] <= 66.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    46,
+                    0,
+                    84,
+                    45,
+                    0,
+                    78
+                ],
+                "datarange": [
+                    52.75,
+                    66.0
+                ]
+            }
+        ]
     }
 ]

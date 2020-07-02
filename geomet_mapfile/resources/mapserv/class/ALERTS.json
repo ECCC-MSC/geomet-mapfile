@@ -3,80 +3,88 @@
         "__type__": "class",
         "name": "warning",
         "group": "ALERTS",
-        "expression": "('[alert_type]'='warning')",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "0",
-                "0"
-            ],
-            "outlinecolor": [
-                "0",
-                "0",
-                "0"
-            ],
-            "width": "0.26"
-        }
+        "expression": "( '[alert_type]' = 'warning' )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.26
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "watch",
         "group": "ALERTS",
-        "expression": "('[alert_type]'='watch')",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ],
-            "outlinecolor": [
-                "0",
-                "0",
-                "0"
-            ],
-            "width": "0.26"
-        }
+        "expression": "( '[alert_type]' = 'watch' )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.26
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "statement",
         "group": "ALERTS",
-        "expression": "('[alert_type]'='statement')",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "127",
-                "127"
-            ],
-            "outlinecolor": [
-                "0",
-                "0",
-                "0"
-            ],
-            "width": "0.26"
-        }
+        "expression": "( '[alert_type]' = 'statement' )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    127,
+                    127
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.26
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "advisory",
         "group": "ALERTS",
-        "expression": "('[alert_type]'='advisory')",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "127",
-                "127"
-            ],
-            "outlinecolor": [
-                "0",
-                "0",
-                "0"
-            ],
-            "width": "0.26"
-        }
+        "expression": "( '[alert_type]' = 'advisory' )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    127,
+                    127
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.26
+            }
+        ]
     }
 ]

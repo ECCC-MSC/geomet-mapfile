@@ -3,236 +3,253 @@
         "__type__": "class",
         "group": "MODELWAVEDIR-LINEAR",
         "name": "0 30",
-        "expression": "([pixel] >= 3 AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "203"
-            ],
-            "datarange": [
-                "",
-                "0",
-                "30"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    203
+                ],
+                "datarange": [
+                    0,
+                    30
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 60",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 30 AND [pixel] < 60)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "203",
-                "0",
-                "40",
-                "254"
-            ],
-            "datarange": [
-                "",
-                "30",
-                "60"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    203,
+                    0,
+                    40,
+                    254
+                ],
+                "datarange": [
+                    30,
+                    60
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 90",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 60 AND [pixel] < 90)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "",
-                "0",
-                "40",
-                "254",
-                "",
-                "0",
-                "155",
-                "254"
-            ],
-            "datarange": [
-                "60",
-                "90"
-            ]
-        }
+        "expression": "( ( [pixel] >= 60 ) AND ( [pixel] < 90 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    40,
+                    254,
+                    0,
+                    155,
+                    254
+                ],
+                "datarange": [
+                    60,
+                    90
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 120",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 90 AND [pixel] < 120)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "155",
-                "254",
-                "13",
-                "253",
-                "241"
-            ],
-            "datarange": [
-                "90",
-                "120"
-            ]
-        }
+        "expression": "( ( [pixel] >= 90 ) AND ( [pixel] < 120 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    155,
+                    254,
+                    13,
+                    253,
+                    241
+                ],
+                "datarange": [
+                    90,
+                    120
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "120 150",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 120 AND [pixel] < 150)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "13",
-                "253",
-                "241",
-                "106",
-                "253",
-                "148"
-            ],
-            "datarange": [
-                "120",
-                "150"
-            ]
-        }
+        "expression": "( ( [pixel] >= 120 ) AND ( [pixel] < 150 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    13,
+                    253,
+                    241,
+                    106,
+                    253,
+                    148
+                ],
+                "datarange": [
+                    120,
+                    150
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "150 180",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 150 AND [pixel] < 180)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "106",
-                "253",
-                "148",
-                "199",
-                "254",
-                "55"
-            ],
-            "datarange": [
-                "150",
-                "180"
-            ]
-        }
+        "expression": "( ( [pixel] >= 150 ) AND ( [pixel] < 180 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    106,
+                    253,
+                    148,
+                    199,
+                    254,
+                    55
+                ],
+                "datarange": [
+                    150,
+                    180
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "180 210",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 180 AND [pixel] < 210)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "199",
-                "254",
-                "55",
-                "",
-                "254",
-                "217",
-                "0"
-            ],
-            "datarange": [
-                "180",
-                "210"
-            ]
-        }
+        "expression": "( ( [pixel] >= 180 ) AND ( [pixel] < 210 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    199,
+                    254,
+                    55,
+                    254,
+                    217,
+                    0
+                ],
+                "datarange": [
+                    180,
+                    210
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "210 240",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 210 AND [pixel] < 240)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "217",
-                "0",
-                "254",
-                "125",
-                "0"
-            ],
-            "datarange": [
-                "210",
-                "240"
-            ]
-        }
+        "expression": "( ( [pixel] >= 210 ) AND ( [pixel] < 240 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    217,
+                    0,
+                    254,
+                    125,
+                    0
+                ],
+                "datarange": [
+                    210,
+                    240
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "270 300",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 270 AND [pixel] < 300)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "125",
-                "0",
-                "254",
-                "32",
-                "0"
-            ],
-            "datarange": [
-                "270",
-                "300"
-            ]
-        }
+        "expression": "( ( [pixel] >= 270 ) AND ( [pixel] < 300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    125,
+                    0,
+                    254,
+                    32,
+                    0
+                ],
+                "datarange": [
+                    270,
+                    300
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "300 330",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 300 AND [pixel] < 330)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "32",
-                "0",
-                "203",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "300",
-                "330"
-            ]
-        }
+        "expression": "( ( [pixel] >= 300 ) AND ( [pixel] < 330 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    32,
+                    0,
+                    203,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    300,
+                    330
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "330 360",
         "group": "MODELWAVEDIR-LINEAR",
-        "expression": "([pixel] >= 330  AND [pixel] <= 360)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "203",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "330",
-                "360"
-            ]
-        }
+        "expression": "( ( [pixel] >= 330 ) AND ( [pixel] <= 360 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    203,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    330,
+                    360
+                ]
+            }
+        ]
     }
 ]
