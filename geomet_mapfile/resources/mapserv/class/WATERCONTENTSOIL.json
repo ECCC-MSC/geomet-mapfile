@@ -3,182 +3,208 @@
         "__type__": "class",
         "name": "0.005 0.05",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.005 AND [pixel] < 0.05)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "222",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.005 ) AND ( [pixel] < 0.05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    222,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.05 0.10",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.05 AND [pixel] < 0.10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "233",
-                "254",
-                "21"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.05 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    233,
+                    254,
+                    21
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.10 0.15",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.10 AND [pixel] < 0.15)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "179",
-                "254",
-                "75"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    179,
+                    254,
+                    75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.15 0.20",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.15 AND [pixel] < 0.20)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "56",
-                "209",
-                "72"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.15 ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    56,
+                    209,
+                    72
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.20 0.25",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.20 AND [pixel] < 0.25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "56",
-                "160",
-                "182"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    56,
+                    160,
+                    182
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.25 0.30",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.25 AND [pixel] < 0.30)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "209",
-                "182"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.25 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    209,
+                    182
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.30 0.35",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.30 AND [pixel] < 0.35)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "209",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    209,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.35 0.40",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.35 AND [pixel] < 0.40)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "143",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.35 ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    143,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.40 0.45",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.40 AND [pixel] < 0.45)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "76",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.4 ) AND ( [pixel] < 0.45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    76,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.45 0.50",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.45 AND [pixel] < 0.50)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "9",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.45 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    9,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.50 0.55",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.50 AND [pixel] < 0.55)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "216"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 0.55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    216
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.55 0.60",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.55 AND [pixel] < 0.60)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "171"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.55 ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    171
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.60 ..",
         "group": "WATERCONTENTSOIL",
-        "expression": "([pixel] >= 0.60 AND [pixel] < 0.90)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "121"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.6 ) AND ( [pixel] < 0.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    121
+                ]
+            }
+        ]
     }
 ]

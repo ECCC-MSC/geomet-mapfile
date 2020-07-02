@@ -3,70 +3,80 @@
         "__type__": "class",
         "name": "1 2",
         "group": "WIND_STD",
-        "expression": "([pixel] >= 1 AND [pixel] < 2)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "224",
-                "224",
-                "224"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    224,
+                    224,
+                    224
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2 4",
         "group": "WIND_STD",
-        "expression": "([pixel] >= 2 AND [pixel] < 4)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "229",
-                "204",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    229,
+                    204,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4 6",
         "group": "WIND_STD",
-        "expression": "([pixel] >= 4 AND [pixel] < 6)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "153",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    153,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6 10",
         "group": "WIND_STD",
-        "expression": "([pixel] >= 6 AND [pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": " 10 20",
         "group": "WIND_STD",
-        "expression": "([pixel] >= 10 AND [pixel] < 20)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

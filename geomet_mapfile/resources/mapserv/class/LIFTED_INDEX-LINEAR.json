@@ -3,306 +3,391 @@
         "__type__": "class",
         "name": "-15 -14",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >=-15 AND [pixel] < -14)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "255",
-                "000",
-                "255",
-                "255"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -15 ) AND ( [pixel] < -14 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-14 -13",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -14 AND [pixel] < -13)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "255",
-                "255",
-                "255",
-                "255"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -14 ) AND ( [pixel] < -13 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    255,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-13 -12",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -13 AND [pixel] < -12)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "255",
-                "255",
-                "130",
-                "225"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -13 ) AND ( [pixel] < -12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    255,
+                    130,
+                    225
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-12 -11",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -12 AND [pixel] < -11)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "130",
-                "225",
-                "255",
-                "000",
-                "200"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -12 ) AND ( [pixel] < -11 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    130,
+                    225,
+                    255,
+                    0,
+                    200
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-11 -10",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -11 AND [pixel] < -10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "200",
-                "180",
-                "000",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -11 ) AND ( [pixel] < -10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    200,
+                    180,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-10 -9",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -10 AND [pixel] < -9)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "180",
-                "000",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < -9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    180,
+                    0,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-9 -8",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -9 AND [pixel] < -8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "200",
-                "100",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -9 ) AND ( [pixel] < -8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    200,
+                    100,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-8 -7",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -8 AND [pixel] < -7)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "200",
-                "100",
-                "000",
-                "255",
-                "128",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -8 ) AND ( [pixel] < -7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    100,
+                    0,
+                    255,
+                    128,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-7 -6",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -7 AND [pixel] < -6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "128",
-                "000",
-                "240",
-                "160",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -7 ) AND ( [pixel] < -6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    128,
+                    0,
+                    240,
+                    160,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-6 -5",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -6 AND [pixel] < -5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "160",
-                "000",
-                "240",
-                "190",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -6 ) AND ( [pixel] < -5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    160,
+                    0,
+                    240,
+                    190,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-5 -4",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -5 AND [pixel] < -4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "190",
-                "000",
-                "240",
-                "220",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -5 ) AND ( [pixel] < -4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    190,
+                    0,
+                    240,
+                    220,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-4 -3",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -4 AND [pixel] < -3)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "220",
-                "000",
-                "255",
-                "255",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -4 ) AND ( [pixel] < -3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    220,
+                    0,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-3 -2",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -3 AND [pixel] < -2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "000",
-                "000",
-                "255",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -3 ) AND ( [pixel] < -2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    0,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-2 -1",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -2 AND [pixel] < -1)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "000",
-                "000",
-                "128",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -2 ) AND ( [pixel] < -1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    0,
+                    0,
+                    128,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1 0",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= -1 AND [pixel] < 0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "128",
-                "000",
-                "153",
-                "153",
-                "153"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= -1 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    0,
+                    153,
+                    153,
+                    153
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0 5",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= 0 AND [pixel] < 5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "153",
-                "153",
-                "200",
-                "200",
-                "240"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    153,
+                    153,
+                    200,
+                    200,
+                    240
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 10",
         "group": "LIFTED_INDEX-LINEAR",
-        "expression": "([pixel] >= 5 AND [pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "200",
-                "200",
-                "240",
-                "220",
-                "220",
-                "240"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    200,
+                    240,
+                    220,
+                    220,
+                    240
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     }
 ]

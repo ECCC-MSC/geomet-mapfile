@@ -3,273 +3,299 @@
         "__type__": "class",
         "name": "<= 258.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] < 258.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": [
-                "173",
-                "258.15"
-            ]
-        }
+        "expression": "( [pixel] < 258.15 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    173,
+                    258.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "258.15 263.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 258.15 AND [pixel] < 263.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "203"
-            ],
-            "datarange": [
-                "258.15",
-                "263.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 258.15 ) AND ( [pixel] < 263.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    203
+                ],
+                "datarange": [
+                    258.15,
+                    263.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "263.15 268.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 263.15 AND [pixel] < 268.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "203",
-                "0",
-                "40",
-                "254"
-            ],
-            "datarange": [
-                "263.15",
-                "268.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 263.15 ) AND ( [pixel] < 268.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    203,
+                    0,
+                    40,
+                    254
+                ],
+                "datarange": [
+                    263.15,
+                    268.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "268.15 273.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 268.15 AND [pixel] < 273.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "40",
-                "254",
-                "0",
-                "155",
-                "254"
-            ],
-            "datarange": [
-                "268.15",
-                "273.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 268.15 ) AND ( [pixel] < 273.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    40,
+                    254,
+                    0,
+                    155,
+                    254
+                ],
+                "datarange": [
+                    268.15,
+                    273.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "273.15 278.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 273.15 AND [pixel] < 278.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "155",
-                "254",
-                "13",
-                "253",
-                "241"
-            ],
-            "datarange": [
-                "273.15",
-                "278.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 273.15 ) AND ( [pixel] < 278.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    155,
+                    254,
+                    13,
+                    253,
+                    241
+                ],
+                "datarange": [
+                    273.15,
+                    278.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "278.15 283.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 278.15 AND [pixel] < 283.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "13",
-                "253",
-                "241",
-                "106",
-                "253",
-                "148"
-            ],
-            "datarange": [
-                "278.15",
-                "283.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 278.15 ) AND ( [pixel] < 283.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    13,
+                    253,
+                    241,
+                    106,
+                    253,
+                    148
+                ],
+                "datarange": [
+                    278.15,
+                    283.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "283.15 288.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 283.15 AND [pixel] < 288.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "106",
-                "253",
-                "148",
-                "199",
-                "254",
-                "55"
-            ],
-            "datarange": [
-                "283.15",
-                "288.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 283.15 ) AND ( [pixel] < 288.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    106,
+                    253,
+                    148,
+                    199,
+                    254,
+                    55
+                ],
+                "datarange": [
+                    283.15,
+                    288.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "288.15 293.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 288.15 AND [pixel] < 293.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "199",
-                "254",
-                "55",
-                "254",
-                "217",
-                "0"
-            ],
-            "datarange": [
-                "288.15",
-                "293.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 288.15 ) AND ( [pixel] < 293.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    199,
+                    254,
+                    55,
+                    254,
+                    217,
+                    0
+                ],
+                "datarange": [
+                    288.15,
+                    293.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "293.15 298.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 293.15 AND [pixel] < 298.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "217",
-                "0",
-                "254",
-                "125",
-                "0"
-            ],
-            "datarange": [
-                "293.15",
-                "298.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 293.15 ) AND ( [pixel] < 298.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    217,
+                    0,
+                    254,
+                    125,
+                    0
+                ],
+                "datarange": [
+                    293.15,
+                    298.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "298.15 303.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 298.15 AND [pixel] < 303.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "125",
-                "0",
-                "254",
-                "32",
-                "0"
-            ],
-            "datarange": [
-                "298.15",
-                "303.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 298.15 ) AND ( [pixel] < 303.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    125,
+                    0,
+                    254,
+                    32,
+                    0
+                ],
+                "datarange": [
+                    298.15,
+                    303.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "303.15 308.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 303.15 AND [pixel] < 308.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "32",
-                "0",
-                "203",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "303.15",
-                "308.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 303.15 ) AND ( [pixel] < 308.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    32,
+                    0,
+                    203,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    303.15,
+                    308.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "308.15 313.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 308.15 AND [pixel] < 313.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "203",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "308.15",
-                "313.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 308.15 ) AND ( [pixel] < 313.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    203,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    308.15,
+                    313.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 313.15",
         "group": "TEMPSUMMER-LINEAR",
-        "expression": "([pixel] >= 313.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "313.15",
-                "373.15"
-            ]
-        }
+        "expression": "( [pixel] >= 313.15 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    313.15,
+                    373.15
+                ]
+            }
+        ]
     }
 ]

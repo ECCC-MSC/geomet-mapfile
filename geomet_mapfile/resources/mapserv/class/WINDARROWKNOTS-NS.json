@@ -2,222 +2,247 @@
     {
         "__type__": "class",
         "name": "0 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([u] = 270)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ],
-            "symbol": "circle_wind",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( [u] = 270 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ],
+                "symbol": "circle_wind",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0 5 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] > 0.00 AND [v] < 2.57)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] > 0.0 ) AND ( [v] < 2.57 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 10 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 2.57 AND [v] < 5.14)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "203"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 2.57 ) AND ( [v] < 5.14 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    203
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 15 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 5.14 AND [v] < 7.72)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "",
-                "0",
-                "40",
-                "254"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 5.14 ) AND ( [v] < 7.72 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    40,
+                    254
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 20 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 7.72 AND [v] < 10.29)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "155",
-                "254"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 7.72 ) AND ( [v] < 10.29 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    155,
+                    254
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 10.29 AND [v] < 12.86)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "13",
-                "253",
-                "241"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 10.29 ) AND ( [v] < 12.86 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    13,
+                    253,
+                    241
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 30 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 12.86 AND [v] < 15.43)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "106",
-                "253",
-                "148"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 12.86 ) AND ( [v] < 15.43 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    106,
+                    253,
+                    148
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 35 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 15.43 AND [v] < 18.01)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "199",
-                "254",
-                "55"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 15.43 ) AND ( [v] < 18.01 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    199,
+                    254,
+                    55
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35 40 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 18.01 AND [v] < 20.58)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "217",
-                "0"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 18.01 ) AND ( [v] < 20.58 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    217,
+                    0
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 45 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 20.58 AND [v] < 23.15)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "125",
-                "0"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 20.58 ) AND ( [v] < 23.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    125,
+                    0
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45 50 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 23.15 AND [v] < 25.72)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "32",
-                "0"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 23.15 ) AND ( [v] < 25.72 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    32,
+                    0
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 55 kts",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 25.72 AND [v] < 28.29)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "203",
-                "0",
-                "0"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( ( [v] >= 25.72 ) AND ( [v] < 28.29 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    203,
+                    0,
+                    0
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "55 kts +",
-        "group": "WINDARROWKNOTS",
-        "expression": "([v] >= 28.29)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ],
-            "symbol": "arrow_wind",
-            "angle": "[u]",
-            "size": "12"
-        }
+        "group": "WINDARROW",
+        "expression": "( [v] >= 28.29 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ],
+                "symbol": "arrow_wind",
+                "angle": "[u]",
+                "size": 12
+            }
+        ]
     }
 ]

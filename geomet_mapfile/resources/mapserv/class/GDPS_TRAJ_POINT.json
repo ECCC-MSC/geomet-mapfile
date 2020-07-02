@@ -3,32 +3,36 @@
         "__type__": "class",
         "name": "Trajectory point",
         "group": "GDPS_TRAJ_POINT",
-        "expression": "(\"[lastPoint]\" = \"true\")",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "0",
-                "0"
-            ],
-            "symbol": "circle",
-            "size": "7"
-        }
+        "expression": "( \"[lastPoint]\" = \"true\" )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "symbol": "circle",
+                "size": 7
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "Trajectory point",
         "group": "GDPS_TRAJ_POINT",
-        "expression": "(\"[lastPoint]\" = \"false\")",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "0",
-                "0"
-            ],
-            "symbol": "circle",
-            "size": "4"
-        }
+        "expression": "( \"[lastPoint]\" = \"false\" )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "symbol": "circle",
+                "size": 4
+            }
+        ]
     }
 ]

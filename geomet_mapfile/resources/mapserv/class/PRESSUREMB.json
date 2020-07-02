@@ -3,147 +3,161 @@
         "__type__": "class",
         "name": "<= 500 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] < 500.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": [
-                "500.0",
-                "200.0"
-            ]
-        }
+        "expression": "( [pixel] < 500.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    500.0,
+                    200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "500 610 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 500.00 AND [pixel] < 610.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "63",
-                "254"
-            ],
-            "datarange": [
-                "500.0",
-                "610.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 500.0 ) AND ( [pixel] < 610.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    500.0,
+                    610.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "610 720 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 610.00 AND [pixel] < 720.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "254",
-                "51",
-                "253",
-                "203"
-            ],
-            "datarange": [
-                "610.0",
-                "720.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 610.0 ) AND ( [pixel] < 720.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    610.0,
+                    720.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "720 830 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 720.00 AND [pixel] < 830.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "253",
-                "203",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "720.0",
-                "830.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 720.0 ) AND ( [pixel] < 830.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    720.0,
+                    830.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "830 940 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 830.00 AND [pixel] < 940.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "50",
-                "0"
-            ],
-            "datarange": [
-                "830.0",
-                "940.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 830.0 ) AND ( [pixel] < 940.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    50,
+                    0
+                ],
+                "datarange": [
+                    830.0,
+                    940.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "940 1050 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 940.00 AND [pixel] < 1050.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "50",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "940.0",
-                "1050.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 940.0 ) AND ( [pixel] < 1050.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    50,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    940.0,
+                    1050.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 1050 mb",
         "group": "PRESSURE",
-        "expression": "([pixel] >= 1050.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1050.0",
-                "1100.0"
-            ]
-        }
+        "expression": "( [pixel] >= 1050.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1050.0,
+                    1100.0
+                ]
+            }
+        ]
     }
 ]

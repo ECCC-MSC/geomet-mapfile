@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "5e-10 \u2014 1e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 5e-10 ) AND ( [pixel] < 1e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    30,
+                    176,
+                    251,
+                    68,
+                    252,
+                    201
+                ],
+                "datarange": [
+                    0,
+                    1e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e-9 - 2e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 1e-09 ) AND ( [pixel] < 2e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    68,
+                    252,
+                    201,
+                    159,
+                    252,
+                    108
+                ],
+                "datarange": [
+                    1e-09,
+                    2e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2e-9 - 3e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 2e-09 ) AND ( [pixel] < 3e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    159,
+                    252,
+                    108,
+                    232,
+                    252,
+                    57
+                ],
+                "datarange": [
+                    2e-09,
+                    3e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3e-9 - 4e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 3e-09 ) AND ( [pixel] < 4e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    252,
+                    57,
+                    253,
+                    211,
+                    48
+                ],
+                "datarange": [
+                    3e-09,
+                    4e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4e-9 - 5e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 4e-09 ) AND ( [pixel] < 5e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    253,
+                    211,
+                    48,
+                    252,
+                    144,
+                    37
+                ],
+                "datarange": [
+                    4e-09,
+                    5e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5e-9 - 6e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 5e-09 ) AND ( [pixel] < 6e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    144,
+                    37,
+                    251,
+                    87,
+                    31
+                ],
+                "datarange": [
+                    5e-09,
+                    6e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6e-9 - 7e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 6e-09 ) AND ( [pixel] < 7e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    87,
+                    31,
+                    251,
+                    34,
+                    28
+                ],
+                "datarange": [
+                    6e-09,
+                    7e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7e-9 - 8e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 7e-09 ) AND ( [pixel] < 8e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    34,
+                    28,
+                    238,
+                    12,
+                    25
+                ],
+                "datarange": [
+                    7e-09,
+                    8e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8e-9 - 9e-9",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 8e-09 ) AND ( [pixel] < 9e-09 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    238,
+                    12,
+                    25,
+                    199,
+                    8,
+                    19
+                ],
+                "datarange": [
+                    8e-09,
+                    9e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9e-9 - 1e-8",
+        "group": "SFC-NO",
+        "expression": "( ( [pixel] >= 9e-09 ) AND ( [pixel] < 1e-08 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    199,
+                    8,
+                    19,
+                    163,
+                    5,
+                    13
+                ],
+                "datarange": [
+                    9e-09,
+                    1e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 1e-8",
+        "group": "SFC-NO",
+        "expression": "( [pixel] >= 1e-08 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    163,
+                    5,
+                    13,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1e-08,
+                    0.0001
+                ]
+            }
+        ]
+    }
+]

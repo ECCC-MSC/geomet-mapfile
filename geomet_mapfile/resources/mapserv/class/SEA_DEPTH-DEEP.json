@@ -3,447 +3,483 @@
         "__type__": "class",
         "name": "0.0 - 100.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(0.0 <= [pixel] AND [pixel] < 100.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "124",
-                "0",
-                "0",
-                "167"
-            ],
-            "datarange": [
-                "0.0",
-                "100.0"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    124,
+                    0,
+                    0,
+                    167
+                ],
+                "datarange": [
+                    0.0,
+                    100.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100.0 - 200.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(100.0 <= [pixel] AND [pixel] < 200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "167",
-                "0",
-                "0",
-                "210"
-            ],
-            "datarange": [
-                "100.0",
-                "200.0"
-            ]
-        }
+        "expression": "( ( 100.0 <= [pixel] ) AND ( [pixel] < 200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    167,
+                    0,
+                    0,
+                    210
+                ],
+                "datarange": [
+                    100.0,
+                    200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "200.0 - 300.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(200.0 <= [pixel] AND [pixel] < 300.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "210",
-                "0",
-                "0",
-                "255"
-            ],
-            "datarange": [
-                "200.0",
-                "300.0"
-            ]
-        }
+        "expression": "( ( 200.0 <= [pixel] ) AND ( [pixel] < 300.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    210,
+                    0,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    200.0,
+                    300.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "300.0 - 400.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(300.0 <= [pixel] AND [pixel] < 400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "255",
-                "",
-                "0",
-                "64",
-                "255"
-            ],
-            "datarange": [
-                "300.0",
-                "400.0"
-            ]
-        }
+        "expression": "( ( 300.0 <= [pixel] ) AND ( [pixel] < 400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    64,
+                    255
+                ],
+                "datarange": [
+                    300.0,
+                    400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "400.0 - 500.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(400.0 <= [pixel] AND [pixel] < 500.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "64",
-                "255",
-                "0",
-                "128",
-                "255"
-            ],
-            "datarange": [
-                "400.0",
-                "500.0"
-            ]
-        }
+        "expression": "( ( 400.0 <= [pixel] ) AND ( [pixel] < 500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    64,
+                    255,
+                    0,
+                    128,
+                    255
+                ],
+                "datarange": [
+                    400.0,
+                    500.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "500.0 - 600.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(500.0 <= [pixel] AND [pixel] < 600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "128",
-                "255",
-                "0",
-                "188",
-                "255"
-            ],
-            "datarange": [
-                "500.0",
-                "600.0"
-            ]
-        }
+        "expression": "( ( 500.0 <= [pixel] ) AND ( [pixel] < 600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    255,
+                    0,
+                    188,
+                    255
+                ],
+                "datarange": [
+                    500.0,
+                    600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "600.0 - 700.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(600.0 <= [pixel] AND [pixel] < 700.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "188",
-                "255",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": [
-                "600.0",
-                "700.0"
-            ]
-        }
+        "expression": "( ( 600.0 <= [pixel] ) AND ( [pixel] < 700.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    188,
+                    255,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    600.0,
+                    700.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "700.0 - 800.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(700.0 <= [pixel] AND [pixel] < 800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "51",
-                "",
-                "253",
-                "203"
-            ],
-            "datarange": [
-                "700.0",
-                "800.0"
-            ]
-        }
+        "expression": "( ( 700.0 <= [pixel] ) AND ( [pixel] < 800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    700.0,
+                    800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "800.0 - 900.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(800.0 <= [pixel] AND [pixel] < 900.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "",
-                "253",
-                "203",
-                "103",
-                "253",
-                "151"
-            ],
-            "datarange": [
-                "800.0",
-                "900.0"
-            ]
-        }
+        "expression": "( ( 800.0 <= [pixel] ) AND ( [pixel] < 900.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    103,
+                    253,
+                    151
+                ],
+                "datarange": [
+                    800.0,
+                    900.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "900.0 - 1000.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(900.0 <= [pixel] AND [pixel] < 1000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "103",
-                "253",
-                "151",
-                "155",
-                "254",
-                "99"
-            ],
-            "datarange": [
-                "900.0",
-                "1000.0"
-            ]
-        }
+        "expression": "( ( 900.0 <= [pixel] ) AND ( [pixel] < 1000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    103,
+                    253,
+                    151,
+                    155,
+                    254,
+                    99
+                ],
+                "datarange": [
+                    900.0,
+                    1000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000.0 - 1100.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1000.0 <= [pixel] AND [pixel] < 1100.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "155",
-                "254",
-                "99",
-                "",
-                "203",
-                "254",
-                "51"
-            ],
-            "datarange": [
-                "1000.0",
-                "1100.0"
-            ]
-        }
+        "expression": "( ( 1000.0 <= [pixel] ) AND ( [pixel] < 1100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    155,
+                    254,
+                    99,
+                    203,
+                    254,
+                    51
+                ],
+                "datarange": [
+                    1000.0,
+                    1100.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1100.0 - 1200.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1100.0 <= [pixel] AND [pixel] < 1200.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "203",
-                "254",
-                "51",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "1100.0",
-                "1200.0"
-            ]
-        }
+        "expression": "( ( 1100.0 <= [pixel] ) AND ( [pixel] < 1200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    203,
+                    254,
+                    51,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    1100.0,
+                    1200.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1200.0 - 1300.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1200.0 <= [pixel] AND [pixel] < 1300.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "203",
-                "0"
-            ],
-            "datarange": [
-                "1200.0",
-                "1300.0"
-            ]
-        }
+        "expression": "( ( 1200.0 <= [pixel] ) AND ( [pixel] < 1300.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    203,
+                    0
+                ],
+                "datarange": [
+                    1200.0,
+                    1300.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1300.0 - 1400.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1300.0 <= [pixel] AND [pixel] < 1400.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "203",
-                "0",
-                "254",
-                "151",
-                "0"
-            ],
-            "datarange": [
-                "1300.0",
-                "1400.0"
-            ]
-        }
+        "expression": "( ( 1300.0 <= [pixel] ) AND ( [pixel] < 1400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    203,
+                    0,
+                    254,
+                    151,
+                    0
+                ],
+                "datarange": [
+                    1300.0,
+                    1400.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1400.0 - 1500.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1400.0 <= [pixel] AND [pixel] < 1500.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "151",
-                "0",
-                "",
-                "254",
-                "99",
-                "0"
-            ],
-            "datarange": [
-                "1400.0",
-                "1500.0"
-            ]
-        }
+        "expression": "( ( 1400.0 <= [pixel] ) AND ( [pixel] < 1500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    151,
+                    0,
+                    254,
+                    99,
+                    0
+                ],
+                "datarange": [
+                    1400.0,
+                    1500.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1500.0 - 1600.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1500.0 <= [pixel] AND [pixel] < 1600.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "99",
-                "0",
-                "254",
-                "51",
-                "0"
-            ],
-            "datarange": [
-                "1500.0",
-                "1600.0"
-            ]
-        }
+        "expression": "( ( 1500.0 <= [pixel] ) AND ( [pixel] < 1600.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    99,
+                    0,
+                    254,
+                    51,
+                    0
+                ],
+                "datarange": [
+                    1500.0,
+                    1600.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1600.0 - 1700.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1600.0 <= [pixel] AND [pixel] < 1700.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "51",
-                "0",
-                "254",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1600.0",
-                "1700.0"
-            ]
-        }
+        "expression": "( ( 1600.0 <= [pixel] ) AND ( [pixel] < 1700.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    51,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1600.0,
+                    1700.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1700.0 - 1800.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1700.0 <= [pixel] AND [pixel] < 1800.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "0",
-                "0",
-                "",
-                "210",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1700.0",
-                "1800.0"
-            ]
-        }
+        "expression": "( ( 1700.0 <= [pixel] ) AND ( [pixel] < 1800.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    210,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1700.0,
+                    1800.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1800.0 - 1900.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1800.0 <= [pixel] AND [pixel] < 1900.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "210",
-                "0",
-                "0",
-                "167",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1800.0",
-                "1900.0"
-            ]
-        }
+        "expression": "( ( 1800.0 <= [pixel] ) AND ( [pixel] < 1900.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    210,
+                    0,
+                    0,
+                    167,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1800.0,
+                    1900.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1900.0 - 2000.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(1900.0 <= [pixel] AND [pixel] < 2000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "167",
-                "0",
-                "0",
-                "124",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1900.0",
-                "2000.0"
-            ]
-        }
+        "expression": "( ( 1900.0 <= [pixel] ) AND ( [pixel] < 2000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    167,
+                    0,
+                    0,
+                    124,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1900.0,
+                    2000.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2000.0 - 4000.0",
         "group": "SEA_DEPTH-DEEP",
-        "expression": "(2000.0 <= [pixel] AND [pixel] <= 4000.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "124",
-                "0",
-                "0",
-                "124",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "2000.0",
-                "4000.0"
-            ]
-        }
+        "expression": "( ( 2000.0 <= [pixel] ) AND ( [pixel] <= 4000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    124,
+                    0,
+                    0,
+                    124,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2000.0,
+                    4000.0
+                ]
+            }
+        ]
     }
 ]

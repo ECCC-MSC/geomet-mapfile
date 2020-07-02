@@ -3,84 +3,92 @@
         "__type__": "class",
         "name": "0 15 - Convection peu probable",
         "group": "KINDEX_FR-LINEAR",
-        "expression": "([pixel] >= 0 AND [pixel] <15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "247",
-                "247",
-                "247",
-                "5",
-                "113",
-                "176"
-            ],
-            "datarange": [
-                "0.0",
-                "15.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    247,
+                    247,
+                    247,
+                    5,
+                    113,
+                    176
+                ],
+                "datarange": [
+                    0.0,
+                    15.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 25 - Faible potentiel convectif",
         "group": "KINDEX_FR-LINEAR",
-        "expression": "([pixel] >= 15 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "5",
-                "113",
-                "176",
-                "146",
-                "197",
-                "222"
-            ],
-            "datarange": [
-                "15.0",
-                "25.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    5,
+                    113,
+                    176,
+                    146,
+                    197,
+                    222
+                ],
+                "datarange": [
+                    15.0,
+                    25.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "25 40 - Potentiel convectif modéré",
+        "name": "25 40 - Potentiel convectif mod\u00e9r\u00e9",
         "group": "KINDEX_FR-LINEAR",
-        "expression": "([pixel] >= 25 AND [pixel] < 40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "146",
-                "197",
-                "222",
-                "244",
-                "165",
-                "130"
-            ],
-            "datarange": [
-                "25.0",
-                "40.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    146,
+                    197,
+                    222,
+                    244,
+                    165,
+                    130
+                ],
+                "datarange": [
+                    25.0,
+                    40.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "> 40 - Potentiel convectif élevé",
+        "name": "> 40 - Potentiel convectif \u00e9lev\u00e9",
         "group": "KINDEX_FR-LINEAR",
-        "expression": "([pixel] >= 40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "244",
-                "165",
-                "130",
-                "202",
-                "0",
-                "32"
-            ],
-            "datarange": [
-                "40.0",
-                "100.00"
-            ]
-        }
+        "expression": "( [pixel] >= 40 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    244,
+                    165,
+                    130,
+                    202,
+                    0,
+                    32
+                ],
+                "datarange": [
+                    40.0,
+                    100.0
+                ]
+            }
+        ]
     }
 ]

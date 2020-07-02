@@ -3,294 +3,322 @@
         "__type__": "class",
         "name": "10.50 - 17.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(4 <= [pixel] AND [pixel] < 10.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "204",
-                "255",
-                "000",
-                "153",
-                "255"
-            ],
-            "datarange": [
-                "4",
-                "10.5"
-            ]
-        }
+        "expression": "( ( 4 <= [pixel] ) AND ( [pixel] < 10.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    204,
+                    255,
+                    0,
+                    153,
+                    255
+                ],
+                "datarange": [
+                    4,
+                    10.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "17.00 - 21.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(10.5 <= [pixel] AND [pixel] < 14.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "255",
-                "000",
-                "255",
-                "102"
-            ],
-            "datarange": [
-                "10.5",
-                "14.5"
-            ]
-        }
+        "expression": "( ( 10.5 <= [pixel] ) AND ( [pixel] < 14.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    255,
+                    0,
+                    255,
+                    102
+                ],
+                "datarange": [
+                    10.5,
+                    14.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "21.00 - 25.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(14.5 <= [pixel] AND [pixel] < 19.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "102",
-                "000",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "14.5",
-                "19.25"
-            ]
-        }
+        "expression": "( ( 14.5 <= [pixel] ) AND ( [pixel] < 19.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    102,
+                    0,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    14.5,
+                    19.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25.75 - 29.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(19.25 <= [pixel] AND [pixel] < 23.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "204",
-                "000",
-                "000",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "19.25",
-                "23.25"
-            ]
-        }
+        "expression": "( ( 19.25 <= [pixel] ) AND ( [pixel] < 23.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    0,
+                    0,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    19.25,
+                    23.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "29.75 - 32.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(23.25 <= [pixel] AND [pixel] < 26)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "000",
-                "000",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "23.25",
-                "26"
-            ]
-        }
+        "expression": "( ( 23.25 <= [pixel] ) AND ( [pixel] < 26 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    0,
+                    0,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    23.25,
+                    26
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "32.50 - 36.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(26 <= [pixel] AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "102",
-                "000",
-                "255",
-                "255",
-                "051"
-            ],
-            "datarange": [
-                "26",
-                "30"
-            ]
-        }
+        "expression": "( ( 26 <= [pixel] ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    102,
+                    0,
+                    255,
+                    255,
+                    51
+                ],
+                "datarange": [
+                    26,
+                    30
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "36.50 - 39.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(30 <= [pixel] AND [pixel] < 32.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "051",
-                "255",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "30",
-                "32.75"
-            ]
-        }
+        "expression": "( ( 30 <= [pixel] ) AND ( [pixel] < 32.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    51,
+                    255,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    30,
+                    32.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "39.25 - 43.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(32.75 <= [pixel] AND [pixel] < 36.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "204",
-                "000",
-                "255",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "32.75",
-                "36.5"
-            ]
-        }
+        "expression": "( ( 32.75 <= [pixel] ) AND ( [pixel] < 36.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    204,
+                    0,
+                    255,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    32.75,
+                    36.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "43.00 - 45.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(36.5 <= [pixel] AND [pixel] < 39.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "153",
-                "000",
-                "255",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "36.5",
-                "39.25"
-            ]
-        }
+        "expression": "( ( 36.5 <= [pixel] ) AND ( [pixel] < 39.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    153,
+                    0,
+                    255,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    36.5,
+                    39.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45.75 - 48.00 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(39.25 <= [pixel] AND [pixel] < 41.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "102",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "39.25",
-                "41.5"
-            ]
-        }
+        "expression": "( ( 39.25 <= [pixel] ) AND ( [pixel] < 41.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    102,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    39.25,
+                    41.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "48.00 - 51.75 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(41.5 <= [pixel] AND [pixel] < 45.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "255",
-                "002",
-                "153"
-            ],
-            "datarange": [
-                "41.5",
-                "45.25"
-            ]
-        }
+        "expression": "( ( 41.5 <= [pixel] ) AND ( [pixel] < 45.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    2,
+                    153
+                ],
+                "datarange": [
+                    41.5,
+                    45.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "51.75 - 54.50 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(45.25 <= [pixel] AND [pixel] < 48)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "002",
-                "153",
-                "153",
-                "051",
-                "204"
-            ],
-            "datarange": [
-                "45.25",
-                "48"
-            ]
-        }
+        "expression": "( ( 45.25 <= [pixel] ) AND ( [pixel] < 48 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    2,
+                    153,
+                    153,
+                    51,
+                    204
+                ],
+                "datarange": [
+                    45.25,
+                    48
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "54.50 - 61.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(48 <= [pixel] AND [pixel] < 54.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "051",
-                "204",
-                "102",
-                "000",
-                "153"
-            ],
-            "datarange": [
-                "48",
-                "54.75"
-            ]
-        }
+        "expression": "( ( 48 <= [pixel] ) AND ( [pixel] < 54.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    51,
+                    204,
+                    102,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    48,
+                    54.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 61.25 (dBZ)",
         "group": "RADARURPREFLECTS14-LINEAR",
-        "expression": "(54.75 <= [pixel] AND [pixel] <= 58.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "102",
-                "000",
-                "153",
-                "051",
-                "000",
-                "077"
-            ],
-            "datarange": [
-                "54.75",
-                "58.75"
-            ]
-        }
+        "expression": "( ( 54.75 <= [pixel] ) AND ( [pixel] <= 58.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    0,
+                    153,
+                    51,
+                    0,
+                    77
+                ],
+                "datarange": [
+                    54.75,
+                    58.75
+                ]
+            }
+        ]
     }
 ]

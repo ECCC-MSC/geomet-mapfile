@@ -3,70 +3,80 @@
         "__type__": "class",
         "name": "0.00 - 0.10",
         "group": "SEA_ICECONC-CIS",
-        "expression": "(0.00 <= [pixel] AND [pixel] < 0.10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "250",
-                "245",
-                "255"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    250,
+                    245,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.10 - 0.35",
         "group": "SEA_ICECONC-CIS",
-        "expression": "(0.10 <= [pixel] AND [pixel] < 0.35)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "133",
-                "243",
-                "060"
-            ]
-        }
+        "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    133,
+                    243,
+                    60
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.35 - 0.65",
         "group": "SEA_ICECONC-CIS",
-        "expression": "(0.35 <= [pixel] AND [pixel] < 0.65)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "227",
-                "227",
-                "027"
-            ]
-        }
+        "expression": "( ( 0.35 <= [pixel] ) AND ( [pixel] < 0.65 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    227,
+                    227,
+                    27
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.65 - 0.85",
         "group": "SEA_ICECONC-CIS",
-        "expression": "(0.65 <= [pixel] AND [pixel] < 0.85)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "255"
-            ]
-        }
+        "expression": "( ( 0.65 <= [pixel] ) AND ( [pixel] < 0.85 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.85 - 1.00",
         "group": "SEA_ICECONC-CIS",
-        "expression": "(0.85 <= [pixel] AND [pixel] <= 1.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "253",
-                "000",
-                "000"
-            ]
-        }
+        "expression": "( ( 0.85 <= [pixel] ) AND ( [pixel] <= 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    253,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

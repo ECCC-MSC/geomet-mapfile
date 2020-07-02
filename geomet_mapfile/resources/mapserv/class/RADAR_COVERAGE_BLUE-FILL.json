@@ -1,22 +1,22 @@
-[
-    {
-        "__type__": "class",
-        "name": "Radar coverage/Couverture radar",
-        "group": "RADAR_COVERAGE_BLUE-FILL",
-        "style": {
+{
+    "__type__": "class",
+    "name": "Radar coverage/Couverture radar",
+    "group": "RADAR_COVERAGE_BLUE-FILL",
+    "styles": [
+        {
             "__type__": "style",
             "outlinecolor": [
-                "0",
-                "0",
-                "139"
+                0,
+                0,
+                139
             ],
             "color": [
-                "0",
-                "0",
-                "255"
+                0,
+                0,
+                255
             ],
-            "width": "2",
-            "opacity": "50"
+            "width": 2,
+            "opacity": 50
         }
-    }
-]
+    ]
+}

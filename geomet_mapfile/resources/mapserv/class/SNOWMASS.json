@@ -3,140 +3,160 @@
         "__type__": "class",
         "name": "1 - 5",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 1 AND [pixel] < 5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 - 10",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 5 AND [pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 - 25",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 10 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "40",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    40,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 - 50",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 25 AND [pixel] < 50)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "13",
-                "254",
-                "241"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    13,
+                    254,
+                    241
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 - 75",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 50 AND [pixel] < 75)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "106",
-                "253",
-                "148"
-            ]
-        }
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    106,
+                    253,
+                    148
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75 - 100",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 75 AND [pixel] < 100)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "199",
-                "254",
-                "55"
-            ]
-        }
+        "expression": "( ( [pixel] >= 75 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    199,
+                    254,
+                    55
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100 - 500",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 100 AND [pixel] < 500)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "217",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    217,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "500 - 1000",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 500 AND [pixel] < 1000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "125",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 500 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    125,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000 - 5000",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 1000 AND [pixel] < 5000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "32",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 5000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    32,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": " >= 5000",
         "group": "SNOWMASS",
-        "expression": "([pixel] >= 5000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "203",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [pixel] >= 5000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    203,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

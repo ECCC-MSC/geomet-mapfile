@@ -3,309 +3,414 @@
         "__type__": "class",
         "name": "<= 0",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] <= -273)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": "-273 -250"
-        }
+        "expression": "( [pixel] <= 0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    -50,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0 - 2",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -273 AND [pixel] < -271)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "169"
-            ],
-            "datarange": "-273 -271"
-        }
+        "expression": "( ( [pixel] > 0 ) AND ( [pixel] <= 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    169
+                ],
+                "datarange": [
+                    0,
+                    2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2 - 4",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -271 AND [pixel] < -269)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "169",
-                "0",
-                "0",
-                "211"
-            ],
-            "datarange": "-271 -269"
-        }
+        "expression": "( ( [pixel] > 2 ) AND ( [pixel] <= 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    169,
+                    0,
+                    0,
+                    211
+                ],
+                "datarange": [
+                    2,
+                    4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4 - 6",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -269 AND [pixel] < -267)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "211",
-                "0",
-                "0",
-                "254"
-            ],
-            "datarange": " -269 -267"
-        }
+        "expression": "( ( [pixel] > 4 ) AND ( [pixel] <= 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    211,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    4,
+                    6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6 - 8",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -267 AND [pixel] < -265)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "254",
-                "0",
-                "84",
-                "254"
-            ],
-            "datarange": "-267 -265"
-        }
+        "expression": "( ( [pixel] > 6 ) AND ( [pixel] <= 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    84,
+                    254
+                ],
+                "datarange": [
+                    6,
+                    8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8 - 10",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -265 AND [pixel] < -263)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "84",
-                "254",
-                "0",
-                "168",
-                "254"
-            ],
-            "datarange": "-265 -263"
-        }
+        "expression": "( ( [pixel] > 8 ) AND ( [pixel] <= 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    84,
+                    254,
+                    0,
+                    168,
+                    254
+                ],
+                "datarange": [
+                    8,
+                    10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 -12",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= 0.000001 AND [pixel] < 0.003751)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "168",
-                "254",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": [
-                "0.000001",
-                "0.003751"
-            ]
-        }
+        "expression": "( ( [pixel] > 10 ) AND ( [pixel] <= 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    168,
+                    254,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    10,
+                    12
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "12 -14",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -263 AND [pixel] < -261)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "85",
-                "253",
-                "170"
-            ],
-            "datarange": "-263 -261"
-        }
+        "expression": "( ( [pixel] > 12 ) AND ( [pixel] <= 14 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    85,
+                    253,
+                    170
+                ],
+                "datarange": [
+                    12,
+                    14
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "14 - 16",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -261 AND [pixel] < -259)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "85",
-                "253",
-                "170",
-                "170",
-                "254",
-                "85"
-            ],
-            "datarange": " -261 -259"
-        }
+        "expression": "( ( [pixel] > 14 ) AND ( [pixel] <= 16 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    85,
+                    253,
+                    170,
+                    170,
+                    254,
+                    85
+                ],
+                "datarange": [
+                    14,
+                    16
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "16 - 18",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -259 AND [pixel] < -257)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "170",
-                "254",
-                "85",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": "-259 -257"
-        }
+        "expression": "( ( [pixel] > 16 ) AND ( [pixel] <= 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    170,
+                    254,
+                    85,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    16,
+                    18
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "18 - 20",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -257 AND [pixel] < -255)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "170",
-                "0"
-            ],
-            "datarange": "-257 -255"
-        }
+        "expression": "( ( [pixel] > 18 ) AND ( [pixel] <= 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    170,
+                    0
+                ],
+                "datarange": [
+                    18,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 22",
+        "group": "DEWPOINTDEP",
+        "expression": "( ( [pixel] > 20 ) AND ( [pixel] <= 22 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    170,
+                    0,
+                    254,
+                    85,
+                    0
+                ],
+                "datarange": [
+                    20,
+                    22
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "22 - 24",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -255 AND [pixel] < -253)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "170",
-                "0",
-                "254",
-                "85",
-                "0"
-            ],
-            "datarange": "-255 -253"
-        }
+        "expression": "( ( [pixel] > 22 ) AND ( [pixel] <= 24 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    85,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    22,
+                    24
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "24 - 26",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -253 AND [pixel] < -251)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "85",
-                "0",
-                "254",
-                "0",
-                "0"
-            ],
-            "datarange": "-253 -251"
-        }
+        "expression": "( ( [pixel] > 24 ) AND ( [pixel] <= 26 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    211,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    24,
+                    26
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "26 - 28",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -251 AND [pixel] < -249)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "0",
-                "0",
-                "211",
-                "0",
-                "0"
-            ],
-            "datarange": " -251 -249"
-        }
+        "expression": "( ( [pixel] > 26 ) AND ( [pixel] <= 28 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    211,
+                    0,
+                    0,
+                    169,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    26,
+                    28
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "28 - 30",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -249 AND [pixel] < -247)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "211",
-                "0",
-                "0",
-                "169",
-                "0",
-                "0"
-            ],
-            "datarange": "-249 -247"
-        }
+        "expression": "( ( [pixel] > 28 ) AND ( [pixel] <= 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    169,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    28,
+                    30
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 - 32",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -247 AND [pixel] < -245)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "169",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": "-247 -245"
-        }
+        "expression": "( ( [pixel] > 30 ) AND ( [pixel] <= 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    85,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    30,
+                    32
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": ">= 32",
+        "name": "> 32",
         "group": "DEWPOINTDEP",
-        "expression": "([pixel] >= -245)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": "-245 -200"
-        }
+        "expression": "( [pixel] > 32 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    85,
+                    0,
+                    0,
+                    85,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    32,
+                    60
+                ]
+            }
+        ]
     }
 ]

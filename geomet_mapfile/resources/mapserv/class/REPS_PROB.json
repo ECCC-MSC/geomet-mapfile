@@ -3,141 +3,161 @@
         "__type__": "class",
         "name": "0",
         "group": "REPS_PROB",
-        "expression": "([pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "0"
-            ],
-            "opacity": "0"
-        }
+        "expression": "( [pixel] < 10 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "opacity": 0
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 20",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 10 AND [pixel] < 20)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 30",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 20 AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "206"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    206
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 40",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 30 AND [pixel] < 40)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "63",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 50",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 40 AND [pixel] < 50)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "221",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    221,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 60",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 50 AND [pixel] < 60)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "254",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    254,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 70",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 60 AND [pixel] < 70)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "223",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 60 ) AND ( [pixel] < 70 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    223,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "70 80",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 70 AND [pixel] < 80)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "63",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 70 ) AND ( [pixel] < 80 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    63,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80 90",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 80 AND [pixel] < 90)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "206",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 80 ) AND ( [pixel] < 90 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    206,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 100",
         "group": "REPS_PROB",
-        "expression": "([pixel] >= 90)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [pixel] >= 90 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

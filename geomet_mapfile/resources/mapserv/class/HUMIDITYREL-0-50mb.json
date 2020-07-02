@@ -3,280 +3,320 @@
         "__type__": "class",
         "name": "0.0 - 0.1",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.0 <= [pixel]  AND [pixel] < 0.1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "121"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    121
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.1 - 0.2",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.1 <= [pixel]  AND [pixel] < 0.2)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "171"
-            ]
-        }
+        "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    171
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.2 - 0.3",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.2 <= [pixel]  AND [pixel] < 0.3)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "216"
-            ]
-        }
+        "expression": "( ( 0.2 <= [pixel] ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    216
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.3 - 0.4",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.3 <= [pixel]  AND [pixel] < 0.4)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "9",
-                "254"
-            ]
-        }
+        "expression": "( ( 0.3 <= [pixel] ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    9,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.4 - 0.5",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.4 <= [pixel]  AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "76",
-                "254"
-            ]
-        }
+        "expression": "( ( 0.4 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    76,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 0.6",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.5 <= [pixel]  AND [pixel] < 0.6)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "143",
-                "254"
-            ]
-        }
+        "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    143,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.6 - 0.7",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.6 <= [pixel]  AND [pixel] < 0.7)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "209",
-                "254"
-            ]
-        }
+        "expression": "( ( 0.6 <= [pixel] ) AND ( [pixel] < 0.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    209,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.7 - 0.8",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.7 <= [pixel]  AND [pixel] < 0.8)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "18",
-                "253",
-                "236"
-            ]
-        }
+        "expression": "( ( 0.7 <= [pixel] ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    18,
+                    253,
+                    236
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.8 - 0.9",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.8 <= [pixel]  AND [pixel] < 0.9)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "72",
-                "253",
-                "182"
-            ]
-        }
+        "expression": "( ( 0.8 <= [pixel] ) AND ( [pixel] < 0.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    72,
+                    253,
+                    182
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.9 - 1.0",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(0.9 <= [pixel]  AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "126",
-                "253",
-                "128"
-            ]
-        }
+        "expression": "( ( 0.9 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    126,
+                    253,
+                    128
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.1",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.0 <= [pixel]  AND [pixel] < 1.1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "179",
-                "254",
-                "75"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    179,
+                    254,
+                    75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.1 - 1.2",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.1 <= [pixel]  AND [pixel] < 1.2)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "233",
-                "254",
-                "21"
-            ]
-        }
+        "expression": "( ( 1.1 <= [pixel] ) AND ( [pixel] < 1.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    233,
+                    254,
+                    21
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.2 - 1.3",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.2 <= [pixel]  AND [pixel] < 1.3)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "222",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.2 <= [pixel] ) AND ( [pixel] < 1.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    222,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.3 - 1.4",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.3 <= [pixel]  AND [pixel] < 1.4)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "169",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.3 <= [pixel] ) AND ( [pixel] < 1.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    169,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.4 - 1.5",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.4 <= [pixel]  AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "115",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.4 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    115,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 1.6",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.5 <= [pixel]  AND [pixel] < 1.6)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "61",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 1.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    61,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.6 - 1.7",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.6 <= [pixel]  AND [pixel] < 1.7)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "8",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.6 <= [pixel] ) AND ( [pixel] < 1.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    8,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.7 - 1.8",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.7 <= [pixel]  AND [pixel] < 1.8)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "216",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.7 <= [pixel] ) AND ( [pixel] < 1.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    216,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.8 - 1.9",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.8 <= [pixel]  AND [pixel] < 1.9)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "171",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( 1.8 <= [pixel] ) AND ( [pixel] < 1.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    171,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.9 - 2.0",
         "group": "HUMIDITYREL_0_50",
-        "expression": "(1.9 <= [pixel])",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( 1.9 <= [pixel] )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]
