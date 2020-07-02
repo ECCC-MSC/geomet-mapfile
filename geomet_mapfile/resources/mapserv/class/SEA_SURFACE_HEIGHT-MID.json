@@ -3,438 +3,506 @@
         "__type__": "class",
         "name": "-3.0 - -2.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-3.0 <= [pixel] AND [pixel] < -2.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "124",
-                "0",
-                "0",
-                "124"
-            ],
-            "datarange": "-3.0 -2.0"
-        }
+        "expression": "( ( -3.0 <= [pixel] ) AND ( [pixel] < -2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    124,
+                    0,
+                    0,
+                    124
+                ],
+                "datarange": [
+                    -3.0,
+                    -2.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-2.0 - -1.8",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-2.0 <= [pixel] AND [pixel] < -1.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "124",
-                "0",
-                "0",
-                "167"
-            ],
-            "datarange": "-2.0 -1.8"
-        }
+        "expression": "( ( -2.0 <= [pixel] ) AND ( [pixel] < -1.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    124,
+                    0,
+                    0,
+                    167
+                ],
+                "datarange": [
+                    -2.0,
+                    -1.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.8 - -1.6",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-1.8 <= [pixel] AND [pixel] < -1.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "167",
-                "0",
-                "0",
-                "210"
-            ],
-            "datarange": "-1.8 -1.6"
-        }
+        "expression": "( ( -1.8 <= [pixel] ) AND ( [pixel] < -1.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    167,
+                    0,
+                    0,
+                    210
+                ],
+                "datarange": [
+                    -1.8,
+                    -1.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.6 - -1.4",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-1.6 <= [pixel] AND [pixel] < -1.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "210",
-                "0",
-                "0",
-                "255"
-            ],
-            "datarange": "-1.6 -1.4"
-        }
+        "expression": "( ( -1.6 <= [pixel] ) AND ( [pixel] < -1.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    210,
+                    0,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    -1.6,
+                    -1.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.4 - -1.2",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-1.4 <= [pixel] AND [pixel] < -1.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "255",
-                "",
-                "0",
-                "64",
-                "255"
-            ],
-            "datarange": "-1.4 -1.2"
-        }
+        "expression": "( ( -1.4 <= [pixel] ) AND ( [pixel] < -1.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    64,
+                    255
+                ],
+                "datarange": [
+                    -1.4,
+                    -1.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.2 - -1.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-1.2 <= [pixel] AND [pixel] < -1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "64",
-                "255",
-                "0",
-                "128",
-                "255"
-            ],
-            "datarange": "-1.2 -1.0"
-        }
+        "expression": "( ( -1.2 <= [pixel] ) AND ( [pixel] < -1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    64,
+                    255,
+                    0,
+                    128,
+                    255
+                ],
+                "datarange": [
+                    -1.2,
+                    -1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.0 - -0.8",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-1.0 <= [pixel] AND [pixel] < -0.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "128",
-                "255",
-                "0",
-                "188",
-                "255"
-            ],
-            "datarange": "-1.0 -0.8"
-        }
+        "expression": "( ( -1.0 <= [pixel] ) AND ( [pixel] < -0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    255,
+                    0,
+                    188,
+                    255
+                ],
+                "datarange": [
+                    -1.0,
+                    -0.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-0.8 - -0.6",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-0.8 <= [pixel] AND [pixel] < -0.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "188",
-                "255",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": "-0.8 -0.6"
-        }
+        "expression": "( ( -0.8 <= [pixel] ) AND ( [pixel] < -0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    188,
+                    255,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    -0.8,
+                    -0.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-0.6 - -0.4",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-0.6 <= [pixel] AND [pixel] < -0.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "51",
-                "",
-                "253",
-                "203"
-            ],
-            "datarange": "-0.6 -0.4"
-        }
+        "expression": "( ( -0.6 <= [pixel] ) AND ( [pixel] < -0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    -0.6,
+                    -0.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-0.4 - -0.2",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-0.4 <= [pixel] AND [pixel] < -0.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "",
-                "253",
-                "203",
-                "103",
-                "253",
-                "151"
-            ],
-            "datarange": "-0.4 -0.2"
-        }
+        "expression": "( ( -0.4 <= [pixel] ) AND ( [pixel] < -0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    103,
+                    253,
+                    151
+                ],
+                "datarange": [
+                    -0.4,
+                    -0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-0.2 - 0.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(-0.2 <= [pixel] AND [pixel] < 0.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "103",
-                "253",
-                "151",
-                "155",
-                "254",
-                "99"
-            ],
-            "datarange": [
-                "-0.2",
-                "0.0"
-            ]
-        }
+        "expression": "( ( -0.2 <= [pixel] ) AND ( [pixel] < 0.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    103,
+                    253,
+                    151,
+                    155,
+                    254,
+                    99
+                ],
+                "datarange": [
+                    -0.2,
+                    0.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.0 - 0.2",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(0.0 <= [pixel] AND [pixel] < 0.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "155",
-                "254",
-                "99",
-                "",
-                "203",
-                "254",
-                "51"
-            ],
-            "datarange": [
-                "0.0",
-                "0.2"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    155,
+                    254,
+                    99,
+                    203,
+                    254,
+                    51
+                ],
+                "datarange": [
+                    0.0,
+                    0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.2 - 0.4",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(0.2 <= [pixel] AND [pixel] < 0.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "203",
-                "254",
-                "51",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "0.2",
-                "0.4"
-            ]
-        }
+        "expression": "( ( 0.2 <= [pixel] ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    203,
+                    254,
+                    51,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    0.2,
+                    0.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.4 - 0.6",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(0.4 <= [pixel] AND [pixel] < 0.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "203",
-                "0"
-            ],
-            "datarange": [
-                "0.4",
-                "0.6"
-            ]
-        }
+        "expression": "( ( 0.4 <= [pixel] ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    203,
+                    0
+                ],
+                "datarange": [
+                    0.4,
+                    0.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.6 - 0.8",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(0.6 <= [pixel] AND [pixel] < 0.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "203",
-                "0",
-                "254",
-                "151",
-                "0"
-            ],
-            "datarange": [
-                "0.6",
-                "0.8"
-            ]
-        }
+        "expression": "( ( 0.6 <= [pixel] ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    203,
+                    0,
+                    254,
+                    151,
+                    0
+                ],
+                "datarange": [
+                    0.6,
+                    0.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.8 - 1.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(0.8 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "151",
-                "0",
-                "",
-                "254",
-                "99",
-                "0"
-            ],
-            "datarange": [
-                "0.8",
-                "1.0"
-            ]
-        }
+        "expression": "( ( 0.8 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    151,
+                    0,
+                    254,
+                    99,
+                    0
+                ],
+                "datarange": [
+                    0.8,
+                    1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.2",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 1.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "99",
-                "0",
-                "254",
-                "51",
-                "0"
-            ],
-            "datarange": [
-                "1.0",
-                "1.2"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    99,
+                    0,
+                    254,
+                    51,
+                    0
+                ],
+                "datarange": [
+                    1.0,
+                    1.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.2 - 1.4",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(1.2 <= [pixel] AND [pixel] < 1.4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "51",
-                "0",
-                "254",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1.2",
-                "1.4"
-            ]
-        }
+        "expression": "( ( 1.2 <= [pixel] ) AND ( [pixel] < 1.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    51,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1.2,
+                    1.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.4 - 1.6",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(1.4 <= [pixel] AND [pixel] < 1.6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "0",
-                "0",
-                "",
-                "210",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1.4",
-                "1.6"
-            ]
-        }
+        "expression": "( ( 1.4 <= [pixel] ) AND ( [pixel] < 1.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    210,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1.4,
+                    1.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.6 - 1.8",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(1.6 <= [pixel] AND [pixel] < 1.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "210",
-                "0",
-                "0",
-                "167",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1.6",
-                "1.8"
-            ]
-        }
+        "expression": "( ( 1.6 <= [pixel] ) AND ( [pixel] < 1.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    210,
+                    0,
+                    0,
+                    167,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1.6,
+                    1.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.8 - 2.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(1.8 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "167",
-                "0",
-                "0",
-                "124",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "1.8",
-                "2.0"
-            ]
-        }
+        "expression": "( ( 1.8 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    167,
+                    0,
+                    0,
+                    124,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1.8,
+                    2.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 3.0",
         "group": "SEA_SURFACE_HEIGHT-MID",
-        "expression": "(2.0 <= [pixel] AND [pixel] <= 3.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "124",
-                "0",
-                "0",
-                "124",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "2.0",
-                "3.0"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] <= 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    124,
+                    0,
+                    0,
+                    124,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2.0,
+                    3.0
+                ]
+            }
+        ]
     }
 ]

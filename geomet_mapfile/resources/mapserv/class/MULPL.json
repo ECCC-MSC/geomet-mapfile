@@ -3,196 +3,224 @@
         "__type__": "class",
         "name": "50 100",
         "group": "MULPL",
-        "expression": "([pixel] >=50 AND [pixel] < 100)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100 200",
         "group": "MULPL",
-        "expression": "([pixel] >= 100 AND [pixel] < 200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "255",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    255,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "200 300",
         "group": "MULPL",
-        "expression": "([pixel] >= 200 AND [pixel] < 300)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 200 ) AND ( [pixel] < 300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "300 400",
         "group": "MULPL",
-        "expression": "([pixel] >= 300 AND [pixel] < 400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "130",
-                "225"
-            ]
-        }
+        "expression": "( ( [pixel] >= 300 ) AND ( [pixel] < 400 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    130,
+                    225
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "400 500",
         "group": "MULPL",
-        "expression": "([pixel] >= 400 AND [pixel] < 500)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "000",
-                "200"
-            ]
-        }
+        "expression": "( ( [pixel] >= 400 ) AND ( [pixel] < 500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    200
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "500 1000",
         "group": "MULPL",
-        "expression": "([pixel] >= 500 AND [pixel] < 1000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "180",
-                "000",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 500 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    180,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000 1500",
         "group": "MULPL",
-        "expression": "([pixel] >= 1000 AND [pixel] < 1500)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "000",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 1500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1500 2000",
         "group": "MULPL",
-        "expression": "([pixel] >= 1500 AND [pixel] < 2000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "128",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1500 ) AND ( [pixel] < 2000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    128,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2000 2500",
         "group": "MULPL",
-        "expression": "([pixel] >= 2000 AND [pixel] < 2500)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "240",
-                "160",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2000 ) AND ( [pixel] < 2500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    240,
+                    160,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2500 3000",
         "group": "MULPL",
-        "expression": "([pixel] >= 2500 AND [pixel] < 3000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "240",
-                "220",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2500 ) AND ( [pixel] < 3000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    240,
+                    220,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3000 4000",
         "group": "MULPL",
-        "expression": "([pixel] >= 3000 AND [pixel] < 4000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3000 ) AND ( [pixel] < 4000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4000 5000",
         "group": "MULPL",
-        "expression": "([pixel] >= 4000 AND [pixel] < 5000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "255",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4000 ) AND ( [pixel] < 5000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5000 6000",
         "group": "MULPL",
-        "expression": "([pixel] >= 5000 AND [pixel] < 6000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "128",
-                "000"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5000 ) AND ( [pixel] < 6000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    128,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6000 +",
         "group": "MULPL",
-        "expression": "([pixel] >= 6000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "153",
-                "153"
-            ]
-        }
+        "expression": "( [pixel] >= 6000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    153,
+                    153
+                ]
+            }
+        ]
     }
 ]

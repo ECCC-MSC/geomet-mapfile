@@ -1,0 +1,508 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0 - 700000.00 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 700000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    0.0,
+                    700000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "700000 - 1031250 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 700000 <= [pixel] ) AND ( [pixel] < 1031250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    255,
+                    0,
+                    150
+                ],
+                "datarange": [
+                    700000,
+                    1031250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1031250 - 1362500 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 1031250 <= [pixel] ) AND ( [pixel] < 1362500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    150,
+                    200,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    1031250,
+                    1362500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1362500 - 1693750 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 1362500 <= [pixel] ) AND ( [pixel] < 1693750 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    0,
+                    255,
+                    100,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    1362500,
+                    1693750
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1693750 - 2025000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 1693750 <= [pixel] ) AND ( [pixel] < 2025000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    100,
+                    0,
+                    255,
+                    20,
+                    100,
+                    255
+                ],
+                "datarange": [
+                    1693750,
+                    2025000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2025000 - 2356250 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 2025000 <= [pixel] ) AND ( [pixel] < 2356250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    20,
+                    100,
+                    255,
+                    20,
+                    180,
+                    255
+                ],
+                "datarange": [
+                    2025000,
+                    2356250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2356250 - 2687500 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 2356250 <= [pixel] ) AND ( [pixel] < 2687500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    20,
+                    180,
+                    255,
+                    0,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    2356250,
+                    2687500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2687500 - 3018750 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 2687500 <= [pixel] ) AND ( [pixel] < 3018750 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    255,
+                    20,
+                    255,
+                    200
+                ],
+                "datarange": [
+                    2687500,
+                    3018750
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3018750 - 3350000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 3018750 <= [pixel] ) AND ( [pixel] < 3350000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    20,
+                    255,
+                    200,
+                    0,
+                    255,
+                    150
+                ],
+                "datarange": [
+                    3018750,
+                    3350000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3350000 - 3681250 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 3350000 <= [pixel] ) AND ( [pixel] < 3681250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    150,
+                    0,
+                    255,
+                    100
+                ],
+                "datarange": [
+                    3350000,
+                    3681250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3681250 - 4012500 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 3681250 <= [pixel] ) AND ( [pixel] < 4012500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    100,
+                    100,
+                    255,
+                    100
+                ],
+                "datarange": [
+                    3681250,
+                    4012500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4012500 - 4343750 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 4012500 <= [pixel] ) AND ( [pixel] < 4343750 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    100,
+                    255,
+                    100,
+                    100,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    4012500,
+                    4343750
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4343750 - 4675000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 4343750 <= [pixel] ) AND ( [pixel] < 4675000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    100,
+                    255,
+                    0,
+                    200,
+                    255,
+                    20
+                ],
+                "datarange": [
+                    4343750,
+                    4675000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4675000 - 5006250 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 4675000 <= [pixel] ) AND ( [pixel] < 5006250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    255,
+                    20,
+                    200,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    4675000,
+                    5006250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5006250 - 5337500 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 5006250 <= [pixel] ) AND ( [pixel] < 5337500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    255,
+                    0,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    5006250,
+                    5337500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5337500 - 5668750 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 5337500 <= [pixel] ) AND ( [pixel] < 5668750 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    255,
+                    230,
+                    100
+                ],
+                "datarange": [
+                    5337500,
+                    5668750
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5668750 - 6000000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 5668750 <= [pixel] ) AND ( [pixel] < 6000000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    230,
+                    100,
+                    255,
+                    150,
+                    0
+                ],
+                "datarange": [
+                    5668750,
+                    6000000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6000000 - 6331250 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 6000000 <= [pixel] ) AND ( [pixel] < 6331250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    150,
+                    0,
+                    255,
+                    110,
+                    20
+                ],
+                "datarange": [
+                    6000000,
+                    6331250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6331250 - 6662500 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 6331250 <= [pixel] ) AND ( [pixel] < 6662500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    110,
+                    20,
+                    255,
+                    120,
+                    100
+                ],
+                "datarange": [
+                    6331250,
+                    6662500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6662500 - 6993750 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 6662500 <= [pixel] ) AND ( [pixel] < 6993750 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    120,
+                    100,
+                    255,
+                    150,
+                    150
+                ],
+                "datarange": [
+                    6662500,
+                    6993750
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6993750 - 7325000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( ( 6993750 <= [pixel] ) AND ( [pixel] < 7325000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    150,
+                    150,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    6993750,
+                    7325000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 7325000 (W/m^2)",
+        "group": "LONGWAVEFLUX-LINEAR",
+        "expression": "( [pixel] >= 7325000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    7325000,
+                    10000000
+                ]
+            }
+        ]
+    }
+]

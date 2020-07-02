@@ -3,280 +3,320 @@
         "__type__": "class",
         "name": "00 5 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 0.00 AND [pixel] < 5.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "143"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.0 ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    143
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "05 10 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 5.00 AND [pixel] < 10.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "223"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5.0 ) AND ( [pixel] < 10.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    223
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 15 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 10.00 AND [pixel] < 15.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "31",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10.0 ) AND ( [pixel] < 15.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    31,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 20 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 15.00 AND [pixel] < 20.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "63",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 15.0 ) AND ( [pixel] < 20.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 20.00 AND [pixel] < 25.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "127",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20.0 ) AND ( [pixel] < 25.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    127,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 30 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 25.00 AND [pixel] < 30.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "159",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25.0 ) AND ( [pixel] < 30.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    159,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 35 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 30.00 AND [pixel] < 35.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "223",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30.0 ) AND ( [pixel] < 35.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    223,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35 40 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 35.00 AND [pixel] < 40.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "255",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 35.0 ) AND ( [pixel] < 40.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    255,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 45 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 40.00 AND [pixel] < 45.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "63",
-                "255",
-                "191"
-            ]
-        }
+        "expression": "( ( [pixel] >= 40.0 ) AND ( [pixel] < 45.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    63,
+                    255,
+                    191
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45 50 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 45.00 AND [pixel] < 50.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "95",
-                "255",
-                "159"
-            ]
-        }
+        "expression": "( ( [pixel] >= 45.0 ) AND ( [pixel] < 50.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    95,
+                    255,
+                    159
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 55 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 50.00 AND [pixel] < 55.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "159",
-                "255",
-                "95"
-            ]
-        }
+        "expression": "( ( [pixel] >= 50.0 ) AND ( [pixel] < 55.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    159,
+                    255,
+                    95
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "55 60 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 55.00 AND [pixel] < 60.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "191",
-                "255",
-                "63"
-            ]
-        }
+        "expression": "( ( [pixel] >= 55.0 ) AND ( [pixel] < 60.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    191,
+                    255,
+                    63
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 65 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 60.00 AND [pixel] < 65.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 60.0 ) AND ( [pixel] < 65.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "65 70 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 65.00 AND [pixel] < 70.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "223",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 65.0 ) AND ( [pixel] < 70.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    223,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "70 75 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 70.00 AND [pixel] < 75.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "159",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 70.0 ) AND ( [pixel] < 75.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    159,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75 80 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 75.00 AND [pixel] < 80.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "127",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 75.0 ) AND ( [pixel] < 80.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    127,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80 85 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 80.00 AND [pixel] < 85.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "63",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 80.0 ) AND ( [pixel] < 85.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    63,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "85 90 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 85.00 AND [pixel] < 90.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "31",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 85.0 ) AND ( [pixel] < 90.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    31,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 95 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 90.00 AND [pixel] < 95.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "223",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 90.0 ) AND ( [pixel] < 95.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    223,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "95 100 %",
         "group": "ALBEDO",
-        "expression": "([pixel] >= 95.00 AND [pixel] <= 100.00)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 95.0 ) AND ( [pixel] <= 100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

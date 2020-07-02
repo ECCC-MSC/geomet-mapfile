@@ -1,0 +1,117 @@
+[
+    {
+        "__type__": "class",
+        "name": " < 5 mb",
+        "group": "PN_STD-LINEAR",
+        "expression": "( [pixel] < 500 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0,
+                    500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 \u2014 10 mb",
+        "group": "PN_STD-LINEAR",
+        "expression": "( ( [pixel] >= 500 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    500,
+                    1000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 \u2014 15 mb",
+        "group": "PN_STD-LINEAR",
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 1500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    1000,
+                    1500
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 \u2014 20 mb",
+        "group": "PN_STD-LINEAR",
+        "expression": "( ( [pixel] >= 1500 ) AND ( [pixel] < 2000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1500,
+                    2000
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 20 mb",
+        "group": "PN_STD-LINEAR",
+        "expression": "( [pixel] >= 2000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2000,
+                    2500
+                ]
+            }
+        ]
+    }
+]

@@ -3,336 +3,384 @@
         "__type__": "class",
         "name": "0.0 - 1.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(0.0 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "153"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    153
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 2.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "173"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    173
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 3.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(2.0 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "193"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    193
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 4.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 4.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "214"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    214
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.0 - 5.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(4.0 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "234"
-            ]
-        }
+        "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    234
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 6.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 6.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "010",
-                "254"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    10,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.0 - 7.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(6.0 <= [pixel] AND [pixel] < 7.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "063",
-                "254"
-            ]
-        }
+        "expression": "( ( 6.0 <= [pixel] ) AND ( [pixel] < 7.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.0 - 8.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(7.0 <= [pixel] AND [pixel] < 8.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "094",
-                "254"
-            ]
-        }
+        "expression": "( ( 7.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    94,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8.0 - 9.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(8.0 <= [pixel] AND [pixel] < 9.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "126",
-                "254"
-            ]
-        }
+        "expression": "( ( 8.0 <= [pixel] ) AND ( [pixel] < 9.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    126,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "9.0 - 10.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(9.0 <= [pixel] AND [pixel] < 10.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "158",
-                "254"
-            ]
-        }
+        "expression": "( ( 9.0 <= [pixel] ) AND ( [pixel] < 10.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    158,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10.0 - 11.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(10.0 <= [pixel] AND [pixel] < 11.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "189",
-                "254"
-            ]
-        }
+        "expression": "( ( 10.0 <= [pixel] ) AND ( [pixel] < 11.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    189,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "11.0 - 12.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(11.0 <= [pixel] AND [pixel] < 12.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "021",
-                "221",
-                "233"
-            ]
-        }
+        "expression": "( ( 11.0 <= [pixel] ) AND ( [pixel] < 12.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    21,
+                    221,
+                    233
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "12.0 - 13.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(12.0 <= [pixel] AND [pixel] < 13.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "057",
-                "253",
-                "200"
-            ]
-        }
+        "expression": "( ( 12.0 <= [pixel] ) AND ( [pixel] < 13.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    57,
+                    253,
+                    200
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "13.0 - 14.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(13.0 <= [pixel] AND [pixel] < 14.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "093",
-                "254",
-                "150"
-            ]
-        }
+        "expression": "( ( 13.0 <= [pixel] ) AND ( [pixel] < 14.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    93,
+                    254,
+                    150
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "14.0 - 15.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(14.0 <= [pixel] AND [pixel] < 15.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "129",
-                "254",
-                "107"
-            ]
-        }
+        "expression": "( ( 14.0 <= [pixel] ) AND ( [pixel] < 15.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    129,
+                    254,
+                    107
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15.0 - 16.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(15.0 <= [pixel] AND [pixel] < 16.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "165",
-                "254",
-                "064"
-            ]
-        }
+        "expression": "( ( 15.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    165,
+                    254,
+                    64
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "16.0 - 17.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(16.0 <= [pixel] AND [pixel] < 17.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "201",
-                "226",
-                "021"
-            ]
-        }
+        "expression": "( ( 16.0 <= [pixel] ) AND ( [pixel] < 17.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    201,
+                    226,
+                    21
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "17.0 - 18.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(17.0 <= [pixel] AND [pixel] < 18.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "190",
-                "000"
-            ]
-        }
+        "expression": "( ( 17.0 <= [pixel] ) AND ( [pixel] < 18.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    190,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "18.0 - 19.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(18.0 <= [pixel] AND [pixel] < 19.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "154",
-                "000"
-            ]
-        }
+        "expression": "( ( 18.0 <= [pixel] ) AND ( [pixel] < 19.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    154,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "19.0 - 20.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(19.0 <= [pixel] AND [pixel] < 20.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "118",
-                "000"
-            ]
-        }
+        "expression": "( ( 19.0 <= [pixel] ) AND ( [pixel] < 20.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    118,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20.0 - 21.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(20.0 <= [pixel] AND [pixel] < 21.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "082",
-                "000"
-            ]
-        }
+        "expression": "( ( 20.0 <= [pixel] ) AND ( [pixel] < 21.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    82,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "21.0 - 22.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(21.0 <= [pixel] AND [pixel] < 22.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "046",
-                "000"
-            ]
-        }
+        "expression": "( ( 21.0 <= [pixel] ) AND ( [pixel] < 22.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    46,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "22.0 - 23.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(22.0 <= [pixel] AND [pixel] < 23.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "010",
-                "000"
-            ]
-        }
+        "expression": "( ( 22.0 <= [pixel] ) AND ( [pixel] < 23.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    10,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "23.0 - 24.0 (s)",
         "group": "MODELWAVEPERIOD_OCEAN",
-        "expression": "(23.0 <= [pixel] AND [pixel] <= 24.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "232",
-                "000",
-                "000"
-            ]
-        }
+        "expression": "( ( 23.0 <= [pixel] ) AND ( [pixel] <= 24.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    232,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

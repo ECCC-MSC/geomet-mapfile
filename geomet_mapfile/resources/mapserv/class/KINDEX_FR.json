@@ -3,56 +3,64 @@
         "__type__": "class",
         "name": " 0 15 - Convection peu probable",
         "group": "KINDEX_FR",
-        "expression": "([pixel] >= 0 AND [pixel] < 15)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "5",
-                "113",
-                "176"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    5,
+                    113,
+                    176
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 25 - Faible potentiel convectif",
         "group": "KINDEX_FR",
-        "expression": "([pixel] >= 15 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "146",
-                "197",
-                "222"
-            ]
-        }
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    146,
+                    197,
+                    222
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "25 40 - Potentiel convectif modéré",
+        "name": "25 40 - Potentiel convectif mod\u00e9r\u00e9",
         "group": "KINDEX_FR",
-        "expression": "([pixel] >= 25 AND [pixel] < 40)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "244",
-                "165",
-                "130"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    244,
+                    165,
+                    130
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "> 40 - Potentiel convectif élevé",
+        "name": "> 40 - Potentiel convectif \u00e9lev\u00e9",
         "group": "KINDEX_FR",
-        "expression": "([pixel] >= 40)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "202",
-                "0",
-                "32"
-            ]
-        }
+        "expression": "( [pixel] >= 40 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    202,
+                    0,
+                    32
+                ]
+            }
+        ]
     }
 ]

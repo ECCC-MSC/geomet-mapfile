@@ -2,47 +2,45 @@
     {
         "__type__": "class",
         "name": "Single symbol",
-        "maxscaledenom": "10000000",
-        "expression": "(\"[temp]\" ~ \"[0-9]$\")",
-        "style": {
-            "__type__": "style",
-            "symbol": "[icon]",
-            "size": "25"
-        },
-        "label": {
-            "__type__": "label",
-            "font": "arial",
-            "type": "TRUETYPE",
-            "text": "[temp]°C",
-            "size": "9",
-            "position": "cr",
-            "style": {
-                "__type__": "style",
-                "symbol": "[icon]",
-                "size": "25"
+        "maxscaledenom": 10000000,
+        "expression": "( \"[temp]\" ~ \"[0-9]$\" )",
+        "labels": [
+            {
+                "__type__": "label",
+                "font": "arial",
+                "type": "TRUETYPE",
+                "text": "[temp]\u00b0C",
+                "size": 9,
+                "position": "cr",
+                "styles": [
+                    {
+                        "__type__": "style",
+                        "symbol": "[icon]",
+                        "size": 25
+                    }
+                ]
             }
-        }
+        ]
     },
     {
         "__type__": "class",
         "name": "Single symbol",
-        "minscaledenom": "10000000",
-        "expression": "(\"[temp]\" ~ \"[0-9]$\")",
-        "style": {
-            "__type__": "style",
-            "symbol": "[icon]",
-            "size": "25"
-        },
-        "label": {
-            "__type__": "label",
-            "text": "'      '",
-            "size": "giant",
-            "position": "cr",
-            "style": {
-                "__type__": "style",
-                "symbol": "[icon]",
-                "size": "25"
+        "minscaledenom": 10000000,
+        "expression": "( \"[temp]\" ~ \"[0-9]$\" )",
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "      ",
+                "size": "giant",
+                "position": "cr",
+                "styles": [
+                    {
+                        "__type__": "style",
+                        "symbol": "[icon]",
+                        "size": 25
+                    }
+                ]
             }
-        }
+        ]
     }
 ]

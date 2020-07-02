@@ -3,420 +3,460 @@
         "__type__": "class",
         "name": "1 5 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.01 AND [pixel] < 0.05)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "63",
-                "0",
-                "0",
-                "143"
-            ],
-            "datarange": [
-                "0.01",
-                "0.05"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.01 ) AND ( [pixel] < 0.05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    63,
+                    0,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    0.01,
+                    0.05
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 10 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.05 AND [pixel] < 0.10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "143",
-                "0",
-                "0",
-                "223"
-            ],
-            "datarange": [
-                "0.05",
-                "0.10"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.05 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    143,
+                    0,
+                    0,
+                    223
+                ],
+                "datarange": [
+                    0.05,
+                    0.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 15 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.10 AND [pixel] < 0.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "223",
-                "0",
-                "31",
-                "255"
-            ],
-            "datarange": [
-                "0.10",
-                "0.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    223,
+                    0,
+                    31,
+                    255
+                ],
+                "datarange": [
+                    0.1,
+                    0.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 20 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.15 AND [pixel] < 0.20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "31",
-                "255",
-                "0",
-                "63",
-                "255"
-            ],
-            "datarange": [
-                "0.15",
-                "0.20"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.15 ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    31,
+                    255,
+                    0,
+                    63,
+                    255
+                ],
+                "datarange": [
+                    0.15,
+                    0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.20 AND [pixel] < 0.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "255",
-                "0",
-                "127",
-                "255"
-            ],
-            "datarange": [
-                "0.20",
-                "0.25"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    255,
+                    0,
+                    127,
+                    255
+                ],
+                "datarange": [
+                    0.2,
+                    0.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 30 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.25 AND [pixel] < 0.30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "127",
-                "255",
-                "0",
-                "159",
-                "255"
-            ],
-            "datarange": [
-                "0.25",
-                "0.30"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.25 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    127,
+                    255,
+                    0,
+                    159,
+                    255
+                ],
+                "datarange": [
+                    0.25,
+                    0.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 35 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.30 AND [pixel] < 0.35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "159",
-                "255",
-                "0",
-                "223",
-                "255"
-            ],
-            "datarange": [
-                "0.30",
-                "0.35"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    159,
+                    255,
+                    0,
+                    223,
+                    255
+                ],
+                "datarange": [
+                    0.3,
+                    0.35
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35 40 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.35 AND [pixel] < 0.40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "223",
-                "255",
-                "0",
-                "255",
-                "255"
-            ],
-            "datarange": [
-                "0.35",
-                "0.40"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.35 ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    223,
+                    255,
+                    0,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    0.35,
+                    0.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 45 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.40 AND [pixel] < 0.45)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "255",
-                "255",
-                "63",
-                "255",
-                "191"
-            ],
-            "datarange": [
-                "0.40",
-                "0.45"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.4 ) AND ( [pixel] < 0.45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    255,
+                    63,
+                    255,
+                    191
+                ],
+                "datarange": [
+                    0.4,
+                    0.45
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45 50 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.45 AND [pixel] < 0.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "63",
-                "255",
-                "191",
-                "95",
-                "255",
-                "159"
-            ],
-            "datarange": [
-                "0.45",
-                "0.50"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.45 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    63,
+                    255,
+                    191,
+                    95,
+                    255,
+                    159
+                ],
+                "datarange": [
+                    0.45,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 55 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.50 AND [pixel] < 0.55)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "95",
-                "255",
-                "159",
-                "159",
-                "255",
-                "95"
-            ],
-            "datarange": [
-                "0.50",
-                "0.55"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 0.55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    95,
+                    255,
+                    159,
+                    159,
+                    255,
+                    95
+                ],
+                "datarange": [
+                    0.5,
+                    0.55
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "55 60 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.55 AND [pixel] < 0.60)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "159",
-                "255",
-                "95",
-                "191",
-                "255",
-                "63"
-            ],
-            "datarange": [
-                "0.55",
-                "0.60"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.55 ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    159,
+                    255,
+                    95,
+                    191,
+                    255,
+                    63
+                ],
+                "datarange": [
+                    0.55,
+                    0.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 65 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.60 AND [pixel] < 0.65)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "191",
-                "255",
-                "63",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "0.60",
-                "0.65"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.6 ) AND ( [pixel] < 0.65 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    191,
+                    255,
+                    63,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    0.6,
+                    0.65
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "65 70 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.65 AND [pixel] < 0.70)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "255",
-                "223",
-                "0"
-            ],
-            "datarange": [
-                "0.65",
-                "0.70"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.65 ) AND ( [pixel] < 0.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    255,
+                    223,
+                    0
+                ],
+                "datarange": [
+                    0.65,
+                    0.7
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "70 75 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.70 AND [pixel] < 0.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "223",
-                "0",
-                "255",
-                "159",
-                "0"
-            ],
-            "datarange": [
-                "0.70",
-                "0.75"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.7 ) AND ( [pixel] < 0.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    223,
+                    0,
+                    255,
+                    159,
+                    0
+                ],
+                "datarange": [
+                    0.7,
+                    0.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75 80 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.75 AND [pixel] < 0.80)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "159",
-                "0",
-                "255",
-                "127",
-                "0"
-            ],
-            "datarange": [
-                "0.75",
-                "0.80"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.75 ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    159,
+                    0,
+                    255,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    0.75,
+                    0.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80 85 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.80 AND [pixel] < 0.85)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "127",
-                "0",
-                "255",
-                "63",
-                "0"
-            ],
-            "datarange": [
-                "0.80",
-                "0.85"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.8 ) AND ( [pixel] < 0.85 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    127,
+                    0,
+                    255,
+                    63,
+                    0
+                ],
+                "datarange": [
+                    0.8,
+                    0.85
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "85 90 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.85 AND [pixel] < 0.90)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "63",
-                "0",
-                "255",
-                "31",
-                "0"
-            ],
-            "datarange": [
-                "0.85",
-                "0.90"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.85 ) AND ( [pixel] < 0.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    63,
+                    0,
+                    255,
+                    31,
+                    0
+                ],
+                "datarange": [
+                    0.85,
+                    0.9
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 95 cm",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.90 AND [pixel] < 0.95)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "31",
-                "0",
-                "223",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "0.90",
-                "0.95"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.9 ) AND ( [pixel] < 0.95 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    31,
+                    0,
+                    223,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.9,
+                    0.95
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "95 cm +",
         "group": "SNOWDEPTH-LINEAR",
-        "expression": "([pixel] >= 0.95)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "223",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "0.95",
-                "12.0"
-            ]
-        }
+        "expression": "( [pixel] >= 0.95 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    223,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.95,
+                    12.0
+                ]
+            }
+        ]
     }
 ]

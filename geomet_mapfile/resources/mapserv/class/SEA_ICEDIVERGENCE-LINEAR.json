@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "< -200",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( [pixel] <= -200.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    -1000.0,
+                    -200.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "<200 150",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > -200.0 ) AND ( [pixel] <= -150.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    21,
+                    222
+                ],
+                "datarange": [
+                    -200.0,
+                    -150.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "150 -100",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > -150.0 ) AND ( [pixel] <= -100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    21,
+                    222,
+                    0,
+                    111,
+                    255
+                ],
+                "datarange": [
+                    -150.0,
+                    -100.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-100 -50",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > -100.0 ) AND ( [pixel] <= -50.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    111,
+                    255,
+                    0,
+                    236,
+                    255
+                ],
+                "datarange": [
+                    -100.0,
+                    -50.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 0",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > -50.0 ) AND ( [pixel] < 0.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    236,
+                    255,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    -49.0,
+                    0.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 50",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] >= 0.0 ) AND ( [pixel] <= 50.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    255,
+                    255,
+                    113
+                ],
+                "datarange": [
+                    0.0,
+                    50.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 100",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > 50.0 ) AND ( [pixel] <= 100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    113,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    50.0,
+                    100.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 150",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > 100.0 ) AND ( [pixel] <= 150.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    255,
+                    187,
+                    0
+                ],
+                "datarange": [
+                    100.0,
+                    150.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "150 200",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > 150.0 ) AND ( [pixel] <= 200.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    187,
+                    0,
+                    255,
+                    73,
+                    0
+                ],
+                "datarange": [
+                    150.0,
+                    200.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "200 250",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > 200.0 ) AND ( [pixel] <= 250.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    73,
+                    0,
+                    221,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    200.0,
+                    250.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 250",
+        "group": "SEA_ICEDIVERGENCE-LINEAR",
+        "expression": "( ( [pixel] > 250.0 ) AND ( [pixel] <= 500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    221,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    250.0,
+                    1000.0
+                ]
+            }
+        ]
+    }
+]

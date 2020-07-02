@@ -3,525 +3,595 @@
         "__type__": "class",
         "name": "940 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 94000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 94000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "944 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 94400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "145"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 94400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    145
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "948 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 94800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "164"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 94800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    164
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "952 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 95200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "183"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 95200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    183
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "956 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 95600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "201"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 95600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    201
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "960 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 96000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "220"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 96000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    220
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "964 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 96400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "239"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 96400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    239
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "968 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 96800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "7",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 96800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    7,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "972 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 97200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "44",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 97200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    44,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "976 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 97600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "81",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 97600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    81,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "980 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 98000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "119",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 98000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    119,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "984 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 98400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "156",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 98400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    156,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "988 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 98800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "193",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 98800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    193,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "992 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 99200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "230",
-                "254"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 99200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    230,
+                    254
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "996 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 99600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "14",
-                "253",
-                "240"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 99600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    14,
+                    253,
+                    240
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1000 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 100000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "52",
-                "253",
-                "202"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 100000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    52,
+                    253,
+                    202
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1004 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 100400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "89",
-                "253",
-                "165"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 100400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    89,
+                    253,
+                    165
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1008 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 1008000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "254",
-                "127"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 1008000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    254,
+                    127
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1012 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 101200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "165",
-                "254",
-                "90"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 101200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    165,
+                    254,
+                    90
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1016 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 101600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "202",
-                "254",
-                "52"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 101600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    202,
+                    254,
+                    52
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1020 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 102000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "240",
-                "254",
-                "14"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 102000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    240,
+                    254,
+                    14
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1024 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 102400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "232",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 102400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    232,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1028 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 102800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "194",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 102800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    194,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1032 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 103200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "157",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 103200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    157,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1036 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 103600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "119",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 103600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    119,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1040 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 104000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "82",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 104000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    82,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1044 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 104400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "45",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 104400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    45,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1048 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 104800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "7",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 104800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    7,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1052 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 105200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "239",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 105200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    239,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1056 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 105600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "220",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 105600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1060 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 106000)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "201",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 106000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    201,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1064 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 106400)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "183",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 106400 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    183,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1068 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 106800)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "164",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 106800 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    164,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1072 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 107200)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "145",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 107200 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    145,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1076 mb",
         "group": "PRESSURE4_LINE",
-        "expression": "([pixel] = 107600)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ],
-            "width": "2"
-        }
+        "expression": "( [pixel] = 107600 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ],
+                "width": 2
+            }
+        ]
     }
 ]

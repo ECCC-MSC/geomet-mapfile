@@ -3,105 +3,115 @@
         "__type__": "class",
         "name": "< 44 - Convection peu probable",
         "group": "TOTALX_FR-LINEAR",
-        "expression": "([pixel] >= 0 AND [pixel] < 44)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "247",
-                "247",
-                "247",
-                "43",
-                "131",
-                "186"
-            ],
-            "datarange": [
-                "0.00",
-                "44.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 44 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    247,
+                    247,
+                    247,
+                    43,
+                    131,
+                    186
+                ],
+                "datarange": [
+                    0.0,
+                    44.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "44 50 - Orages probables",
         "group": "TOTALX_FR-LINEAR",
-        "expression": "([pixel] >= 44 AND [pixel] < 51)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "43",
-                "131",
-                "186",
-                "86",
-                "104",
-                "146"
-            ],
-            "datarange": [
-                "44.0",
-                "51.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 44 ) AND ( [pixel] < 51 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    43,
+                    131,
+                    186,
+                    86,
+                    104,
+                    146
+                ],
+                "datarange": [
+                    44.0,
+                    51.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "51 52 - Tempêtes violentes isolées",
+        "name": "51 52 - Temp\u00eates violentes isol\u00e9es",
         "group": "TOTALX_FR-LINEAR",
-        "expression": "([pixel] >= 51 AND [pixel] < 53)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "86",
-                "104",
-                "146",
-                "129",
-                "78",
-                "107"
-            ],
-            "datarange": [
-                "51.0",
-                "53.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 51 ) AND ( [pixel] < 53 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    86,
+                    104,
+                    146,
+                    129,
+                    78,
+                    107
+                ],
+                "datarange": [
+                    51.0,
+                    53.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "53 56 - Tempêtes violentes largement dispersées",
+        "name": "53 56 - Temp\u00eates violentes largement dispers\u00e9es",
         "group": "TOTALX_FR-LINEAR",
-        "expression": "([pixel] >= 53 AND [pixel] < 56)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "129",
-                "78",
-                "107",
-                "172",
-                "51",
-                "67"
-            ],
-            "datarange": [
-                "53.0",
-                "56.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 53 ) AND ( [pixel] < 56 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    129,
+                    78,
+                    107,
+                    172,
+                    51,
+                    67
+                ],
+                "datarange": [
+                    53.0,
+                    56.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
-        "name": "> 56 - Tempêtes violentes dispersées",
+        "name": "> 56 - Temp\u00eates violentes dispers\u00e9es",
         "group": "TOTALX_FR-LINEAR",
-        "expression": "([pixel] >= 56)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "172",
-                "51",
-                "67",
-                "215",
-                "25",
-                "28"
-            ],
-            "datarange": [
-                "56.0",
-                "75.0"
-            ]
-        }
+        "expression": "( [pixel] >= 56 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    172,
+                    51,
+                    67,
+                    215,
+                    25,
+                    28
+                ],
+                "datarange": [
+                    56.0,
+                    75.0
+                ]
+            }
+        ]
     }
 ]

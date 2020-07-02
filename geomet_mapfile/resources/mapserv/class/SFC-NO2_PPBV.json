@@ -1,0 +1,209 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.5 \u2014 3 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 0.5 ) AND ( ([pixel] * (10 ^ 9)) < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    36,
+                    210,
+                    252,
+                    106,
+                    251,
+                    160
+                ],
+                "datarange": [
+                    0,
+                    3e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 \u2014 6 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 3 ) AND ( ([pixel] * (10 ^ 9)) < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    106,
+                    251,
+                    160,
+                    201,
+                    252,
+                    73
+                ],
+                "datarange": [
+                    3e-09,
+                    9e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 \u2014 9 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 6 ) AND ( ([pixel] * (10 ^ 9)) < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    201,
+                    252,
+                    73,
+                    253,
+                    222,
+                    50
+                ],
+                "datarange": [
+                    6e-09,
+                    9e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9 \u2014 12 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 9 ) AND ( ([pixel] * (10 ^ 9)) < 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    253,
+                    222,
+                    50,
+                    252,
+                    144,
+                    37
+                ],
+                "datarange": [
+                    9e-09,
+                    1.2e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "12 \u2014 15 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 12 ) AND ( ([pixel] * (10 ^ 9)) < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    144,
+                    37,
+                    251,
+                    79,
+                    30
+                ],
+                "datarange": [
+                    1.2e-08,
+                    1.5e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 \u2014 18 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 15 ) AND ( ([pixel] * (10 ^ 9)) < 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    79,
+                    30,
+                    251,
+                    16,
+                    27
+                ],
+                "datarange": [
+                    1.5e-08,
+                    1.8e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "18 \u2014 21 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 18 ) AND ( ([pixel] * (10 ^ 9)) < 21 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    16,
+                    27,
+                    216,
+                    9,
+                    22
+                ],
+                "datarange": [
+                    1.8e-08,
+                    2.1e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "21 \u2014 24 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 21 ) AND ( ([pixel] * (10 ^ 9)) < 24 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    216,
+                    9,
+                    22,
+                    107,
+                    6,
+                    14
+                ],
+                "datarange": [
+                    2.1e-08,
+                    2.4e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 24 [ppbv]",
+        "group": "SFC-NO2_PPBV",
+        "expression": "( ([pixel] * (10 ^ 9)) >= 24 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    107,
+                    6,
+                    14,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2.4e-08,
+                    0.0001
+                ]
+            }
+        ]
+    }
+]

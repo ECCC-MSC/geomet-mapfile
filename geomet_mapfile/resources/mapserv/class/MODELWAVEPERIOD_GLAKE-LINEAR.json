@@ -3,504 +3,552 @@
         "__type__": "class",
         "name": "0.0 - 0.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(0.0 <= [pixel] AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "153",
-                "000",
-                "000",
-                "173"
-            ],
-            "datarange": [
-                "0.0",
-                "0.5"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    153,
+                    0,
+                    0,
+                    173
+                ],
+                "datarange": [
+                    0.0,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 1.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(0.5 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "173",
-                "000",
-                "000",
-                "193"
-            ],
-            "datarange": [
-                "0.5",
-                "1.0"
-            ]
-        }
+        "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    173,
+                    0,
+                    0,
+                    193
+                ],
+                "datarange": [
+                    0.5,
+                    1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "193",
-                "000",
-                "000",
-                "214"
-            ],
-            "datarange": [
-                "1.0",
-                "1.5"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    193,
+                    0,
+                    0,
+                    214
+                ],
+                "datarange": [
+                    1.0,
+                    1.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 2.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(1.5 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "214",
-                "000",
-                "000",
-                "234"
-            ],
-            "datarange": [
-                "1.5",
-                "2.0"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    214,
+                    0,
+                    0,
+                    234
+                ],
+                "datarange": [
+                    1.5,
+                    2.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 2.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(2.0 <= [pixel] AND [pixel] < 2.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "234",
-                "000",
-                "010",
-                "254"
-            ],
-            "datarange": [
-                "2.0",
-                "2.5"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    234,
+                    0,
+                    10,
+                    254
+                ],
+                "datarange": [
+                    2.0,
+                    2.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.5 - 3.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(2.5 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "010",
-                "254",
-                "000",
-                "063",
-                "254"
-            ],
-            "datarange": [
-                "2.5",
-                "3.0"
-            ]
-        }
+        "expression": "( ( 2.5 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    10,
+                    254,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    2.5,
+                    3.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 3.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 3.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "063",
-                "254",
-                "000",
-                "094",
-                "254"
-            ],
-            "datarange": [
-                "3.0",
-                "3.5"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 3.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    94,
+                    254
+                ],
+                "datarange": [
+                    3.0,
+                    3.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.5 - 4.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(3.5 <= [pixel] AND [pixel] < 4.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "094",
-                "254",
-                "000",
-                "126",
-                "254"
-            ],
-            "datarange": [
-                "3.5",
-                "4.0"
-            ]
-        }
+        "expression": "( ( 3.5 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    94,
+                    254,
+                    0,
+                    126,
+                    254
+                ],
+                "datarange": [
+                    3.5,
+                    4.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.0 - 4.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(4.0 <= [pixel] AND [pixel] < 4.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "126",
-                "254",
-                "000",
-                "158",
-                "254"
-            ],
-            "datarange": [
-                "4.0",
-                "4.5"
-            ]
-        }
+        "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 4.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    126,
+                    254,
+                    0,
+                    158,
+                    254
+                ],
+                "datarange": [
+                    4.0,
+                    4.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.5 - 5.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(4.5 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "158",
-                "254",
-                "000",
-                "189",
-                "254"
-            ],
-            "datarange": [
-                "4.5",
-                "5.0"
-            ]
-        }
+        "expression": "( ( 4.5 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    158,
+                    254,
+                    0,
+                    189,
+                    254
+                ],
+                "datarange": [
+                    4.5,
+                    5.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 5.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 5.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "189",
-                "254",
-                "021",
-                "221",
-                "233"
-            ],
-            "datarange": [
-                "5.0",
-                "5.5"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 5.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    189,
+                    254,
+                    21,
+                    221,
+                    233
+                ],
+                "datarange": [
+                    5.0,
+                    5.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.5 - 6.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(5.5 <= [pixel] AND [pixel] < 6.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "021",
-                "221",
-                "233",
-                "057",
-                "253",
-                "200"
-            ],
-            "datarange": [
-                "5.5",
-                "6.0"
-            ]
-        }
+        "expression": "( ( 5.5 <= [pixel] ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    21,
+                    221,
+                    233,
+                    57,
+                    253,
+                    200
+                ],
+                "datarange": [
+                    5.5,
+                    6.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.0 - 6.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(6.0 <= [pixel] AND [pixel] < 6.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "057",
-                "253",
-                "200",
-                "093",
-                "254",
-                "150"
-            ],
-            "datarange": [
-                "6.0",
-                "6.5"
-            ]
-        }
+        "expression": "( ( 6.0 <= [pixel] ) AND ( [pixel] < 6.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    57,
+                    253,
+                    200,
+                    93,
+                    254,
+                    150
+                ],
+                "datarange": [
+                    6.0,
+                    6.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.5 - 7.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(6.5 <= [pixel] AND [pixel] < 7.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "093",
-                "254",
-                "150",
-                "129",
-                "254",
-                "107"
-            ],
-            "datarange": [
-                "6.5",
-                "7.0"
-            ]
-        }
+        "expression": "( ( 6.5 <= [pixel] ) AND ( [pixel] < 7.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    93,
+                    254,
+                    150,
+                    129,
+                    254,
+                    107
+                ],
+                "datarange": [
+                    6.5,
+                    7.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.0 - 7.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(7.0 <= [pixel] AND [pixel] < 7.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "129",
-                "254",
-                "107",
-                "165",
-                "254",
-                "064"
-            ],
-            "datarange": [
-                "7.0",
-                "7.5"
-            ]
-        }
+        "expression": "( ( 7.0 <= [pixel] ) AND ( [pixel] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    129,
+                    254,
+                    107,
+                    165,
+                    254,
+                    64
+                ],
+                "datarange": [
+                    7.0,
+                    7.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.5 - 8.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(7.5 <= [pixel] AND [pixel] < 8.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "165",
-                "254",
-                "064",
-                "201",
-                "226",
-                "021"
-            ],
-            "datarange": [
-                "7.5",
-                "8.0"
-            ]
-        }
+        "expression": "( ( 7.5 <= [pixel] ) AND ( [pixel] < 8.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    165,
+                    254,
+                    64,
+                    201,
+                    226,
+                    21
+                ],
+                "datarange": [
+                    7.5,
+                    8.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8.0 - 8.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(8.0 <= [pixel] AND [pixel] < 8.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "201",
-                "226",
-                "021",
-                "254",
-                "190",
-                "000"
-            ],
-            "datarange": [
-                "8.0",
-                "8.5"
-            ]
-        }
+        "expression": "( ( 8.0 <= [pixel] ) AND ( [pixel] < 8.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    201,
+                    226,
+                    21,
+                    254,
+                    190,
+                    0
+                ],
+                "datarange": [
+                    8.0,
+                    8.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8.5 - 9.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(8.5 <= [pixel] AND [pixel] < 9.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "190",
-                "000",
-                "254",
-                "154",
-                "000"
-            ],
-            "datarange": [
-                "8.5",
-                "9.0"
-            ]
-        }
+        "expression": "( ( 8.5 <= [pixel] ) AND ( [pixel] < 9.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    190,
+                    0,
+                    254,
+                    154,
+                    0
+                ],
+                "datarange": [
+                    8.5,
+                    9.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "9.0 - 9.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(9.0 <= [pixel] AND [pixel] < 9.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "154",
-                "000",
-                "254",
-                "118",
-                "000"
-            ],
-            "datarange": [
-                "9.0",
-                "9.5"
-            ]
-        }
+        "expression": "( ( 9.0 <= [pixel] ) AND ( [pixel] < 9.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    154,
+                    0,
+                    254,
+                    118,
+                    0
+                ],
+                "datarange": [
+                    9.0,
+                    9.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "9.5 - 10.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(9.5 <= [pixel] AND [pixel] < 10.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "118",
-                "000",
-                "254",
-                "082",
-                "000"
-            ],
-            "datarange": [
-                "9.5",
-                "10.0"
-            ]
-        }
+        "expression": "( ( 9.5 <= [pixel] ) AND ( [pixel] < 10.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    118,
+                    0,
+                    254,
+                    82,
+                    0
+                ],
+                "datarange": [
+                    9.5,
+                    10.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10.0 - 10.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(10.0 <= [pixel] AND [pixel] < 10.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "082",
-                "000",
-                "254",
-                "046",
-                "000"
-            ],
-            "datarange": [
-                "10.0",
-                "10.5"
-            ]
-        }
+        "expression": "( ( 10.0 <= [pixel] ) AND ( [pixel] < 10.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    82,
+                    0,
+                    254,
+                    46,
+                    0
+                ],
+                "datarange": [
+                    10.0,
+                    10.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10.5 - 11.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(10.5 <= [pixel] AND [pixel] < 11.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "046",
-                "000",
-                "254",
-                "010",
-                "000"
-            ],
-            "datarange": [
-                "10.5",
-                "11.0"
-            ]
-        }
+        "expression": "( ( 10.5 <= [pixel] ) AND ( [pixel] < 11.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    46,
+                    0,
+                    254,
+                    10,
+                    0
+                ],
+                "datarange": [
+                    10.5,
+                    11.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "11.0 - 11.5 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(11.0 <= [pixel] AND [pixel] < 11.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "010",
-                "000",
-                "232",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "11.0",
-                "11.5"
-            ]
-        }
+        "expression": "( ( 11.0 <= [pixel] ) AND ( [pixel] < 11.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    10,
+                    0,
+                    232,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    11.0,
+                    11.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "11.5 - 12.0 (s)",
         "group": "MODELWAVEPERIOD_GLAKE-LINEAR",
-        "expression": "(11.5 <= [pixel] AND [pixel] <= 12.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "232",
-                "000",
-                "000",
-                "190",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "11.5",
-                "12.0"
-            ]
-        }
+        "expression": "( ( 11.5 <= [pixel] ) AND ( [pixel] <= 12.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    0,
+                    0,
+                    190,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    11.5,
+                    12.0
+                ]
+            }
+        ]
     }
 ]

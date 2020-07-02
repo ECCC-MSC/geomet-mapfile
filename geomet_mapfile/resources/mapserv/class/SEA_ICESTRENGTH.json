@@ -3,281 +3,320 @@
         "__type__": "class",
         "name": "0.0 - 5000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(0.0 <= [pixel]  AND [pixel] < 5000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "124"
-            ]
-        }
+        "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 5000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    124
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5000.0 - 10000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(5000.0 <= [pixel]  AND [pixel] < 10000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "167"
-            ]
-        }
+        "expression": "( ( 5000.0 <= [pixel] ) AND ( [pixel] < 10000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    167
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10000.0 - 15000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(10000.0 <= [pixel]  AND [pixel] < 15000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "210"
-            ]
-        }
+        "expression": "( ( 10000.0 <= [pixel] ) AND ( [pixel] < 15000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    210
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15000.0 - 20000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(15000.0 <= [pixel]  AND [pixel] < 20000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "255"
-            ]
-        }
+        "expression": "( ( 15000.0 <= [pixel] ) AND ( [pixel] < 20000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20000.0 - 25000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(20000.0 <= [pixel]  AND [pixel] < 25000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "64",
-                "255"
-            ]
-        }
+        "expression": "( ( 20000.0 <= [pixel] ) AND ( [pixel] < 25000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    64,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25000.0 - 30000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(25000.0 <= [pixel]  AND [pixel] < 30000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "128",
-                "255"
-            ]
-        }
+        "expression": "( ( 25000.0 <= [pixel] ) AND ( [pixel] < 30000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    128,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30000.0 - 35000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(30000.0 <= [pixel]  AND [pixel] < 35000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "188",
-                "255"
-            ]
-        }
+        "expression": "( ( 30000.0 <= [pixel] ) AND ( [pixel] < 35000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    188,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35000.0 - 40000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(35000.0 <= [pixel]  AND [pixel] < 40000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "253",
-                "255"
-            ]
-        }
+        "expression": "( ( 35000.0 <= [pixel] ) AND ( [pixel] < 40000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    253,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40000.0 - 45000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(40000.0 <= [pixel]  AND [pixel] < 45000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "51",
-                "",
-                "253",
-                "203"
-            ]
-        }
+        "expression": "( ( 40000.0 <= [pixel] ) AND ( [pixel] < 45000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    253,
+                    203
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45000.0 - 50000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(45000.0 <= [pixel]  AND [pixel] < 50000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "103",
-                "253",
-                "151"
-            ]
-        }
+        "expression": "( ( 45000.0 <= [pixel] ) AND ( [pixel] < 50000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    103,
+                    253,
+                    151
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50000.0 - 55000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(50000.0 <= [pixel]  AND [pixel] < 55000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "155",
-                "254",
-                "99"
-            ]
-        }
+        "expression": "( ( 50000.0 <= [pixel] ) AND ( [pixel] < 55000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    155,
+                    254,
+                    99
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "55000.0 - 60000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(55000.0 <= [pixel]  AND [pixel] < 60000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "203",
-                "254",
-                "51"
-            ]
-        }
+        "expression": "( ( 55000.0 <= [pixel] ) AND ( [pixel] < 60000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    203,
+                    254,
+                    51
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60000.0 - 65000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(60000.0 <= [pixel]  AND [pixel] < 65000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ]
-        }
+        "expression": "( ( 60000.0 <= [pixel] ) AND ( [pixel] < 65000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "65000.0 - 70000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(65000.0 <= [pixel]  AND [pixel] < 70000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "203",
-                "0"
-            ]
-        }
+        "expression": "( ( 65000.0 <= [pixel] ) AND ( [pixel] < 70000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    203,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "70000.0 - 75000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(70000.0 <= [pixel]  AND [pixel] < 75000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "151",
-                "0"
-            ]
-        }
+        "expression": "( ( 70000.0 <= [pixel] ) AND ( [pixel] < 75000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    151,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75000.0 - 80000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(75000.0 <= [pixel]  AND [pixel] < 80000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "99",
-                "0"
-            ]
-        }
+        "expression": "( ( 75000.0 <= [pixel] ) AND ( [pixel] < 80000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    99,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80000.0 - 85000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(80000.0 <= [pixel]  AND [pixel] < 85000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "51",
-                "0"
-            ]
-        }
+        "expression": "( ( 80000.0 <= [pixel] ) AND ( [pixel] < 85000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    51,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "85000.0 - 90000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(85000.0 <= [pixel]  AND [pixel] < 90000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( 85000.0 <= [pixel] ) AND ( [pixel] < 90000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90000.0 - 95000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(90000.0 <= [pixel]  AND [pixel] < 95000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "210",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( 90000.0 <= [pixel] ) AND ( [pixel] < 95000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    210,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "95000.0 - 100000.0",
         "group": "SEA_ICESTRENGTH",
-        "expression": "(95000.0 <= [pixel]  AND [pixel] < 100000.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "167",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( 95000.0 <= [pixel] ) AND ( [pixel] < 100000.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    167,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

@@ -3,66 +3,78 @@
         "__type__": "class",
         "name": "type 0",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 0) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category0"
-        }
+        "expression": "( ( [STORMFORCE] = 0 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category0"
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "type 1",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 1) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category1"
-        }
+        "expression": "( ( [STORMFORCE] = 1 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category1"
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "type 2",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 2) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category2"
-        }
+        "expression": "( ( [STORMFORCE] = 2 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category2"
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "type 3",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 3) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category3"
-        }
+        "expression": "( ( [STORMFORCE] = 3 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category3"
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "type 4",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 4) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category4"
-        }
+        "expression": "( ( [STORMFORCE] = 4 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category4"
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "type 5",
         "group": "HURRICANE_CENTRE",
-        "expression": "(([STORMFORCE] = 5) AND ([active] = 1))",
-        "style": {
-            "__type__": "style",
-            "size": "25",
-            "symbol": "category5"
-        }
+        "expression": "( ( [STORMFORCE] = 5 ) AND ( [active] = 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "size": 25,
+                "symbol": "category5"
+            }
+        ]
     }
 ]
