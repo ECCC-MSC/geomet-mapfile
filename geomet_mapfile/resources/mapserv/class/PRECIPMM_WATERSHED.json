@@ -3,239 +3,273 @@
         "__type__": "class",
         "name": "0",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] < 0.1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "0"
-            ],
-            "opacity": "0"
-        }
+        "expression": "( [PR_MM] < 0.1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "opacity": 0
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.1 0.25",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 0.1 AND [PR_MM] < 0.25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 0.1 ) AND ( [PR_MM] < 0.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.25 0.5",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 0.25 AND [PR_MM] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "169"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 0.25 ) AND ( [PR_MM] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    169
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 1",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 0.5 AND [PR_MM] < 1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "211"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 0.5 ) AND ( [PR_MM] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    211
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1 2.5",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 1 AND [PR_MM] < 2.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "254"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 1 ) AND ( [PR_MM] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.5 5",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 2.5 AND [PR_MM] < 5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "84",
-                "254"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 2.5 ) AND ( [PR_MM] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    84,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 7.5",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 5 AND [PR_MM] < 7.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "168",
-                "254"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 5 ) AND ( [PR_MM] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    168,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.5 10",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 7.5 AND [PR_MM] < 10)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "253",
-                "255"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 7.5 ) AND ( [PR_MM] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    253,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 15",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 10 AND [PR_MM] < 15)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "85",
-                "253",
-                "170"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 10 ) AND ( [PR_MM] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    85,
+                    253,
+                    170
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 20",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 15 AND [PR_MM] < 20)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "170",
-                "254",
-                "85"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 15 ) AND ( [PR_MM] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    170,
+                    254,
+                    85
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 20 AND [PR_MM] < 25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "255",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 20 ) AND ( [PR_MM] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 30",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 25 AND [PR_MM] < 30)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "170",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 25 ) AND ( [PR_MM] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    170,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 40",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 30 AND [PR_MM] < 40)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "85",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 30 ) AND ( [PR_MM] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    85,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 50",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 40 AND [PR_MM] < 50)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 40 ) AND ( [PR_MM] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 60",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 50 AND [PR_MM] < 60)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "211",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 50 ) AND ( [PR_MM] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    211,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 75",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 60 AND [PR_MM] < 75)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "169",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [PR_MM] >= 60 ) AND ( [PR_MM] < 75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    169,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "75 100",
         "group": "PRECIPMM_WATERSHED",
-        "expression": "([PR_MM] >= 75)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [PR_MM] >= 75 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

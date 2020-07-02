@@ -3,113 +3,128 @@
         "__type__": "class",
         "name": "15 20 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 7.71 AND [pixel] < 10.29)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "204",
-                "229",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 7.71 ) AND ( [pixel] < 10.29 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    204,
+                    229,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 10.29 AND [pixel] < 12.86)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "152",
-                "251",
-                "152"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10.29 ) AND ( [pixel] < 12.86 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    152,
+                    251,
+                    152
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 33 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 12.86 AND [pixel] < 16.98)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "",
-                "255",
-                "254",
-                "204"
-            ]
-        }
+        "expression": "( ( [pixel] >= 12.86 ) AND ( [pixel] < 16.98 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    254,
+                    204
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "33 40 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 16.98 AND [pixel] < 20.58)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "204",
-                "15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 16.98 ) AND ( [pixel] < 20.58 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    204,
+                    15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 48 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 20.58 AND [pixel] < 24.69)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "153",
-                "51"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20.58 ) AND ( [pixel] < 24.69 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    153,
+                    51
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "48 55 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 24.69 AND [pixel] < 28.29)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 24.69 ) AND ( [pixel] < 28.29 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "55 63 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 28.29 AND [pixel] < 32.41)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "180",
-                "0",
-                "180"
-            ]
-        }
+        "expression": "( ( [pixel] >= 28.29 ) AND ( [pixel] < 32.41 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    180,
+                    0,
+                    180
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 63 kts",
         "group": "GUST_INTERV_MS2KTS",
-        "expression": "([pixel] >= 32.41)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( [pixel] >= 32.41 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

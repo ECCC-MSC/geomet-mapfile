@@ -3,242 +3,297 @@
         "__type__": "class",
         "name": "0.00 0.10 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.00 AND [uv_length] < 0.10)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "153",
-                "232",
-                "253"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.0 ) AND ( [uv_length] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    232,
+                    253
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.10 0.20 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.10 AND [uv_length] < 0.20)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "153",
-                "148",
-                "255"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.1 ) AND ( [uv_length] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    148,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.20 0.30 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.20 AND [uv_length] < 0.30)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "154",
-                "64",
-                "249"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.2 ) AND ( [uv_length] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    154,
+                    64,
+                    249
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.30 0.40 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.30 AND [uv_length] < 0.40)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "204",
-                "135",
-                "254"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.3 ) AND ( [uv_length] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    204,
+                    135,
+                    254
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.40 0.50 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.40 AND [uv_length] < 0.50)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "128",
-                "255",
-                "100"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.4 ) AND ( [uv_length] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    255,
+                    100
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.50 0.60 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.50 AND [uv_length] < 0.60)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "209",
-                "254",
-                "45"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.5 ) AND ( [uv_length] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    209,
+                    254,
+                    45
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.60 0.70 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.60 AND [uv_length] < 0.70)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "255",
-                "217",
-                "0"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.6 ) AND ( [uv_length] < 0.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    255,
+                    217,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.70 0.80 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.70 AND [uv_length] < 0.80)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "255",
-                "128",
-                "0"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.7 ) AND ( [uv_length] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    255,
+                    128,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.80 0.90 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.80 AND [uv_length] < 0.90)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "255",
-                "51",
-                "0"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.8 ) AND ( [uv_length] < 0.9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    255,
+                    51,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.90 1.00 m/s",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 0.90 AND [uv_length] < 1.00)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "222",
-                "0",
-                "0"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 0.9 ) AND ( [uv_length] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    222,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.00 m/s +",
         "group": "SEA_CURARROW_0MTO100M_SURFACE",
-        "expression": "([uv_length] >= 1.00 AND [uv_length] < 5.00)",
-        "style": {
-            "__type__": "style",
-            "symbol": "arrow_wind",
-            "color": [
-                "128",
-                "0",
-                "0"
-            ],
-            "angle": "[uv_angle]",
-            "size": "10"
-        },
-        "label": {
-            "__type__": "label",
-            "size": "4",
-            "angle": "45"
-        }
+        "expression": "( ( [uv_length] >= 1.0 ) AND ( [uv_length] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
     }
 ]

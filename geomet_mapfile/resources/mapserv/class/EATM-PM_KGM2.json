@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "1e-7 - 5e-7",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( [pixel] < 5e-07 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    204,
+                    204,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0,
+                    5e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5e-7 - 7e-7",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 5e-07 ) AND ( [pixel] < 1e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    5e-07,
+                    7e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7e-7 - 1e-6",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 7e-07 ) AND ( [pixel] < 1e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    204,
+                    255
+                ],
+                "datarange": [
+                    7e-07,
+                    1e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e-6 - 3e-6",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 1e-06 ) AND ( [pixel] < 3e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    1e-06,
+                    3e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3e-6 - 5e-6",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 3e-06 ) AND ( [pixel] < 5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    3e-06,
+                    5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5e-6 - 7e-6",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 5e-06 ) AND ( [pixel] < 7e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    5e-06,
+                    7e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7e-6 - 1e-5",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 7e-06 ) AND ( [pixel] < 1e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    7e-06,
+                    1e-05
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e-5 - 5e-5",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 1e-05 ) AND ( [pixel] < 5e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1e-05,
+                    5e-05
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5e-5 - 1e-4",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 5e-05 ) AND ( [pixel] < 0.0001 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5e-05,
+                    0.0001
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e-4 - 2e-4",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( ( [pixel] >= 0.0001 ) AND ( [pixel] < 0.0002 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0001,
+                    0.0002
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 2e-4",
+        "group": "RAQDPS-FW-EATM-PM_KGM2",
+        "expression": "( [pixel] >= 0.0002 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0002,
+                    0.001
+                ]
+            }
+        ]
+    }
+]

@@ -3,543 +3,598 @@
         "__type__": "class",
         "name": "< -10 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] < -100.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": "-1000.0 -100.0"
-        }
+        "expression": "( [pixel] < -100.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    -1000.0,
+                    -100.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-10 14 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= -100.00 AND [pixel] < 140.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "153"
-            ],
-            "datarange": [
-                "-100.0",
-                "140.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= -100.0 ) AND ( [pixel] < 140.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    -100.0,
+                    140.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "14 38 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 140.00 AND [pixel] < 380.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "153",
-                "0",
-                "0",
-                "179"
-            ],
-            "datarange": [
-                "140.0",
-                "380.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 140.0 ) AND ( [pixel] < 380.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    153,
+                    0,
+                    0,
+                    179
+                ],
+                "datarange": [
+                    140.0,
+                    380.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "38 62 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 380.00 AND [pixel] < 620.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "179",
-                "0",
-                "0",
-                "206"
-            ],
-            "datarange": [
-                "380.0",
-                "620.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 380.0 ) AND ( [pixel] < 620.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    179,
+                    0,
+                    0,
+                    206
+                ],
+                "datarange": [
+                    380.0,
+                    620.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "62 86 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 620.00 AND [pixel] < 860.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "206",
-                "0",
-                "0",
-                "232"
-            ],
-            "datarange": [
-                "620.0",
-                "860.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 620.0 ) AND ( [pixel] < 860.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    206,
+                    0,
+                    0,
+                    232
+                ],
+                "datarange": [
+                    620.0,
+                    860.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "86 110 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 860.00 AND [pixel] < 1100.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "232",
-                "0",
-                "10",
-                "254"
-            ],
-            "datarange": [
-                "860.0",
-                "1100.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 860.0 ) AND ( [pixel] < 1100.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    232,
+                    0,
+                    10,
+                    254
+                ],
+                "datarange": [
+                    860.0,
+                    1100.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "110 134 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 1100.00 AND [pixel] < 1340.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "10",
-                "254",
-                "0",
-                "63",
-                "254"
-            ],
-            "datarange": [
-                "1100.0",
-                "1340.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1100.0 ) AND ( [pixel] < 1340.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    10,
+                    254,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    1100.0,
+                    1340.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "134 158 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 1340.00 AND [pixel] < 1580.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "254",
-                "0",
-                "115",
-                "254"
-            ],
-            "datarange": [
-                "1340.0",
-                "1580.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1340.0 ) AND ( [pixel] < 1580.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    115,
+                    254
+                ],
+                "datarange": [
+                    1340.0,
+                    1580.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "158 182 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 1580.00 AND [pixel] < 1820.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "115",
-                "254",
-                "0",
-                "168",
-                "254"
-            ],
-            "datarange": [
-                "1580.0",
-                "1820.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1580.0 ) AND ( [pixel] < 1820.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    115,
+                    254,
+                    0,
+                    168,
+                    254
+                ],
+                "datarange": [
+                    1580.0,
+                    1820.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "182 206 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 1820.00 AND [pixel] < 2060.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "168",
-                "254",
-                "0",
-                "221",
-                "254"
-            ],
-            "datarange": [
-                "1820.0",
-                "2060.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1820.0 ) AND ( [pixel] < 2060.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    168,
+                    254,
+                    0,
+                    221,
+                    254
+                ],
+                "datarange": [
+                    1820.0,
+                    2060.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "206 230 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 2060.00 AND [pixel] < 2300.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "221",
-                "254",
-                "21",
-                "253",
-                "233"
-            ],
-            "datarange": [
-                "2060.0",
-                "2300.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2060.0 ) AND ( [pixel] < 2300.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    221,
+                    254,
+                    21,
+                    253,
+                    233
+                ],
+                "datarange": [
+                    2060.0,
+                    2300.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "230 254 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 2300.00 AND [pixel] < 2540.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "21",
-                "253",
-                "233",
-                "74",
-                "253",
-                "180"
-            ],
-            "datarange": [
-                "2300.0",
-                "2540.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2300.0 ) AND ( [pixel] < 2540.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    21,
+                    253,
+                    233,
+                    74,
+                    253,
+                    180
+                ],
+                "datarange": [
+                    2300.0,
+                    2540.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "254 278 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 2540.00 AND [pixel] < 2780.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "74",
-                "253",
-                "180",
-                "127",
-                "254",
-                "127"
-            ],
-            "datarange": [
-                "2540.0",
-                "2780.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2540.0 ) AND ( [pixel] < 2780.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    74,
+                    253,
+                    180,
+                    127,
+                    254,
+                    127
+                ],
+                "datarange": [
+                    2540.0,
+                    2780.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "278 302 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 2780.00 AND [pixel] < 3020.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "254",
-                "127",
-                "180",
-                "254",
-                "74"
-            ],
-            "datarange": [
-                "2780.0",
-                "3020.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2780.0 ) AND ( [pixel] < 3020.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    254,
+                    127,
+                    180,
+                    254,
+                    74
+                ],
+                "datarange": [
+                    2780.0,
+                    3020.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "302 326 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 3020.00 AND [pixel] < 3260.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "180",
-                "254",
-                "74",
-                "233",
-                "254",
-                "21"
-            ],
-            "datarange": [
-                "3020.0",
-                "3260.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3020.0 ) AND ( [pixel] < 3260.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    180,
+                    254,
+                    74,
+                    233,
+                    254,
+                    21
+                ],
+                "datarange": [
+                    3020.0,
+                    3260.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "326 350 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 3260.00 AND [pixel] < 3500.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "233",
-                "254",
-                "21",
-                "254",
-                "223",
-                "0"
-            ],
-            "datarange": [
-                "3260.0",
-                "3500.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3260.0 ) AND ( [pixel] < 3500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    233,
+                    254,
+                    21,
+                    254,
+                    223,
+                    0
+                ],
+                "datarange": [
+                    3260.0,
+                    3500.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "350 374 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 3500.00 AND [pixel] < 3740.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "223",
-                "0",
-                "254",
-                "170",
-                "0"
-            ],
-            "datarange": [
-                "3500.0",
-                "3740.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3500.0 ) AND ( [pixel] < 3740.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    223,
+                    0,
+                    254,
+                    170,
+                    0
+                ],
+                "datarange": [
+                    3500.0,
+                    3740.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "374 398 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 3740.00 AND [pixel] < 3980.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "170",
-                "0",
-                "254",
-                "116",
-                "0"
-            ],
-            "datarange": [
-                "3740.0",
-                "3980.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3740.0 ) AND ( [pixel] < 3980.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    170,
+                    0,
+                    254,
+                    116,
+                    0
+                ],
+                "datarange": [
+                    3740.0,
+                    3980.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "398 422 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 3980.00 AND [pixel] < 4220.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "116",
-                "0",
-                "254",
-                "63",
-                "0"
-            ],
-            "datarange": [
-                "3980.0",
-                "4220.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3980.0 ) AND ( [pixel] < 4220.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    116,
+                    0,
+                    254,
+                    63,
+                    0
+                ],
+                "datarange": [
+                    3980.0,
+                    4220.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "422 446 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 4220.00 AND [pixel] < 4460.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "63",
-                "0",
-                "254",
-                "10",
-                "0"
-            ],
-            "datarange": [
-                "4220.0",
-                "4460.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4220.0 ) AND ( [pixel] < 4460.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    63,
+                    0,
+                    254,
+                    10,
+                    0
+                ],
+                "datarange": [
+                    4220.0,
+                    4460.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "446 470 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 4460.00 AND [pixel] < 4700.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "10",
-                "0",
-                "232",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "4460.0",
-                "4700.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4460.0 ) AND ( [pixel] < 4700.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    10,
+                    0,
+                    232,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    4460.0,
+                    4700.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "470 494 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 4700.00 AND [pixel] < 4940.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "232",
-                "0",
-                "0",
-                "206",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "4700.0",
-                "4940.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4700.0 ) AND ( [pixel] < 4940.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    0,
+                    0,
+                    206,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    4700.0,
+                    4940.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "494 518 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 4940.00 AND [pixel] < 5180.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "206",
-                "0",
-                "0",
-                "179",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "4940.0",
-                "5180.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4940.0 ) AND ( [pixel] < 5180.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    206,
+                    0,
+                    0,
+                    179,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    4940.0,
+                    5180.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "518 542 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 5180.00 AND [pixel] < 5420.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "179",
-                "0",
-                "0",
-                "153",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "5180.0",
-                "5420.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5180.0 ) AND ( [pixel] < 5420.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    179,
+                    0,
+                    0,
+                    153,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5180.0,
+                    5420.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "542 566 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 5420.00 AND [pixel] < 5660.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "5420.0",
-                "5660.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5420.0 ) AND ( [pixel] < 5660.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5420.0,
+                    5660.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 566 dam",
         "group": "GPHEIGHT",
-        "expression": "([pixel] >= 5660.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "5660.0",
-                "7000.0"
-            ]
-        }
+        "expression": "( [pixel] >= 5660.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5660.0,
+                    7000.0
+                ]
+            }
+        ]
     }
 ]

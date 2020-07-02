@@ -3,447 +3,506 @@
         "__type__": "class",
         "name": "< -10",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] < -10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "102",
-                "000",
-                "153",
-                "102",
-                "000"
-            ],
-            "datarange": "-50 -10"
-        }
+        "expression": "( [pixel] < -10 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    102,
+                    0,
+                    153,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-10 -8",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >=-10 AND [pixel] < -8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "102",
-                "000",
-                "190",
-                "175",
-                "140"
-            ],
-            "datarange": "-10 -8"
-        }
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < -8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    102,
+                    0,
+                    190,
+                    175,
+                    140
+                ],
+                "datarange": [
+                    -10,
+                    -8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-8 -6",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= -8 AND [pixel] < -6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "190",
-                "175",
-                "140",
-                "220",
-                "220",
-                "240"
-            ],
-            "datarange": "-8 -6"
-        }
+        "expression": "( ( [pixel] >= -8 ) AND ( [pixel] < -6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    190,
+                    175,
+                    140,
+                    220,
+                    220,
+                    240
+                ],
+                "datarange": [
+                    -8,
+                    -6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-6 -4",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= -6 AND [pixel] < -4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "220",
-                "220",
-                "240",
-                "200",
-                "200",
-                "240"
-            ],
-            "datarange": "-6 -4"
-        }
+        "expression": "( ( [pixel] >= -6 ) AND ( [pixel] < -4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    220,
+                    220,
+                    240,
+                    200,
+                    200,
+                    240
+                ],
+                "datarange": [
+                    -6,
+                    -4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-4 -2",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= -4 AND [pixel] < -2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "200",
-                "200",
-                "240",
-                "153",
-                "153",
-                "153"
-            ],
-            "datarange": "-4 -2"
-        }
+        "expression": "( ( [pixel] >= -4 ) AND ( [pixel] < -2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    200,
+                    200,
+                    240,
+                    153,
+                    153,
+                    153
+                ],
+                "datarange": [
+                    -4,
+                    -2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-2 0",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= -2 AND [pixel] < 0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "153",
-                "153",
-                "153",
-                "217",
-                "234"
-            ],
-            "datarange": [
-                "-2",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= -2 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    153,
+                    153,
+                    153,
+                    217,
+                    234
+                ],
+                "datarange": [
+                    -2,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0 2",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 0 AND [pixel] < 2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "217",
-                "234",
-                "000",
-                "128",
-                "128"
-            ],
-            "datarange": [
-                "0",
-                "2"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    217,
+                    234,
+                    0,
+                    128,
+                    128
+                ],
+                "datarange": [
+                    0,
+                    2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2 4",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 2 AND [pixel] < 4)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "128",
-                "128",
-                "000",
-                "128",
-                "000"
-            ],
-            "datarange": [
-                "2",
-                "4"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    128,
+                    0,
+                    128,
+                    0
+                ],
+                "datarange": [
+                    2,
+                    4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4 6",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 4 AND [pixel] < 6)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "128",
-                "000",
-                "000",
-                "200",
-                "000"
-            ],
-            "datarange": [
-                "4",
-                "6"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    0,
+                    0,
+                    200,
+                    0
+                ],
+                "datarange": [
+                    4,
+                    6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6 8",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 6 AND [pixel] < 8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "200",
-                "000",
-                "000",
-                "255",
-                "000"
-            ],
-            "datarange": [
-                "6",
-                "8"
-            ]
-        }
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    200,
+                    0,
+                    0,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    6,
+                    8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8 10",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 8 AND [pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "000",
-                "255",
-                "255",
-                "000"
-            ],
-            "datarange": [
-                "8",
-                "10"
-            ]
-        }
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    0,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    8,
+                    10
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 12",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 10 AND [pixel] < 12)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "000",
-                "240",
-                "220",
-                "000"
-            ],
-            "datarange": [
-                "10",
-                "12"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    240,
+                    220,
+                    0
+                ],
+                "datarange": [
+                    10,
+                    12
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "12 14",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 12 AND [pixel] < 14)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "220",
-                "000",
-                "240",
-                "190",
-                "000"
-            ],
-            "datarange": [
-                "12",
-                "14"
-            ]
-        }
+        "expression": "( ( [pixel] >= 12 ) AND ( [pixel] < 14 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    220,
+                    0,
+                    240,
+                    190,
+                    0
+                ],
+                "datarange": [
+                    12,
+                    14
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "14 16",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 14 AND [pixel] < 16)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "190",
-                "000",
-                "240",
-                "160",
-                "000"
-            ],
-            "datarange": [
-                "14",
-                "16"
-            ]
-        }
+        "expression": "( ( [pixel] >= 14 ) AND ( [pixel] < 16 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    190,
+                    0,
+                    240,
+                    160,
+                    0
+                ],
+                "datarange": [
+                    14,
+                    16
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "16 18",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 16 AND [pixel] < 18)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "240",
-                "160",
-                "000",
-                "255",
-                "128",
-                "000"
-            ],
-            "datarange": [
-                "16",
-                "18"
-            ]
-        }
+        "expression": "( ( [pixel] >= 16 ) AND ( [pixel] < 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    160,
+                    0,
+                    255,
+                    128,
+                    0
+                ],
+                "datarange": [
+                    16,
+                    18
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "18 20",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 18 AND [pixel] < 20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "128",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "18",
-                "20"
-            ]
-        }
+        "expression": "( ( [pixel] >= 18 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    128,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    18,
+                    20
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 22",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 20 AND [pixel] < 22)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "255",
-                "185",
-                "185"
-            ],
-            "datarange": [
-                "20",
-                "22"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 22 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    185,
+                    185
+                ],
+                "datarange": [
+                    20,
+                    22
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "22 24",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 22 AND [pixel] < 24)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "185",
-                "185",
-                "255",
-                "113",
-                "255"
-            ],
-            "datarange": [
-                "22",
-                "24"
-            ]
-        }
+        "expression": "( ( [pixel] >= 22 ) AND ( [pixel] < 24 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    185,
+                    185,
+                    255,
+                    113,
+                    255
+                ],
+                "datarange": [
+                    22,
+                    24
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "24 26",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 24 AND [pixel] < 26)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "113",
-                "255",
-                "255",
-                "000",
-                "255"
-            ],
-            "datarange": [
-                "24",
-                "26"
-            ]
-        }
+        "expression": "( ( [pixel] >= 24 ) AND ( [pixel] < 26 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    113,
+                    255,
+                    255,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    24,
+                    26
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "26 28",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 26 AND [pixel] < 28)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "255",
-                "163",
-                "073",
-                "164"
-            ],
-            "datarange": [
-                "26",
-                "28"
-            ]
-        }
+        "expression": "( ( [pixel] >= 26 ) AND ( [pixel] < 28 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    255,
+                    163,
+                    73,
+                    164
+                ],
+                "datarange": [
+                    26,
+                    28
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "28 30",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 28 AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "163",
-                "073",
-                "164",
-                "255",
-                "255",
-                "255"
-            ],
-            "datarange": [
-                "28",
-                "30"
-            ]
-        }
+        "expression": "( ( [pixel] >= 28 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    163,
+                    73,
+                    164,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    28,
+                    30
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 +",
         "group": "AVTD-LINEAR",
-        "expression": "([pixel] >= 30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "255",
-                "255",
-                "255",
-                "255"
-            ],
-            "datarange": [
-                "30",
-                "50"
-            ]
-        }
+        "expression": "( [pixel] >= 30 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    30,
+                    50
+                ]
+            }
+        ]
     }
 ]

@@ -1,16 +1,16 @@
-[
-    {
-        "__type__": "class",
-        "name": "Radar coverage inverted/Couverture radar inversée",
-        "group": "INV_T50G169",
-        "style": {
+{
+    "__type__": "class",
+    "name": "Radar coverage inverted/Couverture radar invers\u00e9e",
+    "group": "INV_T50G169",
+    "styles": [
+        {
             "__type__": "style",
             "color": [
-                "169",
-                "169",
-                "169"
+                169,
+                169,
+                169
             ],
-            "opacity": "50"
+            "opacity": 50
         }
-    }
-]
+    ]
+}

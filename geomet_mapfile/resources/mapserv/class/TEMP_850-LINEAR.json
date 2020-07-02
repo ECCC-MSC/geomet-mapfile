@@ -3,540 +3,644 @@
         "__type__": "class",
         "name": ".. -80",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] < -80)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": "-80.0 -140.0"
-        }
+        "expression": "( [pixel] < -80 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    -80.0,
+                    -140.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-80 -75",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -80 AND [pixel] < -75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "183"
-            ],
-            "datarange": "-80.0 -75.0"
-        }
+        "expression": "( ( [pixel] >= -80 ) AND ( [pixel] < -75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    183
+                ],
+                "datarange": [
+                    -80.0,
+                    -75.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-75 -70",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -75 AND [pixel] < -70)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "183",
-                "0",
-                "0",
-                "239"
-            ],
-            "datarange": "-75.0 -70.0"
-        }
+        "expression": "( ( [pixel] >= -75 ) AND ( [pixel] < -70 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    183,
+                    0,
+                    0,
+                    239
+                ],
+                "datarange": [
+                    -75.0,
+                    -70.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-70 -65",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -70 AND [pixel] < -65)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "239",
-                "0",
-                "63",
-                "254"
-            ],
-            "datarange": "-70.0 -65.0"
-        }
+        "expression": "( ( [pixel] >= -70 ) AND ( [pixel] < -65 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    239,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    -70.0,
+                    -65.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-65 -60",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -65 AND [pixel] < -60)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "254",
-                "0",
-                "147",
-                "254"
-            ],
-            "datarange": "-65.0 -60.0"
-        }
+        "expression": "( ( [pixel] >= -65 ) AND ( [pixel] < -60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    147,
+                    254
+                ],
+                "datarange": [
+                    -65.0,
+                    -60.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-60 -55",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -60 AND [pixel] < -55)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "147",
-                "254",
-                "0",
-                "231",
-                "254"
-            ],
-            "datarange": "-60.0 -55.0"
-        }
+        "expression": "( ( [pixel] >= -60 ) AND ( [pixel] < -55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    147,
+                    254,
+                    0,
+                    231,
+                    254
+                ],
+                "datarange": [
+                    -60.0,
+                    -55.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-55 -50",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -55 AND [pixel] < -50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "231",
-                "254",
-                "27",
-                "234",
-                "229"
-            ],
-            "datarange": "-55.0 -50.0"
-        }
+        "expression": "( ( [pixel] >= -55 ) AND ( [pixel] < -50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    231,
+                    254,
+                    27,
+                    234,
+                    229
+                ],
+                "datarange": [
+                    -55.0,
+                    -50.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-50 -45",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -50 AND [pixel] < -45)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "27",
-                "234",
-                "229",
-                "54",
-                "237",
-                "202"
-            ],
-            "datarange": "-50.0 -45.0"
-        }
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    27,
+                    234,
+                    229,
+                    54,
+                    237,
+                    202
+                ],
+                "datarange": [
+                    -50.0,
+                    -45.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-45 -40",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -45 AND [pixel] < -40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "54",
-                "237",
-                "202",
-                "81",
-                "240",
-                "175"
-            ],
-            "datarange": "-45.0 -40.0"
-        }
+        "expression": "( ( [pixel] >= -45 ) AND ( [pixel] < -40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    54,
+                    237,
+                    202,
+                    81,
+                    240,
+                    175
+                ],
+                "datarange": [
+                    -45.0,
+                    -40.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-40 -35",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -40 AND [pixel] < -35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "81",
-                "240",
-                "175",
-                "108",
-                "243",
-                "148"
-            ],
-            "datarange": "-40.0 -35.0"
-        }
+        "expression": "( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    81,
+                    240,
+                    175,
+                    108,
+                    243,
+                    148
+                ],
+                "datarange": [
+                    -40.0,
+                    -35.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-35 -30",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -35 AND [pixel] < -30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "108",
-                "243",
-                "148",
-                "135",
-                "246",
-                "121"
-            ],
-            "datarange": "-35.0 -30.0"
-        }
+        "expression": "( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    108,
+                    243,
+                    148,
+                    135,
+                    246,
+                    121
+                ],
+                "datarange": [
+                    -35.0,
+                    -30.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-30 -25",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -30 AND [pixel] < -25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "135",
-                "246",
-                "121",
-                "162",
-                "250",
-                "94"
-            ],
-            "datarange": "-30.0 -25.0"
-        }
+        "expression": "( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    135,
+                    246,
+                    121,
+                    162,
+                    250,
+                    94
+                ],
+                "datarange": [
+                    -30.0,
+                    -25.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-25 -20",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -25 AND [pixel] < -20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "162",
-                "250",
-                "94",
-                "187",
-                "254",
-                "67"
-            ],
-            "datarange": "-25.0 -20.0"
-        }
+        "expression": "( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    162,
+                    250,
+                    94,
+                    187,
+                    254,
+                    67
+                ],
+                "datarange": [
+                    -25.0,
+                    -20.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-20 -15",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -20 AND [pixel] < -15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "187",
-                "254",
-                "67",
-                "204",
-                "254",
-                "50"
-            ],
-            "datarange": "-20.0 -15.0"
-        }
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    187,
+                    254,
+                    67,
+                    204,
+                    254,
+                    50
+                ],
+                "datarange": [
+                    -20.0,
+                    -15.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-15 -10",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -15 AND [pixel] < -10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "204",
-                "254",
-                "50",
-                "221",
-                "255",
-                "33"
-            ],
-            "datarange": "-15.0 -10.0"
-        }
+        "expression": "( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    254,
+                    50,
+                    221,
+                    255,
+                    33
+                ],
+                "datarange": [
+                    -15.0,
+                    -10.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-10 -5",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -10 AND [pixel] < -5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "221",
-                "255",
-                "33",
-                "238",
-                "255",
-                "16"
-            ],
-            "datarange": "-10.0 -5.0"
-        }
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    221,
+                    255,
+                    33,
+                    238,
+                    255,
+                    16
+                ],
+                "datarange": [
+                    -10.0,
+                    -5.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-5 0",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= -5 AND [pixel] < 0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "238",
-                "255",
-                "16",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "-5.0",
-                "0.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    238,
+                    255,
+                    16,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    -5.0,
+                    0.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0 5",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 0 AND [pixel] < 5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "255",
-                "216",
-                "0"
-            ],
-            "datarange": [
-                "0.0",
-                "5.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    255,
+                    216,
+                    0
+                ],
+                "datarange": [
+                    0.0,
+                    5.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5 10",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 5 AND [pixel] < 10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "216",
-                "0",
-                "255",
-                "183",
-                "0"
-            ],
-            "datarange": [
-                "5.0",
-                "10.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    216,
+                    0,
+                    255,
+                    183,
+                    0
+                ],
+                "datarange": [
+                    5.0,
+                    10.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10 15",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 10 AND [pixel] < 15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "183",
-                "0",
-                "254",
-                "150",
-                "0"
-            ],
-            "datarange": [
-                "10.0",
-                "15.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    183,
+                    0,
+                    254,
+                    150,
+                    0
+                ],
+                "datarange": [
+                    10.0,
+                    15.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "15 20",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 15 AND [pixel] < 20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "150",
-                "0",
-                "254",
-                "116",
-                "0"
-            ],
-            "datarange": [
-                "15.0",
-                "20.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    150,
+                    0,
+                    254,
+                    116,
+                    0
+                ],
+                "datarange": [
+                    15.0,
+                    20.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20 25",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 20 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "116",
-                "0",
-                "254",
-                "83",
-                "0"
-            ],
-            "datarange": [
-                "20.0",
-                "25.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    116,
+                    0,
+                    254,
+                    83,
+                    0
+                ],
+                "datarange": [
+                    20.0,
+                    25.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "25 30",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 25 AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "83",
-                "0",
-                "254",
-                "50",
-                "0"
-            ],
-            "datarange": [
-                "25.0",
-                "30.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    83,
+                    0,
+                    254,
+                    50,
+                    0
+                ],
+                "datarange": [
+                    25.0,
+                    30.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 35",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 30 AND [pixel] < 35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "50",
-                "0",
-                "239",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "30.0",
-                "35.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    50,
+                    0,
+                    239,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    30.0,
+                    35.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "35 40",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 35 AND [pixel] < 40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "239",
-                "0",
-                "0",
-                "183",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "35.0",
-                "40.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    239,
+                    0,
+                    0,
+                    183,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    35.0,
+                    40.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "40 45",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 40 AND [pixel] < 45)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "183",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "40.0",
-                "45.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    183,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    40.0,
+                    45.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "45 50",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 45 AND [pixel] < 50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "63",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "45.0",
-                "50.0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 45 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    63,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    45.0,
+                    50.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 50",
         "group": "TEMP_850-LINEAR",
-        "expression": "([pixel] >= 50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "63",
-                "0",
-                "0",
-                "63",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "50.0",
-                "110.0"
-            ]
-        }
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    63,
+                    0,
+                    0,
+                    63,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    50.0,
+                    110.0
+                ]
+            }
+        ]
     }
 ]

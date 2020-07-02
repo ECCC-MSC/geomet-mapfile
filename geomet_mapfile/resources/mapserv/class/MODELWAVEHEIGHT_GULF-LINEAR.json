@@ -3,336 +3,368 @@
         "__type__": "class",
         "name": "0.0 - 0.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(0.001 <= [pixel] AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "232",
-                "000",
-                "063",
-                "254"
-            ],
-            "datarange": [
-                "0.001",
-                "0.5"
-            ]
-        }
+        "expression": "( ( 0.001 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    232,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    0.001,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 1.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(0.5 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "063",
-                "254",
-                "000",
-                "115",
-                "254"
-            ],
-            "datarange": [
-                "0.5",
-                "1.0"
-            ]
-        }
+        "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    115,
+                    254
+                ],
+                "datarange": [
+                    0.5,
+                    1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "115",
-                "254",
-                "000",
-                "168",
-                "254"
-            ],
-            "datarange": [
-                "1.0",
-                "1.5"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    115,
+                    254,
+                    0,
+                    168,
+                    254
+                ],
+                "datarange": [
+                    1.0,
+                    1.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 2.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(1.5 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "168",
-                "254",
-                "000",
-                "221",
-                "254"
-            ],
-            "datarange": [
-                "1.5",
-                "2.0"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    168,
+                    254,
+                    0,
+                    221,
+                    254
+                ],
+                "datarange": [
+                    1.5,
+                    2.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 2.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(2.0 <= [pixel] AND [pixel] < 2.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "221",
-                "254",
-                "021",
-                "253",
-                "233"
-            ],
-            "datarange": [
-                "2.0",
-                "2.5"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    221,
+                    254,
+                    21,
+                    253,
+                    233
+                ],
+                "datarange": [
+                    2.0,
+                    2.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.5 - 3.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(2.5 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "021",
-                "253",
-                "233",
-                "074",
-                "253",
-                "180"
-            ],
-            "datarange": [
-                "2.5",
-                "3.0"
-            ]
-        }
+        "expression": "( ( 2.5 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    21,
+                    253,
+                    233,
+                    74,
+                    253,
+                    180
+                ],
+                "datarange": [
+                    2.5,
+                    3.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 3.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 3.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "074",
-                "253",
-                "180",
-                "127",
-                "254",
-                "127"
-            ],
-            "datarange": [
-                "3.0",
-                "3.5"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 3.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    74,
+                    253,
+                    180,
+                    127,
+                    254,
+                    127
+                ],
+                "datarange": [
+                    3.0,
+                    3.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.5 - 4.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(3.5 <= [pixel] AND [pixel] < 4.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "254",
-                "127",
-                "180",
-                "254",
-                "074"
-            ],
-            "datarange": [
-                "3.5",
-                "4.0"
-            ]
-        }
+        "expression": "( ( 3.5 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    254,
+                    127,
+                    180,
+                    254,
+                    74
+                ],
+                "datarange": [
+                    3.5,
+                    4.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.0 - 4.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(4.0 <= [pixel] AND [pixel] < 4.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "180",
-                "254",
-                "074",
-                "233",
-                "254",
-                "021"
-            ],
-            "datarange": [
-                "4.0",
-                "4.5"
-            ]
-        }
+        "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 4.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    180,
+                    254,
+                    74,
+                    233,
+                    254,
+                    21
+                ],
+                "datarange": [
+                    4.0,
+                    4.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.5 - 5.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(4.5 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "233",
-                "254",
-                "021",
-                "254",
-                "223",
-                "000"
-            ],
-            "datarange": [
-                "4.5",
-                "5.0"
-            ]
-        }
+        "expression": "( ( 4.5 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    233,
+                    254,
+                    21,
+                    254,
+                    223,
+                    0
+                ],
+                "datarange": [
+                    4.5,
+                    5.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 5.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 5.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "223",
-                "000",
-                "254",
-                "170",
-                "000"
-            ],
-            "datarange": [
-                "5.0",
-                "5.5"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 5.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    223,
+                    0,
+                    254,
+                    170,
+                    0
+                ],
+                "datarange": [
+                    5.0,
+                    5.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.5 - 6.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(5.5 <= [pixel] AND [pixel] < 6.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "170",
-                "000",
-                "254",
-                "116",
-                "000"
-            ],
-            "datarange": [
-                "5.5",
-                "6.0"
-            ]
-        }
+        "expression": "( ( 5.5 <= [pixel] ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    170,
+                    0,
+                    254,
+                    116,
+                    0
+                ],
+                "datarange": [
+                    5.5,
+                    6.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.0 - 6.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(6.0 <= [pixel] AND [pixel] < 6.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "116",
-                "000",
-                "254",
-                "063",
-                "000"
-            ],
-            "datarange": [
-                "6.0",
-                "6.5"
-            ]
-        }
+        "expression": "( ( 6.0 <= [pixel] ) AND ( [pixel] < 6.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    116,
+                    0,
+                    254,
+                    63,
+                    0
+                ],
+                "datarange": [
+                    6.0,
+                    6.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.5 - 7.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(6.5 <= [pixel] AND [pixel] < 7.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "063",
-                "000",
-                "254",
-                "010",
-                "000"
-            ],
-            "datarange": [
-                "6.5",
-                "7.0"
-            ]
-        }
+        "expression": "( ( 6.5 <= [pixel] ) AND ( [pixel] < 7.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    63,
+                    0,
+                    254,
+                    10,
+                    0
+                ],
+                "datarange": [
+                    6.5,
+                    7.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.0 - 7.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(7.0 <= [pixel] AND [pixel] < 7.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "010",
-                "000",
-                "232",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "7.0",
-                "7.5"
-            ]
-        }
+        "expression": "( ( 7.0 <= [pixel] ) AND ( [pixel] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    10,
+                    0,
+                    232,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    7.0,
+                    7.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.5 - 8.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF-LINEAR",
-        "expression": "(7.5 <= [pixel] AND [pixel] <= 8.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "232",
-                "000",
-                "000",
-                "190",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "7.5",
-                "8.0"
-            ]
-        }
+        "expression": "( ( 7.5 <= [pixel] ) AND ( [pixel] <= 8.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    0,
+                    0,
+                    190,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    7.5,
+                    8.0
+                ]
+            }
+        ]
     }
 ]

@@ -3,147 +3,161 @@
         "__type__": "class",
         "name": "200.00 - 271.15",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(200.00 <= [pixel] AND [pixel] < 271.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": [
-                "200.00",
-                "271.15"
-            ]
-        }
+        "expression": "( ( 200.0 <= [pixel] ) AND ( [pixel] < 271.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    200.0,
+                    271.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "271.15 - 277.55",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(271.15 <= [pixel] AND [pixel] < 277.55)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "63",
-                "254"
-            ],
-            "datarange": [
-                "271.15",
-                "277.55"
-            ]
-        }
+        "expression": "( ( 271.15 <= [pixel] ) AND ( [pixel] < 277.55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    271.15,
+                    277.55
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "277.55 - 283.95",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(277.55 <= [pixel] AND [pixel] < 283.95)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "254",
-                "51",
-                "253",
-                "203"
-            ],
-            "datarange": [
-                "277.55",
-                "283.95"
-            ]
-        }
+        "expression": "( ( 277.55 <= [pixel] ) AND ( [pixel] < 283.95 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    277.55,
+                    283.95
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "283.95 - 290.35",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(283.95 <= [pixel] AND [pixel] < 290.35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "253",
-                "203",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "283.95",
-                "290.35"
-            ]
-        }
+        "expression": "( ( 283.95 <= [pixel] ) AND ( [pixel] < 290.35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    283.95,
+                    290.35
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "290.35 - 296.75",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(290.35 <= [pixel] AND [pixel] < 296.75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "254",
-                "50",
-                "0"
-            ],
-            "datarange": [
-                "290.35",
-                "296.75"
-            ]
-        }
+        "expression": "( ( 290.35 <= [pixel] ) AND ( [pixel] < 296.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    50,
+                    0
+                ],
+                "datarange": [
+                    290.35,
+                    296.75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "296.75 - 303.15",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(296.75 <= [pixel] AND [pixel] < 303.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "50",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "296.75",
-                "303.15"
-            ]
-        }
+        "expression": "( ( 296.75 <= [pixel] ) AND ( [pixel] < 303.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    50,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    296.75,
+                    303.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "303.15 - 400.00",
         "group": "SEA_TEMPSURF-DEFAULT",
-        "expression": "(303.15 <= [pixel] AND [pixel] <= 400.00)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "303.15",
-                "400.00"
-            ]
-        }
+        "expression": "( ( 303.15 <= [pixel] ) AND ( [pixel] <= 400.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    303.15,
+                    400.0
+                ]
+            }
+        ]
     }
 ]

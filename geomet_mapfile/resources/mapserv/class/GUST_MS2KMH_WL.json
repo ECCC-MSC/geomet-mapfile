@@ -3,168 +3,192 @@
         "__type__": "class",
         "name": "40 50 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 11.11 AND [pixel] < 13.89)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 11.11 ) AND ( [pixel] < 13.89 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 60 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 13.89 AND [pixel] < 16.67)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "234"
-            ]
-        }
+        "expression": "( ( [pixel] >= 13.89 ) AND ( [pixel] < 16.67 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    234
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 70 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 16.67 AND [pixel] < 19.44)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "137",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 16.67 ) AND ( [pixel] < 19.44 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    137,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "70 80 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 19.44 AND [pixel] < 22.22)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "24",
-                "253",
-                "230"
-            ]
-        }
+        "expression": "( ( [pixel] >= 19.44 ) AND ( [pixel] < 22.22 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    24,
+                    253,
+                    230
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "80 90 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 22.22 AND [pixel] < 25)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "157",
-                "254",
-                "97"
-            ]
-        }
+        "expression": "( ( [pixel] >= 22.22 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    157,
+                    254,
+                    97
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 100 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 25 AND [pixel] < 27.78)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "228",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 27.78 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    228,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100 110 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 27.78 AND [pixel] < 30.56)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "169",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 27.78 ) AND ( [pixel] < 30.56 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    169,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "110 120 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 30.56 AND [pixel] < 33.33)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "110",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30.56 ) AND ( [pixel] < 33.33 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    110,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "120 130 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 33.33 AND [pixel] < 36.11)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "248",
-                "55",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 33.33 ) AND ( [pixel] < 36.11 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    248,
+                    55,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "130 140 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 36.11 AND [pixel] < 38.89)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "241",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 36.11 ) AND ( [pixel] < 38.89 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    241,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "140 150 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 38.89 AND [pixel] < 41.67)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "187",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 38.89 ) AND ( [pixel] < 41.67 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    187,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "150 160 km/hr",
         "group": "GUST_MS2KMH_WL",
-        "expression": "([pixel] >= 41.67 AND [pixel] < 44.44)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "120",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 41.67 ) AND ( [pixel] < 44.44 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    120,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

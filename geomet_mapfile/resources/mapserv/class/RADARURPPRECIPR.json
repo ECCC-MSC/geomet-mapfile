@@ -3,197 +3,225 @@
         "__type__": "class",
         "name": "0.0 mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] < 0.1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "0"
-            ],
-            "opacity": "0"
-        }
+        "expression": "( [pixel] < 0.1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "opacity": 0
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.1 - 1mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 0.1 AND [pixel] < 1)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "153",
-                "204",
-                "255"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    204,
+                    255
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1 - 2mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 1 AND [pixel] < 2)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "172",
-                "225"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    172,
+                    225
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2 - 4mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 2 AND [pixel] < 4)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "238",
-                "68"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    238,
+                    68
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4 - 8mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 4 AND [pixel] < 8)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "182",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    182,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "8 - 12mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 8 AND [pixel] < 12)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "121",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    121,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "12 - 16mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 12 AND [pixel] < 16)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "206",
-                "225",
-                "41"
-            ]
-        }
+        "expression": "( ( [pixel] >= 12 ) AND ( [pixel] < 16 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    206,
+                    225,
+                    41
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "16 - 24mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 16 AND [pixel] < 24)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "204",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 16 ) AND ( [pixel] < 24 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    204,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "24 - 32mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 24 AND [pixel] < 32)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "143",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 24 ) AND ( [pixel] < 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    143,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "32 - 50mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 32 AND [pixel] < 50)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "63",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 32 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    63,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "50 - 64mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 50 AND [pixel] < 64)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "255",
-                "1",
-                "87"
-            ]
-        }
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 64 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    1,
+                    87
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "64 - 100mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 64 AND [pixel] < 100)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "186",
-                "34",
-                "187"
-            ]
-        }
+        "expression": "( ( [pixel] >= 64 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    186,
+                    34,
+                    187
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "100 - 150mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 100 AND [pixel] < 150)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "111",
-                "9",
-                "162"
-            ]
-        }
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 150 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    111,
+                    9,
+                    162
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "150 - 200mm/h",
         "group": "RADARURPPRECIPR",
-        "expression": "([pixel] >= 150)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "102",
-                "0",
-                "153"
-            ]
-        }
+        "expression": "( [pixel] >= 150 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    102,
+                    0,
+                    153
+                ]
+            }
+        ]
     }
 ]

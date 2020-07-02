@@ -3,189 +3,207 @@
         "__type__": "class",
         "name": "0.01 - 0.05 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.0000028 AND [pixel] < 0.000014)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "127",
-                "0",
-                "0",
-                "232"
-            ],
-            "datarange": [
-                "0.0000028",
-                "0.000014"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2.8e-06 ) AND ( [pixel] < 1.4e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    232
+                ],
+                "datarange": [
+                    2.8e-06,
+                    1.4e-05
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.05 - 0.1 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >=  0.000014AND [pixel] < 0.000028)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "232",
-                "0",
-                "126",
-                "254"
-            ],
-            "datarange": [
-                "0.000014",
-                "0.000028"
-            ]
-        }
+        "expression": "( ( [pixel] >= 1.4e-05 ) AND ( [pixel] < 2.8e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    232,
+                    0,
+                    126,
+                    254
+                ],
+                "datarange": [
+                    1.4e-05,
+                    2.8e-05
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.1 - 0.5 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.000028 AND [pixel] < 0.00014)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "126",
-                "254",
-                "25",
-                "253",
-                "229"
-            ],
-            "datarange": [
-                "0.000028",
-                "0.00014"
-            ]
-        }
+        "expression": "( ( [pixel] >= 2.8e-05 ) AND ( [pixel] < 0.00014 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    126,
+                    254,
+                    25,
+                    253,
+                    229
+                ],
+                "datarange": [
+                    2.8e-05,
+                    0.00014
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 1.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.00014 AND [pixel] < 0.00028)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "25",
-                "253",
-                "229",
-                "153",
-                "254",
-                "101"
-            ],
-            "datarange": [
-                "0.00014",
-                "0.00028"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.00014 ) AND ( [pixel] < 0.00028 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    25,
+                    253,
+                    229,
+                    153,
+                    254,
+                    101
+                ],
+                "datarange": [
+                    0.00014,
+                    0.00028
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 5.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.00028 AND [pixel] < 0.0014)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "254",
-                "101",
-                "254",
-                "229",
-                "0"
-            ],
-            "datarange": [
-                "0.00028",
-                "0.0014"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.00028 ) AND ( [pixel] < 0.0014 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    254,
+                    101,
+                    254,
+                    229,
+                    0
+                ],
+                "datarange": [
+                    0.00028,
+                    0.0014
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 10.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.0014 AND [pixel] < 0.0028)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "229",
-                "0",
-                "254",
-                "101",
-                "0"
-            ],
-            "datarange": [
-                "0.0014",
-                "0.0028"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.0014 ) AND ( [pixel] < 0.0028 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    229,
+                    0,
+                    254,
+                    101,
+                    0
+                ],
+                "datarange": [
+                    0.0014,
+                    0.0028
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10.0 - 20.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.0028 AND [pixel] < 0.0056)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "101",
-                "0",
-                "232",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "0.0028",
-                "0.0056"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.0028 ) AND ( [pixel] < 0.0056 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    101,
+                    0,
+                    232,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0028,
+                    0.0056
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "20.0 - 50.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.0056 AND [pixel] < 0.014)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "232",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "0.0056",
-                "0.014"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.0056 ) AND ( [pixel] < 0.014 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0056,
+                    0.014
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 50.0 mm/h",
         "group": "PRECIPPRTMMH-LINEAR",
-        "expression": "([pixel] >= 0.014)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "127",
-                "0",
-                "0",
-                "127",
-                "0",
-                "0"
-            ],
-            "datarange": [
-                "0.014",
-                "0.5"
-            ]
-        }
+        "expression": "( [pixel] >= 0.014 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.014,
+                    0.5
+                ]
+            }
+        ]
     }
 ]

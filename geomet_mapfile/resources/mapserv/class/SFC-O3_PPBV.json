@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 \u2014 10 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ([pixel] * (10 ^ 9)) < 10 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    6,
+                    25,
+                    195,
+                    11,
+                    39,
+                    250
+                ],
+                "datarange": [
+                    0,
+                    1e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 \u2014 20 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 10 ) AND ( ([pixel] * (10 ^ 9)) < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    11,
+                    39,
+                    250,
+                    22,
+                    132,
+                    250
+                ],
+                "datarange": [
+                    1e-08,
+                    2e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 \u2014 30 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 20 ) AND ( ([pixel] * (10 ^ 9)) < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    22,
+                    132,
+                    250,
+                    40,
+                    234,
+                    252
+                ],
+                "datarange": [
+                    2e-08,
+                    3e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 \u2014 40 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 30 ) AND ( ([pixel] * (10 ^ 9)) < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    40,
+                    234,
+                    252,
+                    78,
+                    252,
+                    190
+                ],
+                "datarange": [
+                    3e-08,
+                    4e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 \u2014 50 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 40 ) AND ( ([pixel] * (10 ^ 9)) < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    78,
+                    252,
+                    190,
+                    159,
+                    252,
+                    108
+                ],
+                "datarange": [
+                    4e-08,
+                    5e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 \u2014 60 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 50 ) AND ( ([pixel] * (10 ^ 9)) < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    159,
+                    252,
+                    108,
+                    239,
+                    252,
+                    56
+                ],
+                "datarange": [
+                    5e-08,
+                    6e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 \u2014 70 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 60 ) AND ( ([pixel] * (10 ^ 9)) < 70 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    239,
+                    252,
+                    56,
+                    252,
+                    187,
+                    44
+                ],
+                "datarange": [
+                    6e-08,
+                    7e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "70 \u2014 80 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 70 ) AND ( ([pixel] * (10 ^ 9)) < 80 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    187,
+                    44,
+                    251,
+                    100,
+                    32
+                ],
+                "datarange": [
+                    7e-08,
+                    8e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "80 \u2014 90 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 80 ) AND ( ([pixel] * (10 ^ 9)) < 90 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    100,
+                    32,
+                    251,
+                    18,
+                    27
+                ],
+                "datarange": [
+                    8e-08,
+                    9e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "90 \u2014 100 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 90 ) AND ( ([pixel] * (10 ^ 9)) < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    18,
+                    27,
+                    196,
+                    8,
+                    19
+                ],
+                "datarange": [
+                    9e-08,
+                    1e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 100 [ppbv]",
+        "group": "SFC-O3_PPBV",
+        "expression": "( [pixel] >= 100 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    196,
+                    8,
+                    19,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1e-07,
+                    0.0001
+                ]
+            }
+        ]
+    }
+]

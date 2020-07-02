@@ -3,224 +3,256 @@
         "__type__": "class",
         "name": "0.0 - 0.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(0.001 <= [pixel] AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "000",
-                "232"
-            ]
-        }
+        "expression": "( ( 0.001 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    232
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 1.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(0.5 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "063",
-                "254"
-            ]
-        }
+        "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "115",
-                "254"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    115,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 2.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(1.5 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "168",
-                "254"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    168,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 2.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(2.0 <= [pixel] AND [pixel] < 2.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "000",
-                "221",
-                "254"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    221,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.5 - 3.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(2.5 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "021",
-                "253",
-                "233"
-            ]
-        }
+        "expression": "( ( 2.5 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    21,
+                    253,
+                    233
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 3.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 3.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "074",
-                "253",
-                "180"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 3.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    74,
+                    253,
+                    180
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.5 - 4.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(3.5 <= [pixel] AND [pixel] < 4.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "127",
-                "254",
-                "127"
-            ]
-        }
+        "expression": "( ( 3.5 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    254,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.0 - 4.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(4.0 <= [pixel] AND [pixel] < 4.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "180",
-                "254",
-                "074"
-            ]
-        }
+        "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 4.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    180,
+                    254,
+                    74
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.5 - 5.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(4.5 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "233",
-                "254",
-                "021"
-            ]
-        }
+        "expression": "( ( 4.5 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    233,
+                    254,
+                    21
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 5.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 5.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "223",
-                "000"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 5.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    223,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.5 - 6.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(5.5 <= [pixel] AND [pixel] < 6.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "170",
-                "000"
-            ]
-        }
+        "expression": "( ( 5.5 <= [pixel] ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    170,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.0 - 6.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(6.0 <= [pixel] AND [pixel] < 6.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "116",
-                "000"
-            ]
-        }
+        "expression": "( ( 6.0 <= [pixel] ) AND ( [pixel] < 6.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    116,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "6.5 - 7.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(6.5 <= [pixel] AND [pixel] < 7.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "063",
-                "000"
-            ]
-        }
+        "expression": "( ( 6.5 <= [pixel] ) AND ( [pixel] < 7.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    63,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.0 - 7.5 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(7.0 <= [pixel] AND [pixel] < 7.5)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "010",
-                "000"
-            ]
-        }
+        "expression": "( ( 7.0 <= [pixel] ) AND ( [pixel] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    10,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.5 - 8.0 (m)",
         "group": "MODELWAVEHEIGHT_GULF",
-        "expression": "(7.5 <= [pixel] AND [pixel] <= 8.0)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "232",
-                "000",
-                "000"
-            ]
-        }
+        "expression": "( ( 7.5 <= [pixel] ) AND ( [pixel] <= 8.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    232,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

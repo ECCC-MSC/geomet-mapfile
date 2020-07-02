@@ -1,0 +1,278 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 0.1",
+        "group": "NO2-LOW",
+        "expression": "( [pixel] < 0.1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    225,
+                    225,
+                    225,
+                    175,
+                    175,
+                    175
+                ],
+                "datarange": [
+                    0,
+                    0.1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 - 0.2",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    175,
+                    175,
+                    175,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0.1,
+                    0.2
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.2 - 0.5",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    0.2,
+                    0.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    204,
+                    255
+                ],
+                "datarange": [
+                    0.5,
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 - 1.5",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    2,
+                    3
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1.5 - 2",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 1.5 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    1.5,
+                    2
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 - 3",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    2,
+                    3
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 - 4",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    3,
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 - 5",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    4,
+                    5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 10",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 25",
+        "group": "NO2-LOW",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    10,
+                    25
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 25",
+        "group": "NO2-LOW",
+        "expression": "( [pixel] >= 25 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    25,
+                    1000
+                ]
+            }
+        ]
+    }
+]

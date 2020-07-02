@@ -3,255 +3,322 @@
         "__type__": "class",
         "name": "-500 -300",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >=-500 AND [pixel] < -300)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "255",
-                "000",
-                "000",
-                "255"
-            ],
-            "datarange": "-500 -300"
-        }
+        "expression": "( ( [pixel] >= -500 ) AND ( [pixel] < -300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    0,
+                    255
+                ],
+                "datarange": [
+                    -500,
+                    -300
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-300 -240",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -300 AND [pixel] < -240)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "000",
-                "255",
-                "000",
-                "076",
-                "194"
-            ],
-            "datarange": "-300 -240"
-        }
+        "expression": "( ( [pixel] >= -300 ) AND ( [pixel] < -240 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    255,
+                    0,
+                    76,
+                    194
+                ],
+                "datarange": [
+                    -300,
+                    -240
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-240 -200",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -240 AND [pixel] < -200)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "076",
-                "194",
-                "000",
-                "128",
-                "153"
-            ],
-            "datarange": "-240 -200"
-        }
+        "expression": "( ( [pixel] >= -240 ) AND ( [pixel] < -200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    76,
+                    194,
+                    0,
+                    128,
+                    153
+                ],
+                "datarange": [
+                    -240,
+                    -200
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-200 -170",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -200 AND [pixel] < -170)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "128",
-                "153",
-                "000",
-                "176",
-                "115"
-            ],
-            "datarange": "-200 -170"
-        }
+        "expression": "( ( [pixel] >= -200 ) AND ( [pixel] < -170 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    128,
+                    153,
+                    0,
+                    176,
+                    115
+                ],
+                "datarange": [
+                    -200,
+                    -170
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-170 -130",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -170 AND [pixel] < -130)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "176",
-                "115",
-                "000",
-                "217",
-                "082"
-            ],
-            "datarange": "-170 -130"
-        }
+        "expression": "( ( [pixel] >= -170 ) AND ( [pixel] < -130 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    176,
+                    115,
+                    0,
+                    217,
+                    82
+                ],
+                "datarange": [
+                    -170,
+                    -130
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-130 -100",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -130 AND [pixel] < -100)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "217",
-                "082",
-                "000",
-                "255",
-                "051"
-            ],
-            "datarange": "-130 -100"
-        }
+        "expression": "( ( [pixel] >= -130 ) AND ( [pixel] < -100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    217,
+                    82,
+                    0,
+                    255,
+                    51
+                ],
+                "datarange": [
+                    -130,
+                    -100
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-100 -75",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -100 AND [pixel] < -75)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "051",
-                "124",
-                "255",
-                "027"
-            ],
-            "datarange": "-100 -75"
-        }
+        "expression": "( ( [pixel] >= -100 ) AND ( [pixel] < -75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    51,
+                    124,
+                    255,
+                    27
+                ],
+                "datarange": [
+                    -100,
+                    -75
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-75 -50",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -75 AND [pixel] < -50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "124",
-                "255",
-                "027",
-                "255",
-                "255",
-                "000"
-            ],
-            "datarange": "-75 -50"
-        }
+        "expression": "( ( [pixel] >= -75 ) AND ( [pixel] < -50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    124,
+                    255,
+                    27,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    -75,
+                    -50
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-50 -35",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -50 AND [pixel] < -35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "000",
-                "255",
-                "117",
-                "000"
-            ],
-            "datarange": "-50 -35"
-        }
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    255,
+                    117,
+                    0
+                ],
+                "datarange": [
+                    -50,
+                    -35
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-35 -20",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -35 AND [pixel] < -20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "117",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": "-35 -20"
-        }
+        "expression": "( ( [pixel] >= -35 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    117,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    -35,
+                    -20
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-20 -5",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -20 AND [pixel] < -5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "255",
-                "000",
-                "204"
-            ],
-            "datarange": "-20 -5"
-        }
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    0,
+                    204
+                ],
+                "datarange": [
+                    -20,
+                    -5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-5 -1.0",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -5 AND [pixel] < -1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "204",
-                "255",
-                "204",
-                "245"
-            ],
-            "datarange": "-5 -1.0"
-        }
+        "expression": "( ( [pixel] >= -5 ) AND ( [pixel] < -1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    204,
+                    255,
+                    204,
+                    245
+                ],
+                "datarange": [
+                    -5,
+                    -1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-1.0 -0.10",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -1.0 AND [pixel] < -0.10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "204",
-                "245",
-                "255",
-                "255",
-                "255"
-            ],
-            "datarange": "-1.0 -0.10"
-        }
+        "expression": "( ( [pixel] >= -1.0 ) AND ( [pixel] < -0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    204,
+                    245,
+                    255,
+                    255,
+                    255
+                ],
+                "datarange": [
+                    -1.0,
+                    -0.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "-0.10 0",
         "group": "CIN-LINEAR",
-        "expression": "([pixel] >= -0.10 AND [pixel] < 0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "255",
-                "205",
-                "205",
-                "205"
-            ],
-            "datarange": [
-                "-0.10",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= -0.1 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    255,
+                    205,
+                    205,
+                    205
+                ],
+                "datarange": [
+                    -0.1,
+                    0
+                ]
+            }
+        ]
     }
 ]

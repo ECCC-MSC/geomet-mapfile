@@ -3,294 +3,322 @@
         "__type__": "class",
         "name": "0.1 - 0.2 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(0.1 <= [pixel] AND [pixel] < 0.2)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "204",
-                "255",
-                "000",
-                "153",
-                "255"
-            ],
-            "datarange": [
-                "0.1",
-                "0.2"
-            ]
-        }
+        "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    204,
+                    255,
+                    0,
+                    153,
+                    255
+                ],
+                "datarange": [
+                    0.1,
+                    0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.2 - 0.3 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(0.2 <= [pixel] AND [pixel] < 0.3)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "255",
-                "000",
-                "255",
-                "102"
-            ],
-            "datarange": [
-                "0.2",
-                "0.3"
-            ]
-        }
+        "expression": "( ( 0.2 <= [pixel] ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    255,
+                    0,
+                    255,
+                    102
+                ],
+                "datarange": [
+                    0.2,
+                    0.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.3 - 0.5 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(0.3 <= [pixel] AND [pixel] < 0.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "255",
-                "102",
-                "000",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "0.3",
-                "0.5"
-            ]
-        }
+        "expression": "( ( 0.3 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    255,
+                    102,
+                    0,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    0.3,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.5 - 0.8 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(0.5 <= [pixel] AND [pixel] < 0.8)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "204",
-                "000",
-                "000",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "0.5",
-                "0.8"
-            ]
-        }
+        "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    0,
+                    0,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    0.5,
+                    0.8
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.8 - 1.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(0.8 <= [pixel] AND [pixel] < 1.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "153",
-                "000",
-                "000",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "0.8",
-                "1.0"
-            ]
-        }
+        "expression": "( ( 0.8 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    153,
+                    0,
+                    0,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    0.8,
+                    1.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.0 - 1.5 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(1.0 <= [pixel] AND [pixel] < 1.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "000",
-                "102",
-                "000",
-                "255",
-                "255",
-                "051"
-            ],
-            "datarange": [
-                "1.0",
-                "1.5"
-            ]
-        }
+        "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    102,
+                    0,
+                    255,
+                    255,
+                    51
+                ],
+                "datarange": [
+                    1.0,
+                    1.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "1.5 - 2.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(1.5 <= [pixel] AND [pixel] < 2.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "051",
-                "255",
-                "204",
-                "000"
-            ],
-            "datarange": [
-                "1.5",
-                "2.0"
-            ]
-        }
+        "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    51,
+                    255,
+                    204,
+                    0
+                ],
+                "datarange": [
+                    1.5,
+                    2.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "2.0 - 3.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(2.0 <= [pixel] AND [pixel] < 3.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "204",
-                "000",
-                "255",
-                "153",
-                "000"
-            ],
-            "datarange": [
-                "2.0",
-                "3.0"
-            ]
-        }
+        "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    204,
+                    0,
+                    255,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    2.0,
+                    3.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "3.0 - 4.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(3.0 <= [pixel] AND [pixel] < 4.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "153",
-                "000",
-                "255",
-                "102",
-                "000"
-            ],
-            "datarange": [
-                "3.0",
-                "4.0"
-            ]
-        }
+        "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    153,
+                    0,
+                    255,
+                    102,
+                    0
+                ],
+                "datarange": [
+                    3.0,
+                    4.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "4.0 - 5.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(4.0 <= [pixel] AND [pixel] < 5.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "102",
-                "000",
-                "255",
-                "000",
-                "000"
-            ],
-            "datarange": [
-                "4.0",
-                "5.0"
-            ]
-        }
+        "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    102,
+                    0,
+                    255,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    4.0,
+                    5.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "5.0 - 7.5 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(5.0 <= [pixel] AND [pixel] < 7.5)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "000",
-                "000",
-                "255",
-                "002",
-                "153"
-            ],
-            "datarange": [
-                "5.0",
-                "7.5"
-            ]
-        }
+        "expression": "( ( 5.0 <= [pixel] ) AND ( [pixel] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    0,
+                    0,
+                    255,
+                    2,
+                    153
+                ],
+                "datarange": [
+                    5.0,
+                    7.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "7.5 - 10.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(7.5 <= [pixel] AND [pixel] < 10.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "002",
-                "153",
-                "153",
-                "051",
-                "204"
-            ],
-            "datarange": [
-                "7.5",
-                "10.0"
-            ]
-        }
+        "expression": "( ( 7.5 <= [pixel] ) AND ( [pixel] < 10.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    2,
+                    153,
+                    153,
+                    51,
+                    204
+                ],
+                "datarange": [
+                    7.5,
+                    10.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "10.0 - 20.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(10.0 <= [pixel] AND [pixel] < 20.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "051",
-                "204",
-                "102",
-                "000",
-                "153"
-            ],
-            "datarange": [
-                "10.0",
-                "20.0"
-            ]
-        }
+        "expression": "( ( 10.0 <= [pixel] ) AND ( [pixel] < 20.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    51,
+                    204,
+                    102,
+                    0,
+                    153
+                ],
+                "datarange": [
+                    10.0,
+                    20.0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": ">= 20.0 (cm/hr)",
         "group": "RADARURPPRECIPS14-LINEAR",
-        "expression": "(20.0 <= [pixel] AND [pixel] <= 30.0)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "102",
-                "000",
-                "153",
-                "051",
-                "000",
-                "077"
-            ],
-            "datarange": [
-                "20.0",
-                "30.0"
-            ]
-        }
+        "expression": "( ( 20.0 <= [pixel] ) AND ( [pixel] <= 30.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    0,
+                    153,
+                    51,
+                    0,
+                    77
+                ],
+                "datarange": [
+                    20.0,
+                    30.0
+                ]
+            }
+        ]
     }
 ]

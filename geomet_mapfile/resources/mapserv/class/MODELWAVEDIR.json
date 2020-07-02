@@ -3,155 +3,192 @@
         "__type__": "class",
         "group": "MODELWAVEDIR",
         "name": "0 30",
-        "expression": "([pixel] >= 3 AND [pixel] < 30)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "127"
-            ]
-        }
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "30 60",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 30 AND [pixel] < 60)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "0",
-                "203"
-            ]
-        }
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    203
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "60 90",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 60 AND [pixel] < 90)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "",
-                "0",
-                "40",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 60 ) AND ( [pixel] < 90 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    40,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "90 120",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 90 AND [pixel] < 120)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "0",
-                "155",
-                "254"
-            ]
-        }
+        "expression": "( ( [pixel] >= 90 ) AND ( [pixel] < 120 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    155,
+                    254
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "120 150",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 120 AND [pixel] < 150)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "13",
-                "253",
-                "241"
-            ]
-        }
+        "expression": "( ( [pixel] >= 120 ) AND ( [pixel] < 150 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    13,
+                    253,
+                    241
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "150 180",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 150 AND [pixel] < 180)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "106",
-                "253",
-                "148"
-            ]
-        }
+        "expression": "( ( [pixel] >= 150 ) AND ( [pixel] < 180 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    106,
+                    253,
+                    148
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "180 210",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 180 AND [pixel] < 210)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "199",
-                "254",
-                "55"
-            ]
-        }
+        "expression": "( ( [pixel] >= 180 ) AND ( [pixel] < 210 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    199,
+                    254,
+                    55
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "210 240",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 210 AND [pixel] < 240)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "217",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 210 ) AND ( [pixel] < 240 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    217,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "240 270",
+        "group": "MODELWAVEDIR",
+        "expression": "( ( [pixel] >= 240 ) AND ( [pixel] < 270 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    125,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "270 300",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 270 AND [pixel] < 300)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "125",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 270 ) AND ( [pixel] < 300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    32,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "300 330",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 300 AND [pixel] < 330)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "254",
-                "32",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 300 ) AND ( [pixel] <= 330 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    203,
+                    0,
+                    0
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "330 360",
         "group": "MODELWAVEDIR",
-        "expression": "([pixel] >= 330  AND [pixel] <= 360)",
-        "style": {
-            "__type__": "style",
-            "color": [
-                "203",
-                "0",
-                "0"
-            ]
-        }
+        "expression": "( ( [pixel] >= 330 ) AND ( [pixel] <= 360 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
     }
 ]

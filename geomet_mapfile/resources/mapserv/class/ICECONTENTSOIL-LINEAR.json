@@ -3,273 +3,299 @@
         "__type__": "class",
         "name": "0.005 0.05",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.005 AND [pixel] < 0.05)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "254",
-                "203",
-                "0",
-                "255",
-                "255",
-                "0"
-            ],
-            "datarange": [
-                "0.005",
-                "0.05"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.005 ) AND ( [pixel] < 0.05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    203,
+                    0,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    0.005,
+                    0.05
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.05 0.10",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.05 AND [pixel] < 0.10)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "255",
-                "255",
-                "0",
-                "204",
-                "254",
-                "50"
-            ],
-            "datarange": [
-                "0.05",
-                "0.10"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.05 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    204,
+                    254,
+                    50
+                ],
+                "datarange": [
+                    0.05,
+                    0.1
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.10 0.15",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.10 AND [pixel] < 0.15)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "204",
-                "254",
-                "50",
-                "153",
-                "254",
-                "101"
-            ],
-            "datarange": [
-                "0.10",
-                "0.15"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    254,
+                    50,
+                    153,
+                    254,
+                    101
+                ],
+                "datarange": [
+                    0.1,
+                    0.15
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.15 0.20",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.15 AND [pixel] < 0.20)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "153",
-                "254",
-                "101",
-                "102",
-                "253",
-                "152"
-            ],
-            "datarange": [
-                "0.15",
-                "0.20"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.15 ) AND ( [pixel] < 0.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    254,
+                    101,
+                    102,
+                    253,
+                    152
+                ],
+                "datarange": [
+                    0.15,
+                    0.2
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.20 0.25",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.20 AND [pixel] < 0.25)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "102",
-                "253",
-                "152",
-                "51",
-                "253",
-                "203"
-            ],
-            "datarange": [
-                "0.20",
-                "0.25"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    253,
+                    152,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    0.2,
+                    0.25
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.25 0.30",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.25 AND [pixel] < 0.30)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "51",
-                "253",
-                "203",
-                "0",
-                "253",
-                "255"
-            ],
-            "datarange": [
-                "0.25",
-                "0.30"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.25 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    0.25,
+                    0.3
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.30 0.35",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.30 AND [pixel] < 0.35)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "253",
-                "255",
-                "0",
-                "189",
-                "254"
-            ],
-            "datarange": [
-                "0.30",
-                "0.35"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    0,
+                    189,
+                    254
+                ],
+                "datarange": [
+                    0.3,
+                    0.35
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.35 0.40",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.35 AND [pixel] < 0.40)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "189",
-                "254",
-                "0",
-                "126",
-                "254"
-            ],
-            "datarange": [
-                "0.35",
-                "0.40"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.35 ) AND ( [pixel] < 0.4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    189,
+                    254,
+                    0,
+                    126,
+                    254
+                ],
+                "datarange": [
+                    0.35,
+                    0.4
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.40 0.45",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.40 AND [pixel] < 0.45)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "126",
-                "254",
-                "0",
-                "63",
-                "254"
-            ],
-            "datarange": [
-                "0.40",
-                "0.45"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.4 ) AND ( [pixel] < 0.45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    126,
+                    254,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    0.4,
+                    0.45
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.45 0.50",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.45 AND [pixel] < 0.50)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "63",
-                "254",
-                "0",
-                "0",
-                "254"
-            ],
-            "datarange": [
-                "0.45",
-                "0.50"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.45 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0.45,
+                    0.5
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.50 0.55",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.50 AND [pixel] < 0.55)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "254",
-                "0",
-                "0",
-                "211"
-            ],
-            "datarange": [
-                "0.50",
-                "0.55"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 0.55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    0,
+                    211
+                ],
+                "datarange": [
+                    0.5,
+                    0.55
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.55 0.60",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.55 AND [pixel] < 0.60)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "211",
-                "0",
-                "0",
-                "169"
-            ],
-            "datarange": [
-                "0.55",
-                "0.60"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.55 ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    211,
+                    0,
+                    0,
+                    169
+                ],
+                "datarange": [
+                    0.55,
+                    0.6
+                ]
+            }
+        ]
     },
     {
         "__type__": "class",
         "name": "0.60 ..",
         "group": "ICECONTENTSOIL-LINEAR",
-        "expression": "([pixel] >= 0.60 AND [pixel] < 0.99)",
-        "style": {
-            "__type__": "style",
-            "colorrange": [
-                "0",
-                "0",
-                "169",
-                "0",
-                "0",
-                "127"
-            ],
-            "datarange": [
-                "0.60",
-                "0.99"
-            ]
-        }
+        "expression": "( ( [pixel] >= 0.6 ) AND ( [pixel] < 0.99 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    169,
+                    0,
+                    0,
+                    127
+                ],
+                "datarange": [
+                    0.6,
+                    0.99
+                ]
+            }
+        ]
     }
 ]

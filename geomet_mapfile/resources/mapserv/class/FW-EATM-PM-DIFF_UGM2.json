@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 - 5 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 1 ) AND ( ([pixel] * (10 ^ 9)) < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    204,
+                    204,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    1e-09,
+                    5e-09
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 10 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 5 ) AND ( ([pixel] * (10 ^ 9)) < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    5e-09,
+                    1e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 20 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 10 ) AND ( ([pixel] * (10 ^ 9)) < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    204,
+                    255
+                ],
+                "datarange": [
+                    1e-08,
+                    2e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 40 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 20 ) AND ( ([pixel] * (10 ^ 9)) < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    2e-08,
+                    4e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 - 60 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 40 ) AND ( ([pixel] * (10 ^ 9)) < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    4e-08,
+                    6e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 - 80 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 60 ) AND ( ([pixel] * (10 ^ 9)) < 80 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    6e-08,
+                    8e-08
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "80 100 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 80 ) AND ( ([pixel] * (10 ^ 9)) < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    8e-08,
+                    1e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 - 150 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 100 ) AND ( ([pixel] * (10 ^ 9)) < 150 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1e-07,
+                    1.5e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "150 - 200 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 150 ) AND ( ([pixel] * (10 ^ 9)) < 200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    1.5e-07,
+                    2e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "200 - 250 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 200 ) AND ( ([pixel] * (10 ^ 9)) < 250 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2e-07,
+                    2.5e-07
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 250 [ug/m^2]",
+        "group": "RAQDPS-FW-EATM-PM-DIFF_UGM2",
+        "expression": "( ([pixel] * (10 ^ 9)) >= 250 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    2.5e-07,
+                    1e-05
+                ]
+            }
+        ]
+    }
+]
