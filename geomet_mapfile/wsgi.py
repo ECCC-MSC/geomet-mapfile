@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# Copyright (C) 2019 Louis-Philippe Rousseau-Lambert
+# Copyright (C) 2020 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -89,11 +89,18 @@ def insert_data(layer, fh, mr):
         id_ = '{}-{}'.format(layer, forecast)
 
     es = Elasticsearch()
+
     try:
         res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
+
+        filepath = res['_source']['properties']['filepath']
+        url = res['_source']['properties']['url']
+
+        res_arr = [filepath, url] 
     except:
         return None
-    return res['_source']['properties']['filepath']
+
+    return res_arr
 
 def application(env, start_response):
     """WSGI application for WMS/WCS"""
@@ -192,9 +199,15 @@ def application(env, start_response):
             ref_time = layerobj.getMetaData('wms_reference_time_default')
                 
         try:
-            filepath = insert_data(layer, time, ref_time)
-            if filepath is None:
-                time_error = True
+            filepath, url = insert_data(layer, time, ref_time)
+            if request_ in ['GetMap', 'GetFeatureInfo']:
+                if not os.path.isfile(filepath):
+                    if not os.path.exists(os.path.dirname(filepath)):
+                        os.makedirs(os.path.dirname(filepath))
+                    with requests.get(url, stream=True) as r:
+                        with open(filepath, 'wb') as fh:
+                            fh.write(r.content)
+
             layerobj.data = filepath
 
         except ValueError as err:
