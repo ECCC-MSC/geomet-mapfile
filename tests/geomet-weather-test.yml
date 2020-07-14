@@ -116,12 +116,12 @@ layer_templates:
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/TEMPERATURE-LINEAR.inc
-            - mapserv/class/TEMPSUMMER.inc
-            - mapserv/class/TEMPSUMMER-LINEAR.inc
-            - mapserv/class/TEMPWINTER.inc
-            - mapserv/class/TEMPWINTER-LINEAR.inc
-            - mapserv/class/TEMPERATURE.inc
+            - mapserv/class/TEMPERATURE-LINEAR.json
+            - mapserv/class/TEMPSUMMER.json
+            - mapserv/class/TEMPSUMMER-LINEAR.json
+            - mapserv/class/TEMPWINTER.json
+            - mapserv/class/TEMPWINTER-LINEAR.json
+            - mapserv/class/TEMPERATURE.json
 layers:
     GDPS.ETA_TT:
         <<: *template_tt

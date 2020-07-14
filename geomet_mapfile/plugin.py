@@ -1,6 +1,7 @@
 ###############################################################################
 #
-# Copyright (C) 2019 Tom Kralidis
+# Copyright (C) 2020 Etienne Pelletier
+# Copyright (C) 2020 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,8 +33,10 @@ PLUGINS = {
 def load_plugin(plugin_type, plugin_def):
     """
     loads plugin by type
+
     :param plugin_type: type of plugin (store, tileindex, etc.)
     :param plugin_def: plugin definition
+
     :returns: plugin object
     """
 
