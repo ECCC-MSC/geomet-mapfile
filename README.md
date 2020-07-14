@@ -17,7 +17,7 @@ The mapfile command (`geomet-mapfile mapfile`) groups all mapfile-related comman
   - Flags:
     - `--layer/-lyr`: create a mapfile for a single layer in the geomet configuration file (`geomet_dev.yml`). If not specified geomet-mapfile will create mapfiles for all layers found in the configuration file.
     - `--map/--no-map`: creates the mapfile with or without the `MAP` object. If `no--map` is passed in the command, only the `LAYER` objects will be created in the resulting mapfile.
-    - `--output/-o`: two options available: `mapfile` or `store`. `mapfile` will write files to a `mapfile` directory in the geomet-mapfile base directory (see `GEOMET3_BASEDIR` in `geomet-mapfile/geomet-mapfile_dev.env`). `store` will output to the store defined by `GEOMET_MAPFILE_STORE_TYPE` and `GEOMET_MAPFILE_STORE_URL` in the aforementioned environment file.
+    - `--output/-o`: two options available: `mapfile` or `store`. `mapfile` will write files to a `mapfile` directory in the geomet-mapfile base directory (see `GEOMET_MAPFILE_BASEDIR` in `geomet-mapfile/geomet-mapfile_dev.env`). `store` will output to the store defined by `GEOMET_MAPFILE_STORE_TYPE` and `GEOMET_MAPFILE_STORE_URL` in the aforementioned environment file.
   - Examples: <br>
     - Generate a mapfile for GDPS.ETA_TT without the MAP object and write to the configured store: <br>
     `geomet-mapfile mapfile generate -lyr GDPS.ETA_TT --no-map -o store`<br>
