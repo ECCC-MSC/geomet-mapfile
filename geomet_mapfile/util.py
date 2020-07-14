@@ -32,7 +32,7 @@ DATEFORMAT = '%Y-%m-%dT%H:%M:%SZ'
 LOGGER = logging.getLogger(__name__)
 
 
-def clean_style(file, output_format='json'):
+def clean_style(filepath, output_format='json'):
     # TODO: docstring
     with open(filepath, 'r') as f:
         file_ = f.readlines()

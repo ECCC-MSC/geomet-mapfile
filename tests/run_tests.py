@@ -47,8 +47,8 @@ class Store:
 
     def __init__(self):
         self.data = {
-            'GDPS.ETA_TT_time_extent': '2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H',
-            'GDPS.ETA_TT_model_run_extent': '2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H',
+            'GDPS.ETA_TT_time_extent': '2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H',  # noqa
+            'GDPS.ETA_TT_model_run_extent': '2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H',  # noqa
             'GDPS.ETA_TT_default_model_run': '2020-01-14T00:00:00Z'
         }
 
@@ -85,20 +85,27 @@ class GeoMetMapfileTest(unittest.TestCase):
     def test_gen_web_metadata(self):
         """test mapfile MAP.WEB.METADATA section creation"""
         url = "https://fake.url/geomet-weather"
-        mapfile = os.path.join(THISDIR, '../geomet_mapfile/resources/mapfile-base.json')
+        mapfile = os.path.join(THISDIR,
+                               '../geomet_mapfile/resources/mapfile-base.json')
         with open(mapfile) as f:
             m = json.load(f, object_pairs_hook=OrderedDict)
+
         c = self.cfg['metadata']
 
         result = gen_web_metadata(m, c, url)
 
         self.assertTrue(result['ows_extent'] == '-180,-90,180,90')
         self.assertTrue(result['ows_stateorprovince'] == 'New Brunswick')
-        self.assertTrue(result['ows_stateorprovince_fr'] == 'Nouveau-Brunswick')
+        self.assertTrue(
+            result['ows_stateorprovince_fr'] == 'Nouveau-Brunswick')
+
         self.assertTrue(result['ows_country'] == 'Canada')
         self.assertTrue(result['ows_country_fr'] == 'Canada')
-        self.assertTrue(result['ows_contactinstructions'] == 'During hours of service')
-        self.assertTrue(result['ows_contactinstructions_fr'] == 'Durant les heures de service')
+        self.assertTrue(
+            result['ows_contactinstructions'] == 'During hours of service')
+
+        self.assertTrue(
+            result['ows_contactinstructions_fr'] == 'Durant les heures de service')  # noqa
 
     @patch('geomet_mapfile.mapfile.load_plugin', return_value=Store())
     def test_gen_layer(self, mock_load_plugin):
@@ -108,8 +115,8 @@ class GeoMetMapfileTest(unittest.TestCase):
         layer_info = self.cfg['layers'][layer_name]
         ows_title = 'GDPS.ETA - Air temperature [°C]'
         ows_title_fr = 'GDPS.ETA - Température de l\'air [°C]'
-        wms_layer_group = '/Global Deterministic Prediction System (GDPS)/GDPS (15 km)'
-        wms_layer_group_fr = '/Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)'
+        wms_layer_group = '/Global Deterministic Prediction System (GDPS)/GDPS (15 km)'  # noqa
+        wms_layer_group_fr = '/Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)'  # noqa
 
         result = gen_layer(layer_name, layer_info)
 
@@ -119,8 +126,11 @@ class GeoMetMapfileTest(unittest.TestCase):
         self.assertTrue(result[0]['data'] == [''])
         self.assertTrue(result[0]['metadata']['ows_title'] == ows_title)
         self.assertTrue(result[0]['metadata']['ows_title_fr'] == ows_title_fr)
-        self.assertTrue(result[0]['metadata']['wms_layer_group'] == wms_layer_group)
-        self.assertTrue(result[0]['metadata']['wms_layer_group_fr'] == wms_layer_group_fr)
+        self.assertTrue(
+            result[0]['metadata']['wms_layer_group'] == wms_layer_group)
+
+        self.assertTrue(
+            result[0]['metadata']['wms_layer_group_fr'] == wms_layer_group_fr)
 
 
 if __name__ == '__main__':
