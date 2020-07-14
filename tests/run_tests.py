@@ -19,9 +19,9 @@
 
 from collections import OrderedDict
 import json
-from unittest.mock import patch
 import os
 import unittest
+from unittest.mock import patch
 
 from yaml import load, CLoader
 

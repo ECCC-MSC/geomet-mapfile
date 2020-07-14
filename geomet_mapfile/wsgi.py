@@ -1,5 +1,6 @@
 ###############################################################################
 #
+# Copyright (C) 2020 Etienne Pelletier
 # Copyright (C) 2020 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
@@ -21,13 +22,12 @@ import io
 import logging
 import os
 import re
-import sys
 
 import click
 from elasticsearch import Elasticsearch
-
-sys.path.append('/data/geomet/dev/src/mapserver/mapserver/build/mapscript/python')
 import mapscript
+import requests
+
 
 from geomet_mapfile.env import BASEDIR, TILEINDEX_URL
 
@@ -57,6 +57,7 @@ SERVICE_EXCEPTION = '''<?xml version='1.0' encoding="UTF-8" standalone="no"?>
   <ServiceException>{}</ServiceException>
 </ServiceExceptionReport>'''
 
+
 def metadata_lang(m, l):
     """
     function to update the mapfile MAP metadata
@@ -64,30 +65,34 @@ def metadata_lang(m, l):
 
     :param m: mapfile object to update language
     :param l: lang of the request
+
+    :returns: TODO
     """
 
-    #TODO
+    # TODO: docstring and do we need this?
+
 
 def insert_data(layer, fh, mr):
     """
-    fucntion to find the datapath
+    function to find the datapath
     based on either the layer metadata
     or on the WMS time parameters from the user
 
-    :param mr: 
-    "param fh:
+    :param mr: TODO
+    :param fh: TODO
 
-    :return filepath 
+    :returns: filepath
     """
 
     model_run = re.sub("[^0-9]", "", mr)
     forecast = re.sub("[^0-9]", "", fh)
 
-    if model_run not in [None, '']:    
+    if model_run not in [None, '']:
         id_ = '{}-{}-{}'.format(layer, model_run, forecast)
     else:
         id_ = '{}-{}'.format(layer, forecast)
 
+    # TODO: abstract into abc
     es = Elasticsearch()
 
     try:
@@ -96,11 +101,13 @@ def insert_data(layer, fh, mr):
         filepath = res['_source']['properties']['filepath']
         url = res['_source']['properties']['url']
 
-        res_arr = [filepath, url] 
-    except:
+        res_arr = [filepath, url]
+    except Exception as err:
+        LOGGER.debug(err)
         return None
 
     return res_arr
+
 
 def application(env, start_response):
     """WSGI application for WMS/WCS"""
@@ -123,7 +130,6 @@ def application(env, start_response):
     layers_ = request.getValueByName('LAYERS')
     layer_ = request.getValueByName('LAYER')
     coverageid_ = request.getValueByName('COVERAGEID')
-    format_ = request.getValueByName('FORMAT')
 
     if lang_ is not None and lang_ in ['f', 'fr', 'fra']:
         lang = 'fr'
@@ -154,14 +160,14 @@ def application(env, start_response):
                                'other/banner.txt')) as fh:
             start_response('200 OK',
                            [('Content-Type', 'text/plain')])
-            msg = fh.read() 
+            msg = fh.read()
             return ['{}'.format(msg).encode()]
 
     if layer is not None and ',' not in layer:
         mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
             BASEDIR, layer)
     if mapfile_ is None or not os.path.exists(mapfile_):
-       mapfile_ = '{}/mapfile/geomet-weather.map'.format(
+        mapfile_ = '{}/mapfile/geomet-weather.map'.format(
             BASEDIR)
     if not os.path.exists(mapfile_):
         start_response('400 Bad Request',
@@ -189,15 +195,15 @@ def application(env, start_response):
         ref_time = request.getValueByName('DIM_REFERENCE_TIME')
 
         if any(time_param == '' for time_param in [time, ref_time]):
-            time_error = "Valeur manquante pour la date ou l'heure / Missing value for date or time"
+            time_error = "Valeur manquante pour la date ou l'heure / Missing value for date or time"  # noqa
             start_response('200 OK', [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(time_error).encode()]
 
         if time is None:
-           time = layerobj.getMetaData('wms_timedefault') 
+            time = layerobj.getMetaData('wms_timedefault')
         if ref_time is None:
             ref_time = layerobj.getMetaData('wms_reference_time_default')
-                
+
         try:
             filepath, url = insert_data(layer, time, ref_time)
             if request_ in ['GetMap', 'GetFeatureInfo']:
@@ -218,14 +224,13 @@ def application(env, start_response):
             start_response('200 OK', [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(time_error).encode()]
 
-
-        #if request_ == 'GetCapabilities' and lang == 'fr':
-        #    metadata_lang(mapfile, lang)
-        #    layerobj = mapfile.getLayerByName(layer)
-        #    layerobj.setMetaData('ows_title',
-        #                         layerobj.getMetaData('ows_title_{}'.format(lang))) # noqa
-        #    layerobj.setMetaData('ows_layer_group',
-        #                         layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+        # if request_ == 'GetCapabilities' and lang == 'fr':
+        #     metadata_lang(mapfile, lang)
+        #     layerobj = mapfile.getLayerByName(layer)
+        #     layerobj.setMetaData('ows_title', layerobj.getMetaData(
+        #          'ows_title_{}'.format(lang))) # noqa
+        #     layerobj.setMetaData('ows_layer_group',
+        #                          layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
 
     mapscript.msIO_installStdoutToBuffer()
 
@@ -233,7 +238,7 @@ def application(env, start_response):
     # we need to remove the time parameter from the request for uvraster layer
     if 'time' in env['QUERY_STRING'].lower():
         query_string = env['QUERY_STRING'].split('&')
-        query_string = [x for x in query_string if not 'time' in x.lower()]
+        query_string = [x for x in query_string if 'time' not in x.lower()]
         request.loadParamsFromURL('&'.join(query_string))
     else:
         request.loadParamsFromURL(env['QUERY_STRING'])
@@ -252,14 +257,6 @@ def application(env, start_response):
         ('Content-Type', headers['Content-Type']),
     ]
 
-    # for WCS requests, generate useful filename for response
-    #if not headers['Content-Type'].startswith('text/xml'):
-    #    if service_ == 'WCS' and request_ == 'GetCoverage':
-    #        filename = 'geomet-climate-{}.{}'.format(layer,
-    #                                                 WCS_FORMATS[format_])
-    #        headers_.append(('Content-Disposition',
-    #                         'attachment; filename="{}"'.format(filename)))
-
     content = mapscript.msIO_getStdoutBufferBytes()
 
     start_response('200 OK', headers_)
@@ -271,7 +268,7 @@ def application(env, start_response):
 @click.pass_context
 @click.option('--port', '-p', type=int, help='port', default=8099)
 def serve(ctx, port):
-    """Serve geomet-weather via wsgiref, for dev"""
+    """Serve for development"""
 
     from wsgiref.simple_server import make_server
     httpd = make_server('', port, application)

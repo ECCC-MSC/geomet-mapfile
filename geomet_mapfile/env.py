@@ -1,6 +1,7 @@
 ###############################################################################
 #
-# Copyright (C) 2018 Tom Kralidis
+# Copyright (C) 2020 Etienne Pelletier
+# Copyright (C) 2020 Louis-Philippe Rousseau-Lambert
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -25,13 +26,14 @@ LOGGER = logging.getLogger(__name__)
 
 LOGGER.info('Fetching environment variables')
 
-BASEDIR = os.environ.get('GEOMET3_BASEDIR', None)
-DATADIR = os.environ.get('GEOMET3_DATADIR', None)
-CONFIG = os.environ.get('GEOMET3_CONFIG', None)
-URL = os.environ.get('GEOMET3_URL', None)
+BASEDIR = os.environ.get('GEOMET_MAPFILE_BASEDIR', None)
+DATADIR = os.environ.get('GEOMET_MAPFILE_DATADIR', None)
+CONFIG = os.environ.get('GEOMET_MAPFILE_CONFIG', None)
+URL = os.environ.get('GEOMET_MAPFILE_URL', None)
 STORE_TYPE = os.environ.get('GEOMET_MAPFILE_STORE_TYPE', None)
 STORE_URL = os.environ.get('GEOMET_MAPFILE_STORE_URL', None)
-TILEINDEX_URL = os.environ.get('GDR_TILEINDEX_URL', None)
+TILEINDEX_TYPE = os.environ.get('GEOMET_MAPFILE_TILEINDEX_TYPE', None)
+TILEINDEX_URL = os.environ.get('GEOMET_MAPFILE_TILEINDEX_URL', None)
 
 LOGGER.debug(BASEDIR)
 LOGGER.debug(DATADIR)
