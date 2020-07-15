@@ -20,35 +20,14 @@
 
 import logging
 
-import redis
-
 from geomet_mapfile import __version__
-from geomet_mapfile.store.base import BaseStore, StoreError
+from geomet_data_registry.store.redis_ import RedisStore as RedisStore_
 
 LOGGER = logging.getLogger(__name__)
 
 
-class RedisStore(BaseStore):
+class RedisStore(RedisStore_):
     """Redis key-value store implementation"""
-
-    def __init__(self, provider_def):
-        """
-        Initialize object
-
-        :param provider_def: provider definition dict
-
-        :returns: `geomet_data_registry.store.redis_.RedisStore`
-        """
-
-        BaseStore.__init__(self, provider_def)
-
-        try:
-            self.redis = redis.Redis.from_url(self.url, encoding='utf-8',
-                                              decode_responses=True)
-        except redis.exceptions.ConnectionError as err:
-            msg = 'Cannot connect to Redis {}: {}'.format(self.url, err)
-            LOGGER.exception(msg)
-            raise StoreError(msg)
 
     def setup(self):
         """
@@ -66,18 +45,16 @@ class RedisStore(BaseStore):
         :returns: `bool` of process status
         """
 
-        return self.redis.delete('geomet-mapfile-version')
+        LOGGER.debug('Deleting all geomet-mapfile Redis keys')
+        keys = [
+            key for key in self.redis.scan_iter()
+            if key.startswith('geomet-mapfile')
+        ]
+        for key in keys:
+            LOGGER.debug('Deleting key {}'.format(key))
+            self.redis.delete(key)
 
-    def get_key(self, key):
-        """
-        Get key from store
-
-        :param key: key to fetch
-
-        :returns: string of key value from Redis store
-        """
-
-        return self.redis.get(key)
+        return True
 
     def set_key(self, key, value):
         """
@@ -89,7 +66,7 @@ class RedisStore(BaseStore):
         :returns: `bool` of set success
         """
 
-        return self.redis.set(key, value)
+        return self.redis.set('geomet-mapfile_{}'.format(key), value)
 
     def __repr__(self):
         return '<BaseStore> {}'.format(self.type)

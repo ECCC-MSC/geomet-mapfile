@@ -1,4 +1,5 @@
 click
+geomet-data-registry
 mappyfile
 python-dateutil
 pyyaml
