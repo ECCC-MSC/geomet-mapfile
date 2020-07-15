@@ -32,6 +32,7 @@ CONFIG = os.environ.get('GEOMET_MAPFILE_CONFIG', None)
 URL = os.environ.get('GEOMET_MAPFILE_URL', None)
 STORE_TYPE = os.environ.get('GEOMET_MAPFILE_STORE_TYPE', None)
 STORE_URL = os.environ.get('GEOMET_MAPFILE_STORE_URL', None)
+TILEINDEX_NAME = os.environ.get('GEOMET_MAPFILE_TILEINDEX_NAME', None)
 TILEINDEX_TYPE = os.environ.get('GEOMET_MAPFILE_TILEINDEX_TYPE', None)
 TILEINDEX_URL = os.environ.get('GEOMET_MAPFILE_TILEINDEX_URL', None)
 
