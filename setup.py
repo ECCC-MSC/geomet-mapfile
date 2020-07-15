@@ -22,7 +22,48 @@ import io
 import os
 import re
 from setuptools import Command, find_packages, setup
+import shutil
 import sys
+
+
+class PyCleanBuild(Command):
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        remove_files = [
+            'debian/files',
+            'debian/geomet-mapfile.debhelper.log',
+            'debian/geomet-mapfile.postinst.debhelper',
+            'debian/geomet-mapfile.prerm.debhelper',
+            'debian/geomet-mapfile.substvars'
+        ]
+
+        remove_dirs = [
+            'debian/geomet-mapfile',
+            'debian/.debhelper'
+        ]
+
+        for file_ in remove_files:
+            try:
+                os.remove(file_)
+            except OSError:
+                pass
+
+        for dir_ in remove_dirs:
+            try:
+                shutil.rmtree(dir_)
+            except OSError:
+                pass
+
+        for file_ in os.listdir('..'):
+            if file_.endswith(('.deb', '.build', '.changes')):
+                os.remove('../{}'.format(file_))
 
 
 class PyTest(Command):
@@ -107,7 +148,7 @@ setup(
     author_email='etienne.pelletier@canada.ca',
     maintainer='Meteorological Service of Canada',
     maintainer_email='etienne.pelletier@canada.ca',
-    url='https://gccode.ssc-spc.gc.ca/ec-msc/geomet-mapfile',
+    url='https://github.com/ECCC-MSC/geomet-mapfile',
     install_requires=read('requirements.txt').splitlines(),
     packages=find_packages(exclude=['geomet_mapfile.tests']),
     include_package_data=True,

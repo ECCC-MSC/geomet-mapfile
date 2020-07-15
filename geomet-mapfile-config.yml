@@ -1853,8 +1853,6 @@ layer_templates:
         time_enabled: 'no'
         is_local: true
         forecast_model: *id_hurricanetracks
-        metadata:
-            - wfs_featureid=TIMESTAMP
     PR_RDPA: &template_pr_rdpa
         <<: *template_pr_fr_rn
         time_enabled: 'yes'
@@ -9137,8 +9135,6 @@ layers:
         label_en: HDRPA.06P - Average watershed precipitation (preliminary) [mm]
         label_fr: AHRDP.06P - Précipitations moyennes par bassin-versant (préliminaire) [mm]
         data: local/HRDPA_WATERSHED/latest_watershed_06P.shp
-        metadata:
-            - wfs_featureid=FID
         styles:
             - mapserv/class/PRECIPMM_WATERSHED.json
             - mapserv/class/CFIA_WATERSHED.json
@@ -9150,8 +9146,6 @@ layers:
         label_en: HRDPA.06F - Average watershed precipitation [mm]
         label_fr: AHRDP.06F - Précipitations moyennes par bassin-versant [mm]
         data: local/HRDPA_WATERSHED/latest_watershed_06F.shp
-        metadata:
-            - wfs_featureid=FID
         styles:
             - mapserv/class/PRECIPMM_WATERSHED.json
             - mapserv/class/CFIA_WATERSHED.json
@@ -9163,8 +9157,6 @@ layers:
         label_en: HRDPA.24P - Average watershed precipitation (preliminary) [mm]
         label_fr: AHRDP.24P - Précipitations moyennes par bassin-versant (préliminaire) [mm]
         data: local/HRDPA_WATERSHED/latest_watershed_24P.shp
-        metadata:
-            - wfs_featureid=FID
         styles:
             - mapserv/class/PRECIPMM_WATERSHED.json
             - mapserv/class/CFIA_WATERSHED.json
@@ -9176,8 +9168,6 @@ layers:
         label_en: HRDPA.24F - Average watershed precipitation [mm]
         label_fr: AHRDP.24F - Précipitations moyennes par bassin-versant [mm]
         data: local/HRDPA_WATERSHED/latest_watershed_24F.shp
-        metadata:
-            - wfs_featureid=FID
         styles:
             - mapserv/class/PRECIPMM_WATERSHED.json
             - mapserv/class/CFIA_WATERSHED.json
@@ -20324,7 +20314,6 @@ layers:
         processing:
             - BANDS=13
     REPS.DIAG.24_HMXX.ERSSTD:
-        phase: beta # GDAL issue with Kelvin vs Celsius, see https://gccode.ssc-spc.gc.ca/ec-msc/geomet/issues/112
         <<: *template_24_reps_hmxx_erc
         label_en: REPS.DIAG.24_HMXX.ERSSTD - Maximum humidex over a period (standard deviation)
         label_fr: REPS.DIAG.24_HMXX.ERSSTD - Facteur humidex maximal sur une période (écart-type)
@@ -20466,7 +20455,6 @@ layers:
             - BANDS=21
     REPS.DIAG.24_T7.ERSSTD:
         <<: *template_24_reps_t7_erc
-        phase: beta # GDAL issue with Kelvin vs Celsius, see https://gccode.ssc-spc.gc.ca/ec-msc/geomet/issues/112
         label_en: REPS.DIAG.24_T7.ERSSTD  - Minimum temperature (standard deviation)
         label_fr: REPS.DIAG.24_T7.ERSSTD  - Température minimale (écart-type)
         processing:
@@ -20523,7 +20511,6 @@ layers:
             - BANDS=22
     REPS.DIAG.24_T8.ERSSTD:
         <<: *template_24_reps_t8_erc
-        phase: beta # GDAL issue with Kelvin vs Celsius, see https://gccode.ssc-spc.gc.ca/ec-msc/geomet/issues/112
         label_en: REPS.DIAG.24_T8.ERSSTD  - Maximum temperature (standard deviation)
         label_fr: REPS.DIAG.24_T8.ERSSTD  - Température maximale (écart-type)
         processing:
@@ -23674,8 +23661,6 @@ layers:
         label_en: Wildfire hotspots ingested by FireWork
         label_fr: Points chauds considérés par FireWork
         data: local/FIREWORK/hotSpots.shp
-        metadata:
-            - wfs_featureid=FID
         styles:
             - mapserv/class/FIREWORK-HOTSPOTS.json
         symbols:
@@ -26403,7 +26388,7 @@ layers:
         forecast_model: *id_wcps
         label_en: WCPS.2D - Mixed layer depth based on a density criterion [m]
         label_fr: WCPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
-    CURRENT_CONDITIONS:
+    CURRENT_CONDITIONS:  # TODO: enable via msc-pygeoapi
         type: point
         encoding: LATIN1
         time_enabled: 'no'
@@ -26412,14 +26397,12 @@ layers:
         label_en: Current Conditions
         label_fr: Conditions actuelles
         data: local/WEATHER/CURRENT_CONDITIONS.shp
-        metadata:
-            - wfs_featureid=name
         styles:
             - mapserv/class/WEATHER.json
         symbols:
             - weathericons
-    ALERTS:
-        phase: beta # Not currently updated in real-time, see https://gccode.ssc-spc.gc.ca/ec-msc/geomet/issues/550
+    ALERTS:  # TODO: enable via msc-pygeoapi
+        phase: beta
         type: polygon
         time_enabled: 'no'
         conntype: OGR
@@ -26428,8 +26411,6 @@ layers:
         label_en: Weather Alerts [experimental]
         label_fr: Alertes météo [expérimental]
         data: local/WEATHER/ALERTS.geojson
-        metadata:
-            - wfs_featureid=identifier
         styles:
             - mapserv/class/ALERTS.json
             - mapserv/class/ALERTES.json
@@ -26446,6 +26427,7 @@ layers:
         styles:
             - mapserv/class/WEATHERADIO.json
             - mapserv/class/RADIOMETEO.json
+    # TODO: enable via msc-pygeoapi
     HURRICANE_CENTRE:
         type: point
         <<: *template_hurricane
@@ -26502,8 +26484,6 @@ layers:
         label_en: Dynamic radar coverage (Rain) (1km)
         label_fr: Couverture radar dynamique (Pluie) (1km)
         variable_type: MMHR
-        metadata:
-            - wfs_featureid=ID
         styles:
             - mapserv/class/RADAR_COVERAGE.json
     RADAR_COVERAGE_RRAI.INV:
@@ -26514,8 +26494,6 @@ layers:
         label_en: Dynamic radar coverage - inverted (Rain) (1km)
         label_fr: Couverture radar dynamique - inversée (Pluie) (1km)
         variable_type: MMHR_inverse
-        metadata:
-            - wfs_featureid=ID
         styles:
             - mapserv/class/RADAR_COVERAGE_INVT50G185.json
             - mapserv/class/RADAR_COVERAGE_INVT50G169.json
@@ -26527,8 +26505,6 @@ layers:
         label_en: Dynamic radar coverage (Snow) (1km)
         label_fr: Couverture radar dynamique (Neige) (1km)
         variable_type: CMHR
-        metadata:
-            - wfs_featureid=ID
         styles:
             - mapserv/class/RADAR_COVERAGE.json
     RADAR_COVERAGE_RSNO.INV:
@@ -26539,8 +26515,6 @@ layers:
         label_en: Dynamic radar coverage - inverted (Snow) (1km)
         label_fr: Couverture radar dynamique - inversée (Neige) (1km)
         variable_type: CMHR_inverse
-        metadata:
-            - wfs_featureid=ID
         styles:
             - mapserv/class/RADAR_COVERAGE_INVT50G185.json
             - mapserv/class/RADAR_COVERAGE_INVT50G169.json
