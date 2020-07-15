@@ -27,6 +27,9 @@ PLUGINS = {
     'store': {
         'Redis': 'geomet_mapfile.store.redis_.RedisStore'
     },
+    'tileindex': {
+        'Elasticsearch': 'geomet_data_registry.tileindex.elasticsearch_.ElasticsearchTileIndex'  # noqa
+    }
 }
 
 
