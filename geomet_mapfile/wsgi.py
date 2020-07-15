@@ -22,12 +22,11 @@ import io
 import logging
 import os
 import re
+from urllib.request import urlopen
 
 import click
 from elasticsearch import Elasticsearch
 import mapscript
-import requests
-
 
 from geomet_mapfile.env import BASEDIR, TILEINDEX_URL
 
@@ -58,13 +57,13 @@ SERVICE_EXCEPTION = '''<?xml version='1.0' encoding="UTF-8" standalone="no"?>
 </ServiceExceptionReport>'''
 
 
-def metadata_lang(m, l):
+def metadata_lang(m, lang):
     """
     function to update the mapfile MAP metadata
     keys in function of the lang of the request
 
     :param m: mapfile object to update language
-    :param l: lang of the request
+    :param lang: lang of the request
 
     :returns: TODO
     """
@@ -178,7 +177,7 @@ def application(env, start_response):
     # if requesting GetCapabilities for entire service, return cache
     if request_ == 'GetCapabilities' and layer is None:
         if service_ == 'WMS':
-            filename = 'geomet-weather-1.3.0-capabilities.xml'.format(
+            filename = 'geomet-weather-1.3.0-capabilities-{}.xml'.format(
                 lang)
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
 
@@ -210,9 +209,9 @@ def application(env, start_response):
                 if not os.path.isfile(filepath):
                     if not os.path.exists(os.path.dirname(filepath)):
                         os.makedirs(os.path.dirname(filepath))
-                    with requests.get(url, stream=True) as r:
+                    with urlopen(url) as r:
                         with open(filepath, 'wb') as fh:
-                            fh.write(r.content)
+                            fh.write(r.read())
 
             layerobj.data = filepath
 
