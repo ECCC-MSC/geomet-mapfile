@@ -107,7 +107,7 @@ class GeoMetMapfileTest(unittest.TestCase):
         self.assertTrue(
             result['ows_contactinstructions_fr'] == 'Durant les heures de service')  # noqa
 
-    @patch('geomet_mapfile.mapfile.load_plugin', return_value=Store())
+    @patch('geomet_mapfile.plugin.load_plugin', return_value=Store())
     def test_gen_layer(self, mock_load_plugin):
         """returns a list of mappfile layer objects of given layer"""
 

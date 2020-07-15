@@ -19,7 +19,6 @@
 ###############################################################################
 
 from collections import OrderedDict
-from configparser import ConfigParser
 from copy import deepcopy
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
@@ -71,49 +70,22 @@ def mcf2layer_metadata(mcf_file):
     keywords_fr = []
     metadata_identifier = None
 
-    # TODO: we should get rid of all .mcf files and replace them
-    # with .yml files?
+    with open(mcf_file) as f:
+        mcf = load(f, Loader=CLoader)
 
-    if mcf_file.endswith('.mcf'):
-        mcf = ConfigParser()
-        with open(mcf_file) as f:
-            mcf.read_file(f)
+        dict_['ows_abstract'] = mcf['identification']['abstract_en']
+        dict_['ows_abstract_fr'] = mcf['identification']['abstract_fr']
 
-        dict_['ows_abstract'] = mcf.get('identification', 'abstract_en')
-        dict_['ows_abstract_fr'] = mcf.get('identification', 'abstract_fr')
+        keywords_en = \
+            mcf['identification']['keywords']['default']['keywords_en']
+        keywords_fr = \
+            mcf['identification']['keywords']['default']['keywords_fr']
 
-        keywords_en = mcf.get('identification', 'keywords_en')
-        keywords_fr = mcf.get('identification', 'keywords_fr')
+        if 'gc_cst' in mcf['identification']['keywords'].keys():
+            keywords_en.extend(mcf['identification']['keywords']['gc_cst']['keywords_en'])  # noqa
+            keywords_fr.extend(mcf['identification']['keywords']['gc_cst']['keywords_fr'])  # noqa
 
-        if mcf.has_option('identification', 'keywords_gc_cst_en'):
-            keywords_en.extend(
-                mcf.get('identification', 'keywords_gc_cst_en'))
-
-        if mcf.has_option('identification', 'keywords_gc_cst_fr'):
-            keywords_en.extend(
-                mcf.get('identification', 'keywords_gc_cst_fr'))
-
-        dict_['ows_identifier_value'] = mcf.get('metadata', 'dataseturi')
-
-        metadata_identifier = mcf.get('metadata', 'identifier')
-
-    elif mcf_file.endswith('.yml'):
-        with open(mcf_file) as f:
-            mcf = load(f, Loader=CLoader)
-
-            dict_['ows_abstract'] = mcf['identification']['abstract_en']
-            dict_['ows_abstract_fr'] = mcf['identification']['abstract_fr']
-
-            keywords_en = mcf['identification']['keywords_en']
-            keywords_fr = mcf['identification']['keywords_fr']
-
-            if 'gc_cst' in mcf['identification']['keywords'].keys():
-                keywords_en.extend(mcf['identification']['keywords']['gc_cst']['keywords_gc_cst_en'])  # noqa
-                keywords_fr.extend(mcf['identification']['keywords']['gc_cst']['keywords_gc_cst_fr'])  # noqa
-
-            dict_['ows_identifier_value'] = mcf['metadata']['dataseturi']
-
-        metadata_identifier = mcf.get('metadata', 'identifier')
+        dict_['ows_identifier_value'] = mcf['metadata']['dataseturi']
 
     dict_['ows_keywordlist'] = ', '.join(keywords_en)
     dict_['ows_keywordlist_fr'] = ', '.join(keywords_fr)
@@ -496,19 +468,20 @@ def gen_layer(layer_name, layer_info):
     return layers
 
 
-@click.group(name='mapfile')
-def generate_mapfile():
-    """generate mapfile(s)"""
+@click.group()
+def mapfile():
+    """mapfile management"""
     pass
 
 
 @click.command()
 @click.pass_context
-@click.option('--layer', '-lyr', help='layer id')
+@click.option('--layer', '-l', help='layer name')
 @click.option('--map/--no-map', 'map_', default=True,
-              help="Output with or without mapfile MAP object")
-@click.option('--output', '-o', type=click.Choice(['store', 'mapfile']),
-              help="Write to configured store or to disk", required=True)
+              help='Output with or without mapfile MAP object')
+@click.option('--output', '-o', type=click.Choice(['store', 'file']),
+              default='file',
+              help='Write to configured store or to disk', required=True)
 def generate(ctx, layer, map_, output):
     """generate mapfile"""
 
@@ -571,7 +544,7 @@ def generate(ctx, layer, map_, output):
 
             filepath = f'{output_dir}{os.sep}{filename}'
 
-            if output == 'mapfile':
+            if output == 'file':
                 with open(filepath, 'w', encoding='utf-8') as fh:
                     if map_:
                         mappyfile.dump(mapfile_copy, fh)
@@ -590,18 +563,18 @@ def generate(ctx, layer, map_, output):
 
         mapfile['layers'] = all_layers
 
-        if output == 'mapfile':
+        if output == 'file':
             filename = 'geomet-weather.map'
             filepath = f'{output_dir}{os.sep}{filename}'
 
             with open(filepath, 'w', encoding='utf-8') as fh:
                 mappyfile.dump(mapfile, fh)
 
-        if output == 'store':
+        elif output == 'store':
             st.set_key('geomet-weather_mapfile', mappyfile.dumps(mapfile))
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
     shutil.copy2(epsg_file, os.path.join(BASEDIR, output_dir))
 
 
-generate_mapfile.add_command(generate)
+mapfile.add_command(generate)
