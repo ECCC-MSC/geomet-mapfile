@@ -4,4 +4,3 @@ mappyfile
 python-dateutil
 pyyaml
 redis
-requests
