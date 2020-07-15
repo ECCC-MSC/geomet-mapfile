@@ -554,7 +554,8 @@ def generate(ctx, layer, map_, output):
             elif output == 'store':
 
                 if map_:
-                    st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+                    st.set_key(f'{key}_mapfile',
+                               mappyfile.dumps(mapfile_copy))
                 else:
                     st.set_key(f'{key}_layer',
                                mappyfile.dumps(mapfile_copy['layers']))
@@ -571,7 +572,8 @@ def generate(ctx, layer, map_, output):
                 mappyfile.dump(mapfile, fh)
 
         elif output == 'store':
-            st.set_key('geomet-weather_mapfile', mappyfile.dumps(mapfile))
+            st.set_key('geomet-weather_mapfile',
+                       mappyfile.dumps(mapfile))
 
     epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
     shutil.copy2(epsg_file, os.path.join(BASEDIR, output_dir))
