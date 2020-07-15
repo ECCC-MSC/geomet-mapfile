@@ -23,6 +23,7 @@ import logging
 import click
 import mappyfile
 
+from geomet_data_registry.util import json_pretty_print
 from geomet_mapfile.env import STORE_TYPE, STORE_URL
 from geomet_mapfile.plugin import load_plugin
 from geomet_mapfile.store.base import StoreError
@@ -133,8 +134,30 @@ def get_key(ctx, key):
         click.echo('Getting {} key from store ({}).'.format(key, st.url))
         retrieved_key = st.get_key(key)
         if retrieved_key:
-            click.echo(f'{retrieved_key.decode("utf-8")}')
+            click.echo(retrieved_key)
 
+    except StoreError as err:
+        raise click.ClickException(err)
+    click.echo('Done')
+
+
+@click.command('list')
+@click.option('--pattern', '-p',
+              help='regular expression to filter keys on')
+@click.pass_context
+def list_keys(ctx, pattern=None):
+    """list all keys in store"""
+
+    provider_def = {
+        'type': STORE_TYPE,
+        'url': STORE_URL
+    }
+
+    st = load_plugin('store', provider_def)
+
+    try:
+        pattern = f'geomet-mapfile*{pattern if pattern else ""}'
+        click.echo(json_pretty_print(st.list_keys(pattern)))
     except StoreError as err:
         raise click.ClickException(err)
     click.echo('Done')
@@ -144,3 +167,4 @@ store.add_command(setup)
 store.add_command(teardown)
 store.add_command(set_key)
 store.add_command(get_key)
+store.add_command(list_keys)
