@@ -25,12 +25,20 @@ import re
 from urllib.request import urlopen
 
 import click
-from elasticsearch import Elasticsearch
 import mapscript
 
-from geomet_mapfile.env import BASEDIR, TILEINDEX_URL
+from geomet_mapfile.env import (BASEDIR, TILEINDEX_URL,
+                                TILEINDEX_TYPE, TILEINDEX_NAME)
+from geomet_mapfile.plugin import load_plugin
 
 LOGGER = logging.getLogger(__name__)
+
+TILEINDEX_PROVIDER_DEF = {
+    'type': TILEINDEX_TYPE,
+    'url': TILEINDEX_URL,
+    'name': TILEINDEX_NAME,
+    'group': None
+}
 
 # List of all environment variable used by MapServer
 MAPSERV_ENV = [
@@ -91,14 +99,13 @@ def insert_data(layer, fh, mr):
     else:
         id_ = '{}-{}'.format(layer, forecast)
 
-    # TODO: abstract into abc
-    es = Elasticsearch()
+    ti = load_plugin('tileindex', TILEINDEX_PROVIDER_DEF)
 
     try:
-        res = es.get(index=TILEINDEX_URL.split('/')[-2], id=id_)
+        res = ti.get(id_)
 
-        filepath = res['_source']['properties']['filepath']
-        url = res['_source']['properties']['url']
+        filepath = res['properties']['filepath']
+        url = res['properties']['url']
 
         res_arr = [filepath, url]
     except Exception as err:
