@@ -90,7 +90,9 @@ def teardown(ctx, group=None):
               help='Path to mapfile')
 @click.option('--map/--no-map', 'map_', default=True,
               help="Output with or without mapfile MAP object")
-def set_key(ctx, key, mapfile, map_):
+@click.option('--raw', '-r', is_flag=True,
+              help='set key without adding prefix')
+def set_key(ctx, key, mapfile, map_, raw):
     """populate store"""
 
     if all([key is None, mapfile is None]):
@@ -105,11 +107,19 @@ def set_key(ctx, key, mapfile, map_):
 
     mapfile_ = mappyfile.open(mapfile, expand_includes=False)
     try:
-        click.echo(f'Setting {key} in store ({st.url})')
-        if map_:
-            st.set_key(key, mappyfile.dumps(mapfile_))
+
+        value = (
+            mappyfile.dumps(mapfile_)
+            if map_
+            else mappyfile.dumps(mapfile_['layers'])
+        )
+
+        if raw:
+            click.echo(f'Setting {key} in store ({st.url})')
+            st.set_key(key, value, raw=True)
         else:
-            st.set_key(key, mappyfile.dumps(mapfile_['layers']))
+            click.echo(f'Setting geomet-mapfile_{key} in store ({st.url})')
+            st.set_key(key, value)
     except StoreError as err:
         raise click.ClickException(err)
     click.echo('Done')
@@ -118,7 +128,9 @@ def set_key(ctx, key, mapfile, map_):
 @click.command('get')
 @click.pass_context
 @click.option('--key', '-k', help='key name to retrieve from store')
-def get_key(ctx, key):
+@click.option('--raw', '-r', is_flag=True,
+              help='get key without adding prefix')
+def get_key(ctx, key, raw):
     """get key from store"""
 
     if all([key is None]):
@@ -132,8 +144,16 @@ def get_key(ctx, key):
     st = load_plugin('store', provider_def)
 
     try:
-        click.echo('Getting {} key from store ({}).'.format(key, st.url))
-        retrieved_key = st.get_key(key)
+        if raw:
+            click.echo('Getting {} key from store ({}).'.format(key, st.url))
+            retrieved_key = st.get_key(key, raw=True)
+        else:
+            click.echo(
+                'Getting geomet-mapfile_{} key from store ({}).'.format(
+                    key, st.url)
+            )
+            retrieved_key = st.get_key(key)
+
         if retrieved_key:
             click.echo(retrieved_key)
 
@@ -145,8 +165,10 @@ def get_key(ctx, key):
 @click.command('list')
 @click.option('--pattern', '-p',
               help='regular expression to filter keys on')
+@click.option('--raw', '-r', is_flag=True,
+              help='list raw keys without removing prefix')
 @click.pass_context
-def list_keys(ctx, pattern=None):
+def list_keys(ctx, raw, pattern=None):
     """list all keys in store"""
 
     provider_def = {
@@ -159,8 +181,11 @@ def list_keys(ctx, pattern=None):
     try:
 
         pattern = 'geomet-mapfile*{}'.format(pattern if pattern else '')
-        keys = [remove_prefix(key, 'geomet-mapfile_') for key
-                in st.list_keys(pattern)]
+        if raw:
+            keys = st.list_keys(pattern)
+        else:
+            keys = [remove_prefix(key, 'geomet-mapfile_') for key
+                    in st.list_keys(pattern)]
         click.echo(json_pretty_print(keys))
     except StoreError as err:
         raise click.ClickException(err)
