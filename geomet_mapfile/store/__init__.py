@@ -27,6 +27,7 @@ from geomet_data_registry.util import json_pretty_print
 from geomet_mapfile.env import STORE_TYPE, STORE_URL
 from geomet_mapfile.plugin import load_plugin
 from geomet_mapfile.store.base import StoreError
+from geomet_mapfile.util import remove_prefix
 
 LOGGER = logging.getLogger(__name__)
 
@@ -156,8 +157,11 @@ def list_keys(ctx, pattern=None):
     st = load_plugin('store', provider_def)
 
     try:
-        pattern = f'geomet-mapfile*{pattern if pattern else ""}'
-        click.echo(json_pretty_print(st.list_keys(pattern)))
+
+        pattern = 'geomet-mapfile*{}'.format(pattern if pattern else '')
+        keys = [remove_prefix(key, 'geomet-mapfile_') for key
+                in st.list_keys(pattern)]
+        click.echo(json_pretty_print(keys))
     except StoreError as err:
         raise click.ClickException(err)
     click.echo('Done')

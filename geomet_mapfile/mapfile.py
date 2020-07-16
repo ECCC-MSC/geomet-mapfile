@@ -118,10 +118,18 @@ def layer_time_config(layer_name):
     model = layer_name.split('.')[0]
     st = load_plugin('store', PROVIDER_DEF)
 
-    time_extent = st.get_key(f'{layer_name}_time_extent')
-    default_time = st.get_key(f'{layer_name}_default_time')
-    model_run_extent = st.get_key(f'{layer_name}_model_run_extent')
-    default_model_run = st.get_key(f'{layer_name}_default_model_run')
+    time_extent = st.get_key(
+        f'geomet-data-registry_{layer_name}_time_extent', raw=True
+    )
+    default_time = st.get_key(
+        f'geomet-data-registry_{layer_name}_default_time', raw=True
+    )
+    model_run_extent = st.get_key(
+        f'geomet-data-registry_{layer_name}_model_run_extent', raw=True
+    )
+    default_model_run = st.get_key(
+        f'geomet-data-registry_{layer_name}_default_model_run', raw=True
+    )
 
     if not time_extent:
         LOGGER.error(f'Could not retrieve {layer_name} time extent'

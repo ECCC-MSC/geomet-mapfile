@@ -32,6 +32,20 @@ DATEFORMAT = '%Y-%m-%dT%H:%M:%SZ'
 LOGGER = logging.getLogger(__name__)
 
 
+def remove_prefix(text, prefix):
+    """
+    Utility function to remove a given prefix from a string if is present
+
+    :param text: `str` to parse
+    :param prefix: `str` to remove from text
+
+    :returns: `str` of text without prefix, or text if no prefix found
+    """
+    if text.startswith(prefix):
+        return text[len(prefix):]
+    return text
+
+
 def clean_style(filepath, output_format='json'):
     # TODO: docstring
     with open(filepath, 'r') as f:
