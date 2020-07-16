@@ -56,6 +56,20 @@ class RedisStore(RedisStore_):
 
         return True
 
+    def get_key(self, key, raw=False):
+        """
+        Set key value from
+
+        :param key: key to set value
+        :param value: value to set
+
+        :returns: `bool` of set success
+        """
+        if raw:
+            return self.redis.get(key)
+
+        return self.redis.get('geomet-mapfile_{}'.format(key))
+
     def set_key(self, key, value):
         """
         Set key value from
