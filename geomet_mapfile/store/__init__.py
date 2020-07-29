@@ -24,9 +24,9 @@ import click
 import mappyfile
 
 from geomet_data_registry.util import json_pretty_print
+from geomet_data_registry.store.base import StoreError
 from geomet_mapfile.env import STORE_TYPE, STORE_URL
 from geomet_mapfile.plugin import load_plugin
-from geomet_mapfile.store.base import StoreError
 from geomet_mapfile.util import remove_prefix
 
 LOGGER = logging.getLogger(__name__)
