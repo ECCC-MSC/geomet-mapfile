@@ -27,7 +27,6 @@ LOGGER = logging.getLogger(__name__)
 LOGGER.info('Fetching environment variables')
 
 BASEDIR = os.environ.get('GEOMET_MAPFILE_BASEDIR', None)
-DATADIR = os.environ.get('GEOMET_MAPFILE_DATADIR', None)
 CONFIG = os.environ.get('GEOMET_MAPFILE_CONFIG', None)
 URL = os.environ.get('GEOMET_MAPFILE_URL', None)
 STORE_TYPE = os.environ.get('GEOMET_MAPFILE_STORE_TYPE', None)
@@ -37,13 +36,12 @@ TILEINDEX_TYPE = os.environ.get('GEOMET_MAPFILE_TILEINDEX_TYPE', None)
 TILEINDEX_URL = os.environ.get('GEOMET_MAPFILE_TILEINDEX_URL', None)
 
 LOGGER.debug(BASEDIR)
-LOGGER.debug(DATADIR)
 LOGGER.debug(CONFIG)
 LOGGER.debug(STORE_TYPE)
 LOGGER.debug(STORE_URL)
 LOGGER.debug(TILEINDEX_URL)
 
-if None in [BASEDIR, DATADIR, CONFIG]:
+if None in [BASEDIR, CONFIG]:
     msg = 'Environment variables not set!'
     LOGGER.exception(msg)
     raise EnvironmentError(msg)

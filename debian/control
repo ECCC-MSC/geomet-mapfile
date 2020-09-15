@@ -1,0 +1,16 @@
+Source: geomet-mapfile
+Section: python
+Priority: optional
+Maintainer: Tom Kralidis <tom.kralidis@canada.ca>
+Build-Depends: debhelper (>= 9), python3, python3-setuptools
+Standards-Version: 3.9.5
+X-Python-Version: >= 3.6
+Vcs-Git: https://github.com/ECCC-MSC/geomet-mapfile.git
+
+Package: geomet-mapfile
+Architecture: all
+Depends: gcc, apache2, apache2-utils, mapserver-bin, geomet-data-registry, libapache2-mod-wsgi-py3, python3-click, python3-dateutil, python3-elasticsearch (>=7), python3-elasticsearch (<8), python3-mappyfile, python3-mapscript, python3-redis, python3-yaml
+Suggests: cgi-mapserver
+Homepage: https://github.com/ECCC-MSC/geomet-mapfile
+Description: geomet-mapfile manages mapfiles and provides WMS services
+ on top of geomet-data-registry.

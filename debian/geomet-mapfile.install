@@ -1,0 +1,3 @@
+geomet-mapfile-config.yml opt/geomet-mapfile/conf
+deploy/default/geomet-mapfile.conf opt/geomet-mapfile/etc/apache2
+deploy/default/geomet-mapfile.wsgi opt/geomet-mapfile/app
