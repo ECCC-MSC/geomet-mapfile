@@ -27,8 +27,15 @@ from urllib.request import urlopen
 import click
 import mapscript
 
-from geomet_mapfile.env import (BASEDIR, TILEINDEX_URL,
-                                TILEINDEX_TYPE, TILEINDEX_NAME)
+from geomet_mapfile.env import (
+    BASEDIR,
+    TILEINDEX_URL,
+    TILEINDEX_TYPE,
+    TILEINDEX_NAME,
+    MAPFILE_STORAGE,
+    STORE_TYPE,
+    STORE_URL,
+)
 from geomet_mapfile.plugin import load_plugin
 
 LOGGER = logging.getLogger(__name__)
@@ -37,24 +44,41 @@ TILEINDEX_PROVIDER_DEF = {
     'type': TILEINDEX_TYPE,
     'url': TILEINDEX_URL,
     'name': TILEINDEX_NAME,
-    'group': None
+    'group': None,
 }
 
 # List of all environment variable used by MapServer
 MAPSERV_ENV = [
-  'CONTENT_LENGTH', 'CONTENT_TYPE', 'CURL_CA_BUNDLE', 'HTTP_COOKIE',
-  'HTTP_HOST', 'HTTPS', 'HTTP_X_FORWARDED_HOST', 'HTTP_X_FORWARDED_PORT',
-  'HTTP_X_FORWARDED_PROTO', 'MS_DEBUGLEVEL', 'MS_ENCRYPTION_KEY',
-  'MS_ERRORFILE', 'MS_MAPFILE', 'MS_MAPFILE_PATTERN', 'MS_MAP_NO_PATH',
-  'MS_MAP_PATTERN', 'MS_MODE', 'MS_OPENLAYERS_JS_URL', 'MS_TEMPPATH',
-  'MS_XMLMAPFILE_XSLT', 'PROJ_LIB', 'QUERY_STRING', 'REMOTE_ADDR',
-  'REQUEST_METHOD', 'SCRIPT_NAME', 'SERVER_NAME', 'SERVER_PORT'
+    'CONTENT_LENGTH',
+    'CONTENT_TYPE',
+    'CURL_CA_BUNDLE',
+    'HTTP_COOKIE',
+    'HTTP_HOST',
+    'HTTPS',
+    'HTTP_X_FORWARDED_HOST',
+    'HTTP_X_FORWARDED_PORT',
+    'HTTP_X_FORWARDED_PROTO',
+    'MS_DEBUGLEVEL',
+    'MS_ENCRYPTION_KEY',
+    'MS_ERRORFILE',
+    'MS_MAPFILE',
+    'MS_MAPFILE_PATTERN',
+    'MS_MAP_NO_PATH',
+    'MS_MAP_PATTERN',
+    'MS_MODE',
+    'MS_OPENLAYERS_JS_URL',
+    'MS_TEMPPATH',
+    'MS_XMLMAPFILE_XSLT',
+    'PROJ_LIB',
+    'QUERY_STRING',
+    'REMOTE_ADDR',
+    'REQUEST_METHOD',
+    'SCRIPT_NAME',
+    'SERVER_NAME',
+    'SERVER_PORT',
 ]
 
-WCS_FORMATS = {
-    'image/tiff': 'tif',
-    'image/netcdf': 'nc'
-}
+WCS_FORMATS = {'image/tiff': 'tif', 'image/netcdf': 'nc'}
 
 SERVICE_EXCEPTION = '''<?xml version='1.0' encoding="UTF-8" standalone="no"?>
 <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc"
@@ -161,31 +185,47 @@ def application(env, start_response):
     LOGGER.debug('language: {}'.format(lang))
 
     if layer == 'GODS':
-        with open(os.path.join(BASEDIR,
-                               'geomet_mapfile/resources/',
-                               'other/banner.txt')) as fh:
-            start_response('200 OK',
-                           [('Content-Type', 'text/plain')])
+        with open(
+            os.path.join(
+                BASEDIR, 'geomet_mapfile/resources/', 'other/banner.txt'
+            )
+        ) as fh:
+            start_response('200 OK', [('Content-Type', 'text/plain')])
             msg = fh.read()
             return ['{}'.format(msg).encode()]
 
-    if layer is not None and ',' not in layer:
-        mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
-            BASEDIR, layer)
-    if mapfile_ is None or not os.path.exists(mapfile_):
-        mapfile_ = '{}/mapfile/geomet-weather.map'.format(
-            BASEDIR)
-    if not os.path.exists(mapfile_):
-        start_response('400 Bad Request',
-                       [('Content-Type', 'application/xml')])
+    # fetch mapfile from store or from disk
+    if MAPFILE_STORAGE == 'file':
+        # if a single layer is specified in LAYER param fetch mapfile from disk
+        if layer is not None and ',' not in layer:
+            mapfile_ = '{}/mapfile/geomet-weather-{}.map'.format(
+                BASEDIR, layer
+            )
+        # if mapfile_ is None or its path does not exist
+        if mapfile_ is None or not os.path.exists(mapfile_):
+            mapfile_ = '{}/mapfile/geomet-weather.map'.format(BASEDIR)
+        # if mapfile_ path does not exist set mapfile_ to None
+        if not os.path.exists(mapfile_):
+            mapfile_ = None
+    elif MAPFILE_STORAGE == 'store':
+        st = load_plugin('store', {'type': STORE_TYPE, 'url': STORE_URL})
+        if layer is not None and ',' not in layer:
+            mapfile_ = st.get_key('{}_mapfile'.format(layer))
+        if mapfile_ is None:
+            mapfile_ = st.get_key('geomet-weather_mapfile')
+
+    # if no mapfile at all is found return a Unsupported service exception
+    if not mapfile_:
+        start_response(
+            '400 Bad Request', [('Content-Type', 'application/xml')]
+        )
         msg = 'Unsupported service'
         return [SERVICE_EXCEPTION.format(msg).encode()]
 
     # if requesting GetCapabilities for entire service, return cache
     if request_ == 'GetCapabilities' and layer is None:
         if service_ == 'WMS':
-            filename = 'geomet-weather-1.3.0-capabilities-{}.xml'.format(
-                lang)
+            filename = 'geomet-weather-1.3.0-capabilities-{}.xml'.format(lang)
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
 
         if os.path.isfile(cached_caps):
@@ -193,10 +233,20 @@ def application(env, start_response):
             with io.open(cached_caps, 'rb') as fh:
                 return [fh.read()]
     else:
-        LOGGER.debug('Loading mapfile: {}'.format(mapfile_))
-        mapfile = mapscript.mapObj(mapfile_)
-        layerobj = mapfile.getLayerByName(layer)
+        if os.path.exists(mapfile_):
+            # read mapfile from filepath
+            LOGGER.debug('Loading mapfile {} from disk'.format(mapfile_))
+            mapfile = mapscript.mapObj(mapfile_)
+        else:
+            # read mapfile from string returned from store
+            LOGGER.debug(
+                'Loading {}_mapfile from store'.format(
+                    layer if layer else 'geomet-mapfile'
+                )
+            )
+            mapfile = mapscript.fromstring(mapfile_)
 
+        layerobj = mapfile.getLayerByName(layer)
         time = request.getValueByName('TIME')
         ref_time = request.getValueByName('DIM_REFERENCE_TIME')
 
@@ -277,6 +327,7 @@ def serve(ctx, port):
     """Serve for development"""
 
     from wsgiref.simple_server import make_server
+
     httpd = make_server('', port, application)
     click.echo('Serving on port {}'.format(port))
     httpd.serve_forever()

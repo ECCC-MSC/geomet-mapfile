@@ -47,7 +47,8 @@ class RedisStore(RedisStore_):
 
         LOGGER.debug('Deleting all geomet-mapfile Redis keys')
         keys = [
-            key for key in self.redis.scan_iter()
+            key
+            for key in self.redis.scan_iter()
             if key.startswith('geomet-mapfile')
         ]
         for key in keys:

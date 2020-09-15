@@ -518,6 +518,11 @@ def generate(ctx, layer, map_, output):
     else:
         mapfiles = cfg['layers']
 
+    # set PROJ_LIB path
+    mapfile['config']['proj_lib'] = os.path.join(
+        BASEDIR, 'geomet_mapfile', 'resources', 'mapserv'
+    )
+
     mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'],
                                                   URL)
 
