@@ -394,7 +394,9 @@ def gen_layer(layer_name, layer_info):
 
         layer['classes'] = []
         for style in layer_info['styles']:
-            with open(os.path.join(BASEDIR, style)) as json_style:
+            with open(
+                os.path.join(THISDIR, 'resources', style)
+            ) as json_style:
                 for class_ in json.load(json_style):
                     layer['classes'].append(class_)
 
