@@ -89,18 +89,58 @@ SERVICE_EXCEPTION = '''<?xml version='1.0' encoding="UTF-8" standalone="no"?>
 </ServiceExceptionReport>'''
 
 
-def metadata_lang(m, lang):
+def metadata_lang(m, layers, lang):
     """
     function to update the mapfile MAP metadata
     keys in function of the lang of the request
 
     :param m: mapfile object to update language
+    :param layers: `list` of layer names in mapfile
     :param lang: lang of the request
 
-    :returns: TODO
+    :returns: `bool` of language update status
     """
+    map_fields_to_update = [
+        'ows_abstract',
+        'ows_address',
+        'ows_city',
+        'ows_contactinstructions',
+        'ows_contactperson',
+        'ows_contactorganization',
+        'ows_contactposition',
+        'ows_country',
+        'ows_hoursofservice',
+        'ows_keywordlist',
+        'ows_keywordlist_http://purl.org/dc/terms/_items',
+        'ows_onlineresource',
+        'ows_service_onlineresource',
+        'ows_stateorprovince',
+        'ows_title',
+        'wcs_description',
+        'wcs_label',
+        'wms_attribution_title',
+        'wms_attribution_onlineresource',
+    ]
 
-    # TODO: docstring and do we need this?
+    for field in map_fields_to_update:
+        m.setMetaData(field, m.getMetaData(f'{field}_{lang}'))
+
+    layer_fields_to_update = [
+        'ows_title',
+        'wms_layer_group',
+        'ows_abstract',
+        'wcs_label',
+        'ows_keywordlist',
+    ]
+
+    for layer in layers:
+        for field in layer_fields_to_update:
+            layerobj = m.getLayerByName(layer)
+            layerobj.setMetaData(
+                field, layerobj.getMetaData(f'{field}_{lang}')
+            )
+
+    return True
 
 
 def insert_data(layer, fh, mr):
@@ -280,13 +320,8 @@ def application(env, start_response):
             start_response('200 OK', [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(time_error).encode()]
 
-        # if request_ == 'GetCapabilities' and lang == 'fr':
-        #     metadata_lang(mapfile, lang)
-        #     layerobj = mapfile.getLayerByName(layer)
-        #     layerobj.setMetaData('ows_title', layerobj.getMetaData(
-        #          'ows_title_{}'.format(lang))) # noqa
-        #     layerobj.setMetaData('ows_layer_group',
-        #                          layerobj.getMetaData('ows_layer_group_{}'.format(lang))) # noqa
+        if request_ == 'GetCapabilities' and lang == 'fr':
+            metadata_lang(mapfile, layer.split(','), lang)
 
     mapscript.msIO_installStdoutToBuffer()
 
