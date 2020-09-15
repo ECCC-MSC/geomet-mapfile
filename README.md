@@ -2,9 +2,9 @@
 
 ## Overview
 
-geomet-mapfile manages mapfiles and provides WMS services on top of [geomet-data-registry](https://github.com/ECCC-MSC/geomet-data-registry).
+geomet-mapfile manages [MapServer](https://mapserver.org) mapfiles and provides WMS services on top of [geomet-data-registry](https://github.com/ECCC-MSC/geomet-data-registry).
 
-mapfile management is done either on disk (default) or using a store backend (eg.g Redis).
+mapfile management is done either on disk (default) or using a store backend (e.g. Redis).
 
 ## Installation
 
