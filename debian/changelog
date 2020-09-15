@@ -1,0 +1,5 @@
+geomet-mapfile (0.1.0) bionic; urgency=medium
+
+  * initial Debian packaging
+
+ -- Tom Kralidis <tom.kralidis@canada.ca>  Tue, 15 Sep 2020 15:22:42 +0000

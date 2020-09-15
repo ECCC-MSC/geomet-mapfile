@@ -34,7 +34,7 @@ import mappyfile
 from yaml import load, CLoader
 
 from geomet_mapfile import __version__
-from geomet_mapfile.env import (BASEDIR, CONFIG, DATADIR, STORE_TYPE,
+from geomet_mapfile.env import (BASEDIR, CONFIG, STORE_TYPE,
                                 STORE_URL, URL)
 from geomet_mapfile.plugin import load_plugin
 from geomet_mapfile.util import DATEFORMAT
@@ -394,7 +394,7 @@ def gen_layer(layer_name, layer_info):
 
         layer['classes'] = []
         for style in layer_info['styles']:
-            with open(os.path.join(DATADIR, style)) as json_style:
+            with open(os.path.join(BASEDIR, style)) as json_style:
                 for class_ in json.load(json_style):
                     layer['classes'].append(class_)
 
@@ -534,14 +534,14 @@ def generate(ctx, layer, map_, output):
 
             # TODO: simplify
             if 'outputformats' in value['forecast_model']:
-                mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']
-                                                 if format_['name'] in value['forecast_model']['outputformats']]
+                mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']  # noqa
+                                                 if format_['name'] in value['forecast_model']['outputformats']]  # noqa
 
             # TODO: simplify
             if 'symbols' in value:
-                mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in
-                                           value['symbols'] or any(symbol_ in symbol['name']
-                                                                   for symbol_ in value['symbols'])]
+                mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in  # noqa
+                                           value['symbols'] or any(symbol_ in symbol['name']  # noqa
+                                                                   for symbol_ in value['symbols'])]  # noqa
             else:
                 mapfile_copy['symbols'] = []
 
