@@ -27,6 +27,7 @@ from urllib.request import urlopen
 import click
 import mapscript
 
+from geomet_data_registry.tileindex.base import TileNotFoundError
 from geomet_mapfile.env import (
     BASEDIR,
     TILEINDEX_URL,
@@ -172,9 +173,9 @@ def get_data_path(layer, fh, mr):
         url = res['properties']['url']
 
         res_arr = [filepath, url]
-    except Exception as err:
+    except TileNotFoundError as err:
         LOGGER.debug(err)
-        raise RuntimeError(err)
+        raise TileNotFoundError(err)
 
     return res_arr
 
@@ -302,7 +303,7 @@ def application(env, start_response):
 
         try:
             filepath, url = get_data_path(layer, time, ref_time)
-        except Exception as err:
+        except TileNotFoundError as err:
             LOGGER.error(err)
             time_error = 'NoMatch: Date et heure invalides / Invalid date and time'
             start_response('200 OK', [('Content-type', 'text/xml')])
