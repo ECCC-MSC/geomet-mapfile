@@ -143,7 +143,7 @@ def metadata_lang(m, layers, lang):
     return True
 
 
-def insert_data(layer, fh, mr):
+def get_data_path(layer, fh, mr):
     """
     function to find the datapath
     based on either the layer metadata
@@ -174,7 +174,7 @@ def insert_data(layer, fh, mr):
         res_arr = [filepath, url]
     except Exception as err:
         LOGGER.debug(err)
-        return None
+        raise RuntimeError(err)
 
     return res_arr
 
@@ -301,11 +301,21 @@ def application(env, start_response):
             ref_time = layerobj.getMetaData('wms_reference_time_default')
 
         try:
-            filepath, url = insert_data(layer, time, ref_time)
+            filepath, url = get_data_path(layer, time, ref_time)
+        except Exception as err:
+            LOGGER.error(err)
+            time_error = 'NoMatch: Date et heure invalides / Invalid date and time'
+            start_response('200 OK', [('Content-type', 'text/xml')])
+            return [SERVICE_EXCEPTION.format(time_error).encode()]
+
+        try: 
             if request_ in ['GetMap', 'GetFeatureInfo']:
                 if not os.path.isfile(filepath):
+                    LOGGER.debug('File is not on disk: {}'.format(filepath))
                     if not os.path.exists(os.path.dirname(filepath)):
+                        LOGGER.debug('Creating the filepath')
                         os.makedirs(os.path.dirname(filepath))
+                    LOGGER.debug('Downloading url: {}'.format(url))
                     with urlopen(url) as r:
                         with open(filepath, 'wb') as fh:
                             fh.write(r.read())
@@ -313,12 +323,10 @@ def application(env, start_response):
             layerobj.data = filepath
 
         except ValueError as err:
-            time_error = err
-
-        if time_error is not None:
-            time_error = 'Date et heure invalides / Invalid date and time'
-            start_response('200 OK', [('Content-type', 'text/xml')])
-            return [SERVICE_EXCEPTION.format(time_error).encode()]
+            LOGGER.error(err)
+            _error = 'NoApplicableCode: Donnée non disponible / Data not available'
+            start_response('500 Internal Server Error', [('Content-type', 'text/xml')])
+            return [SERVICE_EXCEPTION.format(_error).encode()]
 
         if request_ == 'GetCapabilities' and lang == 'fr':
             metadata_lang(mapfile, layer.split(','), lang)
