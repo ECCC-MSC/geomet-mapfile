@@ -585,14 +585,17 @@ forecast_models:
         label_en: Canadian Arctic Prediction System (CAPS)/CAPS at pressure levels [experimental]
         label_fr: Système canadien de prévision de l'Arctique (SCPA)/SCPA en niveaux de pression [expérimental]
     radar: &id_radar
-        mcf: observations/msc_radar.mcf
+        mcf: observations/msc_radar.yml
         projection: mapserv/proj/radar.inc
         extent: 0 0 6600000 6000000
         label_en: Weather Radar/North American radar mosaic (4 km)
         label_fr: Radar météo/Mosaïque radar Nord-Américaine (4 km)
         observations_interval_min: 10
     radar_1km_mmhr_cmhr_dbz: &id_radar_1km_mmhr_cmhr_dbz_composite
-        mcf: observations/msc_radar.mcf
+        # TODO: we need to figure out how to manage a MCF that inherits
+        #       from a parent MCF (see msc_radar-1km.yml). mapfile.py currently
+        #       doesn't support this.
+        mcf: observations/msc_radar.yml
         projection: mapserv/proj/4326.inc
         extent: -170.32 16.93 -50.00 67.19
         label_en: Weather Radar/North American radar mosaic (1 km)
