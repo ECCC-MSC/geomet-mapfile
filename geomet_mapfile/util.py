@@ -32,6 +32,24 @@ DATEFORMAT = '%Y-%m-%dT%H:%M:%SZ'
 LOGGER = logging.getLogger(__name__)
 
 
+def str2bool(value):
+    """
+    helper function to return Python boolean
+    type (source: https://stackoverflow.com/a/715468)
+    :param value: value to be evaluated
+    :returns: `bool` of whether the value is boolean-ish
+    """
+
+    value2 = False
+
+    if isinstance(value, bool):
+        value2 = value
+    else:
+        value2 = value.lower() in ('yes', 'true', 't', '1', 'on')
+
+    return value2
+
+
 def remove_prefix(text, prefix):
     """
     Utility function to remove a given prefix from a string if is present
