@@ -21,6 +21,8 @@
 import logging
 import os
 
+from geomet_mapfile.util import str2bool
+
 
 LOGGER = logging.getLogger(__name__)
 
@@ -35,12 +37,18 @@ TILEINDEX_NAME = os.environ.get('GEOMET_MAPFILE_TILEINDEX_NAME', None)
 TILEINDEX_TYPE = os.environ.get('GEOMET_MAPFILE_TILEINDEX_TYPE', None)
 TILEINDEX_URL = os.environ.get('GEOMET_MAPFILE_TILEINDEX_URL', None)
 MAPFILE_STORAGE = os.environ.get('GEOMET_MAPFILE_STORAGE', 'file')
+ALLOW_LAYER_DATA_DOWNLOAD = str2bool(os.environ.get(
+    'GEOMET_MAPFILE_ALLOW_LAYER_DATA_DOWNLOAD'), False)
+
 
 LOGGER.debug(BASEDIR)
 LOGGER.debug(CONFIG)
 LOGGER.debug(STORE_TYPE)
 LOGGER.debug(STORE_URL)
+LOGGER.debug(TILEINDEX_NAME)
 LOGGER.debug(TILEINDEX_URL)
+LOGGER.debug(MAPFILE_STORAGE)
+LOGGER.debug(ALLOW_LAYER_DATA_DOWNLOAD)
 
 if None in [BASEDIR, CONFIG]:
     msg = 'Environment variables not set!'
