@@ -36,6 +36,7 @@ from geomet_mapfile.env import (
     MAPFILE_STORAGE,
     STORE_TYPE,
     STORE_URL,
+    ALLOW_LAYER_DATA_DOWNLOAD
 )
 from geomet_mapfile.plugin import load_plugin
 
@@ -226,11 +227,9 @@ def application(env, start_response):
     LOGGER.debug('language: {}'.format(lang))
 
     if layer == 'GODS':
-        with open(
-            os.path.join(
-                BASEDIR, 'geomet_mapfile/resources/', 'other/banner.txt'
-            )
-        ) as fh:
+        banner = os.path.join(BASEDIR, 'geomet_mapfile/resources',
+                              'other/banner.txt')
+        with open(banner) as fh:
             start_response('200 OK', [('Content-Type', 'text/plain')])
             msg = fh.read()
             return ['{}'.format(msg).encode()]
@@ -265,6 +264,7 @@ def application(env, start_response):
 
     # if requesting GetCapabilities for entire service, return cache
     if request_ == 'GetCapabilities' and layer is None:
+        LOGGER.debug('Requesting global mapfile')
         if service_ == 'WMS':
             filename = 'geomet-weather-1.3.0-capabilities-{}.xml'.format(lang)
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
@@ -274,6 +274,7 @@ def application(env, start_response):
             with io.open(cached_caps, 'rb') as fh:
                 return [fh.read()]
     else:
+        LOGGER.debug('Requesting layer mapfile')
         if os.path.exists(mapfile_):
             # read mapfile from filepath
             LOGGER.debug('Loading mapfile {} from disk'.format(mapfile_))
@@ -305,14 +306,22 @@ def application(env, start_response):
             filepath, url = get_data_path(layer, time, ref_time)
         except TileNotFoundError as err:
             LOGGER.error(err)
-            time_error = 'NoMatch: Date et heure invalides / Invalid date and time'
+            time_error = 'NoMatch: Date et heure invalides / Invalid date and time'  # noqa
             start_response('200 OK', [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(time_error).encode()]
 
-        try: 
+        try:
             if request_ in ['GetMap', 'GetFeatureInfo']:
-                if not os.path.isfile(filepath):
+                if all([filepath.startswith(os.sep),
+                        not os.path.isfile(filepath)]):
                     LOGGER.debug('File is not on disk: {}'.format(filepath))
+                    if not ALLOW_LAYER_DATA_DOWNLOAD:
+                        LOGGER.error('layer data downloading not allowed')
+                        _error = 'data not found'
+                        start_response('500 Internal Server Error',
+                                       [('Content-type', 'text/xml')])
+                        return [SERVICE_EXCEPTION.format(_error).encode()]
+
                     if not os.path.exists(os.path.dirname(filepath)):
                         LOGGER.debug('Creating the filepath')
                         os.makedirs(os.path.dirname(filepath))
@@ -325,8 +334,9 @@ def application(env, start_response):
 
         except ValueError as err:
             LOGGER.error(err)
-            _error = 'NoApplicableCode: Donnée non disponible / Data not available'
-            start_response('500 Internal Server Error', [('Content-type', 'text/xml')])
+            _error = 'NoApplicableCode: Donnée non disponible / Data not available'  # noqa
+            start_response('500 Internal Server Error',
+                           [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(_error).encode()]
 
         if request_ == 'GetCapabilities' and lang == 'fr':
