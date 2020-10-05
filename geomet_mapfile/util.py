@@ -64,6 +64,17 @@ def remove_prefix(text, prefix):
     return text
 
 
+def get_nearest(items, target):
+    """
+    Utility function to return nearest value to the target. Works on all
+    object types that support comparison, substraction and abs function.
+    :param items: `list` of items to test against
+    :param target: item to test against
+    :returns: closest item to target
+    """
+    return min(items, key=lambda x: abs(x - target))
+
+
 def clean_style(filepath, output_format='json'):
     # TODO: docstring
     with open(filepath, 'r') as f:
