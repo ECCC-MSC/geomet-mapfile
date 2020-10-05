@@ -306,7 +306,9 @@ def application(env, start_response):
             filepath, url = get_data_path(layer, time, ref_time)
         except TileNotFoundError as err:
             LOGGER.error(err)
-            time_error = 'NoMatch: Date et heure invalides / Invalid date and time'  # noqa
+            time_error = (
+                'NoMatch: Date et heure invalides / Invalid date and time'
+            )
             start_response('200 OK', [('Content-type', 'text/xml')])
             return [SERVICE_EXCEPTION.format(time_error).encode()]
 
@@ -334,9 +336,13 @@ def application(env, start_response):
 
         except ValueError as err:
             LOGGER.error(err)
-            _error = 'NoApplicableCode: Donnée non disponible / Data not available'  # noqa
-            start_response('500 Internal Server Error',
-                           [('Content-type', 'text/xml')])
+            _error = (
+                'NoApplicableCode: Donnée non disponible / Data not available'
+            )
+            start_response(
+                '500 Internal Server Error',
+                [('Content-type', 'text/xml')]
+            )
             return [SERVICE_EXCEPTION.format(_error).encode()]
 
         if request_ == 'GetCapabilities' and lang == 'fr':
