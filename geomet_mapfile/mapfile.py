@@ -22,6 +22,7 @@ from collections import OrderedDict
 from copy import deepcopy
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
+from glob import glob
 import json
 import logging
 import os
@@ -35,9 +36,9 @@ from yaml import load, CLoader
 
 from geomet_mapfile import __version__
 from geomet_mapfile.env import (BASEDIR, CONFIG, STORE_TYPE,
-                                STORE_URL, URL)
+                                STORE_URL, URL, MAPFILE_STORAGE)
 from geomet_mapfile.plugin import load_plugin
-from geomet_mapfile.util import DATEFORMAT
+from geomet_mapfile.util import DATEFORMAT, get_nearest
 
 
 LOGGER = logging.getLogger(__name__)
@@ -47,8 +48,6 @@ THISDIR = os.path.dirname(os.path.realpath(__file__))
 MAPFILE_BASE = os.path.join(THISDIR, 'resources', 'mapfile-base.json')
 
 NOW = datetime.utcnow()
-
-CALCULATED_TIME_EXTENTS = {}
 
 PROVIDER_DEF = {
     'type': STORE_TYPE,
@@ -115,7 +114,6 @@ def layer_time_config(layer_name):
               default model run, model run extent)
     """
 
-    model = layer_name.split('.')[0]
     st = load_plugin('store', PROVIDER_DEF)
 
     time_extent = st.get_key(
@@ -137,53 +135,43 @@ def layer_time_config(layer_name):
                      f' for this layer.')
         return False
 
+    intervals = []
+
     if ((time_extent and default_time) and not
             (model_run_extent and default_model_run)):
         nearest_interval = default_time
     else:
         start, end, interval = time_extent.split('/')
-        if default_model_run == start:
-            key = f'{model}_{interval}'
+
+        start = datetime.strptime(start, DATEFORMAT)
+        end = datetime.strptime(end, DATEFORMAT)
+        regex_result = re.search('^P(T?)(\\d+)(.)', interval)
+        time_ = regex_result.group(1)
+        duration = regex_result.group(2)
+        unit = regex_result.group(3)
+
+        if time_ is None:
+            # this means the duration is a date
+            if unit == 'M':
+                relative_delta = relativedelta(months=int(duration))
         else:
-            key = f'{model}_{interval}_future'
+            # this means the duration is a time
+            if unit == 'H':
+                relative_delta = timedelta(hours=int(duration))
+            elif unit == 'M':
+                relative_delta = timedelta(minutes=int(duration))
 
-        if key not in CALCULATED_TIME_EXTENTS:
-
-            start = datetime.strptime(start, DATEFORMAT)
-            end = datetime.strptime(end, DATEFORMAT)
-            regex_result = re.search('^P(T?)(\\d+)(.)', interval)
-            time_ = regex_result.group(1)
-            duration = regex_result.group(2)
-            unit = regex_result.group(3)
-
-            if time_ is None:
-                # this means the duration is a date
-                if unit == 'M':
-                    relative_delta = relativedelta(months=int(duration))
-            else:
-                # this means the duration is a time
-                if unit == 'H':
-                    relative_delta = timedelta(hours=int(duration))
-                elif unit == 'M':
-                    relative_delta = timedelta(minutes=int(duration))
-
-            intervals = []
-
-            if start != end and relative_delta != timedelta(minutes=0):
-                while start <= end:
-                    intervals.append(start)
-                    start += relative_delta
-                nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)  # noqa
-            else:
-                nearest_interval = end.strftime(DATEFORMAT)
-
-            CALCULATED_TIME_EXTENTS[key] = nearest_interval
-
+        if start != end and relative_delta != timedelta(minutes=0):
+            while start <= end:
+                intervals.append(start)
+                start += relative_delta
+            nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)  # noqa
         else:
-            nearest_interval = CALCULATED_TIME_EXTENTS[key]
+            nearest_interval = end.strftime(DATEFORMAT)
 
     time_config_dict = {
         'default_time': nearest_interval,
+        'available_intervals': intervals,
         'time_extent': time_extent,
         'model_run_extent': model_run_extent,
         'default_model_run': default_model_run
@@ -439,6 +427,14 @@ def gen_layer(layer_name, layer_info):
 
             layer['metadata']['wms_timedefault'] = time_dict['default_time']
 
+            if time_dict['available_intervals']:
+                layer['metadata']['wms_available_intervals'] = ','.join(
+                    [
+                        dt.strftime(DATEFORMAT)
+                        for dt in time_dict['available_intervals']
+                    ]
+                )
+
             if time_dict['default_model_run']:
                 layer['metadata']['wms_reference_time_extent'] = \
                     time_dict['model_run_extent']
@@ -476,6 +472,95 @@ def gen_layer(layer_name, layer_info):
         layers.append(layer)
 
     return layers
+
+
+def find_replace_wms_timedefault(mapfile):
+    """
+    Finds the wms_timedefault and wms_available_intervals and updates the
+    wms_timedefault value to the closest interval to the time of call.
+    :param layer: `str` of layer ID to update
+    :returns: `bool` of update result
+    """
+    # search for entire wms_timedefault line in mapfile
+    wms_timedefault_regex = '(.*"wms_timedefault".")(.*)(")'
+    wms_timedefault = re.search(wms_timedefault_regex, mapfile)
+    # search for entire wms_available_intervals line in mapfile
+    wms_available_intervals_regex = '(.*"wms_available_intervals".")(.*)(")'
+    wms_available_intervals = re.search(wms_available_intervals_regex, mapfile)
+    if wms_available_intervals:
+        # retrieve and split intervals into list
+        wms_available_intervals = wms_available_intervals.group(2).split(',')
+        intervals = [
+            datetime.strptime(dt, DATEFORMAT) for dt in wms_available_intervals
+        ]
+        # get nearest interval to now and convert to string
+        nearest = get_nearest(intervals, datetime.utcnow())
+        nearest = nearest.strftime(DATEFORMAT)
+        # update wms_timedefault metadata value with nearest
+        # interval
+        LOGGER.debug(
+            f'Updating wms_timedefault from {wms_timedefault.group(2)} to '
+            f'{nearest}.'
+        )
+        mapfile = re.sub(
+            wms_timedefault_regex,
+            (
+                f'{wms_timedefault.group(1)}{nearest}'
+                f'{wms_timedefault.group(3)}'
+            ),
+            mapfile,
+        )
+    else:
+        LOGGER.debug(
+            f'Mapfile ({mapfile}) does not contain '
+            f'wms_available_intervals metadata. Not updating '
+            f'wms_timedefault.'
+        )
+
+    return mapfile
+
+
+def update_mapfile(layer=None):
+    """
+    Updates a mapfile.
+    :param layer: `str` of layer ID to update
+    :returns: `bool` of update result
+    """
+    if layer:
+        mapfiles = [
+            f'{BASEDIR}{os.sep}mapfile{os.sep}geomet-weather-{layer}_layer.map'
+        ]
+    else:
+        mapfiles = glob(f'{BASEDIR}{os.sep}mapfile{os.sep}*_layer.map')
+    for mapfile in mapfiles:
+        try:
+            LOGGER.debug(f'Updating {mapfile}...')
+            with open(mapfile, 'r+') as fp:
+                mapfile_ = fp.read()
+                mapfile_ = find_replace_wms_timedefault(mapfile_)
+                # go to start of file and re-write mapfile
+                fp.seek(0)
+                fp.write(mapfile_)
+        except FileNotFoundError as e:
+            LOGGER.error(e)
+            pass
+
+    # update mapfiles in store if MAPFILE_STORAGE set to store
+    if MAPFILE_STORAGE == 'store':
+        st = load_plugin('store', PROVIDER_DEF)
+        if layer:
+            mapfiles = [st.get_key(f'{layer}_layer')]
+        else:
+            mapfile_dicts = [
+                {'key': key, 'mapfile': st.get_key(f'{key}', raw=True)}
+                for key in st.list_keys('geomet-mapfile*_layer')
+            ]
+        for mapfile_dict in mapfile_dicts:
+            LOGGER.debug(f'Updating {mapfile_dict["key"]} in store...')
+            mapfile_ = find_replace_wms_timedefault(mapfile_dict['mapfile'])
+            st.set_key(mapfile_dict['key'], mapfile_, raw=True)
+
+    return True
 
 
 @click.group()
@@ -594,4 +679,13 @@ def generate(ctx, layer, map_, output):
     shutil.copy2(epsg_file, os.path.join(BASEDIR, output_dir))
 
 
+@click.command(name='update')
+@click.pass_context
+@click.option('--layer', '-l', help='layer name')
+def update(ctx, layer):
+    """update mapfile(s) wms_timedefault value"""
+    update_mapfile(layer)
+
+
 mapfile.add_command(generate)
+mapfile.add_command(update)
