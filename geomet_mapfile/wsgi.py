@@ -266,7 +266,7 @@ def application(env, start_response):
     if request_ == 'GetCapabilities' and layer is None:
         LOGGER.debug('Requesting global mapfile')
         if service_ == 'WMS':
-            filename = 'geomet-weather-1.3.0-capabilities-{}.xml'.format(lang)
+            filename = 'geomet-weather-ogc-wms-1.3.0-capabilities-{}.xml'.format(lang) # noqa
             cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
 
         if os.path.isfile(cached_caps):
