@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "0.0",
+        "name": "0.0 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( [pixel] < 0.1 )",
         "styles": [
@@ -18,7 +18,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.1 0.2",
+        "name": "0.1 - 0.2 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.2 ) )",
         "styles": [
@@ -34,7 +34,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.2 0.35",
+        "name": "0.2 - 0.35 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.35 ) )",
         "styles": [
@@ -50,7 +50,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.35 0.5",
+        "name": "0.35 - 0.5 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 0.35 ) AND ( [pixel] < 0.5 ) )",
         "styles": [
@@ -66,7 +66,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.5 0.75",
+        "name": "0.5 - 0.75 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 0.75 ) )",
         "styles": [
@@ -82,7 +82,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.75 1.0",
+        "name": "0.75 - 1.0 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 0.75 ) AND ( [pixel] < 1.0 ) )",
         "styles": [
@@ -98,7 +98,7 @@
     },
     {
         "__type__": "class",
-        "name": "1.0 1.5",
+        "name": "1.0 - 1.5 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 1.5 ) )",
         "styles": [
@@ -114,7 +114,7 @@
     },
     {
         "__type__": "class",
-        "name": "1.5 2.0",
+        "name": "1.5 - 2.0 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 1.5 ) AND ( [pixel] < 2.0 ) )",
         "styles": [
@@ -130,7 +130,7 @@
     },
     {
         "__type__": "class",
-        "name": "2.0 3.0",
+        "name": "2.0 - 3.0 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 2.0 ) AND ( [pixel] < 3.0 ) )",
         "styles": [
@@ -146,7 +146,7 @@
     },
     {
         "__type__": "class",
-        "name": "3.0 4.0",
+        "name": "3.0 - 4.0 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 3.0 ) AND ( [pixel] < 4.0 ) )",
         "styles": [
@@ -162,7 +162,7 @@
     },
     {
         "__type__": "class",
-        "name": "4.0 5.75",
+        "name": "4.0 - 5.75 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 4.0 ) AND ( [pixel] < 5.75 ) )",
         "styles": [
@@ -178,7 +178,7 @@
     },
     {
         "__type__": "class",
-        "name": "5.75 7.50",
+        "name": "5.75 - 7.50 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 5.75 ) AND ( [pixel] < 7.5 ) )",
         "styles": [
@@ -194,7 +194,7 @@
     },
     {
         "__type__": "class",
-        "name": "7.50 13.75",
+        "name": "7.50 - 13.75 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( ( [pixel] >= 7.5 ) AND ( [pixel] < 13.75 ) )",
         "styles": [
@@ -210,7 +210,7 @@
     },
     {
         "__type__": "class",
-        "name": "13.75 20.0",
+        "name": ">= 13.75 (cm/h)",
         "group": "RADARURPPRECIPS",
         "expression": "( [pixel] >= 13.75 )",
         "styles": [

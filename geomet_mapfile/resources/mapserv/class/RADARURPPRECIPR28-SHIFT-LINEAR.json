@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "0.1 - 0.5 (mm/hr)",
+        "name": "0.1 - 0.5 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
         "styles": [
@@ -24,7 +24,7 @@
     },
     {
         "__type__": "class",
-        "name": "0.5 - 1.0 (mm/hr)",
+        "name": "0.5 - 1.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
         "styles": [
@@ -47,7 +47,7 @@
     },
     {
         "__type__": "class",
-        "name": "1.0 - 1.5 (mm/hr)",
+        "name": "1.0 - 1.5 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
         "styles": [
@@ -70,7 +70,7 @@
     },
     {
         "__type__": "class",
-        "name": "1.5 - 2.0 (mm/hr)",
+        "name": "1.5 - 2.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
         "styles": [
@@ -93,7 +93,7 @@
     },
     {
         "__type__": "class",
-        "name": "2.0 - 3.0 (mm/hr)",
+        "name": "2.0 - 3.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 3.0 ) )",
         "styles": [
@@ -116,7 +116,7 @@
     },
     {
         "__type__": "class",
-        "name": "3.0 - 4.0 (mm/hr)",
+        "name": "3.0 - 4.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 3.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
         "styles": [
@@ -139,7 +139,7 @@
     },
     {
         "__type__": "class",
-        "name": "4.0 - 6.0 (mm/hr)",
+        "name": "4.0 - 6.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 6.0 ) )",
         "styles": [
@@ -162,7 +162,7 @@
     },
     {
         "__type__": "class",
-        "name": "6.0 - 8.0 (mm/hr)",
+        "name": "6.0 - 8.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 6.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )",
         "styles": [
@@ -185,7 +185,7 @@
     },
     {
         "__type__": "class",
-        "name": "8.0 - 10.0 (mm/hr)",
+        "name": "8.0 - 10.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 8.0 <= [pixel] ) AND ( [pixel] < 10.0 ) )",
         "styles": [
@@ -208,7 +208,7 @@
     },
     {
         "__type__": "class",
-        "name": "10.0 - 12.0 (mm/hr)",
+        "name": "10.0 - 12.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 10.0 <= [pixel] ) AND ( [pixel] < 12.0 ) )",
         "styles": [
@@ -231,7 +231,7 @@
     },
     {
         "__type__": "class",
-        "name": "12.0 - 14.0 (mm/hr)",
+        "name": "12.0 - 14.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 12.0 <= [pixel] ) AND ( [pixel] < 14.0 ) )",
         "styles": [
@@ -254,7 +254,7 @@
     },
     {
         "__type__": "class",
-        "name": "14.0 - 16.0 (mm/hr)",
+        "name": "14.0 - 16.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 14.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )",
         "styles": [
@@ -277,7 +277,7 @@
     },
     {
         "__type__": "class",
-        "name": "16.0 - 20.0 (mm/hr)",
+        "name": "16.0 - 20.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 16.0 <= [pixel] ) AND ( [pixel] < 20.0 ) )",
         "styles": [
@@ -300,7 +300,7 @@
     },
     {
         "__type__": "class",
-        "name": "20.0 - 24.0 (mm/hr)",
+        "name": "20.0 - 24.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 20.0 <= [pixel] ) AND ( [pixel] < 24.0 ) )",
         "styles": [
@@ -323,7 +323,7 @@
     },
     {
         "__type__": "class",
-        "name": "24.0 - 28.0 (mm/hr)",
+        "name": "24.0 - 28.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 24.0 <= [pixel] ) AND ( [pixel] < 28.0 ) )",
         "styles": [
@@ -346,7 +346,7 @@
     },
     {
         "__type__": "class",
-        "name": "28.0 - 32.0 (mm/hr)",
+        "name": "28.0 - 32.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 28.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )",
         "styles": [
@@ -369,7 +369,7 @@
     },
     {
         "__type__": "class",
-        "name": "32.0 - 41.0 (mm/hr)",
+        "name": "32.0 - 41.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 32.0 <= [pixel] ) AND ( [pixel] < 41.0 ) )",
         "styles": [
@@ -392,7 +392,7 @@
     },
     {
         "__type__": "class",
-        "name": "41.0 - 50.0 (mm/hr)",
+        "name": "41.0 - 50.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 41.0 <= [pixel] ) AND ( [pixel] < 50.0 ) )",
         "styles": [
@@ -415,7 +415,7 @@
     },
     {
         "__type__": "class",
-        "name": "50.0 - 57.0 (mm/hr)",
+        "name": "50.0 - 57.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 50.0 <= [pixel] ) AND ( [pixel] < 57.0 ) )",
         "styles": [
@@ -438,7 +438,7 @@
     },
     {
         "__type__": "class",
-        "name": "57.0 - 64.0 (mm/hr)",
+        "name": "57.0 - 64.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 57.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )",
         "styles": [
@@ -461,7 +461,7 @@
     },
     {
         "__type__": "class",
-        "name": "64.0 - 77.0 (mm/hr)",
+        "name": "64.0 - 77.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 64.0 <= [pixel] ) AND ( [pixel] < 77.0 ) )",
         "styles": [
@@ -484,7 +484,7 @@
     },
     {
         "__type__": "class",
-        "name": "77.0 - 100.0 (mm/hr)",
+        "name": "77.0 - 100.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 77.0 <= [pixel] ) AND ( [pixel] < 100.0 ) )",
         "styles": [
@@ -507,7 +507,7 @@
     },
     {
         "__type__": "class",
-        "name": "100.0 - 112.5 (mm/hr)",
+        "name": "100.0 - 112.5 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 100.0 <= [pixel] ) AND ( [pixel] < 112.5 ) )",
         "styles": [
@@ -530,7 +530,7 @@
     },
     {
         "__type__": "class",
-        "name": "112.5 - 125.0 (mm/hr)",
+        "name": "112.5 - 125.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 112.5 <= [pixel] ) AND ( [pixel] < 125.0 ) )",
         "styles": [
@@ -553,7 +553,7 @@
     },
     {
         "__type__": "class",
-        "name": "125.0 - 162.5 (mm/hr)",
+        "name": "125.0 - 162.5 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 125.0 <= [pixel] ) AND ( [pixel] < 162.5 ) )",
         "styles": [
@@ -576,7 +576,7 @@
     },
     {
         "__type__": "class",
-        "name": "162.5 - 200.0 (mm/hr)",
+        "name": "162.5 - 200.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 162.5 <= [pixel] ) AND ( [pixel] < 200.0 ) )",
         "styles": [
@@ -599,7 +599,7 @@
     },
     {
         "__type__": "class",
-        "name": "200.0 - 250.0 (mm/hr)",
+        "name": "200.0 - 250.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 200.0 <= [pixel] ) AND ( [pixel] < 250.0 ) )",
         "styles": [
@@ -622,7 +622,7 @@
     },
     {
         "__type__": "class",
-        "name": ">= 250.0 (mm/hr)",
+        "name": ">= 250.0 (mm/h)",
         "group": "RADARURPPRECIPR28-SHIFT-LINEAR",
         "expression": "( ( 250.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )",
         "styles": [

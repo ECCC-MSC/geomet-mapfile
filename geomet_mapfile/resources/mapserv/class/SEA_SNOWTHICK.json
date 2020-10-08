@@ -193,9 +193,9 @@
     },
     {
         "__type__": "class",
-        "name": "1.60 1.80",
+        "name": "1.80 2",
         "group": "SEA_SNOWTHICK",
-        "expression": "( ( [pixel] >= 1.6 ) AND ( [pixel] < 1.8 ) )",
+        "expression": "( ( [pixel] >= 1.8 ) AND ( [pixel] < 2 ) )",
         "styles": [
             {
                 "__type__": "style",
@@ -211,7 +211,7 @@
         "__type__": "class",
         "name": "2 3",
         "group": "SEA_SNOWTHICK",
-        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
         "styles": [
             {
                 "__type__": "style",
@@ -227,7 +227,7 @@
         "__type__": "class",
         "name": "3 4",
         "group": "SEA_SNOWTHICK",
-        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
         "styles": [
             {
                 "__type__": "style",
@@ -273,15 +273,31 @@
     },
     {
         "__type__": "class",
-        "name": "6 8",
+        "name": "6 7",
         "group": "SEA_SNOWTHICK",
-        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 8 ) )",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 7 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
                     229,
                     229,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7 8",
+        "group": "SEA_SNOWTHICK",
+        "expression": "( ( [pixel] >= 7 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    235,
+                    235,
                     255
                 ]
             }
@@ -296,8 +312,8 @@
             {
                 "__type__": "style",
                 "color": [
-                    235,
-                    235,
+                    241,
+                    241,
                     255
                 ]
             }
@@ -312,8 +328,8 @@
             {
                 "__type__": "style",
                 "color": [
-                    241,
-                    241,
+                    247,
+                    247,
                     255
                 ]
             }
@@ -328,8 +344,8 @@
             {
                 "__type__": "style",
                 "color": [
-                    247,
-                    247,
+                    255,
+                    255,
                     255
                 ]
             }

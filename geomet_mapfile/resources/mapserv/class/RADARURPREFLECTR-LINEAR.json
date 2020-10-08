@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "7 23",
+        "name": "7 - 23 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 7 ) AND ( [pixel] < 23 ) )",
         "styles": [
@@ -24,7 +24,7 @@
     },
     {
         "__type__": "class",
-        "name": "23 28",
+        "name": "23 - 28 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 23 ) AND ( [pixel] < 28 ) )",
         "styles": [
@@ -47,7 +47,7 @@
     },
     {
         "__type__": "class",
-        "name": "28 33",
+        "name": "28 - 33 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 28 ) AND ( [pixel] < 33 ) )",
         "styles": [
@@ -70,7 +70,7 @@
     },
     {
         "__type__": "class",
-        "name": "33 36.5",
+        "name": "33 - 36.5 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 33 ) AND ( [pixel] < 36.5 ) )",
         "styles": [
@@ -93,7 +93,7 @@
     },
     {
         "__type__": "class",
-        "name": "36.5 40",
+        "name": "36.5 - 40 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 36.5 ) AND ( [pixel] < 40 ) )",
         "styles": [
@@ -116,7 +116,7 @@
     },
     {
         "__type__": "class",
-        "name": "40 42.5",
+        "name": "40 - 42.5 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 42.5 ) )",
         "styles": [
@@ -139,7 +139,7 @@
     },
     {
         "__type__": "class",
-        "name": "42.5 45",
+        "name": "42.5 - 45 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 42.5 ) AND ( [pixel] < 45 ) )",
         "styles": [
@@ -162,7 +162,7 @@
     },
     {
         "__type__": "class",
-        "name": "45 47.5",
+        "name": "45 - 47.5 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 45 ) AND ( [pixel] < 47.5 ) )",
         "styles": [
@@ -185,7 +185,7 @@
     },
     {
         "__type__": "class",
-        "name": "47.5 50",
+        "name": "47.5 - 50 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 47.5 ) AND ( [pixel] < 50.0 ) )",
         "styles": [
@@ -208,7 +208,7 @@
     },
     {
         "__type__": "class",
-        "name": "50 52.5",
+        "name": "50 - 52.5 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 50.0 ) AND ( [pixel] < 52.5 ) )",
         "styles": [
@@ -231,7 +231,7 @@
     },
     {
         "__type__": "class",
-        "name": "52.5 55",
+        "name": "52.5 - 55 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 52.5 ) AND ( [pixel] < 55 ) )",
         "styles": [
@@ -254,7 +254,7 @@
     },
     {
         "__type__": "class",
-        "name": "55 57.5",
+        "name": "55 - 57.5 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 55 ) AND ( [pixel] < 57.5 ) )",
         "styles": [
@@ -277,7 +277,7 @@
     },
     {
         "__type__": "class",
-        "name": "57.5 60",
+        "name": "57.5 - 60 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( ( [pixel] >= 57.5 ) AND ( [pixel] < 60 ) )",
         "styles": [
@@ -300,7 +300,7 @@
     },
     {
         "__type__": "class",
-        "name": "+ 60",
+        "name": ">= 60 (dBZ)",
         "group": "RADARURPREFLECTR-LINEAR",
         "expression": "( [pixel] >= 60 )",
         "styles": [
