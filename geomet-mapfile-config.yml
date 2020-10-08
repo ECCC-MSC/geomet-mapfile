@@ -21969,7 +21969,7 @@ layers:
         processing:
             - BANDS=2
         styles:
-            - mapserv/class/PN_STD.json
+            - mapserv/class/PN_STD-LINEAR.json
     GEPS.DIAG.24_FRMM.ERGE1:
         <<: *template_24_geps_frmm_erge
         label_en: GEPS.DIAG.24_FRMM.ERGE1 - Freezing rain >= 1 mm [probability %]
