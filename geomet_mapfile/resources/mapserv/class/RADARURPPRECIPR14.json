@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "0.1 - 1.0 (mm/hr)",
+        "name": "0.1 - 1.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
         "styles": [
@@ -17,7 +17,7 @@
     },
     {
         "__type__": "class",
-        "name": "1.0 - 2.0 (mm/hr)",
+        "name": "1.0 - 2.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )",
         "styles": [
@@ -33,7 +33,7 @@
     },
     {
         "__type__": "class",
-        "name": "2.0 - 4.0 (mm/hr)",
+        "name": "2.0 - 4.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 2.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )",
         "styles": [
@@ -49,7 +49,7 @@
     },
     {
         "__type__": "class",
-        "name": "4.0 - 8.0 (mm/hr)",
+        "name": "4.0 - 8.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 4.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )",
         "styles": [
@@ -65,7 +65,7 @@
     },
     {
         "__type__": "class",
-        "name": "8.0 - 12.0 (mm/hr)",
+        "name": "8.0 - 12.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 8.0 <= [pixel] ) AND ( [pixel] < 12.0 ) )",
         "styles": [
@@ -81,7 +81,7 @@
     },
     {
         "__type__": "class",
-        "name": "12.0 - 16.0 (mm/hr)",
+        "name": "12.0 - 16.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 12.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )",
         "styles": [
@@ -97,7 +97,7 @@
     },
     {
         "__type__": "class",
-        "name": "16.0 - 24.0 (mm/hr)",
+        "name": "16.0 - 24.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 16.0 <= [pixel] ) AND ( [pixel] < 24.0 ) )",
         "styles": [
@@ -113,7 +113,7 @@
     },
     {
         "__type__": "class",
-        "name": "24.0 - 32.0 (mm/hr)",
+        "name": "24.0 - 32.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 24.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )",
         "styles": [
@@ -129,7 +129,7 @@
     },
     {
         "__type__": "class",
-        "name": "32.0 - 50.0 (mm/hr)",
+        "name": "32.0 - 50.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 32.0 <= [pixel] ) AND ( [pixel] < 50.0 ) )",
         "styles": [
@@ -145,7 +145,7 @@
     },
     {
         "__type__": "class",
-        "name": "50.0 - 64.0 (mm/hr)",
+        "name": "50.0 - 64.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 50.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )",
         "styles": [
@@ -161,7 +161,7 @@
     },
     {
         "__type__": "class",
-        "name": "64.0 - 100.0 (mm/hr)",
+        "name": "64.0 - 100.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 64.0 <= [pixel] ) AND ( [pixel] < 100.0 ) )",
         "styles": [
@@ -177,7 +177,7 @@
     },
     {
         "__type__": "class",
-        "name": "100.0 - 125.0 (mm/hr)",
+        "name": "100.0 - 125.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 100.0 <= [pixel] ) AND ( [pixel] < 125.0 ) )",
         "styles": [
@@ -193,7 +193,7 @@
     },
     {
         "__type__": "class",
-        "name": "125.0 - 200.0 (mm/hr)",
+        "name": "125.0 - 200.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 125.0 <= [pixel] ) AND ( [pixel] < 200.0 ) )",
         "styles": [
@@ -209,7 +209,7 @@
     },
     {
         "__type__": "class",
-        "name": ">= 200.0 (mm/hr)",
+        "name": ">= 200.0 (mm/h)",
         "group": "RADARURPPRECIPR14",
         "expression": "( ( 200.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )",
         "styles": [
