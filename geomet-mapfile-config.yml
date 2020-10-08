@@ -97,11 +97,55 @@ metadata:
             height: 258
 forecast_models:
     firework: &id_firework
-        mcf: nwp-models/msc_firework-hotspots.yml
-        projection: mapserv/proj/4326.inc
+        mcf: nwp-models/msc_nwp_raqdps-fw-hotspots.yml
+        projection: mapserv/proj/4326.json
         extent: -180 18 -52 90
-        label_en: Regional Air Quality Deterministic Prediction System (RAQDPS)/RAQDPS FireWork products (Seasonal)
-        label_fr: Système Régional de Prévision Déterministe de la Qualité de l'Air (SRPDQA)/SRPDQA - Produits de FireWork (Saisonnier)
+        label_en: Air Quality/Regional Air Quality Deterministic Prediction System - FireWork (RAQDPS-FW) [10 km]/Hotspots (seasonal)
+        label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air - FireWork (SRPDQA-FW) [10 km]/Points chauds (saisonnier)
+    firework-ce: &id_firework_ce
+        <<: *id_firework
+        mcf: nwp-models/msc_nwp_raqdps-fw-hotspots-ce.yml
+        label_en: Air Quality/Regional Air Quality Deterministic Prediction System - FireWork (RAQDPS-FW) [10 km]/Cumulative Effects
+        label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air - FireWork (SRPDQA-FW) [10 km]/Effets cumulatifs
+    raqdps: &id_raqdps
+        mcf: nwp-models/msc_nwp_raqdps.yml
+        projection: mapserv/proj/raqdps.inc
+        extent: -39.5822380 -31.9050010 26.0277660 22.0050010
+        label_en: Air Quality/Regional Air Quality Deterministic Prediction System (RAQDPS) [10 km]
+        label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air (SRPDQA) [10 km]
+        dimensions: [729, 599]
+        forecast_hour_interval: 1
+        metadata:
+            - 'wcs_enable_request=*'
+    raqdps-firework: &id_raqdps_fw
+        <<: *id_raqdps
+        mcf: nwp-models/msc_nwp_raqdps-fw.yml
+        label_en: Air Quality/Regional Air Quality Deterministic Prediction System - FireWork (RAQDPS-FW) [10 km]/RAQDPS-FW products (seasonal)
+        label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air - FireWork (SRPDQA-FW) [10 km]/Produits SRPDQA - Firework (saisonnier)
+    fw-ce: &id_fw_ce
+        mcf: nwp-models/msc_nwp_raqdps-fw-ce.yml
+        projection: mapserv/proj/cumulative-effects.inc
+        extent: -39.5822162 -31.9050006 26.0277881 22.0050029
+        label_en: Air Quality/Regional Air Quality Deterministic Prediction System - FireWork (RAQDPS-FW) [10 km]/Cumulative Effects
+        label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air - FireWork (SRPDQA-FW) [10 km]/Effets cumulatifs
+        dimensions: [729, 599]
+        forecast_hour_interval: 730
+    fw-ce-y: &id_fw_ce_y
+        <<: *id_fw_ce
+        forecast_hour_interval: 8760
+    rdaqa-ce: &id_rdaqa_ce
+        mcf: nwp-models/msc_nwp_rdaqa.yml
+        projection: mapserv/proj/cumulative-effects.inc
+        extent: -39.5822162 -31.9050006 26.0277881 22.0050029
+        label_en: Air Quality/Regional Deterministic Air Quality Analysis (RDAQA) [10 km]/Cumulative Effects products
+        label_fr: Qualité de l'air/Analyse régionale déterministique de qualité de l’air (ARDQA) [10 km]/Produits d'effets cumulatifs
+        dimensions: [729, 599]
+        forecast_hour_interval: 730
+        metadata:
+            - 'wcs_enable_request=*'
+    rdaqa-ce-y: &id_rdaqa_ce_y
+        <<: *id_rdaqa_ce
+        forecast_hour_interval: 8760
     gdps: &id_gdps
         mcf: nwp-models/msc_nwp_gdps.yml
         projection: mapserv/proj/gdps.inc
@@ -606,6 +650,89 @@ forecast_models:
         projection: mapserv/proj/3857.inc
         extent: -174.90 14.92 -49.79 68.86
 layer_templates:
+    PM25: &template_pm25
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/FW-CE-PM2.5.json
+    CE_PM25: &template_ce_pm25
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/PM2.5.json
+            - mapserv/class/PM2.5-LOW.json
+    CE_PM10: &template_ce_pm10
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/PM10.json
+            - mapserv/class/PM10-LOW.json
+    CE_O3: &template_ce_o3
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/OZONE.json
+            - mapserv/class/OZONE-LOW.json
+    CE_NO2: &template_ce_no2
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/NO2.json
+            - mapserv/class/NO2-LOW.json
+    CE_SO2: &template_ce_so2
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SO2.json
+            - mapserv/class/SO2-LOW.json
+    RAQDPS_EATM_PM: &template_raqdps_eatm_pm
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/EATM-PM_KGM2.json
+            - mapserv/class/EATM-PM_MGM2.json
+    RAQDPS_EATM_PM-DIFF: &template_raqdps_eatm_pm_diff
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/FW-EATM-PM-DIFF_KGM2.json
+            - mapserv/class/FW-EATM-PM-DIFF_UGM2.json
+    RAQDPS_SFC_PM: &template_raqdps_sfc_pm
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SFC-PM_KGM3.json
+            - mapserv/class/SFC-PM_UGM3.json
+    RAQDPS_SFC_PM-DIFF: &template_raqdps_sfc_pm_diff
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/FW-SFC-PM-DIFF_KGM3.json
+            - mapserv/class/FW-SFC-PM-DIFF_UGM3.json
+    RAQDPS_SFC_NO2: &template_raqdps_sfc_no2
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SFC-NO2.json
+            - mapserv/class/SFC-NO2_PPBV.json
+    RAQDPS_SFC_NO: &template_raqdps_sfc_no
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SFC-NO.json
+            - mapserv/class/SFC-NO_PPBV.json
+    RAQDPS_SFC_O3: &template_raqdps_sfc_o3
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SFC-O3.json
+            - mapserv/class/SFC-O3_PPBV.json
+    RAQDPS_SFC_SO2: &template_raqdps_sfc_so2
+        type: raster
+        time_enabled: 'yes'
+        styles:
+            - mapserv/class/SFC-SO2.json
+            - mapserv/class/SFC-SO2_PPBV.json
     TT: &template_tt
         type: raster
         time_enabled: 'yes'
@@ -23661,13 +23788,264 @@ layers:
         time_enabled: 'no'
         is_local: true
         forecast_model: *id_firework
-        label_en: Wildfire hotspots ingested by FireWork
-        label_fr: Points chauds considérés par FireWork
-        data: local/FIREWORK/hotSpots.shp
+        label_en: Wildfire hotspots ingested by RAQDPS-FireWork
+        label_fr: Points chauds considérés par SRPDQA-FireWork
+        metadata:
+            - wfs_featureid=FID
         styles:
-            - mapserv/class/FIREWORK-HOTSPOTS.json
-        symbols:
-            - dreieck-leer
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+    RAQDPS-FW.CE_HOTSPOTS:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2018)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2018)
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+    RAQDPS.EATM_PM2.5:
+        <<: *template_raqdps_eatm_pm
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: entire column PM2.5 [kg/m2]'
+        label_fr: 'Concentration : intégral de la colonne PM2.5 [kg/m2]'
+        name: PM2.5_EATM
+    RAQDPS.EATM_PM10:
+        <<: *template_raqdps_eatm_pm
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: entire column PM10 [kg/m2]'
+        label_fr: 'Concentration : intégral de la colonne PM10 [kg/m2]'
+        name: PM10_EATM
+    RAQDPS.SFC_PM2.5:
+        <<: *template_raqdps_sfc_pm
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface PM2.5 [kg/m3]'
+        label_fr: 'Concentration : surface PM2.5 [kg/m3]'
+        name: PM2.5_SFC
+    RAQDPS.SFC_PM10:
+        <<: *template_raqdps_sfc_pm
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface PM10 [kg/m3]'
+        label_fr: 'Concentration : surface PM10 [kg/m3]'
+        name: PM10_SFC
+    RAQDPS.SFC_NO2:
+        <<: *template_raqdps_sfc_no2
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface NO2 [mol/mol]'
+        label_fr: 'Concentration : surface NO2 [mol/mol]'
+        name: NO2_SFC
+    RAQDPS.SFC_NO:
+        <<: *template_raqdps_sfc_no
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface NO [mol/mol]'
+        label_fr: 'Concentration : surface NO [mol/mol]'
+        name: NO_SFC
+    RAQDPS.SFC_O3:
+        <<: *template_raqdps_sfc_o3
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface O3 [mol/mol]'
+        label_fr: 'Concentration : surface O3 [mol/mol]'
+        name: O3_SFC
+    RAQDPS.SFC_SO2:
+        <<: *template_raqdps_sfc_so2
+        forecast_model: *id_raqdps
+        label_en: 'Concentration: surface SO2 [mol/mol]'
+        label_fr: 'Concentration : surface SO2 [mol/mol]'
+        name: SO2_SFC
+    RAQDPS-FW.EATM_PM2.5:
+        <<: *template_raqdps_eatm_pm
+        forecast_model: *id_raqdps_fw
+        label_en: 'Concentration: entire column PM2.5 [kg/m^2]'
+        label_fr: 'Concentration : intégral de la colonne PM2.5 [kg/m^2]'
+        name: PM2.5_EATM
+    RAQDPS-FW.EATM_PM2.5-DIFF:
+        <<: *template_raqdps_eatm_pm_diff
+        forecast_model: *id_raqdps_fw
+        label_en: 'Difference in concentration with the RAQDPS model: entire column PM2.5 [kg/m^2]'
+        label_fr: 'Différence de concentration avec le modèle SRPDQA : intégral de la colonne PM2.5 [kg/m^2]'
+        name: PM2.5-Diff-RAQDPS_EATM
+    RAQDPS-FW.EATM_PM10:
+        <<: *template_raqdps_eatm_pm
+        forecast_model: *id_raqdps_fw
+        label_en: 'Concentration: entire column PM10 [kg/m^2]'
+        label_fr: 'Concentration : intégral de la colonne PM10 [kg/m^2]'
+        name: PM10_EATM
+    RAQDPS-FW.EATM_PM10-DIFF:
+        <<: *template_raqdps_eatm_pm_diff
+        forecast_model: *id_raqdps_fw
+        label_en: 'Difference in concentration with the RAQDPS model: entire column PM10 [kg/m^2]'
+        label_fr: 'Différence de concentration avec le modèle SRPDQA : intégral de la colonne PM10 [kg/m^2]'
+        name: PM10-Diff-RAQDPS_EATM
+    RAQDPS-FW.SFC_PM2.5:
+        <<: *template_raqdps_sfc_pm
+        forecast_model: *id_raqdps_fw
+        label_en: 'Concentration: surface PM2.5[kg/m^3]'
+        label_fr: 'Concentration : surface PM2.5 [kg/m^3]'
+        name: PM2.5_SFC
+    RAQDPS-FW.SFC_PM2.5-DIFF:
+        <<: *template_raqdps_sfc_pm_diff
+        forecast_model: *id_raqdps_fw
+        label_en: 'Difference in concentration with the RAQDPS model: surface PM2.5 [kg/m^3]'
+        label_fr: 'Différence de concentration avec le modèle SRPDQA : surface PM2.5[kg/m^3]'
+        name: PM2.5-Diff-RAQDPS_SFC
+    RAQDPS-FW.SFC_PM10:
+        <<: *template_raqdps_sfc_pm
+        forecast_model: *id_raqdps_fw
+        label_en: 'Concentration: surface PM10 [kg/m^3]'
+        label_fr: 'Concentration : surface PM10 [kg/m^3]'
+        name: PM10_SFC
+    RAQDPS-FW.SFC_PM10-DIFF:
+        <<: *template_raqdps_sfc_pm_diff
+        forecast_model: *id_raqdps_fw
+        label_en: 'Difference in concentration with the RAQDPS model: surface PM10 [kg/m^3]'
+        label_fr: 'Différence de concentration avec le modèle SRPDQA : surface PM10 [kg/m^3]'
+        name: PM10-Diff-RAQDPS_SFC
+    RAQDPS-FW.CE_PM2.5-DIFF-MAvg-DMax:
+        <<: *template_pm25
+        forecast_model: *id_fw_ce
+        label_en: 'Monthly average of daily maximum wildfire contribution: surface PM2.5 [ug/m^3]'
+        label_fr: 'Moyenne mensuelle de la contribution maximale quotidienne aux feux de forêt : PM2,5 en surface [ug/m^3]'
+        name: PM2.5-DIFF-MAvg-DMax_SFC
+    RAQDPS-FW.CE_PM2.5-DIFF-MAvg:
+        <<: *template_pm25
+        forecast_model: *id_fw_ce
+        label_en: 'Monthly average of wildfire contribution: surface PM2.5 [ug/m^3]'
+        label_fr: 'Moyenne mensuelle de la contribution des feux de forêt : PM2,5 en surface [ug/m^3]'
+        name: PM2.5-DIFF-MAvg_SFC
+    RAQDPS-FW.CE_PM2.5-DIFF-YAvg-DMax:
+        <<: *template_pm25
+        forecast_model: *id_fw_ce_y
+        label_en: 'Yearly average of daily maximum wildfire contribution: surface PM2.5 [ug/m^3]'
+        label_fr: 'Moyenne annuelle de la contribution maximale journalière des feux de forêt : PM2,5 en surface [ug/m^3]'
+        name: PM2.5-DIFF-YAvg-DMax_SFC
+    RAQDPS-FW.CE_PM2.5-DIFF-YAvg:
+        <<: *template_pm25
+        forecast_model: *id_fw_ce_y
+        label_en: 'Yearly average of wildfire contribution: surface PM2.5 [ug/m^3]'
+        label_fr: 'Moyenne annuelle de la contribution des feux de forêt : PM2,5 en surface [ug/m^3]'
+        name: PM2.5-DIFF-YAvg_SFC
+    RDAQA.CE_O3-MAvg:
+        <<: *template_ce_o3
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of mole fraction of ozone in air [ppbv]"
+        label_fr: "Moyenne mensuelle de la fraction molaire de l'ozone dans l'air [ppbv]"
+        name: O3-MAvg_SFC
+    RDAQA.CE_O3-MAvg-DMax-8hRAvg:
+        <<: *template_ce_o3
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of daily maximum using 8h rolling average of mole fraction of ozone in air [ppbv]"
+        label_fr: "Moyenne mensuelle du maximum journalier en utilisant la moyenne mobile sur 8 heures de la fraction molaire de l'ozone dans l'air [ppbv]"
+        name: O3-MAvg-DMax-8hRAvg_SFC
+    RDAQA.CE_O3-YAvg:
+        <<: *template_ce_o3
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of mole fraction of ozone in air [ppbv]"
+        label_fr: "Moyenne annuelle de la fraction molaire de l'ozone dans l'air [ppbv]"
+        name: O3-YAvg_SFC
+    RDAQA.CE_O3-YAvg-DMax-8hRAvg:
+        <<: *template_ce_o3
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of daily maximum using 8h rolling average of mole fraction of ozone in air [ppbv]"
+        label_fr: "Moyenne annuelle du maximum journalier en utilisant la moyenne mobile sur 8 heures de la fraction molaire de l'ozone dans l'air [ppbv]"
+        name: O3-YAvg-DMax-8hRAvg_SFC
+    RDAQA.CE_PM2.5-MAvg:
+        <<: *template_ce_pm25
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of surface PM2.5 [ug/m3]"
+        label_fr: "Moyenne mensuelle de PM2.5 en surface [ug/m3]"
+        name: PM2.5-MAvg_SFC
+    RDAQA.CE_PM2.5-MAvg-DMax:
+        <<: *template_ce_pm25
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of daily maximum of surface PM2.5 [ug/m3]"
+        label_fr: "Moyenne mensuelle du maximum journalier de PM2.5 en surface [ug/m3]"
+        name: PM2.5-MAvg-DMax_SFC
+    RDAQA.CE_PM2.5-YAvg:
+        <<: *template_ce_pm25
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of surface PM2.5 [ug/m3]"
+        label_fr: "Moyenne annuelle de PM2.5 en surface [ug/m3]"
+        name: PM2.5-YAvg_SFC
+    RDAQA.CE_PM2.5-YAvg-DMax:
+        <<: *template_ce_pm25
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of daily maximum of surface PM2.5 [ug/m3]"
+        label_fr: "Moyenne annuelle du maximum journalier de PM2.5 en surface [ug/m3]"
+        name: PM2.5-YAvg-DMax_SFC
+    RDAQA.CE_PM10-MAvg:
+        <<: *template_ce_pm10
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of surface PM10 [ug/m3]"
+        label_fr: "Moyenne mensuelle de PM10 en surface [ug/m3]"
+        name: PM10-MAvg_SFC
+    RDAQA.CE_PM10-MAvg-DMax:
+        <<: *template_ce_pm10
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of daily maximum of surface PM10 [ug/m3]"
+        label_fr: "Moyenne mensuelle du maximum journalier de PM10 en surface [ug/m3]"
+        name: PM10-MAvg-DMax_SFC
+    RDAQA.CE_PM10-YAvg:
+        <<: *template_ce_pm10
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of surface PM10 [ug/m3]"
+        label_fr: "Moyenne annuelle de PM10 en surface [ug/m3]"
+        name: PM10-YAvg_SFC
+    RDAQA.CE_PM10-YAvg-DMax:
+        <<: *template_ce_pm10
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of daily maximum of surface PM10 [ug/m3]"
+        label_fr: "Moyenne annuelle du maximum journalier de PM10 en surface [ug/m3]"
+        name: PM10-YAvg-DMax_SFC
+    RDAQA.CE_NO2-MAvg:
+        <<: *template_ce_no2
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of surface NO2 [ppbv]"
+        label_fr: "Moyenne mensuelle de NO2 en surface [ppbv]"
+        name: NO2-MAvg_SFC
+    RDAQA.CE_NO2-MAvg-DMax:
+        <<: *template_ce_no2
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of daily maximum of surface NO2 [ppbv]"
+        label_fr: "Moyenne mensuelle du maximum journalier de NO2 en surface [ppbv]"
+        name: NO2-MAvg-DMax_SFC
+    RDAQA.CE_NO2-YAvg:
+        <<: *template_ce_no2
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of surface NO2 [ppbv]"
+        label_fr: "Moyenne annuelle de NO2 en surface [ppbv]"
+        name: NO2-YAvg_SFC
+    RDAQA.CE_NO2-YAvg-DMax:
+        <<: *template_ce_no2
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of daily maximum of surface NO2 [ppbv]"
+        label_fr: "Moyenne annuelle du maximum journalier de NO2 en surface [ppbv]"
+        name: NO2-YAvg-DMax_SFC
+    RDAQA.CE_SO2-MAvg:
+        <<: *template_ce_so2
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of surface SO2 [ppbv]"
+        label_fr: "Moyenne mensuelle de SO2 en surface [ppbv]"
+        name: SO2-MAvg_SFC
+    RDAQA.CE_SO2-MAvg-DMax:
+        <<: *template_ce_so2
+        forecast_model: *id_rdaqa_ce
+        label_en: "Monthly average of daily maximum of surface SO2 [ppbv]"
+        label_fr: "Moyenne mensuelle du maximum journalier de SO2 en surface [ppbv]"
+        name: SO2-MAvg-DMax_SFC
+    RDAQA.CE_SO2-YAvg:
+        <<: *template_ce_so2
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of surface SO2 [ppbv]"
+        label_fr: "Moyenne annuelle de SO2 en surface [ppbv]"
+        name: SO2-YAvg_SFC
+    RDAQA.CE_SO2-YAvg-DMax:
+        <<: *template_ce_so2
+        forecast_model: *id_rdaqa_ce_y
+        label_en: "Yearly average of daily maximum of surface SO2 [ppbv]"
+        label_fr: "Moyenne annuelle du maximum journalier de SO2 en surface [ppbv]"
+        name: SO2-YAvg-DMax_SFC
     OCEAN.RIOPS.2D_UUI:
         <<: *template_riops_uu
         forecast_model: *id_riops_2D_uu
