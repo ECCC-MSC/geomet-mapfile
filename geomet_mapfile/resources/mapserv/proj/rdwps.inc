@@ -1,1 +1,3 @@
-"init=epsg:102992"
+"proj=longlat"
+"R=6371229"
+"no_defs"
