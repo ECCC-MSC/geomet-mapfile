@@ -5,27 +5,7 @@
     "styles": [
         {
             "__type__": "style",
-            "symbol": "hatchsymbol",
-            "color": [
-                0,
-                0,
-                0
-            ],
-            "size": 5,
-            "width": 0.1,
-            "angle": 45
-        },
-        {
-            "__type__": "style",
-            "symbol": "hatchsymbol",
-            "color": [
-                0,
-                0,
-                0
-            ],
-            "size": 5,
-            "width": 0.1,
-            "angle": 135
+            "symbol": "radar_crosshatch"
         },
         {
             "__type__": "style",
