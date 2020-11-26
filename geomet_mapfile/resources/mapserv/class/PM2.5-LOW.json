@@ -1,0 +1,278 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 0.2",
+        "group": "PM2.5-LOW",
+        "expression": "( [pixel] < 0.2 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    225,
+                    225,
+                    225,
+                    175,
+                    175,
+                    175
+                ],
+                "datarange": [
+                    0,
+                    0.2
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.2 - 0.5",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 0.2 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    175,
+                    175,
+                    175,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0.2,
+                    0.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 - 1",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    135,
+                    225
+                ],
+                "datarange": [
+                    0.5,
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 - 1.5",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    135,
+                    225,
+                    0,
+                    204,
+                    255
+                ],
+                "datarange": [
+                    1,
+                    1.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1.5 - 2",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 1.5 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    204,
+                    255,
+                    123,
+                    224,
+                    107
+                ],
+                "datarange": [
+                    1.5,
+                    2
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 - 2.5",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    123,
+                    224,
+                    107,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    2,
+                    2.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2.5 - 5",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 2.5 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    249,
+                    202,
+                    0
+                ],
+                "datarange": [
+                    2.5,
+                    5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 - 7.5",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    202,
+                    0,
+                    254,
+                    127,
+                    0
+                ],
+                "datarange": [
+                    5,
+                    7.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7.5 - 10",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 7.5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    127,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    7.5,
+                    10
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 20",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    10,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 50",
+        "group": "PM2.5-LOW",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    20,
+                    50
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 50",
+        "group": "PM2.5-LOW",
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    50,
+                    1000
+                ]
+            }
+        ]
+    }
+]
