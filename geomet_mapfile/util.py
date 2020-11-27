@@ -21,7 +21,6 @@
 import json
 import logging
 import os
-from pathlib import Path
 
 import click
 from lark.exceptions import UnexpectedToken
@@ -155,7 +154,9 @@ def clean_styles(file_, directory, output_directory, output_format):
         output_extension = '.inc'
 
     for file, converted_file in converted_files:
-        output_file_name = f'{Path(file).name.split(".")[0]}{output_extension}'
+        output_file_name = (
+            f'{os.path.basename(os.path.splitext(file)[0])}{output_extension}'
+        )
         with open(os.path.join(output_directory, output_file_name), 'w') as f:
             f.write(converted_file)
 

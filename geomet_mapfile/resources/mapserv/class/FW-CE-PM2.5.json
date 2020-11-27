@@ -2,7 +2,7 @@
     {
         "__type__": "class",
         "name": "1 - 5",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 5 ) )",
         "styles": [
             {
@@ -25,7 +25,7 @@
     {
         "__type__": "class",
         "name": "5 - 10",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
         "styles": [
             {
@@ -48,7 +48,7 @@
     {
         "__type__": "class",
         "name": "10 - 15",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )",
         "styles": [
             {
@@ -71,7 +71,7 @@
     {
         "__type__": "class",
         "name": "15 - 20",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )",
         "styles": [
             {
@@ -94,7 +94,7 @@
     {
         "__type__": "class",
         "name": "20 - 30",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 30 ) )",
         "styles": [
             {
@@ -117,7 +117,7 @@
     {
         "__type__": "class",
         "name": "30 - 40",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 40 ) )",
         "styles": [
             {
@@ -140,7 +140,7 @@
     {
         "__type__": "class",
         "name": "40 50",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 50 ) )",
         "styles": [
             {
@@ -163,7 +163,7 @@
     {
         "__type__": "class",
         "name": "50 - 75",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 75 ) )",
         "styles": [
             {
@@ -186,7 +186,7 @@
     {
         "__type__": "class",
         "name": "75 - 100",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 75 ) AND ( [pixel] < 100 ) )",
         "styles": [
             {
@@ -209,7 +209,7 @@
     {
         "__type__": "class",
         "name": "100 - 200",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 200 ) )",
         "styles": [
             {
@@ -232,7 +232,7 @@
     {
         "__type__": "class",
         "name": ">= 200",
-        "group": "RAQDPS-FW-CE-PM2.5",
+        "group": "FW-CE-PM2.5",
         "expression": "( [pixel] >= 200 )",
         "styles": [
             {
