@@ -27,7 +27,6 @@ import json
 import logging
 import os
 import re
-import shutil
 from urllib.parse import urlencode
 
 import click
@@ -130,15 +129,21 @@ def layer_time_config(layer_name):
     )
 
     if not time_extent:
-        LOGGER.error(f'Could not retrieve {layer_name} time extent'
-                     f' information from store. Skipping mapfile generation'
-                     f' for this layer.')
-        return False
+        msg = (
+            f'Could not retrieve {layer_name} time extent'
+            f' information from store. Skipping mapfile generation'
+            f' for this layer.'
+        )
+        LOGGER.error(msg)
+        raise LayerTimeConfigError(msg)
 
     intervals = []
 
-    if ((time_extent and default_time) and not
-            (model_run_extent and default_model_run)):
+    intervals = []
+
+    if (time_extent and default_time) and not (
+        model_run_extent and default_model_run
+    ):
         nearest_interval = default_time
     else:
         start, end, interval = time_extent.split('/')
@@ -165,7 +170,9 @@ def layer_time_config(layer_name):
             while start <= end:
                 intervals.append(start)
                 start += relative_delta
-            nearest_interval = min(intervals, key=lambda interval: abs(interval - NOW)).strftime(DATEFORMAT)  # noqa
+            nearest_interval = min(
+                intervals, key=lambda interval: abs(interval - NOW)
+            ).strftime(DATEFORMAT)
         else:
             nearest_interval = end.strftime(DATEFORMAT)
 
@@ -297,181 +304,273 @@ def gen_layer(layer_name, layer_info):
     # get layer time information
     time_dict = layer_time_config(layer_name)
 
+    layer['__type__'] = 'layer'
+    layer['tolerance'] = 15
+    layer['template'] = 'ttt.html'
+
+    # build LAYER object
+    layer['name'] = layer_name
+    layer['debug'] = 5
+    layer['data'] = ['']
+    layer['type'] = 'RASTER'
+    layer['template'] = "ttt.html"
+    layer['tolerance'] = 15
+
+    layer['metadata'] = {
+        '__type__': 'metadata',
+        'gml_include_items': 'all',
+        'ows_include_items': 'all'
+    }
+
+    # set layer projection
+    LOGGER.debug('Setting up layer projection')
+    proj_file = os.path.join(THISDIR, 'resources',
+                             layer_info['forecast_model']['projection'])
+    with open(proj_file) as f:
+        lines = [l.replace('\n', '').replace('"', '') for l in f.readlines()]  # noqa
+        layer['projection'] = lines
+
+    # set layer processing directives
+    LOGGER.debug('Setting up layer processing directives')
+    layer['processing'] = []
+    if 'processing' in layer_info:
+        for item in layer_info['processing']:
+            layer['processing'].append(item)
+    if 'processing' in layer_info['forecast_model']:
+        for item in layer_info['forecast_model']['processing']:
+            layer['processing'].append(item)
+
+    # set type
+    if 'type' in layer_info:
+        LOGGER.debug('Setting up layer type')
+        layer['type'] = layer_info['type']
+
+    # set connectiontype
+    if 'conntype' in layer_info:
+        LOGGER.debug('Setting up layer connection type')
+        layer['connectiontype'] = layer_info['conntype']
+        # if uvraster also set the layer extent
+        if (layer_info['conntype'] == 'uvraster'
+                and 'extent' in layer_info['forecast_model']):
+            layer['extent'] = layer_info['forecast_model']['extent']
+
+    # set additional layer params
+    if 'layer_params' in layer_info:
+        LOGGER.debug('Setting up additional layer params')
+        for params in layer_info['layer_params']:
+            param, value = params.split()
+            layer[param] = value
+
+    # set layer classes
+    LOGGER.debug('Setting layer styles')
+    layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip('.json')
+
+    layer['classes'] = []
+    for style in layer_info['styles']:
+        with open(
+            os.path.join(THISDIR, 'resources', style)
+        ) as json_style:
+            for class_ in json.load(json_style):
+                layer['classes'].append(class_)
+
+    # set layer metadata
+    LOGGER.debug('Setting layer metadata')
+    layer['metadata'] = {}
+
+    # source = yaml config
+    layer['metadata']['ows_extent'] = layer_info['forecast_model']['extent']  # noqa
+    layer['metadata']['ows_title'] = layer_info['label_en']
+    layer['metadata']['ows_title_fr'] = layer_info['label_fr']
+    layer['metadata']['wms_layer_group'] = f'/{layer_info["forecast_model"]["label_en"]}'  # noqa
+    layer['metadata']['wms_layer_group_fr'] = f'/{layer_info["forecast_model"]["label_fr"]}'  # noqa
+    layer['metadata']['wcs_label'] = layer_info['label_en']
+    layer['metadata']['wcs_label_fr'] = layer_info['label_fr']
+
+    if 'metadata' in layer_info:
+        for md in layer_info['metadata']:
+            md_key, md_value = md.split('=')
+            layer['metadata'][md_key] = md_value
+
+    if 'metadata' in layer_info['forecast_model']:
+        for md in layer_info['forecast_model']['metadata']:
+            md_key, md_value = md.split('=')
+            layer['metadata'][md_key] = md_value
+
+    if 'dimensions' in layer_info["forecast_model"]:
+        size = (
+            f'{layer_info["forecast_model"]["dimensions"][0]} '
+            f'{layer_info["forecast_model"]["dimensions"][1]}'
+        )
+        layer['metadata']['ows_size'] = size
+
     if time_dict:
+        layer['metadata']['wms_dimensionlist'] = 'reference_time'
+        layer['metadata']['wms_reference_time_item'] = 'reference_datetime'
+        layer['metadata']['wms_reference_time_units'] = 'ISO8601'
+        layer['metadata']['wms_timeextent'] = time_dict['time_extent']
+        layer['metadata']['wms_reference_time_default'] = \
+            time_dict['default_model_run']
 
-        # layer_tileindex = {
-        #     '__type__': 'layer',
-        #     'name': f'{layer_name}_idx'
-        # }
+        layer['metadata']['wms_timedefault'] = time_dict['default_time']
 
-        layer['__type__'] = 'layer'
-        layer['tolerance'] = 15
-        layer['template'] = 'ttt.html'
-
-    #    # build tileindex LAYER object (only for raster, uv and wind layers)
-    #    if layer_info['type'] == 'raster' or ('conntype' in layer_info and layer_info['conntype'].lower() in ['uvraster', 'contour']):  # noqa
-    #        layer_tileindex['type'] = 'POLYGON'
-    #        layer_tileindex['status'] = 'OFF'
-    #        layer_tileindex['CONNECTIONTYPE'] = 'OGR'
-    #
-    #        layer_tileindex['CONNECTION'] = f'"{TILEINDEX_URL}"'
-    #        layer_tileindex['metadata'] = {
-    #            '__type__': 'metadata',
-    #            'ows_enable_request': '!*',
-    #        }
-    #        layer_tileindex['filter'] = ''
-    #
-    #        layers.append(layer_tileindex)
-
-        # build LAYER object
-        layer['name'] = layer_name
-        layer['debug'] = 5
-        layer['data'] = ['']
-        layer['type'] = 'RASTER'
-        layer['template'] = "ttt.html"
-        layer['tolerance'] = 15
-
-        layer['metadata'] = {
-            '__type__': 'metadata',
-            'gml_include_items': 'all',
-            'ows_include_items': 'all'
-        }
-
-    #    # add reference to tileindex if tileindex is being used
-    #    if layer_tileindex in layers:
-    #        layer['tileindex'] = layer_tileindex['name']
-    #        layer['tileitem'] = 'filepath'
-
-        # set layer projection
-        proj_file = os.path.join(THISDIR, 'resources',
-                                 layer_info['forecast_model']['projection'])
-        with open(proj_file) as f:
-            lines = [l.replace('\n', '').replace('"', '') for l in f.readlines()]  # noqa
-            layer['projection'] = lines
-
-        # set layer processing directives
-        layer['processing'] = []
-        if 'processing' in layer_info:
-            for item in layer_info['processing']:
-                layer['processing'].append(item)
-        if 'processing' in layer_info['forecast_model']:
-            for item in layer_info['forecast_model']['processing']:
-                layer['processing'].append(item)
-
-        # set type
-        if 'type' in layer_info:
-            layer['type'] = layer_info['type']
-
-        # set connectiontype
-        if 'conntype' in layer_info:
-            layer['connectiontype'] = layer_info['conntype']
-            # if uvraster also set the layer extent
-            if (layer_info['conntype'] == 'uvraster'
-                    and 'extent' in layer_info['forecast_model']):
-                layer['extent'] = layer_info['forecast_model']['extent']
-
-        # set additional layer params
-        if 'layer_params' in layer_info:
-            for params in layer_info['layer_params']:
-                param, value = params.split()
-                layer[param] = value
-
-        # set layer classes
-        layer['classgroup'] = layer_info['styles'][0].split("/")[-1].strip(
-            '.json')
-
-        layer['classes'] = []
-        for style in layer_info['styles']:
-            with open(
-                os.path.join(THISDIR, 'resources', style)
-            ) as json_style:
-                for class_ in json.load(json_style):
-                    layer['classes'].append(class_)
-
-        # set layer metadata
-        layer['metadata'] = {}
-
-        # source = yaml config
-        layer['metadata']['ows_extent'] = layer_info['forecast_model']['extent']  # noqa
-        layer['metadata']['ows_title'] = layer_info['label_en']
-        layer['metadata']['ows_title_fr'] = layer_info['label_fr']
-        layer['metadata']['wms_layer_group'] = f'/{layer_info["forecast_model"]["label_en"]}'  # noqa
-        layer['metadata']['wms_layer_group_fr'] = f'/{layer_info["forecast_model"]["label_fr"]}'  # noqa
-        layer['metadata']['wcs_label'] = layer_info['label_en']
-        layer['metadata']['wcs_label_fr'] = layer_info['label_fr']
-
-        if 'metadata' in layer_info:
-            for md in layer_info['metadata']:
-                md_key, md_value = md.split('=')
-                layer['metadata'][md_key] = md_value
-
-        if 'metadata' in layer_info['forecast_model']:
-            for md in layer_info['forecast_model']['metadata']:
-                md_key, md_value = md.split('=')
-                layer['metadata'][md_key] = md_value
-
-        if 'dimensions' in layer_info["forecast_model"]:
-            size = (
-                f'{layer_info["forecast_model"]["dimensions"][0]} '
-                f'{layer_info["forecast_model"]["dimensions"][1]}'
+        if time_dict['available_intervals']:
+            layer['metadata']['wms_available_intervals'] = ','.join(
+                [
+                    dt.strftime(DATEFORMAT)
+                    for dt in time_dict['available_intervals']
+                ]
             )
-            layer['metadata']['ows_size'] = size
 
-        if time_dict:
-            layer['metadata']['wms_dimensionlist'] = 'reference_time'
-            layer['metadata']['wms_reference_time_item'] = 'reference_datetime'
-            layer['metadata']['wms_reference_time_units'] = 'ISO8601'
-            layer['metadata']['wms_timeextent'] = time_dict['time_extent']
-            layer['metadata']['wms_reference_time_default'] = \
-                time_dict['default_model_run']
+        if time_dict['default_model_run']:
+            layer['metadata']['wms_reference_time_extent'] = \
+                time_dict['model_run_extent']
 
-            layer['metadata']['wms_timedefault'] = time_dict['default_time']
+    if 'forecast_hour_interval' in layer_info['forecast_model']:
+        seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60  # noqa
+    elif 'observations_interval_min' in layer_info['forecast_model']:
+        seconds = layer_info['forecast_model']['observations_interval_min'] * 60  # noqa
+    else:
+        seconds = ''
 
-            if time_dict['available_intervals']:
-                layer['metadata']['wms_available_intervals'] = ','.join(
-                    [
-                        dt.strftime(DATEFORMAT)
-                        for dt in time_dict['available_intervals']
-                    ]
-                )
+    layer['metadata']['geomet_ows_http_max_age'] = seconds
 
-            if time_dict['default_model_run']:
-                layer['metadata']['wms_reference_time_extent'] = \
-                    time_dict['model_run_extent']
+    # generic metadata
+    layer['metadata']['gml_include_items'] = 'all'
+    layer['metadata']['ows_authorityurl_name'] = 'msc'
+    layer['metadata']['ows_authorityurl_href'] = 'https://dd.weather.gc.ca'
+    layer['metadata']['ows_identifier_authority'] = 'msc'
+    layer['metadata']['ows_include_items'] = 'all'
+    layer['metadata']['ows_keywordlist_vocabulary'] = 'http://purl.org/dc/terms/'  # noqa
+    layer['metadata']['ows_geomtype'] = 'Geometry'
+    layer['metadata']['ows_metadataurl_format'] = 'text/xml'
+    layer['metadata']['ows_metadataurl_type'] = 'TC211'
+    layer['metadata']['wcs_rangeset_name'] = 'default range'
+    layer['metadata']['wcs_rangeset_label'] = 'default range'
+    layer['metadata']['wfs_metadataurl_format'] = 'XML'
 
-        if 'forecast_hour_interval' in layer_info['forecast_model']:
-            seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60  # noqa
-        elif 'observations_interval_min' in layer_info['forecast_model']:
-            seconds = layer_info['forecast_model']['observations_interval_min'] * 60  # noqa
-        else:
-            seconds = ''
+    LOGGER.debug('Reading MCF and updating layer metadata')
 
-        layer['metadata']['geomet_ows_http_max_age'] = seconds
+    mcf_file = os.path.join(THISDIR, 'resources', 'mcf',
+                            layer_info['forecast_model']['mcf'])
 
-        # generic metadata
-        layer['metadata']['gml_include_items'] = 'all'
-        layer['metadata']['ows_authorityurl_name'] = 'msc'
-        layer['metadata']['ows_authorityurl_href'] = 'https://dd.weather.gc.ca'
-        layer['metadata']['ows_identifier_authority'] = 'msc'
-        layer['metadata']['ows_include_items'] = 'all'
-        layer['metadata']['ows_keywordlist_vocabulary'] = 'http://purl.org/dc/terms/'  # noqa
-        layer['metadata']['ows_geomtype'] = 'Geometry'
-        layer['metadata']['ows_metadataurl_format'] = 'text/xml'
-        layer['metadata']['ows_metadataurl_type'] = 'TC211'
-        layer['metadata']['wcs_rangeset_name'] = 'default range'
-        layer['metadata']['wcs_rangeset_label'] = 'default range'
-        layer['metadata']['wfs_metadataurl_format'] = 'XML'
+    layer['metadata'].update(mcf2layer_metadata(mcf_file))
 
-        LOGGER.debug('Reading MCF')
-
-        mcf_file = os.path.join(THISDIR, 'resources', 'mcf',
-                                layer_info['forecast_model']['mcf'])
-
-        layer['metadata'].update(mcf2layer_metadata(mcf_file))
-
-        layers.append(layer)
+    layers.append(layer)
 
     return layers
+
+
+def generate_mapfile(layer=None, output='file', use_includes=True):
+    st = load_plugin('store', PROVIDER_DEF)
+    time_errors = False
+    output_dir = f'{BASEDIR}{os.sep}mapfile'
+
+    all_layers = []
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    with open(MAPFILE_BASE) as fh:
+        mapfile = json.load(fh, object_pairs_hook=OrderedDict)
+        symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
+        with open(symbols_file) as fh2:
+            mapfile['symbols'] = json.load(fh2)
+
+    with open(CONFIG) as fh:
+        cfg = load(fh, Loader=CLoader)
+
+    if layer is not None:
+        mapfiles = {layer: cfg['layers'][layer]}
+    else:
+        mapfiles = cfg['layers']
+
+    # set PROJ_LIB path
+    mapfile['config']['proj_lib'] = os.path.join(
+        THISDIR, 'resources', 'mapserv'
+    )
+
+    mapfile['web']['metadata'] = gen_web_metadata(
+        mapfile, cfg['metadata'], URL
+    )
+
+    for key, value in mapfiles.items():
+        mapfile_copy = deepcopy(mapfile)
+        mapfile_copy['layers'] = []
+
+        try:
+            layers = gen_layer(key, value)
+        except LayerTimeConfigError:
+            layers = None
+            time_errors = True
+
+        if layers:
+            for lyr in layers:
+                mapfile_copy['layers'].append(lyr)
+
+            # TODO: simplify
+            if 'outputformats' in value['forecast_model']:
+                mapfile_copy['outputformats'] = [
+                    format_
+                    for format_ in mapfile_copy['outputformats']
+                    if format_['name']
+                    in value['forecast_model']['outputformats']
+                ]
+
+            # TODO: simplify
+            if 'symbols' in value:
+                mapfile_copy['symbols'] = [
+                    symbol
+                    for symbol in mapfile_copy['symbols']
+                    if symbol['name'] in value['symbols']
+                    or any(
+                        symbol_ in symbol['name']
+                        for symbol_ in value['symbols']
+                    )
+                ]
+            else:
+                mapfile_copy['symbols'] = []
+
+        layer_only_filepath = (
+            f'{output_dir}{os.sep}geomet-weather-{key}_layer.map'
+        )
+
+        # collect and write LAYER-only mapfile to disk in order to use
+        # in global mapfile with INCLUDE directive
+        all_layers.append(layer_only_filepath)
+        with open(layer_only_filepath, 'w', encoding='utf-8') as fh:
+            mappyfile.dump(mapfile_copy['layers'], fh)
+
+        if output == 'file' and mapfile_copy['layers']:
+            mapfile_filepath = f'{output_dir}{os.sep}geomet-weather-{key}.map'
+            with open(mapfile_filepath, 'w', encoding='utf-8') as fh:
+                if use_includes:
+                    mapfile['include'] = [layer_only_filepath]
+                    mappyfile.dump(mapfile, fh)
+                else:
+                    mappyfile.dump(mapfile_copy, fh)
+
+        elif output == 'store' and mapfile_copy['layers']:
+            st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
+            st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
+
+    if layer is None:  # generate entire mapfile
+        # always write global mapfile to disk for caching purposes
+        mapfile['include'] = all_layers
+        filename = 'geomet-weather.map'
+        filepath = f'{output_dir}{os.sep}{filename}'
+
+        with open(filepath, 'w', encoding='utf-8') as fh:
+            mappyfile.dump(mapfile, fh)
+        # also write to store if required
+        if output == 'store':
+            st.set_key('geomet-weather_mapfile', mappyfile.dumps(mapfile))
+
+    # returns False if time keys could not be retrieved (meaning empty/no
+    # layer mapfiles generated)
+    if time_errors:
+        return False
+
+    return True
 
 
 def find_replace_wms_timedefault(mapfile):
@@ -534,7 +633,7 @@ def update_mapfile(layer=None):
         mapfiles = glob(f'{BASEDIR}{os.sep}mapfile{os.sep}*_layer.map')
     for mapfile in mapfiles:
         try:
-            LOGGER.debug(f'Updating {mapfile}...')
+            LOGGER.debug(f'Updating {mapfile}.')
             with open(mapfile, 'r+') as fp:
                 mapfile_ = fp.read()
                 mapfile_ = find_replace_wms_timedefault(mapfile_)
@@ -556,7 +655,7 @@ def update_mapfile(layer=None):
                 for key in st.list_keys('geomet-mapfile*_layer')
             ]
         for mapfile_dict in mapfile_dicts:
-            LOGGER.debug(f'Updating {mapfile_dict["key"]} in store...')
+            LOGGER.debug(f'Updating {mapfile_dict["key"]} in store.')
             mapfile_ = find_replace_wms_timedefault(mapfile_dict['mapfile'])
             st.set_key(mapfile_dict['key'], mapfile_, raw=True)
 
@@ -572,111 +671,21 @@ def mapfile():
 @click.command()
 @click.pass_context
 @click.option('--layer', '-l', help='layer name')
-@click.option('--map/--no-map', 'map_', default=True,
-              help='Output with or without mapfile MAP object')
-@click.option('--output', '-o', type=click.Choice(['store', 'file']),
-              default='file',
-              help='Write to configured store or to disk', required=True)
-def generate(ctx, layer, map_, output):
-    """generate mapfile"""
-
-    st = load_plugin('store', PROVIDER_DEF)
-
-    output_dir = f'{BASEDIR}{os.sep}mapfile'
-
-    all_layers = []
-
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    with open(MAPFILE_BASE) as fh:
-        mapfile = json.load(fh, object_pairs_hook=OrderedDict)
-        symbols_file = os.path.join(THISDIR, 'resources/mapserv/symbols.json')
-        with open(symbols_file) as fh2:
-            mapfile['symbols'] = json.load(fh2)
-
-    with open(CONFIG) as fh:
-        cfg = load(fh, Loader=CLoader)
-
-    if layer is not None:
-        mapfiles = {
-          layer: cfg['layers'][layer]
-        }
-    else:
-        mapfiles = cfg['layers']
-
-    # set PROJ_LIB path
-    mapfile['config']['proj_lib'] = os.path.join(
-        BASEDIR, 'geomet_mapfile', 'resources', 'mapserv'
-    )
-
-    mapfile['web']['metadata'] = gen_web_metadata(mapfile, cfg['metadata'],
-                                                  URL)
-
-    for key, value in mapfiles.items():
-        mapfile_copy = deepcopy(mapfile)
-        mapfile_copy['layers'] = []
-
-        layers = gen_layer(key, value)
-
-        if layers:
-            for lyr in layers:
-                mapfile_copy['layers'].append(lyr)
-                all_layers.append(lyr)
-
-            # TODO: simplify
-            if 'outputformats' in value['forecast_model']:
-                mapfile_copy['outputformats'] = [format_ for format_ in mapfile_copy['outputformats']  # noqa
-                                                 if format_['name'] in value['forecast_model']['outputformats']]  # noqa
-
-            # TODO: simplify
-            if 'symbols' in value:
-                mapfile_copy['symbols'] = [symbol for symbol in mapfile_copy['symbols'] if symbol['name'] in  # noqa
-                                           value['symbols'] or any(symbol_ in symbol['name']  # noqa
-                                                                   for symbol_ in value['symbols'])]  # noqa
-            else:
-                mapfile_copy['symbols'] = []
-
-            if map_:
-                filename = f'geomet-weather-{key}.map'
-            else:
-                filename = f'geomet-weather-{key}_layer.map'
-
-            filepath = f'{output_dir}{os.sep}{filename}'
-
-            if output == 'file':
-                with open(filepath, 'w', encoding='utf-8') as fh:
-                    if map_:
-                        mappyfile.dump(mapfile_copy, fh)
-                    else:
-                        mappyfile.dump(mapfile_copy['layers'], fh)
-
-            elif output == 'store':
-
-                if map_:
-                    st.set_key(f'{key}_mapfile',
-                               mappyfile.dumps(mapfile_copy))
-                else:
-                    st.set_key(f'{key}_layer',
-                               mappyfile.dumps(mapfile_copy['layers']))
-
-    if layer is None:  # generate entire mapfile
-
-        mapfile['layers'] = all_layers
-
-        if output == 'file':
-            filename = 'geomet-weather.map'
-            filepath = f'{output_dir}{os.sep}{filename}'
-
-            with open(filepath, 'w', encoding='utf-8') as fh:
-                mappyfile.dump(mapfile, fh)
-
-        elif output == 'store':
-            st.set_key('geomet-weather_mapfile',
-                       mappyfile.dumps(mapfile))
-
-    epsg_file = os.path.join(THISDIR, 'resources', 'mapserv', 'epsg')
-    shutil.copy2(epsg_file, os.path.join(BASEDIR, output_dir))
+@click.option(
+    '--output',
+    '-o',
+    type=click.Choice(['store', 'file']),
+    default='file',
+    help='Write to configured store or to disk',
+    required=True,
+)
+@click.option(
+    '--includes/--no-includes',
+    default=True,
+    help='Indicated whether to use INCLUDE directives in mapfile',
+)
+def generate(ctx, layer, output, includes):
+    generate_mapfile(layer, output, includes)
 
 
 @click.command(name='update')
@@ -689,3 +698,7 @@ def update(ctx, layer):
 
 mapfile.add_command(generate)
 mapfile.add_command(update)
+
+
+class LayerTimeConfigError(Exception):
+    pass

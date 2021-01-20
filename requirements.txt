@@ -1,4 +1,5 @@
 click
+elasticsearch
 geomet-data-registry
 mappyfile
 python-dateutil

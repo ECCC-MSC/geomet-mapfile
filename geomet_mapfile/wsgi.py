@@ -234,6 +234,18 @@ def application(env, start_response):
             msg = fh.read()
             return ['{}'.format(msg).encode()]
 
+    # if requesting GetCapabilities for entire service, return cache
+    if request_ == 'GetCapabilities' and layer is None:
+        LOGGER.debug('Requesting global mapfile')
+        if service_ == 'WMS':
+            filename = 'geomet-weather-ogc-wms-1.3.0-capabilities-{}.xml'.format(lang) # noqa
+            cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
+
+        if os.path.isfile(cached_caps):
+            start_response('200 OK', [('Content-Type', 'application/xml')])
+            with io.open(cached_caps, 'rb') as fh:
+                return [fh.read()]
+
     # fetch mapfile from store or from disk
     if MAPFILE_STORAGE == 'file':
         # if a single layer is specified in LAYER param fetch mapfile from disk
@@ -262,17 +274,6 @@ def application(env, start_response):
         msg = 'Unsupported service'
         return [SERVICE_EXCEPTION.format(msg).encode()]
 
-    # if requesting GetCapabilities for entire service, return cache
-    if request_ == 'GetCapabilities' and layer is None:
-        LOGGER.debug('Requesting global mapfile')
-        if service_ == 'WMS':
-            filename = 'geomet-weather-ogc-wms-1.3.0-capabilities-{}.xml'.format(lang) # noqa
-            cached_caps = os.path.join(BASEDIR, 'mapfile', filename)
-
-        if os.path.isfile(cached_caps):
-            start_response('200 OK', [('Content-Type', 'application/xml')])
-            with io.open(cached_caps, 'rb') as fh:
-                return [fh.read()]
     else:
         LOGGER.debug('Requesting layer mapfile')
         if os.path.exists(mapfile_):
