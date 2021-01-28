@@ -512,32 +512,34 @@ forecast_models:
     gdwps3_uu: &id_gdwps3_uu
         <<: *id_gdwps_uu
         forecast_hour_interval: 3
-    riops: &id_riops
+    yopp_riops_2D: &id_yopp_riops_2D
         phase: beta # reason: RIOPS data source is currently Datamart-Alpha
         mcf: nwp-models/msc_nwp_riops.yml
         projection: mapserv/proj/riops.inc
-        extent: -2500 -8047500 8847500 -2500
-        label_en: Oceanography/Regional Ice Ocean Prediction System (RIOPS)
-        label_fr: Océanographie/Système régional de prévision océan-glace (SRPOG)
+        extent: -2500 -2500 8847500 8047500
+        label_en: Oceanography/YOPP-Regional Ice Ocean Prediction System (YOPP-RIOPS.2D)
+        label_fr: Océanographie/YOPP-Système régional de prévision océan-glace (YOPP-SRPOG.2D)
         dimensions: [1770, 1610]
         time_enabled: future
         metadata:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
+    yopp_riops_3D: &id_yopp_riops_3D
+        <<: *id_yopp_riops_2D
+        label_en: Oceanography/YOPP-Regional Ice Ocean Prediction System in 3 dimensions (YOPP-RIOPS.3D)
+        label_fr: Océanographie/YOPP-Système régional de prévision océan-glace en 3 dimensions (YOPP-SRPOG.3D)
     riops_2D: &id_riops_2D
-        <<: *id_riops
-        label_en: Oceanography/Regional Ice Ocean Prediction System in 2 dimensions (RIOPS.2D)
-        label_fr: Océanographie/Système régional de prévision océan-glace en 2 dimensions (SRPOG.2D)
-        forecast_hour_interval: 3
-    riops_2D_uu: &id_riops_2D_uu
-        <<: *id_riops_2D
+        mcf: nwp-models/msc_nwp_riops.yml
+        projection: mapserv/proj/riops.inc
         extent: -2500 -2500 8847500 8047500
+        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 2 dimensions (RIOPS.2D)
+        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 2 dimensions (SRPOG.2D)
+        dimensions: [1770, 1610]
+        metadata:
+            - 'wcs_formats=GEOTIFF_16 AAIGRID'
     riops_3D: &id_riops_3D
         <<: *id_riops_2D
-        label_en: Oceanography/Regional Ice Ocean Prediction System in 3 dimensions (RIOPS.3D)
-        label_fr: Océanographie/Système régional de prévision océan-glace en 3 dimensions (SRPOG.3D)
-    riops_3D_uu: &id_riops_3D_uu
-        <<: *id_riops_3D
-        extent: -2500 -2500 8847500 8047500
+        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 3 dimensions (RIOPS.3D)
+        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 3 dimensions (SRPOG.3D)
     giops: &id_giops
         mcf: nwp-models/msc_nwp_giops.yml
         projection: mapserv/proj/giops.inc
@@ -1835,16 +1837,17 @@ layer_templates:
             - UV_SPACING=20
             - UV_SIZE_SCALE=1
             - GDAL_NETCDF_BOTTOMUP=YES
+        symbols:
+            - circle_wind
+            - arrow_wind
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
-        symbols:
-            - arrow_wind
-    RIOPS_3D: &template_riops_3d
+    YOPP_RIOPS_3D: &template_yopp_riops_3d
         type: raster
         time_enabled: 'future'
         processing:
             - GDAL_NETCDF_BOTTOMUP=YES
-    RIOPS.UU_3D: &template_riops_uu_3d
+    YOPP_RIOPS.UU_3D: &template_yopp_riops_uu_3d
         type: point
         conntype: uvraster
         time_enabled: 'future'
@@ -1856,14 +1859,85 @@ layer_templates:
             - UV_SPACING=20
             - UV_SIZE_SCALE=1
             - GDAL_NETCDF_BOTTOMUP=YES
+        symbols:
+            - circle_wind
+            - arrow_wind
         styles:
             - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
+    YOPP_RIOPS.3D.SALW: &template_yopp_riops_3d_salw
+        <<: *template_yopp_riops_3d
+        forecast_model: *id_yopp_riops_3D
+        name: vosaline
+        processing:
+            - SCALE=0,43
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
+    YOPP_RIOPS.3D.TM2: &template_yopp_riops_3d_tm2
+        <<: *template_yopp_riops_3d
+        forecast_model: *id_yopp_riops_3D
+        name: votemper
+        processing:
+            - SCALE=270,350
+            - SCALE_BUCKETS=1000
+        styles:
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
+    YOPP_RIOPS.3D.UU2W: &template_yopp_riops_3d_uu2w
+        <<: *template_yopp_riops_uu_3d
+        forecast_model: *id_yopp_riops_3D
+        names:
+            - vozocrtx
+            - vomecrty
+    YOPP_RIOPS.3D.UU2W.100M.2000M: &template_yopp_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_uu_3d
+        forecast_model: *id_yopp_riops_3D
+        names:
+            - vozocrtx
+            - vomecrty
+        styles:
+            - mapserv/class/SEA_CURARROW_100MTO2000M.json
+    YOPP_RIOPS.3D.UU2W.2000M.5728M: &template_yopp_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_uu_3d
+        forecast_model: *id_yopp_riops_3D
+        names:
+            - vozocrtx
+            - vomecrty
+        styles:
+            - mapserv/class/SEA_CURARROW_2000MTO5728M.json
+    RIOPS_3D: &template_riops_3d
+        type: raster
+        time_enabled: 'yes'
+        processing:
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS.UU_3D: &template_riops_uu_3d
+        type: point
+        conntype: uvraster
+        time_enabled: 'yes'
+        metadata:
+            - 'wfs_enable_request=!*'
+            - 'wcs_enable_request=!*'
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+            - GDAL_NETCDF_BOTTOMUP=YES
         symbols:
+            - circle_wind
             - arrow_wind
+        styles:
+            - mapserv/class/SEA_CURARROW_0MTO100M_SURFACE.json
     RIOPS.3D.SALW: &template_riops_3d_salw
         <<: *template_riops_3d
         forecast_model: *id_riops_3D
-        name: vosaline
+        name: VOSALINE
         processing:
             - SCALE=0,43
             - SCALE_BUCKETS=500
@@ -1875,10 +1949,10 @@ layer_templates:
     RIOPS.3D.TM2: &template_riops_3d_tm2
         <<: *template_riops_3d
         forecast_model: *id_riops_3D
-        name: votemper
+        name: VOTEMPER
         processing:
-            - SCALE=270,297
-            - SCALE_BUCKETS=500
+            - SCALE=270,350
+            - SCALE_BUCKETS=1000
         styles:
             - mapserv/class/SEA_TEMPSURF-DEFAULT.json
             - mapserv/class/SEA_TEMPSURF-MIZ.json
@@ -1888,30 +1962,26 @@ layer_templates:
             - mapserv/class/SEA_TEMPSURF-WARM.json
     RIOPS.3D.UU2W: &template_riops_3d_uu2w
         <<: *template_riops_uu_3d
-        forecast_model: *id_riops_3D_uu
+        forecast_model: *id_riops_3D
         names:
-            - vozocrtx
-            - vomecrty
+            - VOZOCRTX
+            - VOMECRTY
     RIOPS.3D.UU2W.100M.2000M: &template_riops_3d_uu2w_100m_2000m
         <<: *template_riops_uu_3d
-        forecast_model: *id_riops_3D_uu
+        forecast_model: *id_riops_3D
         names:
-            - vozocrtx
-            - vomecrty
+            - VOZOCRTX
+            - VOMECRTY
         styles:
             - mapserv/class/SEA_CURARROW_100MTO2000M.json
-        symbols:
-            - arrow_wind
     RIOPS.3D.UU2W.2000M.5728M: &template_riops_3d_uu2w_2000m_5728m
         <<: *template_riops_uu_3d
-        forecast_model: *id_riops_3D_uu
+        forecast_model: *id_riops_3D
         names:
-            - vozocrtx
-            - vomecrty
+            - VOZOCRTX
+            - VOMECRTY
         styles:
             - mapserv/class/SEA_CURARROW_2000MTO5728M.json
-        symbols:
-            - arrow_wind
     GIOPS: &template_giops
         type: raster
         time_enabled: 'future'
@@ -23793,7 +23863,7 @@ layers:
         metadata:
             - wfs_featureid=FID
         styles:
-            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS.json
     RAQDPS-FW.CE_HOTSPOTS:
         type: point
         time_enabled: 'no'
@@ -23805,7 +23875,7 @@ layers:
         metadata:
             - wfs_featureid=identifier
         styles:
-            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS.json
     RAQDPS.EATM_PM2.5:
         <<: *template_raqdps_eatm_pm
         forecast_model: *id_raqdps
@@ -24048,7 +24118,7 @@ layers:
         name: SO2-YAvg-DMax_SFC
     OCEAN.RIOPS.2D_UUI:
         <<: *template_riops_uu
-        forecast_model: *id_riops_2D_uu
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Ice velocity [m/s]
         label_fr: OCEAN.RIOPS.2D - Vélocité de la glace [m/s]
         names:
@@ -24056,7 +24126,7 @@ layers:
             - itmecrty
     OCEAN.RIOPS.2D_UU2W:
         <<: *template_riops_uu
-        forecast_model: *id_riops_2D_uu
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Ocean current [m/s]
         label_fr: OCEAN.RIOPS.2D - Courant océanique [m/s]
         names:
@@ -24064,7 +24134,7 @@ layers:
             - vomecrty
     OCEAN.RIOPS.2D_GL:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Sea ice fraction
         label_fr: OCEAN.RIOPS.2D - Fraction de glace marine
         name: iiceconc
@@ -24074,7 +24144,7 @@ layers:
             - mapserv/class/SEA_ICECONC-CIS.json
     OCEAN.RIOPS.2D_GE:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Volume of sea ice per unit grid cell [m]
         label_fr: OCEAN.RIOPS.2D - Volume de glace de mer par unité de surface de cellule de la grille [m]
         name: iicevol
@@ -24084,13 +24154,13 @@ layers:
             - mapserv/class/SEA_ICETHICK-CIS.json
     OCEAN.RIOPS.2D_TM2:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Sea temperature [K]
         label_fr: OCEAN.RIOPS.2D - Température de la mer [K]
         name: votemper
         processing:
-            - SCALE=270,297
-            - SCALE_BUCKETS=500
+            - SCALE=270,350
+            - SCALE_BUCKETS=1000
         styles:
             - mapserv/class/SEA_TEMPSURF-DEFAULT.json
             - mapserv/class/SEA_TEMPSURF-MIZ.json
@@ -24100,7 +24170,7 @@ layers:
             - mapserv/class/SEA_TEMPSURF-WARM.json
     OCEAN.RIOPS.2D_SALW:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Sea Water Salinity [psu]
         label_fr: OCEAN.RIOPS.2D - Salinité de l'eau de la mer [psu]
         name: vosaline
@@ -24114,7 +24184,7 @@ layers:
             - mapserv/class/SEA_SALT-FULL.json
     OCEAN.RIOPS.2D_SSH:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Sea surface height with respect to the geoid [m]
         label_fr: OCEAN.RIOPS.2D - Hauteur de la surface de la mer par rapport au géoïde [m]
         name: sossheig
@@ -24127,7 +24197,7 @@ layers:
             - mapserv/class/SEA_SURFACE_HEIGHT-MID.json
     OCEAN.RIOPS.2D_MLTW:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Turbocline depth [m]
         label_fr: OCEAN.RIOPS.2D - Profondeur de la turbocline [m]
         name: somixhgt
@@ -24141,7 +24211,7 @@ layers:
             - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.RIOPS.2D_MLW:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Mixed layer depth based on a density criterion [m]
         label_fr: OCEAN.RIOPS.2D - Profondeur de la couche de mélange d'après le critère de densité [m]
         name: sokaraml
@@ -24155,7 +24225,7 @@ layers:
             - mapserv/class/SEA_DEPTH-DEEP.json
     OCEAN.RIOPS.2D_SDV:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Volume of snow on sea ice per unit grid cell area [cm]
         label_fr: OCEAN.RIOPS.2D - Volume de neige sur la glace de mer par unité de surface de cellule de grille [cm]
         name: isnowvol
@@ -24164,7 +24234,7 @@ layers:
             - mapserv/class/SEA_SNOWTHICK.json
     OCEAN.RIOPS.2D_TMI:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Surface temperature of sea ice/snow [K]
         label_fr: OCEAN.RIOPS.2D - Température de la surface de la neige/glace de mer [K]
         name: iicesurftemp
@@ -24177,7 +24247,7 @@ layers:
             - mapserv/class/SEA_ICETEMP-CIS.json
     OCEAN.RIOPS.2D_SIII:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Vertically integrated ice internal pressure [N/m]
         label_fr: OCEAN.RIOPS.2D - Pression interne de la glace, intégrée verticalement [N/m]
         name: iicepressure
@@ -24190,7 +24260,7 @@ layers:
             - mapserv/class/SEA_ICEPRESS-CIS.json
     OCEAN.RIOPS.2D_STGI:
         <<: *template_riops
-        forecast_model: *id_riops_2D
+        forecast_model: *id_yopp_riops_2D
         label_en: OCEAN.RIOPS.2D - Vertically integrated compressive ice strength [N/m]
         label_fr: OCEAN.RIOPS.2D - Résistance de la compression de la glace, intégrée verticalement [N/m]
         name: iicestrength
@@ -24202,955 +24272,2532 @@ layers:
             - mapserv/class/SEA_ICESTRENGTH.json
             - mapserv/class/SEA_ICESTRENGTH-CIS.json
     OCEAN.RIOPS.3D_SALW_0000:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0000m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0000m [psu]
         processing:
             - BANDS=1
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0002:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0002m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0002m [psu]
         processing:
             - BANDS=2
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0003:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0003m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0003m [psu]
         processing:
             - BANDS=3
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0004:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0004m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0004m [psu]
         processing:
             - BANDS=4
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0005:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0005m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0005m [psu]
         processing:
             - BANDS=5
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0006:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0006m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0006m [psu]
         processing:
             - BANDS=6
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0008:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0008m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0008m [psu]
         processing:
             - BANDS=7
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0010:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0010m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0010m [psu]
         processing:
             - BANDS=8
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0011:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0011m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0011m [psu]
         processing:
             - BANDS=9
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0013:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0013m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0013m [psu]
         processing:
             - BANDS=10
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0016:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0016m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0016m [psu]
         processing:
             - BANDS=11
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0018:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0018m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0018m [psu]
         processing:
             - BANDS=12
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0022:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0022m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0022m [psu]
         processing:
             - BANDS=13
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0025:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0025m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0025m [psu]
         processing:
             - BANDS=14
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0029:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0029m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0029m [psu]
         processing:
             - BANDS=15
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0034:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0034m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0034m [psu]
         processing:
             - BANDS=16
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0040:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0040m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0040m [psu]
         processing:
             - BANDS=17
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0047:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0047m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0047m [psu]
         processing:
             - BANDS=18
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0056:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0056m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0056m [psu]
         processing:
             - BANDS=19
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0066:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0066m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0066m [psu]
         processing:
             - BANDS=20
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0078:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0078m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0078m [psu]
         processing:
             - BANDS=21
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0092:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0092m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0092m [psu]
         processing:
             - BANDS=22
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0110:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0110m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0110m [psu]
         processing:
             - BANDS=23
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0131:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0131m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0131m [psu]
         processing:
             - BANDS=24
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0156:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0156m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0156m [psu]
         processing:
             - BANDS=25
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0186:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0186m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0186m [psu]
         processing:
             - BANDS=26
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0222:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0222m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0222m [psu]
         processing:
             - BANDS=27
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0266:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0266m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0266m [psu]
         processing:
             - BANDS=28
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0318:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0318m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0318m [psu]
         processing:
             - BANDS=29
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0380:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0380m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0380m [psu]
         processing:
             - BANDS=30
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0454:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0454m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0454m [psu]
         processing:
             - BANDS=31
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0541:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0541m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0541m [psu]
         processing:
             - BANDS=32
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0644:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0644m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0644m [psu]
         processing:
             - BANDS=33
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0763:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0763m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0763m [psu]
         processing:
             - BANDS=34
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_0902:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 0902m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 0902m [psu]
         processing:
             - BANDS=35
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_1062:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 1062m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 1062m [psu]
         processing:
             - BANDS=36
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_1245:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 1245m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 1245m [psu]
         processing:
             - BANDS=37
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_1452:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 1452m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 1452m [psu]
         processing:
             - BANDS=38
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_1684:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 1684m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 1684m [psu]
         processing:
             - BANDS=39
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_1942:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 1942m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 1942m [psu]
         processing:
             - BANDS=40
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_2225:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 2225m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 2225m [psu]
         processing:
             - BANDS=41
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_2533:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 2533m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 2533m [psu]
         processing:
             - BANDS=42
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_2866:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 2866m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 2866m [psu]
         processing:
             - BANDS=43
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_3221:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 3221m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 3221m [psu]
         processing:
             - BANDS=44
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_3597:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 3597m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 3597m [psu]
         processing:
             - BANDS=45
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_3992:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 3992m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 3992m [psu]
         processing:
             - BANDS=46
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_4405:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 4405m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 4405m [psu]
         processing:
             - BANDS=47
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_4833:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 4833m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 4833m [psu]
         processing:
             - BANDS=48
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_5275:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 5275m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 5275m [psu]
         processing:
             - BANDS=49
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_SALW_5728:
-        <<: *template_riops_3d_salw
+        <<: *template_yopp_riops_3d_salw
         label_en: Sea water salinity//OCEAN.RIOPS.3D - Sea water salinity - 5728m [psu]
         label_fr: Salinité de l'eau de la mer//OCEAN.RIOPS.3D - Salinité de l'eau de la mer - 5728m [psu]
         processing:
             - BANDS=50
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0000:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0000m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0000m [K]
         processing:
             - BANDS=1
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0002:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0002m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0002m [K]
         processing:
             - BANDS=2
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0003:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0003m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0003m [K]
         processing:
             - BANDS=3
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0004:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0004m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0004m [K]
         processing:
             - BANDS=4
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0005:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0005m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0005m [K]
         processing:
             - BANDS=5
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0006:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0006m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0006m [K]
         processing:
             - BANDS=6
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0008:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0008m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0008m [K]
         processing:
             - BANDS=7
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0010:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0010m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0010m [K]
         processing:
             - BANDS=8
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0011:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0011m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0011m [K]
         processing:
             - BANDS=9
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0013:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0013m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0013m [K]
         processing:
             - BANDS=10
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0016:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0016m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0016m [K]
         processing:
             - BANDS=11
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0018:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0018m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0018m [K]
         processing:
             - BANDS=12
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0022:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0022m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0022m [K]
         processing:
             - BANDS=13
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0025:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0025m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0025m [K]
         processing:
             - BANDS=14
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0029:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0029m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0029m [K]
         processing:
             - BANDS=15
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0034:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0034m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0034m [K]
         processing:
             - BANDS=16
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0040:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0040m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0040m [K]
         processing:
             - BANDS=17
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0047:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0047m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0047m [K]
         processing:
             - BANDS=18
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0056:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0056m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0056m [K]
         processing:
             - BANDS=19
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0066:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0066m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0066m [K]
         processing:
             - BANDS=20
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0078:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0078m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0078m [K]
         processing:
             - BANDS=21
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0092:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0092m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0092m [K]
         processing:
             - BANDS=22
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0110:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0110m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0110m [K]
         processing:
             - BANDS=23
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0131:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0131m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0131m [K]
         processing:
             - BANDS=24
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0156:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0156m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0156m [K]
         processing:
             - BANDS=25
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0186:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0186m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0186m [K]
         processing:
             - BANDS=26
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0222:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0222m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0222m [K]
         processing:
             - BANDS=27
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0266:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0266m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0266m [K]
         processing:
             - BANDS=28
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0318:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0318m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0318m [K]
         processing:
             - BANDS=29
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0380:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0380m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0380m [K]
         processing:
             - BANDS=30
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0454:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0454m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0454m [K]
         processing:
             - BANDS=31
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0541:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0541m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0541m [K]
         processing:
             - BANDS=32
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0644:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0644m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0644m [K]
         processing:
             - BANDS=33
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0763:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0763m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0763m [K]
         processing:
             - BANDS=34
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_0902:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 0902m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 0902m [K]
         processing:
             - BANDS=35
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_1062:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 1062m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 1062m [K]
         processing:
             - BANDS=36
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_1245:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 1245m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 1245m [K]
         processing:
             - BANDS=37
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_1452:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 1452m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 1452m [K]
         processing:
             - BANDS=38
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_1684:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 1684m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 1684m [K]
         processing:
             - BANDS=39
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_1942:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 1942m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 1942m [K]
         processing:
             - BANDS=40
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_2225:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 2225m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 2225m [K]
         processing:
             - BANDS=41
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_2533:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 2533m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 2533m [K]
         processing:
             - BANDS=42
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_2866:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 2866m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 2866m [K]
         processing:
             - BANDS=43
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_3221:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 3221m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 3221m [K]
         processing:
             - BANDS=44
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_3597:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 3597m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 3597m [K]
         processing:
             - BANDS=45
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_3992:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 3992m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 3992m [K]
         processing:
             - BANDS=46
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_4405:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 4405m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 4405m [K]
         processing:
             - BANDS=47
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_4833:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 4833m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 4833m [K]
         processing:
             - BANDS=48
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_5275:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 5275m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 5275m [K]
         processing:
             - BANDS=49
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_TM2_5728:
-        <<: *template_riops_3d_tm2
+        <<: *template_yopp_riops_3d_tm2
         label_en: Sea temperature//OCEAN.RIOPS.3D - Sea temperature - 5728m [K]
         label_fr: Température de la mer//OCEAN.RIOPS.3D - Température de la mer - 5728m [K]
         processing:
             - BANDS=50
             - GDAL_NETCDF_BOTTOMUP=YES
     OCEAN.RIOPS.3D_UU2W_0000:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0000m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique  - 0000m [m/s]
         uv_bands: 1,1
     OCEAN.RIOPS.3D_UU2W_0002:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0002m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0002m [m/s]
         uv_bands: 2,2
     OCEAN.RIOPS.3D_UU2W_0003:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0003m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0003m [m/s]
         uv_bands: 3,3
     OCEAN.RIOPS.3D_UU2W_0004:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0004m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0004m [m/s]
         uv_bands: 4,4
     OCEAN.RIOPS.3D_UU2W_0005:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0005m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0005m [m/s]
         uv_bands: 5,5
     OCEAN.RIOPS.3D_UU2W_0006:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0006m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0006m [m/s]
         uv_bands: 6,6
     OCEAN.RIOPS.3D_UU2W_0008:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0008m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0008m [m/s]
         uv_bands: 7,7
     OCEAN.RIOPS.3D_UU2W_0010:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0010m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0010m [m/s]
         uv_bands: 8,8
     OCEAN.RIOPS.3D_UU2W_0011:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0011m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0011m [m/s]
         uv_bands: 9,9
     OCEAN.RIOPS.3D_UU2W_0013:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0013m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0013m [m/s]
         uv_bands: 10,10
     OCEAN.RIOPS.3D_UU2W_0016:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0016m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0016m [m/s]
         uv_bands: 11,11
     OCEAN.RIOPS.3D_UU2W_0018:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0018m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0018m [m/s]
         uv_bands: 12,12
     OCEAN.RIOPS.3D_UU2W_0022:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0022m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0022m [m/s]
         uv_bands: 13,13
     OCEAN.RIOPS.3D_UU2W_0025:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0025m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0025m [m/s]
         uv_bands: 14,14
     OCEAN.RIOPS.3D_UU2W_0029:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0029m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0029m [m/s]
         uv_bands: 15,15
     OCEAN.RIOPS.3D_UU2W_0034:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0034m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0034m [m/s]
         uv_bands: 16,16
     OCEAN.RIOPS.3D_UU2W_0040:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0040m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0040m [m/s]
         uv_bands: 17,17
     OCEAN.RIOPS.3D_UU2W_0047:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0047m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0047m [m/s]
         uv_bands: 18,18
     OCEAN.RIOPS.3D_UU2W_0056:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0056m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0056m [m/s]
         uv_bands: 19,19
     OCEAN.RIOPS.3D_UU2W_0066:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0066m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0066m [m/s]
         uv_bands: 20,20
     OCEAN.RIOPS.3D_UU2W_0078:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0078m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0078m [m/s]
         uv_bands: 21,21
     OCEAN.RIOPS.3D_UU2W_0092:
-        <<: *template_riops_3d_uu2w
+        <<: *template_yopp_riops_3d_uu2w
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0092m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0092m [m/s]
         uv_bands: 22,22
     OCEAN.RIOPS.3D_UU2W_0110:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0110m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0110m [m/s]
         uv_bands: 23,23
     OCEAN.RIOPS.3D_UU2W_0131:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0131m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0131m [m/s]
         uv_bands: 24,24
     OCEAN.RIOPS.3D_UU2W_0156:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0156m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0156m [m/s]
         uv_bands: 25,25
     OCEAN.RIOPS.3D_UU2W_0186:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0186m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0186m [m/s]
         uv_bands: 26,26
     OCEAN.RIOPS.3D_UU2W_0222:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0222m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0222m [m/s]
         uv_bands: 27,27
     OCEAN.RIOPS.3D_UU2W_0266:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0266m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0266m [m/s]
         uv_bands: 28,28
     OCEAN.RIOPS.3D_UU2W_0318:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0318m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0318m [m/s]
         uv_bands: 29,29
     OCEAN.RIOPS.3D_UU2W_0380:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0380m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0380m [m/s]
         uv_bands: 30,30
     OCEAN.RIOPS.3D_UU2W_0454:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0454m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0454m [m/s]
         uv_bands: 31,31
     OCEAN.RIOPS.3D_UU2W_0541:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0541m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0541m [m/s]
         uv_bands: 32,32
     OCEAN.RIOPS.3D_UU2W_0644:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0644m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0644m [m/s]
         uv_bands: 33,33
     OCEAN.RIOPS.3D_UU2W_0763:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0763m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0763m [m/s]
         uv_bands: 34,34
     OCEAN.RIOPS.3D_UU2W_0902:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 0902m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 0902m [m/s]
         uv_bands: 35,35
     OCEAN.RIOPS.3D_UU2W_1062:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 1062m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 1062m [m/s]
         uv_bands: 36,36
     OCEAN.RIOPS.3D_UU2W_1245:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 1245m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 1245m [m/s]
         uv_bands: 37,37
     OCEAN.RIOPS.3D_UU2W_1452:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 1452m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 1452m [m/s]
         uv_bands: 38,38
     OCEAN.RIOPS.3D_UU2W_1684:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 1684m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 1684m [m/s]
         uv_bands: 39,39
     OCEAN.RIOPS.3D_UU2W_1942:
-        <<: *template_riops_3d_uu2w_100m_2000m
+        <<: *template_yopp_riops_3d_uu2w_100m_2000m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 1942m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 1942m [m/s]
         uv_bands: 40,40
     OCEAN.RIOPS.3D_UU2W_2225:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 2225m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 2225m [m/s]
         uv_bands: 41,41
     OCEAN.RIOPS.3D_UU2W_2533:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 2533m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 2533m [m/s]
         uv_bands: 42,42
     OCEAN.RIOPS.3D_UU2W_2866:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 2866m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 2866m [m/s]
         uv_bands: 43,43
     OCEAN.RIOPS.3D_UU2W_3221:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 3221m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 3221m [m/s]
         uv_bands: 44,44
     OCEAN.RIOPS.3D_UU2W_3597:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 3597m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 3597m [m/s]
         uv_bands: 45,45
     OCEAN.RIOPS.3D_UU2W_3992:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 3992m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 3992m [m/s]
         uv_bands: 46,46
     OCEAN.RIOPS.3D_UU2W_4405:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 4405m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 4405m [m/s]
         uv_bands: 47,47
     OCEAN.RIOPS.3D_UU2W_4833:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 4833m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 4833m [m/s]
         uv_bands: 48,48
     OCEAN.RIOPS.3D_UU2W_5275:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 5275m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 5275m [m/s]
         uv_bands: 49,49
     OCEAN.RIOPS.3D_UU2W_5728:
-        <<: *template_riops_3d_uu2w_2000m_5728m
+        <<: *template_yopp_riops_3d_uu2w_2000m_5728m
         label_en: Ocean current//OCEAN.RIOPS.3D - Ocean current - 5728m [m/s]
         label_fr: Courant océanique//OCEAN.RIOPS.3D - Courant océanique - 5728m [m/s]
         uv_bands: 50,50
+    RIOPS_UUI_SFC:
+        <<: *template_riops_uu
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Ice velocity [m/s]
+        label_fr: RIOPS - Vélocité de la glace [m/s]
+        names:
+            - ITZOCRTX
+            - ITMECRTY
+    RIOPS_UU2W_DBS-0.5m:
+        <<: *template_riops_uu
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Ocean current [m/s]
+        label_fr: RIOPS - Courant océanique [m/s]
+        names:
+            - VOZOCRTX
+            - VOMECRTY
+    RIOPS_IICECONC_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea ice fraction
+        label_fr: RIOPS - Fraction de glace marine
+        name: IICECONC
+        styles:
+            - mapserv/class/SEA_ICECONC-LINEAR.json
+            - mapserv/class/SEA_ICECONC.json
+            - mapserv/class/SEA_ICECONC-CIS.json
+    RIOPS_IICEVOL_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Volume of sea ice per unit grid cell [m]
+        label_fr: RIOPS - Volume de glace de mer par unité de surface de cellule de la grille [m]
+        name: IICEVOL
+        styles:
+            - mapserv/class/SEA_ICETHICK-LINEAR.json
+            - mapserv/class/SEA_ICETHICK.json
+            - mapserv/class/SEA_ICETHICK-CIS.json
+    RIOPS_VOTEMPER_DBS-0.5m:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea temperature [K]
+        label_fr: RIOPS - Température de la mer [K]
+        name: VOTEMPER
+        processing:
+            - SCALE=270,350
+            - SCALE_BUCKETS=1000
+        styles:
+            - mapserv/class/SEA_TEMPSURF-DEFAULT.json
+            - mapserv/class/SEA_TEMPSURF-MIZ.json
+            - mapserv/class/SEA_TEMPSURF-COLD-CIS.json
+            - mapserv/class/SEA_TEMPSURF-COLD.json
+            - mapserv/class/SEA_TEMPSURF-MID.json
+            - mapserv/class/SEA_TEMPSURF-WARM.json
+    RIOPS_VOSALINE_DBS-0.5m:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea Water Salinity [psu]
+        label_fr: RIOPS - Salinité de l'eau de la mer [psu]
+        name: VOSALINE
+        processing:
+            - SCALE=0,43
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_SALT-DEFAULT.json
+            - mapserv/class/SEA_SALT-COASTAL.json
+            - mapserv/class/SEA_SALT-FRESH.json
+            - mapserv/class/SEA_SALT-FULL.json
+    RIOPS_SOSSHEIG_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea surface height with respect to the geoid [m]
+        label_fr: RIOPS - Hauteur de la surface de la mer par rapport au géoïde [m]
+        name: SOSSHEIG
+        processing:
+            - SCALE=-4.19,2.64
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_SURFACE_HEIGHT-DEFAULT.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-TINY.json
+            - mapserv/class/SEA_SURFACE_HEIGHT-MID.json
+    RIOPS_SOMIXHGT_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Turbocline depth [m]
+        label_fr: RIOPS - Profondeur de la turbocline [m]
+        name: SOMIXHGT
+        processing:
+            - SCALE=0.70,2865.45
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
+    RIOPS_SOKARAML_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Mixed layer depth based on a density criterion [m]
+        label_fr: RIOPS - Profondeur de la couche de mélange d'après le critère de densité [m]
+        name: SOKARAML
+        processing:
+            - SCALE=0.7,3365.6
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_DEPTH-DEFAULT.json
+            - mapserv/class/SEA_DEPTH-SHALLOW.json
+            - mapserv/class/SEA_DEPTH-MID.json
+            - mapserv/class/SEA_DEPTH-DEEP.json
+    RIOPS_ISNOWVOL_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Volume of snow on sea ice per unit grid cell area [cm]
+        label_fr: RIOPS - Volume de neige sur la glace de mer par unité de surface de cellule de grille [cm]
+        name: ISNOWVOL
+        styles:
+            - mapserv/class/SEA_SNOWTHICK-LINEAR.json
+            - mapserv/class/SEA_SNOWTHICK.json
+    RIOPS_IICESURFTEMP_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Surface temperature of sea ice/snow [K]
+        label_fr: RIOPS - Température de la surface de la neige/glace de mer [K]
+        name: IICESURFTEMP
+        processing:
+            - SCALE=234.4,273.2
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_ICETEMP-LINEAR.json
+            - mapserv/class/SEA_ICETEMP.json
+            - mapserv/class/SEA_ICETEMP-CIS.json
+    RIOPS_IICEPRESSURE_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Vertically integrated ice internal pressure [N/m]
+        label_fr: RIOPS - Pression interne de la glace, intégrée verticalement [N/m]
+        name: IICEPRESSURE
+        processing:
+            - SCALE=-4429.5,79427
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_ICEPRESS-LINEAR.json
+            - mapserv/class/SEA_ICEPRESS.json
+            - mapserv/class/SEA_ICEPRESS-CIS.json
+    RIOPS_IICESTRENGTH_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Vertically integrated compressive ice strength [N/m]
+        label_fr: RIOPS - Résistance de la compression de la glace, intégrée verticalement [N/m]
+        name: IICESTRENGTH
+        processing:
+            - SCALE=-367.5,199788.5
+            - SCALE_BUCKETS=500
+        styles:
+            - mapserv/class/SEA_ICESTRENGTH-LINEAR.json
+            - mapserv/class/SEA_ICESTRENGTH.json
+            - mapserv/class/SEA_ICESTRENGTH-CIS.json
+    RIOPS_IICEDIVERGENCE_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea ice divergence [%/day]
+        label_fr: RIOPS - Divergence de la glace de mer [%/jour]
+        name: IICEDIVERGENCE
+        styles:
+            - mapserv/class/SEA_ICEDIVERGENCE-LINEAR.json
+    RIOPS_IICESHEAR_SFC:
+        <<: *template_riops
+        forecast_model: *id_riops_2D
+        label_en: RIOPS - Sea ice shear strain [%/day]
+        label_fr: RIOPS - Taux de déformation dû au cisaillement dans la glace de mer [%/jour]
+        name: IICESHEAR
+        styles:
+            - mapserv/class/SEA_ICESHEAR-LINEAR.json
+    RIOPS_VOSALINE_DBS-1.6m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0001.6m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0001.6m [psu]
+        processing:
+            - BANDS=2
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2.7m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0002.7m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0002.7m [psu]
+        processing:
+            - BANDS=3
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-0003.9m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0003.9m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0003.9m [psu]
+        processing:
+            - BANDS=4
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5.1m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0005.1m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0005.1m [psu]
+        processing:
+            - BANDS=5
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-6.5m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0006.5m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0006.5m [psu]
+        processing:
+            - BANDS=6
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-8.1m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0008.1m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0008.1m [psu]
+        processing:
+            - BANDS=7
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-9.8m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0009.8m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0009.8m [psu]
+        processing:
+            - BANDS=8
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-12m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0012m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0012m [psu]
+        processing:
+            - BANDS=9
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-14m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0014m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0014m [psu]
+        processing:
+            - BANDS=10
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-17m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0017m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0017m [psu]
+        processing:
+            - BANDS=11
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-19m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0019m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0019m [psu]
+        processing:
+            - BANDS=12
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-23m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0023m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0023m [psu]
+        processing:
+            - BANDS=13
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-27m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0027m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0027m [psu]
+        processing:
+            - BANDS=14
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-31m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0031m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0031m [psu]
+        processing:
+            - BANDS=15
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-36m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0036m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0036m [psu]
+        processing:
+            - BANDS=16
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-41m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0041m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0041m [psu]
+        processing:
+            - BANDS=17
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-47m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0047m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0047m [psu]
+        processing:
+            - BANDS=18
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-54m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0054m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0054m [psu]
+        processing:
+            - BANDS=19
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-61m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0061m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0061m [psu]
+        processing:
+            - BANDS=20
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-69m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0069m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0069m [psu]
+        processing:
+            - BANDS=21
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-78m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0078m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0078m [psu]
+        processing:
+            - BANDS=22
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-87m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0087m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0087m [psu]
+        processing:
+            - BANDS=23
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-97m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0097m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0097m [psu]
+        processing:
+            - BANDS=24
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-108m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0108m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0108m [psu]
+        processing:
+            - BANDS=25
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-120m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0120m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0120m [psu]
+        processing:
+            - BANDS=26
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-133m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0133m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0133m [psu]
+        processing:
+            - BANDS=27
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-147m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0147m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0147m [psu]
+        processing:
+            - BANDS=28
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-163m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0163m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0163m [psu]
+        processing:
+            - BANDS=29
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-181m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0181m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0181m [psu]
+        processing:
+            - BANDS=30
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-200m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0200m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0200m [psu]
+        processing:
+            - BANDS=31
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-221m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0221m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0221m [psu]
+        processing:
+            - BANDS=32
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-245m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0245m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0245m [psu]
+        processing:
+            - BANDS=33
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-271m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0271m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0271m [psu]
+        processing:
+            - BANDS=34
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-301m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0301m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0301m [psu]
+        processing:
+            - BANDS=35
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-334m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0334m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0334m [psu]
+        processing:
+            - BANDS=36
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-371m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0371m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0371m [psu]
+        processing:
+            - BANDS=37
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-412m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0412m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0412m [psu]
+        processing:
+            - BANDS=38
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-458m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0458m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0458m [psu]
+        processing:
+            - BANDS=39
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-509m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0509m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer -0509m [psu]
+        processing:
+            - BANDS=40
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-565m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0565m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0565m [psu]
+        processing:
+            - BANDS=41
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-628m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0628m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0628m [psu]
+        processing:
+            - BANDS=42
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-697m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0697m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0697m [psu]
+        processing:
+            - BANDS=43
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-773m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0773m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0773m [psu]
+        processing:
+            - BANDS=44
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-857m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0857m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0857m [psu]
+        processing:
+            - BANDS=45
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-947m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 0947m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 0947m [psu]
+        processing:
+            - BANDS=46
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1046m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1046m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1046m [psu]
+        processing:
+            - BANDS=47
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1152m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1152m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1152m [psu]
+        processing:
+            - BANDS=48
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1266m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1266m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1266m [psu]
+        processing:
+            - BANDS=49
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1387m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1387m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1387m [psu]
+        processing:
+            - BANDS=50
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1516m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1516m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1516m [psu]
+        processing:
+            - BANDS=51
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1653m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1653m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1653m [psu]
+        processing:
+            - BANDS=52
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1796m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1796m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1796m [psu]
+        processing:
+            - BANDS=53
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-1945m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 1945m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 1945m [psu]
+        processing:
+            - BANDS=54
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2101m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2101m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2101m [psu]
+        processing:
+            - BANDS=55
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2262m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2262m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2262m [psu]
+        processing:
+            - BANDS=56
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2429m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2429m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2429m [psu]
+        processing:
+            - BANDS=57
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2600m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2600m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2600m [psu]
+        processing:
+            - BANDS=58
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2776m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2776m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2776m [psu]
+        processing:
+            - BANDS=59
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-2956m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 2956m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 2956m [psu]
+        processing:
+            - BANDS=60
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-3139m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 3139m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 3139m [psu]
+        processing:
+            - BANDS=61
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-3325m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 3325m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 3325m [psu]
+        processing:
+            - BANDS=62
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-3513m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 3513m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 3513m [psu]
+        processing:
+            - BANDS=63
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-3705m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 3705m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 3705m [psu]
+        processing:
+            - BANDS=64
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-3898m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 3898m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 3898m [psu]
+        processing:
+            - BANDS=65
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-4093m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 4093m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 4093m [psu]
+        processing:
+            - BANDS=66
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-4290m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 4290m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 4290m [psu]
+        processing:
+            - BANDS=67
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-4488m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 4488m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 4488m [psu]
+        processing:
+            - BANDS=68
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-4688m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 4688m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 4688m [psu]
+        processing:
+            - BANDS=69
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-4888m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 4888m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 4888m [psu]
+        processing:
+            - BANDS=70
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5089m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 5089m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 5089m [psu]
+        processing:
+            - BANDS=71
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5292m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 5292m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 5292m [psu]
+        processing:
+            - BANDS=72
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5495m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 5495m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 5495m [psu]
+        processing:
+            - BANDS=73
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5698m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 5698m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 5698m [psu]
+        processing:
+            - BANDS=74
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOSALINE_DBS-5902m:
+        <<: *template_riops_3d_salw
+        label_en: Sea water salinity//RIOPS - Sea water salinity - 5902m [psu]
+        label_fr: Salinité de l'eau de la mer//RIOPS - Salinité de l'eau de la mer - 5902m [psu]
+        processing:
+            - BANDS=75
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1.6m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0001.6m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0001.6m [K]
+        processing:
+            - BANDS=2
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2.7m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0002.7m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0002.7m [K]
+        processing:
+            - BANDS=3
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3.9m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0003.9m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0003.9m [K]
+        processing:
+            - BANDS=4
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5.1m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0005.1m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0005.1m [K]
+        processing:
+            - BANDS=5
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-6.5m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0006.5m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0006.5m [K]
+        processing:
+            - BANDS=6
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-8.1m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0008.1m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0008.1m [K]
+        processing:
+            - BANDS=7
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-9.8m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0009.8m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0009.8m [K]
+        processing:
+            - BANDS=8
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-12m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0012m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0012m [K]
+        processing:
+            - BANDS=9
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-14m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0014m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0014m [K]
+        processing:
+            - BANDS=10
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-17m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0017m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0017m [K]
+        processing:
+            - BANDS=11
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-19m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0019m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0019m [K]
+        processing:
+            - BANDS=12
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-23m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0023m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0023m [K]
+        processing:
+            - BANDS=13
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-27m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0027m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0027m [K]
+        processing:
+            - BANDS=14
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-31m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0031m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0031m [K]
+        processing:
+            - BANDS=15
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-36m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0036m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0036m [K]
+        processing:
+            - BANDS=16
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-41m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0041m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0041m [K]
+        processing:
+            - BANDS=17
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-47m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0047m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0047m [K]
+        processing:
+            - BANDS=18
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-54m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0054m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0054m [K]
+        processing:
+            - BANDS=19
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-61m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0061m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0061m [K]
+        processing:
+            - BANDS=20
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-69m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0069m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0069m [K]
+        processing:
+            - BANDS=21
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-78m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0078m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0078m [K]
+        processing:
+            - BANDS=22
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-87m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0087m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0087m [K]
+        processing:
+            - BANDS=23
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-97m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0097m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0097m [K]
+        processing:
+            - BANDS=24
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-108m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0108m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0108m [K]
+        processing:
+            - BANDS=25
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-120m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0120m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0120m [K]
+        processing:
+            - BANDS=26
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-133m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0133m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0133m [K]
+        processing:
+            - BANDS=27
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-147m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0147m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0147m [K]
+        processing:
+            - BANDS=28
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-163m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0163m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0163m [K]
+        processing:
+            - BANDS=29
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-181m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0181m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0181m [K]
+        processing:
+            - BANDS=30
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-200m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0200m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0200m [K]
+        processing:
+            - BANDS=31
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-221m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0221m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0221m [K]
+        processing:
+            - BANDS=32
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-245m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0245m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0245m [K]
+        processing:
+            - BANDS=33
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-271m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0271m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0271m [K]
+        processing:
+            - BANDS=34
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-301m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0301m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0301m [K]
+        processing:
+            - BANDS=35
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-334m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0334m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0334m [K]
+        processing:
+            - BANDS=36
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-371m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0371m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0371m [K]
+        processing:
+            - BANDS=37
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-412m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0412m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0412m [K]
+        processing:
+            - BANDS=38
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-458m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0458m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0458m [K]
+        processing:
+            - BANDS=39
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-509m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0509m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0509m [K]
+        processing:
+            - BANDS=40
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-565m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0565m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0565m [K]
+        processing:
+            - BANDS=41
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-628m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0628m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0628m [K]
+        processing:
+            - BANDS=42
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-697m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0697m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0697m [K]
+        processing:
+            - BANDS=43
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-773m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0773m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0773m [K]
+        processing:
+            - BANDS=44
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-857m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0857m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0857m [K]
+        processing:
+            - BANDS=45
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-947m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 0947m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 0947m [K]
+        processing:
+            - BANDS=46
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1046m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1046m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1046m [K]
+        processing:
+            - BANDS=47
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1152m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1152m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1152m [K]
+        processing:
+            - BANDS=48
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1266m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1266m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1266m [K]
+        processing:
+            - BANDS=49
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1387m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1387m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1387m [K]
+        processing:
+            - BANDS=50
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1516m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1516m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1516m [K]
+        processing:
+            - BANDS=51
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1653m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1653m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1653m [K]
+        processing:
+            - BANDS=52
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1796m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1796m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1796m [K]
+        processing:
+            - BANDS=53
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-1945m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 1945m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 1945m [K]
+        processing:
+            - BANDS=54
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2101m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2101m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2101m [K]
+        processing:
+            - BANDS=55
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2262m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2262m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2262m [K]
+        processing:
+            - BANDS=56
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2429m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2429m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2429m [K]
+        processing:
+            - BANDS=57
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2600m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2600m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2600m [K]
+        processing:
+            - BANDS=58
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2776m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2776m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2776m [K]
+        processing:
+            - BANDS=59
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-2956m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 2956m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 2956m [K]
+        processing:
+            - BANDS=60
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3139m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 3139m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 3139m [K]
+        processing:
+            - BANDS=61
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3325m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 3325m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 3325m [K]
+        processing:
+            - BANDS=62
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3513m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 3513m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 3513m [K]
+        processing:
+            - BANDS=63
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3705m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 3705m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 3705m [K]
+        processing:
+            - BANDS=64
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-3898m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 3898m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 3898m [K]
+        processing:
+            - BANDS=65
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-4093m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 4093m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 4093m [K]
+        processing:
+            - BANDS=66
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-4290m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 4290m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 4290m [K]
+        processing:
+            - BANDS=67
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-4488m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 4488m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 4488m [K]
+        processing:
+            - BANDS=68
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-4688m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 4688m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 4688m [K]
+        processing:
+            - BANDS=69
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-4888m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 4888m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 4888m [K]
+        processing:
+            - BANDS=70
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5089m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 5089m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 5089m [K]
+        processing:
+            - BANDS=71
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5292m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 5292m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 5292m [K]
+        processing:
+            - BANDS=72
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5495m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 5495m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 5495m [K]
+        processing:
+            - BANDS=73
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5698m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 5698m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 5698m [K]
+        processing:
+            - BANDS=74
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_VOTEMPER_DBS-5902m:
+        <<: *template_riops_3d_tm2
+        label_en: Sea temperature//RIOPS - Sea temperature - 5902m [K]
+        label_fr: Température de la mer//RIOPS - Température de la mer - 5902m [K]
+        processing:
+            - BANDS=75
+            - GDAL_NETCDF_BOTTOMUP=YES
+    RIOPS_UU2W_DBS-1.6m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0001.6m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0001.6m [m/s]
+        uv_bands: 2,2
+    RIOPS_UU2W_DBS-2.7m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0002.7m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0002.7m [m/s]
+        uv_bands: 3,3
+    RIOPS_UU2W_DBS-3.9m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0003.9m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0003.9m [m/s]
+        uv_bands: 4,4
+    RIOPS_UU2W_DBS-5.1m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0005.1m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0005.1m [m/s]
+        uv_bands: 5,5
+    RIOPS_UU2W_DBS-6.5m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0006.5m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0006.5m [m/s]
+        uv_bands: 6,6
+    RIOPS_UU2W_DBS-8.1m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0008.1m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0008.1m [m/s]
+        uv_bands: 7,7
+    RIOPS_UU2W_DBS-9.8m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0009.8m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0009.8m [m/s]
+        uv_bands: 8,8
+    RIOPS_UU2W_DBS-12m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0012m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0012m [m/s]
+        uv_bands: 9,9
+    RIOPS_UU2W_DBS-14m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0014m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0014m [m/s]
+        uv_bands: 10,10
+    RIOPS_UU2W_DBS-17m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0017m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0017m [m/s]
+        uv_bands: 11,11
+    RIOPS_UU2W_DBS-19m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0019m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0019m [m/s]
+        uv_bands: 12,12
+    RIOPS_UU2W_DBS-23m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0023m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0023m [m/s]
+        uv_bands: 13,13
+    RIOPS_UU2W_DBS-27m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0027m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0027m [m/s]
+        uv_bands: 14,14
+    RIOPS_UU2W_DBS-31m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0031m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0031m [m/s]
+        uv_bands: 15,15
+    RIOPS_UU2W_DBS-36m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0036m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0036m [m/s]
+        uv_bands: 16,16
+    RIOPS_UU2W_DBS-41m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0041m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0041m [m/s]
+        uv_bands: 17,17
+    RIOPS_UU2W_DBS-47m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0047m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0047m [m/s]
+        uv_bands: 18,18
+    RIOPS_UU2W_DBS-54m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0054m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0054m [m/s]
+        uv_bands: 19,19
+    RIOPS_UU2W_DBS-61m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0061m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0061m [m/s]
+        uv_bands: 20,20
+    RIOPS_UU2W_DBS-69m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0069m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0069m [m/s]
+        uv_bands: 21,21
+    RIOPS_UU2W_DBS-78m:
+        <<: *template_riops_3d_uu2w
+        label_en: Ocean current//RIOPS - Ocean current - 0078m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0078m [m/s]
+        uv_bands: 22,22
+    RIOPS_UU2W_DBS-87m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0087m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0087m [m/s]
+        uv_bands: 23,23
+    RIOPS_UU2W_DBS-97m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0097m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0097m [m/s]
+        uv_bands: 24,24
+    RIOPS_UU2W_DBS-108m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0108m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0108m [m/s]
+        uv_bands: 25,25
+    RIOPS_UU2W_DBS-120m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0120m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0120m [m/s]
+        uv_bands: 26,26
+    RIOPS_UU2W_DBS-133m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0133m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0133m [m/s]
+        uv_bands: 27,27
+    RIOPS_UU2W_DBS-147m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0147m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0147m [m/s]
+        uv_bands: 28,28
+    RIOPS_UU2W_DBS-163m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0163m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0163m [m/s]
+        uv_bands: 29,29
+    RIOPS_UU2W_DBS-181m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0181m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0181m [m/s]
+        uv_bands: 30,30
+    RIOPS_UU2W_DBS-200m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0200m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0200m [m/s]
+        uv_bands: 31,31
+    RIOPS_UU2W_DBS-221m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0221m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0221m [m/s]
+        uv_bands: 32,32
+    RIOPS_UU2W_DBS-245m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0245m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0245m [m/s]
+        uv_bands: 33,33
+    RIOPS_UU2W_DBS-271m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0271m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0271m [m/s]
+        uv_bands: 34,34
+    RIOPS_UU2W_DBS-301m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0301m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0301m [m/s]
+        uv_bands: 35,35
+    RIOPS_UU2W_DBS-334m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0334m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0334m [m/s]
+        uv_bands: 36,36
+    RIOPS_UU2W_DBS-371m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0371m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0371m [m/s]
+        uv_bands: 37,37
+    RIOPS_UU2W_DBS-412m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0412m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0412m [m/s]
+        uv_bands: 38,38
+    RIOPS_UU2W_DBS-458m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0458m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0458m [m/s]
+        uv_bands: 39,39
+    RIOPS_UU2W_DBS-509m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0509m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0509m [m/s]
+        uv_bands: 40,40
+    RIOPS_UU2W_DBS-565m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0565m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0565m [m/s]
+        uv_bands: 41,41
+    RIOPS_UU2W_DBS-628m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0628m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0628m [m/s]
+        uv_bands: 42,42
+    RIOPS_UU2W_DBS-697m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0697m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0697m [m/s]
+        uv_bands: 43,43
+    RIOPS_UU2W_DBS-773m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0773m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0773m [m/s]
+        uv_bands: 44,44
+    RIOPS_UU2W_DBS-857m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0857m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0857m [m/s]
+        uv_bands: 45,45
+    RIOPS_UU2W_DBS-947m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 0947m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 0947m [m/s]
+        uv_bands: 46,46
+    RIOPS_UU2W_DBS-1046m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1046m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1046m [m/s]
+        uv_bands: 47,47
+    RIOPS_UU2W_DBS-1152m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1152m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1152m [m/s]
+        uv_bands: 48,48
+    RIOPS_UU2W_DBS-1266m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1266m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1266m [m/s]
+        uv_bands: 49,49
+    RIOPS_UU2W_DBS-1387m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1387m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1387m [m/s]
+        uv_bands: 50,50
+    RIOPS_UU2W_DBS-1516m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1516m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1516m [m/s]
+        uv_bands: 51,51
+    RIOPS_UU2W_DBS-1653m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1653m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1653m [m/s]
+        uv_bands: 52,52
+    RIOPS_UU2W_DBS-1796m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1796m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1796m [m/s]
+        uv_bands: 53,53
+    RIOPS_UU2W_DBS-1945m:
+        <<: *template_riops_3d_uu2w_100m_2000m
+        label_en: Ocean current//RIOPS - Ocean current - 1945m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 1945m [m/s]
+        uv_bands: 54,54
+    RIOPS_UU2W_DBS-2101m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2101m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2101m [m/s]
+        uv_bands: 55,55
+    RIOPS_UU2W_DBS-2262m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2262m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2262m [m/s]
+        uv_bands: 56,56
+    RIOPS_UU2W_DBS-2429m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2429m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2429m [m/s]
+        uv_bands: 57,57
+    RIOPS_UU2W_DBS-2600m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2600m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2600m [m/s]
+        uv_bands: 58,58
+    RIOPS_UU2W_DBS-2776m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2776m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2776m [m/s]
+        uv_bands: 59,59
+    RIOPS_UU2W_DBS-2956m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 2956m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 2956m [m/s]
+        uv_bands: 60,60
+    RIOPS_UU2W_DBS-3139m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 3139m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 3139m [m/s]
+        uv_bands: 61,61
+    RIOPS_UU2W_DBS-3325m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 3325m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 3325m [m/s]
+        uv_bands: 62,62
+    RIOPS_UU2W_DBS-3513m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 3513m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 3513m [m/s]
+        uv_bands: 63,63
+    RIOPS_UU2W_DBS-3705m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 3705m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 3705m [m/s]
+        uv_bands: 64,64
+    RIOPS_UU2W_DBS-3898m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 3898m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 3898m [m/s]
+        uv_bands: 65,65
+    RIOPS_UU2W_DBS-4093m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 4093m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 4093m [m/s]
+        uv_bands: 66,66
+    RIOPS_UU2W_DBS-4290m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 4290m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 4290m [m/s]
+        uv_bands: 67,67
+    RIOPS_UU2W_DBS-4488m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 4488m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 4488m [m/s]
+        uv_bands: 68,68
+    RIOPS_UU2W_DBS-4688m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 4688m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 4688m [m/s]
+        uv_bands: 69,69
+    RIOPS_UU2W_DBS-4888m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 4888m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 4888m [m/s]
+        uv_bands: 70,70
+    RIOPS_UU2W_DBS-5089m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 5089m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 5089m [m/s]
+        uv_bands: 71,71
+    RIOPS_UU2W_DBS-5292m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 5292m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 5292m [m/s]
+        uv_bands: 72,72
+    RIOPS_UU2W_DBS-5495m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 5495m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 5495m [m/s]
+        uv_bands: 73,73
+    RIOPS_UU2W_DBS-5698m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 5698m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 5698m [m/s]
+        uv_bands: 74,74
+    RIOPS_UU2W_DBS-5902m:
+        <<: *template_riops_3d_uu2w_2000m_5728m
+        label_en: Ocean current//RIOPS - Ocean current - 5902m [m/s]
+        label_fr: Courant océanique//RIOPS - Courant océanique - 5902m [m/s]
+        uv_bands: 75,75
     OCEAN.GIOPS.2D_UUI:
         <<: *template_giops_uu
         forecast_model: *id_giops_2D_uu
