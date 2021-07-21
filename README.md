@@ -53,6 +53,9 @@ geomet-mapfile --version
 # see all subcommands
 geomet-mapfile
 
+# setup metadata (MCF)
+geomet-mapfile metadata setup
+
 # generate a mapfile for GDPS.ETA_TT without the `MAP` object and write to the configured store
 geomet-mapfile mapfile generate -l GDPS.ETA_TT --no-map -o store
 
