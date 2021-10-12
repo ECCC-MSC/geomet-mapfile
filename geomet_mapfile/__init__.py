@@ -24,6 +24,7 @@ import click
 
 from geomet_mapfile.util import utils
 from geomet_mapfile.mapfile import mapfile
+from geomet_mapfile.metadata import metadata
 from geomet_mapfile.store import store
 from geomet_mapfile.wsgi import serve
 
@@ -36,5 +37,6 @@ def cli():
 
 cli.add_command(utils)
 cli.add_command(mapfile)
+cli.add_command(metadata)
 cli.add_command(store)
 cli.add_command(serve)

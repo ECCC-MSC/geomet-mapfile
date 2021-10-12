@@ -450,7 +450,9 @@ def gen_layer(layer_name, layer_info):
 
     LOGGER.debug('Reading MCF and updating layer metadata')
 
-    mcf_file = os.path.join(THISDIR, 'resources', 'mcf',
+    mcf_file = os.path.join(BASEDIR,
+                            'geomet_mapfile/resources/mcf/',
+                            'discovery-metadata/mcf',
                             layer_info['forecast_model']['mcf'])
 
     layer['metadata'].update(mcf2layer_metadata(mcf_file))
