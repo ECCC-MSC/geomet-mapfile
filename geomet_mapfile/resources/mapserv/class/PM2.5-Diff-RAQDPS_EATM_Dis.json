@@ -1,0 +1,162 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.1 - 0.3 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 1e-07 ) AND ( [pixel] < 3e-07 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    211,
+                    211,
+                    211
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.3 - 1 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 3e-07 ) AND ( [pixel] < 1e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    105,
+                    105,
+                    105
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 - 2 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 1e-06 ) AND ( [pixel] < 2e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    70,
+                    130,
+                    180
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 - 3 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 2e-06 ) AND ( [pixel] < 3e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    191,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 - 10 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 3e-06 ) AND ( [pixel] < 1e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 20 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 1e-05 ) AND ( [pixel] < 2e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 30 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 2e-05 ) AND ( [pixel] < 3e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    215,
+                    167,
+                    31
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 - 100 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 3e-05 ) AND ( [pixel] < 0.0001 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    250,
+                    128,
+                    113
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 - 300 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 0.0001 ) AND ( [pixel] < 0.0003 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    140,
+                    0,
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "300 - 1000 [mg/m^2]",
+        "group": "PM2.5-Diff-RAQDPS_EATM_Dis",
+        "expression": "( ( [pixel] >= 0.0003 ) AND ( [pixel] < 0.001 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

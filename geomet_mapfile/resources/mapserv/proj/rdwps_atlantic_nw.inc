@@ -1,0 +1,9 @@
+PROJECTION
+ "proj=ob_tran"
+ "o_proj=longlat"
+ "o_lon_p=0"
+ "o_lat_p=36.08852"
+ "lon_0=-114.694858"
+ "R=6371229"
+ "no_defs"
+END
