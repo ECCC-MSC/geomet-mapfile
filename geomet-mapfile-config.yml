@@ -445,59 +445,61 @@ forecast_models:
         mcf: nwp-models/msc_nwp_rdwps.yml
         projection: mapserv/proj/rdwps.inc
         extent: -95 35 -65 50
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]
         forecast_hour_interval: 1
         processing: [SCALE_BUCKETS=1000]
         metadata:
             - 'wcs_enable_request=!*'
     rdwps_erie: &id_rdwps_erie
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes/Erie
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs/Erie
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Erie
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Erie
         dimensions: [398, 210]
     rdwps_erie_uu: &id_rdwps_erie_uu
         <<: *id_rdwps_erie
         extent: 276.387 41.215 281.318 43.104
     rdwps_huron-michigan: &id_rdwps_huron-michigan
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes/Huron-Michigan
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs/Huron-Michigan
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Huron-Michigan
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Huron-Michigan
         dimensions: [698, 573]
     rdwps_huron-michigan_uu: &id_rdwps_huron-michigan_uu
         <<: *id_rdwps_huron-michigan
         extent: 271.849 41.422 280.497 46.577
     rdwps_ontario: &id_rdwps_ontario
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes/Ontario
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs/Ontario
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Ontario
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Ontario
         dimensions: [348, 158]
     rdwps_ontario_uu: &id_rdwps_ontario_uu
         <<: *id_rdwps_ontario
         extent: 280.020 43.060 284.332 44.481
     rdwps_superior: &id_rdwps_superior
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes/Superior
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs/Superior
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Superior
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Superior
         dimensions: [658, 318]
     rdwps_superior_uu: &id_rdwps_superior_uu
         <<: *id_rdwps_superior
         extent: 267.682 46.255 275.835 49.116
-    rdwps_gulf: &id_rdwps_gulf
-        <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Ocean/Gulf of Saint Lawrence
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Océan/Golfe du Saint-Laurent
-        forecast_hour_interval: 3
-        dimensions: [331, 160]
-    rdwps_gulf_uu: &id_rdwps_gulf_uu
-        <<: *id_rdwps_gulf
-        extent: 289.055 44.055 305.605 52.055
+    rdwps_atlantic_nw: &id_rdwps_atlantic_nw
+        mcf: nwp-models/msc_nwp_rdwps.yml
+        projection: mapserv/proj/rdwps_atlantic_nw.inc
+        extent: 7.993789 -12.279997 42.2838 16.655005
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System - Atlantic North-West (RDWPS Atlantic North-West) [5 km]
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague - Nord-Ouest Atlantique (SRPDV Nord-Ouest Atlantique) [5 km]
+        dimensions: [762, 643]
+        forecast_hour_interval: 1
+        processing: [SCALE_BUCKETS=1000]
+        metadata:
+            - 'wcs_enable_request=!*'
     gdwps: &id_gdwps
         mcf: nwp-models/msc_nwp_gdwps.yml
         projection: mapserv/proj/gdwps.inc
         extent: -180 -90.125 180 90.125
-        label_en: Wave Prediction/Global Deterministic Wave Prediction System (GDWPS)
-        label_fr: Prévision de vague/Système Global de Prévision Déterministe de Vague (SGPDV)
+        label_en: Wave Prediction/Global Deterministic Wave Prediction System (GDWPS) [28 km]
+        label_fr: Prévision de vague/Système Global de Prévision Déterministe de Vague (SGPDV) [28 km]
         dimensions: [1440, 721]
         forecast_hour_interval: 1
         processing: [SCALE_BUCKETS=1000]
@@ -697,8 +699,7 @@ layer_templates:
         type: raster
         time_enabled: 'yes'
         styles:
-            - mapserv/class/FW-EATM-PM-DIFF_KGM2.json
-            - mapserv/class/FW-EATM-PM-DIFF_UGM2.json
+            - mapserv/class/PM2.5-Diff-RAQDPS_EATM_Dis.json
     RAQDPS_SFC_PM: &template_raqdps_sfc_pm
         type: raster
         time_enabled: 'yes'
@@ -1781,6 +1782,17 @@ layer_templates:
             - mapserv/class/MODELWAVEHEIGHT_OCEAN-LINEAR.json
             - mapserv/class/MODELWAVEHEIGHT_OCEAN_2.json
             - mapserv/class/MODELWAVEHEIGHT_OCEAN_2-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN.json
+    WZ_Atlantic_NW: &template_wz_atlantic_nw
+        type: raster
+        time_enabled: 'yes'
+        processing:
+            - SCALE=0,16
+            - SCALE_BUCKETS=320
+        styles:
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2-LINEAR.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN_2.json
+            - mapserv/class/MODELWAVEHEIGHT_OCEAN-LINEAR.json
             - mapserv/class/MODELWAVEHEIGHT_OCEAN.json
     WZ_GLAKE: &template_wz_glake
         type: raster
@@ -23881,97 +23893,97 @@ layers:
         forecast_model: *id_raqdps
         label_en: 'Concentration: entire column PM2.5 [kg/m2]'
         label_fr: 'Concentration : intégral de la colonne PM2.5 [kg/m2]'
-        name: PM2.5_EATM
+        name: PM2.5_EAtm
     RAQDPS.EATM_PM10:
         <<: *template_raqdps_eatm_pm
         forecast_model: *id_raqdps
         label_en: 'Concentration: entire column PM10 [kg/m2]'
         label_fr: 'Concentration : intégral de la colonne PM10 [kg/m2]'
-        name: PM10_EATM
+        name: PM10_EAtm
     RAQDPS.SFC_PM2.5:
         <<: *template_raqdps_sfc_pm
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface PM2.5 [kg/m3]'
         label_fr: 'Concentration : surface PM2.5 [kg/m3]'
-        name: PM2.5_SFC
+        name: PM2.5_Sfc
     RAQDPS.SFC_PM10:
         <<: *template_raqdps_sfc_pm
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface PM10 [kg/m3]'
         label_fr: 'Concentration : surface PM10 [kg/m3]'
-        name: PM10_SFC
+        name: PM10_Sfc
     RAQDPS.SFC_NO2:
         <<: *template_raqdps_sfc_no2
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface NO2 [mol/mol]'
         label_fr: 'Concentration : surface NO2 [mol/mol]'
-        name: NO2_SFC
+        name: NO2_Sfc
     RAQDPS.SFC_NO:
         <<: *template_raqdps_sfc_no
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface NO [mol/mol]'
         label_fr: 'Concentration : surface NO [mol/mol]'
-        name: NO_SFC
+        name: NO_Sfc
     RAQDPS.SFC_O3:
         <<: *template_raqdps_sfc_o3
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface O3 [mol/mol]'
         label_fr: 'Concentration : surface O3 [mol/mol]'
-        name: O3_SFC
+        name: O3_Sfc
     RAQDPS.SFC_SO2:
         <<: *template_raqdps_sfc_so2
         forecast_model: *id_raqdps
         label_en: 'Concentration: surface SO2 [mol/mol]'
         label_fr: 'Concentration : surface SO2 [mol/mol]'
-        name: SO2_SFC
+        name: SO2_Sfc
     RAQDPS-FW.EATM_PM2.5:
         <<: *template_raqdps_eatm_pm
         forecast_model: *id_raqdps_fw
         label_en: 'Concentration: entire column PM2.5 [kg/m^2]'
         label_fr: 'Concentration : intégral de la colonne PM2.5 [kg/m^2]'
-        name: PM2.5_EATM
+        name: PM2.5_EAtm
     RAQDPS-FW.EATM_PM2.5-DIFF:
         <<: *template_raqdps_eatm_pm_diff
         forecast_model: *id_raqdps_fw
         label_en: 'Difference in concentration with the RAQDPS model: entire column PM2.5 [kg/m^2]'
         label_fr: 'Différence de concentration avec le modèle SRPDQA : intégral de la colonne PM2.5 [kg/m^2]'
-        name: PM2.5-Diff-RAQDPS_EATM
+        name: PM2.5-Diff-RAQDPS_EAtm
     RAQDPS-FW.EATM_PM10:
         <<: *template_raqdps_eatm_pm
         forecast_model: *id_raqdps_fw
         label_en: 'Concentration: entire column PM10 [kg/m^2]'
         label_fr: 'Concentration : intégral de la colonne PM10 [kg/m^2]'
-        name: PM10_EATM
+        name: PM10_EAtm
     RAQDPS-FW.EATM_PM10-DIFF:
         <<: *template_raqdps_eatm_pm_diff
         forecast_model: *id_raqdps_fw
         label_en: 'Difference in concentration with the RAQDPS model: entire column PM10 [kg/m^2]'
         label_fr: 'Différence de concentration avec le modèle SRPDQA : intégral de la colonne PM10 [kg/m^2]'
-        name: PM10-Diff-RAQDPS_EATM
+        name: PM10-Diff-RAQDPS_EAtm
     RAQDPS-FW.SFC_PM2.5:
         <<: *template_raqdps_sfc_pm
         forecast_model: *id_raqdps_fw
         label_en: 'Concentration: surface PM2.5[kg/m^3]'
         label_fr: 'Concentration : surface PM2.5 [kg/m^3]'
-        name: PM2.5_SFC
+        name: PM2.5_Sfc
     RAQDPS-FW.SFC_PM2.5-DIFF:
         <<: *template_raqdps_sfc_pm_diff
         forecast_model: *id_raqdps_fw
         label_en: 'Difference in concentration with the RAQDPS model: surface PM2.5 [kg/m^3]'
         label_fr: 'Différence de concentration avec le modèle SRPDQA : surface PM2.5[kg/m^3]'
-        name: PM2.5-Diff-RAQDPS_SFC
+        name: PM2.5-Diff-RAQDPS_Sfc
     RAQDPS-FW.SFC_PM10:
         <<: *template_raqdps_sfc_pm
         forecast_model: *id_raqdps_fw
         label_en: 'Concentration: surface PM10 [kg/m^3]'
         label_fr: 'Concentration : surface PM10 [kg/m^3]'
-        name: PM10_SFC
+        name: PM10_Sfc
     RAQDPS-FW.SFC_PM10-DIFF:
         <<: *template_raqdps_sfc_pm_diff
         forecast_model: *id_raqdps_fw
         label_en: 'Difference in concentration with the RAQDPS model: surface PM10 [kg/m^3]'
         label_fr: 'Différence de concentration avec le modèle SRPDQA : surface PM10 [kg/m^3]'
-        name: PM10-Diff-RAQDPS_SFC
+        name: PM10-Diff-RAQDPS_Sfc
     RAQDPS-FW.CE_PM2.5-DIFF-MAvg-DMax:
         <<: *template_pm25
         forecast_model: *id_fw_ce
@@ -27879,483 +27891,650 @@ layers:
         label_en: Ocean current//OCEAN.GIOPS.3D - Ocean current - 5728m [m/s]
         label_fr: Courant océanique//OCEAN.GIOPS.3D - Courant océanique - 5728m [m/s]
         uv_bands: 50,50
-    RDWPS.ERIE.ICEC:
-        <<: *template_icec
-        forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Ice fraction
-        label_fr: RDWPS.ERIE - Fraction de glace marine
-        name: ICEC_SFC_0
-    RDWPS.HURON.ICEC:
-        <<: *template_icec
-        forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Ice fraction
-        label_fr: RDWPS.HURON - Fraction de glace marine
-        name: ICEC_SFC_0
-    RDWPS.ONTARIO.ICEC:
-        <<: *template_icec
-        forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Ice fraction
-        label_fr: RDWPS.ONTARIO - Fraction de glace marine
-        name: ICEC_SFC_0
-    RDWPS.SUPERIOR.ICEC:
-        <<: *template_icec
-        forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Ice fraction
-        label_fr: RDWPS.SUPERIOR - Fraction de glace marine
-        name: ICEC_SFC_0
-    RDWPS.GULF.ICEC:
-        <<: *template_icec-hrdps
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Ice fraction
-        label_fr: RDWPS.GULF - Fraction de glace marine
-        name: ICEC_SFC_0
-        time_enabled: 'no'
-    RDWPS.ERIE.WZ:
+    RDWPS-Erie_1km_HTSGW:
         <<: *template_wz_glake
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Wind waves height [m]
-        label_fr: RDWPS.ERIE - Vagues de vents, hauteur [m]
-        name: WVHGT_SFC_0
-    RDWPS.HURON.WZ:
+        label_en: RDWPS - Significant height of combined wind waves and swell [m]
+        label_fr: RDWPS - Hauteur significative des vagues de vent et de la houle combinés [m]
+        name: HTSGW_Sfc
+    RDWPS-Huron-Michigan_1km_HTSGW:
         <<: *template_wz_glake
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Wind waves height [m]
-        label_fr: RDWPS.HURON - Vagues de vents, hauteur [m]
-        name: WVHGT_SFC_0
-    RDWPS.ONTARIO.WZ:
+        label_en: RDWPS - Significant height of combined wind waves and swell [m]
+        label_fr: RDWPS - Hauteur significative des vagues de vent et de la houle combinés [m]
+        name: HTSGW_Sfc
+    RDWPS-Ontario_1km_HTSGW:
         <<: *template_wz_glake
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Wind waves height [m]
-        label_fr: RDWPS.ONTARIO - Vagues de vents, hauteur [m]
-        name: WVHGT_SFC_0
-    RDWPS.SUPERIOR.WZ:
+        label_en: RDWPS - Significant height of combined wind waves and swell [m]
+        label_fr: RDWPS - Hauteur significative des vagues de vent et de la houle combinés [m]
+        name: HTSGW_Sfc
+    RDWPS-Superior_1km_HTSGW:
         <<: *template_wz_glake
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Wind waves height [m]
-        label_fr: RDWPS.SUPERIOR - Vagues de vents, hauteur [m]
-        name: WVHGT_SFC_0
-    RDWPS.GULF.WZ:
-        <<: *template_wz_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Wind waves height [m]
-        label_fr: RDWPS.GULF - Vagues de vents, hauteur [m]
-        name: WVHGT_SFC_0
-    RDWPS.ERIE.SZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Significant height of combined wind waves and swell [m]
+        label_fr: RDWPS - Hauteur significative des vagues de vent et de la houle combinés [m]
+        name: HTSGW_Sfc
+    RDWPS-Erie_1km_PWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Primary swell height [m]
-        label_fr: RDWPS.ERIE - Première houle, hauteur [m]
-        name: SWELL_SFC_0
-    RDWPS.HURON.SZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Peak wave period [s]
+        label_fr: RDWPS - Période pic des vagues [s]
+        name: PWPER_Sfc
+    RDWPS-Huron-Michigan_1km_PWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Primary swell height [m]
-        label_fr: RDWPS.HURON - Première houle, hauteur [m]
-        name: SWELL_SFC_0
-    RDWPS.ONTARIO.SZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Peak wave period [s]
+        label_fr: RDWPS - Période pic des vagues [s]
+        name: PWPER_Sfc
+    RDWPS-Ontario_1km_PWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Primary swell height [m]
-        label_fr: RDWPS.ONTARIO - Première houle, hauteur [m]
-        name: SWELL_SFC_0
-    RDWPS.SUPERIOR.SZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Peak wave period [s]
+        label_fr: RDWPS - Période pic des vagues [s]
+        name: PWPER_Sfc
+    RDWPS-Superior_1km_PWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Primary swell height [m]
-        label_fr: RDWPS.SUPERIOR - Première houle, hauteur [m]
-        name: SWELL_SFC_0
-    RDWPS.GULF.SZ:
-        <<: *template_wz_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Total swell height [m]
-        label_fr: RDWPS.GULF - Houle totale, hauteur [m]
-        name: SWELL_SFC_0
-    RDWPS.ERIE.SZ_WZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Peak wave period [s]
+        label_fr: RDWPS - Période pic des vagues [s]
+        name: PWPER_Sfc
+    RDWPS-Erie_1km_MZWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Significant wave height [m]
-        label_fr: RDWPS.ERIE - Hauteur significative des vagues [m]
-        name: HTSGW_SFC_0
-    RDWPS.HURON.SZ_WZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Mean zero-crossing wave period [s]
+        label_fr: RDWPS - Période moyenne centrée des vagues [s]
+        name: MZWPER_Sfc
+    RDWPS-Huron-Michigan_1km_MZWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Significant wave height [m]
-        label_fr: RDWPS.HURON - Hauteur significative des vagues [m]
-        name: HTSGW_SFC_0
-    RDWPS.ONTARIO.SZ_WZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Mean zero-crossing wave period [s]
+        label_fr: RDWPS - Période moyenne centrée des vagues [s]
+        name: MZWPER_Sfc
+    RDWPS-Ontario_1km_MZWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Significant wave height [m]
-        label_fr: RDWPS.ONTARIO - Hauteur significative des vagues [m]
-        name: HTSGW_SFC_0
-    RDWPS.SUPERIOR.SZ_WZ:
-        <<: *template_wz_glake
+        label_en: RDWPS - Mean zero-crossing wave period [s]
+        label_fr: RDWPS - Période moyenne centrée des vagues [s]
+        name: MZWPER_Sfc
+    RDWPS-Superior_1km_MZWPER:
+        <<: *template_mwp_glake
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Significant wave height [m]
-        label_fr: RDWPS.SUPERIOR - Hauteur significative des vagues [m]
-        name: HTSGW_SFC_0
-    RDWPS.GULF.SZ_WZ:
-        <<: *template_wz_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Significant wave height [m]
-        label_fr: RDWPS.GULF - Hauteur significative des vagues [m]
-        name: HTSGW_SFC_0
-    RDWPS.ERIE.UU:
-        <<: *template_uu
-        forecast_model: *id_rdwps_erie_uu
-        label_en: RDWPS.ERIE - Winds [m/s]
-        label_fr: RDWPS.ERIE - Vents [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    RDWPS.HURON.UU:
-        <<: *template_uu
-        forecast_model: *id_rdwps_huron-michigan_uu
-        label_en: RDWPS.HURON - Winds [m/s]
-        label_fr: RDWPS.HURON - Vents [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    RDWPS.ONTARIO.UU:
-        <<: *template_uu
-        forecast_model: *id_rdwps_ontario_uu
-        label_en: RDWPS.ONTARIO - Winds [m/s]
-        label_fr: RDWPS.ONTARIO - Vents [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    RDWPS.SUPERIOR.UU:
-        <<: *template_uu
-        forecast_model: *id_rdwps_superior_uu
-        label_en: RDWPS.SUPERIOR - Winds [m/s]
-        label_fr: RDWPS.SUPERIOR - Vents [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    RDWPS.GULF.UU:
-        <<: *template_uu
-        forecast_model: *id_rdwps_gulf_uu
-        label_en: RDWPS.GULF - Winds [m/s]
-        label_fr: RDWPS.GULF - Vents [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    RDWPS.ERIE.DS:
+        label_en: RDWPS - Mean zero-crossing wave period [s]
+        label_fr: RDWPS - Période moyenne centrée des vagues [s]
+        name: MZWPER_Sfc
+    RDWPS-Erie_1km_PWAVEDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Primary swell mean direction [°]
-        label_fr: RDWPS.ERIE - Première houle, direction moyenne [°]
-        name: SWDIR_SFC_0
-    RDWPS.HURON.DS:
+        label_en: RDWPS - Peak wave direction [°]
+        label_fr: RDWPS - Direction pic des vagues [°]
+        name: PWAVEDIR_Sfc
+    RDWPS-Huron-Michigan_1km_PWAVEDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Primary swell mean direction [°]
-        label_fr: RDWPS.HURON - Première houle, direction moyenne [°]
-        name: SWDIR_SFC_0
-    RDWPS.ONTARIO.DS:
+        label_en: RDWPS - Peak wave direction [°]
+        label_fr: RDWPS - Direction pic des vagues [°]
+        name: PWAVEDIR_Sfc
+    RDWPS-Ontario_1km_PWAVEDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Primary swell mean direction [°]
-        label_fr: RDWPS.ONTARIO - Première houle, direction moyenne [°]
-        name: SWDIR_SFC_0
-    RDWPS.SUPERIOR.DS:
+        label_en: RDWPS - Peak wave direction [°]
+        label_fr: RDWPS - Direction pic des vagues [°]
+        name: PWAVEDIR_Sfc
+    RDWPS-Superior_1km_PWAVEDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Primary swell mean direction [°]
-        label_fr: RDWPS.SUPERIOR - Première houle, direction moyenne [°]
-        name: SWDIR_SFC_0
-    RDWPS.GULF.DS:
-        <<: *template_wd_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Total swell mean direction [°]
-        label_fr: RDWPS.GULF - Houle totale, direction moyenne [°]
-        name: SWDIR_SFC_0
-    RDWPS.ERIE.DE:
+        label_en: RDWPS - Peak wave direction [°]
+        label_fr: RDWPS - Direction pic des vagues [°]
+        name: PWAVEDIR_Sfc
+    RDWPS-Erie_1km_WVDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Wind waves mean direction [°]
-        label_fr: RDWPS.ERIE - Vagues de vents, direction moyenne [°]
-        name: WVDIR_SFC_0
-    RDWPS.HURON.DE:
+        label_en: RDWPS - Direction of wind waves [°]
+        label_fr: RDWPS - Direction des vagues de la mer du vent [°]
+        name: WVDIR_Sfc
+    RDWPS-Huron-Michigan_1km_WVDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Wind waves mean direction [°]
-        label_fr: RDWPS.HURON - Vagues de vents, direction moyenne [°]
-        name: WVDIR_SFC_0
-    RDWPS.ONTARIO.DE:
+        label_en: RDWPS - Direction of wind waves [°]
+        label_fr: RDWPS - Direction des vagues de la mer du vent [°]
+        name: WVDIR_Sfc
+    RDWPS-Ontario_1km_WVDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Wind waves mean direction [°]
-        label_fr: RDWPS.ONTARIO - Vagues de vents, direction moyenne [°]
-        name: WVDIR_SFC_0
-    RDWPS.SUPERIOR.DE:
+        label_en: RDWPS - Direction of wind waves [°]
+        label_fr: RDWPS - Direction des vagues de la mer du vent [°]
+        name: WVDIR_Sfc
+    RDWPS-Superior_1km_WVDIR:
         <<: *template_wd
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Wind waves mean direction [°]
-        label_fr: RDWPS.SUPERIOR - Vagues de vents, direction moyenne [°]
-        name: WVDIR_SFC_0
-    RDWPS.GULF.DE:
-        <<: *template_wd_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Wind waves mean direction [°]
-        label_fr: RDWPS.GULF - Vagues de vents, direction moyenne [°]
-        name: WVDIR_SFC_0
-    RDWPS.ERIE.MWP:
+        label_en: RDWPS - Direction of wind waves [°]
+        label_fr: RDWPS - Direction des vagues de la mer du vent [°]
+        name: WVDIR_Sfc
+    RDWPS-Erie_1km_WVHGT:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Significant height of wind waves [m]
+        label_fr: RDWPS - Hauteur significative des vagues de la mer du vent [m]
+        name: WVHGT_Sfc
+    RDWPS-Huron-Michigan_1km_WVHGT:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Significant height of wind waves [m]
+        label_fr: RDWPS - Hauteur significative des vagues de la mer du vent [m]
+        name: WVHGT_Sfc
+    RDWPS-Ontario_1km_WVHGT:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Significant height of wind waves [m]
+        label_fr: RDWPS - Hauteur significative des vagues de la mer du vent [m]
+        name: WVHGT_Sfc
+    RDWPS-Superior_1km_WVHGT:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Significant height of wind waves [m]
+        label_fr: RDWPS - Hauteur significative des vagues de la mer du vent [m]
+        name: WVHGT_Sfc
+    RDWPS-Erie_1km_PPERWW:
         <<: *template_mwp_glake
         forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Wind waves peak period [s]
-        label_fr: RDWPS.ERIE - Vagues de vents, période pic [s]
-        name: WVPER_SFC_0
-    RDWPS.HURON.MWP:
+        label_en: RDWPS - Peak period of wind waves [s]
+        label_fr: RDWPS - Période pic des vagues de la mer du vent [s]
+        name: PPERWW_Sfc
+    RDWPS-Huron-Michigan_1km_PPERWW:
         <<: *template_mwp_glake
         forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Wind waves peak period [s]
-        label_fr: RDWPS.HURON - Vagues de vents, période pic [s]
-        name: WVPER_SFC_0
-    RDWPS.ONTARIO.MWP:
+        label_en: RDWPS - Peak period of wind waves [s]
+        label_fr: RDWPS - Période pic des vagues de la mer du vent [s]
+        name: PPERWW_Sfc
+    RDWPS-Ontario_1km_PPERWW:
         <<: *template_mwp_glake
         forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Wind waves peak period [s]
-        label_fr: RDWPS.ONTARIO - Vagues de vents, période pic [s]
-        name: WVPER_SFC_0
-    RDWPS.SUPERIOR.MWP:
+        label_en: RDWPS - Peak period of wind waves [s]
+        label_fr: RDWPS - Période pic des vagues de la mer du vent [s]
+        name: PPERWW_Sfc
+    RDWPS-Superior_1km_PPERWW:
         <<: *template_mwp_glake
         forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Wind waves peak period [s]
-        label_fr: RDWPS.SUPERIOR - Vagues de vents, période pic [s]
-        name: WVPER_SFC_0
-    RDWPS.GULF.MWP:
-        <<: *template_mwp_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Wind waves mean period [s]
-        label_fr: RDWPS.GULF - Vagues de vents, période moyenne [s]
-        name: WVPER_SFC_0
-    RDWPS.ERIE.MSP:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Primary swell peak period [s]
-        label_fr: RDWPS.ERIE - Première houle, période pic [s]
-        name: SWPER_SFC_0
-    RDWPS.HURON.MSP:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Primary swell peak period [s]
-        label_fr: RDWPS.HURON - Première houle, période pic [s]
-        name: SWPER_SFC_0
-    RDWPS.ONTARIO.MSP:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Primary swell peak period [s]
-        label_fr: RDWPS.ONTARIO - Première houle, période pic [s]
-        name: SWPER_SFC_0
-    RDWPS.SUPERIOR.MSP:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Primary swell peak period [s]
-        label_fr: RDWPS.SUPERIOR - Première houle, période pic [s]
-        name: SWPER_SFC_0
-    RDWPS.GULF.MSP:
-        <<: *template_mwp_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Total swell mean period [s]
-        label_fr: RDWPS.GULF - Houle totale, période moyenne [s]
-        name: SWPER_SFC_0
-    RDWPS.ERIE.MWP-CTR:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Mean (zero-crossing) wave period [s]
-        label_fr: RDWPS.ERIE - Période moyenne (centrée) des vagues [s]
-        name: MZWPER_SFC_0
-    RDWPS.HURON.MWP-CTR:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Mean (zero-crossing) wave period [s]
-        label_fr: RDWPS.HURON - Période moyenne (centrée) des vagues [s]
-        name: MZWPER_SFC_0
-    RDWPS.ONTARIO.MWP-CTR:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Mean (zero-crossing) wave period [s]
-        label_fr: RDWPS.ONTARIO - Période moyenne (centrée) des vagues [s]
-        name: MZWPER_SFC_0
-    RDWPS.SUPERIOR.MWP-CTR:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Mean (zero-crossing) wave period [s]
-        label_fr: RDWPS.SUPERIOR - Période moyenne (centrée) des vagues [s]
-        name: MZWPER_SFC_0
-    RDWPS.ERIE.PPEAK:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_erie
-        label_en: RDWPS.ERIE - Peak wave period [s]
-        label_fr: RDWPS.ERIE - Période pic des vagues [s]
-        name: PWPER_SFC_0
-    RDWPS.HURON.PPEAK:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_huron-michigan
-        label_en: RDWPS.HURON - Peak wave period [s]
-        label_fr: RDWPS.HURON - Période pic des vagues [s]
-        name: PWPER_SFC_0
-    RDWPS.ONTARIO.PPEAK:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_ontario
-        label_en: RDWPS.ONTARIO - Peak wave period [s]
-        label_fr: RDWPS.ONTARIO - Période pic des vagues [s]
-        name: PWPER_SFC_0
-    RDWPS.SUPERIOR.PPEAK:
-        <<: *template_mwp_glake
-        forecast_model: *id_rdwps_superior
-        label_en: RDWPS.SUPERIOR - Peak wave period [s]
-        label_fr: RDWPS.SUPERIOR - Période pic des vagues [s]
-        name: PWPER_SFC_0
-    RDWPS.GULF.PPEAK:
-        <<: *template_mwp_gulf
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Peak wave period [s]
-        label_fr: RDWPS.GULF - Période pic des vagues [s]
-        name: PKPER_TGL_0
-    RDWPS.GULF.PN-SLP:
-        <<: *template_pn-slp
-        forecast_model: *id_rdwps_gulf
-        label_en: RDWPS.GULF - Mean sea level pressure [Pa]
-        label_fr: RDWPS.GULF - Pression au niveau de la mer [Pa]
-        name: PRMSL_MSL_0
-    GDWPS.WZ.1h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Wind waves height (hourly forecast) [m]
-        label_fr: GDWPS - Vagues de vents, hauteur (prévision horaire) [m]
-        name: WVHGT_SFC_0
-    GDWPS.SZ.1h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Primary swell height (hourly forecast) [m]
-        label_fr: GDWPS - Première houle, hauteur (prévision horaire) [m]
-        name: SWELL_SFC_0
-    GDWPS.SZ_WZ.1h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Significant wave height (hourly forecast) [m]
-        label_fr: GDWPS - Hauteur significative des vagues (prévision horaire) [m]
-        name: HTSGW_SFC_0
-    GDWPS.UU.1h:
-        <<: *template_uu
-        forecast_model: *id_gdwps_uu
-        label_en: GDWPS - Winds (hourly forecast) [m/s]
-        label_fr: GDWPS - Vents (prévision horaire) [m/s]
-        names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    GDWPS.DS.1h:
+        label_en: RDWPS - Peak period of wind waves [s]
+        label_fr: RDWPS - Période pic des vagues de la mer du vent [s]
+        name: PPERWW_Sfc
+    RDWPS-Erie_1km_MWDFSWEL:
         <<: *template_ds
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Mean wave direction of first swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la première houle [°]
+        name: MWDFSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_MWDFSWEL:
+        <<: *template_ds
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Mean wave direction of first swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la première houle [°]
+        name: MWDFSWEL_Sfc
+    RDWPS-Ontario_1km_MWDFSWEL:
+        <<: *template_ds
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Mean wave direction of first swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la première houle [°]
+        name: MWDFSWEL_Sfc
+    RDWPS-Superior_1km_MWDFSWEL:
+        <<: *template_ds
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Mean wave direction of first swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la première houle [°]
+        name: MWDFSWEL_Sfc
+    RDWPS-Erie_1km_SWHFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Significant wave height of first swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la première houle [m]
+        name: SWHFSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_SWHFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Significant wave height of first swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la première houle [m]
+        name: SWHFSWEL_Sfc
+    RDWPS-Ontario_1km_SWHFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Significant wave height of first swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la première houle [m]
+        name: SWHFSWEL_Sfc
+    RDWPS-Superior_1km_SWHFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Significant wave height of first swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la première houle [m]
+        name: SWHFSWEL_Sfc
+    RDWPS-Erie_1km_PWPFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Peak wave period of first swell partition [s]
+        label_fr: RDWPS - Période pic de la première houle [s]
+        name: PWPFSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_PWPFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Peak wave period of first swell partition [s]
+        label_fr: RDWPS - Période pic de la première houle [s]
+        name: PWPFSWEL_Sfc
+    RDWPS-Ontario_1km_PWPFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Peak wave period of first swell partition [s]
+        label_fr: RDWPS - Période pic de la première houle [s]
+        name: PWPFSWEL_Sfc
+    RDWPS-Superior_1km_PWPFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Peak wave period of first swell partition [s]
+        label_fr: RDWPS - Période pic de la première houle [s]
+        name: PWPFSWEL_Sfc
+    RDWPS-Erie_1km_MWDSSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Mean wave direction of second swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la deuxième houle [°]
+        name: MWDSSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_MWDSSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Mean wave direction of second swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la deuxième houle [°]
+        name: MWDSSWEL_Sfc
+    RDWPS-Ontario_1km_MWDSSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Mean wave direction of second swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la deuxième houle [°]
+        name: MWDSSWEL_Sfc
+    RDWPS-Superior_1km_MWDSSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Mean wave direction of second swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la deuxième houle [°]
+        name: MWDSSWEL_Sfc
+    RDWPS-Erie_1km_SWHSSWEL:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Significant wave height of second swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la deuxième houle [m]
+        name: SWHSSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_SWHSSWEL:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Significant wave height of second swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la deuxième houle [m]
+        name: SWHSSWEL_Sfc
+    RDWPS-Ontario_1km_SWHSSWEL:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Significant wave height of second swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la deuxième houle [m]
+        name: SWHSSWEL_Sfc
+    RDWPS-Superior_1km_SWHSSWEL:
+        <<: *template_wz_glake
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Significant wave height of second swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la deuxième houle [m]
+        name: SWHSSWEL_Sfc
+    RDWPS-Erie_1km_PWPSSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Peak wave period of second swell partition [s]
+        label_fr: RDWPS - Période pic de la deuxième houle [s]
+        name: PWPSSWEL_Sfc
+    RDWPS-Huron-Michigan_1km_PWPSSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Peak wave period of second swell partition [s]
+        label_fr: RDWPS - Période pic de la deuxième houle [s]
+        name: PWPSSWEL_Sfc
+    RDWPS-Ontario_1km_PWPSSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Peak wave period of second swell partition [s]
+        label_fr: RDWPS - Période pic de la deuxième houle [s]
+        name: PWPSSWEL_Sfc
+    RDWPS-Superior_1km_PWPSSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Peak wave period of second swell partition [s]
+        label_fr: RDWPS - Période pic de la deuxième houle [s]
+        name: PWPSSWEL_Sfc
+    RDWPS-Erie_1km_ICEC:
+        <<: *template_icec
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Ice fraction
+        label_fr: RDWPS - Fraction de glace marine
+        name: ICEC_Sfc
+    RDWPS-Huron-Michigan_1km_ICEC:
+        <<: *template_icec
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Ice fraction
+        label_fr: RDWPS - Fraction de glace marine
+        name: ICEC_Sfc
+    RDWPS-Ontario_1km_ICEC:
+        <<: *template_icec
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Ice fraction
+        label_fr: RDWPS - Fraction de glace marine
+        name: ICEC_Sfc
+    RDWPS-Superior_1km_ICEC:
+        <<: *template_icec
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Ice fraction
+        label_fr: RDWPS - Fraction de glace marine
+        name: ICEC_Sfc
+    RDWPS-Erie_1km_Winds_10m:
+        <<: *template_uu
+        forecast_model: *id_rdwps_erie
+        label_en: RDWPS - Winds at 10m above surface [m/s]
+        label_fr: RDWPS - Vents à 10m au dessus de la surface [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    RDWPS-Huron-Michigan_1km_Winds_10m:
+        <<: *template_uu
+        forecast_model: *id_rdwps_huron-michigan
+        label_en: RDWPS - Winds at 10m above surface [m/s]
+        label_fr: RDWPS - Vents à 10m au dessus de la surface [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    RDWPS-Ontario_1km_Winds_10m:
+        <<: *template_uu
+        forecast_model: *id_rdwps_ontario
+        label_en: RDWPS - Winds at 10m above surface [m/s]
+        label_fr: RDWPS - Vents à 10m au dessus de la surface [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    RDWPS-Superior_1km_Winds_10m:
+        <<: *template_uu
+        forecast_model: *id_rdwps_superior
+        label_en: RDWPS - Winds at 10m above surface [m/s]
+        label_fr: RDWPS - Vents à 10m au dessus de la surface [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    RDWPS-Atlantic-North-West_5km_HTSGW:
+        <<: *template_wz_atlantic_nw
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Significant height of combined wind waves and swell [m]
+        label_fr: RDWPS - Hauteur significative des vagues de vent et de la houle combinés [m]
+        name: HTSGW_Sfc
+    RDWPS-Atlantic-North-West_5km_PWPER:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Peak wave period [s]
+        label_fr: RDWPS - Période pic des vagues [s]
+        name: PWPER_Sfc
+    RDWPS-Atlantic-North-West_5km_MZWPER:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Mean zero-crossing wave period [s]
+        label_fr: RDWPS - Période moyenne centrée des vagues [s]
+        name: MZWPER_Sfc
+    RDWPS-Atlantic-North-West_5km_PWAVEDIR:
+        <<: *template_wd
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Peak wave direction [°]
+        label_fr: RDWPS - Direction pic des vagues [°]
+        name: PWAVEDIR_Sfc
+    RDWPS-Atlantic-North-West_5km_WVDIR:
+        <<: *template_wd
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Direction of wind waves [°]
+        label_fr: RDWPS - Direction des vagues de la mer du vent [°]
+        name: WVDIR_Sfc
+    RDWPS-Atlantic-North-West_5km_WVHGT:
+        <<: *template_wz_atlantic_nw
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Significant height of wind waves [m]
+        label_fr: RDWPS - Hauteur significative des vagues de la mer du vent [m]
+        name: WVHGT_Sfc
+    RDWPS-Atlantic-North-West_5km_PPERWW:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Peak period of wind waves [s]
+        label_fr: RDWPS - Période pic des vagues de la mer du vent [s]
+        name: PPERWW_Sfc
+    RDWPS-Atlantic-North-West_5km_MWDFSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Mean wave direction of first swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la première houle [°]
+        name: MWDFSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_SWHFSWEL:
+        <<: *template_wz_atlantic_nw
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Significant wave height of first swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la première houle [m]
+        name: SWHFSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_PWPFSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Peak wave period of first swell partition [s]
+        label_fr: RDWPS - Période pic de la première houle [s]
+        name: PWPFSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_MWDSSWEL:
+        <<: *template_wd
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Mean wave direction of second swell partition [°]
+        label_fr: RDWPS - Direction moyenne de la deuxième houle [°]
+        name: MWDSSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_SWHSSWEL:
+        <<: *template_wz_atlantic_nw
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Significant wave height of second swell partition [m]
+        label_fr: RDWPS - Hauteur significative de la deuxième houle [m]
+        name: SWHSSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_PWPSSWEL:
+        <<: *template_mwp_glake
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Peak wave period of second swell partition [s]
+        label_fr: RDWPS - Période pic de la deuxième houle [s]
+        name: PWPSSWEL_Sfc
+    RDWPS-Atlantic-North-West_5km_ICEC:
+        <<: *template_icec
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Ice fraction (hourly forecast)
+        label_fr: RDWPS - Fraction de glace marine
+        name: ICEC_Sfc
+    RDWPS-Atlantic-North-West_5km_Winds_10m:
+        <<: *template_uu
+        forecast_model: *id_rdwps_atlantic_nw
+        label_en: RDWPS - Winds at 10m above surface [m/s]
+        label_fr: RDWPS - Vents à 10m au dessus de la surface [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    GDWPS_25km_HTSGW_PT1H:
+        <<: *template_wz_ocean
         forecast_model: *id_gdwps
-        label_en: GDWPS - Primary swell mean direction (hourly forecast) [°]
-        label_fr: GDWPS - Première houle, direction moyenne (prévision horaire) [°]
-        name: SWDIR_SFC_0
-    GDWPS.DE.1h:
-        <<: *template_de
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Wind waves mean direction (hourly forecast) [°]
-        label_fr: GDWPS - Vagues de vents, direction moyenne (prévision horaire) [°]
-        name: WVDIR_SFC_0
-    GDWPS.MWP.1h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Wind waves peak period (hourly forecast) [s]
-        label_fr: GDWPS - Vagues de vents, période pic (prévision horaire) [s]
-        name: WVPER_SFC_0
-    GDWPS.MZW.1h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Mean (zero-crossing) wave period (hourly forecast) [s]
-        label_fr: GDWPS - Période moyenne (centrée) des vagues (prévision horaire) [s]
-        name: MZWPER_SFC_0
-    GDWPS.SPEAK.1h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps
-        label_en: GDWPS - Primary swell peak period (hourly forecast) [s]
-        label_fr: GDWPS - Première houle, période pic (prévision horaire) [s]
-        name: SWPER_SFC_0
-    GDWPS.PPEAK.1h:
+        label_en: GDWPS - Significant height of combined wind waves and swell (hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative des vagues de vent et de la houle combinés (prévision horaire) [m]
+        name: HTSGW_Sfc
+    GDWPS_25km_PWPER_PT1H:
         <<: *template_mwp_ocean
         forecast_model: *id_gdwps
         label_en: GDWPS - Peak wave period (hourly forecast) [s]
         label_fr: GDWPS - Période pic des vagues (prévision horaire) [s]
-        name: PWPER_SFC_0
-    GDWPS.ICEC.1h:
+        name: PWPER_Sfc
+    GDWPS_25km_MZWPER_PT1H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Mean zero-crossing wave period (hourly forecast) [s]
+        label_fr: GDWPS - Période moyenne centrée des vagues (prévision horaire) [s]
+        name: MZWPER_Sfc
+    GDWPS_25km_PWAVEDIR_PT1H:
+        <<: *template_wd
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Peak wave direction (hourly forecast) [°]
+        label_fr: GDWPS - Direction pic des vagues (prévision horaire) [°]
+        name: PWAVEDIR_Sfc
+    GDWPS_25km_WVDIR_PT1H:
+        <<: *template_wd
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Direction of wind waves (hourly forecast) [°]
+        label_fr: GDWPS - Direction des vagues de la mer du vent (prévision horaire) [°]
+        name: WVDIR_Sfc
+    GDWPS_25km_WVHGT_PT1H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Significant height of wind waves (hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative des vagues de la mer du vent (prévision horaire) [m]
+        name: WVHGT_Sfc
+    GDWPS_25km_PPERWW_PT1H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Peak period of wind waves (hourly forecast) [s]
+        label_fr: GDWPS - Période pic des vagues de la mer du vent (prévision horaire) [s]
+        name: PPERWW_Sfc
+    GDWPS_25km_MWDFSWEL_PT1H:
+        <<: *template_wd
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Mean wave direction of first swell partition (hourly forecast) [°]
+        label_fr: GDWPS - Direction moyenne de la première houle (prévision horaire) [°]
+        name: MWDFSWEL_Sfc
+    GDWPS_25km_SWHFSWEL_PT1H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Significant wave height of first swell partition (hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative de la première houle (prévision horaire) [m]
+        name: SWHFSWEL_Sfc
+    GDWPS_25km_PWPFSWEL_PT1H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Peak wave period of first swell partition (hourly forecast) [s]
+        label_fr: GDWPS - Période pic de la première houle (prévision horaire) [s]
+        name: PWPFSWEL_Sfc
+    GDWPS_25km_MWDSSWEL_PT1H:
+        <<: *template_wd
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Mean wave direction of second swell partition (hourly forecast) [°]
+        label_fr: GDWPS - Direction moyenne de la deuxième houle (prévision horaire) [°]
+        name: MWDSSWEL_Sfc
+    GDWPS_25km_SWHSSWEL_PT1H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Significant wave height of second swell partition (hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative de la deuxième houle (prévision horaire) [m]
+        name: SWHSSWEL_Sfc
+    GDWPS_25km_PWPSSWEL_PT1H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps
+        label_en: GDWPS - Peak wave period of second swell partition (hourly forecast) [s]
+        label_fr: GDWPS - Période pic de la deuxième houle (prévision horaire) [s]
+        name: PWPSSWEL_Sfc
+    GDWPS_25km_ICEC_PT1H:
         <<: *template_icec-hrdps
         forecast_model: *id_gdwps
         label_en: GDWPS - Ice fraction (hourly forecast)
         label_fr: GDWPS - Fraction de glace marine (prévision horaire)
-        name: ICEC_SFC_0
-    GDWPS.WZ.3h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Wind waves height (3 hourly forecast) [m]
-        label_fr: GDWPS - Vagues de vents, hauteur (prévision aux 3 heures) [m]
-        name: WVHGT_SFC_0
-    GDWPS.SZ.3h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Primary swell height (3 hourly forecast) [m]
-        label_fr: GDWPS - Première houle, hauteur (prévision aux 3 heures) [m]
-        name: SWELL_SFC_0
-    GDWPS.SZ_WZ.3h:
-        <<: *template_wz_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Significant wave height (3 hourly forecast) [m]
-        label_fr: GDWPS - Hauteur significative des vagues (prévision aux 3 heures) [m]
-        name: HTSGW_SFC_0
-    GDWPS.UU.3h:
+        name: ICEC_Sfc
+    GDWPS_25km_Winds_10m_PT1H:
         <<: *template_uu
-        forecast_model: *id_gdwps3_uu
-        label_en: GDWPS - Winds (3 hourly forecast) [m/s]
-        label_fr: GDWPS - Vents (prévision aux 3 heures) [m/s]
+        forecast_model: *id_gdwps_uu
+        label_en: GDWPS - Winds at 10m above surface (hourly forecast) [m/s]
+        label_fr: GDWPS - Vents à 10m au dessus de la surface (prévision horaire) [m/s]
         names:
-            - UGRD_TGL_10
-            - VGRD_TGL_10
-    GDWPS.DS.3h:
-        <<: *template_ds
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
+    GDWPS_25km_HTSGW_PT3H:
+        <<: *template_wz_ocean
         forecast_model: *id_gdwps3
-        label_en: GDWPS - Primary swell mean direction (3 hourly forecast) [°]
-        label_fr: GDWPS - Première houle, direction moyenne (prévision aux 3 heures) [°]
-        name: SWDIR_SFC_0
-    GDWPS.DE.3h:
-        <<: *template_de
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Wind waves mean direction (3 hourly forecast) [°]
-        label_fr: GDWPS - Vagues de vents, direction moyenne (prévision aux 3 heures) [°]
-        name: WVDIR_SFC_0
-    GDWPS.MWP.3h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Wind waves peak period (3 hourly forecast) [s]
-        label_fr: GDWPS - Vagues de vents, période pic (prévision aux 3 heures) [s]
-        name: WVPER_SFC_0
-    GDWPS.MZW.3h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Mean (zero-crossing) wave period (3 hourly forecast) [s]
-        label_fr: GDWPS - Période moyenne (centrée) des vagues (prévision aux 3 heures) [s]
-        name: MZWPER_SFC_0
-    GDWPS.SPEAK.3h:
-        <<: *template_mwp_ocean
-        forecast_model: *id_gdwps3
-        label_en: GDWPS - Primary swell peak period (3 hourly forecast) [s]
-        label_fr: GDWPS - Première houle, période pic (prévision aux 3 heures) [s]
-        name: SWPER_SFC_0
-    GDWPS.PPEAK.3h:
+        label_en: GDWPS - Significant height of combined wind waves and swell (3 hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative des vagues de vent et de la houle combinés (prévision aux 3 heures) [m]
+        name: HTSGW_Sfc
+    GDWPS_25km_PWPER_PT3H:
         <<: *template_mwp_ocean
         forecast_model: *id_gdwps3
         label_en: GDWPS - Peak wave period (3 hourly forecast) [s]
         label_fr: GDWPS - Période pic des vagues (prévision aux 3 heures) [s]
-        name: PWPER_SFC_0
-    GDWPS.ICEC.3h:
+        name: PWPER_Sfc
+    GDWPS_25km_MZWPER_PT3H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Mean zero-crossing wave period (3 hourly forecast) [s]
+        label_fr: GDWPS - Période moyenne centrée des vagues (prévision aux 3 heures) [s]
+        name: MZWPER_Sfc
+    GDWPS_25km_PWAVEDIR_PT3H:
+        <<: *template_wd
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Peak wave direction (3 hourly forecast) [°]
+        label_fr: GDWPS - Direction pic des vagues (prévision aux 3 heures) [°]
+        name: PWAVEDIR_Sfc
+    GDWPS_25km_WVDIR_PT3H:
+        <<: *template_wd
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Direction of wind waves (3 hourly forecast) [°]
+        label_fr: GDWPS - Direction des vagues de la mer du vent (prévision aux 3 heures) [°]
+        name: WVDIR_Sfc
+    GDWPS_25km_WVHGT_PT3H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Significant height of wind waves (3 hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative des vagues de la mer du vent (prévision aux 3 heures) [m]
+        name: WVHGT_Sfc
+    GDWPS_25km_PPERWW_PT3H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Peak period of wind waves (3 hourly forecast) [s]
+        label_fr: GDWPS - Période pic des vagues de la mer du vent (prévision aux 3 heures) [s]
+        name: PPERWW_Sfc
+    GDWPS_25km_MWDFSWEL_PT3H:
+        <<: *template_wd
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Mean wave direction of first swell partition (3 hourly forecast) [°]
+        label_fr: GDWPS - Direction moyenne de la première houle (prévision aux 3 heures) [°]
+        name: MWDFSWEL_Sfc
+    GDWPS_25km_SWHFSWEL_PT3H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Significant wave height of first swell partition (3 hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative de la première houle (prévision aux 3 heures) [m]
+        name: SWHFSWEL_Sfc
+    GDWPS_25km_PWPFSWEL_PT3H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Peak wave period of first swell partition (3 hourly forecast) [s]
+        label_fr: GDWPS - Période pic de la première houle (prévision aux 3 heures) [s]
+        name: PWPFSWEL_Sfc
+    GDWPS_25km_MWDSSWEL_PT3H:
+        <<: *template_wd
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Mean wave direction of second swell partition (3 hourly forecast) [°]
+        label_fr: GDWPS - Direction moyenne de la deuxième houle (prévision aux 3 heures) [°]
+        name: MWDSSWEL_Sfc
+    GDWPS_25km_SWHSSWEL_PT3H:
+        <<: *template_wz_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Significant wave height of second swell partition (3 hourly forecast) [m]
+        label_fr: GDWPS - Hauteur significative de la deuxième houle (prévision aux 3 heures) [m]
+        name: SWHSSWEL_Sfc
+    GDWPS_25km_PWPSSWEL_PT3H:
+        <<: *template_mwp_ocean
+        forecast_model: *id_gdwps3
+        label_en: GDWPS - Peak wave period of second swell partition (3 hourly forecast) [s]
+        label_fr: GDWPS - Période pic de la deuxième houle (prévision aux 3 heures) [s]
+        name: PWPSSWEL_Sfc
+    GDWPS_25km_ICEC_PT3H:
         <<: *template_icec-hrdps
         forecast_model: *id_gdwps3
         label_en: GDWPS - Ice fraction (3 hourly forecast)
         label_fr: GDWPS - Fraction de glace marine (prévision aux 3 heures)
-        name: ICEC_SFC_0
+        name: ICEC_Sfc
+    GDWPS_25km_Winds_10m_PT3H:
+        <<: *template_uu
+        forecast_model: *id_gdwps3_uu
+        label_en: GDWPS - Winds at 10m above surface (3 hourly forecast) [m/s]
+        label_fr: GDWPS - Vents à 10m au dessus de la surface (prévision aux 3 heures) [m/s]
+        names:
+            - UGRD_AGL-10m
+            - VGRD_AGL-10m
     WCPS.2D_TM2:
         <<: *template_wcps_2d_tm2
         forecast_model: *id_wcps
