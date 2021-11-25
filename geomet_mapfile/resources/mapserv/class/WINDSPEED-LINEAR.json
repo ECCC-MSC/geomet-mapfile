@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "0 10 km/hr",
+        "name": "0 10 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 0.0 ) AND ( [pixel] < 2.78 ) )",
         "styles": [
@@ -24,7 +24,7 @@
     },
     {
         "__type__": "class",
-        "name": "10 20 km/hr",
+        "name": "10 20 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 2.78 ) AND ( [pixel] < 5.56 ) )",
         "styles": [
@@ -47,7 +47,7 @@
     },
     {
         "__type__": "class",
-        "name": "20 30 km/hr",
+        "name": "20 30 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 5.56 ) AND ( [pixel] < 8.33 ) )",
         "styles": [
@@ -70,7 +70,7 @@
     },
     {
         "__type__": "class",
-        "name": "30 40 km/hr",
+        "name": "30 40 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 8.33 ) AND ( [pixel] < 11.11 ) )",
         "styles": [
@@ -93,7 +93,7 @@
     },
     {
         "__type__": "class",
-        "name": "40 50 km/hr",
+        "name": "40 50 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 11.11 ) AND ( [pixel] < 13.89 ) )",
         "styles": [
@@ -116,7 +116,7 @@
     },
     {
         "__type__": "class",
-        "name": "50 60 km/hr",
+        "name": "50 60 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 13.89 ) AND ( [pixel] < 16.67 ) )",
         "styles": [
@@ -139,7 +139,7 @@
     },
     {
         "__type__": "class",
-        "name": "60 70 km/hr",
+        "name": "60 70 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 16.67 ) AND ( [pixel] < 19.44 ) )",
         "styles": [
@@ -162,7 +162,7 @@
     },
     {
         "__type__": "class",
-        "name": "70 80 km/hr",
+        "name": "70 80 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 19.44 ) AND ( [pixel] < 22.22 ) )",
         "styles": [
@@ -185,7 +185,7 @@
     },
     {
         "__type__": "class",
-        "name": "80 90 km/hr",
+        "name": "80 90 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 22.22 ) AND ( [pixel] < 25.0 ) )",
         "styles": [
@@ -208,7 +208,7 @@
     },
     {
         "__type__": "class",
-        "name": "90 100 km/hr",
+        "name": "90 100 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 25.0 ) AND ( [pixel] < 27.78 ) )",
         "styles": [
@@ -231,7 +231,7 @@
     },
     {
         "__type__": "class",
-        "name": "100 110 km/hr",
+        "name": "100 110 km/h",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( ( [pixel] >= 27.78 ) AND ( [pixel] < 30.56 ) )",
         "styles": [
@@ -254,7 +254,7 @@
     },
     {
         "__type__": "class",
-        "name": "110 km/hr +",
+        "name": "110 km/h +",
         "group": "WINDSPEEDKMH-LINEAR",
         "expression": "( [pixel] >= 30.56 )",
         "styles": [
