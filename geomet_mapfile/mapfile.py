@@ -71,17 +71,17 @@ def mcf2layer_metadata(mcf_file):
     with open(mcf_file) as f:
         mcf = load(f, Loader=CLoader)
 
-        dict_['ows_abstract'] = mcf['identification']['abstract_en']
-        dict_['ows_abstract_fr'] = mcf['identification']['abstract_fr']
+        dict_['ows_abstract'] = mcf['identification']['abstract']['en']
+        dict_['ows_abstract_fr'] = mcf['identification']['abstract']['fr']
 
         keywords_en = \
-            mcf['identification']['keywords']['default']['keywords_en']
+            mcf['identification']['keywords']['default']['keywords']['en']
         keywords_fr = \
-            mcf['identification']['keywords']['default']['keywords_fr']
+            mcf['identification']['keywords']['default']['keywords']['fr']
 
         if 'gc_cst' in mcf['identification']['keywords'].keys():
-            keywords_en.extend(mcf['identification']['keywords']['gc_cst']['keywords_en'])  # noqa
-            keywords_fr.extend(mcf['identification']['keywords']['gc_cst']['keywords_fr'])  # noqa
+            keywords_en.extend(mcf['identification']['keywords']['gc_cst']['keywords']['en'])  # noqa
+            keywords_fr.extend(mcf['identification']['keywords']['gc_cst']['keywords']['fr'])  # noqa
 
         dict_['ows_identifier_value'] = mcf['metadata']['dataseturi']
 
