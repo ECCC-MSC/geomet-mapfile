@@ -1,7 +1,7 @@
 [
     {
         "__type__": "class",
-        "name": "0 km/hr",
+        "name": "0 km/h",
         "group": "WINDARROWKMH",
         "expression": "( [u] = 270 )",
         "styles": [
@@ -19,7 +19,7 @@
     },
     {
         "__type__": "class",
-        "name": "0 10 km/hr",
+        "name": "0 10 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] > 0.0 ) AND ( [v] < 2.78 ) )",
         "styles": [
@@ -38,7 +38,7 @@
     },
     {
         "__type__": "class",
-        "name": "10 20 km/hr",
+        "name": "10 20 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 2.78 ) AND ( [v] < 5.56 ) )",
         "styles": [
@@ -57,7 +57,7 @@
     },
     {
         "__type__": "class",
-        "name": "20 30 km/hr",
+        "name": "20 30 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 5.56 ) AND ( [v] < 8.33 ) )",
         "styles": [
@@ -76,7 +76,7 @@
     },
     {
         "__type__": "class",
-        "name": "30 40 km/hr",
+        "name": "30 40 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 8.33 ) AND ( [v] < 11.11 ) )",
         "styles": [
@@ -95,7 +95,7 @@
     },
     {
         "__type__": "class",
-        "name": "40 50 km/hr",
+        "name": "40 50 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 11.11 ) AND ( [v] < 13.89 ) )",
         "styles": [
@@ -114,7 +114,7 @@
     },
     {
         "__type__": "class",
-        "name": "50 60 km/hr",
+        "name": "50 60 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 13.89 ) AND ( [v] < 16.67 ) )",
         "styles": [
@@ -133,7 +133,7 @@
     },
     {
         "__type__": "class",
-        "name": "60 70 km/hr",
+        "name": "60 70 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 16.67 ) AND ( [v] < 19.44 ) )",
         "styles": [
@@ -152,7 +152,7 @@
     },
     {
         "__type__": "class",
-        "name": "70 80 km/hr",
+        "name": "70 80 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 19.44 ) AND ( [v] < 22.22 ) )",
         "styles": [
@@ -171,7 +171,7 @@
     },
     {
         "__type__": "class",
-        "name": "80 90 km/hr",
+        "name": "80 90 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 22.22 ) AND ( [v] < 25.0 ) )",
         "styles": [
@@ -190,7 +190,7 @@
     },
     {
         "__type__": "class",
-        "name": "90 100 km/hr",
+        "name": "90 100 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 25.0 ) AND ( [v] < 27.78 ) )",
         "styles": [
@@ -209,7 +209,7 @@
     },
     {
         "__type__": "class",
-        "name": "100 110 km/hr",
+        "name": "100 110 km/h",
         "group": "WINDARROWKMH",
         "expression": "( ( [v] >= 27.78 ) AND ( [v] < 30.56 ) )",
         "styles": [
@@ -228,7 +228,7 @@
     },
     {
         "__type__": "class",
-        "name": "110 km/hr +",
+        "name": "110 km/h +",
         "group": "WINDARROWKMH",
         "expression": "( [v] >= 30.56 )",
         "styles": [
