@@ -1,9 +1,9 @@
 [
     {
         "__type__": "class",
-        "name": "0.0 (mm/h)",
+        "name": "Undetected",
         "group": "RADARURPPRECIPR",
-        "expression": "( [pixel] < 0.1 )",
+        "expression": "( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )",
         "styles": [
             {
                 "__type__": "style",

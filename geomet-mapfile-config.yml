@@ -110,7 +110,7 @@ forecast_models:
     raqdps: &id_raqdps
         mcf: nwp-models/msc_nwp_raqdps.yml
         projection: mapserv/proj/raqdps.inc
-        extent: -39.5822380 -31.9050010 26.0277660 22.0050010
+        extent: -176.842409132 16.149189226 -18.825681315 80.210751469
         label_en: Air Quality/Regional Air Quality Deterministic Prediction System (RAQDPS) [10 km]
         label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air (SRPDQA) [10 km]
         dimensions: [729, 599]
@@ -125,7 +125,7 @@ forecast_models:
     fw-ce: &id_fw_ce
         mcf: nwp-models/msc_nwp_raqdps-fw-ce.yml
         projection: mapserv/proj/cumulative-effects.inc
-        extent: -39.5822162 -31.9050006 26.0277881 22.0050029
+        extent: -176.842397221 16.149199616 -18.825655040 80.210751236
         label_en: Air Quality/Regional Air Quality Deterministic Prediction System - FireWork (RAQDPS-FW) [10 km]/Cumulative Effects
         label_fr: Qualité de l'air/Système Régional de Prévision Déterministe de la Qualité de l'Air - FireWork (SRPDQA-FW) [10 km]/Effets cumulatifs
         dimensions: [729, 599]
@@ -134,11 +134,11 @@ forecast_models:
         <<: *id_fw_ce
         forecast_hour_interval: 8760
     rdaqa-ce: &id_rdaqa_ce
-        mcf: nwp-models/msc_nwp_rdaqa.yml
+        mcf: nwp-models/msc_nwp_rdaqa-ce.yml
         projection: mapserv/proj/cumulative-effects.inc
-        extent: -39.5822162 -31.9050006 26.0277881 22.0050029
+        extent: -176.842397221 16.149199616 -18.825655040 80.210751236
         label_en: Air Quality/Regional Deterministic Air Quality Analysis (RDAQA) [10 km]/Cumulative Effects products
-        label_fr: Qualité de l'air/Analyse régionale déterministique de qualité de l’air (ARDQA) [10 km]/Produits d'effets cumulatifs
+        label_fr: Qualité de l'air/Analyse régionale déterministe de qualité de l’air (ARDQA) [10 km]/Produits d'effets cumulatifs
         dimensions: [729, 599]
         forecast_hour_interval: 730
         metadata:
@@ -150,8 +150,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_gdps.yml
         projection: mapserv/proj/gdps.inc
         extent: -180 -90.075 179.925 90.075
-        label_en: Global Deterministic Prediction System (GDPS)/GDPS (15 km)
-        label_fr: Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
+        label_en: Global Deterministic Prediction System (GDPS) [15 km]/GDPS
+        label_fr: Système Global de Prévision Déterministe (SGPD) [15 km]/SGPD
         dimensions: [2400, 1201]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
@@ -171,8 +171,8 @@ forecast_models:
             - 'wcs_enable_request=!*'
     gdps_conv_3h: &id_gdps_conv_3h
         <<: *id_gdps
-        label_en: Global Deterministic Prediction System (GDPS)/GDPS convective variables (25 km)
-        label_fr: Système Global de Prévision Déterministe (SGPD)/Variables de convection du SGPD (25 km)
+        label_en: Global Deterministic Prediction System (GDPS) [15 km]/GDPS convective variables
+        label_fr: Système Global de Prévision Déterministe (SGPD) [15 km]/Variables de convection du SGPD
     gdps_conv_6h: &id_gdps_conv_6h
         <<: *id_gdps_conv_3h
         forecast_hour_interval: 6
@@ -180,8 +180,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_gdps.yml
         projection: mapserv/proj/gdps.inc
         extent: -180 -90.075 179.925 90.075
-        label_en: Global Deterministic Prediction System (GDPS)/GDPS at pressure levels (25 km)
-        label_fr: Système Global de Prévision Déterministe (SGPD)/SGPD en niveaux de pression (25 km)
+        label_en: Global Deterministic Prediction System (GDPS) [15 km]/GDPS at pressure levels
+        label_fr: Système Global de Prévision Déterministe (SGPD) [15 km]/SGPD en niveaux de pression
         dimensions: [2400, 1201]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
@@ -202,8 +202,8 @@ forecast_models:
             - 'wcs_enable_request=!*'
     gdps_diag: &id_gdps_diag
         <<: *id_gdps
-        label_en: Global Deterministic Prediction System (GDPS)/GDPS diagnostic fields
-        label_fr: Système Global de Prévision Déterministe (SGPD)/Champs diagnostiques du SGPD
+        label_en: Global Deterministic Prediction System (GDPS) [15 km]/GDPS diagnostic variables
+        label_fr: Système Global de Prévision Déterministe (SGPD) [15 km]/Variables diagnostiques du SGPD
         processing: [SCALE_BUCKET=10000]
     gdps_diag_6h: &id_gdps_diag_6h
         <<: *id_gdps_diag
@@ -224,8 +224,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_rdpa.yml
         projection: mapserv/proj/rdpa.inc
         extent: -4556441 -7319317 4793558 920682
-        label_en: Precipitation Analysis/Regional Deterministic Precipitation Analysis (RDPA)
-        label_fr: Analyse de précipitation/Analyse Régionale Déterministe de Précipitation (ARDP)
+        label_en: Precipitation Analysis/Regional Deterministic Precipitation Analysis (RDPA) [10 km]
+        label_fr: Analyse de précipitation/Analyse Régionale Déterministe de Précipitation (ARDP) [10 km]
         dimensions: [935, 824]
         forecast_hour_interval: 6
         metadata:
@@ -237,8 +237,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_rdpa.yml
         projection: mapserv/proj/rdpa.inc
         extent: -2618155 -5977491 4776844 7508
-        label_en: Precipitation Analysis/Regional Deterministic Precipitation Analysis (RDPA)
-        label_fr: Analyse de précipitation/Analyse Régionale Déterministe de Précipitation (ARDP)
+        label_en: Precipitation Analysis/Regional Deterministic Precipitation Analysis (RDPA) [10 km]
+        label_fr: Analyse de précipitation/Analyse Régionale Déterministe de Précipitation (ARDP) [10 km]
         dimensions: [493, 399]
         forecast_hour_interval: 6
         metadata:
@@ -256,8 +256,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_hrdpa.yml
         projection: mapserv/proj/hrdpa.inc
         extent: -1459892 -5057204 4790108 -2002204
-        label_en: Precipitation Analysis/High Resolution Deterministic Precipitation Analysis (HRDPA)
-        label_fr: Analyse de précipitation/Analyse à haute résolution déterministe de précipitation (AHRDP)
+        label_en: Precipitation Analysis/High Resolution Deterministic Precipitation Analysis (HRDPA) [2.5 km]
+        label_fr: Analyse de précipitation/Analyse à haute résolution déterministe de précipitation (AHRDP) [2.5 km]
         dimensions: [2500, 1222]
         forecast_hour_interval: 6
         metadata:
@@ -269,14 +269,14 @@ forecast_models:
         mcf: nwp-models/msc_nwp_hrdpa.yml
         projection: mapserv/proj/hrdpa_watershed.inc
         extent: -2286190.95 330516.31 3087605.49 4718557.57
-        label_en: Precipitation Analysis/High Resolution Deterministic Precipitation Analysis (HRDPA)
-        label_fr: Analyse de précipitation/Analyse à haute résolution déterministe de précipitation (AHRDP)
+        label_en: Precipitation Analysis/High Resolution Deterministic Precipitation Analysis (HRDPA) [2.5 km]
+        label_fr: Analyse de précipitation/Analyse à haute résolution déterministe de précipitation (AHRDP) [2.5 km]
     rdps: &id_rdps
         mcf: nwp-models/msc_nwp_rdps.yml
         projection: mapserv/proj/rdps.inc
         extent: -4551441 -7324318 4798559 915682
-        label_en: Regional Deterministic Prediction System (RDPS)/RDPS (10 km)
-        label_fr: Système Régional de Prévision Déterministe (SRPD)/SRPD (10 km)
+        label_en: Regional Deterministic Prediction System (RDPS) [10 km]/RDPS
+        label_fr: Système Régional de Prévision Déterministe (SRPD) [10 km]/SRPD
         dimensions: [935, 824]
         forecast_hour_interval: 1
         processing: [SCALE_BUCKETS=1000]
@@ -284,17 +284,17 @@ forecast_models:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     rdps_conv: &id_rdps_conv
         <<: *id_rdps
-        label_en: Regional Deterministic Prediction System (RDPS)/RDPS Convective variables (10 km)
-        label_fr: Système Régional de Prévision Déterministe (SRPD)/SRPD Variables de convection (10 km)
+        label_en: Regional Deterministic Prediction System (RDPS) [10 km]/RDPS convective variables
+        label_fr: Système Régional de Prévision Déterministe (SRPD) [10 km]/Variables de convection du SRPD
         forecast_hour_interval: 3
     rdps_pres: &id_rdps_pres
         <<: *id_rdps
-        label_en: Regional Deterministic Prediction System (RDPS)/RDPS at pressure levels (10 km)
-        label_fr: Système Régional de Prévision Déterministe (SRPD)/SRPD en niveaux de pression (10 km)
+        label_en: Regional Deterministic Prediction System (RDPS) [10 km]/RDPS at pressure levels
+        label_fr: Système Régional de Prévision Déterministe (SRPD) [10 km]/SRPD en niveaux de pression
     rdps_diag_nw_pt1h: &id_rdps_diag_nw_pt1h
         <<: *id_rdps
-        label_en: Regional Deterministic Prediction System (RDPS)/RDPS diagnostic fields
-        label_fr: Système Régional de Prévision Déterministe (SRPD)/Champs diagnostiques du SRPD
+        label_en: Regional Deterministic Prediction System (RDPS) [10 km]/RDPS diagnostic variables
+        label_fr: Système Régional de Prévision Déterministe (SRPD) [10 km]/Variables diagnostiques du SRPD
         processing: []
     rdps_diag_nw_pt3h: &id_rdps_diag_nw_pt3h
         <<: *id_rdps_diag_nw_pt1h
@@ -309,8 +309,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_rdps.yml
         projection: mapserv/proj/cgsl.inc
         extent: -71.015 45.490 -56.015 51.990
-        label_en: Coupled Gulf of Saint Lawrence (CGSL)
-        label_fr: Golfe du Saint-Laurent Couplé (GSLC)
+        label_en: Regional Deterministic Prediction System (RDPS) [10 km]/RDPS - Coupled to Gulf of St. Lawrence (RDPS-CGSL)
+        label_fr: Système Régional de Prévision Déterministe (SRPD) [10 km]/SRPD - Couplé au Golfe du Saint-Laurent (SRPD-CGSL)
         dimensions: [500, 325]
         forecast_hour_interval: 1
         time_enabled: future
@@ -321,48 +321,48 @@ forecast_models:
         mcf: nwp-models/msc_nwp_hrdps.yml
         projection: mapserv/proj/hrdps-continental.inc
         extent: -2097877 -5740639 4342123 -2100639
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS Continental
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Continental
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD
         dimensions: [2576, 1456]
         forecast_hour_interval: 1
         metadata:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     hrdps_continental_conv: &id_hrdps_continental_conv
         <<: *id_hrdps_continental
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS Continental Convective variables [experimental]
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Continental Variables de convection [expérimental]
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS convective variables [experimental]
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD variables de convection [expérimental]
     hrdps_continental_pres: &id_hrdps_continental_pres
         <<: *id_hrdps_continental
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS Continental at pressure levels
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Continental en niveaux de pression
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS at pressure levels
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD en niveaux de pression
         processing: [SCALE_BUCKETS=1000]
     hrdps_continental_diag: &id_hrdps_continental_diag
         <<: *id_hrdps_continental
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS diagnostic fields
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/Champs diagnostiques du SHRPD
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS diagnostic variables
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/Variables diagnostiques du SHRPD
         processing: [SCALE_BUCKET=10000]
     hrdps_north: &id_hrdps_north
         <<: *id_hrdps_continental
         projection: mapserv/proj/hrdps-north.inc
         extent: -969715 -2104902 2692785 -42402
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS North [experimental]
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Nord [expérimental]
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS-North [experimental]
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD-Nord [expérimental]
         dimensions: [1465, 825]
     hrdps_north_conv: &id_hrdps_north_conv
         <<: *id_hrdps_north
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS North Convective variables [experimental]
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Nord Variables de convection [expérimental]
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS-North convective variables [experimental]
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD-Nord variables de convection [expérimental]
     hrdps_north_pres: &id_hrdps_north_pres
         <<: *id_hrdps_north
-        label_en: High Resolution Deterministic Prediction System (HRDPS)/HRDPS North at pressure levels [experimental]
-        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD)/SHRPD Nord en niveaux de pression [experimental]
+        label_en: High Resolution Deterministic Prediction System (HRDPS) [2.5 km]/HRDPS-North at pressure levels [experimental]
+        label_fr: Système à Haute Résolution de Prévision Déterministe (SHRPD) [2,5 km]/SHRPD-Nord en niveaux de pression [experimental]
         processing: [SCALE_BUCKETS=1000]
     reps_members: &id_reps_members
         mcf: nwp-models/msc_nwp_reps.yml
         projection: mapserv/proj/reps.inc
         extent: -4409912 -7199725 4590088 450275
-        label_en: Regional Ensemble Prediction System (REPS)/REPS Members
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Membres du SRPE
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS members
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Membres du SRPE
         dimensions: [600, 510]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
@@ -370,42 +370,42 @@ forecast_models:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     reps_diag_3h: &id_reps_diag_3h
         <<: *id_reps_members
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 3 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 3 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 3 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 3 heures
     reps_diag_6h: &id_reps_diag_6h
         <<: *id_reps_diag_3h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 6 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 6 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 6 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 6 heures
         forecast_hour_interval: 6
     reps_diag_12h: &id_reps_diag_12h
         <<: *id_reps_diag_6h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 12 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 12 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 12 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 12 heures
     reps_diag_24h: &id_reps_diag_24h
         <<: *id_reps_diag_6h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 24 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 24 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 24 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 24 heures
     reps_diag_wcf_24h: &id_reps_diag_wcf_24h
         <<: *id_reps_diag_3h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 24 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 24 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 24 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 24 heures
         forecast_hour_interval: 12
     reps_diag_48h: &id_reps_diag_48h
         <<: *id_reps_diag_3h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 48 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 48 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 48 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 48 heures
         forecast_hour_interval: 24
     reps_diag_72h: &id_reps_diag_72h
         <<: *id_reps_diag_3h
-        label_en: Regional Ensemble Prediction System (REPS)/REPS diagnostic fields/REPS products at 72 hours intervals
-        label_fr: Système Régional de Prévision d'Ensemble (SRPE)/Champs diagnostiques du SRPE/Produits du SRPE à intervalle de 72 heures
+        label_en: Regional Ensemble Prediction System (REPS) [15 km]/REPS diagnostic variables/REPS products at 72 hours intervals
+        label_fr: Système Régional de Prévision d'Ensemble (SRPE) [15 km]/Variables diagnostiques du SRPE/Produits du SRPE à intervalle de 72 heures
         forecast_hour_interval: 72
     geps_diag: &id_geps_diag_3h
         mcf: nwp-models/msc_nwp_geps.yml
         projection: mapserv/proj/geps.inc
         extent: -180.25 -90.25 180.25 89.75
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 3 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 3 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 3 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 3 heures
         dimensions: [721, 360]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
@@ -413,33 +413,33 @@ forecast_models:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     geps_diag_12h: &id_geps_diag_12h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 12 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 12 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 12 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 12 heures
         forecast_hour_interval: 12
     geps_diag_24h: &id_geps_diag_24h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 24 hours intervals#
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 24 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 24 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 24 heures
         forecast_hour_interval: 12
     geps_diag_48h: &id_geps_diag_48h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 48 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 48 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 48 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 48 heures
         forecast_hour_interval: 24
     geps_diag_72h: &id_geps_diag_72h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 72 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 72 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 72 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 72 heures
         forecast_hour_interval: 24
     geps_diag_96h: &id_geps_diag_96h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 96 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 96 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 96 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 96 heures
         forecast_hour_interval: 24
     geps_diag_120h: &id_geps_diag_120h
         <<: *id_geps_diag_3h
-        label_en: Global Ensemble Prediction System (GEPS)/GEPS diagnostic fields/GEPS products at 120 hours intervals
-        label_fr: Système Global de Prévision d'Ensemble (SGPE)/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 120 heures
+        label_en: Global Ensemble Prediction System (GEPS) [50 km]/GEPS diagnostic fields/GEPS products at 120 hours intervals
+        label_fr: Système Global de Prévision d'Ensemble (SGPE) [50 km]/Champs diagnostiques du SGPE/Produits du SRPE à intervalle de 120 heures
         forecast_hour_interval: 24
     rdwps: &id_rdwps
         mcf: nwp-models/msc_nwp_rdwps.yml
@@ -453,32 +453,32 @@ forecast_models:
             - 'wcs_enable_request=!*'
     rdwps_erie: &id_rdwps_erie
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Erie
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Erie
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes [1 km]/Erie
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs [1 km]/Erie
         dimensions: [398, 210]
     rdwps_erie_uu: &id_rdwps_erie_uu
         <<: *id_rdwps_erie
         extent: 276.387 41.215 281.318 43.104
     rdwps_huron-michigan: &id_rdwps_huron-michigan
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Huron-Michigan
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Huron-Michigan
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes [1 km]/Huron-Michigan
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs [1 km]/Huron-Michigan
         dimensions: [698, 573]
     rdwps_huron-michigan_uu: &id_rdwps_huron-michigan_uu
         <<: *id_rdwps_huron-michigan
         extent: 271.849 41.422 280.497 46.577
     rdwps_ontario: &id_rdwps_ontario
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Ontario
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Ontario
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes [1 km]/Ontario
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs [1 km]/Ontario
         dimensions: [348, 158]
     rdwps_ontario_uu: &id_rdwps_ontario_uu
         <<: *id_rdwps_ontario
         extent: 280.020 43.060 284.332 44.481
     rdwps_superior: &id_rdwps_superior
         <<: *id_rdwps
-        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS) [1 km]/Great Lakes/Superior
-        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV) [1 km]/Grand Lacs/Superior
+        label_en: Wave Prediction/Regional Deterministic Wave Prediction System (RDWPS)/Great Lakes [1 km]/Superior
+        label_fr: Prévision de vague/Système Régional de Prévision Déterministe de Vague (SRPDV)/Grand Lacs [1 km]/Superior
         dimensions: [658, 318]
     rdwps_superior_uu: &id_rdwps_superior_uu
         <<: *id_rdwps_superior
@@ -498,8 +498,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_gdwps.yml
         projection: mapserv/proj/gdwps.inc
         extent: -180 -90.125 180 90.125
-        label_en: Wave Prediction/Global Deterministic Wave Prediction System (GDWPS) [28 km]
-        label_fr: Prévision de vague/Système Global de Prévision Déterministe de Vague (SGPDV) [28 km]
+        label_en: Wave Prediction/Global Deterministic Wave Prediction System (GDWPS) [25 km]
+        label_fr: Prévision de vague/Système Global de Prévision Déterministe de Vague (SGPDV) [25 km]
         dimensions: [1440, 721]
         forecast_hour_interval: 1
         processing: [SCALE_BUCKETS=1000]
@@ -533,37 +533,37 @@ forecast_models:
         mcf: nwp-models/msc_nwp_riops.yml
         projection: mapserv/proj/riops.inc
         extent: -2500 -2500 8847500 8047500
-        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 2 dimensions (RIOPS.2D)
-        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 2 dimensions (SRPOG.2D)
+        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 2 dimensions (RIOPS.2D) [5 km]
+        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 2 dimensions (SRPOG.2D) [5 km]
         dimensions: [1770, 1610]
         metadata:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     riops_3D: &id_riops_3D
         <<: *id_riops_2D
-        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 3 dimensions (RIOPS.3D)
-        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 3 dimensions (SRPOG.3D)
+        label_en: Oceanography/Regional Ice Ocean Prediction System Non Coupled in 3 dimensions (RIOPS.3D) [5 km]
+        label_fr: Océanographie/Système régional de prévision océan-glace non couplé en 3 dimensions (SRPOG.3D) [5 km]
     giops: &id_giops
         mcf: nwp-models/msc_nwp_giops.yml
         projection: mapserv/proj/giops.inc
         extent: -180 -80.1 180 89.9
-        label_en: Oceanography/Global Ice Ocean Prediction System (GIOPS)
-        label_fr: Océanographie/Système global de prévision océan-glace (SGPOG)
+        label_en: Oceanography/Global Ice Ocean Prediction System (GIOPS) [24 km]
+        label_fr: Océanographie/Système global de prévision océan-glace (SGPOG) [24 km]
         dimensions: [1800, 850]
         time_enabled: future
         metadata:
             - 'wcs_formats=GEOTIFF_16 AAIGRID'
     giops_2D: &id_giops_2D
         <<: *id_giops
-        label_en: Oceanography/Global Ice Ocean Prediction System in 2 dimensions (GIOPS.2D)
-        label_fr: Océanographie/Système global de prévision océan-glace en 2 dimensions (SGPOG.2D)
+        label_en: Oceanography/Global Ice Ocean Prediction System in 2 dimensions (GIOPS.2D) [24 km]
+        label_fr: Océanographie/Système global de prévision océan-glace en 2 dimensions (SGPOG.2D) [24 km]
         forecast_hour_interval: 3
     giops_2D_uu: &id_giops_2D_uu
         <<: *id_giops_2D
         extent: 0 -80.1 360 89.9
     giops_3D: &id_giops_3D
         <<: *id_giops
-        label_en: Oceanography/Global Ice Ocean Prediction System in 3 dimensions (GIOPS.3D)
-        label_fr: Océanographie/Système global de prévision océan-glace en 3 dimensions (SGPOG.3D)
+        label_en: Oceanography/Global Ice Ocean Prediction System in 3 dimensions (GIOPS.3D) [24 km]
+        label_fr: Océanographie/Système global de prévision océan-glace en 3 dimensions (SGPOG.3D) [24 km]
         forecast_hour_interval: 24
     giops_3D_uu: &id_giops_3D_uu
         <<: *id_giops_3D
@@ -572,8 +572,8 @@ forecast_models:
         mcf: nwp-models/msc_nwp_wcps.yml
         projection: mapserv/proj/wcps.inc
         extent: -94.5041667 38.9958333 -67.9958333 53.0041667
-        label_en: Water Cycle Prediction System (WCPS)
-        label_fr: Système de prévision du cycle de l'eau (SPCE)
+        label_en: Water Cycle Prediction System (WCPS) [1 km]
+        label_fr: Système de prévision du cycle de l'eau (SPCE) [1 km]
         dimensions: [3181, 1681]
         processing: [SCALE_BUCKETS=1000]
         metadata:
@@ -632,27 +632,24 @@ forecast_models:
         <<: *id_caps
         label_en: Canadian Arctic Prediction System (CAPS)/CAPS at pressure levels [experimental]
         label_fr: Système canadien de prévision de l'Arctique (SCPA)/SCPA en niveaux de pression [expérimental]
-    radar: &id_radar
-        mcf: observations/msc_radar.yml
-        projection: mapserv/proj/radar.inc
-        extent: 0 0 6600000 6000000
-        label_en: Weather Radar/North American radar mosaic (4 km)
-        label_fr: Radar météo/Mosaïque radar Nord-Américaine (4 km)
-        observations_interval_min: 10
-    radar_1km_mmhr_cmhr_dbz: &id_radar_1km_mmhr_cmhr_dbz_composite
-        # TODO: we need to figure out how to manage a MCF that inherits
-        #       from a parent MCF (see msc_radar-1km.yml). mapfile.py currently
-        #       doesn't support this.
+    radar_1km: &id_radar_1km_composite
         mcf: observations/msc_radar.yml
         projection: mapserv/proj/4326.inc
         extent: -170.32 16.93 -50.00 67.19
-        label_en: Weather Radar/North American radar mosaic (1 km)
-        label_fr: Radar météo/Mosaïque radar Nord-Américaine (1 km)
+        label_en: Weather Radar/North American radar composite (1 km)
+        label_fr: Radar météo/Composite radar Nord-Américaine (1 km)
         observations_interval_min: 10
     radar_coverage: &id_radar_coverage
-        <<: *id_radar_1km_mmhr_cmhr_dbz_composite
+        mcf: observations/msc_radar.yml
         projection: mapserv/proj/3857.inc
-        extent: -174.90 14.92 -49.79 68.86
+        extent: -20037508.3428 -20037508.3428 20037508.3428 20037508.3428
+        label_en: Weather Radar/North American radar composite (1 km)
+        label_fr: Radar météo/Composite radar Nord-Américaine (1 km)
+        observations_interval_min: 10
+    radar_coverage_epsg3978: &id_radar_coverage_epsg3978
+        <<: *id_radar_coverage
+        projection: mapserv/proj/4326.inc
+        extent: -180 -89.999 180 90
 layer_templates:
     PM25: &template_pm25
         type: raster
@@ -12385,174 +12382,6 @@ layers:
         name: RH_TGL_2m
         processing:
             - BANDS=21
-    REPS.MEM.PRES_GZ.10.01:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.01 - Geopotential height at 10.0 mb [gpm] [control member]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.01 - Hauteur géopotentielle à 10.0 mb [gpm] [membre de contrôle]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=1
-    REPS.MEM.PRES_GZ.10.02:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.02 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.02 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=2
-    REPS.MEM.PRES_GZ.10.03:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.03 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.03 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=3
-    REPS.MEM.PRES_GZ.10.04:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.04 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.04 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=4
-    REPS.MEM.PRES_GZ.10.05:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.05 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.05 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=5
-    REPS.MEM.PRES_GZ.10.06:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.06 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.06 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=6
-    REPS.MEM.PRES_GZ.10.07:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.07 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.07 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=7
-    REPS.MEM.PRES_GZ.10.08:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.08 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.08 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=8
-    REPS.MEM.PRES_GZ.10.09:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.09 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.09 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=9
-    REPS.MEM.PRES_GZ.10.10:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.10 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.10 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=10
-    REPS.MEM.PRES_GZ.10.11:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.11 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.11 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=11
-    REPS.MEM.PRES_GZ.10.12:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.12 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.12 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=12
-    REPS.MEM.PRES_GZ.10.13:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.13 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.13 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=13
-    REPS.MEM.PRES_GZ.10.14:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.14 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.14 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=14
-    REPS.MEM.PRES_GZ.10.15:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.15 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.15 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=15
-    REPS.MEM.PRES_GZ.10.16:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.16 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.16 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=16
-    REPS.MEM.PRES_GZ.10.17:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.17 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.17 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=17
-    REPS.MEM.PRES_GZ.10.18:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.18 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.18 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=18
-    REPS.MEM.PRES_GZ.10.19:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.19 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.19 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=19
-    REPS.MEM.PRES_GZ.10.20:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.20 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.20 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=20
-    REPS.MEM.PRES_GZ.10.21:
-        <<: *template_gz_pres_10
-        forecast_model: *id_reps_members
-        label_en:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.21 - Geopotential height at 10.0 mb [gpm]
-        label_fr:  PRES_GZ.10//REPS.MEM.PRES_GZ.10.21 - Hauteur géopotentielle à 10.0 mb [gpm]
-        name: HGT_ISBL_0010
-        processing:
-            - BANDS=21
     REPS.MEM.PRES_GZ.50.01:
         <<: *template_gz_pres_50
         forecast_model: *id_reps_members
@@ -14065,174 +13894,6 @@ layers:
         name: HGT_ISBL_1000
         processing:
             - BANDS=21
-    REPS.MEM.PRES_HR.10.01:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.01 - Relative humidity at 10.0 mb [%] [control member]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.01 - Humidité relative de l'air à 10.0 mb [%] [membre de contrôle]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=1
-    REPS.MEM.PRES_HR.10.02:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.02 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.02 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=2
-    REPS.MEM.PRES_HR.10.03:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.03 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.03 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=3
-    REPS.MEM.PRES_HR.10.04:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.04 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.04 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=4
-    REPS.MEM.PRES_HR.10.05:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.05 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.05 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=5
-    REPS.MEM.PRES_HR.10.06:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.06 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.06 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=6
-    REPS.MEM.PRES_HR.10.07:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.07 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.07 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=7
-    REPS.MEM.PRES_HR.10.08:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.08 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.08 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=8
-    REPS.MEM.PRES_HR.10.09:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.09 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.09 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=9
-    REPS.MEM.PRES_HR.10.10:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.10 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.10 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=10
-    REPS.MEM.PRES_HR.10.11:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.11 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.11 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=11
-    REPS.MEM.PRES_HR.10.12:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.12 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.12 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=12
-    REPS.MEM.PRES_HR.10.13:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.13 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.13 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=13
-    REPS.MEM.PRES_HR.10.14:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.14 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.14 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=14
-    REPS.MEM.PRES_HR.10.15:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.15 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.15 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=15
-    REPS.MEM.PRES_HR.10.16:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.16 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.16 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=16
-    REPS.MEM.PRES_HR.10.17:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.17 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.17 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=17
-    REPS.MEM.PRES_HR.10.18:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.18 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.18 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=18
-    REPS.MEM.PRES_HR.10.19:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.19 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.19 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=19
-    REPS.MEM.PRES_HR.10.20:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.20 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.20 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=20
-    REPS.MEM.PRES_HR.10.21:
-        <<: *template_hr_0_50
-        forecast_model: *id_reps_members
-        label_en:  PRES_HR.10//REPS.MEM.PRES_HR.10.21 - Relative humidity at 10.0 mb [%]
-        label_fr:  PRES_HR.10//REPS.MEM.PRES_HR.10.21 - Humidité relative de l'air à 10.0 mb [%]
-        name: RH_ISBL_0010
-        processing:
-            - BANDS=21
     REPS.MEM.PRES_HR.50.01:
         <<: *template_hr_0_50
         forecast_model: *id_reps_members
@@ -15743,174 +15404,6 @@ layers:
         label_en:  PRES_HR.1000//REPS.MEM.PRES_HR.1000.21 - Relative humidity at 1000.0 mb [%]
         label_fr:  PRES_HR.1000//REPS.MEM.PRES_HR.1000.21 - Humidité relative de l'air à 1000.0 mb [%]
         name: RH_ISBL_1000
-        processing:
-            - BANDS=21
-    REPS.MEM.PRES_TT.10.01:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.01 - Air temperature at 10.0 mb [°C] [control member]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.01 - Température de l'air à 10.0 mb [°C] [membre de contrôle]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=1
-    REPS.MEM.PRES_TT.10.02:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.02 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.02 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=2
-    REPS.MEM.PRES_TT.10.03:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.03 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.03 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=3
-    REPS.MEM.PRES_TT.10.04:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.04 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.04 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=4
-    REPS.MEM.PRES_TT.10.05:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.05 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.05 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=5
-    REPS.MEM.PRES_TT.10.06:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.06 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.06 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=6
-    REPS.MEM.PRES_TT.10.07:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.07 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.07 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=7
-    REPS.MEM.PRES_TT.10.08:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.08 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.08 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=8
-    REPS.MEM.PRES_TT.10.09:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.09 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.09 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=9
-    REPS.MEM.PRES_TT.10.10:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.10 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.10 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=10
-    REPS.MEM.PRES_TT.10.11:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.11 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.11 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=11
-    REPS.MEM.PRES_TT.10.12:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.12 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.12 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=12
-    REPS.MEM.PRES_TT.10.13:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.13 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.13 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=13
-    REPS.MEM.PRES_TT.10.14:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.14 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.14 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=14
-    REPS.MEM.PRES_TT.10.15:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.15 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.15 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=15
-    REPS.MEM.PRES_TT.10.16:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.16 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.16 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=16
-    REPS.MEM.PRES_TT.10.17:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.17 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.17 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=17
-    REPS.MEM.PRES_TT.10.18:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.18 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.18 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=18
-    REPS.MEM.PRES_TT.10.19:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.19 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.19 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=19
-    REPS.MEM.PRES_TT.10.20:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.20 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.20 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
-        processing:
-            - BANDS=20
-    REPS.MEM.PRES_TT.10.21:
-        <<: *template_tt_0_500
-        forecast_model: *id_reps_members
-        label_en:  PRES_TT.10//REPS.MEM.PRES_TT.10.21 - Air temperature at 10.0 mb [°C]
-        label_fr:  PRES_TT.10//REPS.MEM.PRES_TT.10.21 - Température de l'air à 10.0 mb [°C]
-        name: TMP_ISBL_0010
         processing:
             - BANDS=21
     REPS.MEM.PRES_TT.50.01:
@@ -23876,7 +23369,75 @@ layers:
             - wfs_featureid=FID
         styles:
             - mapserv/class/FIREWORK-HOTSPOTS.json
-    RAQDPS-FW.CE_HOTSPOTS:
+    RAQDPS-FW.CE_HOTSPOTS.2013:
+        type: point
+        conn:
+            type: ES
+            url: http://localhost:9200
+            filter_on: properties. 
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2013)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2013)
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2014:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2014)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2014)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2014/20140101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2015:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2015)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2015)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2015/20150101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2016:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2016)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2016)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2016/20160101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2017:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2017)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2017)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2017/20170101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2018:
         type: point
         time_enabled: 'no'
         conntype: OGR
@@ -23884,10 +23445,40 @@ layers:
         forecast_model: *id_firework_ce
         label_en: Wildfire hotspots Cumulative Effects products (2018)
         label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2018)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2018/20180101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
         metadata:
             - wfs_featureid=identifier
         styles:
-            - mapserv/class/FIREWORK-HOTSPOTS.json
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2019:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2019)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2019)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2019/20190101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
+    RAQDPS-FW.CE_HOTSPOTS.2020:
+        type: point
+        time_enabled: 'no'
+        conntype: OGR
+        is_local: true
+        forecast_model: *id_firework_ce
+        label_en: Wildfire hotspots Cumulative Effects products (2020)
+        label_fr: Produits d'Effets Cumulatifs des points chauds de feux de forêts (2020)
+        data: local/SCIENCE/model_raqdps-fw/cumulative_effects/json/2020/20200101T00Z_MSC_RAQDPS-FW_Hotspots-TFC_P1Y.json
+        metadata:
+            - wfs_featureid=identifier
+        styles:
+            - mapserv/class/FIREWORK-HOTSPOTS.inc
+            - mapserv/class/FIREWORK-HOTSPOTS-CE.inc
     RAQDPS.EATM_PM2.5:
         <<: *template_raqdps_eatm_pm
         forecast_model: *id_raqdps
@@ -23964,12 +23555,12 @@ layers:
         <<: *template_raqdps_sfc_pm
         forecast_model: *id_raqdps_fw
         label_en: 'Concentration: surface PM2.5[kg/m^3]'
-        label_fr: 'Concentration : surface PM2.5 [kg/m^3]'
+        label_fr: 'Concentration : surface PM2.5[kg/m^3]'
         name: PM2.5_Sfc
     RAQDPS-FW.SFC_PM2.5-DIFF:
         <<: *template_raqdps_sfc_pm_diff
         forecast_model: *id_raqdps_fw
-        label_en: 'Difference in concentration with the RAQDPS model: surface PM2.5 [kg/m^3]'
+        label_en: 'Difference in concentration with the RAQDPS model: surface PM2.5[kg/m^3]'
         label_fr: 'Différence de concentration avec le modèle SRPDQA : surface PM2.5[kg/m^3]'
         name: PM2.5-Diff-RAQDPS_Sfc
     RAQDPS-FW.SFC_PM10:
@@ -28683,54 +28274,86 @@ layers:
         styles:
             - mapserv/class/HURRICANE_LINE_BLACK_DASHED.json
             - mapserv/class/HURRICANE_LINE_RED.json
-    RADAR_COVERAGE_RRAI:
-        type: POLYGON
-        time_enabled: 'yes'
-        is_local: true
-        forecast_model: *id_radar_coverage
-        label_en: Dynamic radar coverage (Rain) (1km)
-        label_fr: Couverture radar dynamique (Pluie) (1km)
-        variable_type: MMHR
-        styles:
-            - mapserv/class/RADAR_COVERAGE.json
     RADAR_COVERAGE_RRAI.INV:
         type: POLYGON
         time_enabled: 'yes'
         is_local: true
         forecast_model: *id_radar_coverage
-        label_en: Dynamic radar coverage - inverted (Rain) (1km)
-        label_fr: Couverture radar dynamique - inversée (Pluie) (1km)
+        label_en: Dynamic radar coverage - inverted (Rain) (1 km)
+        label_fr: Couverture radar dynamique - inversée (Pluie) (1 km)
         variable_type: MMHR_inverse
+        metadata:
+            - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE_INVT50G185.json
-            - mapserv/class/RADAR_COVERAGE_INVT50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G185.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_CROSSHATCH-FILL.json
+            - mapserv/class/RADAR_COVERAGE_INV_HATCH-FILL.json
+    RADAR_COVERAGE_RRAI.INV.EPSG3978:
+        type: POLYGON
+        conntype: OGR
+        hidden: true
+        time_enabled: 'yes'
+        is_local: true
+        forecast_model: *id_radar_coverage_epsg3978
+        label_en: Dynamic radar coverage - inverted EPSG:3978 (Rain) (1 km)
+        label_fr: Couverture radar dynamique - inversée EPSG:3978 (Pluie) (1 km)
+        variable_type: MMHR
+        styles:
+            - mapserv/class/RADAR_COVERAGE_INV_T50G185.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_CROSSHATCH-FILL.json
+            - mapserv/class/RADAR_COVERAGE_INV_HATCH-FILL.json
     RADAR_COVERAGE_RSNO:
         type: POLYGON
         time_enabled: 'yes'
         is_local: true
         forecast_model: *id_radar_coverage
-        label_en: Dynamic radar coverage (Snow) (1km)
-        label_fr: Couverture radar dynamique (Neige) (1km)
+        label_en: Dynamic radar coverage (Snow) (1 km)
+        label_fr: Couverture radar dynamique (Neige) (1 km)
         variable_type: CMHR
+        metadata:
+            - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE.json
+            - mapserv/class/RADAR_COVERAGE_BLACK-OUTLINE.json
+            - mapserv/class/RADAR_COVERAGE_BLUE-OUTLINE.json
+            - mapserv/class/RADAR_COVERAGE_BLUE-FILL.json
     RADAR_COVERAGE_RSNO.INV:
         type: POLYGON
         time_enabled: 'yes'
         is_local: true
         forecast_model: *id_radar_coverage
-        label_en: Dynamic radar coverage - inverted (Snow) (1km)
-        label_fr: Couverture radar dynamique - inversée (Neige) (1km)
+        label_en: Dynamic radar coverage - inverted (Snow) (1 km)
+        label_fr: Couverture radar dynamique - inversée (Neige) (1 km)
         variable_type: CMHR_inverse
+        metadata:
+            - wfs_featureid=ID
         styles:
-            - mapserv/class/RADAR_COVERAGE_INVT50G185.json
-            - mapserv/class/RADAR_COVERAGE_INVT50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G185.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_CROSSHATCH-FILL.json
+            - mapserv/class/RADAR_COVERAGE_INV_HATCH-FILL.json
+    RADAR_COVERAGE_RSNO.INV.EPSG3978:
+        type: POLYGON
+        conntype: OGR
+        hidden: true
+        time_enabled: 'yes'
+        is_local: true
+        forecast_model: *id_radar_coverage_epsg3978
+        label_en: Dynamic radar coverage - inverted EPSG:3978 (Snow) (1 km)
+        label_fr: Couverture radar dynamique - inversée EPSG:3978 (Neige) (1 km)
+        variable_type: CMHR
+        styles:
+            - mapserv/class/RADAR_COVERAGE_INV_T50G185.json
+            - mapserv/class/RADAR_COVERAGE_INV_T50G169.json
+            - mapserv/class/RADAR_COVERAGE_INV_CROSSHATCH-FILL.json
+            - mapserv/class/RADAR_COVERAGE_INV_HATCH-FILL.json
     RADAR_1KM_RRAI:
         type: raster
         time_enabled: 'yes'
-        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-        label_en: RADAR - Radar precipitation rate (Rain) (1 km) [mm/hr]
-        label_fr: RADAR - Taux de précipitation radar (Pluie) (1 km) [mm/hr]
+        forecast_model: *id_radar_1km_composite
+        label_en: RADAR - Radar precipitation rate (Rain) (1 km) [mm/h]
+        label_fr: RADAR - Taux de précipitation radar (Pluie) (1 km) [mm/h]
         variable_type: MMHR
         metadata:
             - 'wcs_enable_request=!*'
@@ -28744,9 +28367,9 @@ layers:
     RADAR_1KM_RSNO:
         type: raster
         time_enabled: 'yes'
-        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/hr]
-        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/hr]
+        forecast_model: *id_radar_1km_composite
+        label_en: RADAR - Radar precipitation rate (Snow) (1 km) [cm/h]
+        label_fr: RADAR - Taux de précipitation radar (Neige) (1 km) [cm/h]
         variable_type: CMHR
         metadata:
             - 'wcs_enable_request=!*'
@@ -28757,105 +28380,3 @@ layers:
             - mapserv/class/RADARURPPRECIPS.json
             - mapserv/class/RADARURPPRECIPS-LINEAR.json
             - mapserv/class/RADARURPPRECIPS14.json
-    RADAR_1KM_RDBR:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-        label_en: RADAR - Radar reflectivity (Rain) (1 km) [dBZ]
-        label_fr: RADAR - Réflectivité radar (Pluie) (1 km) [dBZ]
-        variable_type: DBZ
-        metadata:
-            - 'wcs_enable_request=!*'
-        styles:
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR8.json
-            - mapserv/class/RADARURPREFLECTR8-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR.json
-            - mapserv/class/RADARURPREFLECTR-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR14.json
-    RADAR_1KM_RDBS:
-        phase: beta # WMS GetMap tiles are fine, not the underlying data. CMOI-R will provide a META-format based Snow source data
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
-        label_en: RADAR - Radar reflectivity (Snow) (1 km) [experimental] [dBZ]
-        label_fr: RADAR - Réflectivité radar (Neige) (1 km) [expérimental] [dBZ]
-        variable_type: DBZ
-        metadata:
-            - 'wcs_enable_request=!*'
-        styles:
-            - mapserv/class/RADARURPREFLECTS14-1KM-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS8-1KM.json
-            - mapserv/class/RADARURPREFLECTS8-1KM-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS-1KM.json
-            - mapserv/class/RADARURPREFLECTS-1KM-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS14-1KM.json
-    RADAR_RRAI:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar
-        label_en: RADAR - Radar precipitation rate (Rain) (4 km) [mm/hr]
-        label_fr: RADAR - Taux de précipitation radar (Pluie) (4 km) [mm/hr]
-        metadata:
-            - 'wcs_enable_request=!*'
-        processing:
-            - BANDS=3
-        styles:
-            - mapserv/class/RADARURPPRECIPR14-LINEAR.json
-            - mapserv/class/RADARURPPRECIPR8.json
-            - mapserv/class/RADARURPPRECIPR8-LINEAR.json
-            - mapserv/class/RADARURPPRECIPR.json
-            - mapserv/class/RADARURPPRECIPR-LINEAR.json
-            - mapserv/class/RADARURPPRECIPR14.json
-    RADAR_RSNO:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar
-        label_en: RADAR - Radar precipitation rate (Snow) (4 km) [cm/hr]
-        label_fr: RADAR - Taux de précipitation radar (Neige) (4 km) [cm/hr]
-        metadata:
-            - 'wcs_enable_request=!*'
-        processing:
-            - BANDS=5
-        styles:
-            - mapserv/class/RADARURPPRECIPS14-LINEAR.json
-            - mapserv/class/RADARURPPRECIPS8.json
-            - mapserv/class/RADARURPPRECIPS8-LINEAR.json
-            - mapserv/class/RADARURPPRECIPS.json
-            - mapserv/class/RADARURPPRECIPS-LINEAR.json
-            - mapserv/class/RADARURPPRECIPS14.json
-    RADAR_RDBR:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar
-        label_en: RADAR - Radar reflectivity (Rain) (4 km) [dBZ]
-        label_fr: RADAR - Réflectivité radar (Pluie) (4 km) [dBZ]
-        metadata:
-            - 'wcs_enable_request=!*'
-        processing:
-            - BANDS=2
-        styles:
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR8.json
-            - mapserv/class/RADARURPREFLECTR8-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR.json
-            - mapserv/class/RADARURPREFLECTR-LINEAR.json
-            - mapserv/class/RADARURPREFLECTR14.json
-    RADAR_RDBS:
-        type: raster
-        time_enabled: 'yes'
-        forecast_model: *id_radar
-        label_en: RADAR - Radar reflectivity (Snow) (4 km) [dBZ]
-        label_fr: RADAR - Réflectivité radar (Neige) (4 km) [dBZ]
-        metadata:
-            - 'wcs_enable_request=!*'
-        processing:
-            - BANDS=4
-        styles:
-            - mapserv/class/RADARURPREFLECTS14-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS8.json
-            - mapserv/class/RADARURPREFLECTR14-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS8-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS.json
-            - mapserv/class/RADARURPREFLECTS-LINEAR.json
-            - mapserv/class/RADARURPREFLECTS14.json
