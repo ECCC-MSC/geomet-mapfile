@@ -47,14 +47,17 @@ class Store:
 
     def __init__(self):
         self.data = {
-            'GDPS.ETA_TT_time_extent': '2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H',  # noqa
-            'GDPS.ETA_TT_model_run_extent': '2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H',  # noqa
-            'GDPS.ETA_TT_default_model_run': '2020-01-14T00:00:00Z'
+            'geomet-data-registry_GDPS.ETA_TT_time_extent': '2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H', # noqa
+            'geomet-data-registry_GDPS.ETA_TT_default_time': '2020-01-14T00:00:00Z',  # noqa
+            'geomet-data-registry_GDPS.ETA_TT_model_run_extent': '2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H',  # noqa
+            'geomet-data-registry_GDPS.ETA_TT_default_model_run': '2020-01-14T00:00:00Z', # noqa
         }
 
-    def get_key(self, key):
+    def get_key(self, key, raw=False):
         try:
-            return self.data[key]
+            if raw:
+                return self.data[key]
+            return self.data[f'geomet-mapfile_{key}']
         except KeyError:
             return None
 
@@ -107,7 +110,7 @@ class GeoMetMapfileTest(unittest.TestCase):
         self.assertTrue(
             result['ows_contactinstructions_fr'] == 'Durant les heures de service')  # noqa
 
-    @patch('geomet_mapfile.plugin.load_plugin', return_value=Store())
+    @patch('geomet_mapfile.mapfile.load_plugin', return_value=Store())
     def test_gen_layer(self, mock_load_plugin):
         """returns a list of mappfile layer objects of given layer"""
 
@@ -121,7 +124,7 @@ class GeoMetMapfileTest(unittest.TestCase):
         result = gen_layer(layer_name, layer_info)
 
         self.assertTrue(result[0]['projection'] ==
-                        ['proj=longlat', 'R=6371229', 'no_defs'])
+                        ['proj=longlat', "lon_wrap=0", 'R=6371229', 'no_defs'])
         self.assertTrue(result[0]['name'] == layer_name)
         self.assertTrue(result[0]['data'] == [''])
         self.assertTrue(result[0]['metadata']['ows_title'] == ows_title)
