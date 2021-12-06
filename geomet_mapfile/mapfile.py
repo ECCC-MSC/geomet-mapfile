@@ -662,8 +662,8 @@ def update_mapfile(layer=None):
     return True
 
 
-@click.group()
-def mapfile():
+@click.group('mapfile')
+def mapfile_():
     """mapfile management"""
     pass
 
@@ -696,8 +696,8 @@ def update(ctx, layer):
     update_mapfile(layer)
 
 
-mapfile.add_command(generate)
-mapfile.add_command(update)
+mapfile_.add_command(generate)
+mapfile_.add_command(update)
 
 
 class LayerTimeConfigError(Exception):
