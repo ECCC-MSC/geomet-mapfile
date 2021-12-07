@@ -99,10 +99,10 @@ forecast_models:
     gdps: &id_gdps
         mcf: nwp-models/msc_nwp_gdps.yml
         projection: mapserv/proj/gdps.inc
-        extent: -180 -90.24 180 90
+        extent: -180 -90.075 179.925 90.075
         label_en: Global Deterministic Prediction System (GDPS)/GDPS (15 km)
         label_fr: Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
-        dimensions: [1500, 751]
+        dimensions: [2400, 1201]
         forecast_hour_interval: 3
         processing: [SCALE_BUCKETS=1000]
         metadata:
@@ -111,6 +111,25 @@ forecast_models:
             - GEOTIFF_16
             - AAIGRID
             #- NETCDF
+    gdps_uu: &id_gdps_uu
+        <<: *id_gdps
+        extent: -180 -90.075 179.925 90.075
+        metadata:
+            - 'wcs_enable_request=!*'
+    radar: &id_radar
+        mcf: observations/msc_radar.yml
+        projection: mapserv/proj/radar.inc
+        extent: 0 0 6600000 6000000
+        label_en: Weather Radar/North American radar mosaic (4 km)
+        label_fr: Radar météo/Mosaïque radar Nord-Américaine (4 km)
+        observations_interval_min: 10
+    radar_1km_mmhr_cmhr_dbz: &id_radar_1km_mmhr_cmhr_dbz_composite
+        mcf: observations/msc_radar.yml
+        projection: mapserv/proj/4326.inc
+        extent: -170.32 16.93 -50.00 67.19
+        label_en: Weather Radar/North American radar mosaic (1 km)
+        label_fr: Radar météo/Mosaïque radar Nord-Américaine (1 km)
+        observations_interval_min: 10
 layer_templates:
     TT: &template_tt
         type: raster
@@ -122,6 +141,43 @@ layer_templates:
             - mapserv/class/TEMPWINTER.json
             - mapserv/class/TEMPWINTER-LINEAR.json
             - mapserv/class/TEMPERATURE.json
+    GZ_ETA_CONTOUR: &template_gz_eta_contour
+        type: line
+        connection:
+            type: CONTOUR
+        metadata:
+            - 'wfs_enable_request=!*'
+            - 'wcs_enable_request=!*'
+        processing:
+            - BANDS=1
+            - CONTOUR_INTERVAL=10
+            - CONTOUR_ITEM=pixel
+        layer_params:
+            - UNITS METERS
+            - LABELITEM "pixel"
+            - GEOMTRANSFORM (smoothsia([shape],1,1))
+        styles:
+            - mapserv/class/GEOPOTENTIALHEIGHT_LINE.json
+    GZ_ETA: &template_gz_eta
+        type: raster
+        styles:
+            - mapserv/class/GPHEIGHT.json
+    UU: &template_uu
+        type: point
+        conntype: uvraster
+        time_enabled: 'yes'
+        metadata:
+            - 'wfs_enable_request=!*'
+        processing:
+            - BANDS=1,2
+            - UV_SPACING=20
+            - UV_SIZE_SCALE=1
+        styles:
+            - mapserv/class/WINDARROWKNOTS.json
+            - mapserv/class/WINDARROW.json
+        symbols:
+            - circle_wind
+            - arrow_wind
 layers:
     GDPS.ETA_TT:
         <<: *template_tt
@@ -129,3 +185,39 @@ layers:
         label_en: GDPS.ETA - Air temperature [°C]
         label_fr: GDPS.ETA - Température de l'air [°C]
         name: TMP_TGL_2
+    GDPS.ETA_UU:
+        <<: *template_uu
+        forecast_model: *id_gdps_uu
+        label_en: GDPS.ETA - Winds [m/s]
+        label_fr: GDPS.ETA - Vents [m/s]
+        names:
+            - UGRD_TGL_10
+            - VGRD_TGL_10
+    GDPS.ETA_GZ:
+        <<: *template_gz_eta
+        forecast_model: *id_gdps
+        label_en: GDPS.ETA - Geopotential Height [gpm]
+        label_fr: GDPS.ETA - Hauteur géopotentielle [gpm]
+        name: HGT_SFC_0
+    GDPS.ETA_GZ-CONTOUR:
+        <<: *template_gz_eta_contour
+        forecast_model: *id_gdps
+        label_en: GDPS.ETA - Geopotential Height (contour) [gpm]
+        label_fr: GDPS.ETA - Hauteur géopotentielle (contour) [gpm]
+        name: HGT_SFC_0
+    RADAR_1KM_RRAI:
+        type: raster
+        time_enabled: 'yes'
+        forecast_model: *id_radar_1km_mmhr_cmhr_dbz_composite
+        label_en: RADAR - Radar precipitation rate (Rain) (1 km) [mm/hr]
+        label_fr: RADAR - Taux de précipitation radar (Pluie) (1 km) [mm/hr]
+        variable_type: MMHR
+        metadata:
+            - 'wcs_enable_request=!*'
+        styles:
+            - mapserv/class/RADARURPPRECIPR14-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR8.json
+            - mapserv/class/RADARURPPRECIPR8-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR.json
+            - mapserv/class/RADARURPPRECIPR-LINEAR.json
+            - mapserv/class/RADARURPPRECIPR14.json

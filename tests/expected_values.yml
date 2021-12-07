@@ -1,0 +1,4467 @@
+%YAML 1.1
+---
+mcf2layer_metadata:
+  GDPS.ETA_TT:
+    ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+    ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+    ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+    ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+    ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+  GDPS.ETA_UU:
+    ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+    ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+    ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+    ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+    ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+  GDPS.ETA_GZ:
+    ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+    ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+    ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+    ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+    ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+  GDPS.ETA_GZ-CONTOUR:
+    ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+    ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+    ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+    ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+    ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+    ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+  RADAR_1KM_RRAI:
+    ows_abstract: Composite of American and Canadian weather radars updated every 10 minutes
+    ows_abstract_fr: Mosaïque des radars météorologiques Canadiens et Américains mise-à-jour aux 10 minutes
+    ows_identifier_value: urn:x-msc-smc:md:weather-meteo::radar
+    ows_keywordlist: Atmospheric conditions, Meteorology, Weather, Radar, Remote sensing, Weather
+    ows_keywordlist_fr: Conditions atmosphériques, Métérologie, Temps, Radar, Télédétection, Temps (Météorologie)
+    ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+
+layer_time_config:
+  GDPS.ETA_TT:
+    default_time: '2020-01-24T00:00:00Z'
+    available_intervals: 
+      - 2020-01-14T00:00:00Z
+      - 2020-01-14T03:00:00Z
+      - 2020-01-14T06:00:00Z
+      - 2020-01-14T09:00:00Z
+      - 2020-01-14T12:00:00Z
+      - 2020-01-14T15:00:00Z
+      - 2020-01-14T18:00:00Z
+      - 2020-01-14T21:00:00Z
+      - 2020-01-15T00:00:00Z
+      - 2020-01-15T03:00:00Z
+      - 2020-01-15T06:00:00Z
+      - 2020-01-15T09:00:00Z
+      - 2020-01-15T12:00:00Z
+      - 2020-01-15T15:00:00Z
+      - 2020-01-15T18:00:00Z
+      - 2020-01-15T21:00:00Z
+      - 2020-01-16T00:00:00Z
+      - 2020-01-16T03:00:00Z
+      - 2020-01-16T06:00:00Z
+      - 2020-01-16T09:00:00Z
+      - 2020-01-16T12:00:00Z
+      - 2020-01-16T15:00:00Z
+      - 2020-01-16T18:00:00Z
+      - 2020-01-16T21:00:00Z
+      - 2020-01-17T00:00:00Z
+      - 2020-01-17T03:00:00Z
+      - 2020-01-17T06:00:00Z
+      - 2020-01-17T09:00:00Z
+      - 2020-01-17T12:00:00Z
+      - 2020-01-17T15:00:00Z
+      - 2020-01-17T18:00:00Z
+      - 2020-01-17T21:00:00Z
+      - 2020-01-18T00:00:00Z
+      - 2020-01-18T03:00:00Z
+      - 2020-01-18T06:00:00Z
+      - 2020-01-18T09:00:00Z
+      - 2020-01-18T12:00:00Z
+      - 2020-01-18T15:00:00Z
+      - 2020-01-18T18:00:00Z
+      - 2020-01-18T21:00:00Z
+      - 2020-01-19T00:00:00Z
+      - 2020-01-19T03:00:00Z
+      - 2020-01-19T06:00:00Z
+      - 2020-01-19T09:00:00Z
+      - 2020-01-19T12:00:00Z
+      - 2020-01-19T15:00:00Z
+      - 2020-01-19T18:00:00Z
+      - 2020-01-19T21:00:00Z
+      - 2020-01-20T00:00:00Z
+      - 2020-01-20T03:00:00Z
+      - 2020-01-20T06:00:00Z
+      - 2020-01-20T09:00:00Z
+      - 2020-01-20T12:00:00Z
+      - 2020-01-20T15:00:00Z
+      - 2020-01-20T18:00:00Z
+      - 2020-01-20T21:00:00Z
+      - 2020-01-21T00:00:00Z
+      - 2020-01-21T03:00:00Z
+      - 2020-01-21T06:00:00Z
+      - 2020-01-21T09:00:00Z
+      - 2020-01-21T12:00:00Z
+      - 2020-01-21T15:00:00Z
+      - 2020-01-21T18:00:00Z
+      - 2020-01-21T21:00:00Z
+      - 2020-01-22T00:00:00Z
+      - 2020-01-22T03:00:00Z
+      - 2020-01-22T06:00:00Z
+      - 2020-01-22T09:00:00Z
+      - 2020-01-22T12:00:00Z
+      - 2020-01-22T15:00:00Z
+      - 2020-01-22T18:00:00Z
+      - 2020-01-22T21:00:00Z
+      - 2020-01-23T00:00:00Z
+      - 2020-01-23T03:00:00Z
+      - 2020-01-23T06:00:00Z
+      - 2020-01-23T09:00:00Z
+      - 2020-01-23T12:00:00Z
+      - 2020-01-23T15:00:00Z
+      - 2020-01-23T18:00:00Z
+      - 2020-01-23T21:00:00Z
+      - 2020-01-24T00:00:00Z
+    default_model_run: '2020-01-14T00:00:00Z'
+    model_run_extent: 2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H
+    time_extent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+  GDPS.ETA_UU:
+    default_time: '2020-01-24T00:00:00Z'
+    available_intervals: 
+      - 2020-01-14T00:00:00Z
+      - 2020-01-14T03:00:00Z
+      - 2020-01-14T06:00:00Z
+      - 2020-01-14T09:00:00Z
+      - 2020-01-14T12:00:00Z
+      - 2020-01-14T15:00:00Z
+      - 2020-01-14T18:00:00Z
+      - 2020-01-14T21:00:00Z
+      - 2020-01-15T00:00:00Z
+      - 2020-01-15T03:00:00Z
+      - 2020-01-15T06:00:00Z
+      - 2020-01-15T09:00:00Z
+      - 2020-01-15T12:00:00Z
+      - 2020-01-15T15:00:00Z
+      - 2020-01-15T18:00:00Z
+      - 2020-01-15T21:00:00Z
+      - 2020-01-16T00:00:00Z
+      - 2020-01-16T03:00:00Z
+      - 2020-01-16T06:00:00Z
+      - 2020-01-16T09:00:00Z
+      - 2020-01-16T12:00:00Z
+      - 2020-01-16T15:00:00Z
+      - 2020-01-16T18:00:00Z
+      - 2020-01-16T21:00:00Z
+      - 2020-01-17T00:00:00Z
+      - 2020-01-17T03:00:00Z
+      - 2020-01-17T06:00:00Z
+      - 2020-01-17T09:00:00Z
+      - 2020-01-17T12:00:00Z
+      - 2020-01-17T15:00:00Z
+      - 2020-01-17T18:00:00Z
+      - 2020-01-17T21:00:00Z
+      - 2020-01-18T00:00:00Z
+      - 2020-01-18T03:00:00Z
+      - 2020-01-18T06:00:00Z
+      - 2020-01-18T09:00:00Z
+      - 2020-01-18T12:00:00Z
+      - 2020-01-18T15:00:00Z
+      - 2020-01-18T18:00:00Z
+      - 2020-01-18T21:00:00Z
+      - 2020-01-19T00:00:00Z
+      - 2020-01-19T03:00:00Z
+      - 2020-01-19T06:00:00Z
+      - 2020-01-19T09:00:00Z
+      - 2020-01-19T12:00:00Z
+      - 2020-01-19T15:00:00Z
+      - 2020-01-19T18:00:00Z
+      - 2020-01-19T21:00:00Z
+      - 2020-01-20T00:00:00Z
+      - 2020-01-20T03:00:00Z
+      - 2020-01-20T06:00:00Z
+      - 2020-01-20T09:00:00Z
+      - 2020-01-20T12:00:00Z
+      - 2020-01-20T15:00:00Z
+      - 2020-01-20T18:00:00Z
+      - 2020-01-20T21:00:00Z
+      - 2020-01-21T00:00:00Z
+      - 2020-01-21T03:00:00Z
+      - 2020-01-21T06:00:00Z
+      - 2020-01-21T09:00:00Z
+      - 2020-01-21T12:00:00Z
+      - 2020-01-21T15:00:00Z
+      - 2020-01-21T18:00:00Z
+      - 2020-01-21T21:00:00Z
+      - 2020-01-22T00:00:00Z
+      - 2020-01-22T03:00:00Z
+      - 2020-01-22T06:00:00Z
+      - 2020-01-22T09:00:00Z
+      - 2020-01-22T12:00:00Z
+      - 2020-01-22T15:00:00Z
+      - 2020-01-22T18:00:00Z
+      - 2020-01-22T21:00:00Z
+      - 2020-01-23T00:00:00Z
+      - 2020-01-23T03:00:00Z
+      - 2020-01-23T06:00:00Z
+      - 2020-01-23T09:00:00Z
+      - 2020-01-23T12:00:00Z
+      - 2020-01-23T15:00:00Z
+      - 2020-01-23T18:00:00Z
+      - 2020-01-23T21:00:00Z
+      - 2020-01-24T00:00:00Z
+    default_model_run: '2020-01-14T00:00:00Z'
+    model_run_extent: 2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H
+    time_extent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+  GDPS.ETA_GZ:
+    available_intervals: []
+    default_model_run: '2021-12-13T00:00:00Z'
+    default_time: '2021-12-13T00:00:00Z'
+    model_run_extent: 2021-12-11T00:00:00Z/2021-12-13T00:00:00Z/PT12H
+    time_extent: 2021-12-13T00:00:00Z/2021-12-13T00:00:00Z/PT0H
+  GDPS.ETA_GZ-CONTOUR:
+    available_intervals: []
+    default_model_run: '2021-12-13T00:00:00Z'
+    default_time: '2021-12-13T00:00:00Z'
+    model_run_extent: 2021-12-11T00:00:00Z/2021-12-13T00:00:00Z/PT12H
+    time_extent: 2021-12-13T00:00:00Z/2021-12-13T00:00:00Z/PT0H
+  RADAR_1KM_RRAI:
+    available_intervals: []
+    default_model_run: null
+    default_model_run: null
+    default_time: '2020-01-14T00:00:00Z'
+    model_run_extent: null
+    time_extent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+
+gen_web_metadata:
+  __type__: metadata
+  encoding: UTF-8
+  ows_abstract: GeoMet-Weather provides access to the Environment and Climate Change Canada's Meteorological Service of Canada (MSC) open data, including raw numerical weather prediction (NWP) model data layers and the weather radar mosaic, via Open Geospatial Consortium (OGC) standards such as the Web Map Service (WMS). Meteorological layers are served dynamically through the Web Map Service (WMS) standard to enable end-users to display meteorological data within their own tools, on interactive web maps and in mobile apps
+  ows_abstract_fr: GéoMet-Météo du SMC donne accès aux données du Service météorologique du Canada (SMC) d'Environnement et Changement climatique Canada, notamment les données brutes de modèles de prévision numérique du temps et de la mosaïque des radars météo, par le biais de standards de l'Open Geospatial Consortium (OGC). Les couches météorologiques sont dynamiquement servies par le biais du standard Web Map Service (WMS) afin de permettre aux utilisateurs d'afficher les données météorologiques dans leurs propres outils, sur des cartes interactives en ligne et dans les applications mobiles
+  ows_accessconstraints: None
+  ows_address: 77 Westmorland Street, Suite 260
+  ows_address_fr: 77 rue Westmorland, Local 260
+  ows_addresstype: postal
+  ows_city: Fredericton
+  ows_city_fr: Fredericton
+  ows_contactelectronicmailaddress: ecweather-meteo@ec.gc.ca
+  ows_contactfacsimiletelephone: +01-506-451-6010
+  ows_contactinstructions: During hours of service
+  ows_contactinstructions_fr: Durant les heures de service
+  ows_contactorganization: Government of Canada, Environment and Climate Change Canada, Meteorological Service of Canada
+  ows_contactorganization_fr: Gouvernement du Canada, Environnement et Changement climatique Canada, Service météorologique du Canada
+  ows_contactperson: National Inquiry Response Team
+  ows_contactperson_fr: Équipe nationale de réponse aux demandes du public
+  ows_contactposition: Service Channel
+  ows_contactposition_fr: Service de support
+  ows_contactvoicetelephone: None
+  ows_country: Canada
+  ows_country_fr: Canada
+  ows_extent: -180,-90,180,90
+  ows_fees: None
+  ows_hoursofservice: Monday to Friday, 1300h - 2100h UTC
+  ows_hoursofservice_fr: Du lundi au vendredi, 1300h - 2100h UTC
+  ows_http_max_age: 604800
+  ows_keywordlist: Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitations,Snow,Ice
+  ows_keywordlist_fr: Météorologie,Climat,Temps,Prévision,Inondation,Alerte météorologique,Tempête,Vent,Température,Précipitations,Neige,Glace
+  ows_keywordlist_http://purl.org/dc/terms/_items: Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitations,Snow,Ice
+  ows_keywordlist_http://purl.org/dc/terms/_items_fr: Météorologie,Climat,Temps,Prévision,Inondation,Alerte météorologique,Tempête,Vent,Température,Précipitations,Neige,Glace
+  ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+  ows_onlineresource: https://api.weather.gc.ca/geomet
+  ows_onlineresource_fr: https://api.weather.gc.ca/geomet?lang=fr
+  ows_postcode: E3B 6Z3
+  ows_role: pointOfContact
+  ows_service_onlineresource: https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weather-tools-specialized-data/geospatial-web-services.html
+  ows_service_onlineresource_fr: https://www.canada.ca/fr/environnement-changement-climatique/services/conditions-meteorologiques-ressources-outils-generaux/outils-donnees-specialisees/services-web-geospatiaux.html
+  ows_srs: EPSG:4326 EPSG:2294 EPSG:2295 EPSG:2950 EPSG:3408 EPSG:3410 EPSG:3571 EPSG:3572 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576 EPSG:3857 EPSG:3978 EPSG:4267 EPSG:4269 EPSG:26707 EPSG:26708 EPSG:26709 EPSG:26710 EPSG:26711 EPSG:26712 EPSG:26713 EPSG:26714 EPSG:26715 EPSG:26716 EPSG:26717 EPSG:26718 EPSG:26719 EPSG:26720 EPSG:26721 EPSG:26722 EPSG:26907 EPSG:26908 EPSG:26909 EPSG:26910 EPSG:26911 EPSG:26912 EPSG:26913 EPSG:26914 EPSG:26915 EPSG:26916 EPSG:26917 EPSG:26918 EPSG:26919 EPSG:26920 EPSG:26921 EPSG:26922 EPSG:32187 EPSG:32188 EPSG:32198 EPSG:32661 EPSG:42101 EPSG:42102 EPSG:42304 EPSG:102100 EPSG:102185 EPSG:900913
+  ows_stateorprovince: New Brunswick
+  ows_stateorprovince_fr: Nouveau-Brunswick
+  ows_title: Meteorological Service of Canada Geospatial Web Services 0.1.dev0
+  ows_title_fr: Services web géospatiaux du Service météorologique du Canada 0.1.dev0
+  ows_updatesequence: '2021-12-06T20:03:31Z'
+  wcs_description: GeoMet-Weather provides access to the Environment and Climate Change Canada's Meteorological Service of Canada (MSC) open data, including raw numerical weather prediction (NWP) model data layers and the weather radar mosaic, via Open Geospatial Consortium (OGC) standards such as the Web Map Service (WMS). Meteorological layers are served dynamically through the Web Map Service (WMS) standard to enable end-users to display meteorological data within their own tools, on interactive web maps and in mobile apps
+  wcs_description_fr: GéoMet-Météo du SMC donne accès aux données du Service météorologique du Canada (SMC) d'Environnement et Changement climatique Canada, notamment les données brutes de modèles de prévision numérique du temps et de la mosaïque des radars météo, par le biais de standards de l'Open Geospatial Consortium (OGC). Les couches météorologiques sont dynamiquement servies par le biais du standard Web Map Service (WMS) afin de permettre aux utilisateurs d'afficher les données météorologiques dans leurs propres outils, sur des cartes interactives en ligne et dans les applications mobiles
+  wcs_enable_request: '*'
+  wcs_label: Meteorological Service of Canada Geospatial Web Services 0.1.dev0
+  wcs_label_fr: Services web géospatiaux du Service météorologique du Canada 0.1.dev0
+  wms_attribution_logourl_format: image/jpeg
+  wms_attribution_logourl_height: 258
+  wms_attribution_logourl_href: https://ec.gc.ca/meteo-weather/C0D9B3D8-D256-407D-A68F-C606D703105E/X-20130131132801908.jpg
+  wms_attribution_logourl_width: 400
+  wms_attribution_onlineresource: https://www.canada.ca/en/services/environment/weather.html
+  wms_attribution_onlineresource_fr: https://www.canada.ca/fr/services/environnement/meteo.html
+  wms_attribution_title: Government of Canada, Environment and Climate Change Canada, Meteorological Service of Canada
+  wms_attribution_title_fr: Gouvernement du Canada, Environnement et Changement climatique Canada, Service météorologique du Canada
+  wms_enable_request: '*'
+  wms_getfeatureinfo_formatlist: text/plain,application/json,application/vnd.ogc.gml
+  wms_getmap_formatlist: image/png,image/jpeg
+
+gen_layer:
+  GDPS.ETA_TT:
+    __type__: layer
+    classes:
+    - __type__: class
+      expression: ( [pixel] < -40 )
+      group: TEMPERATURE-LINEAR
+      name: .. -40
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 127]
+        datarange: [-100.0, -40.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )
+      group: TEMPERATURE-LINEAR
+      name: -40 -35
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 183]
+        datarange: [-40.0, -35.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+      group: TEMPERATURE-LINEAR
+      name: -35 -30
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 183, 0, 0, 239]
+        datarange: [-35.0, -30.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+      group: TEMPERATURE-LINEAR
+      name: -30 -25
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 239, 0, 63, 254]
+        datarange: [-30.0, -25.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+      group: TEMPERATURE-LINEAR
+      name: -25 -20
+      styles:
+      - __type__: style
+        colorrange: [0, 63, 254, 0, 147, 254]
+        datarange: [-25.0, -20.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+      group: TEMPERATURE-LINEAR
+      name: -20 -15
+      styles:
+      - __type__: style
+        colorrange: [0, 147, 254, 0, 231, 254]
+        datarange: [-20.0, -15.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+      group: TEMPERATURE-LINEAR
+      name: -15 -10
+      styles:
+      - __type__: style
+        colorrange: [0, 231, 254, 51, 253, 135]
+        datarange: [-15.0, -10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPERATURE-LINEAR
+      name: -10 -5
+      styles:
+      - __type__: style
+        colorrange: [51, 253, 135, 119, 253, 135]
+        datarange: [-10.0, -5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPERATURE-LINEAR
+      name: -5 0
+      styles:
+      - __type__: style
+        colorrange: [119, 253, 135, 187, 254, 67]
+        datarange: [-5.0, 0.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPERATURE-LINEAR
+      name: 0 5
+      styles:
+      - __type__: style
+        colorrange: [187, 254, 67, 255, 255, 0]
+        datarange: [0.0, 5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPERATURE-LINEAR
+      name: 5 10
+      styles:
+      - __type__: style
+        colorrange: [255, 255, 0, 254, 187, 0]
+        datarange: [5.0, 10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+      group: TEMPERATURE-LINEAR
+      name: 10 15
+      styles:
+      - __type__: style
+        colorrange: [254, 187, 0, 254, 119, 0]
+        datarange: [10.0, 15.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+      group: TEMPERATURE-LINEAR
+      name: 15 20
+      styles:
+      - __type__: style
+        colorrange: [254, 119, 0, 254, 50, 0]
+        datarange: [15.0, 20.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+      group: TEMPERATURE-LINEAR
+      name: 20 25
+      styles:
+      - __type__: style
+        colorrange: [254, 50, 0, 239, 0, 0]
+        datarange: [20.0, 25.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+      group: TEMPERATURE-LINEAR
+      name: 25 30
+      styles:
+      - __type__: style
+        colorrange: [239, 0, 0, 183, 0, 0]
+        datarange: [25.0, 30.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+      group: TEMPERATURE-LINEAR
+      name: 30 35
+      styles:
+      - __type__: style
+        colorrange: [183, 0, 0, 127, 0, 0]
+        datarange: [30.0, 35.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )
+      group: TEMPERATURE-LINEAR
+      name: 35 40
+      styles:
+      - __type__: style
+        colorrange: [127, 0, 0, 85, 0, 0]
+        datarange: [35.0, 40.0]
+    - __type__: class
+      expression: ( [pixel] >= 40 )
+      group: TEMPERATURE-LINEAR
+      name: '>= 40'
+      styles:
+      - __type__: style
+        colorrange: [85, 0, 0, 85, 0, 0]
+        datarange: [40.0, 60.0]
+    - __type__: class
+      expression: ( [pixel] < -10 )
+      group: TEMPSUMMER
+      name: -15 -10
+      styles:
+      - __type__: style
+        color: [0, 0, 127]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPSUMMER
+      name: -10 -5
+      styles:
+      - __type__: style
+        color: [0, 0, 211]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPSUMMER
+      name: -5 0
+      styles:
+      - __type__: style
+        color: [0, 63, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPSUMMER
+      name: 0 5
+      styles:
+      - __type__: style
+        color: [0, 189, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPSUMMER
+      name: 5 10
+      styles:
+      - __type__: style
+        color: [51, 253, 203]
+    - __type__: class
+      expression: ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+      group: TEMPSUMMER
+      name: 10 15
+      styles:
+      - __type__: style
+        color: [153, 254, 101]
+    - __type__: class
+      expression: ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+      group: TEMPSUMMER
+      name: 15 20
+      styles:
+      - __type__: style
+        color: [255, 255, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+      group: TEMPSUMMER
+      name: 20 25
+      styles:
+      - __type__: style
+        color: [254, 153, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+      group: TEMPSUMMER
+      name: 25 30
+      styles:
+      - __type__: style
+        color: [254, 50, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+      group: TEMPSUMMER
+      name: 30 35
+      styles:
+      - __type__: style
+        color: [211, 0, 0]
+    - __type__: class
+      expression: ( [pixel] >= 35 )
+      group: TEMPSUMMER
+      name: 35 40
+      styles:
+      - __type__: style
+        color: [127, 0, 0]
+    - __type__: class
+      expression: ( [pixel] < -15 )
+      group: TEMPSUMMER-LINEAR
+      name: <= -15
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 127]
+        datarange: [-15.0, -100.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+      group: TEMPSUMMER-LINEAR
+      name: -15 -10
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 203]
+        datarange: [-15.0, -10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPSUMMER-LINEAR
+      name: -10 -5
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 203, 0, 40, 254]
+        datarange: [-10.0, -5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPSUMMER-LINEAR
+      name: -5 0
+      styles:
+      - __type__: style
+        colorrange: [0, 40, 254, 0, 155, 254]
+        datarange: [-5.0, 0.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 0 5
+      styles:
+      - __type__: style
+        colorrange: [0, 155, 254, 13, 253, 241]
+        datarange: [0.0, 5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 5 10
+      styles:
+      - __type__: style
+        colorrange: [13, 253, 241, 106, 253, 148]
+        datarange: [5.0, 10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 10 15
+      styles:
+      - __type__: style
+        colorrange: [106, 253, 148, 199, 254, 55]
+        datarange: [10.0, 15.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 15 20
+      styles:
+      - __type__: style
+        colorrange: [199, 254, 55, 254, 217, 0]
+        datarange: [15.0, 20.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 20 25
+      styles:
+      - __type__: style
+        colorrange: [254, 217, 0, 254, 125, 0]
+        datarange: [20.0, 25.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 25 30
+      styles:
+      - __type__: style
+        colorrange: [254, 125, 0, 254, 32, 0]
+        datarange: [25.0, 30.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 30 35
+      styles:
+      - __type__: style
+        colorrange: [254, 32, 0, 203, 0, 0]
+        datarange: [30.0, 35.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )
+      group: TEMPSUMMER-LINEAR
+      name: 35 40
+      styles:
+      - __type__: style
+        colorrange: [203, 0, 0, 127, 0, 0]
+        datarange: [35.0, 40.0]
+    - __type__: class
+      expression: ( [pixel] >= 40 )
+      group: TEMPSUMMER-LINEAR
+      name: '>= 40'
+      styles:
+      - __type__: style
+        colorrange: [127, 0, 0, 127, 0, 0]
+        datarange: [40.0, 60.0]
+    - __type__: class
+      expression: ( [pixel] < -35 )
+      group: TEMPWINTER
+      name: -40 -35
+      styles:
+      - __type__: style
+        color: [0, 0, 127]
+    - __type__: class
+      expression: ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+      group: TEMPWINTER
+      name: -35 -30
+      styles:
+      - __type__: style
+        color: [0, 0, 211]
+    - __type__: class
+      expression: ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+      group: TEMPWINTER
+      name: -30 -25
+      styles:
+      - __type__: style
+        color: [0, 63, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+      group: TEMPWINTER
+      name: -25 -20
+      styles:
+      - __type__: style
+        color: [0, 189, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+      group: TEMPWINTER
+      name: -20 -15
+      styles:
+      - __type__: style
+        color: [51, 253, 203]
+    - __type__: class
+      expression: ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+      group: TEMPWINTER
+      name: -15 -10
+      styles:
+      - __type__: style
+        color: [153, 254, 101]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPWINTER
+      name: -10 -5
+      styles:
+      - __type__: style
+        color: [255, 255, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPWINTER
+      name: -5 0
+      styles:
+      - __type__: style
+        color: [254, 153, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPWINTER
+      name: 0 5
+      styles:
+      - __type__: style
+        color: [254, 50, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPWINTER
+      name: 5 10
+      styles:
+      - __type__: style
+        color: [211, 0, 0]
+    - __type__: class
+      expression: ( [pixel] >= 10 )
+      group: TEMPWINTER
+      name: 10 15
+      styles:
+      - __type__: style
+        color: [127, 0, 0]
+    - __type__: class
+      expression: ( [pixel] < -40 )
+      group: TEMPWINTER-LINEAR
+      name: <= -40
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 127]
+        datarange: [-100, -40.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )
+      group: TEMPWINTER-LINEAR
+      name: -40 -35
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 127, 0, 0, 203]
+        datarange: [-40.0, -35.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+      group: TEMPWINTER-LINEAR
+      name: -35 -30
+      styles:
+      - __type__: style
+        colorrange: [0, 0, 203, 0, 40, 254]
+        datarange: [-35.0, -30.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+      group: TEMPWINTER-LINEAR
+      name: -30 -25
+      styles:
+      - __type__: style
+        colorrange: [0, 40, 254, 0, 155, 254]
+        datarange: [-30.0, -25.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+      group: TEMPWINTER-LINEAR
+      name: -25 -20
+      styles:
+      - __type__: style
+        colorrange: [0, 155, 254, 13, 253, 241]
+        datarange: [-25.0, -20.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+      group: TEMPWINTER-LINEAR
+      name: -20 -15
+      styles:
+      - __type__: style
+        colorrange: [13, 253, 241, 106, 253, 148]
+        datarange: [-20.0, -15.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+      group: TEMPWINTER-LINEAR
+      name: -15 -10
+      styles:
+      - __type__: style
+        colorrange: [106, 253, 148, 199, 254, 55]
+        datarange: [-15.0, -10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPWINTER-LINEAR
+      name: -10 -5
+      styles:
+      - __type__: style
+        colorrange: [199, 254, 55, 254, 217, 0]
+        datarange: [-10.0, -5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPWINTER-LINEAR
+      name: -5 0
+      styles:
+      - __type__: style
+        colorrange: [254, 217, 0, 254, 125, 0]
+        datarange: [-5.0, 0.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPWINTER-LINEAR
+      name: 0 5
+      styles:
+      - __type__: style
+        colorrange: [254, 125, 0, 254, 32, 0]
+        datarange: [0.0, 5.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPWINTER-LINEAR
+      name: 5 10
+      styles:
+      - __type__: style
+        colorrange: [254, 32, 0, 203, 0, 0]
+        datarange: [5.0, 10.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 10 ) AND ( [pixel] <= 15 ) )
+      group: TEMPWINTER-LINEAR
+      name: 10 15
+      styles:
+      - __type__: style
+        colorrange: [203, 0, 0, 127, 0, 0]
+        datarange: [10.0, 15.0]
+    - __type__: class
+      expression: ( [pixel] >= 15 )
+      group: TEMPWINTER-LINEAR
+      name: '>= 15'
+      styles:
+      - __type__: style
+        colorrange: [127, 0, 0, 127, 0, 0]
+        datarange: [15.0, 50.0]
+    - __type__: class
+      expression: ( [pixel] < -35 )
+      group: TEMPERATURE
+      name: -40 -35
+      styles:
+      - __type__: style
+        color: [0, 0, 127]
+    - __type__: class
+      expression: ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+      group: TEMPERATURE
+      name: -35 -30
+      styles:
+      - __type__: style
+        color: [0, 0, 183]
+    - __type__: class
+      expression: ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+      group: TEMPERATURE
+      name: -30 -25
+      styles:
+      - __type__: style
+        color: [0, 0, 239]
+    - __type__: class
+      expression: ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+      group: TEMPERATURE
+      name: -25 -20
+      styles:
+      - __type__: style
+        color: [0, 63, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+      group: TEMPERATURE
+      name: '-20 -15 '
+      styles:
+      - __type__: style
+        color: [0, 147, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+      group: TEMPERATURE
+      name: -15 -10
+      styles:
+      - __type__: style
+        color: [0, 231, 254]
+    - __type__: class
+      expression: ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+      group: TEMPERATURE
+      name: -10 -5
+      styles:
+      - __type__: style
+        color: [51, 253, 203]
+    - __type__: class
+      expression: ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+      group: TEMPERATURE
+      name: -5  0
+      styles:
+      - __type__: style
+        color: [119, 253, 135]
+    - __type__: class
+      expression: ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+      group: TEMPERATURE
+      name: 0 5
+      styles:
+      - __type__: style
+        color: [187, 254, 67]
+    - __type__: class
+      expression: ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+      group: TEMPERATURE
+      name: 5 10
+      styles:
+      - __type__: style
+        color: [255, 255, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+      group: TEMPERATURE
+      name: 10 15
+      styles:
+      - __type__: style
+        color: [254, 187, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+      group: TEMPERATURE
+      name: 15 20
+      styles:
+      - __type__: style
+        color: [254, 119, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+      group: TEMPERATURE
+      name: 20 25
+      styles:
+      - __type__: style
+        color: [254, 50, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+      group: TEMPERATURE
+      name: 25 30
+      styles:
+      - __type__: style
+        color: [239, 0, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+      group: TEMPERATURE
+      name: 30 35
+      styles:
+      - __type__: style
+        color: [183, 0, 0]
+    - __type__: class
+      expression: ( [pixel] >= 35 )
+      group: TEMPERATURE
+      name: 35 40
+      styles:
+      - __type__: style
+        color: [127, 0, 0]
+    classgroup: TEMPERATURE-LINEAR
+    data: 
+      - ''
+    debug: 5
+    metadata:
+      geomet_ows_http_max_age: 10800
+      gml_include_items: all
+      ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+      ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+      ows_authorityurl_href: https://dd.weather.gc.ca
+      ows_authorityurl_name: msc
+      ows_extent: -180 -90.075 179.925 90.075
+      ows_geomtype: Geometry
+      ows_identifier_authority: msc
+      ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+      ows_include_items: all
+      ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+      ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+      ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+      ows_metadataurl_format: text/xml
+      ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+      ows_metadataurl_type: TC211
+      ows_size: 2400 1201
+      ows_title: GDPS.ETA - Air temperature [°C]
+      ows_title_fr: GDPS.ETA - Température de l'air [°C]
+      wcs_enable_request: '*'
+      wcs_label: GDPS.ETA - Air temperature [°C]
+      wcs_label_fr: GDPS.ETA - Température de l'air [°C]
+      wcs_rangeset_label: default range
+      wcs_rangeset_name: default range
+      wfs_metadataurl_format: XML
+      wms_available_intervals: "2020-01-14T00:00:00Z,2020-01-14T03:00:00Z,2020-01-14T06:00:00Z,2020-01-14T09:00:00Z,2020-01-14T12:00:00Z,2020-01-14T15:00:00Z,2020-01-14T18:00:00Z,2020-01-14T21:00:00Z,2020-01-15T00:00:00Z,2020-01-15T03:00:00Z,2020-01-15T06:00:00Z,2020-01-15T09:00:00Z,2020-01-15T12:00:00Z,2020-01-15T15:00:00Z,2020-01-15T18:00:00Z,2020-01-15T21:00:00Z,2020-01-16T00:00:00Z,2020-01-16T03:00:00Z,2020-01-16T06:00:00Z,2020-01-16T09:00:00Z,2020-01-16T12:00:00Z,2020-01-16T15:00:00Z,2020-01-16T18:00:00Z,2020-01-16T21:00:00Z,2020-01-17T00:00:00Z,2020-01-17T03:00:00Z,2020-01-17T06:00:00Z,2020-01-17T09:00:00Z,2020-01-17T12:00:00Z,2020-01-17T15:00:00Z,2020-01-17T18:00:00Z,2020-01-17T21:00:00Z,2020-01-18T00:00:00Z,2020-01-18T03:00:00Z,2020-01-18T06:00:00Z,2020-01-18T09:00:00Z,2020-01-18T12:00:00Z,2020-01-18T15:00:00Z,2020-01-18T18:00:00Z,2020-01-18T21:00:00Z,2020-01-19T00:00:00Z,2020-01-19T03:00:00Z,2020-01-19T06:00:00Z,2020-01-19T09:00:00Z,2020-01-19T12:00:00Z,2020-01-19T15:00:00Z,2020-01-19T18:00:00Z,2020-01-19T21:00:00Z,2020-01-20T00:00:00Z,2020-01-20T03:00:00Z,2020-01-20T06:00:00Z,2020-01-20T09:00:00Z,2020-01-20T12:00:00Z,2020-01-20T15:00:00Z,2020-01-20T18:00:00Z,2020-01-20T21:00:00Z,2020-01-21T00:00:00Z,2020-01-21T03:00:00Z,2020-01-21T06:00:00Z,2020-01-21T09:00:00Z,2020-01-21T12:00:00Z,2020-01-21T15:00:00Z,2020-01-21T18:00:00Z,2020-01-21T21:00:00Z,2020-01-22T00:00:00Z,2020-01-22T03:00:00Z,2020-01-22T06:00:00Z,2020-01-22T09:00:00Z,2020-01-22T12:00:00Z,2020-01-22T15:00:00Z,2020-01-22T18:00:00Z,2020-01-22T21:00:00Z,2020-01-23T00:00:00Z,2020-01-23T03:00:00Z,2020-01-23T06:00:00Z,2020-01-23T09:00:00Z,2020-01-23T12:00:00Z,2020-01-23T15:00:00Z,2020-01-23T18:00:00Z,2020-01-23T21:00:00Z,2020-01-24T00:00:00Z"
+      wms_dimensionlist: reference_time
+      wms_layer_group: /Global Deterministic Prediction System (GDPS)/GDPS (15 km)
+      wms_layer_group_fr: /Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
+      wms_reference_time_default: '2020-01-14T00:00:00Z'
+      wms_reference_time_extent: 2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H
+      wms_reference_time_item: reference_datetime
+      wms_reference_time_units: ISO8601
+      wms_timedefault: '2020-01-24T00:00:00Z'
+      wms_timeextent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+    name: GDPS.ETA_TT
+    processing: 
+      - SCALE_BUCKETS=1000
+    projection: 
+      - proj=longlat
+      - lon_wrap=0
+      - R=6371229
+      - no_defs
+    template: ttt.html
+    tolerance: 15
+    type: raster
+  GDPS.ETA_UU:
+    __type__: layer
+    classes:
+    - __type__: class
+      expression: ( [uv_length] = 270 )
+      group: WINDARROW
+      name: 0 kts
+      styles:
+      - __type__: style
+        color: [0, 0, 127]
+        size: 12
+        symbol: circle_wind
+    - __type__: class
+      expression: ( ( [uv_length] > 0.0 ) AND ( [uv_length] < 2.57 ) )
+      group: WINDARROW
+      name: 0 5 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 0, 127]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 2.57 ) AND ( [uv_length] < 5.14 ) )
+      group: WINDARROW
+      name: 5 10 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 0, 203]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 5.14 ) AND ( [uv_length] < 7.72 ) )
+      group: WINDARROW
+      name: 10 15 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 40, 254]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 7.72 ) AND ( [uv_length] < 10.29 ) )
+      group: WINDARROW
+      name: 15 20 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 155, 254]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 10.29 ) AND ( [uv_length] < 12.86 ) )
+      group: WINDARROW
+      name: 20 25 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [13, 253, 241]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 12.86 ) AND ( [uv_length] < 15.43 ) )
+      group: WINDARROW
+      name: 25 30 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [106, 253, 148]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 15.43 ) AND ( [uv_length] < 18.01 ) )
+      group: WINDARROW
+      name: 30 35 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [199, 254, 55]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 18.01 ) AND ( [uv_length] < 20.58 ) )
+      group: WINDARROW
+      name: 35 40 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 217, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 20.58 ) AND ( [uv_length] < 23.15 ) )
+      group: WINDARROW
+      name: 40 45 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 125, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 23.15 ) AND ( [uv_length] < 25.72 ) )
+      group: WINDARROW
+      name: 45 50 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 32, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 25.72 ) AND ( [uv_length] < 28.29 ) )
+      group: WINDARROW
+      name: 50 55 kts
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [203, 0, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 28.29 ) AND ( [uv_length] < 500 ) )
+      group: WINDARROW
+      name: 55 kts +
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [127, 0, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( [uv_length] = 0.0 )
+      group: WINDARROWKMH
+      name: 0 km/h
+      styles:
+      - __type__: style
+        color: [0, 0, 127]
+        size: 12
+        symbol: circle_wind
+    - __type__: class
+      expression: ( ( [uv_length] > 0.0 ) AND ( [uv_length] < 2.78 ) )
+      group: WINDARROWKMH
+      name: 0 10 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 0, 127]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 2.78 ) AND ( [uv_length] < 5.56 ) )
+      group: WINDARROWKMH
+      name: 10 20 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 0, 203]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 5.56 ) AND ( [uv_length] < 8.33 ) )
+      group: WINDARROWKMH
+      name: 20 30 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 40, 254]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 8.33 ) AND ( [uv_length] < 11.11 ) )
+      group: WINDARROWKMH
+      name: 30 40 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [0, 155, 254]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 11.11 ) AND ( [uv_length] < 13.89 ) )
+      group: WINDARROWKMH
+      name: 40 50 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [13, 253, 241]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 13.89 ) AND ( [uv_length] < 16.67 ) )
+      group: WINDARROWKMH
+      name: 50 60 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [106, 253, 148]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 16.67 ) AND ( [uv_length] < 19.44 ) )
+      group: WINDARROWKMH
+      name: 60 70 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [199, 254, 55]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 19.44 ) AND ( [uv_length] < 22.22 ) )
+      group: WINDARROWKMH
+      name: 70 80 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 217, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 22.22 ) AND ( [uv_length] < 25.0 ) )
+      group: WINDARROWKMH
+      name: 80 90 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 125, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 25.0 ) AND ( [uv_length] < 27.78 ) )
+      group: WINDARROWKMH
+      name: 90 100 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [254, 32, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 27.78 ) AND ( [uv_length] < 30.56 ) )
+      group: WINDARROWKMH
+      name: 100 110 km/h
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [203, 0, 0]
+        size: 12
+        symbol: arrow_wind
+    - __type__: class
+      expression: ( ( [uv_length] >= 30.56 ) AND ( [uv_length] < 500 ) )
+      group: WINDARROWKMH
+      name: 110 km/h +
+      styles:
+      - __type__: style
+        angle: '[uv_angle]'
+        color: [127, 0, 0]
+        size: 12
+        symbol: arrow_wind
+    classgroup: WINDARROWKNOTS
+    connectiontype: uvraster
+    data: ['']
+    debug: 5
+    extent: -180 -90.075 179.925 90.075
+    metadata:
+      geomet_ows_http_max_age: 10800
+      gml_include_items: all
+      ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+      ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+      ows_authorityurl_href: https://dd.weather.gc.ca
+      ows_authorityurl_name: msc
+      ows_extent: -180 -90.075 179.925 90.075
+      ows_geomtype: Geometry
+      ows_identifier_authority: msc
+      ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+      ows_include_items: all
+      ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data
+      ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+      ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+      ows_metadataurl_format: text/xml
+      ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+      ows_metadataurl_type: TC211
+      ows_size: 2400 1201
+      ows_title: GDPS.ETA - Winds [m/s]
+      ows_title_fr: GDPS.ETA - Vents [m/s]
+      wcs_enable_request: '!*'
+      wcs_label: GDPS.ETA - Winds [m/s]
+      wcs_label_fr: GDPS.ETA - Vents [m/s]
+      wcs_rangeset_label: default range
+      wcs_rangeset_name: default range
+      wfs_enable_request: '!*'
+      wfs_metadataurl_format: XML
+      wms_available_intervals: "2020-01-14T00:00:00Z,2020-01-14T03:00:00Z,2020-01-14T06:00:00Z,2020-01-14T09:00:00Z,2020-01-14T12:00:00Z,2020-01-14T15:00:00Z,2020-01-14T18:00:00Z,2020-01-14T21:00:00Z,2020-01-15T00:00:00Z,2020-01-15T03:00:00Z,2020-01-15T06:00:00Z,2020-01-15T09:00:00Z,2020-01-15T12:00:00Z,2020-01-15T15:00:00Z,2020-01-15T18:00:00Z,2020-01-15T21:00:00Z,2020-01-16T00:00:00Z,2020-01-16T03:00:00Z,2020-01-16T06:00:00Z,2020-01-16T09:00:00Z,2020-01-16T12:00:00Z,2020-01-16T15:00:00Z,2020-01-16T18:00:00Z,2020-01-16T21:00:00Z,2020-01-17T00:00:00Z,2020-01-17T03:00:00Z,2020-01-17T06:00:00Z,2020-01-17T09:00:00Z,2020-01-17T12:00:00Z,2020-01-17T15:00:00Z,2020-01-17T18:00:00Z,2020-01-17T21:00:00Z,2020-01-18T00:00:00Z,2020-01-18T03:00:00Z,2020-01-18T06:00:00Z,2020-01-18T09:00:00Z,2020-01-18T12:00:00Z,2020-01-18T15:00:00Z,2020-01-18T18:00:00Z,2020-01-18T21:00:00Z,2020-01-19T00:00:00Z,2020-01-19T03:00:00Z,2020-01-19T06:00:00Z,2020-01-19T09:00:00Z,2020-01-19T12:00:00Z,2020-01-19T15:00:00Z,2020-01-19T18:00:00Z,2020-01-19T21:00:00Z,2020-01-20T00:00:00Z,2020-01-20T03:00:00Z,2020-01-20T06:00:00Z,2020-01-20T09:00:00Z,2020-01-20T12:00:00Z,2020-01-20T15:00:00Z,2020-01-20T18:00:00Z,2020-01-20T21:00:00Z,2020-01-21T00:00:00Z,2020-01-21T03:00:00Z,2020-01-21T06:00:00Z,2020-01-21T09:00:00Z,2020-01-21T12:00:00Z,2020-01-21T15:00:00Z,2020-01-21T18:00:00Z,2020-01-21T21:00:00Z,2020-01-22T00:00:00Z,2020-01-22T03:00:00Z,2020-01-22T06:00:00Z,2020-01-22T09:00:00Z,2020-01-22T12:00:00Z,2020-01-22T15:00:00Z,2020-01-22T18:00:00Z,2020-01-22T21:00:00Z,2020-01-23T00:00:00Z,2020-01-23T03:00:00Z,2020-01-23T06:00:00Z,2020-01-23T09:00:00Z,2020-01-23T12:00:00Z,2020-01-23T15:00:00Z,2020-01-23T18:00:00Z,2020-01-23T21:00:00Z,2020-01-24T00:00:00Z"
+      wms_dimensionlist: reference_time
+      wms_layer_group: /Global Deterministic Prediction System (GDPS)/GDPS (15 km)
+      wms_layer_group_fr: /Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
+      wms_reference_time_default: '2020-01-14T00:00:00Z'
+      wms_reference_time_extent: 2020-01-12T00:00:00Z/2020-01-14T00:00:00Z/PT12H
+      wms_reference_time_item: reference_datetime
+      wms_reference_time_units: ISO8601
+      wms_timedefault: '2020-01-24T00:00:00Z'
+      wms_timeextent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+    name: GDPS.ETA_UU
+    processing: ['BANDS=1,2', UV_SPACING=20, UV_SIZE_SCALE=1, SCALE_BUCKETS=1000]
+    projection: [proj=longlat, lon_wrap=0, R=6371229, no_defs]
+    template: ttt.html
+    tolerance: 15
+    type: point
+  GDPS.ETA_GZ:
+    __type__: layer
+    classes:
+    - __type__: class
+      expression: ( [pixel] < -100.0 )
+      group: GPHEIGHT
+      name: < -10 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 127
+        - 0
+        - 0
+        - 127
+        datarange:
+        - -1000.0
+        - -100.0
+    - __type__: class
+      expression: ( ( [pixel] >= -100.0 ) AND ( [pixel] < 140.0 ) )
+      group: GPHEIGHT
+      name: -10 14 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 127
+        - 0
+        - 0
+        - 153
+        datarange:
+        - -100.0
+        - 140.0
+    - __type__: class
+      expression: ( ( [pixel] >= 140.0 ) AND ( [pixel] < 380.0 ) )
+      group: GPHEIGHT
+      name: 14 38 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 153
+        - 0
+        - 0
+        - 179
+        datarange:
+        - 140.0
+        - 380.0
+    - __type__: class
+      expression: ( ( [pixel] >= 380.0 ) AND ( [pixel] < 620.0 ) )
+      group: GPHEIGHT
+      name: 38 62 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 179
+        - 0
+        - 0
+        - 206
+        datarange:
+        - 380.0
+        - 620.0
+    - __type__: class
+      expression: ( ( [pixel] >= 620.0 ) AND ( [pixel] < 860.0 ) )
+      group: GPHEIGHT
+      name: 62 86 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 206
+        - 0
+        - 0
+        - 232
+        datarange:
+        - 620.0
+        - 860.0
+    - __type__: class
+      expression: ( ( [pixel] >= 860.0 ) AND ( [pixel] < 1100.0 ) )
+      group: GPHEIGHT
+      name: 86 110 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 0
+        - 232
+        - 0
+        - 10
+        - 254
+        datarange:
+        - 860.0
+        - 1100.0
+    - __type__: class
+      expression: ( ( [pixel] >= 1100.0 ) AND ( [pixel] < 1340.0 ) )
+      group: GPHEIGHT
+      name: 110 134 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 10
+        - 254
+        - 0
+        - 63
+        - 254
+        datarange:
+        - 1100.0
+        - 1340.0
+    - __type__: class
+      expression: ( ( [pixel] >= 1340.0 ) AND ( [pixel] < 1580.0 ) )
+      group: GPHEIGHT
+      name: 134 158 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 63
+        - 254
+        - 0
+        - 115
+        - 254
+        datarange:
+        - 1340.0
+        - 1580.0
+    - __type__: class
+      expression: ( ( [pixel] >= 1580.0 ) AND ( [pixel] < 1820.0 ) )
+      group: GPHEIGHT
+      name: 158 182 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 115
+        - 254
+        - 0
+        - 168
+        - 254
+        datarange:
+        - 1580.0
+        - 1820.0
+    - __type__: class
+      expression: ( ( [pixel] >= 1820.0 ) AND ( [pixel] < 2060.0 ) )
+      group: GPHEIGHT
+      name: 182 206 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 168
+        - 254
+        - 0
+        - 221
+        - 254
+        datarange:
+        - 1820.0
+        - 2060.0
+    - __type__: class
+      expression: ( ( [pixel] >= 2060.0 ) AND ( [pixel] < 2300.0 ) )
+      group: GPHEIGHT
+      name: 206 230 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 0
+        - 221
+        - 254
+        - 21
+        - 253
+        - 233
+        datarange:
+        - 2060.0
+        - 2300.0
+    - __type__: class
+      expression: ( ( [pixel] >= 2300.0 ) AND ( [pixel] < 2540.0 ) )
+      group: GPHEIGHT
+      name: 230 254 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 21
+        - 253
+        - 233
+        - 74
+        - 253
+        - 180
+        datarange:
+        - 2300.0
+        - 2540.0
+    - __type__: class
+      expression: ( ( [pixel] >= 2540.0 ) AND ( [pixel] < 2780.0 ) )
+      group: GPHEIGHT
+      name: 254 278 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 74
+        - 253
+        - 180
+        - 127
+        - 254
+        - 127
+        datarange:
+        - 2540.0
+        - 2780.0
+    - __type__: class
+      expression: ( ( [pixel] >= 2780.0 ) AND ( [pixel] < 3020.0 ) )
+      group: GPHEIGHT
+      name: 278 302 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 127
+        - 254
+        - 127
+        - 180
+        - 254
+        - 74
+        datarange:
+        - 2780.0
+        - 3020.0
+    - __type__: class
+      expression: ( ( [pixel] >= 3020.0 ) AND ( [pixel] < 3260.0 ) )
+      group: GPHEIGHT
+      name: 302 326 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 180
+        - 254
+        - 74
+        - 233
+        - 254
+        - 21
+        datarange:
+        - 3020.0
+        - 3260.0
+    - __type__: class
+      expression: ( ( [pixel] >= 3260.0 ) AND ( [pixel] < 3500.0 ) )
+      group: GPHEIGHT
+      name: 326 350 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 233
+        - 254
+        - 21
+        - 254
+        - 223
+        - 0
+        datarange:
+        - 3260.0
+        - 3500.0
+    - __type__: class
+      expression: ( ( [pixel] >= 3500.0 ) AND ( [pixel] < 3740.0 ) )
+      group: GPHEIGHT
+      name: 350 374 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 254
+        - 223
+        - 0
+        - 254
+        - 170
+        - 0
+        datarange:
+        - 3500.0
+        - 3740.0
+    - __type__: class
+      expression: ( ( [pixel] >= 3740.0 ) AND ( [pixel] < 3980.0 ) )
+      group: GPHEIGHT
+      name: 374 398 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 254
+        - 170
+        - 0
+        - 254
+        - 116
+        - 0
+        datarange:
+        - 3740.0
+        - 3980.0
+    - __type__: class
+      expression: ( ( [pixel] >= 3980.0 ) AND ( [pixel] < 4220.0 ) )
+      group: GPHEIGHT
+      name: 398 422 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 254
+        - 116
+        - 0
+        - 254
+        - 63
+        - 0
+        datarange:
+        - 3980.0
+        - 4220.0
+    - __type__: class
+      expression: ( ( [pixel] >= 4220.0 ) AND ( [pixel] < 4460.0 ) )
+      group: GPHEIGHT
+      name: 422 446 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 254
+        - 63
+        - 0
+        - 254
+        - 10
+        - 0
+        datarange:
+        - 4220.0
+        - 4460.0
+    - __type__: class
+      expression: ( ( [pixel] >= 4460.0 ) AND ( [pixel] < 4700.0 ) )
+      group: GPHEIGHT
+      name: 446 470 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 254
+        - 10
+        - 0
+        - 232
+        - 0
+        - 0
+        datarange:
+        - 4460.0
+        - 4700.0
+    - __type__: class
+      expression: ( ( [pixel] >= 4700.0 ) AND ( [pixel] < 4940.0 ) )
+      group: GPHEIGHT
+      name: 470 494 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 232
+        - 0
+        - 0
+        - 206
+        - 0
+        - 0
+        datarange:
+        - 4700.0
+        - 4940.0
+    - __type__: class
+      expression: ( ( [pixel] >= 4940.0 ) AND ( [pixel] < 5180.0 ) )
+      group: GPHEIGHT
+      name: 494 518 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 206
+        - 0
+        - 0
+        - 179
+        - 0
+        - 0
+        datarange:
+        - 4940.0
+        - 5180.0
+    - __type__: class
+      expression: ( ( [pixel] >= 5180.0 ) AND ( [pixel] < 5420.0 ) )
+      group: GPHEIGHT
+      name: 518 542 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 179
+        - 0
+        - 0
+        - 153
+        - 0
+        - 0
+        datarange:
+        - 5180.0
+        - 5420.0
+    - __type__: class
+      expression: ( ( [pixel] >= 5420.0 ) AND ( [pixel] < 5660.0 ) )
+      group: GPHEIGHT
+      name: 542 566 dam
+      styles:
+      - __type__: style
+        colorrange:
+        - 153
+        - 0
+        - 0
+        - 127
+        - 0
+        - 0
+        datarange:
+        - 5420.0
+        - 5660.0
+    - __type__: class
+      expression: ( [pixel] >= 5660.0 )
+      group: GPHEIGHT
+      name: '>= 566 dam'
+      styles:
+      - __type__: style
+        colorrange:
+        - 127
+        - 0
+        - 0
+        - 127
+        - 0
+        - 0
+        datarange:
+        - 5660.0
+        - 7000.0
+    classgroup: GPHEIGHT
+    data:
+    - ''
+    debug: 5
+    metadata:
+      geomet_ows_http_max_age: 10800
+      gml_include_items: all
+      ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics
+        calculations to arrive at deterministic predictions of atmospheric elements from
+        the current day out to 10 days into the future. Atmospheric elements include temperature,
+        precipitation, cloud cover, wind speed and direction, humidity and others. This
+        product contains raw numerical results of these calculations. Geographical coverage
+        is global. Data is available at horizontal resolution of about 15 km up to 33
+        vertical levels. Predictions are performed twice a day.
+      ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des
+        calculs physiques afin de produire des prévisions déterministes d'éléments de
+        l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère
+        incluent notamment la température, les précipitations, la couverture nuageuse,
+        la vitesse et direction des vents et l'humidité. Ce produit contient les résultats
+        numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution
+        spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33
+        niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+      ows_authorityurl_href: https://dd.weather.gc.ca
+      ows_authorityurl_name: msc
+      ows_extent: -180 -90.075 179.925 90.075
+      ows_geomtype: Geometry
+      ows_identifier_authority: msc
+      ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+      ows_include_items: all
+      ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation,
+        Air temperature, Humidity, Snow, Wind, Meteorological data
+      ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques,
+        Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+      ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+      ows_metadataurl_format: text/xml
+      ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+      ows_metadataurl_type: TC211
+      ows_size: 2400 1201
+      ows_title: GDPS.ETA - Geopotential Height [gpm]
+      ows_title_fr: GDPS.ETA - Hauteur géopotentielle [gpm]
+      wcs_enable_request: '*'
+      wcs_label: GDPS.ETA - Geopotential Height [gpm]
+      wcs_label_fr: GDPS.ETA - Hauteur géopotentielle [gpm]
+      wcs_rangeset_label: default range
+      wcs_rangeset_name: default range
+      wfs_metadataurl_format: XML
+      wms_dimensionlist: reference_time
+      wms_layer_group: /Global Deterministic Prediction System (GDPS)/GDPS (15 km)
+      wms_layer_group_fr: /Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
+      wms_reference_time_default: '2021-12-13T00:00:00Z'
+      wms_reference_time_extent: 2021-12-11T00:00:00Z/2021-12-13T00:00:00Z/PT12H
+      wms_reference_time_item: reference_datetime
+      wms_reference_time_units: ISO8601
+      wms_timedefault: '2021-12-13T00:00:00Z'
+      wms_timeextent: 2021-12-13T00:00:00Z/2021-12-13T00:00:00Z/PT0H
+    name: GDPS.ETA_GZ
+    processing:
+    - SCALE_BUCKETS=1000
+    projection:
+    - proj=longlat
+    - lon_wrap=0
+    - R=6371229
+    - no_defs
+    template: ttt.html
+    tolerance: 15
+    type: raster
+  GDPS.ETA_GZ-CONTOUR:
+    GEOMTRANSFORM: (smoothsia([shape],1,1))
+    LABELITEM: '"pixel"'
+    UNITS: METERS
+    __type__: layer
+    classes:
+    - __type__: class
+      expression: ( [pixel] = 0 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '0'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 60 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '60'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 120 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '120'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 180 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '180'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 240 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '240'
+        type: truetype
+      name: '240'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 300 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '300'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 360 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '360'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 420 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '420'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 480 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '480'
+        type: truetype
+      name: '480'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 540 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '540'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 600 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '600'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 660 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '660'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 720 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '720'
+        type: truetype
+      name: '720'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 780 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '780'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 840 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '840'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 900 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '900'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 960 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '960'
+        type: truetype
+      name: '960'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 1020 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1020'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1080 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1080'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1140 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1140'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1200 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '1200'
+        type: truetype
+      name: '1200'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 1260 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1260'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1320 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1320'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1380 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1380'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1440 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '1440'
+        type: truetype
+      name: '1440'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 1500 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1500'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1560 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1560'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1620 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1620'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1680 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '1680'
+        type: truetype
+      name: '1680'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 1740 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1740'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1800 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1800'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1860 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1860'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 1920 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '1920'
+        type: truetype
+      name: '1920'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 1980 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '1980'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2040 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2040'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2100 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2100'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2160 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '2160'
+        type: truetype
+      name: '2160'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 2220 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2220'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2280 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2280'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2340 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2340'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2400 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '2400'
+        type: truetype
+      name: '2400'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 2460 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2460'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2520 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2520'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2580 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2580'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2640 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '2640'
+        type: truetype
+      name: '2640'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 2700 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2700'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2760 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2760'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2820 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2820'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 2880 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '2880'
+        type: truetype
+      name: '2880'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 2940 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '2940'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3000 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3000'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3060 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3060'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3120 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '3120'
+        type: truetype
+      name: '3120'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 3180 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3180'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3240 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3240'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3300 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3300'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3360 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '3360'
+        type: truetype
+      name: '3360'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 3420 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3420'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3480 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3480'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3540 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3540'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3600 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '3600'
+        type: truetype
+      name: '3600'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 3660 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3660'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3720 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3720'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3780 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3780'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3840 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '3840'
+        type: truetype
+      name: '3840'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 3900 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3900'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 3960 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '3960'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4020 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4020'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4080 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '4080'
+        type: truetype
+      name: '4080'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 4140 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4140'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4200 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4200'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4260 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4260'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4320 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '4320'
+        type: truetype
+      name: '4320'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 4380 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4380'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4440 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4440'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4500 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4500'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4560 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '4560'
+        type: truetype
+      name: '4560'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 4620 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4620'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4680 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4680'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4740 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4740'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4800 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '4800'
+        type: truetype
+      name: '4800'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 4860 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4860'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4920 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4920'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 4980 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '4980'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 5040 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '5040'
+        type: truetype
+      name: '5040'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 5100 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '5100'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 5160 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '5160'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 5220 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '5220'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 5280 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '5280'
+        type: truetype
+      name: '5280'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 5520 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '5520'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 5760 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '5760'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 6000 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '6000'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 6240 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '6240'
+        type: truetype
+      name: '6240'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 6480 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '6480'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 6720 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '6720'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 6960 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '6960'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 7200 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '7200'
+        type: truetype
+      name: '7200'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 7440 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '7440'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 7680 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '7680'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 7920 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '7920'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 8160 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '8160'
+        type: truetype
+      name: '8160'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 8400 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '8400'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 8640 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '8640'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 8880 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '8880'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 9120 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '9120'
+        type: truetype
+      name: '9120'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 9360 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '9360'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 9600 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '9600'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 9840 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '9840'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 10080 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '10080'
+        type: truetype
+      name: '10080'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 10320 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '10320'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 10560 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '10560'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 10800 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '10800'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 11040 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '11040'
+        type: truetype
+      name: '11040'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 11280 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '11280'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 11520 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '11520'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 11760 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '11760'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 12000 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '12000'
+        type: truetype
+      name: '12000'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 12240 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '12240'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 12480 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '12480'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 12720 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '12720'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 12960 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '12960'
+        type: truetype
+      name: '12960'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 13200 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '13200'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 13440 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '13440'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 13680 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '13680'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 13920 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '13920'
+        type: truetype
+      name: '13920'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 14160 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '14160'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 14400 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '14400'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 14640 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '14640'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 14880 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '14880'
+        type: truetype
+      name: '14880'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 15120 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '15120'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 15360 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '15360'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 15600 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '15600'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 15840 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '15840'
+        type: truetype
+      name: '15840'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 16080 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '16080'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 16320 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '16320'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 16560 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '16560'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 16800 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '16800'
+        type: truetype
+      name: '16800'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 17040 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '17040'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 17280 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '17280'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 17520 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '17520'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 17760 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '17760'
+        type: truetype
+      name: '17760'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 18000 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '18000'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 18240 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '18240'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 18480 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '18480'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 18720 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '18720'
+        type: truetype
+      name: '18720'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 18960 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '18960'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 19200 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '19200'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 19440 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '19440'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 19680 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '19680'
+        type: truetype
+      name: '19680'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 19920 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '19920'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 20160 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '20160'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 20400 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '20400'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    - __type__: class
+      expression: ( [pixel] = 20640 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      labels:
+      - __type__: label
+        font: arial
+        partials: false
+        position: AUTO
+        size: 12
+        text: '20640'
+        type: truetype
+      name: '20640'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 3
+    - __type__: class
+      expression: ( [pixel] = 20880 )
+      group: GEOPOTENTIALHEIGHT_LINE
+      name: '20880'
+      styles:
+      - __type__: style
+        color:
+        - 0
+        - 0
+        - 0
+        width: 1
+    classgroup: GEOPOTENTIALHEIGHT_LINE
+    data:
+    - ''
+    debug: 5
+    metadata:
+      geomet_ows_http_max_age: 10800
+      gml_include_items: all
+      ows_abstract: The Global Deterministic Prediction System (GDPS) carries out physics
+        calculations to arrive at deterministic predictions of atmospheric elements from
+        the current day out to 10 days into the future. Atmospheric elements include temperature,
+        precipitation, cloud cover, wind speed and direction, humidity and others. This
+        product contains raw numerical results of these calculations. Geographical coverage
+        is global. Data is available at horizontal resolution of about 15 km up to 33
+        vertical levels. Predictions are performed twice a day.
+      ows_abstract_fr: Le Système global de prévision déterministe (SPGD) procède à des
+        calculs physiques afin de produire des prévisions déterministes d'éléments de
+        l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère
+        incluent notamment la température, les précipitations, la couverture nuageuse,
+        la vitesse et direction des vents et l'humidité. Ce produit contient les résultats
+        numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution
+        spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33
+        niveaux verticaux. Les prévisions sont exécutées deux fois par jour.
+      ows_authorityurl_href: https://dd.weather.gc.ca
+      ows_authorityurl_name: msc
+      ows_extent: -180 -90.075 179.925 90.075
+      ows_geomtype: Geometry
+      ows_identifier_authority: msc
+      ows_identifier_value: urn:x-msc-smc:md:weather-meteo::nwp.gdps
+      ows_include_items: all
+      ows_keywordlist: Prediction, Global, Deterministic, Weather forecasts, Precipitation,
+        Air temperature, Humidity, Snow, Wind, Meteorological data
+      ows_keywordlist_fr: Prévision, Global, Déterministe, Prévisions météorologiques,
+        Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques
+      ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+      ows_metadataurl_format: text/xml
+      ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+      ows_metadataurl_type: TC211
+      ows_size: 2400 1201
+      ows_title: GDPS.ETA - Geopotential Height (contour) [gpm]
+      ows_title_fr: GDPS.ETA - Hauteur géopotentielle (contour) [gpm]
+      wcs_enable_request: '*'
+      wcs_label: GDPS.ETA - Geopotential Height (contour) [gpm]
+      wcs_label_fr: GDPS.ETA - Hauteur géopotentielle (contour) [gpm]
+      wcs_rangeset_label: default range
+      wcs_rangeset_name: default range
+      wfs_enable_request: '!*'
+      wfs_metadataurl_format: XML
+      wms_dimensionlist: reference_time
+      wms_layer_group: /Global Deterministic Prediction System (GDPS)/GDPS (15 km)
+      wms_layer_group_fr: /Système Global de Prévision Déterministe (SGPD)/SGPD (15 km)
+      wms_reference_time_default: '2021-12-13T00:00:00Z'
+      wms_reference_time_extent: 2021-12-11T00:00:00Z/2021-12-13T00:00:00Z/PT12H
+      wms_reference_time_item: reference_datetime
+      wms_reference_time_units: ISO8601
+      wms_timedefault: '2021-12-13T00:00:00Z'
+      wms_timeextent: 2021-12-13T00:00:00Z/2021-12-13T00:00:00Z/PT0H
+    name: GDPS.ETA_GZ-CONTOUR
+    processing:
+    - BANDS=1
+    - CONTOUR_INTERVAL=10
+    - CONTOUR_ITEM=pixel
+    - SCALE_BUCKETS=1000
+    projection:
+    - proj=longlat
+    - lon_wrap=0
+    - R=6371229
+    - no_defs
+    template: ttt.html
+    tolerance: 15
+    type: line
+  RADAR_1KM_RRAI:
+    __type__: layer
+    classes:
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( 0.1 <= [pixel] ) AND ( [pixel] < 1.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 0.1 - 1.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [153, 204, 255, 0, 153, 255]
+        datarange: [0.1, 1.0]
+    - __type__: class
+      expression: ( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 1.0 - 2.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 153, 255, 0, 255, 102]
+        datarange: [1.0, 2.0]
+    - __type__: class
+      expression: ( ( 2.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 2.0 - 4.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 255, 102, 0, 204, 0]
+        datarange: [2.0, 4.0]
+    - __type__: class
+      expression: ( ( 4.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 4.0 - 8.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 204, 0, 0, 153, 0]
+        datarange: [4.0, 8.0]
+    - __type__: class
+      expression: ( ( 8.0 <= [pixel] ) AND ( [pixel] < 12.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 8.0 - 12.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 153, 0, 0, 102, 0]
+        datarange: [8.0, 12.0]
+    - __type__: class
+      expression: ( ( 12.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 12.0 - 16.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 102, 0, 255, 255, 51]
+        datarange: [12.0, 16.0]
+    - __type__: class
+      expression: ( ( 16.0 <= [pixel] ) AND ( [pixel] < 24.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 16.0 - 24.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 255, 51, 255, 204, 0]
+        datarange: [16.0, 24.0]
+    - __type__: class
+      expression: ( ( 24.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 24.0 - 32.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 204, 0, 255, 153, 0]
+        datarange: [24.0, 32.0]
+    - __type__: class
+      expression: ( ( 32.0 <= [pixel] ) AND ( [pixel] < 50.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 32.0 - 50.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 153, 0, 255, 102, 0]
+        datarange: [32.0, 50.0]
+    - __type__: class
+      expression: ( ( 50.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 50.0 - 64.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 102, 0, 255, 0, 0]
+        datarange: [50.0, 64.0]
+    - __type__: class
+      expression: ( ( 64.0 <= [pixel] ) AND ( [pixel] < 100.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 64.0 - 100.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 0, 0, 255, 2, 153]
+        datarange: [64.0, 100.0]
+    - __type__: class
+      expression: ( ( 100.0 <= [pixel] ) AND ( [pixel] < 125.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 100.0 - 125.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 2, 153, 153, 51, 204]
+        datarange: [100.0, 125.0]
+    - __type__: class
+      expression: ( ( 125.0 <= [pixel] ) AND ( [pixel] < 200.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: 125.0 - 200.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [153, 51, 204, 102, 0, 153]
+        datarange: [125.0, 200.0]
+    - __type__: class
+      expression: ( ( 200.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )
+      group: RADARURPPRECIPR14-LINEAR
+      name: '>= 200.0 (mm/h)'
+      styles:
+      - __type__: style
+        colorrange: [102, 0, 153, 51, 0, 77]
+        datarange: [200.0, 300.0]
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR8
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( 0.1 <= [pixel] ) AND ( [pixel] < 1.0 ) )
+      group: RADARURPPRECIPR8
+      name: 0.1 - 1.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [153, 255, 153]
+    - __type__: class
+      expression: ( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )
+      group: RADARURPPRECIPR8
+      name: 1.0 - 2.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [51, 255, 51]
+    - __type__: class
+      expression: ( ( 2.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )
+      group: RADARURPPRECIPR8
+      name: 2.0 - 8.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 153, 0]
+    - __type__: class
+      expression: ( ( 8.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )
+      group: RADARURPPRECIPR8
+      name: 8.0 - 16.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 102, 0]
+    - __type__: class
+      expression: ( ( 16.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )
+      group: RADARURPPRECIPR8
+      name: 16.0 - 32.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 102, 204]
+    - __type__: class
+      expression: ( ( 32.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )
+      group: RADARURPPRECIPR8
+      name: 32.0 - 64.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [153, 51, 204]
+    - __type__: class
+      expression: ( ( 64.0 <= [pixel] ) AND ( [pixel] < 125.0 ) )
+      group: RADARURPPRECIPR8
+      name: 64.0 - 125.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [102, 0, 153]
+    - __type__: class
+      expression: ( ( 125.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )
+      group: RADARURPPRECIPR8
+      name: '>= 125.0 (mm/h)'
+      styles:
+      - __type__: style
+        color: [51, 0, 102]
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( 0.1 <= [pixel] ) AND ( [pixel] < 1.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 0.1 - 1.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [153, 255, 153, 51, 255, 51]
+        datarange: [0.1, 1.0]
+    - __type__: class
+      expression: ( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 1.0 - 2.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [51, 255, 51, 0, 153, 0]
+        datarange: [1.0, 2.0]
+    - __type__: class
+      expression: ( ( 2.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 2.0 - 8.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 153, 0, 0, 102, 0]
+        datarange: [2.0, 8.0]
+    - __type__: class
+      expression: ( ( 8.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 8.0 - 16.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 102, 0, 255, 102, 204]
+        datarange: [8.0, 16.0]
+    - __type__: class
+      expression: ( ( 16.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 16.0 - 32.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 102, 204, 153, 51, 204]
+        datarange: [16.0, 32.0]
+    - __type__: class
+      expression: ( ( 32.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 32.0 - 64.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [153, 51, 204, 102, 0, 153]
+        datarange: [32.0, 64.0]
+    - __type__: class
+      expression: ( ( 64.0 <= [pixel] ) AND ( [pixel] < 125.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: 64.0 - 125.0 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [102, 0, 153, 51, 0, 102]
+        datarange: [64.0, 125.0]
+    - __type__: class
+      expression: ( ( 125.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )
+      group: RADARURPPRECIPR8-LINEAR
+      name: '>= 125.0 (mm/h)'
+      styles:
+      - __type__: style
+        colorrange: [51, 0, 102, 40, 0, 77]
+        datarange: [125.0, 300.0]
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( [pixel] >= 0.1 ) AND ( [pixel] < 1 ) )
+      group: RADARURPPRECIPR
+      name: 0.1 - 1 (mm/h)
+      styles:
+      - __type__: style
+        color: [153, 204, 255]
+    - __type__: class
+      expression: ( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )
+      group: RADARURPPRECIPR
+      name: 1 - 2 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 172, 225]
+    - __type__: class
+      expression: ( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )
+      group: RADARURPPRECIPR
+      name: 2 - 4 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 238, 68]
+    - __type__: class
+      expression: ( ( [pixel] >= 4 ) AND ( [pixel] < 8 ) )
+      group: RADARURPPRECIPR
+      name: 4 - 8 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 182, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 8 ) AND ( [pixel] < 12 ) )
+      group: RADARURPPRECIPR
+      name: 8 - 12 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 121, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 12 ) AND ( [pixel] < 16 ) )
+      group: RADARURPPRECIPR
+      name: 12 - 16 (mm/h)
+      styles:
+      - __type__: style
+        color: [206, 225, 41]
+    - __type__: class
+      expression: ( ( [pixel] >= 16 ) AND ( [pixel] < 24 ) )
+      group: RADARURPPRECIPR
+      name: 16 - 24 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 204, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 24 ) AND ( [pixel] < 32 ) )
+      group: RADARURPPRECIPR
+      name: 24 - 32 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 143, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 32 ) AND ( [pixel] < 50 ) )
+      group: RADARURPPRECIPR
+      name: 32 - 50 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 63, 0]
+    - __type__: class
+      expression: ( ( [pixel] >= 50 ) AND ( [pixel] < 64 ) )
+      group: RADARURPPRECIPR
+      name: 50 - 64 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 1, 87]
+    - __type__: class
+      expression: ( ( [pixel] >= 64 ) AND ( [pixel] < 100 ) )
+      group: RADARURPPRECIPR
+      name: 64 - 100 (mm/h)
+      styles:
+      - __type__: style
+        color: [186, 34, 187]
+    - __type__: class
+      expression: ( ( [pixel] >= 100 ) AND ( [pixel] < 150 ) )
+      group: RADARURPPRECIPR
+      name: 100 - 150 (mm/h)
+      styles:
+      - __type__: style
+        color: [111, 9, 162]
+    - __type__: class
+      expression: ( [pixel] >= 150 )
+      group: RADARURPPRECIPR
+      name: '>= 150 (mm/h)'
+      styles:
+      - __type__: style
+        color: [102, 0, 153]
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( [pixel] >= 0.1 ) AND ( [pixel] < 1.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 0.1 - 1 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [153, 204, 255, 0, 163, 239]
+        datarange: [0.1, 1.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 1.0 ) AND ( [pixel] < 2.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 1 - 2 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 163, 239, 0, 246, 84]
+        datarange: [1.0, 2.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 2.0 ) AND ( [pixel] < 4.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 2 - 4 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 246, 84, 0, 196, 0]
+        datarange: [2.0, 4.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 4.0 ) AND ( [pixel] < 8.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 4 - 8 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 196, 0, 0, 140, 0]
+        datarange: [4.0, 8.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 8.0 ) AND ( [pixel] < 12.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 8 - 12 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [0, 140, 0, 89, 155, 17]
+        datarange: [8.0, 12.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 12.0 ) AND ( [pixel] < 16.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 12 - 16 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [89, 155, 17, 255, 232, 28]
+        datarange: [12.0, 16.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 16.0 ) AND ( [pixel] < 24.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 16 - 24 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 232, 28, 255, 175, 0]
+        datarange: [16.0, 24.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 24.0 ) AND ( [pixel] < 32.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 24 - 32 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 175, 0, 255, 119, 0]
+        datarange: [24.0, 32.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 32.0 ) AND ( [pixel] < 50.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 32 - 50 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 119, 0, 255, 25, 0]
+        datarange: [32.0, 50.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 50.0 ) AND ( [pixel] < 64.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 50 - 64 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 25, 0, 255, 1, 129]
+        datarange: [50.0, 64.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 64.0 ) AND ( [pixel] < 100.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 64 - 100 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [255, 1, 129, 170, 42, 195]
+        datarange: [64.0, 100.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 100.0 ) AND ( [pixel] < 150.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 100 - 150 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [170, 42, 195, 107, 5, 158]
+        datarange: [100.0, 150.0]
+    - __type__: class
+      expression: ( ( [pixel] >= 150.0 ) AND ( [pixel] < 200.0 ) )
+      group: RADARURPPRECIPR-LINEAR
+      name: 150 - 200 (mm/h)
+      styles:
+      - __type__: style
+        colorrange: [107, 5, 158, 102, 0, 153]
+        datarange: [150.0, 200.0]
+    - __type__: class
+      expression: ( [pixel] >= 200.0 )
+      group: RADARURPPRECIPR-LINEAR
+      name: '>= 200 (mm/h)'
+      styles:
+      - __type__: style
+        colorrange: [102, 0, 153, 102, 0, 153]
+        datarange: [200.0, 500.0]
+    - __type__: class
+      expression: ( ( 0 <= [pixel] ) AND ( [pixel] < 0.1 ) )
+      group: RADARURPPRECIPR14
+      name: Undetected
+      styles:
+      - __type__: style
+        color: [0, 0, 0]
+        opacity: 0
+    - __type__: class
+      expression: ( ( 0.1 <= [pixel] ) AND ( [pixel] < 1.0 ) )
+      group: RADARURPPRECIPR14
+      name: 0.1 - 1.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [153, 204, 255]
+    - __type__: class
+      expression: ( ( 1.0 <= [pixel] ) AND ( [pixel] < 2.0 ) )
+      group: RADARURPPRECIPR14
+      name: 1.0 - 2.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 153, 255]
+    - __type__: class
+      expression: ( ( 2.0 <= [pixel] ) AND ( [pixel] < 4.0 ) )
+      group: RADARURPPRECIPR14
+      name: 2.0 - 4.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 255, 102]
+    - __type__: class
+      expression: ( ( 4.0 <= [pixel] ) AND ( [pixel] < 8.0 ) )
+      group: RADARURPPRECIPR14
+      name: 4.0 - 8.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 204, 0]
+    - __type__: class
+      expression: ( ( 8.0 <= [pixel] ) AND ( [pixel] < 12.0 ) )
+      group: RADARURPPRECIPR14
+      name: 8.0 - 12.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 153, 0]
+    - __type__: class
+      expression: ( ( 12.0 <= [pixel] ) AND ( [pixel] < 16.0 ) )
+      group: RADARURPPRECIPR14
+      name: 12.0 - 16.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [0, 102, 0]
+    - __type__: class
+      expression: ( ( 16.0 <= [pixel] ) AND ( [pixel] < 24.0 ) )
+      group: RADARURPPRECIPR14
+      name: 16.0 - 24.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 255, 51]
+    - __type__: class
+      expression: ( ( 24.0 <= [pixel] ) AND ( [pixel] < 32.0 ) )
+      group: RADARURPPRECIPR14
+      name: 24.0 - 32.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 204, 0]
+    - __type__: class
+      expression: ( ( 32.0 <= [pixel] ) AND ( [pixel] < 50.0 ) )
+      group: RADARURPPRECIPR14
+      name: 32.0 - 50.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 153, 0]
+    - __type__: class
+      expression: ( ( 50.0 <= [pixel] ) AND ( [pixel] < 64.0 ) )
+      group: RADARURPPRECIPR14
+      name: 50.0 - 64.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 102, 0]
+    - __type__: class
+      expression: ( ( 64.0 <= [pixel] ) AND ( [pixel] < 100.0 ) )
+      group: RADARURPPRECIPR14
+      name: 64.0 - 100.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 0, 0]
+    - __type__: class
+      expression: ( ( 100.0 <= [pixel] ) AND ( [pixel] < 125.0 ) )
+      group: RADARURPPRECIPR14
+      name: 100.0 - 125.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [255, 2, 153]
+    - __type__: class
+      expression: ( ( 125.0 <= [pixel] ) AND ( [pixel] < 200.0 ) )
+      group: RADARURPPRECIPR14
+      name: 125.0 - 200.0 (mm/h)
+      styles:
+      - __type__: style
+        color: [153, 51, 204]
+    - __type__: class
+      expression: ( ( 200.0 <= [pixel] ) AND ( [pixel] <= 300.0 ) )
+      group: RADARURPPRECIPR14
+      name: '>= 200.0 (mm/h)'
+      styles:
+      - __type__: style
+        color: [102, 0, 153]
+    classgroup: RADARURPPRECIPR14-LINEAR
+    data: ['']
+    debug: 5
+    metadata: 
+      geomet_ows_http_max_age: 600
+      gml_include_items: all
+      ows_abstract: Composite of American and Canadian weather radars updated every 10 minutes
+      ows_abstract_fr: Mosaïque des radars météorologiques Canadiens et Américains mise-à-jour aux 10 minutes
+      ows_authorityurl_href: https://dd.weather.gc.ca
+      ows_authorityurl_name: msc
+      ows_extent: -170.32 16.93 -50.00 67.19
+      ows_geomtype: Geometry
+      ows_identifier_authority: msc
+      ows_identifier_value: urn:x-msc-smc:md:weather-meteo::radar
+      ows_include_items: all
+      ows_keywordlist: Atmospheric conditions, Meteorology, Weather, Radar, Remote sensing, Weather
+      ows_keywordlist_fr: Conditions atmosphériques, Métérologie, Temps, Radar, Télédétection, Temps (Météorologie)
+      ows_keywordlist_vocabulary: http://purl.org/dc/terms/
+      ows_metadataurl_format: text/xml
+      ows_metadataurl_href: https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None
+      ows_metadataurl_type: TC211
+      ows_title: RADAR - Radar precipitation rate (Rain) (1 km) [mm/hr]
+      ows_title_fr: RADAR - Taux de précipitation radar (Pluie) (1 km) [mm/hr]
+      wcs_enable_request: '!*'
+      wcs_label: RADAR - Radar precipitation rate (Rain) (1 km) [mm/hr]
+      wcs_label_fr: RADAR - Taux de précipitation radar (Pluie) (1 km) [mm/hr]
+      wcs_rangeset_label: default range
+      wcs_rangeset_name: default range
+      wfs_metadataurl_format: XML
+      wms_dimensionlist: reference_time
+      wms_layer_group: /Weather Radar/North American radar mosaic (1 km)
+      wms_layer_group_fr: /Radar météo/Mosaïque radar Nord-Américaine (1 km)
+      wms_reference_time_default: null
+      wms_reference_time_item: reference_datetime
+      wms_reference_time_units: ISO8601
+      wms_timedefault: '2020-01-14T00:00:00Z'
+      wms_timeextent: 2020-01-14T00:00:00Z/2020-01-24T00:00:00Z/PT3H
+    name: RADAR_1KM_RRAI
+    processing: []
+    projection: [proj=longlat, datum=WGS84, no_defs]
+    template: ttt.html
+    tolerance: 15
+    type: raster
