@@ -573,11 +573,12 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
     return True
 
 
-def find_replace_wms_timedefault(mapfile):
+def find_replace_wms_timedefault(name, mapfile):
     """
     Finds the wms_timedefault and wms_available_intervals and updates the
     wms_timedefault value to the closest interval to the time of call.
-    :param layer: `str` of layer ID to update
+    :param name: `str` of mapfile filename or store key
+    :param mapfile: `str` of mapfile content
     :returns: `bool` of update result
     """
     # search for entire wms_timedefault line in mapfile
@@ -611,9 +612,8 @@ def find_replace_wms_timedefault(mapfile):
         )
     else:
         LOGGER.debug(
-            f'Mapfile ({mapfile}) does not contain '
-            f'wms_available_intervals metadata. Not updating '
-            f'wms_timedefault.'
+            f'{name} does not contain wms_available_intervals metadata. Not '
+            f'updating wms_timedefault.'
         )
 
     return mapfile
@@ -636,10 +636,12 @@ def update_mapfile(layer=None):
             LOGGER.debug(f'Updating {mapfile}.')
             with open(mapfile, 'r+') as fp:
                 mapfile_ = fp.read()
-                mapfile_ = find_replace_wms_timedefault(mapfile_)
+                updated_mapfile = find_replace_wms_timedefault(
+                    mapfile, mapfile_
+                )
                 # go to start of file and re-write mapfile
                 fp.seek(0)
-                fp.write(mapfile_)
+                fp.write(updated_mapfile)
         except FileNotFoundError as e:
             LOGGER.error(e)
             pass
@@ -648,16 +650,18 @@ def update_mapfile(layer=None):
     if MAPFILE_STORAGE == 'store':
         st = load_plugin('store', PROVIDER_DEF)
         if layer:
-            mapfiles = [st.get_key(f'{layer}_layer')]
+            mapfiles = [
+                (f'geomet-mapfile_{layer}_layer', st.get_key(f'{layer}_layer'))
+            ]
         else:
-            mapfile_dicts = [
-                {'key': key, 'mapfile': st.get_key(f'{key}', raw=True)}
+            mapfiles = [
+                (key, st.get_key(f'{key}', raw=True))
                 for key in st.list_keys('geomet-mapfile*_layer')
             ]
-        for mapfile_dict in mapfile_dicts:
-            LOGGER.debug(f'Updating {mapfile_dict["key"]} in store.')
-            mapfile_ = find_replace_wms_timedefault(mapfile_dict['mapfile'])
-            st.set_key(mapfile_dict['key'], mapfile_, raw=True)
+    for name, mapfile in mapfiles:
+        LOGGER.debug(f'Updating {name} in store.')
+        updated_mapfile = find_replace_wms_timedefault(name, mapfile)
+        st.set_key(name, updated_mapfile, raw=True)
 
     return True
 
