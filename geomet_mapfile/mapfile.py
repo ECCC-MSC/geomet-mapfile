@@ -295,8 +295,6 @@ def gen_layer(layer_name, layer_info):
     :returns: list of mappyfile layer objects of layer
     """
 
-    layers = []
-
     LOGGER.debug('Setting up layer configuration')
 
     layer = {}
@@ -455,9 +453,7 @@ def gen_layer(layer_name, layer_info):
 
     layer['metadata'].update(mcf2layer_metadata(mcf_file))
 
-    layers.append(layer)
-
-    return layers
+    return layer
 
 
 def generate_mapfile(layer=None, output='file', use_includes=True):
@@ -498,14 +494,13 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
         mapfile_copy['layers'] = []
 
         try:
-            layers = gen_layer(key, value)
+            lyr = gen_layer(key, value)
         except LayerTimeConfigError:
-            layers = None
+            lyr = None
             time_errors = True
 
-        if layers:
-            for lyr in layers:
-                mapfile_copy['layers'].append(lyr)
+        if lyr:
+            mapfile_copy['layers'].append(lyr)
 
             # TODO: simplify
             if 'outputformats' in value['forecast_model']:
