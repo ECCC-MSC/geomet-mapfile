@@ -658,10 +658,10 @@ def update_mapfile(layer=None):
                 (key, st.get_key(f'{key}', raw=True))
                 for key in st.list_keys('geomet-mapfile*_layer')
             ]
-    for name, mapfile in mapfiles:
-        LOGGER.debug(f'Updating {name} in store.')
-        updated_mapfile = find_replace_wms_timedefault(name, mapfile)
-        st.set_key(name, updated_mapfile, raw=True)
+        for name, mapfile in mapfiles:
+            LOGGER.debug(f'Updating {name} in store.')
+            updated_mapfile = find_replace_wms_timedefault(name, mapfile)
+            st.set_key(name, updated_mapfile, raw=True)
 
     return True
 
