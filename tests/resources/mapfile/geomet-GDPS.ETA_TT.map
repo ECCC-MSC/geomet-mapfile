@@ -1,0 +1,859 @@
+MAP
+    NAME "geomet-weather"
+    IMAGETYPE "PNG"
+    STATUS ON
+    TRANSPARENT ON
+    DEBUG OFF
+    MAXSIZE 4096
+    SIZE 500 300
+    EXTENT -180 -90 180 90
+    IMAGECOLOR 255 255 255
+    CONFIG "PROJ_LIB" "/path/to/geomet_mapfile/resources/mapserv"
+    PROJECTION
+        "init=epsg:4326"
+    END
+    OUTPUTFORMAT
+        NAME "GEOTIFF_16"
+        DRIVER "GDAL/GTiff"
+        MIMETYPE "image/tiff"
+        IMAGEMODE FLOAT32
+        EXTENSION "tif"
+    END
+    OUTPUTFORMAT
+        NAME "AAIGRID"
+        DRIVER "GDAL/AAIGRID"
+        MIMETYPE "image/x-aaigrid"
+        IMAGEMODE INT16
+        EXTENSION "grd"
+        FORMATOPTION "FILENAME=result.grd"
+    END
+    QUERYMAP
+        STATUS OFF
+        SIZE 500 300
+        STYLE HILITE
+        COLOR 255 255 0
+    END
+    LEGEND
+        LABEL
+            SIZE 10
+            COLOR 0 0 0
+        END
+    END
+    WEB
+        METADATA
+            "ows_keywordlist_vocabulary" "http://purl.org/dc/terms/"
+            "ows_fees" "None"
+            "ows_accessconstraints" "None"
+            "wms_getmap_formatlist" "image/png,image/jpeg"
+            "ows_extent" "-180,-90,180,90"
+            "ows_role" "pointOfContact"
+            "ows_http_max_age" "604800"
+            "ows_updatesequence" "2022-01-04T17:46:47Z"
+            "encoding" "UTF-8"
+            "ows_srs" "EPSG:4326 EPSG:2294 EPSG:2295 EPSG:2950 EPSG:3408 EPSG:3410 EPSG:3571 EPSG:3572 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576 EPSG:3857 EPSG:3978 EPSG:4267 EPSG:4269 EPSG:26707 EPSG:26708 EPSG:26709 EPSG:26710 EPSG:26711 EPSG:26712 EPSG:26713 EPSG:26714 EPSG:26715 EPSG:26716 EPSG:26717 EPSG:26718 EPSG:26719 EPSG:26720 EPSG:26721 EPSG:26722 EPSG:26907 EPSG:26908 EPSG:26909 EPSG:26910 EPSG:26911 EPSG:26912 EPSG:26913 EPSG:26914 EPSG:26915 EPSG:26916 EPSG:26917 EPSG:26918 EPSG:26919 EPSG:26920 EPSG:26921 EPSG:26922 EPSG:32187 EPSG:32188 EPSG:32198 EPSG:32661 EPSG:42101 EPSG:42102 EPSG:42304 EPSG:102100 EPSG:102185 EPSG:900913"
+            "ows_addresstype" "postal"
+            "ows_postcode" "E3B 6Z3"
+            "ows_contactelectronicmailaddress" "ecweather-meteo@ec.gc.ca"
+            "ows_contactvoicetelephone" "None"
+            "ows_contactfacsimiletelephone" "+01-506-451-6010"
+            "wms_enable_request" "*"
+            "wms_getfeatureinfo_formatlist" "text/plain,application/json,application/vnd.ogc.gml"
+            "wms_attribution_logourl_format" "image/jpeg"
+            "wms_attribution_logourl_width" "400"
+            "wms_attribution_logourl_height" "258"
+            "wms_attribution_logourl_href" "https://ec.gc.ca/meteo-weather/C0D9B3D8-D256-407D-A68F-C606D703105E/X-20130131132801908.jpg"
+            "wcs_enable_request" "*"
+            "ows_onlineresource" "http://geomet-dev-03.cmc.ec.gc.ca:8020/"
+            "ows_address" "77 Westmorland Street, Suite 260"
+            "ows_keywordlist_http://purl.org/dc/terms/_items" "Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitations,Snow,Ice"
+            "ows_contactinstructions" "During hours of service"
+            "ows_contactperson" "National Inquiry Response Team"
+            "ows_contactposition" "Service Channel"
+            "ows_contactorganization" "Government of Canada, Environment and Climate Change Canada, Meteorological Service of Canada"
+            "ows_abstract" "GeoMet-Weather provides access to the Environment and Climate Change Canada's Meteorological Service of Canada (MSC) open data, including raw numerical weather prediction (NWP) model data layers and the weather radar mosaic, via Open Geospatial Consortium (OGC) standards such as the Web Map Service (WMS). Meteorological layers are served dynamically through the Web Map Service (WMS) standard to enable end-users to display meteorological data within their own tools, on interactive web maps and in mobile apps"
+            "ows_service_onlineresource" "https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weather-tools-specialized-data/geospatial-web-services.html"
+            "ows_title" "Meteorological Service of Canada Geospatial Web Services 0.1.dev0"
+            "wcs_label" "Meteorological Service of Canada Geospatial Web Services 0.1.dev0"
+            "ows_hoursofservice" "Monday to Friday, 1300h - 2100h UTC"
+            "ows_stateorprovince" "New Brunswick"
+            "ows_city" "Fredericton"
+            "ows_country" "Canada"
+            "wms_attribution_title" "Government of Canada, Environment and Climate Change Canada, Meteorological Service of Canada"
+            "wms_attribution_onlineresource" "https://www.canada.ca/en/services/environment/weather.html"
+            "wcs_description" "GeoMet-Weather provides access to the Environment and Climate Change Canada's Meteorological Service of Canada (MSC) open data, including raw numerical weather prediction (NWP) model data layers and the weather radar mosaic, via Open Geospatial Consortium (OGC) standards such as the Web Map Service (WMS). Meteorological layers are served dynamically through the Web Map Service (WMS) standard to enable end-users to display meteorological data within their own tools, on interactive web maps and in mobile apps"
+            "ows_keywordlist" "Weather,Meteorology,Climate,Forecasting,Floods,Weather alerts,Storms,Wind,Temperature,Precipitations,Snow,Ice"
+            "ows_onlineresource_fr" "http://geomet-dev-03.cmc.ec.gc.ca:8020/?lang=fr"
+            "ows_address_fr" "77 rue Westmorland, Local 260"
+            "ows_keywordlist_http://purl.org/dc/terms/_items_fr" "Météorologie,Climat,Temps,Prévision,Inondation,Alerte météorologique,Tempête,Vent,Température,Précipitations,Neige,Glace"
+            "ows_contactinstructions_fr" "Durant les heures de service"
+            "ows_contactperson_fr" "Équipe nationale de réponse aux demandes du public"
+            "ows_contactposition_fr" "Service de support"
+            "ows_contactorganization_fr" "Gouvernement du Canada, Environnement et Changement climatique Canada, Service météorologique du Canada"
+            "ows_abstract_fr" "GéoMet-Météo du SMC donne accès aux données du Service météorologique du Canada (SMC) d'Environnement et Changement climatique Canada, notamment les données brutes de modèles de prévision numérique du temps et de la mosaïque des radars météo, par le biais de standards de l'Open Geospatial Consortium (OGC). Les couches météorologiques sont dynamiquement servies par le biais du standard Web Map Service (WMS) afin de permettre aux utilisateurs d'afficher les données météorologiques dans leurs propres outils, sur des cartes interactives en ligne et dans les applications mobiles"
+            "ows_service_onlineresource_fr" "https://www.canada.ca/fr/environnement-changement-climatique/services/conditions-meteorologiques-ressources-outils-generaux/outils-donnees-specialisees/services-web-geospatiaux.html"
+            "ows_title_fr" "Services web géospatiaux du Service météorologique du Canada 0.1.dev0"
+            "wcs_label_fr" "Services web géospatiaux du Service météorologique du Canada 0.1.dev0"
+            "ows_hoursofservice_fr" "Du lundi au vendredi, 1300h - 2100h UTC"
+            "ows_stateorprovince_fr" "Nouveau-Brunswick"
+            "ows_city_fr" "Fredericton"
+            "ows_country_fr" "Canada"
+            "wms_attribution_title_fr" "Gouvernement du Canada, Environnement et Changement climatique Canada, Service météorologique du Canada"
+            "wms_attribution_onlineresource_fr" "https://www.canada.ca/fr/services/environnement/meteo.html"
+            "wcs_description_fr" "GéoMet-Météo du SMC donne accès aux données du Service météorologique du Canada (SMC) d'Environnement et Changement climatique Canada, notamment les données brutes de modèles de prévision numérique du temps et de la mosaïque des radars météo, par le biais de standards de l'Open Geospatial Consortium (OGC). Les couches météorologiques sont dynamiquement servies par le biais du standard Web Map Service (WMS) afin de permettre aux utilisateurs d'afficher les données météorologiques dans leurs propres outils, sur des cartes interactives en ligne et dans les applications mobiles"
+            "ows_keywordlist_fr" "Météorologie,Climat,Temps,Prévision,Inondation,Alerte météorologique,Tempête,Vent,Température,Précipitations,Neige,Glace"
+        END
+    END
+    LAYER
+        TOLERANCE 15
+        TEMPLATE "ttt.html"
+        NAME "GDPS.ETA_TT"
+        DEBUG 5
+        DATA ""
+        TYPE RASTER
+        METADATA
+            "ows_extent" "-180 -90.075 179.925 90.075"
+            "ows_title" "GDPS.ETA - Air temperature [°C]"
+            "ows_title_fr" "GDPS.ETA - Température de l'air [°C]"
+            "wms_layer_group" "/Global Deterministic Prediction System (GDPS) [15 km]/GDPS"
+            "wms_layer_group_fr" "/Système Global de Prévision Déterministe (SGPD) [15 km]/SGPD"
+            "wcs_label" "GDPS.ETA - Air temperature [°C]"
+            "wcs_label_fr" "GDPS.ETA - Température de l'air [°C]"
+            "wcs_enable_request" "*"
+            "ows_size" "2400 1201"
+            "wms_dimensionlist" "reference_time"
+            "wms_reference_time_item" "reference_datetime"
+            "wms_reference_time_units" "ISO8601"
+            "wms_timeextent" "2021-12-09T00:00:00Z/2021-12-19T00:00:00Z/PT3H"
+            "wms_reference_time_default" "2021-12-09T00:00:00Z"
+            "wms_timedefault" "2021-12-19T00:00:00Z"
+            "wms_reference_time_extent" "2021-12-07T00:00:00Z/2021-12-09T00:00:00Z/PT12H"
+            "geomet_ows_http_max_age" "10800"
+            "gml_include_items" "all"
+            "ows_authorityurl_name" "msc"
+            "ows_authorityurl_href" "https://dd.weather.gc.ca"
+            "ows_identifier_authority" "msc"
+            "ows_include_items" "all"
+            "ows_keywordlist_vocabulary" "http://purl.org/dc/terms/"
+            "ows_geomtype" "Geometry"
+            "ows_metadataurl_format" "text/xml"
+            "ows_metadataurl_type" "TC211"
+            "wcs_rangeset_name" "default range"
+            "wcs_rangeset_label" "default range"
+            "wfs_metadataurl_format" "XML"
+            "ows_abstract" "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day."
+            "ows_abstract_fr" "Le Système global de prévision déterministe (SPGD) procède à des calculs physiques afin de produire des prévisions déterministes d'éléments de l'atmosphère du jour présent jusqu'à 10 jours dans le futur. Les éléments de l'atmosphère incluent notamment la température, les précipitations, la couverture nuageuse, la vitesse et direction des vents et l'humidité. Ce produit contient les résultats numériques bruts de ces calculs. La couverture géographique est mondiale. La résolution spatiale horizontale des données est d'environ 15 km distribuées sur au plus 33 niveaux verticaux. Les prévisions sont exécutées deux fois par jour."
+            "ows_identifier_value" "urn:x-msc-smc:md:weather-meteo::nwp.gdps"
+            "ows_keywordlist" "Prediction, Global, Deterministic, Weather forecasts, Precipitation, Air temperature, Humidity, Snow, Wind, Meteorological data"
+            "ows_keywordlist_fr" "Prévision, Global, Déterministe, Prévisions météorologiques, Précipitation, Température de l'air, Humidité, Neige, Vent, Données météorologiques"
+            "ows_metadataurl_href" "https://csw.open.canada.ca/geonetwork/srv/csw?service=CSW&version=2.0.2&request=GetRecordById&outputschema=csw%3AIsoRecord&elementsetname=full&id=None"
+        END
+        PROJECTION
+            "proj=longlat"
+            "lon_wrap=0"
+            "R=6371229"
+            "no_defs"
+        END
+        PROCESSING "SCALE_BUCKETS=1000"
+        CLASSGROUP "TEMPERATURE-LINEAR"
+        CLASS
+            NAME ".. -40"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( [pixel] < -40 )
+            STYLE
+                COLORRANGE 0 0 127 0 0 127
+                DATARANGE -100.0 -40.0
+            END
+        END
+        CLASS
+            NAME "-40 -35"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )
+            STYLE
+                COLORRANGE 0 0 127 0 0 183
+                DATARANGE -40.0 -35.0
+            END
+        END
+        CLASS
+            NAME "-35 -30"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+            STYLE
+                COLORRANGE 0 0 183 0 0 239
+                DATARANGE -35.0 -30.0
+            END
+        END
+        CLASS
+            NAME "-30 -25"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+            STYLE
+                COLORRANGE 0 0 239 0 63 254
+                DATARANGE -30.0 -25.0
+            END
+        END
+        CLASS
+            NAME "-25 -20"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+            STYLE
+                COLORRANGE 0 63 254 0 147 254
+                DATARANGE -25.0 -20.0
+            END
+        END
+        CLASS
+            NAME "-20 -15"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+            STYLE
+                COLORRANGE 0 147 254 0 231 254
+                DATARANGE -20.0 -15.0
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+            STYLE
+                COLORRANGE 0 231 254 51 253 135
+                DATARANGE -15.0 -10.0
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLORRANGE 51 253 135 119 253 135
+                DATARANGE -10.0 -5.0
+            END
+        END
+        CLASS
+            NAME "-5 0"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLORRANGE 119 253 135 187 254 67
+                DATARANGE -5.0 0.0
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLORRANGE 187 254 67 255 255 0
+                DATARANGE 0.0 5.0
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLORRANGE 255 255 0 254 187 0
+                DATARANGE 5.0 10.0
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+            STYLE
+                COLORRANGE 254 187 0 254 119 0
+                DATARANGE 10.0 15.0
+            END
+        END
+        CLASS
+            NAME "15 20"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+            STYLE
+                COLORRANGE 254 119 0 254 50 0
+                DATARANGE 15.0 20.0
+            END
+        END
+        CLASS
+            NAME "20 25"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+            STYLE
+                COLORRANGE 254 50 0 239 0 0
+                DATARANGE 20.0 25.0
+            END
+        END
+        CLASS
+            NAME "25 30"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+            STYLE
+                COLORRANGE 239 0 0 183 0 0
+                DATARANGE 25.0 30.0
+            END
+        END
+        CLASS
+            NAME "30 35"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+            STYLE
+                COLORRANGE 183 0 0 127 0 0
+                DATARANGE 30.0 35.0
+            END
+        END
+        CLASS
+            NAME "35 40"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )
+            STYLE
+                COLORRANGE 127 0 0 85 0 0
+                DATARANGE 35.0 40.0
+            END
+        END
+        CLASS
+            NAME ">= 40"
+            GROUP "TEMPERATURE-LINEAR"
+            EXPRESSION ( [pixel] >= 40 )
+            STYLE
+                COLORRANGE 85 0 0 85 0 0
+                DATARANGE 40.0 60.0
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( [pixel] < -10 )
+            STYLE
+                COLOR 0 0 127
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLOR 0 0 211
+            END
+        END
+        CLASS
+            NAME "-5 0"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLOR 0 63 254
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLOR 0 189 254
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLOR 51 253 203
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+            STYLE
+                COLOR 153 254 101
+            END
+        END
+        CLASS
+            NAME "15 20"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+            STYLE
+                COLOR 255 255 0
+            END
+        END
+        CLASS
+            NAME "20 25"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+            STYLE
+                COLOR 254 153 0
+            END
+        END
+        CLASS
+            NAME "25 30"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+            STYLE
+                COLOR 254 50 0
+            END
+        END
+        CLASS
+            NAME "30 35"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+            STYLE
+                COLOR 211 0 0
+            END
+        END
+        CLASS
+            NAME "35 40"
+            GROUP "TEMPSUMMER"
+            EXPRESSION ( [pixel] >= 35 )
+            STYLE
+                COLOR 127 0 0
+            END
+        END
+        CLASS
+            NAME "<= -15"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( [pixel] < -15 )
+            STYLE
+                COLORRANGE 0 0 127 0 0 127
+                DATARANGE -15.0 -100.0
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+            STYLE
+                COLORRANGE 0 0 127 0 0 203
+                DATARANGE -15.0 -10.0
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLORRANGE 0 0 203 0 40 254
+                DATARANGE -10.0 -5.0
+            END
+        END
+        CLASS
+            NAME "-5 0"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLORRANGE 0 40 254 0 155 254
+                DATARANGE -5.0 0.0
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLORRANGE 0 155 254 13 253 241
+                DATARANGE 0.0 5.0
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLORRANGE 13 253 241 106 253 148
+                DATARANGE 5.0 10.0
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+            STYLE
+                COLORRANGE 106 253 148 199 254 55
+                DATARANGE 10.0 15.0
+            END
+        END
+        CLASS
+            NAME "15 20"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+            STYLE
+                COLORRANGE 199 254 55 254 217 0
+                DATARANGE 15.0 20.0
+            END
+        END
+        CLASS
+            NAME "20 25"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+            STYLE
+                COLORRANGE 254 217 0 254 125 0
+                DATARANGE 20.0 25.0
+            END
+        END
+        CLASS
+            NAME "25 30"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+            STYLE
+                COLORRANGE 254 125 0 254 32 0
+                DATARANGE 25.0 30.0
+            END
+        END
+        CLASS
+            NAME "30 35"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+            STYLE
+                COLORRANGE 254 32 0 203 0 0
+                DATARANGE 30.0 35.0
+            END
+        END
+        CLASS
+            NAME "35 40"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )
+            STYLE
+                COLORRANGE 203 0 0 127 0 0
+                DATARANGE 35.0 40.0
+            END
+        END
+        CLASS
+            NAME ">= 40"
+            GROUP "TEMPSUMMER-LINEAR"
+            EXPRESSION ( [pixel] >= 40 )
+            STYLE
+                COLORRANGE 127 0 0 127 0 0
+                DATARANGE 40.0 60.0
+            END
+        END
+        CLASS
+            NAME "-40 -35"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( [pixel] < -35 )
+            STYLE
+                COLOR 0 0 127
+            END
+        END
+        CLASS
+            NAME "-35 -30"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+            STYLE
+                COLOR 0 0 211
+            END
+        END
+        CLASS
+            NAME "-30 -25"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+            STYLE
+                COLOR 0 63 254
+            END
+        END
+        CLASS
+            NAME "-25 -20"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+            STYLE
+                COLOR 0 189 254
+            END
+        END
+        CLASS
+            NAME "-20 -15"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+            STYLE
+                COLOR 51 253 203
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+            STYLE
+                COLOR 153 254 101
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLOR 255 255 0
+            END
+        END
+        CLASS
+            NAME "-5 0"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLOR 254 153 0
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLOR 254 50 0
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLOR 211 0 0
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPWINTER"
+            EXPRESSION ( [pixel] >= 10 )
+            STYLE
+                COLOR 127 0 0
+            END
+        END
+        CLASS
+            NAME "<= -40"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( [pixel] < -40 )
+            STYLE
+                COLORRANGE 0 0 127 0 0 127
+                DATARANGE -100 -40.0
+            END
+        END
+        CLASS
+            NAME "-40 -35"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )
+            STYLE
+                COLORRANGE 0 0 127 0 0 203
+                DATARANGE -40.0 -35.0
+            END
+        END
+        CLASS
+            NAME "-35 -30"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+            STYLE
+                COLORRANGE 0 0 203 0 40 254
+                DATARANGE -35.0 -30.0
+            END
+        END
+        CLASS
+            NAME "-30 -25"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+            STYLE
+                COLORRANGE 0 40 254 0 155 254
+                DATARANGE -30.0 -25.0
+            END
+        END
+        CLASS
+            NAME "-25 -20"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+            STYLE
+                COLORRANGE 0 155 254 13 253 241
+                DATARANGE -25.0 -20.0
+            END
+        END
+        CLASS
+            NAME "-20 -15"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+            STYLE
+                COLORRANGE 13 253 241 106 253 148
+                DATARANGE -20.0 -15.0
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+            STYLE
+                COLORRANGE 106 253 148 199 254 55
+                DATARANGE -15.0 -10.0
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLORRANGE 199 254 55 254 217 0
+                DATARANGE -10.0 -5.0
+            END
+        END
+        CLASS
+            NAME "-5 0"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLORRANGE 254 217 0 254 125 0
+                DATARANGE -5.0 0.0
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLORRANGE 254 125 0 254 32 0
+                DATARANGE 0.0 5.0
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLORRANGE 254 32 0 203 0 0
+                DATARANGE 5.0 10.0
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( ( [pixel] >= 10 ) AND ( [pixel] <= 15 ) )
+            STYLE
+                COLORRANGE 203 0 0 127 0 0
+                DATARANGE 10.0 15.0
+            END
+        END
+        CLASS
+            NAME ">= 15"
+            GROUP "TEMPWINTER-LINEAR"
+            EXPRESSION ( [pixel] >= 15 )
+            STYLE
+                COLORRANGE 127 0 0 127 0 0
+                DATARANGE 15.0 50.0
+            END
+        END
+        CLASS
+            NAME "-40 -35"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( [pixel] < -35 )
+            STYLE
+                COLOR 0 0 127
+            END
+        END
+        CLASS
+            NAME "-35 -30"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )
+            STYLE
+                COLOR 0 0 183
+            END
+        END
+        CLASS
+            NAME "-30 -25"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )
+            STYLE
+                COLOR 0 0 239
+            END
+        END
+        CLASS
+            NAME "-25 -20"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )
+            STYLE
+                COLOR 0 63 254
+            END
+        END
+        CLASS
+            NAME "-20 -15 "
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )
+            STYLE
+                COLOR 0 147 254
+            END
+        END
+        CLASS
+            NAME "-15 -10"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )
+            STYLE
+                COLOR 0 231 254
+            END
+        END
+        CLASS
+            NAME "-10 -5"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )
+            STYLE
+                COLOR 51 253 203
+            END
+        END
+        CLASS
+            NAME "-5  0"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )
+            STYLE
+                COLOR 119 253 135
+            END
+        END
+        CLASS
+            NAME "0 5"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )
+            STYLE
+                COLOR 187 254 67
+            END
+        END
+        CLASS
+            NAME "5 10"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )
+            STYLE
+                COLOR 255 255 0
+            END
+        END
+        CLASS
+            NAME "10 15"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )
+            STYLE
+                COLOR 254 187 0
+            END
+        END
+        CLASS
+            NAME "15 20"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )
+            STYLE
+                COLOR 254 119 0
+            END
+        END
+        CLASS
+            NAME "20 25"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )
+            STYLE
+                COLOR 254 50 0
+            END
+        END
+        CLASS
+            NAME "25 30"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )
+            STYLE
+                COLOR 239 0 0
+            END
+        END
+        CLASS
+            NAME "30 35"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )
+            STYLE
+                COLOR 183 0 0
+            END
+        END
+        CLASS
+            NAME "35 40"
+            GROUP "TEMPERATURE"
+            EXPRESSION ( [pixel] >= 35 )
+            STYLE
+                COLOR 127 0 0
+            END
+        END
+    END
+  END
