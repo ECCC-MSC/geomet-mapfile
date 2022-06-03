@@ -1,62 +1,14 @@
 [
     {
         "__type__": "class",
-        "name": "173.0 - 183.0",
+        "name": "223.15 - 228.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 173.0 <= [pixel] ) AND ( [pixel] < 183.0 ) )",
+        "expression": "( ( 223.15 <= [pixel] ) AND ( [pixel] < 228.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
-                    0,
-                    0,
-                    124
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "183.0 - 193.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 183.0 <= [pixel] ) AND ( [pixel] < 193.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    0,
-                    0,
-                    167
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "193.0 - 203.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 193.0 <= [pixel] ) AND ( [pixel] < 203.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    0,
-                    0,
-                    210
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "203.0 - 213.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 203.0 <= [pixel] ) AND ( [pixel] < 213.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    0,
+                    228,
                     0,
                     255
                 ]
@@ -65,15 +17,15 @@
     },
     {
         "__type__": "class",
-        "name": "213.0 - 223.0",
+        "name": "228.15 - 233.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 213.0 <= [pixel] ) AND ( [pixel] < 223.0 ) )",
+        "expression": "( ( 228.15 <= [pixel] ) AND ( [pixel] < 233.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
+                    137,
                     0,
-                    64,
                     255
                 ]
             }
@@ -81,15 +33,31 @@
     },
     {
         "__type__": "class",
-        "name": "223.0 - 233.0",
+        "name": "233.15 - 238.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 223.0 <= [pixel] ) AND ( [pixel] < 233.0 ) )",
+        "expression": "( ( 233.15 <= [pixel] ) AND ( [pixel] < 238.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    26,
+                    0,
+                    250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "238.15 - 243.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 238.15 <= [pixel] ) AND ( [pixel] < 243.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
                     0,
-                    128,
+                    62,
                     255
                 ]
             }
@@ -97,191 +65,79 @@
     },
     {
         "__type__": "class",
-        "name": "233.0 - 243.0",
+        "name": "243.15 - 248.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 233.0 <= [pixel] ) AND ( [pixel] < 243.0 ) )",
+        "expression": "( ( 243.15 <= [pixel] ) AND ( [pixel] < 248.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
                     0,
-                    188,
-                    255
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "243.0 - 253.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 243.0 <= [pixel] ) AND ( [pixel] < 253.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    0,
-                    253,
-                    255
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "253.0 - 263.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 253.0 <= [pixel] ) AND ( [pixel] < 263.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    51,
-                    253,
-                    203
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "263.0 - 273.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 263.0 <= [pixel] ) AND ( [pixel] < 273.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    103,
-                    253,
-                    151
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "273.0 - 283.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 273.0 <= [pixel] ) AND ( [pixel] < 283.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    155,
-                    254,
-                    99
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "283.0 - 293.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 283.0 <= [pixel] ) AND ( [pixel] < 293.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    203,
-                    254,
-                    51
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "293.0 - 303.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 293.0 <= [pixel] ) AND ( [pixel] < 303.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    255,
-                    255,
-                    0
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "303.0 - 313.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 303.0 <= [pixel] ) AND ( [pixel] < 313.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    254,
-                    203,
-                    0
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "313.0 - 323.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 313.0 <= [pixel] ) AND ( [pixel] < 323.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    254,
                     151,
-                    0
+                    250
                 ]
             }
         ]
     },
     {
         "__type__": "class",
-        "name": "323.0 - 333.0",
+        "name": "248.15 - 253.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 323.0 <= [pixel] ) AND ( [pixel] < 333.0 ) )",
+        "expression": "( ( 248.15 <= [pixel] ) AND ( [pixel] < 253.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
-                    254,
-                    99,
-                    0
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "333.0 - 343.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 333.0 <= [pixel] ) AND ( [pixel] < 343.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    254,
-                    51,
-                    0
-                ]
-            }
-        ]
-    },
-    {
-        "__type__": "class",
-        "name": "343.0 - 353.0",
-        "group": "SEA_ICETEMP",
-        "expression": "( ( 343.0 <= [pixel] ) AND ( [pixel] < 353.0 ) )",
-        "styles": [
-            {
-                "__type__": "style",
-                "color": [
-                    254,
                     0,
+                    240,
+                    250
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "253.15 - 258.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 253.15 <= [pixel] ) AND ( [pixel] < 258.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    255,
+                    173
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "258.15 - 263.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 258.15 <= [pixel] ) AND ( [pixel] < 263.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    250,
+                    80
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "263.15 - 268.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 263.15 <= [pixel] ) AND ( [pixel] < 268.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    26,
+                    255,
                     0
                 ]
             }
@@ -289,15 +145,15 @@
     },
     {
         "__type__": "class",
-        "name": "353.0 - 363.0",
+        "name": "268.15 - 273.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 353.0 <= [pixel] ) AND ( [pixel] < 363.0 ) )",
+        "expression": "( ( 268.15 <= [pixel] ) AND ( [pixel] < 273.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
-                    210,
-                    0,
+                    118,
+                    255,
                     0
                 ]
             }
@@ -305,15 +161,63 @@
     },
     {
         "__type__": "class",
-        "name": "363.0 - 373.0",
+        "name": "273.15 - 278.15",
         "group": "SEA_ICETEMP",
-        "expression": "( ( 363.0 <= [pixel] ) AND ( [pixel] < 373.0 ) )",
+        "expression": "( ( 273.15 <= [pixel] ) AND ( [pixel] < 278.15 ) )",
         "styles": [
             {
                 "__type__": "style",
                 "color": [
-                    167,
-                    0,
+                    209,
+                    255,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "278.15 - 283.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 278.15 <= [pixel] ) AND ( [pixel] < 283.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    227,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "283.15 - 288.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 233.15 <= [pixel] ) AND ( [pixel] < 288.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    250,
+                    133,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "288.15 - 293.15",
+        "group": "SEA_ICETEMP",
+        "expression": "( ( 288.15 <= [pixel] ) AND ( [pixel] < 293.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    26,
                     0
                 ]
             }

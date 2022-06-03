@@ -83,7 +83,7 @@
         "__type__": "class",
         "name": "5 - 7.5",
         "group": "PRECIPSNOW",
-        "expression": "( [pixel] >= 5 )",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 7.5 ) )",
         "styles": [
             {
                 "__type__": "style",

@@ -2,7 +2,7 @@
     {
         "__type__": "class",
         "name": "0.0 - 0.1",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.0 <= [pixel] ) AND ( [pixel] < 0.1 ) )",
         "styles": [
             {
@@ -25,7 +25,7 @@
     {
         "__type__": "class",
         "name": "0.1 - 0.2",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.1 <= [pixel] ) AND ( [pixel] < 0.2 ) )",
         "styles": [
             {
@@ -48,7 +48,7 @@
     {
         "__type__": "class",
         "name": "0.2 - 0.3",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.2 <= [pixel] ) AND ( [pixel] < 0.3 ) )",
         "styles": [
             {
@@ -71,7 +71,7 @@
     {
         "__type__": "class",
         "name": "0.3 - 0.4",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.3 <= [pixel] ) AND ( [pixel] < 0.4 ) )",
         "styles": [
             {
@@ -94,7 +94,7 @@
     {
         "__type__": "class",
         "name": "0.4 - 0.5",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.4 <= [pixel] ) AND ( [pixel] < 0.5 ) )",
         "styles": [
             {
@@ -117,7 +117,7 @@
     {
         "__type__": "class",
         "name": "0.5 - 0.6",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.5 <= [pixel] ) AND ( [pixel] < 0.6 ) )",
         "styles": [
             {
@@ -140,7 +140,7 @@
     {
         "__type__": "class",
         "name": "0.6 - 0.7",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.6 <= [pixel] ) AND ( [pixel] < 0.7 ) )",
         "styles": [
             {
@@ -163,7 +163,7 @@
     {
         "__type__": "class",
         "name": "0.7 - 0.8",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.7 <= [pixel] ) AND ( [pixel] < 0.8 ) )",
         "styles": [
             {
@@ -186,7 +186,7 @@
     {
         "__type__": "class",
         "name": "0.8 - 0.9",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.8 <= [pixel] ) AND ( [pixel] < 0.9 ) )",
         "styles": [
             {
@@ -209,7 +209,7 @@
     {
         "__type__": "class",
         "name": "0.9 - 1.0",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 0.9 <= [pixel] ) AND ( [pixel] < 1.0 ) )",
         "styles": [
             {
@@ -232,7 +232,7 @@
     {
         "__type__": "class",
         "name": "1.0 - 1.1",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.0 <= [pixel] ) AND ( [pixel] < 1.1 ) )",
         "styles": [
             {
@@ -255,7 +255,7 @@
     {
         "__type__": "class",
         "name": "1.1 - 1.2",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.1 <= [pixel] ) AND ( [pixel] < 1.2 ) )",
         "styles": [
             {
@@ -278,7 +278,7 @@
     {
         "__type__": "class",
         "name": "1.2 - 1.3",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.2 <= [pixel] ) AND ( [pixel] < 1.3 ) )",
         "styles": [
             {
@@ -301,7 +301,7 @@
     {
         "__type__": "class",
         "name": "1.3 - 1.4",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.3 <= [pixel] ) AND ( [pixel] < 1.4 ) )",
         "styles": [
             {
@@ -324,7 +324,7 @@
     {
         "__type__": "class",
         "name": "1.4 - 1.5",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.4 <= [pixel] ) AND ( [pixel] < 1.5 ) )",
         "styles": [
             {
@@ -347,7 +347,7 @@
     {
         "__type__": "class",
         "name": "1.5 - 1.6",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.5 <= [pixel] ) AND ( [pixel] < 1.6 ) )",
         "styles": [
             {
@@ -370,7 +370,7 @@
     {
         "__type__": "class",
         "name": "1.6 - 1.7",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.6 <= [pixel] ) AND ( [pixel] < 1.7 ) )",
         "styles": [
             {
@@ -393,7 +393,7 @@
     {
         "__type__": "class",
         "name": "1.7 - 1.8",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.7 <= [pixel] ) AND ( [pixel] < 1.8 ) )",
         "styles": [
             {
@@ -416,7 +416,7 @@
     {
         "__type__": "class",
         "name": "1.8 - 1.9",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( ( 1.8 <= [pixel] ) AND ( [pixel] < 1.9 ) )",
         "styles": [
             {
@@ -439,7 +439,7 @@
     {
         "__type__": "class",
         "name": "1.9 - 2.0",
-        "group": "HUMIDITYREL_0_50",
+        "group": "HUMIDITYREL-0-50mb-LINEAR",
         "expression": "( 1.9 <= [pixel] )",
         "styles": [
             {

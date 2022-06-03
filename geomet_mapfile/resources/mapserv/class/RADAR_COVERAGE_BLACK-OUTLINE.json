@@ -1,16 +1,18 @@
-{
-    "__type__": "class",
-    "name": "Radar coverage/Couverture radar",
-    "group": "RADAR_COVERAGE_BLACK-OUTLINE",
-    "styles": [
-        {
-            "__type__": "style",
-            "outlinecolor": [
-                0,
-                0,
-                0
-            ],
-            "width": 1
-        }
-    ]
-}
+[
+    {
+        "__type__": "class",
+        "name": "Radar coverage/Couverture radar",
+        "group": "RADAR_COVERAGE_BLACK-OUTLINE",
+        "styles": [
+            {
+                "__type__": "style",
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 1
+            }
+        ]
+    }
+]

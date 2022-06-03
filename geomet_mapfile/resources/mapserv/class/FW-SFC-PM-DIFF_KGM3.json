@@ -95,7 +95,7 @@
         "__type__": "class",
         "name": "4e-8 - 6e-8",
         "group": "FW-SFC-PM-DIFF_KGM3",
-        "expression": "( ( [pixel] >= 6e-08 ) AND ( [pixel] < 6e-08 ) )",
+        "expression": "( ( [pixel] >= 4e-08 ) AND ( [pixel] < 6e-08 ) )",
         "styles": [
             {
                 "__type__": "style",
