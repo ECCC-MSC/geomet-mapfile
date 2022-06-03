@@ -87,7 +87,10 @@ def clean_style(filepath, output_format='json'):
                 break
         if output_format == 'json':
             content = ''.join(file_[start_position:])
-            data = json.dumps(mappyfile.loads(content), indent=4)
+            data = mappyfile.loads(content)
+            if not isinstance(data, list):
+                data = [data]
+            data = json.dumps(data, indent=4)
         elif output_format == 'mapfile':
             data = ''.join(file_[start_position:])
 

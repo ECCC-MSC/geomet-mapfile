@@ -1,28 +1,30 @@
-{
-    "__type__": "class",
-    "name": "Radar coverage/Couverture radar",
-    "group": "RADAR_COVERAGE_INV_HATCH-FILL",
-    "styles": [
-        {
-            "__type__": "style",
-            "symbol": "hatchsymbol",
-            "color": [
-                0,
-                0,
-                0
-            ],
-            "size": 5,
-            "width": 0.4,
-            "angle": 135
-        },
-        {
-            "__type__": "style",
-            "outlinecolor": [
-                0,
-                0,
-                0
-            ],
-            "width": 0.3
-        }
-    ]
-}
+[
+    {
+        "__type__": "class",
+        "name": "Radar coverage/Couverture radar",
+        "group": "RADAR_COVERAGE_INV_HATCH-FILL",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "hatchsymbol",
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 5,
+                "width": 0.4,
+                "angle": 135
+            },
+            {
+                "__type__": "style",
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.3
+            }
+        ]
+    }
+]

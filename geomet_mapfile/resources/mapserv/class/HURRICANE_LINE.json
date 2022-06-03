@@ -1,16 +1,18 @@
-{
-    "__type__": "class",
-    "name": "Single symbol",
-    "expression": "( [active] = 1 )",
-    "styles": [
-        {
-            "__type__": "style",
-            "color": [
-                0,
-                0,
-                0
-            ],
-            "width": 0.5
-        }
-    ]
-}
+[
+    {
+        "__type__": "class",
+        "name": "Single symbol",
+        "expression": "( [active] = 1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 0.5
+            }
+        ]
+    }
+]
