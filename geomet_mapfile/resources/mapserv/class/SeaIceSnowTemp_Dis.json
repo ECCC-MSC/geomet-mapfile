@@ -1,0 +1,178 @@
+[
+    {
+        "__type__": "class",
+        "name": "-15.0 -10.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 258.15 ) AND ( [pixel] < 263.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    31,
+                    0,
+                    191
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-10.0 -9.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 263.15 ) AND ( [pixel] < 264.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    43,
+                    0,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-9.0 -8.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 264.15 ) AND ( [pixel] < 265.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    36,
+                    125,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-8.0 -7.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 265.15 ) AND ( [pixel] < 266.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    231,
+                    252
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-7.0 -6.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 266.15 ) AND ( [pixel] < 267.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    52,
+                    252,
+                    194
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-6.0 -5.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 267.15 ) AND ( [pixel] < 268.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    151,
+                    254,
+                    121
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-5.0 -4.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 268.15 ) AND ( [pixel] < 269.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    236,
+                    255,
+                    82
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-4.0 -3.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 269.15 ) AND ( [pixel] < 270.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    253,
+                    191,
+                    61
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-3.0 -2.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 270.15 ) AND ( [pixel] < 271.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    106,
+                    36
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-2.0 -1.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( ( [pixel] >= 271.15 ) AND ( [pixel] < 272.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    42,
+                    23
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> -1.0 C",
+        "group": "SeaIceSnowTemp_Dis",
+        "expression": "( [pixel] >= 272.15 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    199,
+                    29,
+                    15
+                ]
+            }
+        ]
+    }
+]

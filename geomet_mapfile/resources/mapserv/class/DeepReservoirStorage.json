@@ -1,0 +1,347 @@
+[
+    {
+        "__type__": "class",
+        "name": "< -100 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( [pixel] < -100 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    -100.0,
+                    -1000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-100 -50 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= -100 ) AND ( [pixel] < -50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    15,
+                    41,
+                    207
+                ],
+                "datarange": [
+                    -100.0,
+                    -50.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -20 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    15,
+                    41,
+                    207,
+                    29,
+                    93,
+                    185
+                ],
+                "datarange": [
+                    -50.0,
+                    -20.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -10 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    29,
+                    93,
+                    185,
+                    48,
+                    150,
+                    96
+                ],
+                "datarange": [
+                    -20.0,
+                    -10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-10 10 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    48,
+                    150,
+                    96,
+                    70,
+                    170,
+                    29
+                ],
+                "datarange": [
+                    -10.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    70,
+                    170,
+                    29,
+                    118,
+                    188,
+                    5
+                ],
+                "datarange": [
+                    250.0,
+                    500.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 50 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    118,
+                    188,
+                    5,
+                    175,
+                    206,
+                    2
+                ],
+                "datarange": [
+                    20.0,
+                    50.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 75 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 50 ) AND ( [pixel] < 75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    175,
+                    206,
+                    2,
+                    227,
+                    219,
+                    5
+                ],
+                "datarange": [
+                    50.0,
+                    75.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "75 100 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 75 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    227,
+                    219,
+                    5,
+                    245,
+                    198,
+                    13
+                ],
+                "datarange": [
+                    75.0,
+                    100.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 150 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 150 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    245,
+                    198,
+                    13,
+                    252,
+                    158,
+                    18
+                ],
+                "datarange": [
+                    100.0,
+                    150.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "150 200 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 150 ) AND ( [pixel] < 200 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    158,
+                    18,
+                    255,
+                    99,
+                    15
+                ],
+                "datarange": [
+                    150.0,
+                    200.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "200 300 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 200 ) AND ( [pixel] < 300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    99,
+                    15,
+                    246,
+                    57,
+                    14
+                ],
+                "datarange": [
+                    200.0,
+                    300.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "300 400 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 300 ) AND ( [pixel] < 400 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    246,
+                    57,
+                    14,
+                    233,
+                    26,
+                    13
+                ],
+                "datarange": [
+                    300.0,
+                    400.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "400 500 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 400 ) AND ( [pixel] < 500 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    233,
+                    26,
+                    13,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    400.0,
+                    500.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 500 kg/m^2",
+        "group": "DeepReservoirStorage",
+        "expression": "( ( [pixel] >= 500 ) AND ( [pixel] < 10000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    500.0,
+                    1000.0
+                ]
+            }
+        ]
+    }
+]

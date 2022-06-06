@@ -1,0 +1,209 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 0.1 km^2",
+        "group": "DrainageArea",
+        "expression": "( [pixel] < 0.1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    0.0,
+                    0.1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 1 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    26,
+                    84,
+                    198
+                ],
+                "datarange": [
+                    0.1,
+                    1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 10 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    26,
+                    84,
+                    198,
+                    64,
+                    164,
+                    48
+                ],
+                "datarange": [
+                    1.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 100 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    64,
+                    164,
+                    48,
+                    152,
+                    199,
+                    3
+                ],
+                "datarange": [
+                    10.0,
+                    100.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 1000 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 100 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    152,
+                    199,
+                    3,
+                    240,
+                    216,
+                    7
+                ],
+                "datarange": [
+                    100.0,
+                    1000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1000 1e4 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 10000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    216,
+                    7,
+                    253,
+                    141,
+                    17
+                ],
+                "datarange": [
+                    1000.0,
+                    10000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e4 1e5 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 10000 ) AND ( [pixel] < 100000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    253,
+                    141,
+                    17,
+                    245,
+                    51,
+                    14
+                ],
+                "datarange": [
+                    10000.0,
+                    100000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1e5 1e6 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 100000 ) AND ( [pixel] < 1000000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    245,
+                    51,
+                    14,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    100000.0,
+                    1000000.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 1e6 km^2",
+        "group": "DrainageArea",
+        "expression": "( ( [pixel] >= 1000000 ) AND ( [pixel] < 1000000000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    1000000.0,
+                    10000000.0
+                ]
+            }
+        ]
+    }
+]

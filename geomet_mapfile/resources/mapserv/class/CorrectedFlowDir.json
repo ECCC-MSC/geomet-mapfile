@@ -1,0 +1,209 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 1",
+        "group": "CorrectedFlowDir",
+        "expression": "( [pixel] < 2 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    0.0,
+                    2.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 4",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    26,
+                    84,
+                    198
+                ],
+                "datarange": [
+                    2.0,
+                    4.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 8",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    26,
+                    84,
+                    198,
+                    64,
+                    164,
+                    48
+                ],
+                "datarange": [
+                    4.0,
+                    8.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8 16",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 16 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    64,
+                    164,
+                    48,
+                    152,
+                    199,
+                    3
+                ],
+                "datarange": [
+                    8.0,
+                    16.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "16 32",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 16 ) AND ( [pixel] < 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    152,
+                    199,
+                    3,
+                    240,
+                    216,
+                    7
+                ],
+                "datarange": [
+                    16.0,
+                    32.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "32 64",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 32 ) AND ( [pixel] < 64 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    240,
+                    216,
+                    7,
+                    253,
+                    141,
+                    17
+                ],
+                "datarange": [
+                    32.0,
+                    64.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "64 128",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 64 ) AND ( [pixel] < 128 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    253,
+                    141,
+                    17,
+                    245,
+                    51,
+                    14
+                ],
+                "datarange": [
+                    64.0,
+                    128.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "128 256",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 128 ) AND ( [pixel] < 256 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    245,
+                    51,
+                    14,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    128.0,
+                    256.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 256",
+        "group": "CorrectedFlowDir",
+        "expression": "( ( [pixel] >= 256 ) AND ( [pixel] < 300 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    256.0,
+                    512.0
+                ]
+            }
+        ]
+    }
+]

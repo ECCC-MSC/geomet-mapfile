@@ -1,0 +1,195 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 1 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ([pixel] * (10 ^ 9)) < 1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "opacity": 0,
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 - 10 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 1 ) AND ( ([pixel] * (10 ^ 9)) < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    33,
+                    198,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 - 20 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 10 ) AND ( ([pixel] * (10 ^ 9)) < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    24,
+                    154,
+                    202
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 - 30 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 20 ) AND ( ([pixel] * (10 ^ 9)) < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    13,
+                    103,
+                    151
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 - 40 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 30 ) AND ( ([pixel] * (10 ^ 9)) < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    253,
+                    55
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 - 50 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 40 ) AND ( ([pixel] * (10 ^ 9)) < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    204,
+                    46
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 - 60 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 50 ) AND ( ([pixel] * (10 ^ 9)) < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    154,
+                    63
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 - 70 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 60 ) AND ( ([pixel] * (10 ^ 9)) < 70 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    253,
+                    103,
+                    105
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "70 - 80 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 70 ) AND ( ([pixel] * (10 ^ 9)) < 80 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    59,
+                    59
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "80 - 90 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 80 ) AND ( ([pixel] * (10 ^ 9)) < 90 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    1,
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "90 - 100 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ( ([pixel] * (10 ^ 9)) >= 90 ) AND ( ([pixel] * (10 ^ 9)) < 100 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    203,
+                    7,
+                    19
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 100 [ug/m3]",
+        "group": "RAQDPS-SFC-PM_UGM3_BCAQHI",
+        "expression": "( ([pixel] * (10 ^ 9)) >= 100 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    101,
+                    2,
+                    5
+                ]
+            }
+        ]
+    }
+]

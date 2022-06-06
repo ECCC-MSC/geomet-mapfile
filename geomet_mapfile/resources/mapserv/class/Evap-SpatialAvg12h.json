@@ -1,0 +1,370 @@
+[
+    {
+        "__type__": "class",
+        "name": "< -2 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( [pixel] < -2 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    161,
+                    1,
+                    67,
+                    161,
+                    1,
+                    67
+                ],
+                "datarange": [
+                    -2.0,
+                    -10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-2 -1 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= -2 ) AND ( [pixel] < -1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    161,
+                    1,
+                    67,
+                    218,
+                    58,
+                    73
+                ],
+                "datarange": [
+                    -2.0,
+                    -1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-1 -0.5 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= -1 ) AND ( [pixel] < -0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    218,
+                    58,
+                    73,
+                    246,
+                    118,
+                    82
+                ],
+                "datarange": [
+                    -1.0,
+                    -0.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-0.5 0 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= -0.5 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    246,
+                    118,
+                    82,
+                    254,
+                    179,
+                    108
+                ],
+                "datarange": [
+                    -0.5,
+                    0.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 0.5 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    179,
+                    108,
+                    252,
+                    231,
+                    152
+                ],
+                "datarange": [
+                    0.0,
+                    0.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 1 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    231,
+                    152,
+                    249,
+                    251,
+                    178
+                ],
+                "datarange": [
+                    0.5,
+                    1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 2 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    251,
+                    178,
+                    237,
+                    248,
+                    163
+                ],
+                "datarange": [
+                    1.0,
+                    2.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 3 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    237,
+                    248,
+                    163,
+                    214,
+                    238,
+                    159
+                ],
+                "datarange": [
+                    2.0,
+                    3.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 4 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    214,
+                    238,
+                    159,
+                    184,
+                    225,
+                    162
+                ],
+                "datarange": [
+                    3.0,
+                    4.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 5 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    184,
+                    225,
+                    162,
+                    151,
+                    211,
+                    163
+                ],
+                "datarange": [
+                    4.0,
+                    5.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 6 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    151,
+                    211,
+                    163,
+                    113,
+                    196,
+                    166
+                ],
+                "datarange": [
+                    5.0,
+                    6.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 7 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    113,
+                    196,
+                    166,
+                    82,
+                    169,
+                    174
+                ],
+                "datarange": [
+                    6.0,
+                    7.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7 8 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 7 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    82,
+                    169,
+                    174,
+                    67,
+                    139,
+                    179
+                ],
+                "datarange": [
+                    7.0,
+                    8.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8 9 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    67,
+                    139,
+                    179,
+                    70,
+                    109,
+                    176
+                ],
+                "datarange": [
+                    8.0,
+                    9.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9 10 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 9 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    70,
+                    109,
+                    176,
+                    94,
+                    79,
+                    163
+                ],
+                "datarange": [
+                    9.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 10 mm/day",
+        "group": "Evap-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 1000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    94,
+                    79,
+                    163,
+                    94,
+                    79,
+                    163
+                ],
+                "datarange": [
+                    10.0,
+                    20.0
+                ]
+            }
+        ]
+    }
+]

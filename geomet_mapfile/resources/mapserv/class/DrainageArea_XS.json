@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 1 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( [pixel] < 1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    0.0,
+                    1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 2 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    19,
+                    59,
+                    236
+                ],
+                "datarange": [
+                    1.0,
+                    2.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 3 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    19,
+                    59,
+                    236,
+                    45,
+                    148,
+                    103
+                ],
+                "datarange": [
+                    2.0,
+                    3.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 4 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    45,
+                    148,
+                    103,
+                    78,
+                    176,
+                    7
+                ],
+                "datarange": [
+                    3.0,
+                    4.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 5 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    78,
+                    176,
+                    7,
+                    164,
+                    203,
+                    2
+                ],
+                "datarange": [
+                    4.0,
+                    5.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 6 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    164,
+                    203,
+                    2,
+                    238,
+                    222,
+                    5
+                ],
+                "datarange": [
+                    5.0,
+                    6.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 7 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    238,
+                    222,
+                    5,
+                    251,
+                    177,
+                    19
+                ],
+                "datarange": [
+                    6.0,
+                    7.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7 8 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 7 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    251,
+                    177,
+                    19,
+                    255,
+                    93,
+                    15
+                ],
+                "datarange": [
+                    7.0,
+                    8.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8 9 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    93,
+                    15,
+                    241,
+                    34,
+                    14
+                ],
+                "datarange": [
+                    8.0,
+                    9.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9 10 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 9 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    241,
+                    34,
+                    14,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    9.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 10 km^2",
+        "group": "DrainageArea_XS",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 1000000000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    10.0,
+                    100.0
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 2",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    33,
+                    0,
+                    197
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 3",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    43,
+                    4,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 4",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    32,
+                    151,
+                    247
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 5",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    251,
+                    240
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    99,
+                    252,
+                    159
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    196,
+                    255,
+                    93
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 30",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    252,
+                    222,
+                    70
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 40",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    129,
+                    42
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 50",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    49,
+                    24
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 50",
+        "group": "SeaIceSnowVol_Dis",
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    205,
+                    30,
+                    16
+                ]
+            }
+        ]
+    }
+]

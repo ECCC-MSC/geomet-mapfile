@@ -1,0 +1,402 @@
+[
+    {
+        "__type__": "class",
+        "name": "Pluie 0.1-0.5",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1000.1 ) AND ( [pixel] < 1000.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    221,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie 0.5-1.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1000.5 ) AND ( [pixel] < 1001.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    153,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie 1.0-3.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1001.0 ) AND ( [pixel] < 1003.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    119,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie 3.0-6.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1003.0 ) AND ( [pixel] < 1006.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    68,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie 6.0-..",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1006.0 ) AND ( [pixel] < 1500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    34,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige 0.1-0.5",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2000.1 ) AND ( [pixel] < 2000.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    255,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige  0.5-1.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2000.5 ) AND ( [pixel] < 2001.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    204,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige  1.0-3.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2001.0 ) AND ( [pixel] < 2003.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    170,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige  3.0-6.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2003.0 ) AND ( [pixel] < 2006.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    136,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige  6.0-..",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2006.0 ) AND ( [pixel] < 2500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    102,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante 0.1-0.5",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3000.1 ) AND ( [pixel] < 3000.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    170,
+                    170
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante 0.5-1.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3000.5 ) AND ( [pixel] < 3001.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    102,
+                    102
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante 1.0-3.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3001.0 ) AND ( [pixel] < 3003.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante 3.0-6.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3003.0 ) AND ( [pixel] < 3006.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    204,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante  6.0-..",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3006.0 ) AND ( [pixel] < 3500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    119,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace 0.1-0.5",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4000.1 ) AND ( [pixel] < 4000.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    170,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace 0.5-1.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4000.5 ) AND ( [pixel] < 4001.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    102,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace 1.0-3.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4001.0 ) AND ( [pixel] < 4003.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace 3.0-6.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4003.0 ) AND ( [pixel] < 4006.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    204,
+                    0,
+                    204
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace  6.0-..",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4006.0 ) AND ( [pixel] < 4500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    119,
+                    0,
+                    119
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige 0.1-0.5",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5000.1 ) AND ( [pixel] < 5000.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    238,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige 0.5-1.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5000.5 ) AND ( [pixel] < 5001.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    119,
+                    204
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige 1.0-3.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5001.0 ) AND ( [pixel] < 5003.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    85,
+                    153
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige 3.0-6.0",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5003.0 ) AND ( [pixel] < 5006.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    34,
+                    102
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige  6.0-..",
+        "group": "SIGPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5006.0 ) AND ( [pixel] < 5500.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    51
+                ]
+            }
+        ]
+    }
+]

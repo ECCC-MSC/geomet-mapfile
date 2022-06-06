@@ -1,0 +1,418 @@
+[
+    {
+        "__type__": "class",
+        "name": "-80 -75",
+        "group": "TEMP_850",
+        "expression": "( [pixel] < -75 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-75 -70",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -75 ) AND ( [pixel] < -70 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    183
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-70 -65",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -70 ) AND ( [pixel] < -65 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    239
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-65 -60",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -65 ) AND ( [pixel] < -60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-60 -55 ",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -60 ) AND ( [pixel] < -55 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    147,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-55 -50",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -55 ) AND ( [pixel] < -50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    231,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -45",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    27,
+                    234,
+                    229
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-45 -40",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -45 ) AND ( [pixel] < -40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    54,
+                    237,
+                    202
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-40 -35",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -40 ) AND ( [pixel] < -35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    81,
+                    240,
+                    175
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-35 -30",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -35 ) AND ( [pixel] < -30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    108,
+                    243,
+                    148
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -25",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -30 ) AND ( [pixel] < -25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    135,
+                    246,
+                    121
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-25 -20",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -25 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    162,
+                    250,
+                    94
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -15",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    187,
+                    254,
+                    67
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-15 -10",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -15 ) AND ( [pixel] < -10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    204,
+                    254,
+                    50
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    221,
+                    255,
+                    33
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    255,
+                    16
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 5",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    216,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 15",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    183,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 20",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 15 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    150,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 25",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    116,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "25 30",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 25 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    83,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 35",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    50,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "35 40",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 35 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    239,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 45",
+        "group": "TEMP_850",
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 45 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    183,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "45 50",
+        "group": "TEMP_850",
+        "expression": "( [pixel] >= 45 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

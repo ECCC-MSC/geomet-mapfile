@@ -1,0 +1,98 @@
+[
+    {
+        "__type__": "class",
+        "name": "2.0 4.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( ( [pixel] >= 2000 ) AND ( [pixel] < 4000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    251,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4.0 6.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( ( [pixel] >= 4000 ) AND ( [pixel] < 6000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    44,
+                    0,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6.0 8.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( ( [pixel] >= 6000 ) AND ( [pixel] < 8000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    40,
+                    23
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8.0 10.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( ( [pixel] >= 8000 ) AND ( [pixel] < 10000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    254,
+                    77
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 12.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( ( [pixel] >= 10000 ) AND ( [pixel] < 12000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    19,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 12.0 N/m x1000",
+        "group": "SeaIceInternalPressure_Mid_Dis",
+        "expression": "( [pixel] >= 12000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    194,
+                    209,
+                    151
+                ]
+            }
+        ]
+    }
+]

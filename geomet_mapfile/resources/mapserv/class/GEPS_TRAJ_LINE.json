@@ -1,0 +1,18 @@
+[
+    {
+        "__type__": "class",
+        "name": "Trajectory Line",
+        "group": "GEPS_TRAJ_LINE",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ],
+                "width": 0.2
+            }
+        ]
+    }
+]

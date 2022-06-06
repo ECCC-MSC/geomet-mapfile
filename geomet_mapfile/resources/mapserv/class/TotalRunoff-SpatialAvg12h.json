@@ -1,0 +1,301 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 0.5 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( [pixel] < 2 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    161,
+                    1,
+                    67,
+                    161,
+                    1,
+                    67
+                ],
+                "datarange": [
+                    0.0,
+                    0.5
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 1 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 0.5 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    161,
+                    1,
+                    67,
+                    234,
+                    73,
+                    75
+                ],
+                "datarange": [
+                    0.5,
+                    1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 2 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    234,
+                    73,
+                    75,
+                    255,
+                    152,
+                    87
+                ],
+                "datarange": [
+                    1.0,
+                    2.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 4 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    152,
+                    87,
+                    252,
+                    227,
+                    147
+                ],
+                "datarange": [
+                    2.0,
+                    4.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 6 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    252,
+                    227,
+                    147,
+                    249,
+                    253,
+                    180
+                ],
+                "datarange": [
+                    4.0,
+                    6.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 8 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    249,
+                    253,
+                    180,
+                    232,
+                    246,
+                    156
+                ],
+                "datarange": [
+                    6.0,
+                    8.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8 10 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    232,
+                    246,
+                    156,
+                    196,
+                    230,
+                    161
+                ],
+                "datarange": [
+                    8.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 12 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    196,
+                    230,
+                    161,
+                    154,
+                    212,
+                    163
+                ],
+                "datarange": [
+                    10.0,
+                    12.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "12 14 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 12 ) AND ( [pixel] < 14 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    154,
+                    212,
+                    163,
+                    106,
+                    193,
+                    166
+                ],
+                "datarange": [
+                    12.0,
+                    14.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "14 16 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 14 ) AND ( [pixel] < 16 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    106,
+                    193,
+                    166,
+                    69,
+                    156,
+                    179
+                ],
+                "datarange": [
+                    14.0,
+                    16.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "16 18 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 16 ) AND ( [pixel] < 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    69,
+                    156,
+                    179,
+                    64,
+                    117,
+                    180
+                ],
+                "datarange": [
+                    16.0,
+                    18.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "18 20 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 18 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    64,
+                    117,
+                    180,
+                    94,
+                    79,
+                    163
+                ],
+                "datarange": [
+                    18.0,
+                    20.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 20 mm/day",
+        "group": "TotalRunoff-SpatialAvg12h",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 10000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    94,
+                    79,
+                    163,
+                    94,
+                    79,
+                    163
+                ],
+                "datarange": [
+                    20.0,
+                    22.0
+                ]
+            }
+        ]
+    }
+]

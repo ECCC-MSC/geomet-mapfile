@@ -1,0 +1,191 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 5 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (1 / (86400/1852)) ) AND ( [uv_length] < (5 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    232,
+                    253
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (5 / (86400/1852)) ) AND ( [uv_length] < (10 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    148,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 15 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (10 / (86400/1852)) ) AND ( [uv_length] < (15 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    154,
+                    64,
+                    249
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15 20 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (15 / (86400/1852)) ) AND ( [uv_length] < (20 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    204,
+                    135,
+                    254
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 25 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (20 / (86400/1852)) ) AND ( [uv_length] < (25 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    255,
+                    100
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "25 30 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (25 / (86400/1852)) ) AND ( [uv_length] < (30 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    209,
+                    254,
+                    45
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 30 nm/day",
+        "group": "SeaIceVelocity_Dis",
+        "expression": "( ( [uv_length] >= (30 / (86400/1852)) ) AND ( [uv_length] < (35 / (86400/1852)) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    }
+]
