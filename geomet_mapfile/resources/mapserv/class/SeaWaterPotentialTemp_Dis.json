@@ -1,0 +1,162 @@
+[
+    {
+        "__type__": "class",
+        "name": "-2.0 -1.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 271.15 ) AND ( [pixel] < 272.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    33,
+                    0,
+                    197
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-1.0 0.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 272.15 ) AND ( [pixel] < 273.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    43,
+                    4,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0 1.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 273.15 ) AND ( [pixel] < 274.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    32,
+                    151,
+                    247
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 2.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 274.15 ) AND ( [pixel] < 275.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    251,
+                    240
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 5.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 275.15 ) AND ( [pixel] < 278.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    99,
+                    252,
+                    159
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 10.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 278.15 ) AND ( [pixel] < 283.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    196,
+                    255,
+                    93
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10.0 15.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 283.15 ) AND ( [pixel] < 288.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    252,
+                    222,
+                    70
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "15.0 20.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 288.15 ) AND ( [pixel] < 293.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    129,
+                    42
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20.0 25.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( ( [pixel] >= 293.15 ) AND ( [pixel] < 298.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    49,
+                    24
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 25.0 C",
+        "group": "SeaWaterPotentialTemp_Dis",
+        "expression": "( [pixel] >= 298.15 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    205,
+                    30,
+                    16
+                ]
+            }
+        ]
+    }
+]

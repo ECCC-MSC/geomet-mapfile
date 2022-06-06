@@ -1,0 +1,178 @@
+[
+    {
+        "__type__": "class",
+        "name": "< -50",
+        "group": "UTCI-WINTER",
+        "expression": "( [pixel] < -50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-50 -40",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    211
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-40 -33",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -40 ) AND ( [pixel] < -33 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-33 -27",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -33 ) AND ( [pixel] < -27 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    189,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-27 -20",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -27 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    253,
+                    203
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -13",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -13 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    254,
+                    101
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-13 -6",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -13 ) AND ( [pixel] < -6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-6 0",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= -6 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    153,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 4",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    50,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 9",
+        "group": "UTCI-WINTER",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    211,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 9",
+        "group": "UTCI-WINTER",
+        "expression": "( [pixel] >= 9 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

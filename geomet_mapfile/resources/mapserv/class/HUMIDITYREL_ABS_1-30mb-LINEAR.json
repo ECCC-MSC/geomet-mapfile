@@ -1,0 +1,462 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 0.005 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0 ) AND ( [pixel] < 5e-05 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    0,
+                    169
+                ],
+                "datarange": [
+                    0.0,
+                    5e-05
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.05 0.01 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 5e-05 ) AND ( [pixel] < 0.0001 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    169,
+                    0,
+                    0,
+                    211
+                ],
+                "datarange": [
+                    5e-05,
+                    0.0001
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.01 0.015 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0001 ) AND ( [pixel] < 0.00015 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    211,
+                    0,
+                    0,
+                    254
+                ],
+                "datarange": [
+                    0.0001,
+                    0.00015
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.015 0.02 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00015 ) AND ( [pixel] < 0.0002 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    254,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    0.00015,
+                    0.0002
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.02 0.025 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0002 ) AND ( [pixel] < 0.00025 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    0,
+                    126,
+                    254
+                ],
+                "datarange": [
+                    0.0002,
+                    0.00025
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.025 0.03 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00025 ) AND ( [pixel] < 0.0003 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    126,
+                    254,
+                    0,
+                    189,
+                    254
+                ],
+                "datarange": [
+                    0.00025,
+                    0.0003
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.03 0.035 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0003 ) AND ( [pixel] < 0.00035 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    189,
+                    254,
+                    0,
+                    253,
+                    255
+                ],
+                "datarange": [
+                    0.0003,
+                    0.00035
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.035 0.04 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00035 ) AND ( [pixel] < 0.0004 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    253,
+                    255,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    0.00035,
+                    0.0004
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.04 0.045 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0004 ) AND ( [pixel] < 0.00045 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    102,
+                    253,
+                    152
+                ],
+                "datarange": [
+                    0.0004,
+                    0.00045
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.045 0.05 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00045 ) AND ( [pixel] < 0.0005 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    253,
+                    152,
+                    153,
+                    254,
+                    101
+                ],
+                "datarange": [
+                    0.00045,
+                    0.0005
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.05 0.055 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0005 ) AND ( [pixel] < 0.00055 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    254,
+                    101,
+                    204,
+                    254,
+                    50
+                ],
+                "datarange": [
+                    0.0005,
+                    0.00055
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.055 0.06 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00055 ) AND ( [pixel] < 0.0006 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    254,
+                    50,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    0.00055,
+                    0.0006
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.06 0.065",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0006 ) AND ( [pixel] < 0.00065 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    203,
+                    0
+                ],
+                "datarange": [
+                    0.0006,
+                    0.00065
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.065 0.07 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00065 ) AND ( [pixel] < 0.0007 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    203,
+                    0,
+                    254,
+                    153,
+                    0
+                ],
+                "datarange": [
+                    0.00065,
+                    0.0007
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.07 0.075 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0007 ) AND ( [pixel] < 0.00075 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    153,
+                    0,
+                    254,
+                    101,
+                    0
+                ],
+                "datarange": [
+                    0.0007,
+                    0.00075
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.075 0.08 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00075 ) AND ( [pixel] < 0.0008 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    101,
+                    0,
+                    254,
+                    50,
+                    0
+                ],
+                "datarange": [
+                    0.00075,
+                    0.0008
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.08 0.085 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0008 ) AND ( [pixel] < 0.00085 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    50,
+                    0,
+                    254,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0008,
+                    0.00085
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.085 0.09 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00085 ) AND ( [pixel] < 0.0009 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    0,
+                    0,
+                    211,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.00085,
+                    0.0009
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.09 0.095 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.0009 ) AND ( [pixel] < 0.00095 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    211,
+                    0,
+                    0,
+                    169,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0009,
+                    0.00095
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.095 0.1 %",
+        "group": "HUMIDITYREL_ABS_1-30mb-LINEAR",
+        "expression": "( ( [pixel] >= 0.00095 ) AND ( [pixel] <= 0.001 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    169,
+                    0,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.00095,
+                    0.001
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 - 1.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( [tfc] < 1.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "circle",
+                "size": 4,
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "opacity": 20,
+                "width": 1
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1.0 - 2.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( ( [tfc] > 1.0 ) AND ( [tfc] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "dreieck-leer",
+                "size": 10,
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "opacity": 20,
+                "width": 1
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 - 3.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( ( [tfc] > 2.0 ) AND ( [tfc] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "dreieck-leer",
+                "size": 10,
+                "color": [
+                    249,
+                    218,
+                    123
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 1
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3.0 - 4.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( ( [tfc] > 3.0 ) AND ( [tfc] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "dreieck-leer",
+                "size": 10,
+                "color": [
+                    222,
+                    74,
+                    0
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 1
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4.0 - 5.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( ( [tfc] > 4.0 ) AND ( [tfc] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "dreieck-leer",
+                "size": 10,
+                "color": [
+                    199,
+                    14,
+                    5
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 1
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 5.0",
+        "group": "HOTSPOTS-CE",
+        "expression": "( [tfc] > 5.0 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "dreieck-leer",
+                "size": 10,
+                "color": [
+                    127,
+                    39,
+                    4
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "width": 1
+            }
+        ]
+    }
+]

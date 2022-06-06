@@ -1,0 +1,178 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 9",
+        "group": "UTCI-SUMMER",
+        "expression": "( [pixel] < 9 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    127
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9 18",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 9 ) AND ( [pixel] < 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    211
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "18 26",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 18 ) AND ( [pixel] < 26 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    63,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "26 29",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 26 ) AND ( [pixel] < 29 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    189,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "29 32",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 29 ) AND ( [pixel] < 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    51,
+                    253,
+                    203
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "32 35",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 32 ) AND ( [pixel] < 35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    153,
+                    254,
+                    101
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "35 38",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 35 ) AND ( [pixel] < 38 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "38 42",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 38 ) AND ( [pixel] < 42 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    153,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "42 46",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 42 ) AND ( [pixel] < 46 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    50,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "46 50",
+        "group": "UTCI-SUMMER",
+        "expression": "( ( [pixel] >= 46 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    211,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 50",
+        "group": "UTCI-SUMMER",
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    127,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

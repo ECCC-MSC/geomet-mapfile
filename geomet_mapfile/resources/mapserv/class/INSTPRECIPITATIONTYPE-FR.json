@@ -1,0 +1,82 @@
+[
+    {
+        "__type__": "class",
+        "name": "Pluie",
+        "group": "INSTPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 1.0 ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    221,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie-Neige",
+        "group": "INSTPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 2.0 ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    238,
+                    170,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Pluie vergla\u00e7ante",
+        "group": "INSTPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 3.0 ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Granules de glace",
+        "group": "INSTPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 4.0 ) AND ( [pixel] < 5.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Neige",
+        "group": "INSTPRECIPITATIONTYPE-FR",
+        "expression": "( ( [pixel] >= 5.0 ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    238,
+                    255
+                ]
+            }
+        ]
+    }
+]

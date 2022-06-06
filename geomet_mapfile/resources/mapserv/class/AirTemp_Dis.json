@@ -1,0 +1,178 @@
+[
+    {
+        "__type__": "class",
+        "name": "-20 -10 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 253.15 ) AND ( [pixel] < 263.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    31,
+                    0,
+                    191
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 263.15 ) AND ( [pixel] < 268.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    43,
+                    0,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-5 -2 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 268.15 ) AND ( [pixel] < 271.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    36,
+                    125,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-2 -1 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 271.15 ) AND ( [pixel] < 272.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    231,
+                    252
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-1 0 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 272.15 ) AND ( [pixel] < 273.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    52,
+                    252,
+                    194
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 1 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 273.15 ) AND ( [pixel] < 274.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    151,
+                    254,
+                    121
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 2 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 274.15 ) AND ( [pixel] < 275.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    236,
+                    255,
+                    82
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 5 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 275.15 ) AND ( [pixel] < 278.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    253,
+                    191,
+                    61
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 278.15 ) AND ( [pixel] < 283.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    106,
+                    36
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 C",
+        "group": "AirTemp_Dis",
+        "expression": "( ( [pixel] >= 283.15 ) AND ( [pixel] < 293.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    42,
+                    23
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 20 C",
+        "group": "AirTemp_Dis",
+        "expression": "( [pixel] >= 293.15 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    199,
+                    29,
+                    15
+                ]
+            }
+        ]
+    }
+]

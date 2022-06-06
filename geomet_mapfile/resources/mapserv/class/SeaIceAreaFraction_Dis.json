@@ -1,0 +1,98 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 10 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 30 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    133,
+                    243,
+                    60
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 60 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    227,
+                    227,
+                    27
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 80 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( ( [pixel] >= 0.6 ) AND ( [pixel] < 0.8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    217,
+                    149,
+                    47
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "80 100 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( ( [pixel] >= 0.8 ) AND ( [pixel] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 %",
+        "group": "SeaIceAreaFraction_Dis",
+        "expression": "( [pixel] >= 1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,178 @@
+[
+    {
+        "__type__": "class",
+        "name": "-50 -30",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    59,
+                    14,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-30 -20",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= -30 ) AND ( [pixel] < -20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    93,
+                    77,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-20 -10",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= -20 ) AND ( [pixel] < -10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    134,
+                    126,
+                    248
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-10 -5",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= -10 ) AND ( [pixel] < -5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    174,
+                    170,
+                    249
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "-5 0",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= -5 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    214,
+                    212,
+                    252
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0 5",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    253,
+                    253
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    213,
+                    213
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 20 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    173,
+                    171
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 30",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= 20 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    131,
+                    128
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 50",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    91,
+                    86
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 50",
+        "group": "SeaSfcHeight_Dis",
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    56,
+                    45
+                ]
+            }
+        ]
+    }
+]

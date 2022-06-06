@@ -1,0 +1,191 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.05 0.1 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (0.05 / 86.4) ) AND ( [uv_length] < (0.1 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    232,
+                    253
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.1 0.5 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (0.1 / 86.4) ) AND ( [uv_length] < (0.5 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    153,
+                    148,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.5 1 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (0.5 / 86.4) ) AND ( [uv_length] < (1 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    154,
+                    64,
+                    249
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 5 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (1 / 86.4) ) AND ( [uv_length] < (5 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    204,
+                    135,
+                    254
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 10 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (5 / 86.4) ) AND ( [uv_length] < (10 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    255,
+                    100
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (10 / 86.4) ) AND ( [uv_length] < (20 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    209,
+                    254,
+                    45
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 20 km/day",
+        "group": "SeaWaterVelocity_Dis_0.05-20",
+        "expression": "( ( [uv_length] >= (20 / 86.4) ) AND ( [uv_length] < (25 / 86.4) ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow_wind",
+                "color": [
+                    128,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    }
+]

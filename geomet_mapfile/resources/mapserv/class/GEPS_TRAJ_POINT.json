@@ -1,0 +1,38 @@
+[
+    {
+        "__type__": "class",
+        "name": "Trajectory point",
+        "group": "GEPS_TRAJ_POINT",
+        "expression": "( \"[lastPoint]\" = \"true\" )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ],
+                "symbol": "circle",
+                "size": 5
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Trajectory point",
+        "group": "GEPS_TRAJ_POINT",
+        "expression": "( \"[lastPoint]\" = \"false\" )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    0,
+                    255
+                ],
+                "symbol": "circle",
+                "size": 2
+            }
+        ]
+    }
+]

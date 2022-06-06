@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.0000005 - 0.000001 ",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( [pixel] < 1e-06 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    127,
+                    0,
+                    63,
+                    254
+                ],
+                "datarange": [
+                    5e-07,
+                    1e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.000001 - 0.0000015",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 1e-06 ) AND ( [pixel] < 1.5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    63,
+                    254,
+                    51,
+                    253,
+                    203
+                ],
+                "datarange": [
+                    1e-06,
+                    1.5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0000015 - 0.000002",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 1.5e-06 ) AND ( [pixel] < 2e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    51,
+                    253,
+                    203,
+                    102,
+                    253,
+                    150
+                ],
+                "datarange": [
+                    1.5e-06,
+                    2e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.000002 - 0.0000025",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 2e-06 ) AND ( [pixel] < 2.5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    102,
+                    253,
+                    150,
+                    153,
+                    254,
+                    101
+                ],
+                "datarange": [
+                    2e-06,
+                    2.5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0000025 - 0.000003",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 2.5e-06 ) AND ( [pixel] < 3e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    153,
+                    254,
+                    101,
+                    204,
+                    254,
+                    50
+                ],
+                "datarange": [
+                    2.5e-06,
+                    3e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.000003 - 0.0000035",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 3e-06 ) AND ( [pixel] < 3.5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    204,
+                    254,
+                    50,
+                    255,
+                    255,
+                    0
+                ],
+                "datarange": [
+                    3e-06,
+                    3.5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0000035 - 0.000004",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 3.5e-06 ) AND ( [pixel] < 4e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    255,
+                    255,
+                    0,
+                    254,
+                    140,
+                    0
+                ],
+                "datarange": [
+                    3.5e-06,
+                    4e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.000004 - 0.0000045",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 4e-06 ) AND ( [pixel] < 4.5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    140,
+                    0,
+                    254,
+                    95,
+                    0
+                ],
+                "datarange": [
+                    4e-06,
+                    4.5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0000045 - 0.000005",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 4.5e-06 ) AND ( [pixel] < 5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    95,
+                    0,
+                    190,
+                    50,
+                    0
+                ],
+                "datarange": [
+                    4.5e-06,
+                    5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.000005 - 0.0000055",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( ( [pixel] >= 5e-06 ) AND ( [pixel] < 5.5e-06 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    190,
+                    50,
+                    0,
+                    127,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5e-06,
+                    5.5e-06
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.0000055 - 0.00001",
+        "group": "HUMIDITYSPEC_5_30-LINEAR",
+        "expression": "( [pixel] >= 5.5e-06 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    127,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    5.5e-06,
+                    1e-05
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,232 @@
+[
+    {
+        "__type__": "class",
+        "name": "1 6",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    1.0,
+                    6.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 12",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 12 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    22,
+                    70,
+                    219
+                ],
+                "datarange": [
+                    6.0,
+                    12.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "12 18",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 12 ) AND ( [pixel] < 18 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    22,
+                    70,
+                    219,
+                    53,
+                    155,
+                    79
+                ],
+                "datarange": [
+                    12.0,
+                    18.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "18 24",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 18 ) AND ( [pixel] < 24 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    53,
+                    155,
+                    79,
+                    110,
+                    186,
+                    5
+                ],
+                "datarange": [
+                    18.0,
+                    24.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "24 30",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 24 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    110,
+                    186,
+                    5,
+                    201,
+                    212,
+                    3
+                ],
+                "datarange": [
+                    24.0,
+                    30.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 36",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 36 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    201,
+                    212,
+                    3,
+                    246,
+                    194,
+                    14
+                ],
+                "datarange": [
+                    30.0,
+                    36.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "36 42",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 36 ) AND ( [pixel] < 42 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    246,
+                    194,
+                    14,
+                    254,
+                    114,
+                    16
+                ],
+                "datarange": [
+                    36.0,
+                    42.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "42 48",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 42 ) AND ( [pixel] < 48 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    114,
+                    16,
+                    243,
+                    41,
+                    14
+                ],
+                "datarange": [
+                    42.0,
+                    48.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "48 54",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 48 ) AND ( [pixel] < 54 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    243,
+                    41,
+                    14,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    48.0,
+                    54.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "54 60",
+        "group": "WaterBodyID",
+        "expression": "( ( [pixel] >= 54 ) AND ( [pixel] < 60 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    54.0,
+                    60.0
+                ]
+            }
+        ]
+    }
+]

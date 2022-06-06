@@ -1,0 +1,255 @@
+[
+    {
+        "__type__": "class",
+        "name": "< 1 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( [pixel] < 1 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "datarange": [
+                    0.0,
+                    1.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1 2 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 1 ) AND ( [pixel] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    7,
+                    0,
+                    143
+                ],
+                "datarange": [
+                    1.0,
+                    2.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2 3 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 2 ) AND ( [pixel] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    7,
+                    0,
+                    143,
+                    22,
+                    70,
+                    219
+                ],
+                "datarange": [
+                    2.0,
+                    3.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3 4 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 3 ) AND ( [pixel] < 4 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    22,
+                    70,
+                    219,
+                    53,
+                    155,
+                    79
+                ],
+                "datarange": [
+                    3.0,
+                    4.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4 5 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 4 ) AND ( [pixel] < 5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    53,
+                    155,
+                    79,
+                    110,
+                    186,
+                    5
+                ],
+                "datarange": [
+                    4.0,
+                    5.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5 6 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 5 ) AND ( [pixel] < 6 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    110,
+                    186,
+                    5,
+                    201,
+                    212,
+                    3
+                ],
+                "datarange": [
+                    5.0,
+                    6.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6 7 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 6 ) AND ( [pixel] < 7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    201,
+                    212,
+                    3,
+                    246,
+                    194,
+                    14
+                ],
+                "datarange": [
+                    6.0,
+                    7.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7 8 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 7 ) AND ( [pixel] < 8 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    246,
+                    194,
+                    14,
+                    254,
+                    114,
+                    16
+                ],
+                "datarange": [
+                    7.0,
+                    8.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8 9 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 8 ) AND ( [pixel] < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    254,
+                    114,
+                    16,
+                    243,
+                    41,
+                    14
+                ],
+                "datarange": [
+                    8.0,
+                    9.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9 10 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 9 ) AND ( [pixel] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    243,
+                    41,
+                    14,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    9.0,
+                    10.0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": ">= 10 m^3/s",
+        "group": "RiverDischarge_S",
+        "expression": "( ( [pixel] >= 10 ) AND ( [pixel] < 10000000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "colorrange": [
+                    215,
+                    8,
+                    10,
+                    215,
+                    8,
+                    10
+                ],
+                "datarange": [
+                    10.0,
+                    100.0
+                ]
+            }
+        ]
+    }
+]

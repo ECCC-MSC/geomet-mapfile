@@ -1,0 +1,194 @@
+[
+    {
+        "__type__": "class",
+        "name": "Stress d\u00fb au froid tr\u00e8s extr\u00eame",
+        "group": "UTCI-FR",
+        "expression": "( [pixel] < -50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    89,
+                    30,
+                    100
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Stress d\u00fb au froid extr\u00eame",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= -50 ) AND ( [pixel] < -40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    141,
+                    48,
+                    159
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Stress d\u00fb \u00e0 un tr\u00e8s grand froid",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= -40 ) AND ( [pixel] < -27 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    112,
+                    193
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Stress d\u00fb \u00e0 un grand froid",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= -27 ) AND ( [pixel] < -13 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    177,
+                    241
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 un froid mod\u00e9r\u00e9",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= -13 ) AND ( [pixel] < 0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    102,
+                    204,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 un faible froid",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 0 ) AND ( [pixel] < 9 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    102,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "aucun stress thermique",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 9 ) AND ( [pixel] < 26 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    147,
+                    209,
+                    80
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 une chaleur mod\u00e9r\u00e9e",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 26 ) AND ( [pixel] < 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    193,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 une chaleur \u00e9lev\u00e9e",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 32 ) AND ( [pixel] < 38 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    153,
+                    50
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 une chaleur tr\u00e8s \u00e9lev\u00e9e",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 38 ) AND ( [pixel] < 46 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    50,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 une chaleur extr\u00eame",
+        "group": "UTCI-FR",
+        "expression": "( ( [pixel] >= 46 ) AND ( [pixel] < 50 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    191,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "stress d\u00fb \u00e0 une chaleur tr\u00e8s extr\u00eame",
+        "group": "UTCI-FR",
+        "expression": "( [pixel] >= 50 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    94,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

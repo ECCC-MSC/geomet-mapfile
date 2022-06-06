@@ -1,0 +1,57 @@
+[
+    {
+        "__type__": "class",
+        "name": "Single symbol",
+        "maxscaledenom": 750000,
+        "labels": [
+            {
+                "__type__": "label",
+                "font": "arialbd",
+                "type": "TRUETYPE",
+                "text": "[GEONAME]",
+                "size": 12,
+                "position": "uc",
+                "styles": [
+                    {
+                        "__type__": "style",
+                        "symbol": "circle",
+                        "size": 10,
+                        "color": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "outlinecolor": [
+                            211,
+                            211,
+                            211
+                        ],
+                        "width": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "Single symbol",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "circle",
+                "size": 6,
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "outlinecolor": [
+                    211,
+                    211,
+                    211
+                ],
+                "width": 1
+            }
+        ]
+    }
+]

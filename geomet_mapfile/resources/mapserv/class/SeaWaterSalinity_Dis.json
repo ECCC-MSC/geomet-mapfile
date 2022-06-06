@@ -1,0 +1,194 @@
+[
+    {
+        "__type__": "class",
+        "name": "30 31",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 30 ) AND ( [pixel] < 31 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    29,
+                    0,
+                    181
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "31 32",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 31 ) AND ( [pixel] < 32 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    42,
+                    0,
+                    238
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "32 33",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 32 ) AND ( [pixel] < 33 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    41,
+                    70,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "33 34",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 33 ) AND ( [pixel] < 34 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    27,
+                    171,
+                    248
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "34 35",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 34 ) AND ( [pixel] < 35 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    251,
+                    247
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "35 36",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 35 ) AND ( [pixel] < 36 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    67,
+                    252,
+                    183
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "36 37",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 36 ) AND ( [pixel] < 37 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    151,
+                    254,
+                    121
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "37 38",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 37 ) AND ( [pixel] < 38 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    224,
+                    255,
+                    83
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "38 39",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 38 ) AND ( [pixel] < 39 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    252,
+                    215,
+                    68
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "39 40",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 39 ) AND ( [pixel] < 40 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    145,
+                    47
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 42",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( ( [pixel] >= 40 ) AND ( [pixel] < 42 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    73,
+                    28
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 42",
+        "group": "SeaWaterSalinity_Dis",
+        "expression": "( [pixel] >= 42 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    189,
+                    27,
+                    13
+                ]
+            }
+        ]
+    }
+]

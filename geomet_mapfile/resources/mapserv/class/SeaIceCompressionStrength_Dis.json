@@ -1,0 +1,98 @@
+[
+    {
+        "__type__": "class",
+        "name": "1.0 2.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( ( [pixel] >= 1000 ) AND ( [pixel] < 2000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    251,
+                    254
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 3.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( ( [pixel] >= 2000 ) AND ( [pixel] < 3000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    44,
+                    0,
+                    245
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3.0 4.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( ( [pixel] >= 3000 ) AND ( [pixel] < 4000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    40,
+                    23
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4.0 5.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( ( [pixel] >= 4000 ) AND ( [pixel] < 5000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    254,
+                    77
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5.0 6.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( ( [pixel] >= 5000 ) AND ( [pixel] < 6000 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    19,
+                    246
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "> 6.0 N/m x1000",
+        "group": "SeaIceCompressionStrength_Dis",
+        "expression": "( [pixel] >= 6000 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    194,
+                    209,
+                    151
+                ]
+            }
+        ]
+    }
+]

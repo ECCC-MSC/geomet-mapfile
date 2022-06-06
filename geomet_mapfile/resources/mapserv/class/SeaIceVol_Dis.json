@@ -1,0 +1,194 @@
+[
+    {
+        "__type__": "class",
+        "name": "0.05 0.10",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 0.05 ) AND ( [pixel] < 0.1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.10 0.15",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 0.1 ) AND ( [pixel] < 0.15 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    133,
+                    243,
+                    60
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.15 0.3",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 0.15 ) AND ( [pixel] < 0.3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    227,
+                    227,
+                    27
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.3 0.7",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 0.3 ) AND ( [pixel] < 0.7 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    217,
+                    149,
+                    47
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "0.7 1.2",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 0.7 ) AND ( [pixel] < 1.2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "1.2 2.0",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 1.2 ) AND ( [pixel] < 2.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2.0 3.0",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 2.0 ) AND ( [pixel] < 3.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3.0 4.0",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 3.0 ) AND ( [pixel] < 4.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4.0 6.0",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 4.0 ) AND ( [pixel] < 6.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6.0 8.0",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 6.0 ) AND ( [pixel] < 8.0 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8.0 30",
+        "group": "SeaIceVol_Dis",
+        "expression": "( ( [pixel] >= 8.0 ) AND ( [pixel] < 30 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    220,
+                    44,
+                    44
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30",
+        "group": "SeaIceVol_Dis",
+        "expression": "( [pixel] >= 30 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+]

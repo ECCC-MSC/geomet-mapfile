@@ -1,0 +1,299 @@
+[
+    {
+        "__type__": "class",
+        "name": "0 10",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 0.02 ) AND ( [uv_length] < 0.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    153,
+                    232,
+                    253
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 20",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 0.25 ) AND ( [uv_length] < 0.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    153,
+                    148,
+                    255
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "20 30",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 0.5 ) AND ( [uv_length] < 0.75 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    154,
+                    64,
+                    249
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "30 40",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 0.75 ) AND ( [uv_length] < 1 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    204,
+                    135,
+                    254
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "40 50",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 1 ) AND ( [uv_length] < 1.25 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    128,
+                    255,
+                    100
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "50 60",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 1.25 ) AND ( [uv_length] < 1.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    209,
+                    254,
+                    45
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "60 70",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 1.5 ) AND ( [uv_length] < 2 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    217,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "70 80",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 2 ) AND ( [uv_length] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    128,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "80 90",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 2.5 ) AND ( [uv_length] < 3 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    255,
+                    51,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "90 100",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 3 ) AND ( [uv_length] < 3.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    222,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "100 110",
+        "group": "SEA_ICEARROW",
+        "expression": "( ( [uv_length] >= 3.5 ) AND ( [uv_length] < 10 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "symbol": "arrow",
+                "color": [
+                    128,
+                    0,
+                    0
+                ],
+                "angle": "[uv_angle]",
+                "size": 10
+            }
+        ],
+        "text": " ",
+        "labels": [
+            {
+                "__type__": "label",
+                "size": 4,
+                "angle": 45
+            }
+        ]
+    }
+]
