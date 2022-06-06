@@ -3,7 +3,7 @@
         "__type__": "class",
         "name": "warning",
         "group": "ALERTS",
-        "expression": "( '[alert_type]' = 'warning' )",
+        "expression": "( '[properties.alert_type]' = 'warning' )",
         "styles": [
             {
                 "__type__": "style",
@@ -25,7 +25,7 @@
         "__type__": "class",
         "name": "watch",
         "group": "ALERTS",
-        "expression": "( '[alert_type]' = 'watch' )",
+        "expression": "( '[properties.alert_type]' = 'watch' )",
         "styles": [
             {
                 "__type__": "style",
@@ -47,7 +47,7 @@
         "__type__": "class",
         "name": "statement",
         "group": "ALERTS",
-        "expression": "( '[alert_type]' = 'statement' )",
+        "expression": "( '[properties.alert_type]' = 'statement' )",
         "styles": [
             {
                 "__type__": "style",
@@ -69,7 +69,7 @@
         "__type__": "class",
         "name": "advisory",
         "group": "ALERTS",
-        "expression": "( '[alert_type]' = 'advisory' )",
+        "expression": "( '[properties.alert_type]' = 'advisory' )",
         "styles": [
             {
                 "__type__": "style",

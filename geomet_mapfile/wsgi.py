@@ -18,6 +18,7 @@
 #
 ###############################################################################
 
+from datetime import datetime
 import io
 import logging
 import os
@@ -28,6 +29,7 @@ import click
 import mapscript
 
 from geomet_data_registry.tileindex.base import TileNotFoundError
+from mapscript.mapscript import MS_LAYER_LINE, MS_LAYER_POINT, MS_LAYER_POLYGON
 from geomet_mapfile.env import (
     BASEDIR,
     TILEINDEX_URL,
@@ -39,6 +41,11 @@ from geomet_mapfile.env import (
     ALLOW_LAYER_DATA_DOWNLOAD
 )
 from geomet_mapfile.plugin import load_plugin
+from geomet_mapfile.util import (
+    DATEFORMAT,
+    generate_datetime_range,
+    parse_iso8601_interval
+)
 
 LOGGER = logging.getLogger(__name__)
 
@@ -289,65 +296,108 @@ def application(env, start_response):
             )
             mapfile = mapscript.fromstring(mapfile_)
 
-        layerobj = mapfile.getLayerByName(layer)
-        time = request.getValueByName('TIME')
-        ref_time = request.getValueByName('DIM_REFERENCE_TIME')
-
-        if any(time_param == '' for time_param in [time, ref_time]):
-            time_error = "Valeur manquante pour la date ou l'heure / Missing value for date or time"  # noqa
-            start_response('200 OK', [('Content-type', 'text/xml')])
-            return [SERVICE_EXCEPTION.format(time_error).encode()]
-
-        if time is None:
-            time = layerobj.getMetaData('wms_timedefault')
-        if ref_time is None:
-            ref_time = layerobj.getMetaData('wms_reference_time_default')
-
-        try:
-            filepath, url = get_data_path(layer, time, ref_time)
-        except TileNotFoundError as err:
-            LOGGER.error(err)
-            time_error = (
-                'NoMatch: Date et heure invalides / Invalid date and time'
-            )
-            start_response('200 OK', [('Content-type', 'text/xml')])
-            return [SERVICE_EXCEPTION.format(time_error).encode()]
-
-        try:
-            if request_ in ['GetMap', 'GetFeatureInfo']:
-                if all([filepath.startswith(os.sep),
-                        not os.path.isfile(filepath)]):
-                    LOGGER.debug('File is not on disk: {}'.format(filepath))
-                    if not ALLOW_LAYER_DATA_DOWNLOAD:
-                        LOGGER.error('layer data downloading not allowed')
-                        _error = 'data not found'
-                        start_response('500 Internal Server Error',
-                                       [('Content-type', 'text/xml')])
-                        return [SERVICE_EXCEPTION.format(_error).encode()]
-
-                    if not os.path.exists(os.path.dirname(filepath)):
-                        LOGGER.debug('Creating the filepath')
-                        os.makedirs(os.path.dirname(filepath))
-                    LOGGER.debug('Downloading url: {}'.format(url))
-                    with urlopen(url) as r:
-                        with open(filepath, 'wb') as fh:
-                            fh.write(r.read())
-
-            layerobj.data = filepath
-
-        except ValueError as err:
-            LOGGER.error(err)
-            _error = (
-                'NoApplicableCode: Donnée non disponible / Data not available'
-            )
-            start_response(
-                '500 Internal Server Error',
-                [('Content-type', 'text/xml')]
-            )
-            return [SERVICE_EXCEPTION.format(_error).encode()]
-
         if request_ == 'GetCapabilities' and lang == 'fr':
             metadata_lang(mapfile, layer.split(','), lang)
+            pass
+
+        layerobj = mapfile.getLayerByName(layer)
+
+        # if layer is vector data
+        if layerobj.type in [MS_LAYER_POINT, MS_LAYER_LINE, MS_LAYER_POLYGON]:
+
+            # check if layer is time-enabled (will alwaus )
+            time = request.getValueByName('TIME')
+            if time is None:
+                time = layerobj.metadata.get('wms_timedefault')
+
+            # if time then vector layer is time-enabled and
+            # have its datetime filter applied
+            if time:
+                start, end, interval = parse_iso8601_interval(
+                    layerobj.metadata.get('wms_timeextent')
+                )
+                valid_dts = [
+                    dt for dt in generate_datetime_range(start, end, interval)
+                ]
+                if datetime.strptime(time, DATEFORMAT) in valid_dts:
+                    # retrieve datetime filter property from layer metadata
+                    # apply datetime filter to layer using NATIVE_FILTER
+                    # Processing key
+                    filter = layerobj.metadata.get('datetime_filter')
+                    layerobj.setProcessingKey(
+                        'NATIVE_FILTER',
+                        filter.format(time)
+                    )
+                else:
+                    time_error = (
+                        'NoMatch: Date et heure invalides / '
+                        'Invalid date and time'
+                    )
+                    start_response('200 OK', [('Content-type', 'text/xml')])
+                    return [SERVICE_EXCEPTION.format(time_error).encode()]
+
+        # otherwise treat layer as raster data
+        else:
+            time = request.getValueByName('TIME')
+            ref_time = request.getValueByName('DIM_REFERENCE_TIME')
+
+            if any(time_param == '' for time_param in [time, ref_time]):
+                time_error = "Valeur manquante pour la date ou l'heure / Missing value for date or time"  # noqa
+                start_response('200 OK', [('Content-type', 'text/xml')])
+                return [SERVICE_EXCEPTION.format(time_error).encode()]
+
+            if time is None:
+                time = layerobj.getMetaData('wms_timedefault')
+            if ref_time is None:
+                ref_time = layerobj.getMetaData('wms_reference_time_default')
+
+            try:
+                filepath, url = get_data_path(layer, time, ref_time)
+            except TileNotFoundError as err:
+                LOGGER.error(err)
+                time_error = (
+                    'NoMatch: Date et heure invalides / Invalid date and time'
+                )
+                start_response('200 OK', [('Content-type', 'text/xml')])
+                return [SERVICE_EXCEPTION.format(time_error).encode()]
+
+            try:
+                if request_ in ['GetMap', 'GetFeatureInfo']:
+                    if all([filepath.startswith(os.sep),
+                            not os.path.isfile(filepath)]):
+                        LOGGER.debug(
+                            'File is not on disk: {}'.format(filepath)
+                        )
+                        if not ALLOW_LAYER_DATA_DOWNLOAD:
+                            LOGGER.error('layer data downloading not allowed')
+                            _error = 'data not found'
+                            start_response(
+                                '500 Internal Server Error',
+                                [('Content-type', 'text/xml')]
+                            )
+                            return [SERVICE_EXCEPTION.format(_error).encode()]
+
+                        if not os.path.exists(os.path.dirname(filepath)):
+                            LOGGER.debug('Creating the filepath')
+                            os.makedirs(os.path.dirname(filepath))
+                        LOGGER.debug('Downloading url: {}'.format(url))
+                        with urlopen(url) as r:
+                            with open(filepath, 'wb') as fh:
+                                fh.write(r.read())
+
+                layerobj.data = filepath
+
+            except ValueError as err:
+                LOGGER.error(err)
+                _error = (
+                    'NoApplicableCode: Donnée non disponible / '
+                    'Data not available'
+                )
+                start_response(
+                    '500 Internal Server Error',
+                    [('Content-type', 'text/xml')]
+                )
+                return [SERVICE_EXCEPTION.format(_error).encode()]
 
     mapscript.msIO_installStdoutToBuffer()
 

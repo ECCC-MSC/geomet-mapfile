@@ -17,12 +17,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-
+from datetime import datetime, timedelta
 import json
 import logging
 import os
+import re
 
 import click
+from dateutil import relativedelta
 from lark.exceptions import UnexpectedToken
 import mappyfile
 
@@ -72,6 +74,51 @@ def get_nearest(items, target):
     :returns: closest item to target
     """
     return min(items, key=lambda x: abs(x - target))
+
+
+def parse_iso8601_interval(interval_str):
+    """
+    Parse an ISO8601 interval string into a start, end and duration
+    :param interval_str: ISO8601 interval string
+    :return: start datetime object, end, duration
+    """
+    start, end, interval = interval_str.split('/')
+    start = datetime.strptime(start, '%Y-%m-%dT%H:%M:%SZ')
+    end = datetime.strptime(end, '%Y-%m-%dT%H:%M:%SZ')
+    interval_regex = re.search('^P(T?)(\\d+)(.)', interval)
+
+    time_ = interval_regex.group(1)
+    duration = interval_regex.group(2)
+    unit = interval_regex.group(3)
+
+    if time_ is None:
+        # this means the duration is a date
+        if unit == 'M':
+            relative_delta = relativedelta(months=int(duration))
+    else:
+        # this means the duration is a time
+        if unit == 'H':
+            relative_delta = timedelta(hours=int(duration))
+        elif unit == 'M':
+            relative_delta = timedelta(minutes=int(duration))
+
+    return start, end, relative_delta
+
+
+def generate_datetime_range(start, end, delta):
+    """
+    Generator that yields datetime objects between start and end,
+    inclusively.
+    :param start: datetime object
+    :param end: datetime object
+    :param delta: timedelta object
+    :return: Generator of datetime objects
+    """
+
+    current = start
+    while current <= end:
+        yield current
+        current += delta
 
 
 def clean_style(filepath, output_format='json'):

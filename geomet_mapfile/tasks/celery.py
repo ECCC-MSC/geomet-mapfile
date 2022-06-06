@@ -24,7 +24,7 @@ from geomet_mapfile.env import (
     CELERY_BROKER_URL,
     MAPFILE_STORAGE,
 )
-from geomet_mapfile.mapfile import generate_mapfile, LayerTimeConfigError
+from geomet_mapfile.mapfile import generate_mapfile
 
 LOGGER = logging.getLogger(__name__)
 
@@ -36,13 +36,9 @@ if CELERY_BROKER_URL is not None:
     @app.task(name='refresh_mapfile')
     def refresh_mapfile(layer_name, output=MAPFILE_STORAGE):
         result = generate_mapfile(layer_name, output)
-        if not result:
-            msg = (
-                f'Error refreshing mapfile. Could not retrieve {layer_name} '
-                'time extent information from store.'
-            )
-            raise LayerTimeConfigError(msg)
-
+        if isinstance(result, Exception):
+            raise result
+        return True
 
 else:
     LOGGER.debug(
