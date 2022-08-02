@@ -34,8 +34,16 @@ import mappyfile
 from yaml import load, CLoader
 
 from geomet_mapfile import __version__
-from geomet_mapfile.env import (BASEDIR, CONFIG, STORE_TYPE,
-                                STORE_URL, URL, MAPFILE_STORAGE)
+from geomet_mapfile.env import (
+    BASEDIR,
+    CONFIG,
+    DEBUG,
+    OWS_LOG_PATH,
+    STORE_TYPE,
+    STORE_URL,
+    URL,
+    MAPFILE_STORAGE,
+)
 from geomet_mapfile.plugin import load_plugin
 from geomet_mapfile.util import DATEFORMAT, get_nearest
 
@@ -484,6 +492,11 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
     mapfile['config']['proj_lib'] = os.path.join(
         THISDIR, 'resources', 'mapserv'
     )
+
+    # set DEBUG level and MS_ERRORFILE if needed
+    if DEBUG and OWS_LOG_PATH:
+        mapfile['debug'] = 5
+        mapfile['config']['ms_errorfile'] = OWS_LOG_PATH
 
     mapfile['web']['metadata'] = gen_web_metadata(
         mapfile, cfg['metadata'], URL
