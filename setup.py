@@ -122,7 +122,7 @@ def get_package_version():
 try:
     import pypandoc
     LONG_DESCRIPTION = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError, OSError):
+except (IOError, ImportError, OSError):
     print('Conversion to rST failed.  Using default (will look weird on PyPI)')
     LONG_DESCRIPTION = read('README.md')
 
