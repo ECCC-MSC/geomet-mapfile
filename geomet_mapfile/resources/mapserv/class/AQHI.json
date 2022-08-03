@@ -1,0 +1,376 @@
+[
+    {
+        "__type__": "class",
+        "name": "1",
+        "expression": "( [properties.aqhi] < 1.5 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    204,
+                    255
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "2",
+        "expression": "( ( [properties.aqhi] >= 1.5 ) AND ( [properties.aqhi] < 2.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    0,
+                    154,
+                    202
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "3",
+        "expression": "( ( [properties.aqhi] >= 2.5 ) AND ( [properties.aqhi] < 3.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    1,
+                    101,
+                    153
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "4",
+        "expression": "( ( [properties.aqhi] >= 3.5 ) AND ( [properties.aqhi] < 4.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    254,
+                    2
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "5",
+        "expression": "( ( [properties.aqhi] >= 4.5 ) AND ( [properties.aqhi] < 5.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    204,
+                    2
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "6",
+        "expression": "( ( [properties.aqhi] >= 5.5 ) AND ( [properties.aqhi] < 6.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    255,
+                    152,
+                    53
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "7",
+        "expression": "( ( [properties.aqhi] >= 6.5 ) AND ( [properties.aqhi] < 7.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    254,
+                    103,
+                    101
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "8",
+        "expression": "( ( [properties.aqhi] >= 7.5 ) AND ( [properties.aqhi] < 8.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    253,
+                    1,
+                    0
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "9",
+        "expression": "( ( [properties.aqhi] >= 8.5 ) AND ( [properties.aqhi] < 9.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    204,
+                    0,
+                    1
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10",
+        "expression": "( ( [properties.aqhi] >= 9.5 ) AND ( [properties.aqhi] < 10.5 ) )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    155,
+                    0,
+                    2
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    },
+    {
+        "__type__": "class",
+        "name": "10 +",
+        "expression": "( [properties.aqhi] >= 10.5 )",
+        "styles": [
+            {
+                "__type__": "style",
+                "color": [
+                    104,
+                    0,
+                    4
+                ],
+                "outlinecolor": [
+                    0,
+                    0,
+                    0
+                ],
+                "size": 20,
+                "symbol": "circle"
+            }
+        ],
+        "labels": [
+            {
+                "__type__": "label",
+                "text": "(round([properties.aqhi],1))",
+                "position": "cc",
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        ]
+    }
+]

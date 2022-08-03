@@ -34,8 +34,14 @@ import mappyfile
 from yaml import load, CLoader
 
 from geomet_mapfile import __version__
-from geomet_mapfile.env import (BASEDIR, CONFIG, STORE_TYPE,
-                                STORE_URL, URL, MAPFILE_STORAGE)
+from geomet_mapfile.env import (
+    BASEDIR,
+    CONFIG,
+    STORE_TYPE,
+    STORE_URL,
+    URL,
+    MAPFILE_STORAGE,
+)
 from geomet_mapfile.plugin import load_plugin
 from geomet_mapfile.util import DATEFORMAT, get_nearest
 
@@ -48,10 +54,7 @@ MAPFILE_BASE = os.path.join(THISDIR, 'resources', 'mapfile-base.json')
 
 NOW = datetime.utcnow()
 
-PROVIDER_DEF = {
-    'type': STORE_TYPE,
-    'url': STORE_URL
-}
+PROVIDER_DEF = {'type': STORE_TYPE, 'url': STORE_URL}
 
 
 def mcf2layer_metadata(mcf_file):
@@ -74,10 +77,8 @@ def mcf2layer_metadata(mcf_file):
         dict_['ows_abstract'] = mcf['identification']['abstract']['en']
         dict_['ows_abstract_fr'] = mcf['identification']['abstract']['fr']
 
-        keywords_en = \
-            mcf['identification']['keywords']['default']['keywords']['en']
-        keywords_fr = \
-            mcf['identification']['keywords']['default']['keywords']['fr']
+        keywords_en = mcf['identification']['keywords']['default']['keywords']['en']  # noqa
+        keywords_fr = mcf['identification']['keywords']['default']['keywords']['fr']  # noqa
 
         if 'gc_cst' in mcf['identification']['keywords'].keys():
             keywords_en.extend(mcf['identification']['keywords']['gc_cst']['keywords']['en'])  # noqa
@@ -88,14 +89,16 @@ def mcf2layer_metadata(mcf_file):
     dict_['ows_keywordlist'] = ', '.join(keywords_en)
     dict_['ows_keywordlist_fr'] = ', '.join(keywords_fr)
 
-    csw_url_params = urlencode({
-        'service': 'CSW',
-        'version': '2.0.2',
-        'request': 'GetRecordById',
-        'outputschema': 'csw:IsoRecord',
-        'elementsetname': 'full',
-        'id': metadata_identifier
-    })
+    csw_url_params = urlencode(
+        {
+            'service': 'CSW',
+            'version': '2.0.2',
+            'request': 'GetRecordById',
+            'outputschema': 'csw:IsoRecord',
+            'elementsetname': 'full',
+            'id': metadata_identifier,
+        }
+    )
 
     url = 'https://csw.open.canada.ca/geonetwork/srv/csw?' + csw_url_params
     dict_['ows_metadataurl_href'] = url
@@ -103,41 +106,69 @@ def mcf2layer_metadata(mcf_file):
     return dict_
 
 
-def layer_time_config(layer_name):
+def get_layer_time_config(layer_name, filepath=None):
     """
-    # TODO: add description
-
+    Helper function to get layer time config from store or specified filepath
     :param layer_name: name of layer
-
+    :param filepath: path to temporal config file
     :returns: `dict` of time values for layer (default time, time extent,
               default model run, model run extent)
     """
 
-    st = load_plugin('store', PROVIDER_DEF)
+    if filepath:
+        try:
+            with open(filepath) as f:
+                # load json file
+                config = json.load(f)
+                LOGGER.debug(config)
+                time_extent = (
+                    config['time_extent'] if 'time_extent' in config else None
+                )
+                default_time = (
+                    config['default_time']
+                    if 'default_time' in config
+                    else None
+                )
+                model_run_extent = (
+                    config['model_run_extent']
+                    if 'model_run_extent' in config
+                    else None
+                )
+                default_model_run = (
+                    config['default_model_run']
+                    if 'default_model_run' in config
+                    else None
+                )
+        except FileNotFoundError as e:
+            time_extent = None
+            LOGGER.error(
+                f'Could not open {layer_name} temporal config file: {e}.'
+            )
 
-    time_extent = st.get_key(
-        f'geomet-data-registry_{layer_name}_time_extent', raw=True
-    )
-    default_time = st.get_key(
-        f'geomet-data-registry_{layer_name}_default_time', raw=True
-    )
-    model_run_extent = st.get_key(
-        f'geomet-data-registry_{layer_name}_model_run_extent', raw=True
-    )
-    default_model_run = st.get_key(
-        f'geomet-data-registry_{layer_name}_default_model_run', raw=True
-    )
+    else:
+        st = load_plugin('store', PROVIDER_DEF)
+
+        time_extent = st.get_key(
+            f'geomet-data-registry_{layer_name}_time_extent', raw=True
+        )
+        default_time = st.get_key(
+            f'geomet-data-registry_{layer_name}_default_time', raw=True
+        )
+        model_run_extent = st.get_key(
+            f'geomet-data-registry_{layer_name}_model_run_extent', raw=True
+        )
+        default_model_run = st.get_key(
+            f'geomet-data-registry_{layer_name}_default_model_run', raw=True
+        )
 
     if not time_extent:
         msg = (
             f'Could not retrieve {layer_name} time extent'
-            f' information from store. Skipping mapfile generation'
+            f' information from store/file. Skipping mapfile generation'
             f' for this layer.'
         )
         LOGGER.error(msg)
         raise LayerTimeConfigError(msg)
-
-    intervals = []
 
     intervals = []
 
@@ -200,9 +231,7 @@ def gen_web_metadata(m, c, url):
 
     LOGGER.debug('setting web metadata')
 
-    d = {
-        '__type__': 'metadata'
-    }
+    d = {'__type__': 'metadata'}
 
     LOGGER.debug('Setting service identification metadata')
 
@@ -223,15 +252,12 @@ def gen_web_metadata(m, c, url):
     d['ows_addresstype'] = 'postal'
 
     d['ows_postcode'] = c['provider']['contact']['address']['postalcode']
-    d['ows_contactelectronicmailaddress'] = \
-        c['provider']['contact']['address']['email']
+    d['ows_contactelectronicmailaddress'] = c['provider']['contact']['address']['email']  # noqa
 
     d['ows_contactvoicetelephone'] = c['provider']['contact']['phone']['voice']
-    d['ows_contactfacsimiletelephone'] = \
-        c['provider']['contact']['phone']['fax']
+    d['ows_contactfacsimiletelephone'] = c['provider']['contact']['phone']['fax']  # noqa
     d['wms_enable_request'] = '*'
-    d['wms_getfeatureinfo_formatlist'] = \
-        'text/plain,application/json,application/vnd.ogc.gml'
+    d['wms_getfeatureinfo_formatlist'] = 'text/plain,application/json,application/vnd.ogc.gml'  # noqa
     d['wms_attribution_logourl_format'] = c['provider']['logo']['format']
     d['wms_attribution_logourl_width'] = c['provider']['logo']['width']
     d['wms_attribution_logourl_height'] = c['provider']['logo']['height']
@@ -246,41 +272,25 @@ def gen_web_metadata(m, c, url):
             _lang = ''
             d['ows_onlineresource'] = url
 
-        d[f'ows_address{_lang}'] = \
-            c['provider']['contact']['address']['delivery_point'][lang]
-        d[f'ows_keywordlist_http://purl.org/dc/terms/_items{_lang}'] =\
-            ','.join(c['identification']['keywords'][lang])
-        d[f'ows_contactinstructions{_lang}'] = \
-            c['provider']['contact']['instructions'][lang]
-        d[f'ows_contactperson{_lang}'] = \
-            c['provider']['contact']['name'][lang]
-        d[f'ows_contactposition{_lang}'] = \
-            c['provider']['contact']['position'][lang]
-        d[f'ows_contactorganization{_lang}'] = \
-            c['provider']['name'][lang]
-        d[f'ows_abstract{_lang}'] = \
-            c['identification']['abstract'][lang]
-        d[f'ows_service_onlineresource{_lang}'] = \
-            c['identification']['url'][lang]
+        d[f'ows_address{_lang}'] = c['provider']['contact']['address']['delivery_point'][lang]  # noqa
+        d[f'ows_keywordlist_http://purl.org/dc/terms/_items{_lang}'] = ','.join(c['identification']['keywords'][lang])  # noqa
+        d[f'ows_contactinstructions{_lang}'] = c['provider']['contact']['instructions'][lang]  # noqa
+        d[f'ows_contactperson{_lang}'] = c['provider']['contact']['name'][lang]  # noqa
+        d[f'ows_contactposition{_lang}'] = c['provider']['contact']['position'][lang]  # noqa
+        d[f'ows_contactorganization{_lang}'] = c['provider']['name'][lang]
+        d[f'ows_abstract{_lang}'] = c['identification']['abstract'][lang]
+        d[f'ows_service_onlineresource{_lang}'] = c['identification']['url'][lang]  # noqa
         service_title = f'{c["identification"]["title"][lang]} {__version__}'
         d[f'ows_title{_lang}'] = service_title
         d[f'wcs_label{_lang}'] = service_title
-        d[f'ows_hoursofservice{_lang}'] = \
-            c['provider']['contact']['hours'][lang]
-        d[f'ows_stateorprovince{_lang}'] = \
-            c['provider']['contact']['address']['stateorprovince'][lang]
-        d[f'ows_city{_lang}'] = \
-            c['provider']['contact']['address']['city'][lang]
-        d[f'ows_country{_lang}'] = \
-            c['provider']['contact']['address']['country'][lang]
-        d[f'wms_attribution_title{_lang}'] = \
-            c['attribution']['title'][lang]
-        d[f'wms_attribution_onlineresource{_lang}'] = \
-            c['attribution']['url'][lang]
-        d[f'wcs_description{_lang}'] = \
-            c['identification']['abstract'][lang]
-        d[f'ows_keywordlist{_lang}'] = \
-            ','.join(c['identification']['keywords'][lang])
+        d[f'ows_hoursofservice{_lang}'] = c['provider']['contact']['hours'][lang]  # noqa
+        d[f'ows_stateorprovince{_lang}'] = c['provider']['contact']['address']['stateorprovince'][lang]  # noqa
+        d[f'ows_city{_lang}'] = c['provider']['contact']['address']['city'][lang]  # noqa
+        d[f'ows_country{_lang}'] = c['provider']['contact']['address']['country'][lang]  # noqa
+        d[f'wms_attribution_title{_lang}'] = c['attribution']['title'][lang]
+        d[f'wms_attribution_onlineresource{_lang}'] = c['attribution']['url'][lang]  # noqa
+        d[f'wcs_description{_lang}'] = c['identification']['abstract'][lang]
+        d[f'ows_keywordlist{_lang}'] = ','.join(c['identification']['keywords'][lang])  # noqa
 
     return d
 
@@ -292,15 +302,12 @@ def gen_layer(layer_name, layer_info):
     :param layer_name: name of layer
     :param layer_info: layer information
 
-    :returns: list of mappyfile layer objects of layer
+    :returns: mappyfile-compliant layer `dict`
     """
 
-    LOGGER.debug('Setting up layer configuration')
+    LOGGER.debug(f'Setting up {layer_name} configuration')
 
     layer = {}
-
-    # get layer time information
-    time_dict = layer_time_config(layer_name)
 
     layer['__type__'] = 'layer'
     layer['tolerance'] = 15
@@ -317,13 +324,12 @@ def gen_layer(layer_name, layer_info):
     layer['metadata'] = {
         '__type__': 'metadata',
         'gml_include_items': 'all',
-        'ows_include_items': 'all'
+        'ows_include_items': 'all',
     }
 
     # set layer projection
     LOGGER.debug('Setting up layer projection')
-    proj_file = os.path.join(THISDIR, 'resources',
-                             layer_info['forecast_model']['projection'])
+    proj_file = os.path.join(THISDIR, 'resources', layer_info['forecast_model']['projection'])  # noqa
     with open(proj_file) as f:
         lines = [l.replace('\n', '').replace('"', '') for l in f.readlines()]  # noqa
         layer['projection'] = lines
@@ -344,13 +350,63 @@ def gen_layer(layer_name, layer_info):
         layer['type'] = layer_info['type']
 
     # set connectiontype
-    if 'conntype' in layer_info:
+    if 'connection' in layer_info:
         LOGGER.debug('Setting up layer connection type')
-        layer['connectiontype'] = layer_info['conntype']
+        layer['connectiontype'] = layer_info['connection']['type']
         # if uvraster also set the layer extent
-        if (layer_info['conntype'] == 'uvraster'
-                and 'extent' in layer_info['forecast_model']):
+        if (
+            layer_info['connection']['type'] == 'uvraster'
+            and 'extent' in layer_info['forecast_model']
+        ):
             layer['extent'] = layer_info['forecast_model']['extent']
+        # if ogr connectiontype set data and connection directives
+        if layer_info['connection']['type'] == 'OGR':
+            layer['connection'] = layer_info['connection']['url']
+            if 'options' in layer_info['connection']:
+                layer['connectionoptions'] = layer_info['connection']['options']  # noqa
+            if 'data' in layer_info['connection']:
+                layer['data'] = [layer_info['connection']['data']]
+            # check for filter and apply filter processing
+            if 'filters' in layer_info:
+                LOGGER.debug("Setting OGR native filter...")
+                filters = []
+                has_datetime_filter = False
+                for i, filter_def in enumerate(layer_info['filters']):
+
+                    if filter_def['type'] == 'datetime':
+                        filter_def['value'] = '{}'
+                        has_datetime_filter = True
+                    if i == 0:
+                        if 'operator' in filter_def:
+                            LOGGER.warning(
+                                "No logical operator required for first "
+                                "filter defintion. Omitting operator..."
+                            )
+                        filters.append(
+                            f'{filter_def["field"]}=\'{filter_def["value"]}\''
+                            if 'value' in filter_def
+                            else f'{filter_def["field"]}'
+                        )
+                    elif i > 0:
+                        try:
+                            filters.append(
+                                f' {filter_def["operator"]} {filter_def["field"]}=\'{filter_def["value"]}\''  # noqa
+                                if 'value' in filter_def
+                                else f' {filter_def["operator"]} {filter_def["field"]}'  # noqa
+                            )
+                        except KeyError:
+                            msg = (
+                                "Multiple filter definitions require that an "
+                                "operator (i.e AND, OR, etc.) is defined on "
+                                "subsequent filters."
+                            )
+                            LOGGER.error(msg)
+                            raise FilterDefinitionError()
+
+                filter_str = ' '.join(filters)
+                if has_datetime_filter:
+                    layer['metadata'] = {'datetime_filter': filter_str}
+                layer['processing'].append(f'NATIVE_FILTER={filter_str}')
 
     # set additional layer params
     if 'layer_params' in layer_info:
@@ -365,15 +421,15 @@ def gen_layer(layer_name, layer_info):
 
     layer['classes'] = []
     for style in layer_info['styles']:
-        with open(
-            os.path.join(THISDIR, 'resources', style)
-        ) as json_style:
+        with open(os.path.join(THISDIR, 'resources', style)) as json_style:
             for class_ in json.load(json_style):
                 layer['classes'].append(class_)
 
     # set layer metadata
     LOGGER.debug('Setting layer metadata')
-    layer['metadata'] = {}
+
+    if not layer['metadata']:
+        layer['metadata'] = {}
 
     # source = yaml config
     layer['metadata']['ows_extent'] = layer_info['forecast_model']['extent']  # noqa
@@ -401,32 +457,39 @@ def gen_layer(layer_name, layer_info):
         )
         layer['metadata']['ows_size'] = size
 
-    if time_dict:
-        layer['metadata']['wms_dimensionlist'] = 'reference_time'
-        layer['metadata']['wms_reference_time_item'] = 'reference_datetime'
-        layer['metadata']['wms_reference_time_units'] = 'ISO8601'
-        layer['metadata']['wms_timeextent'] = time_dict['time_extent']
-        layer['metadata']['wms_reference_time_default'] = \
-            time_dict['default_model_run']
-
-        layer['metadata']['wms_timedefault'] = time_dict['default_time']
-
-        if time_dict['available_intervals']:
-            layer['metadata']['wms_available_intervals'] = ','.join(
-                [
-                    dt.strftime(DATEFORMAT)
-                    for dt in time_dict['available_intervals']
-                ]
+    if layer_info['forecast_model']['time_enabled']:
+        if 'temporal_config' in layer_info:
+            # get layer time information from file
+            time_dict = get_layer_time_config(
+                layer_name, filepath=layer_info['temporal_config']
             )
+        else:
+            # get layer time information from store
+            time_dict = get_layer_time_config(layer_name)
 
-        if time_dict['default_model_run']:
-            layer['metadata']['wms_reference_time_extent'] = \
-                time_dict['model_run_extent']
+        if time_dict:
+            layer['metadata']['wms_dimensionlist'] = 'reference_time'
+            layer['metadata']['wms_reference_time_item'] = 'reference_datetime'
+            layer['metadata']['wms_reference_time_units'] = 'ISO8601'
+            layer['metadata']['wms_timeextent'] = time_dict['time_extent']
+            layer['metadata']['wms_reference_time_default'] = time_dict['default_model_run']  # noqa
+            layer['metadata']['wms_timedefault'] = time_dict['default_time']
+
+            if time_dict['available_intervals']:
+                layer['metadata']['wms_available_intervals'] = ','.join(
+                    [
+                        dt.strftime(DATEFORMAT)
+                        for dt in time_dict['available_intervals']
+                    ]
+                )
+
+            if time_dict['default_model_run']:
+                layer['metadata']['wms_reference_time_extent'] = time_dict['model_run_extent']  # noqa
 
     if 'forecast_hour_interval' in layer_info['forecast_model']:
-        seconds = layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60  # noqa
+        seconds = (layer_info['forecast_model']['forecast_hour_interval'] * 60 * 60)  # noqa
     elif 'observations_interval_min' in layer_info['forecast_model']:
-        seconds = layer_info['forecast_model']['observations_interval_min'] * 60  # noqa
+        seconds = (layer_info['forecast_model']['observations_interval_min'] * 60)  # noqa
     else:
         seconds = ''
 
@@ -448,17 +511,19 @@ def gen_layer(layer_name, layer_info):
 
     LOGGER.debug('Reading MCF and updating layer metadata')
 
-    mcf_file = os.path.join(THISDIR, 'resources', 'mcf',
-                            layer_info['forecast_model']['mcf'])
+    mcf_file = os.path.join(
+        THISDIR, 'resources', 'mcf', layer_info['forecast_model']['mcf']
+    )
 
     layer['metadata'].update(mcf2layer_metadata(mcf_file))
 
     return layer
 
 
-def generate_mapfile(layer=None, output='file', use_includes=True):
+def generate_mapfile(layer_name=None, output='file', use_includes=True):
     st = load_plugin('store', PROVIDER_DEF)
-    time_errors = False
+    time_error_layers = []
+    filter_error_layers = []
     output_dir = f'{BASEDIR}{os.sep}mapfile'
 
     all_layers = []
@@ -475,8 +540,16 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
     with open(CONFIG) as fh:
         cfg = load(fh, Loader=CLoader)
 
-    if layer is not None:
-        mapfiles = {layer: cfg['layers'][layer]}
+    if layer_name is not None:
+        try:
+            mapfiles = {layer_name: cfg['layers'][layer_name]}
+        except KeyError:
+            msg = (
+                f'{layer_name} layer not found in GeoMet-Weather'
+                f' YAML configuration file ({CONFIG}).'
+            )
+            LOGGER.error(msg)
+            return LayerNotFoundError(msg)
     else:
         mapfiles = cfg['layers']
 
@@ -485,6 +558,13 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
         THISDIR, 'resources', 'mapserv'
     )
 
+    # set FONTSET path
+    font_file = os.path.join(
+        THISDIR, 'resources', 'mapserv', 'fonts', 'fonts.txt'
+    )
+    mapfile['fontset'] = font_file
+
+    # set WEB metadata
     mapfile['web']['metadata'] = gen_web_metadata(
         mapfile, cfg['metadata'], URL
     )
@@ -494,28 +574,31 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
         mapfile_copy['layers'] = []
 
         try:
-            lyr = gen_layer(key, value)
+            layer = gen_layer(key, value)
         except LayerTimeConfigError:
-            lyr = None
-            time_errors = True
+            layer = None
+            time_error_layers.append(key)
+        except FilterDefinitionError:
+            layer = None
+            filter_error_layers.append(key)
 
-        if lyr:
-            mapfile_copy['layers'].append(lyr)
+        if layer:
+            mapfile_copy['layers'].append(layer)
 
             # TODO: simplify
             if 'outputformats' in value['forecast_model']:
-                mapfile_copy['outputformats'] = [
+                mapfile['outputformats'] = [
                     format_
-                    for format_ in mapfile_copy['outputformats']
+                    for format_ in mapfile['outputformats']
                     if format_['name']
                     in value['forecast_model']['outputformats']
                 ]
 
             # TODO: simplify
             if 'symbols' in value:
-                mapfile_copy['symbols'] = [
+                mapfile['symbols'] = [
                     symbol
-                    for symbol in mapfile_copy['symbols']
+                    for symbol in mapfile['symbols']
                     if symbol['name'] in value['symbols']
                     or any(
                         symbol_ in symbol['name']
@@ -523,7 +606,7 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
                     )
                 ]
             else:
-                mapfile_copy['symbols'] = []
+                mapfile['symbols'] = []
 
         layer_only_filepath = (
             f'{output_dir}{os.sep}geomet-weather-{key}_layer.map'
@@ -548,7 +631,7 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
             st.set_key(f'{key}_mapfile', mappyfile.dumps(mapfile_copy))
             st.set_key(f'{key}_layer', mappyfile.dumps(mapfile_copy['layers']))
 
-    if layer is None:  # generate entire mapfile
+    if layer_name is None:  # generate entire mapfile
         # always write global mapfile to disk for caching purposes
         mapfile['include'] = all_layers
         filename = 'geomet-weather.map'
@@ -562,8 +645,21 @@ def generate_mapfile(layer=None, output='file', use_includes=True):
 
     # returns False if time keys could not be retrieved (meaning empty/no
     # layer mapfiles generated)
-    if time_errors:
-        return False
+    if time_error_layers:
+        msg = (
+            f'Error generating mapfiles. Could not retrieve '
+            f'time extent information from store for: '
+            f'{", ".join(time_error_layers)}.'
+        )
+        return LayerTimeConfigError(msg)
+
+    if filter_error_layers:
+        msg = (
+            f'Error generating mapfiles. Could not generate '
+            f'filters defined in configuration for: '
+            f'{", ".join(filter_error_layers)}.'
+        )
+        return FilterDefinitionError(msg)
 
     return True
 
@@ -699,5 +795,13 @@ mapfile_.add_command(generate)
 mapfile_.add_command(update)
 
 
+class LayerNotFoundError(Exception):
+    pass
+
+
 class LayerTimeConfigError(Exception):
+    pass
+
+
+class FilterDefinitionError(Exception):
     pass
