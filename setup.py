@@ -78,7 +78,7 @@ class PyTest(Command):
     def run(self):
         import subprocess
         errno = subprocess.call([sys.executable,
-                                 'tests/run_tests.py'])
+                                 'tests/test_mapfile.py'])
         raise SystemExit(errno)
 
 
@@ -94,10 +94,11 @@ class PyCoverage(Command):
     def run(self):
         import subprocess
 
-        errno = subprocess.call(['coverage', 'run', '--source=mscGeoUsage',
-                                 '-m', 'unittest',
-                                 'geomet_mapfile.tests.run_tests'])
-        errno = subprocess.call(['coverage', 'report', '-m'])
+        errno = subprocess.call(['coverage', 'run', '-m',
+                                 'unittest', 'discover',
+                                 'tests'])
+        errno = subprocess.call(['coverage', 'report', '-m',
+                                 '--include=./*.py'])
         raise SystemExit(errno)
 
 
